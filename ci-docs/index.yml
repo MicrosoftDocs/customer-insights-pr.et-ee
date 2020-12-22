@@ -1,0 +1,108 @@
+### YamlMime:Landing
+metadata:
+  title: Dynamics 365 Customer Insightsi spikrikeskus
+  author: m-hartmann
+  description: Otsige asjakohaseid artikleid, et alustada spikri kasutamist.
+  ms.author: mhart
+  ms.date: 10/29/2020
+  ms.service: customer-insights
+  ms.topic: landing-page
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: et-EE
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4405575"
+title: Dynamics 365 Customer Insightsi dokumentatsioon
+summary: Otsige kasulikke ressursse, et alustada ja tutvuda Customer Insightsi funktsioonide ning võimalustega.
+landingContent:
+- title: Customer Insightsi tutvustus
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Customer Insightsi ülevaade
+      url: overview.md
+    - text: Väljalaskeplaanid
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Avage oma keskkond
+      url: https://home.ci.ai.dynamics.com/
+- title: Sihtrühmaülevaadete kasutamise alustamine
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Prooviversiooni kasutajaks registreerumine
+      url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
+    - text: Mis on uut
+      url: audience-insights/whats-new-audience-insights.md
+    - text: Sihtrühmaülevaadete dokumentatsioon
+      url: audience-insights/index.yml
+- title: Võtke ühendust
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Ühinege Dynamics 365 kogukonnaga
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Jagage oma ideid
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Teata probleemist
+      url: https://go.microsoft.com/fwlink/?linkid=2079641
+- title: Sihtrühmaülevaadete õpetused
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Loo uus keskkond
+      url: audience-insights/home.md
+    - text: Kliendi koondprofiili loomine
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Rakendusega töötamine
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+- title: Sihtrühmaülevaadete andmete eksportimine
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Eekspordisihtkohtade seadistamine
+      url: audience-insights/export-destinations.md
+    - text: Dynamics 365 rakenduste kliendikaardi
+      url: audience-insights/customer-card-add-in.md
+    - text: Power BI konnektor
+      url: audience-insights/export-power-bi.md
+- title: Sihtrühmaülevaadete haldamine
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Süsteemi konfigureerimine
+      url: audience-insights/system.md
+    - text: Kasutajaõiguste määratlemine
+      url: audience-insights/permissions.md
+    - text: Mitme keskkonna haldamine
+      url: audience-insights/manage-environments.md
+- title: Kaasamisülevaadete teave (eelversioon)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Võimaluste ülevaade
+      url: engagement-insights/overview.md
+    - text: Terminid ja mõisted
+      url: engagement-insights/glossary.md
+    - text: Alustamine
+      url: engagement-insights/get-started.md
+- title: Kaasamisülevaadete aruanded (eelversioon)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kuva aruanded
+      url: engagement-insights/view-reports.md
+    - text: Kohandatud aruannete loomine
+      url: engagement-insights/custom-reports.md
+    - text: Koondatud profiiliaruande vaatamine
+      url: engagement-insights/profile-reports.md
+- title: Kaasamisülevaadete sündmused (eelversioon)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Täpsustatud sündmuste loomine
+      url: engagement-insights/refined-events.md
+    - text: Sündmuste eksportimine
+      url: engagement-insights/export-events.md
+    - text: Isikuandmete kustutamine ja eksportimine
+      url: engagement-insights/delete-export-personal-data.md
