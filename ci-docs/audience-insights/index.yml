@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Sihtrühmaülevaadete võimalus rakenduses Dynamics 365 Customer Insights
+summary: Kliendiandmete mitmest allikast hankimine, ühendamine ja korrastamine. Looge ja hallake kliendiprofiile ning reaalajas segmentimist. Integreerida kliendiandmeid muude süsteemidega, et muuta see veelgi tõhusamaks.
+metadata:
+  title: Sihtrühmaülevaadete dokumentatsioon
+  description: Spikrikeskus, milles on sihtrühmaülevaadete olulised lingid.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: et-EE
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4405558"
+landingContent:
+- title: Teave sihtrühmaülevaadete kohta
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Toote ülevaade
+      url: overview.md
+    - text: Uued ja värskendatud funktsioonid
+      url: whats-new-audience-insights.md
+    - text: Kogukonna sait
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Andmeallikate hankimine
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Andmeallikate lisamine
+      url: data-sources.md
+    - text: Astmeline värskendamine
+      url: incremental-refresh-data-sources.md
+    - text: Olemitest arusaamine
+      url: entities.md
+- title: Andmete ühtlustamine
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Vastendus
+      url: map-entities.md
+    - text: Vastenda
+      url: match-entities.md
+    - text: Ühendamine
+      url: merge-entities.md
+- title: Kliendiprofiilide täpsustamine
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Suhtluse konfigureerimine
+      url: relationships.md
+    - text: Kliendi tegevuste loendamine
+      url: activities.md
+    - text: Tooge oma masinõppe mudelid
+      url: custom-models.md
+- title: Ekspordi kliendiandmed
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Eekspordisihtkohtade seadistamine
+      url: export-destinations.md
+    - text: Dynamics 365 rakenduste kliendikaardi
+      url: customer-card-add-in.md
+    - text: Power BI konnektor
+      url: export-power-bi.md
+- title: Rakenduse haldamine
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Süsteemi konfigureerimine
+      url: system.md
+    - text: Kasutajaõiguste määratlemine
+      url: permissions.md
+    - text: Mitme keskkonna haldamine
+      url: manage-environments.md
