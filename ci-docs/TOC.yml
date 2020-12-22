@@ -1,0 +1,226 @@
+- name: Dynamics 365 Customer Insights
+  href: index.yml
+- name: Toote ülevaade
+  href: overview.md
+- name: Avage oma keskkond
+  href: 'https://home.ci.ai.dynamics.com/'
+- name: Sihtrühmaülevaated
+  items:
+    - name: Spikrikeskus
+      href: audience-insights/index.yml
+    - name: Võimaluste ülevaade
+      href: audience-insights/overview.md
+    - name: Tasuta prooviversioon
+      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
+    - name: Uued ja värskendatud funktsioonid
+      href: audience-insights/whats-new-audience-insights.md
+    - name: Alustamine
+      items:
+        - name: Loo uus keskkond
+          href: audience-insights/home.md
+        - name: Andmete valmendamine
+          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+        - name: Kliendi koondprofiili loomine
+          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+        - name: Rakendusega töötamine
+          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+        - name: Andmete ja prognooside rikastamine
+          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+    - name: Andmeallikad
+      items:
+        - name: Andmeallikate ülevaade
+          href: audience-insights/data-sources.md
+        - name: Power Query konnektorite kaudu andmeallikate lisamine
+          href: audience-insights/connect-power-query.md
+        - name: Common Data Modeli kausta andmeallikana lisamine
+          href: audience-insights/connect-common-data-model.md
+        - name: Common Data Service'i hallatava andmejärve lisamine
+          href: audience-insights/connect-common-data-service-lake.md
+        - name: Andmeallikate astmeline värskendamine
+          href: audience-insights/incremental-refresh-data-sources.md
+        - name: Reaalajas andmete valmendamine
+          href: audience-insights/real-time-data-ingestion.md
+        - name: Olemite ja andmekogumite mõistmine
+          href: audience-insights/entities.md
+    - name: Andmete ühtlustamine
+      items:
+        - name: Ühtlustamise ülevaade
+          href: audience-insights/data-unification.md
+        - name: Olemite ja atribuutide kaardistamine
+          href: audience-insights/map-entities.md
+        - name: Olemite vastendamine
+          href: audience-insights/match-entities.md
+        - name: Olemite liitmine
+          href: audience-insights/merge-entities.md
+        - name: Kliendi koondprofiilide ülevaatamine
+          href: audience-insights/customer-profiles.md
+        - name: Kliendi koondprofiilide filtreerimine
+          href: audience-insights/search-filter-index.md
+        - name: Seoste ja ühendatud olemite loomine
+          href: audience-insights/relationships.md
+        - name: Kliendi tegevuste loendamine
+          href: audience-insights/activities.md
+    - name: Andmete rikastamine
+      items:
+        - name: Kliendiprofiilide rikastamine
+          href: audience-insights/enrichment-hub.md
+        - name: Tootemargi ja huvide külgetõmme
+          href: audience-insights/enrichment-microsoft-graph.md
+        - name: Rikastamine ettevõtte HERE Technologies teenusega
+          href: audience-insights/enrichment-here.md
+        - name: Leadspace'iga rikastamine
+          href: audience-insights/enrichment-leadspace.md
+        - name: Experianiga rikastamine
+          href: audience-insights/enrichment-experian.md
+        - name: Rikastamine SFTP-põhise kohandatud importimise kaudu
+          href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Segmendid ja näitajad
+      items:
+        - name: Segmentide ja kliendirühmade loomine
+          href: audience-insights/segments.md
+        - name: Segmendi ülevaadete hankimine
+          href: audience-insights/segment-insights.md
+        - name: Leia sarnased kliendid
+          href: audience-insights/find-similar-customer-segments.md
+        - name: Mõõtude ja KPI-de määratlemine
+          href: audience-insights/measures.md
+    - name: Prognoosid
+      items:
+        - name: Andmete lõpetamine väärtuse prognoose kasutades
+          href: audience-insights/predictions.md
+        - name: Kordustellimuste voolavuse prognoosimine
+          href: audience-insights/predict-subscription-churn.md
+        - name: Tellimusevoolavuse prognoosi näidisjuhend
+          href: audience-insights/sample-guide-predict-subscription-churn.md
+        - name: Tehinguvoolavuse prognoosimine
+          href: audience-insights/predict-transactional-churn.md
+        - name: Tehinguvoolavuse prognoosi näidisjuhend
+          href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Kohandatud masinõppe mudelite juurutamine
+          href: audience-insights/custom-models.md
+        - name: Eksperimendid Azure’i masinõppega
+          href: audience-insights/azure-machine-learning-experiments.md
+        - name: Azure'i masinõppe stuudio eksperimendid
+          href: audience-insights/machine-learning-studio-experiments.md
+    - name: Ekspordisuvandid
+      items:
+        - name: Ekspordi sihtkohade avastamine
+          href: audience-insights/export-destinations.md
+        - name: Azure'i bloobimälu
+          href: audience-insights/export-azure-blob-storage.md
+        - name: DotDigital
+          href: audience-insights/export-dotdigital.md
+        - name: Dynamics 365 Customer Service (lisandmoodul)
+          href: audience-insights/customer-card-add-in.md
+        - name: Dynamics 365 Marketing
+          href: audience-insights/export-dynamics365-marketing.md
+        - name: Dynamics 365 Sales
+          href: audience-insights/export-dynamics365-sales.md
+        - name: Dynamics 365 Salesi keskus (lisandmoodul)
+          href: audience-insights/customer-card-add-in.md
+        - name: Facebooki reklaamihaldur
+          href: audience-insights/export-facebook.md
+        - name: Google Ads
+          href: audience-insights/export-google-ads.md
+        - name: LiveRamp
+          href: audience-insights/export-liveramp.md
+        - name: Mailchimp
+          href: audience-insights/export-mailchimp.md
+        - name: Microsoft Teams (bot)
+          href: audience-insights/export-teams-bot.md
+        - name: Marketo
+          href: audience-insights/export-marketo.md
+        - name: Power BI
+          href: audience-insights/export-power-bi.md
+        - name: Power Apps
+          href: audience-insights/export-power-apps.md
+        - name: Power Automate
+          href: audience-insights/export-power-automate.md
+        - name: SFTP
+          href: audience-insights/export-sftp.md
+    - name: Administreerimine
+      items:
+        - name: Süsteemikonfiguratsiooni seadistamine
+          href: audience-insights/system.md
+        - name: Kasutaja õiguste määramine
+          href: audience-insights/permissions.md
+        - name: Mitme keskkonna haldamine
+          href: audience-insights/manage-environments.md
+        - name: ADLS-i salvestuskontoga ühenduse loomine teenusesubjekti kaudu
+          href: audience-insights/connect-service-principal.md
+        - name: Toetatud keeled
+          href: audience-insights/supported-languages.md
+    - name: Laiendatavus
+      items:
+        - name: Common Data Modeli olemi skeemide ülevaatamine
+          href: audience-insights/entity-schemas.md
+        - name: API-dega töötamine
+          href: audience-insights/apis.md
+        - name: API ülevaade
+          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Teenusepiirangud
+      href: audience-insights/service-limits.md
+    - name: DSR-i taotlused vastavalt GDPR-ile
+      href: audience-insights/gdpr.md
+- name: Kaasamisülevaated (eelversioon)
+  items:
+    - name: Spikrikeskus
+      href: engagement-insights/index.yml
+    - name: Võimaluste ülevaade
+      href: engagement-insights/overview.md
+    - name: Tasuta prooviversioon
+      href: 'https://pi.dynamics.com/'
+    - name: Kiirstart
+      items:
+        - name: Avaliku eelversiooni lühijuhend
+          href: engagement-insights/quickstart.md
+    - name: Alustamine
+      items:
+        - name: Alustamine
+          href: engagement-insights/get-started.md
+        - name: Tööruumi loomine
+          href: engagement-insights/create-workspace.md
+        - name: Veebisaidile funktsioonide lisamine
+          href: engagement-insights/instrument-website.md
+        - name: Mõisted ja terminid
+          href: engagement-insights/glossary.md
+    - name: Sündmused
+      items:
+        - name: Sündmuste loomine ja muutmine
+          href: engagement-insights/refined-events.md
+        - name: Sündmuste eksportimine
+          href: engagement-insights/export-events.md
+    - name: Aruanded
+      items:
+        - name: Kuva aruanded
+          href: engagement-insights/view-reports.md
+        - name: Kohandatud aruannete loomine
+          href: engagement-insights/custom-reports.md
+        - name: Koondatud profiiliaruannete loomine
+          href: engagement-insights/profile-reports.md
+    - name: Arendaja allikad
+      items:
+        - name: Arendajaressursside ülevaade
+          href: engagement-insights/developer-resources.md
+        - name: Web SDK õpetus
+          href: engagement-insights/advanced-SDK-implementation.md
+        - name: Web SDK näidis
+          href: engagement-insights/websdk-sample.md
+    - name: Administreerimine
+      items:
+        - name: Rollid ja õigused
+          href: engagement-insights/user-roles.md
+        - name: Keskkondade ja tööruumide haldamine
+          href: engagement-insights/manage-environments-workspaces.md
+        - name: Ühenduste konfigureerimine
+          href: engagement-insights/configure-connections.md
+        - name: Küpsiste ja kasutaja nõusoleku haldamine
+          href: engagement-insights/user-consent-storage.md
+    - name: GDPR
+      items:
+        - name: Isikuandmete kustutamine ja eksportimine
+          href: engagement-insights/delete-export-personal-data.md
+    - name: Teenusepiirangud
+      href: engagement-insights/quotas.md
+- name: Võtke ühendust klienditoega
+  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
