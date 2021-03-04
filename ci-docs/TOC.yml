@@ -14,10 +14,10 @@
       href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Uued ja värskendatud funktsioonid
       href: audience-insights/whats-new-audience-insights.md
-    - name: Alustamine
+    - name: Loo uus keskkond
+      href: audience-insights/home.md
+    - name: Tutvuge moodulitega
       items:
-        - name: Loo uus keskkond
-          href: audience-insights/home.md
         - name: Andmete valmendamine
           href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
         - name: Kliendi koondprofiili loomine
@@ -42,13 +42,13 @@
           href: audience-insights/real-time-data-ingestion.md
         - name: Olemite ja andmekogumite mõistmine
           href: audience-insights/entities.md
-    - name: Andmete ühtlustamine
+    - name: Andmete koondamine
       items:
-        - name: Ühtlustamise ülevaade
+        - name: Andmete koondamise ülevaade
           href: audience-insights/data-unification.md
         - name: Olemite ja atribuutide kaardistamine
           href: audience-insights/map-entities.md
-        - name: Olemite vastendamine
+        - name: Olemite vastavusseviimine
           href: audience-insights/match-entities.md
         - name: Olemite liitmine
           href: audience-insights/merge-entities.md
@@ -80,6 +80,8 @@
           href: audience-insights/segments.md
         - name: Segmendi ülevaadete hankimine
           href: audience-insights/segment-insights.md
+        - name: Vaata soovitatud segmente
+          href: audience-insights/suggested-segments.md
         - name: Leia sarnased kliendid
           href: audience-insights/find-similar-customer-segments.md
         - name: Mõõtude ja KPI-de määratlemine
@@ -96,6 +98,12 @@
           href: audience-insights/predict-transactional-churn.md
         - name: Tehinguvoolavuse prognoosi näidisjuhend
           href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Kliendi eluea väärtuse (CLV) prognoosimine
+          href: audience-insights/predict-customer-lifetime-value.md
+        - name: Tootesoovituse prognoosimine
+          href: audience-insights/predict-product-recommendation.md
+        - name: Tootesoovituse prognoosi näidisjuhend
+          href: audience-insights/sample-guide-predict-product-recommendation.md
         - name: Kohandatud masinõppe mudelite juurutamine
           href: audience-insights/custom-models.md
         - name: Eksperimendid Azure’i masinõppega
@@ -104,10 +112,14 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: Ekspordisuvandid
       items:
-        - name: Ekspordi sihtkohade avastamine
+        - name: Ekspordisihtkohtade ülevaade
           href: audience-insights/export-destinations.md
+        - name: Autopiloot
+          href: audience-insights/export-autopilot.md
         - name: Azure'i bloobimälu
           href: audience-insights/export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: audience-insights/export-azure-data-lake-storage-gen2.md
         - name: DotDigital
           href: audience-insights/export-dotdigital.md
         - name: Dynamics 365 Customer Service (lisandmoodul)
@@ -136,9 +148,11 @@
           href: audience-insights/export-power-apps.md
         - name: Power Automate
           href: audience-insights/export-power-automate.md
+        - name: SendGrid (Saada välja)
+          href: audience-insights/export-sendgrid.md
         - name: SFTP
           href: audience-insights/export-sftp.md
-    - name: Administreerimine
+    - name: Haldus
       items:
         - name: Süsteemikonfiguratsiooni seadistamine
           href: audience-insights/system.md
@@ -152,6 +166,8 @@
           href: audience-insights/supported-languages.md
     - name: Laiendatavus
       items:
+        - name: Veebiandmete integreerimine kaasamisülevaadetest
+          href: audience-insights/integrate-engagement-insights.md
         - name: Common Data Modeli olemi skeemide ülevaatamine
           href: audience-insights/entity-schemas.md
         - name: API-dega töötamine
@@ -170,10 +186,6 @@
       href: engagement-insights/overview.md
     - name: Tasuta prooviversioon
       href: 'https://pi.dynamics.com/'
-    - name: Kiirstart
-      items:
-        - name: Avaliku eelversiooni lühijuhend
-          href: engagement-insights/quickstart.md
     - name: Alustamine
       items:
         - name: Alustamine
@@ -223,4 +235,4 @@
     - name: Teenusepiirangud
       href: engagement-insights/quotas.md
 - name: Võtke ühendust klienditoega
-  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
+  href: 'https://admin.powerplatform.microsoft.com/support'

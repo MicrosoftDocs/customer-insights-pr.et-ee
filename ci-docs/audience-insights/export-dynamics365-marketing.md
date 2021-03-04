@@ -1,51 +1,57 @@
 ---
 title: Customer Insightsi andmete eksportimine rakendusse Dynamics 365 Marketing
 description: Vaadake, kuidas konfigureerida ühendust rakendusega Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643768"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269049"
 ---
-# <a name="connector-for-dynamics-365-marketing-preview"></a><span data-ttu-id="a027c-103">Ühendus rakendusega Dynamics 365 Marketing (eelvaateversioon)</span><span class="sxs-lookup"><span data-stu-id="a027c-103">Connector for Dynamics 365 Marketing (preview)</span></span>
+# <a name="connector-for-dynamics-365-marketing-preview"></a><span data-ttu-id="9381e-103">Ühendus rakendusega Dynamics 365 Marketing (eelvaateversioon)</span><span class="sxs-lookup"><span data-stu-id="9381e-103">Connector for Dynamics 365 Marketing (preview)</span></span>
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-<span data-ttu-id="a027c-104">Kasutage lahenduses Dynamics 365 Marketing kampaaniate loomiseks ja konkreetsete kliendirühmadega ühenduse võtmiseks [segmente](segments.md).</span><span class="sxs-lookup"><span data-stu-id="a027c-104">Use [segments](segments.md) to generate campaigns and contact specific groups of customers with Dynamics 365 Marketing.</span></span> <span data-ttu-id="a027c-105">Lisateavet leiate teemast [Dynamics 365 Customer Insightsi segmentide kasutamine Dynamics 365 Marketingiga](https://docs.microsoft.com/dynamics365/marketing/customer-insights-segments)</span><span class="sxs-lookup"><span data-stu-id="a027c-105">For more information, see [Use segments from Dynamics 365 Customer Insights with Dynamics 365 Marketing](https://docs.microsoft.com/dynamics365/marketing/customer-insights-segments)</span></span>
+<span data-ttu-id="9381e-104">Kasutage lahenduses Dynamics 365 Marketing kampaaniate loomiseks ja konkreetsete kliendirühmadega ühenduse võtmiseks [segmente](segments.md).</span><span class="sxs-lookup"><span data-stu-id="9381e-104">Use [segments](segments.md) to generate campaigns and contact specific groups of customers with Dynamics 365 Marketing.</span></span> <span data-ttu-id="9381e-105">Lisateavet leiate teemast [Dynamics 365 Customer Insightsi segmentide kasutamine Dynamics 365 Marketingiga](https://docs.microsoft.com/dynamics365/marketing/customer-insights-segments)</span><span class="sxs-lookup"><span data-stu-id="9381e-105">For more information, see [Use segments from Dynamics 365 Customer Insights with Dynamics 365 Marketing](https://docs.microsoft.com/dynamics365/marketing/customer-insights-segments)</span></span>
 
-## <a name="prerequisite"></a><span data-ttu-id="a027c-106">Eeltingimus</span><span class="sxs-lookup"><span data-stu-id="a027c-106">Prerequisite</span></span>
+## <a name="prerequisite"></a><span data-ttu-id="9381e-106">Eeltingimus</span><span class="sxs-lookup"><span data-stu-id="9381e-106">Prerequisite</span></span>
 
-<span data-ttu-id="a027c-107">Kontaktikirjed [rakendusest Dynamics 365 Marketing on valmendatud Common Data Service'is](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="a027c-107">Contact records [from Dynamics 365 Marketing ingested Common Data Service](connect-power-query.md).</span></span>
+- <span data-ttu-id="9381e-107">Enne segmendi eksportimist Customer Insightsist Marketingi, peavad kontaktikirjed olema olemas rakenduses Dynamics 365 Marketing.</span><span class="sxs-lookup"><span data-stu-id="9381e-107">Contact records must be present in Dynamics 365 Marketing before you can export a segment from Customer Insights to Marketing.</span></span> <span data-ttu-id="9381e-108">Lugege lisateavet selle kohta, kuidas valmendada kontakte [Dynamics 365 Marketingis Common Data Servicesi abil](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="9381e-108">Read more on how to ingest contacts in [Dynamics 365 Marketing using Common Data Services](connect-power-query.md).</span></span>
 
-## <a name="configure-the-connector-for-marketing"></a><span data-ttu-id="a027c-108">Konnektori konfigureerimine Marketingi jaoks</span><span class="sxs-lookup"><span data-stu-id="a027c-108">Configure the connector for Marketing</span></span>
+  > [!NOTE]
+  > <span data-ttu-id="9381e-109">Segmentide eksportimine sihtrühmaülevaadetest Marketingi ei loo uusi kontaktikirjeid Marketingi eksemplaris.</span><span class="sxs-lookup"><span data-stu-id="9381e-109">Exporting segments from audience insights to Marketing will not create new contact records in the Marketing instances.</span></span> <span data-ttu-id="9381e-110">Marketingi kontaktikirjed peavad olema valmendatud sihtrühmaülevaadetes ja neid tuleb kasutada andmeallikana.</span><span class="sxs-lookup"><span data-stu-id="9381e-110">The contact records from Marketing must be ingested in audience insights and used as a data source.</span></span> <span data-ttu-id="9381e-111">Need tuleb lisada ka ühendatud kliendi olemisse, et vastendada kliendi ID-d ja kontakti ID-deks, enne kui segmente saab eksportida.</span><span class="sxs-lookup"><span data-stu-id="9381e-111">They also need to be included in the unified Customer entity to map customer IDs to contact IDs before segments can be exported.</span></span>
 
-1. <span data-ttu-id="a027c-109">Avage sihtrühmaülevaadetes jaotis **Haldus** > **Eksportimise sihtkohad**.</span><span class="sxs-lookup"><span data-stu-id="a027c-109">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+## <a name="configure-the-connector-for-marketing"></a><span data-ttu-id="9381e-112">Konnektori konfigureerimine Marketingi jaoks</span><span class="sxs-lookup"><span data-stu-id="9381e-112">Configure the connector for Marketing</span></span>
 
-1. <span data-ttu-id="a027c-110">Jaotises **Dynamics 365 Marketing** valige suvand **Häälestamine**.</span><span class="sxs-lookup"><span data-stu-id="a027c-110">Under **Dynamics 365 Marketing**, select **Set up**.</span></span>
+1. <span data-ttu-id="9381e-113">Avage sihtrühmaülevaadetes jaotis **Haldus** > **Eksportimise sihtkohad**.</span><span class="sxs-lookup"><span data-stu-id="9381e-113">In audience insights, go to **Admin** > **Export destinations**.</span></span>
 
-1. <span data-ttu-id="a027c-111">Sisestage väljale **Kuvatav nimi** oma ekspordi sihtkoha äratuntav nimi.</span><span class="sxs-lookup"><span data-stu-id="a027c-111">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="9381e-114">Jaotises **Dynamics 365 Marketing** valige suvand **Häälestamine**.</span><span class="sxs-lookup"><span data-stu-id="9381e-114">Under **Dynamics 365 Marketing**, select **Set up**.</span></span>
 
-1. <span data-ttu-id="a027c-112">Sisestage väljale **Serveri aadress** oma organisatsiooni Marketingi URL.</span><span class="sxs-lookup"><span data-stu-id="a027c-112">Enter your organization's Marketing URL in the **Server address** field.</span></span>
+1. <span data-ttu-id="9381e-115">Sisestage väljale **Kuvatav nimi** oma ekspordi sihtkoha äratuntav nimi.</span><span class="sxs-lookup"><span data-stu-id="9381e-115">Give your export destination a recognizable name in the **Display name** field.</span></span>
 
-1. <span data-ttu-id="a027c-113">Jaotises **Serveri administraatorikonto** valige suvand **Logi sisse** ja valige rakenduse Dynamics 365 Marketing konto.</span><span class="sxs-lookup"><span data-stu-id="a027c-113">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Marketing account.</span></span>
+1. <span data-ttu-id="9381e-116">Sisestage väljale **Serveri aadress** oma organisatsiooni Marketingi URL.</span><span class="sxs-lookup"><span data-stu-id="9381e-116">Enter your organization's Marketing URL in the **Server address** field.</span></span>
 
-1. <span data-ttu-id="a027c-114">Vastendage kliendi ID väli Dynamics 365 kontakti ID-ga.</span><span class="sxs-lookup"><span data-stu-id="a027c-114">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
+1. <span data-ttu-id="9381e-117">Jaotises **Serveri administraatorikonto** valige suvand **Logi sisse** ja valige rakenduse Dynamics 365 Marketing konto.</span><span class="sxs-lookup"><span data-stu-id="9381e-117">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Marketing account.</span></span>
 
-1. <span data-ttu-id="a027c-115">Tehke valik **Edasi**.</span><span class="sxs-lookup"><span data-stu-id="a027c-115">Select **Next**.</span></span>
+1. <span data-ttu-id="9381e-118">Vastendage kliendi ID väli Dynamics 365 kontakti ID-ga.</span><span class="sxs-lookup"><span data-stu-id="9381e-118">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
 
-1. <span data-ttu-id="a027c-116">Valige üks või mitu segmenti.</span><span class="sxs-lookup"><span data-stu-id="a027c-116">Choose one or more segments.</span></span>
+1. <span data-ttu-id="9381e-119">Tehke valik **Edasi**.</span><span class="sxs-lookup"><span data-stu-id="9381e-119">Select **Next**.</span></span>
 
-1. <span data-ttu-id="a027c-117">Valige **Salvesta**.</span><span class="sxs-lookup"><span data-stu-id="a027c-117">Select **Save**.</span></span>
+1. <span data-ttu-id="9381e-120">Valige üks või mitu segmenti.</span><span class="sxs-lookup"><span data-stu-id="9381e-120">Choose one or more segments.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="a027c-118">Andmete eksportimine</span><span class="sxs-lookup"><span data-stu-id="a027c-118">Export the data</span></span>
+1. <span data-ttu-id="9381e-121">Valige **Salvesta**.</span><span class="sxs-lookup"><span data-stu-id="9381e-121">Select **Save**.</span></span>
 
-<span data-ttu-id="a027c-119">Saate [vajadusel andmeid eksportida](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="a027c-119">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="a027c-120">Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="a027c-120">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+## <a name="export-the-data"></a><span data-ttu-id="9381e-122">Andmete eksportimine</span><span class="sxs-lookup"><span data-stu-id="9381e-122">Export the data</span></span>
+
+<span data-ttu-id="9381e-123">Saate [vajadusel andmeid eksportida](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="9381e-123">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="9381e-124">Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="9381e-124">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,202 +5,205 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643588"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269785"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a><span data-ttu-id="aefd7-103">Tehinguvoolavuse prognoosi (eelversioon) näidisjuhend</span><span class="sxs-lookup"><span data-stu-id="aefd7-103">Transactional churn prediction (preview) sample guide</span></span>
+# <a name="transactional-churn-prediction-preview-sample-guide"></a><span data-ttu-id="9f467-103">Tehinguvoolavuse prognoosi (eelversioon) näidisjuhend</span><span class="sxs-lookup"><span data-stu-id="9f467-103">Transactional churn prediction (preview) sample guide</span></span>
 
-<span data-ttu-id="aefd7-104">Selles juhendis näidatakse teile otsast lõpuni, kuidas kasutada Customer Insightsis tehinguvoolavuse prognoosi funktsiooni koos alltoodud andmetega.</span><span class="sxs-lookup"><span data-stu-id="aefd7-104">This guide will walk you through an end to end example of Transactional Churn prediction in Customer Insights using the data provided below.</span></span> <span data-ttu-id="aefd7-105">Kõik selles juhendis kasutatud andmed ei ole tegelikud kliendiandmed ja need kuuluvad Contoso andmekogumi hulka, mis asub teie Customer Insightsi tellimuse keskkonnas *Demo*.</span><span class="sxs-lookup"><span data-stu-id="aefd7-105">All data used in this guide is not real customer data and is part of the Contoso dataset found in the *Demo* environment within your Customer Insights Subscription.</span></span>
+<span data-ttu-id="9f467-104">Selles juhendis näidatakse teile otsast lõpuni, kuidas kasutada Customer Insightsis tehinguvoolavuse prognoosi funktsiooni koos alltoodud andmetega.</span><span class="sxs-lookup"><span data-stu-id="9f467-104">This guide will walk you through an end to end example of Transactional Churn prediction in Customer Insights using the data provided below.</span></span> <span data-ttu-id="9f467-105">Kõik selles juhendis kasutatud andmed ei ole tegelikud kliendiandmed ja need kuuluvad Contoso andmekogumi hulka, mis asub teie Customer Insightsi tellimuse keskkonnas *Demo*.</span><span class="sxs-lookup"><span data-stu-id="9f467-105">All data used in this guide is not real customer data and is part of the Contoso dataset found in the *Demo* environment within your Customer Insights Subscription.</span></span>
 
-## <a name="scenario"></a><span data-ttu-id="aefd7-106">Stsenaarium</span><span class="sxs-lookup"><span data-stu-id="aefd7-106">Scenario</span></span>
+## <a name="scenario"></a><span data-ttu-id="9f467-106">Stsenaarium</span><span class="sxs-lookup"><span data-stu-id="9f467-106">Scenario</span></span>
 
-<span data-ttu-id="aefd7-107">Contoso on ettevõte, mis toodab kvaliteetset kohvi ja kohvimasinaid, mida müüakse veebisaidi Contoso Coffee kaudu.</span><span class="sxs-lookup"><span data-stu-id="aefd7-107">Contoso is a company that produces high-quality coffee and coffee machines, which they sell through their Contoso Coffee website.</span></span> <span data-ttu-id="aefd7-108">Nende eesmärk on teada saada, millised kliendid, kes tavaliselt nende tooteid regulaarselt ostavad, pole enam järgmise 60 päeva jooksul aktiivsed.</span><span class="sxs-lookup"><span data-stu-id="aefd7-108">Their goal is to know which customers who typically purchase their products on a regular basis, will stop being active customers in the next 60 days.</span></span> <span data-ttu-id="aefd7-109">Teades, millised nende kliendid **tõenäoliselt loobuvad**, aitab ettevõttel nende säilitamisele keskendudes turundusvõtteid säästa.</span><span class="sxs-lookup"><span data-stu-id="aefd7-109">Knowing which of their customers is **likely to churn**, can help them save marketing efforts by focusing on keeping them.</span></span>
+<span data-ttu-id="9f467-107">Contoso on ettevõte, mis toodab kvaliteetset kohvi ja kohvimasinaid, mida müüakse veebisaidi Contoso Coffee kaudu.</span><span class="sxs-lookup"><span data-stu-id="9f467-107">Contoso is a company that produces high-quality coffee and coffee machines, which they sell through their Contoso Coffee website.</span></span> <span data-ttu-id="9f467-108">Nende eesmärk on teada saada, millised kliendid, kes tavaliselt nende tooteid regulaarselt ostavad, pole enam järgmise 60 päeva jooksul aktiivsed.</span><span class="sxs-lookup"><span data-stu-id="9f467-108">Their goal is to know which customers who typically purchase their products on a regular basis, will stop being active customers in the next 60 days.</span></span> <span data-ttu-id="9f467-109">Teades, millised nende kliendid **tõenäoliselt loobuvad**, aitab ettevõttel nende säilitamisele keskendudes turundusvõtteid säästa.</span><span class="sxs-lookup"><span data-stu-id="9f467-109">Knowing which of their customers is **likely to churn**, can help them save marketing efforts by focusing on keeping them.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="aefd7-110">Eeltingimused</span><span class="sxs-lookup"><span data-stu-id="aefd7-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="9f467-110">Eeltingimused</span><span class="sxs-lookup"><span data-stu-id="9f467-110">Prerequisites</span></span>
 
-- <span data-ttu-id="aefd7-111">Vähemalt [Kaasautori õigused](permissions.md) Customer Insightsis.</span><span class="sxs-lookup"><span data-stu-id="aefd7-111">At least [Contributor permissions](permissions.md) in Customer Insights.</span></span>
-- <span data-ttu-id="aefd7-112">Soovitame teil järgmisi samme rakendada [uues keskkonnas](manage-environments.md).</span><span class="sxs-lookup"><span data-stu-id="aefd7-112">We recommend that you implement the following steps [in a new environment](manage-environments.md).</span></span>
+- <span data-ttu-id="9f467-111">Vähemalt [Kaasautori õigused](permissions.md) Customer Insightsis.</span><span class="sxs-lookup"><span data-stu-id="9f467-111">At least [Contributor permissions](permissions.md) in Customer Insights.</span></span>
+- <span data-ttu-id="9f467-112">Soovitame teil järgmisi samme rakendada [uues keskkonnas](manage-environments.md).</span><span class="sxs-lookup"><span data-stu-id="9f467-112">We recommend that you implement the following steps [in a new environment](manage-environments.md).</span></span>
 
-## <a name="task-1---ingest-data"></a><span data-ttu-id="aefd7-113">Ülesanne 1 – andmete valmendamine</span><span class="sxs-lookup"><span data-stu-id="aefd7-113">Task 1 - Ingest data</span></span>
+## <a name="task-1---ingest-data"></a><span data-ttu-id="9f467-113">Ülesanne 1 – andmete valmendamine</span><span class="sxs-lookup"><span data-stu-id="9f467-113">Task 1 - Ingest data</span></span>
 
-<span data-ttu-id="aefd7-114">Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query konnektorite abil andmete importimise](connect-power-query.md) kohta.</span><span class="sxs-lookup"><span data-stu-id="aefd7-114">Review the articles [about data ingestion](data-sources.md) and [importing data sources using Power Query connectors](connect-power-query.md) specifically.</span></span> <span data-ttu-id="aefd7-115">Järgmises teabes eeldatakse, et olete andmete valmendamisega üldiselt tuttav.</span><span class="sxs-lookup"><span data-stu-id="aefd7-115">The following information assumes you familiarized with ingesting data in general.</span></span> 
+<span data-ttu-id="9f467-114">Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query konnektorite abil andmete importimise](connect-power-query.md) kohta.</span><span class="sxs-lookup"><span data-stu-id="9f467-114">Review the articles [about data ingestion](data-sources.md) and [importing data sources using Power Query connectors](connect-power-query.md) specifically.</span></span> <span data-ttu-id="9f467-115">Järgmises teabes eeldatakse, et olete andmete valmendamisega üldiselt tuttav.</span><span class="sxs-lookup"><span data-stu-id="9f467-115">The following information assumes you familiarized with ingesting data in general.</span></span> 
 
-### <a name="ingest-customer-data-from-ecommerce-platform"></a><span data-ttu-id="aefd7-116">E-kaubanduse platvormist pärit kliendiandmete valmendamine</span><span class="sxs-lookup"><span data-stu-id="aefd7-116">Ingest customer data from eCommerce platform</span></span>
+### <a name="ingest-customer-data-from-ecommerce-platform"></a><span data-ttu-id="9f467-116">E-kaubanduse platvormist pärit kliendiandmete valmendamine</span><span class="sxs-lookup"><span data-stu-id="9f467-116">Ingest customer data from eCommerce platform</span></span>
 
-1. <span data-ttu-id="aefd7-117">Looge andmeallikas nimega **eCommerce**, valige importimise suvand ja valige konnektor **Tekst/CSV**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-117">Create a data source named **eCommerce**, choose the import option, and select the **Text/CSV** connector.</span></span>
+1. <span data-ttu-id="9f467-117">Looge andmeallikas nimega **eCommerce**, valige importimise suvand ja valige konnektor **Tekst/CSV**.</span><span class="sxs-lookup"><span data-stu-id="9f467-117">Create a data source named **eCommerce**, choose the import option, and select the **Text/CSV** connector.</span></span>
 
-1. <span data-ttu-id="aefd7-118">Sisestage e-kaubanduse kontaktide URL https://aka.ms/ciadclasscontacts.</span><span class="sxs-lookup"><span data-stu-id="aefd7-118">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscontacts.</span></span>
+1. <span data-ttu-id="9f467-118">Sisestage e-kaubanduse kontaktide URL https://aka.ms/ciadclasscontacts.</span><span class="sxs-lookup"><span data-stu-id="9f467-118">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscontacts.</span></span>
 
-1. <span data-ttu-id="aefd7-119">Andmete redigeerimise käigus valige **Teisenda** ja seejärel **Kasuta esimest rida päistena**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-119">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="9f467-119">Andmete redigeerimise käigus valige **Teisenda** ja seejärel **Kasuta esimest rida päistena**.</span><span class="sxs-lookup"><span data-stu-id="9f467-119">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="aefd7-120">Värskendage allpool loetletud veergude andmetüüp.</span><span class="sxs-lookup"><span data-stu-id="aefd7-120">Update the datatype for the columns listed below:</span></span>
+1. <span data-ttu-id="9f467-120">Värskendage allpool loetletud veergude andmetüüp.</span><span class="sxs-lookup"><span data-stu-id="9f467-120">Update the datatype for the columns listed below:</span></span>
 
-   - <span data-ttu-id="aefd7-121">**DateOfBirth**: kuupäev</span><span class="sxs-lookup"><span data-stu-id="aefd7-121">**DateOfBirth**: Date</span></span>
-   - <span data-ttu-id="aefd7-122">**CreatedOn**: kuupäev/kellaaeg/ajatsoon</span><span class="sxs-lookup"><span data-stu-id="aefd7-122">**CreatedOn**: Date/Time/Zone</span></span>
+   - <span data-ttu-id="9f467-121">**DateOfBirth**: kuupäev</span><span class="sxs-lookup"><span data-stu-id="9f467-121">**DateOfBirth**: Date</span></span>
+   - <span data-ttu-id="9f467-122">**CreatedOn**: kuupäev/kellaaeg/ajatsoon</span><span class="sxs-lookup"><span data-stu-id="9f467-122">**CreatedOn**: Date/Time/Zone</span></span>
 
    [!div class="mx-imgBorder"]
-   <span data-ttu-id="aefd7-123">![Sünniaja teisendamine kuupäevaks](media/ecommerce-dob-date.PNG "sünniaja teisendamine kuupäevaks")</span><span class="sxs-lookup"><span data-stu-id="aefd7-123">![Transform DoB to Date](media/ecommerce-dob-date.PNG "transform date of birth to date")</span></span>
+   <span data-ttu-id="9f467-123">![Sünniaja teisendamine kuupäevaks](media/ecommerce-dob-date.PNG "sünniaja teisendamine kuupäevaks")</span><span class="sxs-lookup"><span data-stu-id="9f467-123">![Transform DoB to Date](media/ecommerce-dob-date.PNG "transform date of birth to date")</span></span>
 
-1. <span data-ttu-id="aefd7-124">Muutke parempoolsel paanil väljal „Nimi“ oma andmeallika praegune nimi **Päring** nimeks **eCommerceContacts**</span><span class="sxs-lookup"><span data-stu-id="aefd7-124">In the 'Name' field on the right-hand pane, rename your data source from **Query** to **eCommerceContacts**</span></span>
+1. <span data-ttu-id="9f467-124">Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **eCommerceContacts**</span><span class="sxs-lookup"><span data-stu-id="9f467-124">In the **Name** field on the right-hand pane, rename your data source from **Query** to **eCommerceContacts**</span></span>
 
-1. <span data-ttu-id="aefd7-125">Salvestage andmeallikas.</span><span class="sxs-lookup"><span data-stu-id="aefd7-125">Save the data source.</span></span>
+1. <span data-ttu-id="9f467-125">Salvestage andmeallikas.</span><span class="sxs-lookup"><span data-stu-id="9f467-125">Save the data source.</span></span>
 
-### <a name="ingest-online-purchase-data"></a><span data-ttu-id="aefd7-126">Internetiostude andmete valmendamine</span><span class="sxs-lookup"><span data-stu-id="aefd7-126">Ingest online purchase data</span></span>
+### <a name="ingest-online-purchase-data"></a><span data-ttu-id="9f467-126">Internetiostude andmete valmendamine</span><span class="sxs-lookup"><span data-stu-id="9f467-126">Ingest online purchase data</span></span>
 
-1. <span data-ttu-id="aefd7-127">Lisage samasse andmeallikasse **eCommerce** veel üks andmekogum.</span><span class="sxs-lookup"><span data-stu-id="aefd7-127">Add another data set to the same **eCommerce** data source.</span></span> <span data-ttu-id="aefd7-128">Valige uuesti konnektor **Tekst/CSV**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-128">Choose the **Text/CSV** connector again.</span></span>
+1. <span data-ttu-id="9f467-127">Lisage samasse andmeallikasse **eCommerce** veel üks andmekogum.</span><span class="sxs-lookup"><span data-stu-id="9f467-127">Add another data set to the same **eCommerce** data source.</span></span> <span data-ttu-id="9f467-128">Valige uuesti konnektor **Tekst/CSV**.</span><span class="sxs-lookup"><span data-stu-id="9f467-128">Choose the **Text/CSV** connector again.</span></span>
 
-1. <span data-ttu-id="aefd7-129">Sisestage **internetiostude** andmete URL https://aka.ms/ciadclassonline.</span><span class="sxs-lookup"><span data-stu-id="aefd7-129">Enter the URL for **Online Purchases** data https://aka.ms/ciadclassonline.</span></span>
+1. <span data-ttu-id="9f467-129">Sisestage **internetiostude** andmete URL https://aka.ms/ciadclassonline.</span><span class="sxs-lookup"><span data-stu-id="9f467-129">Enter the URL for **Online Purchases** data https://aka.ms/ciadclassonline.</span></span>
 
-1. <span data-ttu-id="aefd7-130">Andmete redigeerimise käigus valige **Teisenda** ja seejärel **Kasuta esimest rida päistena**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-130">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="9f467-130">Andmete redigeerimise käigus valige **Teisenda** ja seejärel **Kasuta esimest rida päistena**.</span><span class="sxs-lookup"><span data-stu-id="9f467-130">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="aefd7-131">Värskendage allpool loetletud veergude andmetüüp.</span><span class="sxs-lookup"><span data-stu-id="aefd7-131">Update the datatype for the columns listed below:</span></span>
+1. <span data-ttu-id="9f467-131">Värskendage allpool loetletud veergude andmetüüp.</span><span class="sxs-lookup"><span data-stu-id="9f467-131">Update the datatype for the columns listed below:</span></span>
 
-   - <span data-ttu-id="aefd7-132">**PurchasedOn**: kuupäev/kellaaeg</span><span class="sxs-lookup"><span data-stu-id="aefd7-132">**PurchasedOn**: Date/Time</span></span>
-   - <span data-ttu-id="aefd7-133">**TotalPrice**: valuuta</span><span class="sxs-lookup"><span data-stu-id="aefd7-133">**TotalPrice**: Currency</span></span>
+   - <span data-ttu-id="9f467-132">**PurchasedOn**: kuupäev/kellaaeg</span><span class="sxs-lookup"><span data-stu-id="9f467-132">**PurchasedOn**: Date/Time</span></span>
+   - <span data-ttu-id="9f467-133">**TotalPrice**: valuuta</span><span class="sxs-lookup"><span data-stu-id="9f467-133">**TotalPrice**: Currency</span></span>
    
-1. <span data-ttu-id="aefd7-134">Muutke parempoolsel paanil väljal „Nimi“ oma andmeallika praegune nimi **Päring** nimeks **eCommercePurchases**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-134">In the 'Name' field on the right-hand pane, rename your data source from **Query** to **eCommercePurchases**.</span></span>
+1. <span data-ttu-id="9f467-134">Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **eCommercePurchases**.</span><span class="sxs-lookup"><span data-stu-id="9f467-134">In the **Name** field on the right-hand pane, rename your data source from **Query** to **eCommercePurchases**.</span></span>
 
-1. <span data-ttu-id="aefd7-135">Salvestage andmeallikas.</span><span class="sxs-lookup"><span data-stu-id="aefd7-135">Save the data source.</span></span>
+1. <span data-ttu-id="9f467-135">Salvestage andmeallikas.</span><span class="sxs-lookup"><span data-stu-id="9f467-135">Save the data source.</span></span>
 
-### <a name="ingest-customer-data-from-loyalty-schema"></a><span data-ttu-id="aefd7-136">Kliendiandmete valmendamine lojaalsusskeemi kaudu</span><span class="sxs-lookup"><span data-stu-id="aefd7-136">Ingest customer data from loyalty schema</span></span>
+### <a name="ingest-customer-data-from-loyalty-schema"></a><span data-ttu-id="9f467-136">Kliendiandmete valmendamine lojaalsusskeemi kaudu</span><span class="sxs-lookup"><span data-stu-id="9f467-136">Ingest customer data from loyalty schema</span></span>
 
-1. <span data-ttu-id="aefd7-137">Looge andmeallikas nimega **LoyaltyScheme**, valige importimise suvand ja valige konnektor **Tekst/CSV**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-137">Create a data source named **LoyaltyScheme**, choose the import option, and select the **Text/CSV** connector.</span></span>
+1. <span data-ttu-id="9f467-137">Looge andmeallikas nimega **LoyaltyScheme**, valige importimise suvand ja valige konnektor **Tekst/CSV**.</span><span class="sxs-lookup"><span data-stu-id="9f467-137">Create a data source named **LoyaltyScheme**, choose the import option, and select the **Text/CSV** connector.</span></span>
 
-1. <span data-ttu-id="aefd7-138">Sisestage e-kaubanduse kontaktide URL https://aka.ms/ciadclasscustomerloyalty.</span><span class="sxs-lookup"><span data-stu-id="aefd7-138">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscustomerloyalty.</span></span>
+1. <span data-ttu-id="9f467-138">Sisestage e-kaubanduse kontaktide URL https://aka.ms/ciadclasscustomerloyalty.</span><span class="sxs-lookup"><span data-stu-id="9f467-138">Enter the URL for eCommerce contacts https://aka.ms/ciadclasscustomerloyalty.</span></span>
 
-1. <span data-ttu-id="aefd7-139">Andmete redigeerimise käigus valige **Teisenda** ja seejärel **Kasuta esimest rida päistena**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-139">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
+1. <span data-ttu-id="9f467-139">Andmete redigeerimise käigus valige **Teisenda** ja seejärel **Kasuta esimest rida päistena**.</span><span class="sxs-lookup"><span data-stu-id="9f467-139">While editing the data, select **Transform** and then **Use First Row as Headers**.</span></span>
 
-1. <span data-ttu-id="aefd7-140">Värskendage allpool loetletud veergude andmetüüp.</span><span class="sxs-lookup"><span data-stu-id="aefd7-140">Update the datatype for the columns listed below:</span></span>
+1. <span data-ttu-id="9f467-140">Värskendage allpool loetletud veergude andmetüüp.</span><span class="sxs-lookup"><span data-stu-id="9f467-140">Update the datatype for the columns listed below:</span></span>
 
-   - <span data-ttu-id="aefd7-141">**DateOfBirth**: kuupäev</span><span class="sxs-lookup"><span data-stu-id="aefd7-141">**DateOfBirth**: Date</span></span>
-   - <span data-ttu-id="aefd7-142">**RewardsPoints**: täisarv</span><span class="sxs-lookup"><span data-stu-id="aefd7-142">**RewardsPoints**: Whole Number</span></span>
-   - <span data-ttu-id="aefd7-143">**CreatedOn**: kuupäev/kellaaeg</span><span class="sxs-lookup"><span data-stu-id="aefd7-143">**CreatedOn**: Date/Time</span></span>
+   - <span data-ttu-id="9f467-141">**DateOfBirth**: kuupäev</span><span class="sxs-lookup"><span data-stu-id="9f467-141">**DateOfBirth**: Date</span></span>
+   - <span data-ttu-id="9f467-142">**RewardsPoints**: täisarv</span><span class="sxs-lookup"><span data-stu-id="9f467-142">**RewardsPoints**: Whole Number</span></span>
+   - <span data-ttu-id="9f467-143">**CreatedOn**: kuupäev/kellaaeg</span><span class="sxs-lookup"><span data-stu-id="9f467-143">**CreatedOn**: Date/Time</span></span>
 
-1. <span data-ttu-id="aefd7-144">Muutke parempoolsel paanil väljal „Nimi“ oma andmeallika praegune nimi **Päring** nimeks **loyCustomers**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-144">In the 'Name' field on the right-hand pane, rename your data source from **Query** to **loyCustomers**.</span></span>
+1. <span data-ttu-id="9f467-144">Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **loyCustomers**.</span><span class="sxs-lookup"><span data-stu-id="9f467-144">In the **Name** field on the right-hand pane, rename your data source from **Query** to **loyCustomers**.</span></span>
 
-1. <span data-ttu-id="aefd7-145">Salvestage andmeallikas.</span><span class="sxs-lookup"><span data-stu-id="aefd7-145">Save the data source.</span></span>
+1. <span data-ttu-id="9f467-145">Salvestage andmeallikas.</span><span class="sxs-lookup"><span data-stu-id="9f467-145">Save the data source.</span></span>
 
 
-## <a name="task-2---data-unification"></a><span data-ttu-id="aefd7-146">Ülesanne 2 – andmete koondamine</span><span class="sxs-lookup"><span data-stu-id="aefd7-146">Task 2 - Data unification</span></span>
+## <a name="task-2---data-unification"></a><span data-ttu-id="9f467-146">Ülesanne 2 – andmete koondamine</span><span class="sxs-lookup"><span data-stu-id="9f467-146">Task 2 - Data unification</span></span>
 
-<span data-ttu-id="aefd7-147">Pärast andmete valmendamist alustame protsessi **Vastenda, vii vastavusse, ühenda**, et luua koondatud kliendiprofiil.</span><span class="sxs-lookup"><span data-stu-id="aefd7-147">After ingesting the data we now begin the **Map, Match, Merge** process to create a unified customer profile.</span></span> <span data-ttu-id="aefd7-148">Lisateavet leiate teemast [Andmete koondamine](data-unification.md).</span><span class="sxs-lookup"><span data-stu-id="aefd7-148">For more information, see [Data unification](data-unification.md).</span></span>
+<span data-ttu-id="9f467-147">Pärast andmete valmendamist alustame protsessi **Vastenda, vii vastavusse, ühenda**, et luua koondatud kliendiprofiil.</span><span class="sxs-lookup"><span data-stu-id="9f467-147">After ingesting the data we now begin the **Map, Match, Merge** process to create a unified customer profile.</span></span> <span data-ttu-id="9f467-148">Lisateavet leiate teemast [Andmete koondamine](data-unification.md).</span><span class="sxs-lookup"><span data-stu-id="9f467-148">For more information, see [Data unification](data-unification.md).</span></span>
 
-### <a name="map"></a><span data-ttu-id="aefd7-149">Vastendus</span><span class="sxs-lookup"><span data-stu-id="aefd7-149">Map</span></span>
+### <a name="map"></a><span data-ttu-id="9f467-149">Vastendus</span><span class="sxs-lookup"><span data-stu-id="9f467-149">Map</span></span>
 
-1. <span data-ttu-id="aefd7-150">Pärast andmete valmendamist vastendage e-kaubanduse ja lojaalsusandmete kontaktid harilike andmetüüpidega.</span><span class="sxs-lookup"><span data-stu-id="aefd7-150">After ingesting the data, map contacts from eCommerce and Loyalty data to common data types.</span></span> <span data-ttu-id="aefd7-151">Liikuge **Andmed** > **Koondamine** > **Vastendamine**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-151">Go to **Data** > **Unify** > **Map**.</span></span>
+1. <span data-ttu-id="9f467-150">Pärast andmete valmendamist vastendage e-kaubanduse ja lojaalsusandmete kontaktid harilike andmetüüpidega.</span><span class="sxs-lookup"><span data-stu-id="9f467-150">After ingesting the data, map contacts from eCommerce and Loyalty data to common data types.</span></span> <span data-ttu-id="9f467-151">Liikuge **Andmed** > **Koondamine** > **Vastendamine**.</span><span class="sxs-lookup"><span data-stu-id="9f467-151">Go to **Data** > **Unify** > **Map**.</span></span>
 
-1. <span data-ttu-id="aefd7-152">Valige olemid, mis esindavad kliendiprofiili: **eCommerceContacts** ja **loyCustomers**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-152">Select the entities that represent the customer profile – **eCommerceContacts** and **loyCustomers**.</span></span> 
+1. <span data-ttu-id="9f467-152">Valige olemid, mis esindavad kliendiprofiili: **eCommerceContacts** ja **loyCustomers**.</span><span class="sxs-lookup"><span data-stu-id="9f467-152">Select the entities that represent the customer profile – **eCommerceContacts** and **loyCustomers**.</span></span> 
 
    :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="E-kaubanduse ja lojaalsuse andmeallikad vahekaardil „Koondamine“.":::
 
-1. <span data-ttu-id="aefd7-154">Valige andmeallika **eCommerceContacts** peamiseks võtmeks **ContactId** ja andmeallika **loyCustomers** peamiseks võtmeks **LoyaltyID**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-154">Select **ContactId** as the primary key for **eCommerceContacts** and **LoyaltyID** as the primary key for **loyCustomers**.</span></span>
+1. <span data-ttu-id="9f467-154">Valige andmeallika **eCommerceContacts** peamiseks võtmeks **ContactId** ja andmeallika **loyCustomers** peamiseks võtmeks **LoyaltyID**.</span><span class="sxs-lookup"><span data-stu-id="9f467-154">Select **ContactId** as the primary key for **eCommerceContacts** and **LoyaltyID** as the primary key for **loyCustomers**.</span></span>
 
    :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="LoyaltyId peamise võtmena vahekaardil „Koondamine“.":::
 
-### <a name="match"></a><span data-ttu-id="aefd7-156">Vastavusseviimine</span><span class="sxs-lookup"><span data-stu-id="aefd7-156">Match</span></span>
+### <a name="match"></a><span data-ttu-id="9f467-156">Vastenda</span><span class="sxs-lookup"><span data-stu-id="9f467-156">Match</span></span>
 
-1. <span data-ttu-id="aefd7-157">Liikuge vahekaardile **Vastavusseviimine** ja valige **Määra järjekord**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-157">Go to the **Match** tab and select **Set Order**.</span></span>
+1. <span data-ttu-id="9f467-157">Liikuge vahekaardile **Vastavusseviimine** ja valige **Määra järjekord**.</span><span class="sxs-lookup"><span data-stu-id="9f467-157">Go to the **Match** tab and select **Set Order**.</span></span>
 
-1. <span data-ttu-id="aefd7-158">Valige ripploendis **Peamine** peamiseks andmeallikaks **eCommerceContacts: eCommerce** ja kaasake kõik kirjed.</span><span class="sxs-lookup"><span data-stu-id="aefd7-158">In the **Primary** drop-down list, choose **eCommerceContacts : eCommerce** as the primary source and include all records.</span></span>
+1. <span data-ttu-id="9f467-158">Valige ripploendis **Peamine** peamiseks andmeallikaks **eCommerceContacts: eCommerce** ja kaasake kõik kirjed.</span><span class="sxs-lookup"><span data-stu-id="9f467-158">In the **Primary** drop-down list, choose **eCommerceContacts : eCommerce** as the primary source and include all records.</span></span>
 
-1. <span data-ttu-id="aefd7-159">Valige ripploendist **Olem 2** **loyCustomers: LoyaltyScheme** ja kaasake kõik kirjed.</span><span class="sxs-lookup"><span data-stu-id="aefd7-159">In the **Entity 2** drop-down list, choose **loyCustomers : LoyaltyScheme** and include all records.</span></span>
+1. <span data-ttu-id="9f467-159">Valige ripploendist **Olem 2** **loyCustomers: LoyaltyScheme** ja kaasake kõik kirjed.</span><span class="sxs-lookup"><span data-stu-id="9f467-159">In the **Entity 2** drop-down list, choose **loyCustomers : LoyaltyScheme** and include all records.</span></span>
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="E-kaubanduse ja lojaalsuse vastavusseviimine vahekaardil „Koondamine“.":::
 
-1. <span data-ttu-id="aefd7-161">Valige **Loo uus reegel**</span><span class="sxs-lookup"><span data-stu-id="aefd7-161">Select **Create a new rule**</span></span>
+1. <span data-ttu-id="9f467-161">Valige **Loo uus reegel**</span><span class="sxs-lookup"><span data-stu-id="9f467-161">Select **Create a new rule**</span></span>
 
-1. <span data-ttu-id="aefd7-162">Lisage esimene tingimus suvandi FullName abil.</span><span class="sxs-lookup"><span data-stu-id="aefd7-162">Add your first condition using FullName.</span></span>
+1. <span data-ttu-id="9f467-162">Lisage esimene tingimus suvandi FullName abil.</span><span class="sxs-lookup"><span data-stu-id="9f467-162">Add your first condition using FullName.</span></span>
 
-   * <span data-ttu-id="aefd7-163">Valige andmeallika eCommerceContacts jaoks ripploendist **FullName**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-163">For eCommerceContacts select **FullName** in the drop-down.</span></span>
-   * <span data-ttu-id="aefd7-164">Valige andmeallika loyCustomers jaoks ripploendist **FullName**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-164">For loyCustomers select **FullName** in the drop-down.</span></span>
-   * <span data-ttu-id="aefd7-165">Valige ripploend **Normaliseerimine** ja valige **Tüüp (telefon, nimi, aadress, ...)**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-165">Select the **Normalize** drop down and choose **Type (Phone, Name, Address, ...)**.</span></span>
-   * <span data-ttu-id="aefd7-166">Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-166">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
+   * <span data-ttu-id="9f467-163">Valige andmeallika eCommerceContacts jaoks ripploendist **FullName**.</span><span class="sxs-lookup"><span data-stu-id="9f467-163">For eCommerceContacts select **FullName** in the drop-down.</span></span>
+   * <span data-ttu-id="9f467-164">Valige andmeallika loyCustomers jaoks ripploendist **FullName**.</span><span class="sxs-lookup"><span data-stu-id="9f467-164">For loyCustomers select **FullName** in the drop-down.</span></span>
+   * <span data-ttu-id="9f467-165">Valige ripploend **Normaliseerimine** ja valige **Tüüp (telefon, nimi, aadress, ...)**.</span><span class="sxs-lookup"><span data-stu-id="9f467-165">Select the **Normalize** drop down and choose **Type (Phone, Name, Address, ...)**.</span></span>
+   * <span data-ttu-id="9f467-166">Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.</span><span class="sxs-lookup"><span data-stu-id="9f467-166">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
 
-1. <span data-ttu-id="aefd7-167">Sisestage uuele reeglile nimi **FullName, Email**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-167">Enter the name **FullName, Email** for the new rule.</span></span>
+1. <span data-ttu-id="9f467-167">Sisestage uuele reeglile nimi **FullName, Email**.</span><span class="sxs-lookup"><span data-stu-id="9f467-167">Enter the name **FullName, Email** for the new rule.</span></span>
 
-   * <span data-ttu-id="aefd7-168">Lisage meiliaadressi jaoks teine tingimus, valides suvandi **Lisa tingimus**</span><span class="sxs-lookup"><span data-stu-id="aefd7-168">Add a second condition for email address by selecting **Add Condition**</span></span>
-   * <span data-ttu-id="aefd7-169">Valige olemi eCommerceContacts jaoks ripploendist **Meil**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-169">For entity eCommerceContacts, choose **EMail** in drop-down.</span></span>
-   * <span data-ttu-id="aefd7-170">Valige olemi loyCustomers jaoks ripploendist **Meil**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-170">For entity loyCustomers, choose **EMail** in the drop-down.</span></span> 
-   * <span data-ttu-id="aefd7-171">Jätke suvand „Normaliseerimine“ tühjaks.</span><span class="sxs-lookup"><span data-stu-id="aefd7-171">Leave Normalize blank.</span></span> 
-   * <span data-ttu-id="aefd7-172">Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-172">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
+   * <span data-ttu-id="9f467-168">Lisage meiliaadressi jaoks teine tingimus, valides suvandi **Lisa tingimus**</span><span class="sxs-lookup"><span data-stu-id="9f467-168">Add a second condition for email address by selecting **Add Condition**</span></span>
+   * <span data-ttu-id="9f467-169">Valige olemi eCommerceContacts jaoks ripploendist **Meil**.</span><span class="sxs-lookup"><span data-stu-id="9f467-169">For entity eCommerceContacts, choose **EMail** in drop-down.</span></span>
+   * <span data-ttu-id="9f467-170">Valige olemi loyCustomers jaoks ripploendist **Meil**.</span><span class="sxs-lookup"><span data-stu-id="9f467-170">For entity loyCustomers, choose **EMail** in the drop-down.</span></span> 
+   * <span data-ttu-id="9f467-171">Jätke suvand „Normaliseerimine“ tühjaks.</span><span class="sxs-lookup"><span data-stu-id="9f467-171">Leave Normalize blank.</span></span> 
+   * <span data-ttu-id="9f467-172">Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.</span><span class="sxs-lookup"><span data-stu-id="9f467-172">Set **Precision Level**: **Basic** and **Value**: **High**.</span></span>
 
    :::image type="content" source="media/unify-match-rule.PNG" alt-text="Reegli vastavusseviimine nime ja meili korral vahekaardil „Koondamine“.":::
 
-7. <span data-ttu-id="aefd7-174">Valige **Salvesta** ja **Käivita**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-174">Select **Save** and **Run**.</span></span>
+7. <span data-ttu-id="9f467-174">Valige **Salvesta** ja **Käivita**.</span><span class="sxs-lookup"><span data-stu-id="9f467-174">Select **Save** and **Run**.</span></span>
 
-### <a name="merge"></a><span data-ttu-id="aefd7-175">Ühendamine</span><span class="sxs-lookup"><span data-stu-id="aefd7-175">Merge</span></span>
+### <a name="merge"></a><span data-ttu-id="9f467-175">Ühendamine</span><span class="sxs-lookup"><span data-stu-id="9f467-175">Merge</span></span>
 
-1. <span data-ttu-id="aefd7-176">Avage vahekaart **Ühendamine**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-176">Go to the **Merge** tab.</span></span>
+1. <span data-ttu-id="9f467-176">Avage vahekaart **Ühendamine**.</span><span class="sxs-lookup"><span data-stu-id="9f467-176">Go to the **Merge** tab.</span></span>
 
-1. <span data-ttu-id="aefd7-177">Määrake olemi **loyCustomers** üksuse **ContactId** kuvatavaks nimeks **ContactIdLOYALTY**, et eristada seda muudest valmendatud ID-dest.</span><span class="sxs-lookup"><span data-stu-id="aefd7-177">On the **ContactId** for **loyCustomers** entity, change the display name to **ContactIdLOYALTY** to differentiate it from the other IDs ingested.</span></span>
+1. <span data-ttu-id="9f467-177">Määrake olemi **loyCustomers** üksuse **ContactId** kuvatavaks nimeks **ContactIdLOYALTY**, et eristada seda muudest valmendatud ID-dest.</span><span class="sxs-lookup"><span data-stu-id="9f467-177">On the **ContactId** for **loyCustomers** entity, change the display name to **ContactIdLOYALTY** to differentiate it from the other IDs ingested.</span></span>
 
    :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="contactid nime vahetamine lojaalsuse ID-s.":::
 
-1. <span data-ttu-id="aefd7-179">Valige **Salvesta** ja **Käivita**, et käivitada ühendamisprotsess.</span><span class="sxs-lookup"><span data-stu-id="aefd7-179">Select **Save** and **Run** to start the Merge Process.</span></span>
+1. <span data-ttu-id="9f467-179">Valige **Salvesta** ja **Käivita**, et käivitada ühendamisprotsess.</span><span class="sxs-lookup"><span data-stu-id="9f467-179">Select **Save** and **Run** to start the Merge Process.</span></span>
 
 
 
-## <a name="task-3---configure-transaction-churn-prediction"></a><span data-ttu-id="aefd7-180">Ülesanne 3 – tehinguvoolavuse prognoosi konfigureerimine</span><span class="sxs-lookup"><span data-stu-id="aefd7-180">Task 3 - Configure transaction churn prediction</span></span>
+## <a name="task-3---configure-transaction-churn-prediction"></a><span data-ttu-id="9f467-180">Ülesanne 3 – tehinguvoolavuse prognoosi konfigureerimine</span><span class="sxs-lookup"><span data-stu-id="9f467-180">Task 3 - Configure transaction churn prediction</span></span>
 
-<span data-ttu-id="aefd7-181">Kui kliendiprofiilid on koondatud, saame käivitada tellimusevoolavuse prognoosi.</span><span class="sxs-lookup"><span data-stu-id="aefd7-181">With the unified customer profiles in place, we can now run the subscription churn prediction.</span></span> <span data-ttu-id="aefd7-182">Üksikasjalikud juhised leiate artiklist [Tellimusevoolavuse prognoos (eelversioon)](predict-subscription-churn.md).</span><span class="sxs-lookup"><span data-stu-id="aefd7-182">For detailed steps, see the [Subscription churn prediction (preview)](predict-subscription-churn.md) article.</span></span> 
+<span data-ttu-id="9f467-181">Kui kliendiprofiilid on koondatud, saame käivitada tellimusevoolavuse prognoosi.</span><span class="sxs-lookup"><span data-stu-id="9f467-181">With the unified customer profiles in place, we can now run the subscription churn prediction.</span></span> <span data-ttu-id="9f467-182">Üksikasjalikud juhised leiate artiklist [Tellimusevoolavuse prognoos (eelversioon)](predict-subscription-churn.md).</span><span class="sxs-lookup"><span data-stu-id="9f467-182">For detailed steps, see the [Subscription churn prediction (preview)](predict-subscription-churn.md) article.</span></span> 
 
-1. <span data-ttu-id="aefd7-183">Minge jaotisse **Ärianalüüs** > **Avastamine** ja valige kasutamiseks **Kliendivoolavuse mudel**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-183">Go to **Intelligence** > **Discover** and select to use the **Customer churn model**.</span></span>
+1. <span data-ttu-id="9f467-183">Minge jaotisse **Ärianalüüs** > **Avastamine** ja valige kasutamiseks **Kliendivoolavuse mudel**.</span><span class="sxs-lookup"><span data-stu-id="9f467-183">Go to **Intelligence** > **Discover** and select to use the **Customer churn model**.</span></span>
 
-1. <span data-ttu-id="aefd7-184">Valige suvand **Tehingupõhine** ja valige **Alusta**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-184">Select the **Transactional** option and select **Get started**.</span></span>
+1. <span data-ttu-id="9f467-184">Valige suvand **Tehingupõhine** ja valige **Alusta**.</span><span class="sxs-lookup"><span data-stu-id="9f467-184">Select the **Transactional** option and select **Get started**.</span></span>
 
-1. <span data-ttu-id="aefd7-185">Pange mudelile nimi **OOB e-kaubanduse tehinguvoolavuse prognoos** ja väljundolemile nimi **OOBeCommerceChurnPrediction**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-185">Name the model **OOB eCommerce Transaction Churn Prediction** and the output entity **OOBeCommerceChurnPrediction**.</span></span>
+1. <span data-ttu-id="9f467-185">Pange mudelile nimi **OOB e-kaubanduse tehinguvoolavuse prognoos** ja väljundolemile nimi **OOBeCommerceChurnPrediction**.</span><span class="sxs-lookup"><span data-stu-id="9f467-185">Name the model **OOB eCommerce Transaction Churn Prediction** and the output entity **OOBeCommerceChurnPrediction**.</span></span>
 
-1. <span data-ttu-id="aefd7-186">Määratlege voolavuse mudeli jaoks kaks tingimust.</span><span class="sxs-lookup"><span data-stu-id="aefd7-186">Define two conditions for the churn model:</span></span>
+1. <span data-ttu-id="9f467-186">Määratlege voolavuse mudeli jaoks kaks tingimust.</span><span class="sxs-lookup"><span data-stu-id="9f467-186">Define two conditions for the churn model:</span></span>
 
-   * <span data-ttu-id="aefd7-187">**Prognoosiajavahemik**: **vähemalt 60** päeva.</span><span class="sxs-lookup"><span data-stu-id="aefd7-187">**Prediction window**: **at least 60** days.</span></span> <span data-ttu-id="aefd7-188">See säte määratleb, kui kaugel tulevikus tahame kliendivoolavust ennustada.</span><span class="sxs-lookup"><span data-stu-id="aefd7-188">This setting defines how far into the future do we want to predict customer churn.</span></span>
+   * <span data-ttu-id="9f467-187">**Prognoosiajavahemik**: **vähemalt 60** päeva.</span><span class="sxs-lookup"><span data-stu-id="9f467-187">**Prediction window**: **at least 60** days.</span></span> <span data-ttu-id="9f467-188">See säte määratleb, kui kaugel tulevikus tahame kliendivoolavust ennustada.</span><span class="sxs-lookup"><span data-stu-id="9f467-188">This setting defines how far into the future do we want to predict customer churn.</span></span>
 
-   * <span data-ttu-id="aefd7-189">**Voolavuse määratlus**: **vähemalt 60** päeva.</span><span class="sxs-lookup"><span data-stu-id="aefd7-189">**Churn definition**: **at least 60** days.</span></span> <span data-ttu-id="aefd7-190">Ostudeta aeg, pärast mida loetakse klient loobunuks.</span><span class="sxs-lookup"><span data-stu-id="aefd7-190">The duration without purchase after which a customer is considered churned.</span></span>
+   * <span data-ttu-id="9f467-189">**Voolavuse määratlus**: **vähemalt 60** päeva.</span><span class="sxs-lookup"><span data-stu-id="9f467-189">**Churn definition**: **at least 60** days.</span></span> <span data-ttu-id="9f467-190">Ostudeta aeg, pärast mida loetakse klient loobunuks.</span><span class="sxs-lookup"><span data-stu-id="9f467-190">The duration without purchase after which a customer is considered churned.</span></span>
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Mudeli suvandite „Prognoosiajavahemik“ ja „Voolavuse määratlus“ valimine.":::
 
-1. <span data-ttu-id="aefd7-192">Valige **Ostuajalugu (nõutav)** ja valige tellimuseajaloo jaoks **Lisa andmeid**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-192">Select **Purchase History (required)** and select **Add data** for subscription history.</span></span>
+1. <span data-ttu-id="9f467-192">Valige **Ostuajalugu (nõutav)** ja valige ostuajaloo jaoks **Lisa andmeid**.</span><span class="sxs-lookup"><span data-stu-id="9f467-192">Select **Purchase History (required)** and select **Add data** for purchase history.</span></span>
 
-1. <span data-ttu-id="aefd7-193">Lisage olem **eCommercePurchases: eCommerce** ja vastendage e-kaubandusest pärit väljad asjaomaste mudelile vajalike väljadega.</span><span class="sxs-lookup"><span data-stu-id="aefd7-193">Add the **eCommercePurchases : eCommerce** entity and map the fields from eCommerce to the corresponding fields required by the model.</span></span>
+1. <span data-ttu-id="9f467-193">Lisage olem **eCommercePurchases: eCommerce** ja vastendage e-kaubandusest pärit väljad asjaomaste mudelile vajalike väljadega.</span><span class="sxs-lookup"><span data-stu-id="9f467-193">Add the **eCommercePurchases : eCommerce** entity and map the fields from eCommerce to the corresponding fields required by the model.</span></span>
 
-1. <span data-ttu-id="aefd7-194">Ühendage olem **eCommercePurchases: eCommerce** olemiga **eCommerceContacts: eCommerce**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-194">Join the **eCommercePurchases : eCommerce** entity with **eCommerceContacts : eCommerce**.</span></span>
+1. <span data-ttu-id="9f467-194">Ühendage olem **eCommercePurchases: eCommerce** olemiga **eCommerceContacts: eCommerce**.</span><span class="sxs-lookup"><span data-stu-id="9f467-194">Join the **eCommercePurchases : eCommerce** entity with **eCommerceContacts : eCommerce**.</span></span>
 
    :::image type="content" source="media/model-purchase-join.PNG" alt-text="E-kaubanduse olemite ühendamine.":::
 
-1. <span data-ttu-id="aefd7-196">Valige **Järgmine**, et määratleda mudeli ajakava.</span><span class="sxs-lookup"><span data-stu-id="aefd7-196">Select **Next** to set the model schedule.</span></span>
+1. <span data-ttu-id="9f467-196">Valige **Järgmine**, et määratleda mudeli ajakava.</span><span class="sxs-lookup"><span data-stu-id="9f467-196">Select **Next** to set the model schedule.</span></span>
 
-   <span data-ttu-id="aefd7-197">Mudelit on vaja regulaarselt treenida, et see õpiks uusi mustreid uute andmete valmendamisel.</span><span class="sxs-lookup"><span data-stu-id="aefd7-197">The model needs to train regularly to learn new patterns when there is new data ingested.</span></span> <span data-ttu-id="aefd7-198">Selle näite puhul valige **Iga kuu**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-198">For this example, select **Monthly**.</span></span>
+   <span data-ttu-id="9f467-197">Mudelit on vaja regulaarselt treenida, et see õpiks uusi mustreid uute andmete valmendamisel.</span><span class="sxs-lookup"><span data-stu-id="9f467-197">The model needs to train regularly to learn new patterns when there is new data ingested.</span></span> <span data-ttu-id="9f467-198">Selle näite puhul valige **Iga kuu**.</span><span class="sxs-lookup"><span data-stu-id="9f467-198">For this example, select **Monthly**.</span></span>
 
-1. <span data-ttu-id="aefd7-199">Pärast kõigi üksikasjade läbivaatamist valige **Salvesta ja käivita**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-199">After reviewing all the details, select **Save and Run**.</span></span>
+1. <span data-ttu-id="9f467-199">Pärast kõigi üksikasjade läbivaatamist valige **Salvesta ja käivita**.</span><span class="sxs-lookup"><span data-stu-id="9f467-199">After reviewing all the details, select **Save and Run**.</span></span>
 
-## <a name="task-4---review-model-results-and-explanations"></a><span data-ttu-id="aefd7-200">Ülesanne 4 – mudeli tulemuste ja selgituste läbivaatamine</span><span class="sxs-lookup"><span data-stu-id="aefd7-200">Task 4 - Review model results and explanations</span></span>
+## <a name="task-4---review-model-results-and-explanations"></a><span data-ttu-id="9f467-200">Ülesanne 4 – mudeli tulemuste ja selgituste läbivaatamine</span><span class="sxs-lookup"><span data-stu-id="9f467-200">Task 4 - Review model results and explanations</span></span>
 
-<span data-ttu-id="aefd7-201">Laske mudelil treenimine ja andmete hindamine lõpule viia.</span><span class="sxs-lookup"><span data-stu-id="aefd7-201">Let the model complete the training and scoring of the data.</span></span> <span data-ttu-id="aefd7-202">Nüüd saate üle vaadata tellimusevoolavuse mudeli selgitused.</span><span class="sxs-lookup"><span data-stu-id="aefd7-202">You can now review the subscription churn model explanations.</span></span> <span data-ttu-id="aefd7-203">Lisateavet leiate teemast [Prognoos oleku ja tulemuste läbivaatamine](predict-subscription-churn.md#review-a-prediction-status-and-results).</span><span class="sxs-lookup"><span data-stu-id="aefd7-203">For more information, see [Review a prediction status and results](predict-subscription-churn.md#review-a-prediction-status-and-results).</span></span>
+<span data-ttu-id="9f467-201">Laske mudelil treenimine ja andmete hindamine lõpule viia.</span><span class="sxs-lookup"><span data-stu-id="9f467-201">Let the model complete the training and scoring of the data.</span></span> <span data-ttu-id="9f467-202">Nüüd saate üle vaadata tellimusevoolavuse mudeli selgitused.</span><span class="sxs-lookup"><span data-stu-id="9f467-202">You can now review the subscription churn model explanations.</span></span> <span data-ttu-id="9f467-203">Lisateavet leiate teemast [Prognoos oleku ja tulemuste läbivaatamine](predict-subscription-churn.md#review-a-prediction-status-and-results).</span><span class="sxs-lookup"><span data-stu-id="9f467-203">For more information, see [Review a prediction status and results](predict-subscription-churn.md#review-a-prediction-status-and-results).</span></span>
 
-## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a><span data-ttu-id="aefd7-204">Ülesanne 5 – suure voolavusriskiga klientide segmendi loomine</span><span class="sxs-lookup"><span data-stu-id="aefd7-204">Task 5 - Create a segment of high churn-risk customers</span></span>
+## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a><span data-ttu-id="9f467-204">Ülesanne 5 – suure voolavusriskiga klientide segmendi loomine</span><span class="sxs-lookup"><span data-stu-id="9f467-204">Task 5 - Create a segment of high churn-risk customers</span></span>
 
-<span data-ttu-id="aefd7-205">Tootmismudeli käitamisel luuakse uus olem, mida näete, kui liigute **Andmed** > **Olemid**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-205">Running the production model creates a new entity that you can see in **Data** > **Entities**.</span></span>   
+<span data-ttu-id="9f467-205">Tootmismudeli käitamisel luuakse uus olem, mida näete, kui liigute **Andmed** > **Olemid**.</span><span class="sxs-lookup"><span data-stu-id="9f467-205">Running the production model creates a new entity that you can see in **Data** > **Entities**.</span></span>   
 
-<span data-ttu-id="aefd7-206">Saate luua mudeli loodud olemi põhjal uue segmendi.</span><span class="sxs-lookup"><span data-stu-id="aefd7-206">You can create a new segment based on the entity created by the model.</span></span>
+<span data-ttu-id="9f467-206">Saate luua mudeli loodud olemi põhjal uue segmendi.</span><span class="sxs-lookup"><span data-stu-id="9f467-206">You can create a new segment based on the entity created by the model.</span></span>
 
-1.  <span data-ttu-id="aefd7-207">Liikuge jaotisse **Segmendid**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-207">Go to **Segments**.</span></span> <span data-ttu-id="aefd7-208">Valige **Uus** ja seejärel **Loo üksusest** > **Ärianalüüs**.</span><span class="sxs-lookup"><span data-stu-id="aefd7-208">Select **New** and choose **Create from** > **Intelligence**.</span></span> 
+1.  <span data-ttu-id="9f467-207">Liikuge jaotisse **Segmendid**.</span><span class="sxs-lookup"><span data-stu-id="9f467-207">Go to **Segments**.</span></span> <span data-ttu-id="9f467-208">Valige **Uus** ja seejärel **Loo üksusest** > **Ärianalüüs**.</span><span class="sxs-lookup"><span data-stu-id="9f467-208">Select **New** and choose **Create from** > **Intelligence**.</span></span> 
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Segmendi loomine mudeli väljundiga.":::
 
-1. <span data-ttu-id="aefd7-210">Valige lõpp-punkt **OOBSubscriptionChurnPrediction** ja määratlege segment.</span><span class="sxs-lookup"><span data-stu-id="aefd7-210">Select the **OOBSubscriptionChurnPrediction** endpoint and define the segment:</span></span> 
-   - <span data-ttu-id="aefd7-211">Väli: ChurnScore</span><span class="sxs-lookup"><span data-stu-id="aefd7-211">Field: ChurnScore</span></span>
-   - <span data-ttu-id="aefd7-212">Tehtemärk: suurem kui</span><span class="sxs-lookup"><span data-stu-id="aefd7-212">Operator: greater than</span></span>
-   - <span data-ttu-id="aefd7-213">Väärtus: 0,6</span><span class="sxs-lookup"><span data-stu-id="aefd7-213">Value: 0.6</span></span>
+1. <span data-ttu-id="9f467-210">Valige lõpp-punkt **OOBSubscriptionChurnPrediction** ja määratlege segment.</span><span class="sxs-lookup"><span data-stu-id="9f467-210">Select the **OOBSubscriptionChurnPrediction** endpoint and define the segment:</span></span> 
+   - <span data-ttu-id="9f467-211">Väli: ChurnScore</span><span class="sxs-lookup"><span data-stu-id="9f467-211">Field: ChurnScore</span></span>
+   - <span data-ttu-id="9f467-212">Tehtemärk: suurem kui</span><span class="sxs-lookup"><span data-stu-id="9f467-212">Operator: greater than</span></span>
+   - <span data-ttu-id="9f467-213">Väärtus: 0,6</span><span class="sxs-lookup"><span data-stu-id="9f467-213">Value: 0.6</span></span>
    
    :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Tellimusevoolavuse segmendi seadistamine.":::
 
-<span data-ttu-id="aefd7-215">Teil on nüüd segment, mida värskendatakse dünaamiliselt ja mis tuvastab selle tellimusäri jaoks suure voolavusriskiga kliente.</span><span class="sxs-lookup"><span data-stu-id="aefd7-215">You now have a segment that is dynamically updated which identifies high churn-risk customers for this subscription business.</span></span>
+<span data-ttu-id="9f467-215">Teil on nüüd segment, mida värskendatakse dünaamiliselt ja mis tuvastab selle tellimusäri jaoks suure voolavusriskiga kliente.</span><span class="sxs-lookup"><span data-stu-id="9f467-215">You now have a segment that is dynamically updated which identifies high churn-risk customers for this subscription business.</span></span>
 
-<span data-ttu-id="aefd7-216">Lisateavet vt teemast [Segmentide loomine ja haldamine](segments.md).</span><span class="sxs-lookup"><span data-stu-id="aefd7-216">For more information, see [Create and manage segments](segments.md).</span></span>
+<span data-ttu-id="9f467-216">Lisateavet vt teemast [Segmentide loomine ja haldamine](segments.md).</span><span class="sxs-lookup"><span data-stu-id="9f467-216">For more information, see [Create and manage segments](segments.md).</span></span>
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
