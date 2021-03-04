@@ -4,17 +4,17 @@ description: Andmete importimine Common Data Service'i hallatavast andmejärvest
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643393"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267808"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Andmetega ühendamine Common Data Service’i hallatavas andmejärves
 
@@ -34,7 +34,10 @@ Võrguteenustes nagu Azure Data Lake Storage talletatavaid andmeid saab talletad
 
 3. Valige **Teenusega Common Data Service ühenduse loomine** ja valige suvand **Edasi**.
 
-4. Sisestage andmeallika **Nimi** ja valige **Järgmine**.
+4. Sisestage andmeallika **Nimi** ja valige **Järgmine**. Nime juhised: 
+   - peab algama tähega;
+   - kasutage ainult tähti ja numbreid; erimärkide ja tühikute sisestamine pole lubatud;
+   - kasutage 3–64 tähemärki.
 
 5. Sisestage oma Common Data Service’i organisatsiooni **serveri aadress** ja valige suvand **Logi sisse**.
 
@@ -65,3 +68,6 @@ Muu Common Data Service’iga ühenduse loomiseks [looge uus andmeallikas](#conn
 3. Valige loetelust valik **Redigeeri**.
 
 4. Valige saadaolevate olemite loendist täiendavad olemid ja valige suvand **Salvesta**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

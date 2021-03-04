@@ -1,20 +1,20 @@
 ---
 title: Rikastamine kolmanda osapoole rikastamisteenusega Experianilt
 description: Üldine teave Experiani kolmanda osapoole rikastamise kohta.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668804"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269555"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Kliendi profiilide rikastamine Experiani demograafiliste andmetega (eelvaade)
 
@@ -41,7 +41,9 @@ Experiani konfigureerimiseks peavad olema täidetud järgmised eeltingimused.
 
 ## <a name="map-your-fields"></a>Väljade vastendamine
 
-1. Valige suvand **Lisa andmed** ja valige suvandite **Nimi ja aadress**, **Meiliaadress** või **Telefon** seast oma võtmeidentifikaatorid, mida Experianile identiteedi lahenduseks saata.
+1.  Valige **Lisa andmed** ja valige **Kliendiandmete kogum**, mida soovite Experiani demograafiliste andmetega rikastada. Saate valida olemi **Klient**, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
+
+1. Valige oma peamised identifikaatorid üksusest **Nimi ja aadress**, **E-post** või **Telefon**, et saata need Experiani identiteedi lahenduseks.
 
    > [!TIP]
    > Rohkemate võtmeidentifikaatori atribuutide saatmine Experianile annab tõenäoliselt suurema vastavuse määra.
@@ -52,8 +54,8 @@ Experiani konfigureerimiseks peavad olema täidetud järgmised eeltingimused.
 
 1.  Väljavastenduse lõpule viimiseks valige **Salvesta**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Experiani väljade vastendamine](media/experian-field-mapping.png "Experiani väljade vastendamine")
+    > [!div class="mx-imgBorder"]
+    > ![Experiani väljade vastendamine](media/experian-field-mapping.png "Experiani väljade vastendamine")
 
 ## <a name="enrichment-results"></a>Rikastamise tulemused
 
@@ -71,3 +73,6 @@ Rikastatud kliendiandmetele toetumine. Klientidele isikustatud kogemuste pakkumi
 
 Kui lubate Dynamics 365 Customer Insightsil Experiani andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed). Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et Experian täidab kõik teie privaatsus- või turbenõuded. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
 Teie Dynamics 365 Customer Insightsi administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Customer Insightsi andmete eksportimine rakendusse Dynamics 365 Sales
 description: Vaadake, kuidas konfigureerida ühendust rakendusega Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643813"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269003"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Ühendus rakendusega Dynamics 365 for Sales (eelvaateversioon)
 
@@ -24,7 +24,10 @@ Kasutage kliendiandmeid turundusloendite loomiseks, töövoogude järeltegevuste
 
 ## <a name="prerequisite"></a>Eeltingimus
 
-Kontaktikirjed [rakendusest Dynamics 365 Sales on valmendatud Common Data Service'i abil](connect-power-query.md).
+1. Enne segmendi eksportimist Customer Insightsist Salesi, peavad kontaktikirjed olema olemas rakenduses Dynamics 365 Sales. Lugege lisateavet selle kohta, kuidas valmendada kontakte [Dynamics 365 Salesis Common Data Servicesi abil](connect-power-query.md).
+
+   > [!NOTE]
+   > Segmentide eksportimine sihtrühmaülevaadetest Salesi ei loo uusi kontaktikirjeid Salesi eksemplaris. Salesi kontaktikirjed peavad olema valmendatud sihtrühmaülevaadetes ja neid tuleb kasutada andmeallikana. Need tuleb lisada ka ühendatud kliendi olemisse, et vastendada kliendi ID-d ja kontakti ID-deks, enne kui segmente saab eksportida.
 
 ## <a name="configure-the-connector-for-sales"></a>Konnektori konfigureerimine Salesi jaoks
 
@@ -49,3 +52,6 @@ Kontaktikirjed [rakendusest Dynamics 365 Sales on valmendatud Common Data Servic
 ## <a name="export-the-data"></a>Andmete eksportimine
 
 Saate [vajadusel andmeid eksportida](export-destinations.md). Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

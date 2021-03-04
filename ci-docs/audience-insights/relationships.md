@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405568"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269868"
 ---
 # <a name="relationships-between-entities"></a>Olemitevaheline seos
 
@@ -28,8 +28,8 @@ Süsteemi seosed luuakse vastendamise ja liitmise ajal taustal vastavalt intelli
 > ![Seose loomine](media/relationships-entities-merge.png "Seose loomine")
 
 - ***CustomerToContact* seos** loodi kliendi olemi ja kontakti olemi vahel. Kliendi olem saab võtme välja **Contact_contactId**, et olla seotud kontakti olemi võtme väljaga **contactId**.
-- **_CustomerToAccount_ seos** loodi kliendi olemi ja konto olemi vahel. Kliendi olem saab võtme välja **Account_accountId**, et olla seotud konto olemi võtme väljaga **accountId**.
-- **_CustomerToWebAccount_ seos** loodi kliendi olemi ja veebikonto olemi vahel. Kliendi olem saab võtme välja **WebAccount_webaccountId**, et olla seotud veebikonto olemi võtme väljaga **webaccountId**.
+- ***CustomerToAccount* seos** loodi kliendi olemi ja konto olemi vahel. Kliendi olem saab võtme välja **Account_accountId**, et olla seotud konto olemi võtme väljaga **accountId**.
+- ***CustomerToWebAccount* seos** loodi kliendi olemi ja veebikonto olemi vahel. Kliendi olem saab võtme välja **WebAccount_webaccountId**, et olla seotud veebikonto olemi võtme väljaga **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Seose loomine
 
@@ -69,3 +69,6 @@ Määratlege kohandatud seoseid lehel **Seosed**. Iga seos koosneb lähteolemist
 ## <a name="next-step"></a>Järgmine etapp
 
 Süsteemi ja kohandatud seoseid kasutatakse segmentide loomiseks vastavalt mitte enam eraldatud mitmele andmeallikale. Lisateavet vt [Segmendid](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

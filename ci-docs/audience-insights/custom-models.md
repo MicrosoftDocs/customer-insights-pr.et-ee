@@ -4,16 +4,16 @@ description: Azure'i masinõppe kohandatud mudelitega töötamine rakenduses Dyn
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668898"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267229"
 ---
 # <a name="custom-machine-learning-models"></a>Kohandatud masinõppe mudelid
 
@@ -46,15 +46,15 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 
 1. Valige masinõppe stuudio (klassikaline) veebiteenus või Azure'i masinõppe konveier ripploendis **Veebiteenus, mis sisaldab teie mudelit**. Seejärel valige suvand **Edasi**.
    - Lugege lisateavet [veebiteenuse avaldamise kohta masinõppe stuudios (klassikaline)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Lugege lisateavet [konveieri avaldamise kohta Azure'i masinõppes kujundaja abil](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) või [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) kohta. 
-     > [!NOTE]
-     > Teie konveier peab olema avaldatud [konveieri lõpp-punktis](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Lugege lisateavet [konveieri avaldamise kohta Azure'i masinõppes kujundaja abil](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) või [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) kohta. Teie konveier peab olema avaldatud [konveieri lõpp-punktis](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Valige iga **veebiteenuse sisendi** kohta sihtrühmaülevaadetest vastav **Olem** ja valige **Järgmine**.
+   > [!NOTE]
+   > Kohandatud mudeli töövoog rakendab heuristikat veebiteenuse sisendväljade vastendamiseks olemiatribuutidele, võttes aluseks välja nime ja andmetüübi. Kui veebiteenuse välja ei saa olemile vastendada, kuvatakse tõrge.
 
    > [!div class="mx-imgBorder"]
    > ![Konfigureeri töövoog](media/intelligence-screen2-updated.png "Konfigureeri töövoog")
-
+   
 1. Määrake etapis **Mudeli väljundi parameetrid** järgmised atribuudid.
    - Masinõppe stuudio (klassikaline)
       1. Sisestage väljundi **Olemi nimi**, millesse soovite veebiteenuse väljundi tulemusi salvestada.
@@ -112,3 +112,6 @@ Teie töövoog käivitub automaatselt ka iga ajastatud värskendamise korral. Li
 1. Valige käsk **Kustuta** ja kinnitage kustutamine.
 
 Teie töövoog kustutatakse. Töövoo loomisel loodud [olem](entities.md) jääb alles ning seda saab näha lehel **Olemid**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

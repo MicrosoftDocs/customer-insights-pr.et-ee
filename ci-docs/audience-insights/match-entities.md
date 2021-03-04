@@ -4,17 +4,17 @@ description: Viige olemid vastavusse, et luua koondatud kliendiprofiile.
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405563"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267473"
 ---
 # <a name="match-entities"></a>Olemite vastavusseviimine
 
@@ -22,7 +22,7 @@ Pärast vastendamise etappi olete valmis olemite vastavusse viimiseks. Vastavuss
 
 ## <a name="specify-the-match-order"></a>Vastendamisjärjestuse määramine
 
-Vastendamisetapi käivitamiseks minge **Ühendamine** > **Vastendamine** ja valige **Järjestuse määramine**.
+Vastandamise faasi alustamiseks minge asukohta **Andmed** > **Ühilda** > **Sobita** ja valige **Määra tellimus**.
 
 Iga vaste ühendab vähemalt kaks olemit üheks olemiks, samas säilitades iga kordumatu kliendi kirjega. Järgmises näited valisime kolm olemit: **ContactCSV: TestData** **primaarse** olemina, **WebAccountCSV: TestData** **2. olemina** ja **CallRecordSmall: TestData** **3. olemina**. Valikute kohal olev diagramm kirjeldab vastendamisjärjestuse toimimist.
 
@@ -136,7 +136,7 @@ Pärast eemaldatud duplikaatidega kirje tuvastamist kasutatakse seda olemitevahe
 
 1. Vastavusseviimise protsessi käitamise korral rühmitatakse kirjed nüüd duplikaadieemalduse reeglites määratletud tingimuste alusel. Pärast kirjete rühmitamist rakendatakse ühendamispoliitikat, et tuvastada võitjast kirje.
 
-1. Seejärel kasutatakse seda võitjast kirjet olemitevahelises vastavusseviimises.
+1. Võitja kirje antakse seejärel üle olemitevahelisele sobitamisele koos kaotaja kirjetega (nt alternatiivsed ID-d), et parandada sobitamiskvaliteeti.
 
 1. Kõik kohandatud vastavusseviimise reeglid, mis on määratletud „alati vastavusseviimise“ ja „mitte kunagi vastavusseviimise“ jaoks, alistavad duplikaadieemalduse reeglid. Kui duplikaadieemalduse reegel tuvastab ühtivad kirjed ja kohandatud vastavusseviimise reegel on seatud neid kirjeid mitte kunagi vastavusse viima, siis neid kahte kirjet ei viida vastavusse.
 
@@ -157,6 +157,17 @@ Esimene vastendamine loob koondpõhiolemit. Kõik järgnevad vastendamised laien
 
 > [!TIP]
 > Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
+
+## <a name="deduplication-output-as-an-entity"></a>Pöördduplitseerimise väljund olemina
+Lisaks olemitevahelise sobitamise osana loodud ühtsele põhiolemile genereerib pöördduplitseerimine omavahelises protsessis ka uus olem igale olemile sobitustellimusest, et tuvastada pöördduplitseeritud kirjed. Neid olemeid võib leida koos suvandiga **ConflationMatchPairs:CustomerInsights** jaotises **Süsteem** leheküljel **Olemid** nimega **Deduplication_Datasource_Entity**.
+
+Pöördduplitseeritava väljundi olem sisaldab järgmist teavet:
+- ID-d/võtmed
+  - Primaarvõtme väli ja selle alternatiivsed ID väljad. Alternatiivsed ID-d on kõik kirje tuvastatud alternatiivsed ID-d.
+  - Deduplication_GroupId väli näitab olemi sees tuvastatud rühma või klastrit, mis rühmitab kõik sarnased kirjed määratud pöördduplitseerimise väljade põhjal. Seda kasutatakse süsteemi töötlemise eesmärkidel. Kui pole määratud pole manuaalseid pöördduplitseerimise reegleid ja süsteemi määratletud pöördduplitseerimise väljade subjektireeglid kehtivad, ei pruugi te seda välja pöördduplitseerimise väljundi olemist leida.
+  - Deduplication_WinnerId: see väli sisaldab tuvastatud rühma või klastri võitja ID-d. Kui Deduplication_WinnerId on sama, mis kirje primaarvõtme väärtus, tähendab see, et kirje on võitja kirje.
+- Väljad, mida kasutatakse pöördduplitseerimise reeglite määratlemiseks.
+- Reeglid ja punktisumma väljad, mis tähistavad rakendatavaid pöördduplitseerimise reegleid ja millist punktisummat tagastas sobitusalgoritm.
 
 ## <a name="review-and-validate-your-matches"></a>Vastenduste ülevaatamine ja valideerimine
 
@@ -200,6 +211,11 @@ Parandage kvaliteeti, selleks seadistage uuesti paar vaste näitajat:
   > [!div class="mx-imgBorder"]
   > ![Reegli paljundaminel](media/configure-data-duplicate-rule.png "Reegli paljundamine")
 
+- **Inaktiveerige reegel**, et säilitada sobitusreegel eraldades seda sobitusprotsessist.
+
+  > [!div class="mx-imgBorder"]
+  > ![Reegli inaktiveerimine](media/configure-data-deactivate-rule.png "Reegli inaktiveerimine")
+
 - **Muutke reegleid**, valides sümboli **Muuda**. Saate kasutada järgmisi muudatusi.
 
   - Muutke tingimuse atribuute: valige kindlas tingimuse read uued atribuudid.
@@ -229,6 +245,8 @@ Saate määrata tingimused, et kindlad kirjed peaksid alati vastama või mitte k
     - Entity2Key: 34567
 
    Sama malli fail suudab määratleda mitme olemi kohandatud vastendamiskirjeid.
+   
+   Kui soovite olemi pöördduplitseerimise määrata kohandatud sobitamisega, sisestage Entity1 ja Entity2 sama olem ja määrake erinevad primaarvõtmed.
 
 5. Pärast kõikide soovitud asenduste lisamist salvestage malli fail.
 
@@ -250,3 +268,6 @@ Saate määrata tingimused, et kindlad kirjed peaksid alati vastama või mitte k
 ## <a name="next-step"></a>Järgmine etapp
 
 Pärast vähemalt ühe vastendamispaari vastendamist võite lahendada andmete võimalikud vastuolud, selleks lugege teemat [**Liitmine**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

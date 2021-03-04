@@ -5,16 +5,16 @@ ms.date: 11/24/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1b5c6e46e8e424df83e855d81fc4dd7ecb394e3c
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 12eed91a7ca4ef7fde0d53cca4a1dfd398b4634f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668718"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269417"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Ettevõtte profiilide rikastamine Leadspace'iga (eelvaade)
 
@@ -38,7 +38,11 @@ Leadspace'i seadistamiseks peavad olema täidetud järgmised eeltingimused.
 
 1. Valige **Alusta** ja seejärel sisestage aktiivne **Leadspace'i tõend** (igavene võti). Vaadake üle ja andke oma nõusolek **Andmete privaatsuse ja nõuetele vastavuse** jaoks, valides märkeruudu **Nõustun**. Kinnitage mõlemad sisendid, valides **Loo ühendus Leadspace'iga**.
 
-1. Valige **Vastenda andmed** ja määratlege, milliseid teie koondatud profiilide välju tuleks kasutada, et otsida ühtivad andmeid Leadspace'ist. Nõutav on väli **Ettevõtte nimi**. Selleks et vasted oleksid täpsemad, saab lisada kuni kaks muud välja (**Ettevõtte veebisait** ja **Ettevõtte asukoht**).
+1. Valige **Vastenda andmed** ja valige andmete kogum, mida soovite Leadspace'i ettevõtte andmetega rikastada. Saate valida olemi *Klient*, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
+
+   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Valige kliendiprofiili ja segmendi rikastamise vahel.":::
+
+1. Klõpsake suvandit **Edasi** ja määratlege, milliseid teie koondatud profiilide välju tuleks kasutada, et otsida ühtivad andmeid Leadspace'ist. Nõutav on väli **Ettevõtte nimi**. Selleks et vasted oleksid täpsemad, saab lisada kuni kaks muud välja (**Ettevõtte veebisait** ja **Ettevõtte asukoht**).
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace'i väljade vastendamise paan.":::
    
@@ -62,3 +66,6 @@ Rikastatud kliendiandmetele toetumine. Klientidele isikustatud kogemuste pakkumi
 
 Kui lubate Dynamics 365 Customer Insightsil Leadspace'i andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed). Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et Leadspace täidab kõik teie privaatsus- või turbenõuded. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
 Teie Dynamics 365 Customer Insightsi administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

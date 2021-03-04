@@ -1,20 +1,20 @@
 ---
 title: Azure Data Lake Storage Gen2 kontoga ühenduse loomine teenusesubjekti kaudu
-description: Kasutage Azure'i teenusesubjekti sihtrühmaülevaadete jaoks, et luua ühendus omaenda andmejärvega, kui lisate selle sihtrühmaülevaadetele.
-ms.date: 11/24/2020
+description: Kasutage Azure'i teenusesubjekti sihtrühmaülevaadete jaoks, et luua ühendus oma Data Lake'iga, kui lisate selle sihtrühmaülevaadetele.
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644083"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267717"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Azure Data Lake Storage Gen2 kontoga ühendumine Azure'i teenusesubjekti kaudu sihtrühmaülevaadeteks
 
@@ -22,7 +22,9 @@ Automatiseeritud tööriistad, mis kasutavad Azure'i teenuseid, peaksid alati om
 
 Saate kasutada teenusesubjekti, et turvaliselt [lisada või redigeerida Common Data Modeli kausta andmeallikana](connect-common-data-model.md) või [luua uus keskkond või värskendada olemasolevat](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Teenusesubjekti loomiseks on teil vaja oma Azure'i tellimuse administraatoriõigusi.
+> [!IMPORTANT]
+> - Azure Data Lake Gen2 salvestusruumi kontol, mis kasutab teenusesubjekti, peab olema [lubatud hierarhiline nimeruum (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Teenusesubjekti loomiseks on teil vaja oma Azure'i tellimuse administraatoriõigusi.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Azure'i teenusesubjekti loomine sihtrühmaülevaadeteks
 
@@ -83,7 +85,7 @@ Lisage Azure Data Lake'i salvestuskonto sihtrühmaülevaadetesse, et [talletada 
 
 Järgige allolevaid juhiseid, et sisestada valitud meetodi jaoks vajalik teave.
 
-### <a name="resounce-based-storage-account-connection"></a>Ressursipõhine salvestuskonto ühendus
+### <a name="resource-based-storage-account-connection"></a>Ressursipõhine salvestuskonto ühendus
 
 1. Minge [Azure'i haldusportaali](https://portal.azure.com), logige oma tellimusse sisse ja avage salvestuskonto.
 
@@ -108,7 +110,8 @@ Järgige allolevaid juhiseid, et sisestada valitud meetodi jaoks vajalik teave.
 1. Vaadake üle salvestuskonto väärtused **Tellimus**, **Ressursirühm** ja **Nimi**, sihtrühmaülevaadetes oleksid valitud õiged väärtused.
 
 1. Valige sihtrühmaülevaadetes salvestuskontot lisades väärtused või asjaomased väljad.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Salvestuskonto ressursi-ID teabe sisestamine.":::
    
 1. Jätkake sihtrühmaülevaadetes allesjäänud sammude järgimist, et lisada salvestuskonto.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

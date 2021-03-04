@@ -1,20 +1,20 @@
 ---
 title: Power Automate konnektor | Microsoft Docs
 description: Looge Microsoft Power Automate’i vooge Dynamics 365 Customer Insightsi kaudu.
-ms.date: 08/03/2020
+ms.date: 01/20/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405522"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268819"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate’i konnektor (eelvaade)
 
@@ -22,7 +22,7 @@ Käivitage konkreetsed sündmused, mis ilmnevad automaatselt andmete muutmisel j
 
 ## <a name="power-automate-triggers"></a>Power Automate'i päästikud
 
-Saate kasutada erinevaid päästikuid, mis võimaldavad teil luua voogusid korduvate tööülesannete automatiseerimiseks (nt teatised või täpsemaid toiminguid). 
+Saate kasutada päästikuid pilvevoogude loomiseks ja korduvate ülesannete (nt teatiste ja keerukamate toimingute) automatiseerimiseks. 
 
 - Käivitub, kui andmeallika värskendamine nurjub. 
 - Käivitub, kui andmeallika värskendamine õnnestub.
@@ -36,14 +36,20 @@ Saate kasutada erinevaid päästikuid, mis võimaldavad teil luua voogusid kordu
 ## <a name="power-automate-actions"></a>Power Automate'i toimingud
 Power Automate'i konnektor pakub saadaolevatest päästikutest erinevaid toiminguid. Lisateavet leiate juhendist [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>Power Automate'i voo loomine sihtrühmaülevaadetes
+## <a name="create-a-power-automate-flow"></a>Power Automate'i voo loomine
 
-1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Süsteem**.
+1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Eksportimise sihtkohad**.
 
-1. Valige lehel **Süsteem** vahekaart **Olek**.
+1. Valige **Power Automate'i** paanil suvand **Seadista**.
 
-1. Valige jaotises **Andmeallikad** suvand **Vood** ja valige ripploendist **Voo loomine**.
-   > [!div class="mx-imgBorder"]
-   > ![Power Automate’i konnektor, mis näitab voo loomise toimingut](media/power-automate-connector-create-flow.png "Voo loomise toimingut näitav rakenduse Power Automate konnektor")
+1. Avaneb Power Automate'i Customer Insightsi konnektor (eelversioon). **Logige sisse** rakendusse Power Automate.
 
-1. Valige Power Automate'is eelistatud voo loomiseks üks saadaolevatest päästikutest. Esimest korda voogu luues peate end esmalt rakenduse Power Automate konnektori jaoks autentima.
+1. Valige üks võimalikest päästikutest ja lisage oma uuele voole veel etappe. Lisateavet leiate teemast [Pilvevoo loomine Power Automate'is](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+
+Näited voogude kasutamise kohta. 
+- Sõnumi postitamine Microsoft Teamsi kanalisse juhul, kui andmeallika värskendamine nurjub. 
+- Meili saatmine andmete omanikele segmendi läve ületamisel.
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

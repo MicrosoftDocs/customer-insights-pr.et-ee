@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643588"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269785"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Tehinguvoolavuse prognoosi (eelversioon) näidisjuhend
 
@@ -49,7 +49,7 @@ Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query ko
    [!div class="mx-imgBorder"]
    ![Sünniaja teisendamine kuupäevaks](media/ecommerce-dob-date.PNG "sünniaja teisendamine kuupäevaks")
 
-1. Muutke parempoolsel paanil väljal „Nimi“ oma andmeallika praegune nimi **Päring** nimeks **eCommerceContacts**
+1. Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **eCommerceContacts**
 
 1. Salvestage andmeallikas.
 
@@ -66,7 +66,7 @@ Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query ko
    - **PurchasedOn**: kuupäev/kellaaeg
    - **TotalPrice**: valuuta
    
-1. Muutke parempoolsel paanil väljal „Nimi“ oma andmeallika praegune nimi **Päring** nimeks **eCommercePurchases**.
+1. Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **eCommercePurchases**.
 
 1. Salvestage andmeallikas.
 
@@ -84,7 +84,7 @@ Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query ko
    - **RewardsPoints**: täisarv
    - **CreatedOn**: kuupäev/kellaaeg
 
-1. Muutke parempoolsel paanil väljal „Nimi“ oma andmeallika praegune nimi **Päring** nimeks **loyCustomers**.
+1. Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **loyCustomers**.
 
 1. Salvestage andmeallikas.
 
@@ -105,7 +105,7 @@ Pärast andmete valmendamist alustame protsessi **Vastenda, vii vastavusse, ühe
 
    :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="LoyaltyId peamise võtmena vahekaardil „Koondamine“.":::
 
-### <a name="match"></a>Vastavusseviimine
+### <a name="match"></a>Vastenda
 
 1. Liikuge vahekaardile **Vastavusseviimine** ja valige **Määra järjekord**.
 
@@ -166,7 +166,7 @@ Kui kliendiprofiilid on koondatud, saame käivitada tellimusevoolavuse prognoosi
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Mudeli suvandite „Prognoosiajavahemik“ ja „Voolavuse määratlus“ valimine.":::
 
-1. Valige **Ostuajalugu (nõutav)** ja valige tellimuseajaloo jaoks **Lisa andmeid**.
+1. Valige **Ostuajalugu (nõutav)** ja valige ostuajaloo jaoks **Lisa andmeid**.
 
 1. Lisage olem **eCommercePurchases: eCommerce** ja vastendage e-kaubandusest pärit väljad asjaomaste mudelile vajalike väljadega.
 
@@ -204,3 +204,6 @@ Saate luua mudeli loodud olemi põhjal uue segmendi.
 Teil on nüüd segment, mida värskendatakse dünaamiliselt ja mis tuvastab selle tellimusäri jaoks suure voolavusriskiga kliente.
 
 Lisateavet vt teemast [Segmentide loomine ja haldamine](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Customer Insightsi andmete eksportimine rakendusse Dynamics 365 Marketing
 description: Vaadake, kuidas konfigureerida ühendust rakendusega Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643768"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269049"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Ühendus rakendusega Dynamics 365 Marketing (eelvaateversioon)
 
@@ -24,7 +24,10 @@ Kasutage lahenduses Dynamics 365 Marketing kampaaniate loomiseks ja konkreetsete
 
 ## <a name="prerequisite"></a>Eeltingimus
 
-Kontaktikirjed [rakendusest Dynamics 365 Marketing on valmendatud Common Data Service'is](connect-power-query.md).
+- Enne segmendi eksportimist Customer Insightsist Marketingi, peavad kontaktikirjed olema olemas rakenduses Dynamics 365 Marketing. Lugege lisateavet selle kohta, kuidas valmendada kontakte [Dynamics 365 Marketingis Common Data Servicesi abil](connect-power-query.md).
+
+  > [!NOTE]
+  > Segmentide eksportimine sihtrühmaülevaadetest Marketingi ei loo uusi kontaktikirjeid Marketingi eksemplaris. Marketingi kontaktikirjed peavad olema valmendatud sihtrühmaülevaadetes ja neid tuleb kasutada andmeallikana. Need tuleb lisada ka ühendatud kliendi olemisse, et vastendada kliendi ID-d ja kontakti ID-deks, enne kui segmente saab eksportida.
 
 ## <a name="configure-the-connector-for-marketing"></a>Konnektori konfigureerimine Marketingi jaoks
 
@@ -49,3 +52,6 @@ Kontaktikirjed [rakendusest Dynamics 365 Marketing on valmendatud Common Data Se
 ## <a name="export-the-data"></a>Andmete eksportimine
 
 Saate [vajadusel andmeid eksportida](export-destinations.md). Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

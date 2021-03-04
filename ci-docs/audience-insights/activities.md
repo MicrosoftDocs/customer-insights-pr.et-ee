@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667224"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267427"
 ---
 # <a name="customer-activities"></a>Klienditegevused
 
@@ -44,13 +44,13 @@ Teie andmeallikad hõlmavad mitmesugustest andmeallikatest pärinevaid tehingute
 
 1. Konfigureerige jaotises **Seose seadistamine** üksikasjad oma tegevuse andmete ühendamiseks vastava kliendiga.
 
-   > [!div class="mx-imgBorder"]
-   > ![Olemi seose määratlemine](media/activities-entities-define.png "Olemi seose määratlemine")
-
     - **Tegevuse olemi väli**: valige oma tegevuse olemis väli, mida kasutatakse teise olemiga seose loomiseks.
     - **Kliendi olem**: valige vastav lähtekliendi olem, millega teie tegevuse olem siduda. Saate seostada ainult neid lähtekliendi olemeid, mida kasutatakse andmete ühendamise protsessis.
     - **Kliendi olemi väli**: sellel väljal kuvatakse vastendamisel valitud lähtekliendi olemi primaarvõti. Seda lähtekliendi olemi primaarvõtme välja kasutatakse tegevuse olemiga seose loomiseks.
     - **Nimi**: kui selle tegevuse olemi ja valitud lähtekliendi olemi vaheline seos on juba olemas, on seose nimi kirjutuskaitstud režiimis. Kui sellist seost pole olemas, luuakse uus seos siin esitatud nimega.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Olemi seose määratlemine](media/activities-entities-define.png "Olemi seose määratlemine")
 
 1. Vajutage nuppu **Salvesta**, et muudatused rakendada.
 
@@ -82,3 +82,6 @@ Teie andmeallikad hõlmavad mitmesugustest andmeallikatest pärinevaid tehingute
 3. Valige ikoon **Kustuta**.
 
 4. Kinnitage, et soovite kustutada.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

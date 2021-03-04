@@ -1,20 +1,20 @@
 ---
 title: Kliendiprofiilide rikastamine Microsoft Graphiga
 description: Microsoft Graphi konfidentsiaalsete andmete kasutamine, et rikastada kliendi andmeid brändi ja huvide ligitõmbavusega.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405534"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269325"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Kliendiprofiilide rikastamine brändi ja huvide ligitõmbavusega (eelvaade)
 
@@ -35,16 +35,21 @@ Kasutame Microsoft Graphi veebiotsingu andmeid, et leida erinevate demograafilis
 
 [Lisateave Microsoft Graphi kohta](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Ligitõmbavuse skoor ja usaldus
+## <a name="affinity-level-and-score"></a>Ühtivuse tase ja skoor
 
-**Ligitõmbavuse skoor** arvutatakse 100-punkti skaalal, kusjuures 100 esindab segmenti, millel on kaubamärgi või huvi suhtes kõige suurem ligitõmbavus.
+Igal rikastatud kliendiprofiilil pakume kahte seotud väärtust – ühtivuse tase ja skoor. Need väärtused aitavad teil määratleda, kui suur ühtivus on selle profiili demograafilisel segmendil teatud tootemargi või huvi jaoks, võrreldes muude demograafiliste segmentidega.
 
-**Ligitõmbavuse usaldus** arvutatakse samuti 100-punkti skaalal. See näitab süsteemi usalduse taset, et segmendil on ligitõmbavus brändi või huvi suhtes. Usalduse tase põhineb segmendi suurusel ja segmendi granulaarsusel. Segmendi suuruse määrab antud segmendi jaoks olemas olevate andmete hulk. Segmendi granuaalsus tehakse kindlaks vastavalt sellele, kui palju atribuute (vanus, sugu, asukoht) on profiilis saadaval.
+*Ühtivustase* koosneb neljast tasemest ja *ühtivuse skoor* arvutatakse 100 punkti skaalal, mis vastendatakse ühtivustasemetega.
 
-Me ei normaliseeri teie andmekogumi punktisummasid. Seetõttu ei pruugi te näha oma andmekomplekti jaoks kõiki võimalikke ligitõmbavuse skoori väärtuseid. Näiteks ei pruugi teie andmete hulgas olla ühtegi rikastatud kliendiprofiili, mille ligitõmbavuse skoor oleks 100. See on võimalik juhul, kui demograafilised segmendis, mis sai antud brändi või huvi kohta skoori 100, pole kliente.
 
-> [!TIP]
-> Kui [loote segmente](segments.md) kasutades ligitõmbavuse skoore, vaadake üle oma andmekomplektide ligitõmbavuse skooride jaotus enne, kui langetate otsuse sobiva punktisumma künnise kohta. Näiteks ligitõmbavuse skoori 10 saab lugeda oluliseks andmekomplektis, kus kõrgeim ligitõmbavuse skoor antud kaubamärgi või huvi jaoks on ainult 25.
+|Ühtivustase |Ühtivuse skoor  |
+|---------|---------|
+|Väga palju     | 85–100       |
+|Suur     | 70–84        |
+|Keskmine     | 35–69        |
+|Väike     | 1–34        |
+
+Sõltuvalt granulaarsusest, mida soovite ühtivuse mõõtmisel, saate kasutada ühtivuse taset või skoori. Ühtivuse skoor annab teile täpsema kontrolli.
 
 ## <a name="supported-countriesregions"></a>Toetatud riigid/piirkonnad
 
@@ -54,17 +59,13 @@ Riigi valimiseks avage **Tootemarkide rikastamine** või **Huvide rikastamine** 
 
 ### <a name="implications-related-to-country-selection"></a>Riigi valikuga seotud mõjud
 
-- [Oma tootemarkide valimisel](#define-your-brands-or-interests) anname soovitusi vastavalt valitud riigile/piirkonnale.
+- Kui [valite oma tootemarke](#define-your-brands-or-interests), pakub süsteem valitud riigil või piirkonnal põhinevaid soovitusi.
 
-- [Valdkonna valimisel](#define-your-brands-or-interests) tuvastame valitud riigi/regiooni põhjal kõige asjakohasemad tootemargid või huvid.
+- Kui [valite valdkonna](#define-your-brands-or-interests), saate olulisemaid tootemarke või huvisid valitud riigi või piirkonna põhjal.
 
-- [Väljade vastendamisel](#map-your-fields), kui välja riik/piirkond pole vastendatud, kasutame teie klientide profiilide rikastamiseks valitud riigi/regiooni Microsoft Graphi andmeid. Samuti kasutame seda valikut, et rikastada teie kliendiprofiile, millel pole riigi/piirkonna andmeid saadaval.
-
-- [Profiilide rikastamisel](#refresh-enrichment) rikastame kõiki kliendiprofiile, mille jaoks meil on valitud kaubamärkidele ja huvidele Microsoft Graphi andmed saadaval, sh profiilid, mis pole valitud riigis/regioonis. Näiteks kui valisite Saksamaa, rikastame Ameerika Ühendriikides asuvaid profiile, kui meil on Microsoft Graph'i andmed saadaval valitud kaubamärkide ja huvide kohta USAs.
+- Kui [rikastate profiile](#refresh-enrichment), rikastame kõiki kliendiprofiile, mille jaoks saame valitud tootemarkide ja huvide andmeid. Sealhulgas profiilid, mis pole valitud riigis või piirkonnas. Näiteks kui valisite Saksamaa, rikastame Ameerika Ühendriikides asuvaid profiile, kui meil on Microsoft Graph'i andmed saadaval valitud kaubamärkide ja huvide kohta USAs.
 
 ## <a name="configure-enrichment"></a>Rikastamise konfigureerimine
-
-Tootemarkide või huvide rikastamise konfigureerimine koosneb kahest etapist.
 
 ### <a name="define-your-brands-or-interests"></a>Määratlege oma tootemargid või huvid
 
@@ -75,9 +76,19 @@ Valige üks järgmistest suvanditest.
 
 Brändi või huvi lisamiseks sisestage see sisendi alasse, et saada sobivate terminite soovitusi. Kui me ei loetle otsitavaid brände või huvisid, saatke meile tagasisidet, kasutades linki **Soovita**.
 
+### <a name="review-enrichment-preferences"></a>Rikastamise eelistuste ülevaatamine
+
+Vaadake üle oma rikastamise vaike-eelistused ja värskendage neid vastavalt vajadusele.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Rikastamise eelistuste akna kuvatõmmis.":::
+
+### <a name="select-entity-to-enrich"></a>Valige rikastamiseks olem
+
+Valige **Vastendatud olem** ja valige andmete kogum, mida soovite Microsoft Graphi ettevõtte andmetega rikastada. Saate valida olemi Klient, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
+
 ### <a name="map-your-fields"></a>Väljade vastendamine
 
-Vastendage oma ühtlustatud kliendi olemi väljad vähemalt kahe atribuudiga, et määratleda, millist demograafilist segmenti soovite teie kliendiandmete rikastamiseks kasutada. Valige suvand **Redigeeri**, et määratleda väljade vastendamine, ja valige suvand **Rakenda**, kui olete lõpetanud. Väljavastenduse lõpule viimiseks valige **Salvesta**.
+Vastendage oma ühendatud kliendiolemi väljad demograafilise segmendi määratlemiseks, mida süsteem kasutab teie kliendiandmete rikastamiseks. Vastendage riigi/piirkonna ja vähemalt sünniaja või soo atribuudid. Lisaks peate näitama kaardil vähemalt ühte linna (ja osariiki/maakonda) või sihtnumbrit. Valige suvand **Redigeeri**, et määratleda väljade vastendamine, ja valige suvand **Rakenda**, kui olete lõpetanud. Väljavastenduse lõpule viimiseks valige **Salvesta**.
 
 Toetatakse järgmisi vorminguid ja väärtusi, kuid väärtused pole tõstutundlikud.
 
@@ -120,3 +131,6 @@ Kaubamärgi ja huvide ühtivust saate vaadata ka eraldi kliendi kaartidel. Avage
 ## <a name="next-steps"></a>Järgmised etapid
 
 Rikastatud kliendiandmetele toetumine. Klientidele isikustatud kogemuste pakkumiseks looge suvandid [Segmendid](segments.md), [Meetmed](measures.md) ja isegi [andmete eksport](export-destinations.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

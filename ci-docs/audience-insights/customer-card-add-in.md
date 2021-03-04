@@ -1,7 +1,7 @@
 ---
 title: Kliendikaardi lisandmooduli installimine ja konfigureerimine
 description: Kliendikaardi lisandmooduli installimine ja konfigureerimine teenuse Dynamics 365 Customer Insights jaoks.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644038"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268039"
 ---
 # <a name="customer-card-add-in-preview"></a>Kliendikaardi lisandmoodul (eelvaade)
 
@@ -92,10 +92,26 @@ Lahenduse installimiseks teie keskkonda võib kuluda pisut aega.
 
 1. **Välja atribuutide** dialoogis tühjendage märkeruut **Kuva vormil silt**.
 
-1. Valige juhtelemendi jaoks suvand **Veeb**. Valige rikastamise juhtelemendi jaoks, millist rikastamise tüüpi soovite kuvada, konfigureerides välja **enrichmentType**. Peate igale rikastamise tüübile lisama eraldi rikastamise juhtelemendi.
+1. Valige juhtelemendi jaoks suvand **Veeb**. Valige rikastamise juhtelemendi jaoks, millist rikastamise tüüpi soovite kuvada, konfigureerides välja **enrichmentType**. Lisage igale rikastamistüübile eraldi rikastamise juhtelement.
 
 1. Värskendatud kontaktivormi avaldamiseks valige **Salvesta** ja **Avalda**.
 
 1. Minge avaldatud kontakti vormile. Näete äsja lisatud juhtelementi. Võimalik, et peate esmakordsel kasutusel sisse logima.
 
 1. Selleks et kohandada seda, mida soovite kohandatud juhtelemendil kuvada, valige paremas ülanurgas redigeerimise nupp.
+
+## <a name="upgrade-customer-card-add-in"></a>Kliendikaardi lisandmooduli täiendamine
+Kliendikaardi lisandmoodulit ei täiendata automaatselt. Uusimale versioonile täiendamiseks järgige neid juhiseid Dynamics 365 rakenduses, kuhu on installitud lisandmoodul.
+
+1. Avage Dynamics 365 rakenduse jaotises **Sätted** > **Kohandamine** ja valige **Lahendused**.
+
+1. Otsige lisandmoodulite tabelist **CustomerInsightsCustomerCard** ja valige see rida.
+
+1. Valige tegumiribalt **Rakenda lahenduse täiendus**.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Lahenduse täiendamine Dynamics 365 rakenduste kohandamisalal":::
+
+1. Pärast täiendamisprotsessi käivitamist kuvatakse laadimisnäidik kuni täienduse lõpuleviimiseni. Kui uuemat versiooni pole, kuvab täiendus tõrketeate.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

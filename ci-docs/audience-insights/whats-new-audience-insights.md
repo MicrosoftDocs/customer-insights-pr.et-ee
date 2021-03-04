@@ -1,7 +1,7 @@
 ---
 title: Uued ja tulevased funktsioonid
 description: Teave uute funktsioonide, täiustuste ja veaparanduste kohta.
-ms.date: 11/02/2020
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4649999"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270427"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Mis on uut Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis?
 
@@ -30,6 +30,77 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 
 > [!TIP]
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="january-2021-updates"></a>2021. a jaanuari värskendus
+
+2021. aasta jaanuari värskendused sisaldavad mitut funktsiooni, jõudlustäiendusi ja veaparandusi.
+
+#### <a name="extensibility"></a>Laiendatavus
+
+- **SFTP-ekspordi laiendatud funktsioonid ja täiustatud jõudlus** Saate nüüd eksportida kõik väljundi olemid kliendi ülevaadetest SFTP-hosti. Varem piirdus eksport segmendiüksustega. Lisaks võimaldab SFTP-ekspordi jõudlus suurema andmemahu lühema ajaga, olenevalt teie SFTP-hostist.    
+  Lisateavet leiate teemast [SFTP konnektor (eelvaade)](export-sftp.md).  
+
+#### <a name="segments"></a>Segmendid
+
+- **Masinõpe soovitatavad segmendid mõõdikute täiustamiseks** Uus viis segmentide avastamiseks ja loomiseks. Süsteem kasutab tehisintellekti mudeli abil segmentide väljatoomist, mis aitavad juba jälgitavat KPI-d (mõõdik) parandada. Näitame teie valitud atribuutide mõju ulatust mõõdikule või mõnele teisele põhiatribuudile. See teave aitab leida võimalikke segmente, mis pakuvad võimalusi.    
+  Lisateavet leiate teemast [Soovitatud segmendid (eelvaade)](suggested-segments.md).
+
+#### <a name="data-unification"></a>Andmete koondamine
+
+- **Täiustatud vaste kogemus** Andmete ühendamise alal värskendati vastenduskogemust. See võimaldab teil konfigureerida ja vaadata mängureegleid, sealhulgas üksikasjalikku statistikat, et selgitada sobitamise toimimist. Vastavuse reegli keelamiseks on võimalusi, nii et see pole enam aktiivne, säilitades samas konfiguratsiooni, lohistamise vaste reeglid ja palju muud.
+  Lisateavet leiate teemast [Vaste olemid](match-entities.md).
+
+- **Vastendusprotsessi pöördduplitseerimise väljund on nüüd saadaval olemina** Pöördduplitseerimise protsessi väljundina, mis on nüüd kirjutatud edasiseks analüüsiks eraldi olemisse. See olem koosneb pöördduplikatsiooniprotsessis kasutatud väljadest ja võitja kirjest ning vastavatest alternatiivsetest kirjetest, mis liidetakse võitja kirjega.
+  Lisateavet leiate teemast [Pöördduplitseerimise väljund olemina](match-entities.md#deduplication-output-as-an-entity).
+
+#### <a name="system-administration"></a>Süsteemihaldus
+
+- **Andmete sujuvaks jagamiseks rakendusse Microsoft Dataverse** saate nüüd jagada Customer Insightsi väljundit Microsoft Dataverse rakendustega, kasutades Microsoft Dataverse Managed Data Lake hallatavad andmejärve. Kui olete keskkonna Dataverse Customer Insights kliendiülevaadetega seostanud, saate võimaluse andmete ühiskasutuse lubamiseks.
+  Lisateavet leiate teemast [Keskkondade haldamine](manage-environments.md).
+
+
+## <a name="december-2020-updates"></a>2020. aasta detsembrikuu värskendused
+
+2020. aasta detsembri värskendused hõlmavad mitut funktsiooni, jõudlustäiendusi ja veaparandusi.
+
+### <a name="new-and-updated-features-in-december-2020"></a>2020. aasta detsembri uued ja värskendatud funktsioonid
+
+#### <a name="data-enrichment"></a>Andmete rikastamine
+
+- **Täiustatud brändi ja huvi afiinsuse rikastamine**
+  
+  Lihtsustasime oma afiinsusskoore, et neid oleks hõlpsam mõista ja kasutada. Nüüd saate kiiresti tuvastada kliente, lähtudes sellest, kui palju on neil teatud kaubamärgi või huvi suhtes afiinsust.
+
+  Lisaks oleme lisanud uued seadistusvõimalused, et paremini kontrollida, kuidas soovite oma kliendiprofiile rikastada. 
+
+  Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft-graph.md).
+
+- **Määrake, milliseid profiile rikastada**
+
+  Nüüd saate rikastada ainult oma kliendiprofiilide alamhulka võimalusega valida vaikekliendi asemel segmendi olem. Looge kliendiprofiilidega segment, mida soovite rikastada ja valida kliendi andmekomplekti rikastamise konfiguratsioon.
+  See funktsioon on praegu saadaval ainult rikastamiseks, mida pakuvad Experian ja HERE Technologies. Lubame sellel võimalusel varsti rohkem rikastumisi kasutada.
+
+  Lisateavet leiate teemast [Kliendiprofiilide rikastamine demograafiliste andmetega](enrichment-experian.md) või [Expekliendist või kliendiprofiilide rikastamine HERE Technologies abil](enrichment-here.md).
+
+#### <a name="extensibility"></a>Laiendatavus
+
+- **Segmentide aktiveerimine Autopilot kaudu**
+
+  Eksportige segmendid Autopiloti ja kasutage neid turustamiseesmärkidel. Lisateavet leiate teemast [Autopiloti konnektor (eelvaade)](export-autopilot.md).
+
+- **Segmentide aktiveerimine SendGrid kaudu**
+
+  Eksportige segmendid SendGridi ja kasutage neid turustamiseesmärkidel. Lisateavet leiate teemast [SendGrid konnektor](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Süsteemihaldus
+
+- **Värskendatud keskkonnahalduse kogemus**
+  
+  Nüüd saate keskkondi luua, muuta, kustutada ja lähtestada otse rakenduse päises olevast keskkonnavalijast. 
+  
+  Peale selle kinnitatakse teie sooviksite keskkond keskkonnapaneeli ülaservale, et poleks vaja seda paneeli otsida.
+
+  Lisateavet leiate teemast [Keskkondade haldamine](manage-environments.md).
 
 ## <a name="november-2020-updates"></a>2020. aasta novembri värskendused
 
@@ -165,7 +236,7 @@ Lisateavet vaadake teemast [Kliendi profiilide Experiani demograafiaandmetega ri
 Ülesande üksikasjade paan võimaldab teil vaadata süsteemis käitatavate ülesannete detaile. See on käepärane viis konfiguratsiooni probleemide tuvastamiseks ja lahenduste leidmiseks.
 Vaadake tõrketeateid, et näha, kuidas ptentsiaalseid probleeme lahendada.
  
-- **Täiendavatele lehtedele lisatud teabe töötlemine**
+- **Enamatele lehele lisatud teabe töötlemine**
 
 See täiustus lisab teavet teie olemite oleku kohta lehtedel **Olemid** ja **Kliendid**.
  
@@ -202,9 +273,9 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
 
 #### <a name="enrichment"></a>Rikastamine
 
-- **Täiendavatel turgudel saadaolevad huvipakkuvate vaadete rikastamine**
+- **Huvide afiinsuse rikastamine on saadaval rohkematel turgudel**
 
-  Laiendame huvipakkuvate vaadete rikastamise kättesaadavust väljaspool Ameerika Ühendriike kuni viie täiendava turuni: Kanada, Austraalia, Ühendkuningriik, Prantsusmaa ja Saksamaa. Selle laiendusega saate oma kliendiandmeid rikastada nende turgude suhtes kohaldatavate täiendavate huvidega. Me rikastame teie nendel turgudel asuvaid kliendiprofiile ka kasutades Microsoft Graphile kuuluvaid kohalikke andmeid.
+  Laiendame USA-st väljapoole jäävate huvidega seotud rikastuste kättesaadavust veel viiel turul: Kanadal, Austraalias, Suurbritannias, Prantsusmaal ja Saksamaal. Selle laienduse abil saate rikastada oma kliendiandmeid nende turgude jaoks kehtivate huvidega. Me rikastame teie nendel turgudel asuvaid kliendiprofiile ka kasutades Microsoft Graphile kuuluvaid kohalikke andmeid.
   Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft-graph.md)
 
 
@@ -223,9 +294,9 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
 
 #### <a name="enrichment"></a>Rikastamine
 
-- **Tootemargi ühtivuste rikastamine on täiendavatel turgudel saadaval**
+- **Brändi afiinsuse rikastamine on saadaval rohkematel turgudel**
 
-  Me laiendame tootemargi ühtivuste rikastamise kättesaadavust väljapoole Ameerika Ühendriike viiele täiendavale turule: Kanada, Austraalia, Ühendkuningriik Prantsusmaa ja Saksamaa. Selle laiendusega saate rikastada oma kliendiandmeid nende turgude kohalike kaubamärkidega. Me rikastame teie nendel turgudel asuvaid kliendiprofiile ka kasutades Microsoft Graphile kuuluvaid kohalikke andmeid.
+  Laiendame USA-st väljapoole jäävate brandiga seotud rikastuste kättesaadavust veel viiel turul: Kanadal, Austraalias, Suurbritannias, Prantsusmaal ja Saksamaal. Selle laiendusega saate rikastada oma kliendiandmeid nende turgude kohalike kaubamärkidega. Me rikastame teie nendel turgudel asuvaid kliendiprofiile ka kasutades Microsoft Graphile kuuluvaid kohalikke andmeid.
   Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft-graph.md)
 
 ## <a name="june-2020-updates"></a>2020. juuni värskendused
@@ -238,7 +309,7 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
 
 - **Rikastamine Leadspace’i ettevõtte andmetega**
   
-  Määratlege kliendi koondprofiilides väljad, mida kasutatakse Leadspace’ist seotud ettevõtte andmete otsimiseks. Pärast rikastamisprotsessi käitamist rikastatakse B2B profiilid täiendavate atribuutidega, sh ettevõtte suuruse, asukoha, tööstuse ja muuga.    
+  Määratlege kliendi koondprofiilides väljad, mida kasutatakse Leadspace’ist seotud ettevõtte andmete otsimiseks. Pärast rikastamisprotsessi käivitamist rikastatakse B2B profiile veel mitme atribuudiga, sealhulgas ettevõtte suurus, asukoht, tööstus ja palju muud.    
   See koostöö võimaldab teil parandada oma andmete kvaliteeti sisendiga kolmandast osapoolest teenustest. Selle rikastamise kasutamiseks on teil vaja Leadspace’i litsentsi selle B2B ettevõtte andmetele juurdepääsuks. Süsteem kasutab seda litsentsi, et teie andmeid pidevalt rikastada.    
   Lisateavet vaadake teemast [Ettevõtte profiilide rikastamine Leadspace’iga](enrichment-leadspace.md).
 
@@ -264,7 +335,7 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
   Dynamics 365 kliendikaardi lisandmooduli uus juhtelement võimaldab teil Dynamics 365 Customer Engagementi rakendustes kuvada kaubamärgi ja huvide ühtivusi.    
   Lisateavet vt teemast [Kliendikaardi lisandmoodul](customer-card-add-in.md).
 
-- **Täiendavad Power Automate’i päästikud**
+- **Täiendavad Power Automate käivitajad**
 
   Oleme laiendanud oma Power Automate’i päästikuid ja lisanud järgmised päästikud.
   - Saage teatis või tehke toiming pärast automaatse täieliku värskendamise (andmeallikad, ühtlustamine, segmendid, mõõtmed, ekspordid) lõpetamist
@@ -295,12 +366,12 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
   
   Leidke tehisintellekti kasutades oma kliendibaasist sarnaseid kliente. Kahendliigenduse masinõppemudel määrab laiendatud segmendis klientidele sarnasuse skoori. Skoor põhineb sarnasusel lähtesegmendis olevate klientidega. Sõltuvalt sarnasuse skoorist lisatakse kliendiprofiilid vastloodud segmentidesse.
 
-  Mõnikord nimetatakse seda digitaalses turunduses sarnasuse modelleerimiseks. See kasutab tehisintellekti mudelit, et aidata leida kliente, kes sarnanevad teie klientide teisele segmendile, lahutades täiendavad atribuudid faktoriteks. See mitte ainult ei võimalda teil valida atribuute, vaid võimaldab ka määratleda maksimaalse arvu kliente, kes peaksid olema selles uues segmendis. Tehisintellekti mudel arvutab seejärel iga kliendi puhul teie valitud atribuutide põhjal sarnasuse skoorid ja otsib kliente, kellel on kõrgem sarnasuse skoor. Tulemuseks olev segment sisaldab kliente, kes sarnanevad teie algse segmendi klientidele.    
+  Mõnikord nimetatakse seda digitaalses turunduses näiliselt modelleerimiseks, kasutades tehisintellekti mudelit, et aidata leida kliente, kes sarnanevad teie klientide teise segmendiga, arvestades rohkem atribuute. See mitte ainult ei võimalda teil valida atribuute, vaid võimaldab ka määratleda maksimaalse arvu kliente, kes peaksid olema selles uues segmendis. Tehisintellekti mudel arvutab seejärel iga kliendi puhul teie valitud atribuutide põhjal sarnasuse skoorid ja otsib kliente, kellel on kõrgem sarnasuse skoor. Tulemuseks olev segment sisaldab kliente, kes sarnanevad teie algse segmendi klientidele.    
   Lisateavet leiate teemast [Sarnased kliendid](find-similar-customer-segments.md).
 
 - **Segmendi kattumine ja eristajad**
 
-  Segmendi kattumine võimaldab vaadata, kui paljudel ja millistel klientidel on kaks või rohkem segmenti sarnased. Näiteks kuidas suurel hulgal kulutajate segment kattub suure rahuololuga klientide segmendiga või kuidas voolavate klientide segment kattub madala rahuloluga klientide segmendiga. Lisaks saate analüüsida, kuidas kattuvad muudatused vastavalt teie valitud täiendavale atribuudile.
+  Segmendi kattumine võimaldab vaadata, kui paljudel ja millistel klientidel on kaks või rohkem segmenti sarnased. Näiteks kuidas suurel hulgal kulutajate segment kattub suure rahuololuga klientide segmendiga või kuidas voolavate klientide segment kattub madala rahuloluga klientide segmendiga. Lisaks saate analüüsida, kuidas kattuvus muutub teie valitud lisatribuudi põhjal.
 
   Segmentide eristajad näitavad, mis eristab ühe segmendi teie teistest klientides või teistest segmentidest. Te peate vaid tuvastama segmendi ja süsteem tuvastab profiili atribuudid ja meetmed, mis eristavad segmendi eristajate järjestatud loendi kujul, mis on järjestatud kõige tugevamast eristajast kõige nõrgemani.    
   Lisateavet vaadake teemast [Segmendi ülevaated (eelversioon)](segment-insights.md).
@@ -333,7 +404,7 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
 
 - **Kliendikaardi lisandmoodul värskendatud ajakava ja lehejaotus**
 
-  Kliendikaardi lisandmooduli lahenduse ajaskaala ühtib tegevuse ajaskaalaga. Ajaskaala lehejaotus paranes, kuvades korraga kuni 50 tegevust. Lisaks võimaldab see laadida ajajoonel täiendavaid tegevusi.    
+  Kliendikaardi lisandmooduli lahenduse ajaskaala ühtib tegevuse ajaskaalaga. Ajaskaala lehejaotus paranes, kuvades korraga kuni 50 tegevust. Lisaks võimaldab see ajaskaalale laadida rohkem tegevusi.    
   Lisateavet vt teemast [Kliendikaardi lisandmoodul](customer-card-add-in.md).
 
 - **Power Automate’i segmendi muudatuste päästik**
@@ -412,7 +483,7 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
 
 - **LiveRampi eksportimine**
 
-  Aktiveerige oma andmed LiveRamp®-is, et luua ühendus üle 500 digi-, sotsiaal- ja teleökosüsteemi platvormiga. Võimendage LiveRampis oma andmeid, et suunata, suruda alla või isikupärastada reklaamikampaaniaid.    
+  Aktiveerige oma andmed LiveRamp®-is, et luua ühendus üle 500 digi-, sotsiaal- ja teleökosüsteemi platvormiga. Kasutage LiveRampis oma andmeid reklaamikampaaniate sihtimiseks, summutamiseks ja isikupärastamiseks.    
   Lisateavet vt teemast [LiveRamp&reg;-i konnektor](export-liveramp.md).
 
 - **Customer Insightsi Teamsi lisandmoodul**
@@ -433,7 +504,7 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
 
 #### <a name="segments"></a>Segmendid
 
-- **Täiendav tehtemärk**
+- **Teine tehtemärk**
   
   Avaldise IN tehtemärk võimaldab klientide segmentimist mitme võimaliku stringiväärtuse põhjal. Enne selle tehtemärgi lisamist pidite looma taolised segmendid mitme OR-tingimusega. Avaldise IN tehtemärk võimaldab teil teha seda ühe tingimusega.    
   Lisateavet vt teemast [Segmentide loomine ja haldamine](segments.md).
@@ -444,3 +515,6 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
   
   Kopeerige oma konfiguratsioon ühest keskkonnast teise. Uue keskkonna loomisel saate valida olemasoleva keskkonna, millest soovite konfiguratsiooni vormi kopeerida. Hetkel toetama andmeallikaid, andmete ühtlustamist, seoseid, meetmeid ja kopeeritavaid segmente. Andmeallika mandaate ega tegelikke andmeid ei kopeerita.    
   Lisateavet leiate teemast [Keskkondade haldamine](manage-environments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

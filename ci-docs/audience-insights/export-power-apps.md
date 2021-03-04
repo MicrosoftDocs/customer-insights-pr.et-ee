@@ -1,20 +1,20 @@
 ---
 title: Power Apps konnektor
 description: Ühendumine Power Appsi ja Power Automate'iga.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405524"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268911"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps’i konnektor (eelvaade)
 
@@ -31,7 +31,7 @@ Vaadake Power Appsi  dokumentatsiooni, et saada teada, kuidas [lisada rakendusel
 Pärast Customer Insightsi andmeühendusena lisamist saate Power Appsis valida järgmised olemid.
 
 - Klient: [ühendatud kliendiprofiili](customer-profiles.md) andmete kasutamine.
-- Ühendatud kliendi tegevus: [tegevuse ajaskaala](activities.md) kuvamine rakenduses.
+- UnifiedActivity: rakenduses [tegevuse ajajoone](activities.md) kuvamiseks.
 
 ## <a name="limitations"></a>Piirangud
 
@@ -72,3 +72,6 @@ Näiteks lisate kliendiprofiilid [galerii juhtelementi](https://docs.microsoft.c
 1. Kliendi ühtse ajajoone näitamiseks lisage galerii element ja üksuste atribuut: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
 
     Näide: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

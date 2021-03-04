@@ -4,17 +4,17 @@ description: Töötage Common Data Modeli andmete kallal Azure Data Lake Storage
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643453"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267855"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Common Data Modeli kausta ühendamine Azure Data Lake’i kontot kasutades
 
@@ -38,17 +38,25 @@ See artikkel annab teavet selle kohta, kuidas valmendada andmeid Common Data Mod
 
 1. Valige **Lisa andmeallikas**.
 
-1. Valige **Loo ühendus Common Data Modeli kaustaga**, sisestage andmeallikale **Nimi** ja valige **Edasi**.
+1. Valige **Loo ühendus Common Data Modeli kaustaga**, sisestage andmeallikale **Nimi** ja valige **Edasi**. Nime juhised: 
+   - peab algama tähega;
+   - kasutage ainult tähti ja numbreid; erimärkide ja tühikute sisestamine pole lubatud;
+   - kasutage 3–64 tähemärki.
 
 1. Saate autentimiseks valida ressursipõhise ja tellimusepõhise valiku vahel. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). Sisestage **konteineri** teave ja valige **Edasi**.
    > [!div class="mx-imgBorder"]
-   > ![Dialoogiboks Azure Data Lake'i jaoks ühendusandmete sisestamiseks](media/enter-new-storage-details.png)
-
-1. Valige dialoogis **Common Data Modeli kausta valimine** fail model.json, kuhu andmeid importida, ja valige **Edasi**.
+   > ![Azure Data Lake'i uute ühenduse üksikasjade sisestamise dialoogiboks](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Keskkonnas muu andmeallikaga seotud model.json-faile ei kuvata loendis.
+   > Ühenduse ja andmeallika loomiseks on vaja ühte järgmistest ülalviidatud konteineri või salvestusruumi konto rollidest.
+   >  - Salvestusruumi bloobiandmete luger
+   >  - Salvestusruumi bloobiandmete omanik
+   >  - Salvestusruumi bloobiandmete kaasautor
 
-1. Saadaolevate olemite loendi leiate valitud model.json-failist. Saate vaadata üle ja valida saadaolevate olemite loendist ning valida suvandi **Salvesta**. Kõik valitud olemid valmendatakse uuest andmeallikast.
+1. Valige dialoogis **Common Data Modeli kausta valimine** fail model.json või manifest.json, kuhu andmeid importida, ja valige **Edasi**.
+   > [!NOTE]
+   > Keskkonnas muu andmeallikaga seotud faile model.json või manifest.json ei kuvata loendis.
+
+1. Saadaolevate olemite loendi leiate valitud failist model.json või manifest.json. Saate vaadata üle ja valida saadaolevate olemite loendist ning valida suvandi **Salvesta**. Kõik valitud olemid valmendatakse uuest andmeallikast.
    > [!div class="mx-imgBorder"]
    > ![Dialoogiboks, kus on esitatud model.json failist saadud olemite loetelu](media/review-entities.png)
 
@@ -59,11 +67,11 @@ See artikkel annab teavet selle kohta, kuidas valmendada andmeid Common Data Mod
 9. Pärast valikute salvestamist avaneb leht **Andmeallikad**. Nüüd peaksite nägema Common Data Modeli kausta ühendust andmeallikana.
 
 > [!NOTE]
-> Faili model.json saab seostada samas keskkonnas ühe andmeallikaga. Kuid sama model.json-faili saab kasutada mitmes keskkonnas andmeallikate jaoks.
+> Faili model.json või manifest.json saab seostada samas keskkonnas ühe andmeallikaga. Kuid sama faili model.json või manifest.json saab kasutada mitmes keskkonnas andmeallikate jaoks.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Common Data Modeli kausta andmeallika redigeerimine
 
-Saate värskendada pääsuvõtit, mis kuulub salvestuskontole, mis sisaldab Common Data Modeli kausta. Samuti võite muuta model.json faili. Kui soovite luua ühenduse muu konteineriga teie salvestuskontol või muuta konto nime, siis peate looma [uue andmeallika ühenduse](#connect-to-a-common-data-model-folder).
+Saate värskendada pääsuvõtit, mis kuulub salvestuskontole, mis sisaldab Common Data Modeli kausta. Võite ka faili model.json või manifest.json muuta. Kui soovite luua ühenduse muu konteineriga teie salvestuskontol või muuta konto nime, siis peate looma [uue andmeallika ühenduse](#connect-to-a-common-data-model-folder).
 
 1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Andmeallikad**.
 
@@ -77,13 +85,24 @@ Saate värskendada pääsuvõtit, mis kuulub salvestuskontole, mis sisaldab Comm
 
 5. Soovi korral saate kasutada kontovõtmepõhise ühenduse asemel ressursi- või tellimusepõhist ühendust. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). Ühenduse värskendamisel ei saa te muuta **konteineri** teavet.
    > [!div class="mx-imgBorder"]
-   > ![Dialoogiboks Azure Data Lake'i jaoks ühendusandmete sisestamiseks](media/enter-existing-storage-details.png)
 
-6. Soovi korral võite valida konteinerist muu json.faili, millel on teistsugune olemite komplekt.
+   > ![Ühenduse andmete sisestamise dialoogiboks Azure Data Lake'i ühendamiseks olemasoleva salvestusruumi kontoga](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Ühenduse ja andmeallika loomiseks on vaja ühte järgmistest ülalviidatud konteineri või salvestusruumi konto rollidest.
+   >  - Salvestusruumi bloobiandmete luger
+   >  - Salvestusruumi bloobiandmete omanik
+   >  - Salvestusruumi bloobiandmete kaasautor
+
+
+6. Soovi korral saate valida konteinerist erineva olemikomplektiga faili model.json või manifest.json.
 
 7. Soovi korral saate valmendamiseks valida täiendavaid olemeid. Samuti saate sõltuvuste puudumise korral eemaldada kõiki juba valitud olemeid.
 
    > [!IMPORTANT]
-   > Kui olemasoleval model.json failil ja olemite komplektil on kehtivad sõltuvused, siis kuvatakse tõrketeade ja te ei saa muud model.json faili valida. Enne model.json faili muutmist tuleb sõltuvused eemaldada. Kui te ei soovi sõltuvusi eemaldada, siis saate luua uue andmeallika teie soovitud model.json failiga.
+   > Kui olemasoleval failil model.json või manifest.json ja olemikomplektil on sõltuvusi, kuvatakse tõrketeade ja te ei saa valida muud faili model.json või manifest.json. Eemaldage need sõltuvused enne faili model.json või manifest.json muutmist või looge uus andmeallikas failiga model.json või manifest.json, mida soovite kasutada, et vältida sõltuvuste eemaldamist.
 
 8. Soovi korral saate valida täiendavaid atribuute või olemeid, mille korral lubada andmete profiilimine, või keelata juba valitud üksused.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

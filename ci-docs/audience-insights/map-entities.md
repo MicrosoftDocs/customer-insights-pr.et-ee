@@ -4,17 +4,17 @@ description: Vastendage andmed, et luua koondatud kliendiprofiile.
 ms.date: 09/25/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0088daae0be0cb3e71f87387648430d2353081c9
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405559"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267030"
 ---
 # <a name="map-entities-and-attributes"></a>Olemite ja atribuutide kaardistamine
 
@@ -102,3 +102,6 @@ Andmete ühendamisel minge lehele **Vastenda**. Külastage lehte [**Vastendamine
 
 > [!TIP]
 > Vaadake seda videot: [Alustamine: kliendi koondprofiili loomine](https://youtu.be/oBfGEhucAxs).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

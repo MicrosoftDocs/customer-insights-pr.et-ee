@@ -1,20 +1,20 @@
 ---
 title: Keskkondade loomine ja haldamine
 description: Siit leiate teavet selle kohta, kuidas teenuse kasutamiseks registreeruda ja kuidas keskkondasid hallata.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644128"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270107"
 ---
 # <a name="manage-environments"></a>Keskkondade haldamine
 
@@ -46,9 +46,9 @@ Uue keskkonna loomiseks on kaks võimalust. Saate määrata kas täiesti uue kon
 
 Uue keskkonna loomine.
 
-1. Valige rakenduse päises sümbol **Sätted**.
+1. Valige rakenduse päises valija **Environment** (Keskkond).
 
-1. Valige suvand **Uus keskkond**.
+1. Tehke valik **Uus**.
 
    > [!div class="mx-imgBorder"]
    > ![Keskkonnasätted](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Uue keskkonna loomine.
 
    - Azure Data Lake Storage Gen2 korral saate autentimiseks valida ressursipõhise ja tellimusepõhise valiku vahel. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). **Konteineri** nime ei saa muuta ja see on „customerinsights“.
    
-   - Kui soovite kasutada [prognoose](predictions.md), sisestage Common Data Service'i eksemplari URL väljale **Serveri aadress**, mis asub jaotises **Prognooside kasutamine**.
+   - Kui soovite kasutada [ennustamise](predictions.md) funktsiooni või konfigureerida andmete jagamist Microsoft Dataverse rakenduste ja lahendustega, sisestage Microsoft Dataverse keskkonna URL jaotises **Andmete ühiskasutuse konfigureerimine rakendusega Microsoft Dataverse ja lubage täiendavad** võimalused. Valige suvand **Enable data sharing** (Luba andmete ühiskasutus), et jagada Customer Insightsi väljundandmeid Microsoft Dataverse Managed Data Lake hallatava andmejärvega.
+
+     > [!NOTE]
+     > - Andmete jagamine rakendusega Microsoft Dataverse Managed Data Lake täna ei toetata, kui salvestate kõik andmed enda andmejärve Azure Data Lake Storage.
+     > - [Puuduvate väärtuste ennustust olemis](predictions.md) ei toetata praegu, kui lubate andmete ühiskasutust rakendusega Microsoft Dataverse Managed Data Lake.
+
+     > [!div class="mx-imgBorder"]
+     > ![Konfigureerimissuvandid andmete ühiskasutuse lubamiseks Microsoft Dataverse abil](media/Datasharing-with-DataverseMDL.png)
 
    Protsesside käitamisel, näiteks andmete valmendamisel või segmendi loomisel, luuakse asjaomased kaustad eespool määratud salvestuskontol. Luuakse andmefailid ja model.json failid ning need lisatakse teie käitatavate protsesside põhjal vastavatesse alamkaustadesse.
 
@@ -120,11 +127,11 @@ Kui andmete ühendamine on lõpetatud, avage **Meetmed** ja **Segmendid**, et ne
 
 Saate muuta olemasolevate keskkondade teatud üksikasju.
 
-1. Avage suvandid **Administraator** > **Süsteem** > **Teave**.
+1.  Valige rakenduse päises valija **Environment** (Keskkond).
 
-2. Valige **Redigeeri**.
+2.  Valige ikoon **Edit** (Redigeeri).
 
-3. Saate värskendada keskkonna **Kuvatavat nime**, kuid te ei saa muuta **Piirkonda** ega **Tüüpi**.
+3. Väljal **Edit environment** (Redigeeri keskkonda) saate värskendada keskkonna välja **Display name** (Kuva nimi), kuid te ei saa muuta suvandeid **Region** (Regioon) või **Type** (Tüüp).
 
 4. Kui keskkonna andmete salvestusruumiks on konfigureeritud Azure Data Lake Storage Gen2, siis saate uuendada suvandit **Kontovõti**. Kuid te ei saa muuta **Ettevõtte nime** ja **Konteineri** nime.
 
@@ -134,17 +141,25 @@ Saate muuta olemasolevate keskkondade teatud üksikasju.
 
 Kui soovite kustutada kõik konfiguratsioonid ja eemaldada valmendatud andmed, saate keskkonna lähtestada nii, et see oleks täiesti tühi.
 
-1.  Avage suvandid **Administraator** > **Süsteem** > **Teave**.
+1.  Valige rakenduse päises valija **Environment** (Keskkond). 
 
-2.  Valige **Lähtesta**. 
+2.  Valige keskkond, mille soovite lähtestada, ja valige kolmikpunkt **...**. 
 
-3.  Kustutamise kinnitamiseks sisestage keskkonna nimi ja valige **Lähtesta**.
+3. Valige suvand **Reset** (Lähtesta). 
+
+4.  Kustutamise kinnitamiseks sisestage keskkonna nimi ja valige **Lähtesta**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Kustuta olemasolev keskkond (saadaval ainult administraatoritele)
+
+Administraatorina saate kustutada halduskeskkonna.
+
+1.  Valige rakenduse päises valija **Environment** (Keskkond).
+
+2.  Valige keskkond, mille soovite lähtestada, ja valige kolmikpunkt **...**. 
+
+3. Valige suvand **Delete** (Kustuta). 
+
+4.  Kustutamise kinnitamiseks sisestage soovitud keskkonna nimi ja valige **Kustuta**.
 
 
-## <a name="delete-an-existing-environment"></a>Olemasoleva keskkonna kustutamine
-
-1. Avage suvandid **Administraator** > **Süsteem** > **Teave**.
-
-1. Valige **Kustuta**.
-
-1. Kustutamise kinnitamiseks sisestage soovitud keskkonna nimi ja valige **Kustuta**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

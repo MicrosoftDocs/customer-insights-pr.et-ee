@@ -1,7 +1,7 @@
 ---
 title: Kliendiprofiilide otsimine ja filtreerimine
 description: Leidke kiiresti teavet ühtsete klientide profiilide kohta ja filtreerige määratud atribuute.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405569"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270061"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Kliendiprofiilid: otsing ja filtri register
 
@@ -28,14 +28,6 @@ Kliendiandmete ühtlustamise tulemusena tekib kliendiprofiili olem, mis pakub ko
 Kui määratlete otsitavaid atribuute administraatorina esimest korda, peate esmalt määratlema indekseeritud välju. Soovitame valida kõik atribuudid, millega kasutajad saavad kliente otsida ja filtreerida lehel **Kliendid**. Saate määrata vaid kliendiprofiili olemi atribuute, mida lõite andmete ühendamisel.
 
 1. Avage leht **Kliendid** ja valige **Otsingu ja filtri register**.
-
-> [!NOTE]
-> Loome järgmistest semantilistest tüüpidest vaikimisi otsinguregistri konfiguratsiooni kliendi olemi saadaolevate atribuutide kohta, nagu on määratletud lehel Kaart.
-> - Isiku Eesnimi, Perekonnanimi, Teine nimi, Täisnimi
-> - Asutuse nimi
-> - Meiliaadress
-> - Telefoninumber
-> - Asukoha teave
 
 2. Valige **+ Lisa** indekseeritud väljade määramiseks.
 
@@ -65,3 +57,10 @@ Lehel **Kliendid** asuva **Filter** menüü võib sisaldada erinevas koguses atr
 2. Vajutage nuppu **Salvesta**, et muudatused rakendada.
 
 3. Valige **Käivita**, kui olete valmis seadete rakendamiseks.
+
+## <a name="next-steps"></a>Järgmised etapid
+
+Kliendiprofiilide otsimiseks või indekseeritud väljade kasutamiseks minge lehele **Kliendid**, et näha kõigi kliendiprofiilide alamhulka.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

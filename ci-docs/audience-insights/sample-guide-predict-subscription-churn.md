@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653975"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269831"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Tellimusevoolavuse prognoosi (eelversioon) näidisjuhend
 
@@ -46,10 +46,9 @@ Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query ko
    - **DateOfBirth**: kuupäev
    - **CreatedOn**: kuupäev/kellaaeg/ajatsoon
 
-   [!div class="mx-imgBorder"]
-   ![Sünniaja teisendamine kuupäevaks](media/ecommerce-dob-date.PNG "sünniaja teisendamine kuupäevaks")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Sünniaja teisendamine kuupäevaks.":::
 
-1. Muutke parempoolsel paanil väljal „Nimi“ oma andmeallika praegune nimi **Päring** nimeks **eCommerceContacts**
+1. Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **eCommerceContacts**
 
 1. Salvestage andmeallikas.
 
@@ -67,7 +66,7 @@ Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query ko
    - **RewardsPoints**: täisarv
    - **CreatedOn**: kuupäev/kellaaeg
 
-1. Muutke parempoolsel paanil väljal „Nimi“ oma andmeallika praegune nimi **Päring** nimeks **loyCustomers**.
+1. Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **loyCustomers**.
 
 1. Salvestage andmeallikas.
 
@@ -90,7 +89,7 @@ Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query ko
    - **Is_auto_renew**: tõene/väär
    - **RecurringFrequencyInMonths**: täisarv
 
-1. Muutke parempoolsel paanil väljal „Nimi“ oma andmeallika praegune nimi **Päring** nimeks **SubscriptionHistory**.
+1. Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **SubscriptionHistory**.
 
 1. Salvestage andmeallikas.
 
@@ -230,3 +229,6 @@ Saate luua mudeli loodud olemi põhjal uue segmendi.
 Teil on nüüd segment, mida värskendatakse dünaamiliselt ja mis tuvastab selle tellimusäri jaoks suure voolavusriskiga kliente.
 
 Lisateavet vt teemast [Segmentide loomine ja haldamine](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

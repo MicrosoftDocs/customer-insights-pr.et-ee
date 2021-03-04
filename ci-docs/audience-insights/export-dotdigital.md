@@ -5,16 +5,16 @@ ms.date: 11/14/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ed6bd40e8575fc90258f79f60abffe54f136d274
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 573a22e24f84c65fc4d21faf823cace801cc7ea3
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644443"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269095"
 ---
 # <a name="connector-for-dotdigital-preview"></a>DotDigitali konnektor (eelversioon)
 
@@ -72,3 +72,6 @@ Saate [vajadusel andmeid eksportida](export-destinations.md). Eksport käivitub 
 
 Kui lubate Dynamics 365 Customer Insightsil DotDigitali andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed). Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et DotDigital täidab kõik teie privaatsus- või turbenõuded. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
 Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

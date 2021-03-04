@@ -1,7 +1,7 @@
 ---
 title: Süsteemikonfiguratsioon sihtrühmaülevaadetes
 description: Lisateave süsteemisätete kohta Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405566"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267335"
 ---
 # <a name="system-configuration"></a>Süsteemikonfiguratsioon
 
-Lehel **Süsteem** on neli vahekaarti: **Olek**, **Ajastamine**, **Teave** ja **Üldine**.
+Leht **Süsteem** sisaldab järgmisi vahekaarte.
+- [Olek](#status-tab)
+- [Kavanda](#schedule-tab)
+- [API kasutus](#api-usage-tab)
+- [Teave](#about-tab)
+- [Üldist](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Süsteemi leht](media/system-tabs.png "Süsteemi leht")
 
 ## <a name="status-tab"></a>Oleku vaehekaart
 
-**Oleku vahekaart** võimaldab jälgida andmete sisestamist, andmete eksportimisi ja mitmeid olulisi toote protsesse. Vaadake sellel vahekaardil olev teave üle, et tagada aktiivsete protsesside terviklikkus.
+Vahekaardil **Olek** lubab jälgida andmete kogumise, andmeekspordi ja mitme muu olulise tooteprotsessi edenemist. Vaadake sellel vahekaardil olev teave üle, et tagada aktiivsete protsesside terviklikkus.
 
-See vahekaart sisaldab oleku tabeleid **Andmeallikad**, **Süsteemi protsessid** ja **Andmete ettevalmistamine**. Iga tabel jälgib tööülesande **Nime** ja sellele vastavat olemit, viimase käitamise **Olekut** ja millal seda viimati **Värskendati**.
+Vahekaart sisaldab oleku ja erinevate protsessidega teabetöötlustabeleid. Iga tabel jälgib tööülesande **Nime** ja sellele vastavat olemit, viimase käitamise **Olekut** ja millal seda viimati **Värskendati**.
 
 Tööülesande viimaste käitamiste üksikasjade kuvamiseks valige selle nimi.
 
@@ -40,7 +45,7 @@ Tööülesande viimaste käitamiste üksikasjade kuvamiseks valige selle nimi.
 - **Vahele jäetud:** tööülesanne jäeti vahele. Üks või mitu järgnevat protsessi, millest see tööülessane sõltub, nurjuvad või jäid vahele.
 - **Ebaõnnestunud:** tööülesande töötlemine ebaõnnestus.
 - **Tühistatud:** kasutaja tühistas töötlemise enne selle lõpuleviimist.
-- **Järjekorda pandud:** töötlemine on järjekorras ja käivitub siis, kui kõik järgnevad tööülesanded on lõpule viidud. Lisateavet leiate jaotisest [Värskendamise poliitika](#refresh-policies).
+- **Järjekorda lisatud**: töötlemine on lisatud järjekorda ja algab siis, kui kõik järjekorratoimingud on lõpule viidud. Lisateavet leiate jaotisest [Värskendamise poliitika](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Värskendamise poliitika
 
@@ -89,4 +94,17 @@ Valige käsk **Salvesta**, et kinnitada valikud.
 
 ## <a name="api-usage-tab"></a>API kasutuse vahekaart
 
-Siit leiate teavet reaalajas API kasutuse kohta ja näete, milliseid sündmusi teatud ajavahemikul esines. Lisateabe saamiseks vt [Reaalajas andmete valmendamine](real-time-data-ingestion.md).
+Leidke API reaalajas kasutamise üksikasju ja vaadake, millised sündmused toimusid antud aja jooksul. Soovitud ajaraamistiku saate valida ripploendist **Ajaraamistiku valimine**. 
+
+**API kasutus** sisaldab kolme järgmist jaotist. 
+- **API-päringud** – diagramm, mis visualiseerib valitud aja jooksul API päringute koondarvu.
+
+- **Andmeedastus** – diagramm, mis kuvab valitud ajaraamistikul API kaudu edastatud andmete hulga.
+
+-  **Toimingud** – tabel, kus on reaga iga saadaolev API-toiming ja teave toimingute kasutamise kohta. Võite valida toimingu nime, et minna [API-viitele](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   [Reaalajalisi andmeatrikulaate](real-time-data-ingestion.md) kasutavad toimingud sisaldavad binokulaarse sümboliga nuppu reaalaja API kasutuse kuvamiseks. Valige nupp, et avada külgpaan, mis sisaldab reaalajas API kasutamise üksikasju praeguses keskkonnas.   
+   Kasutage paanil **Reaalajaline API kasutus** välja **Rühmita kui**, et valida kuidas reaalajalist suhtlust kõige paremini esitada. Andmeid saate rühmitada API meetodi, olemi kvalifitseeritud nime (valmendatud olem), looja (sündmuse allikas), tulemuse (õnnestumine või nurjumine) või tõrkekoodide järgi. Andmed on saadaval ajaloodiagrammina ja tabelina.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

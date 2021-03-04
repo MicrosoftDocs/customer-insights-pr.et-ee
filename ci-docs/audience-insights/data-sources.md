@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643948"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269693"
 ---
-# <a name="overview-about-data-sources"></a>Andmeallikate ülevaade
+# <a name="data-sources-overview"></a>Andmeallikate ülevaade
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Näete iga sisestatud andmeallika nime, selle olekut ja viimast korda, kui neid 
 |Värskendamine    |Andmete sisestamine on pooleli. Selle toimingu tühistamiseks valige **Peata värskendamine** **Toimingute** veerus. Andmeallika värskendamise peatamine ennistab selle viimase värskendamise olekusse.       |
 |Ebaõnnestus     |Andmete sisestamisel ilmnesid tõrked.         |
 
-Valige **Värskenda olekut**, et vaadata üle värskendamise oleku üksikasjad, sh tõrke üksikasjad ja allavooluprotsesside värskendused.
+Üksikasjade kuvamiseks valige väärtus mis tahes andmeallika veerus **Olek**. Laiendage paanil **Edenemise üksikasjad** suvandit **Andmeallikad**. Valige **Kuva üksikasjad**, et saada värskendamise oleku kohta lisateavet, sh tõrke üksikasjad ja allavooluprotsesside värskendused.
 
 Andmete laadimine võib veidi aega võtta. Pärast edukat värskendamist saab lisatud andmeid vaadata lehel **Olemid**. Lisateavet vt jaotisest [Olemid](entities.md).
 
@@ -76,3 +76,6 @@ Andmeallika värskendamiseks mis tahes ajal toimige järgmiselt.
 2. Valige eemaldatava andmeallika kõrval asuv vertikaalne kolmikpunkt ja valige rippmenüüst suvand **Kustuta**.
 
 3. Kinnitage, et soovite kustutada.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

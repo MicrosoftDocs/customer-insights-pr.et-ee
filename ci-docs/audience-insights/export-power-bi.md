@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405527"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477083"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI’i konnektor (eelvaade)
 
@@ -31,7 +31,7 @@ Visualiseerige oma andmeid rakendusega Power BI Desktop. Oma ühendatud kliendia
 
 1. Valige **Kuva veel** ja otsige rakendust **Dynamics 365 Customer Insights**
 
-1. Valige tulem ja valige **Ühenda**.
+1. Valige käsk **Ühenda**.
 
 1. **Logige sisse** samale organisatsiooni kontole, mida kasutate Customer Insightsi jaoks, ja valige **Ühenda**.
    > [!NOTE]
@@ -52,3 +52,22 @@ Customer Insightsi Power BI konnektor on loodud töötama andmekogumitega, mis s
 ### <a name="work-with-a-subset-of-data"></a>Andmete alamhulgaga töötamine
 
 Kaaluge andmete alamhulgaga töötamist. Näiteks saate luua [segmente](segments.md), selle asemel et eksportida kõik kliendikirjed Power BI-sse.
+
+## <a name="troubleshooting"></a>Tõrkeotsing
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Customer Insightsi keskkonda ei kuvata Power BI-s
+
+Keskkond, millel on kahe identse olemi vahel määratletud mitu [seost](relationships.md), pole Power BI konnektoris saadaval.
+
+Saate topeltseoseid tuvastada ja eemaldada.
+
+1. Avage oma Power BI-s puuduva keskkonna sihtrühmaülevaadetes jaotis **Andmed** > **Seosed**.
+2. Topeltseoste tuvastamiseks tehke järgmist.
+   - Kontrollige, kas kahe sama olemi vahel on määratletud mitu seost.
+   - Kontrollige, kas kahe koondamisprotsessi kaasatud olemi vahel on loodud seos. Kõigi koondamisprotsessi kaasatud olemite vahel on määratletud varjatud seos.
+3. Eemaldage tuvastatud topeltseosed.
+
+Pärast topeltseoste eemaldamist proovige Power BI konnektor uuesti konfigureerida. Keskkond peaks olema nüüd saadaval.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

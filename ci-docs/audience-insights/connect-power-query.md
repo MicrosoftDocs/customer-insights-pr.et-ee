@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405546"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267763"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query andmeallikaga ühendamine
 
@@ -28,7 +28,10 @@ Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku n
 
 1. Valige meetod **Andmete importimine** ja valige **Edasi**.
 
-1. Sisestage andmeallikale **Nimi** ja valige andmeallika loomiseks nupp **Edasi**.
+1. Sisestage andmeallikale **Nimi** ja valige andmeallika loomiseks nupp **Edasi**. Nime juhised: 
+   - peab algama tähega;
+   - kasutage ainult tähti ja numbreid; erimärkide ja tühikute sisestamine pole lubatud;
+   - kasutage 3–64 tähemärki.
 
 1. Valige üks [saadaolevatest konnektoritest](#available-power-query-data-sources). Selles näites valime **Teksti/CSV** konnektori.
 
@@ -77,3 +80,6 @@ Konnektorid, millel on märgitud veerg **Customer Insights (andmevood)**, on saa
 3. Rakendage muudatused ja teisendused dialoogiaknas **Power Query – päringute redigeerimine**, nii nagu on kirjeldatud jaotises [Uue andmeallika loomine](#create-a-new-data-source).
 
 4. Valige pärast redigeerimist muudatuste salvestamiseks Power Querys **Salvesta**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

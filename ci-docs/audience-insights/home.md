@@ -1,7 +1,7 @@
 ---
 title: Avaleht sihtrühmaülevaadetes
 description: Alustage rakendusega tutvumist avalehel.
-ms.date: 09/30/2020
+ms.date: 01/07/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: bd16966eabb126d9c9945ededc53273df02c3369
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 7cc767f5d80b213a4c1bb5b2e8062bd44c15279b
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405552"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477036"
 ---
 # <a name="create-a-new-environment"></a>Loo uus keskkond
 
@@ -29,6 +29,8 @@ Saate prooviversiooni saamiseks registreeruda [prooviversiooni registreerimisleh
 
 1. Sisestage oma töökoha või kooli meiliaadress, rääkige meile endast rohkem ja valige suvand **Edasi**.
 
+   :::image type="content" source="media/trial-signup-dialog.png" alt-text="Prooviversiooni eksemplari kasutajaks registreerumise dialoog":::
+
 1. Sisestage oma uue keskkonna jaoks **Nimi**. 
 
 1. Valige prooviversiooni tüüp.
@@ -41,34 +43,34 @@ Saate prooviversiooni saamiseks registreeruda [prooviversiooni registreerimisleh
 
 Pärast keskkonna loomist näete **demokeskkonda**, mis võimaldab teil väljamõeldud andmetega rakendust avastada. Saate näidisandmeid oma valdkonna järgi muuta. Valige päisest suvand **Sätted** ja seejärel suvand **Demo sätted**. Peale selle saate muuta ka visuaalset kujundust. 
 
-Valige [keskkond](#change-between-environments), mille registreerimistoimingu käigus lõite, et töötada oma andmetega.
+Valige [keskkond](#switch-environments), mille registreerimistoimingu käigus lõite, et töötada oma andmetega.
 
 ## <a name="create-a-new-production-or-sandbox-environment"></a>Uue töö- või liivakastikeskkonna loomine
 
-Valige oma keskkonnas päises olev ikoon **Sätted** ja seejärel suvand **Uus keskkond**.
+Valige oma keskkonna rakenduse päises **Keskkondade** valija ja seejärel valige **Uus**.
 
-Järgige etappe samamoodi, nagu [proovikeskkonna loomisel](#create-a-trial-environment). Kui valite suvandi **Täpsemad sätted**, kuvatakse lisasuvand, mis võimaldab teil andmed oma Azure Data Lake’i salvestada. Sisestage oma konto nimi ja konto võti, et luua oma Azure Data Lake’iga ühendus. Vaikimisi salvestatakse andmed Customer Insightsi hallatavasse andmejärve.
+Järgige etappe samamoodi, nagu [proovikeskkonna loomisel](#create-a-trial-environment). Vaikimisi salvestatakse andmed Customer Insightsi hallatavasse andmejärve. Kui valite suvandi **Täpsemad sätted**, kuvatakse lisasuvand, mis võimaldab teil andmed oma Azure Data Lake’i salvestada. Sisestage oma konto nimi ja konto võti, et luua oma Azure Data Lake’iga ühendus. 
 
 > [!IMPORTANT]
 > Andmete salvestamisel teenusesse Azure Data Lake Storage nõustute, et andmed edastatakse selle Azure’i salvestusruumi konto asjakohasesse geograafilisse asukohta ja need talletatakse seal, ning et see võib erineda rakendusse Dynamics 365 Customer Insights talletatud andmete salvestuskohast. [Lisateavet leiate Microsofti usalduskeskusest.](https://www.microsoft.com/trust-center)
 
 ## <a name="explore-the-home-page"></a>Avalehe avastamine
 
-Pääsete [oma Customer Insightsi keskkonnale juurde](https://home.ci.ai.dynamics.com/) järgmise URL-i kaudu: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
-**Avalehel** kuvatakse teie kliendibaasi ja põhinäitajate ülevaade teie ettevõtte seisukorra jälgimiseks.
+[Pääsete oma sihtrühmaülevaadetele juurde Dynamics 365 Customer Insightsist](https://home.ci.ai.dynamics.com/) järgmise URL-i kaudu: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+**Avalehel** kuvatakse segmentide, mõõtude ja rikastamisandmete (kui need on konfigureeritud) ülevaade pärast etappide [kaardistamine](map-entities.md), [vastendamine](match-entities.md) ja [koondamine](merge-entities.md) lõpuleviimist.
 
 > [!div class="mx-imgBorder"] 
 > ![Avalehe ülevaated](media/home-page-insights.png "Avalehe ülevaated")
 
-Jaotises **Viimatised segmendid** näete klientide rühmi vastavalt teie määratletud demograafilistele, käitumuslikele või ülekande atribuutidele. [Segmentide loomine](segments.md) aitab teil oma äritegevust paremini sihtida.
+Jaotises **Viimatised segmendid** näete klientide rühmi vastavalt teie määratletud demograafilistele, käitumuslikele või ülekande atribuutidele. [Segmentide loomine](segments.md) aitab teil rühmitada oma kliendibaasi ja oma äritegevusi paremini sihtida.
 
-Suvand **Viimatised meetmed** kuvab [meetmetega](measures.md) paanid. Meetmed on juhtimismõõdustikud (KPId), mille teie olete määratlenud. Näiteks kliendivoolavuse keskmine tõenäosus või keskmine veebis kulutatud summa kliendi kohta.
+**Viimastes mõõtudes** kuvatakse paanid teie määratletud [juhtimismõõdikutega (KPI-dega)](measures.md). Näiteks keskmine kliendivoolavuse tõenäosus või kliendi keskmine kulutamine veebis.
 
-Jaotises **Viimased rikastamised** loetletakse rikastamise käitamise tulemused, mis hiljuti lõpetati. Rikastamine lisab teie kliendibaasi kohta teavet. Näiteks mõistes huvisid ja kaubamärke millele neil on külgetõmme. Seda teavet saab avada [rikastamise](enrichment-microsoft-graph.md) võimaluste abil, kui olete lõpule viinud [kaardistamise](map-entities.md), [vastendamise](match-entities.md) ja [ühendamise](merge-entities.md) etapid.
+Jaotises **Viimased rikastamised** loetletakse rikastamise käitamise tulemused, mis hiljuti lõpetati. [Rikastamised](enrichment-hub.md) lisavad teie kliendibaasi kohta teavet. Näiteks mõistes huvisid ja kaubamärke millele neil on külgetõmme.
 
-## <a name="change-between-environments"></a>Keskkondade vahetamine
+## <a name="switch-environments"></a>Vaheta keskkondasid
 
-Pärast [andmeallikate](data-sources.md)seadistamist ja konfigureerimist, peaksite demokeskkonnast reaalajas keskkonnale üle minema. Tootmiskeskkonna kasutamine võimaldab teil töötada oma kliendiandmetega. Keskkondade vahetamiseks valige juhtelement **Keskkond** lehe paremas ülanurgas.
+Keskkondade vahetamiseks valige juhtelement **Keskkond** lehe paremas ülanurgas.
 
 > [!div class="mx-imgBorder"] 
 > ![Keskkondade vahetamine](media/home-page-environment-switcher.png "Keskkondade vahetamine")
@@ -78,3 +80,6 @@ Administraatorid saavad luua ja hallata [mitut keskkonda](manage-environments.md
 ## <a name="next-step"></a>Järgmine etapp
 
 Avalehel oma ülevaadete kuvamiseks, tuleb esmalt [lisada andmeallikad](data-sources.md) ja [ühendada](data-unification.md) andmed kliendiprofiilide loomiseks.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
