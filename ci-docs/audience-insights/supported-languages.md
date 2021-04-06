@@ -1,34 +1,34 @@
 ---
 title: Sihtrühmaülevaadetes toetatud keeled
 description: Tutvuge keeletoega ja konfigureerige see.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268175"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595467"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Sihtrühmaülevaadete funktsioonis toetatud keeled
 
-Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis on toetatud mitu keelt. Selles teemas loetletakse saadaolevad keeled ja toetatakse nende vahelist muutmist ning antakse ülevaade sisu tõlkimisest.
+Dynamics 365 Customer Insightsi sihtrühmaülevaated on tõlgitud paljudesse keeltesse. Järgmine loend sisaldab saadaolevaid keeli ja teavet selle kohta, mis on tõlgitud. Saate lisateavet ka keelesätete muutmise kohta. 
 
 ## <a name="languages"></a>Keeled
 
 | Keele nimi (inglise keel)|  Keele nimi (emakeel) |
 | ------------- | ------------- |
 | Baski keel | euskara |
-| bulgaaria | Български |
+| bulgaaria | български |
 | katalaani | català |
 | hiina (lihtsustatud) | 中文(简体) |
-| Hiina (traditsiooniline) | 中文(繁體) |
+| hiina (traditsiooniline) | 中文(繁體) |
 | Horvaadi | hrvatski |
 | Tšehhi | čeština |
 | Taani | dansk |
@@ -39,26 +39,26 @@ Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis on toetatud m
 | Prantsuse | français |
 | Galeegi | galego |
 | Saksa | Deutsch |
-| Kreeka | Ελληνικά |
-| Hindi | हिंदी |
-| Ungari | magyar |
-| Indoneesia | Bahasa Indonesia |
-| Itaalia | italiano |
-| Jaapani | 日本語 |
-| Kasahhi | Қазақ |
-| Korea | 한국어 |
-| Läti | latviešu |
-| Leedu | lietuvių |
-| Malai | Bahasa Melayu |
-| Norra (bokmål) | norsk (bokmål) |
-| Poola | Polski |
+| kreeka | Ελληνικά |
+| hindi | हिंदी |
+| ungari | magyar |
+| indoneesia | Indoneesia |
+| itaalia | italiano |
+| jaapani | 日本語 |
+| kasahhi | қазақ тілі |
+| korea | 한국어 |
+| läti | latviešu |
+| leedu | lietuvių |
+| malai | Melayu |
+| Norra (bokmål) | norsk bokmål |
+| poola | polski |
 | Portugali (Brasiilia) | português |
 | Portugali (Portugal) | português |
-| Rumeenia | română |
-| Vene | Русский |
+| rumeenia | română |
+| vene | pусский |
 | Serbia (kirillitsa) | српски |
 | Serbia (ladina) | srpski |
-| Slovaki | slovenčina |
+| slovaki | slovenčina |
 | Sloveeni | slovenski |
 | Hispaania | español |
 | Rootsi | svenska |

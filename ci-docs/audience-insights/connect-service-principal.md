@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267717"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596494"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Azure Data Lake Storage Gen2 kontoga ühendumine Azure'i teenusesubjekti kaudu sihtrühmaülevaadeteks
 
@@ -23,7 +23,7 @@ Automatiseeritud tööriistad, mis kasutavad Azure'i teenuseid, peaksid alati om
 Saate kasutada teenusesubjekti, et turvaliselt [lisada või redigeerida Common Data Modeli kausta andmeallikana](connect-common-data-model.md) või [luua uus keskkond või värskendada olemasolevat](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - Azure Data Lake Gen2 salvestusruumi kontol, mis kasutab teenusesubjekti, peab olema [lubatud hierarhiline nimeruum (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Azure Data Lake Gen2 salvestusruumi kontol, mis kasutab teenusesubjekti, peab olema [lubatud hierarhiline nimeruum (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
 > - Teenusesubjekti loomiseks on teil vaja oma Azure'i tellimuse administraatoriõigusi.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Azure'i teenusesubjekti loomine sihtrühmaülevaadeteks
@@ -48,7 +48,7 @@ Enne uue teenusesubjekti loomist sihtrühmaülevaadete jaoks kontrollige, kas se
 
 ### <a name="create-a-new-service-principal"></a>Uue teenusesubjekti loomine
 
-1. Installige rakenduse **Azure Active Directory PowerShell for Graph** uusim versioon. Lisateavet leiate teemast [Azure Active Directory PowerShell for Graphi installimine](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Installige rakenduse **Azure Active Directory PowerShell for Graph** uusim versioon. Lisateavet leiate teemast [Azure Active Directory PowerShell for Graphi installimine](/powershell/azure/active-directory/install-adv2).
    - Valige arvutis klaviatuuril Windowsi klahv ja otsige programmi **Windows PowerShell** ning **käivitage see administraatorina**.
    
    - Sisestage avanevasse PowerShelli aknasse `Install-Module AzureAD`.

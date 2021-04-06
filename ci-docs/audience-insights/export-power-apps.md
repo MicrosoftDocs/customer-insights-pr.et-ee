@@ -2,19 +2,19 @@
 title: Power Apps konnektor
 description: Ühendumine Power Appsi ja Power Automate'iga.
 ms.date: 01/19/2021
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268911"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598150"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps’i konnektor (eelvaade)
 
@@ -22,9 +22,9 @@ ms.locfileid: "5268911"
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Power Appsi ja Dynamics 365 Customer Insightsi ühendamine
 
-Customer Insights on üks paljudest [Power Appsis saadaolevatest andmeallikatest](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights on üks paljudest [Power Appsis saadaolevatest andmeallikatest](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Vaadake Power Appsi  dokumentatsiooni, et saada teada, kuidas [lisada rakendusele andmeühendust](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Soovitame teil ka vaadata üle ka teema [Kuidas Power Apps kasutab delegeerimist lõuendirakendustes suurte andmekogumite käsitlemiseks](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Vaadake Power Appsi  dokumentatsiooni, et saada teada, kuidas [lisada rakendusele andmeühendust](/powerapps/maker/canvas-apps/add-data-connection). Soovitame teil ka vaadata üle ka teema [Kuidas Power Apps kasutab delegeerimist lõuendirakendustes suurte andmekogumite käsitlemiseks](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Saadaolevad olemid
 
@@ -47,11 +47,11 @@ Delegeerimine töötab ainult olemi Klient ja olemi UnifiedActivity jaoks.
 
 - Olemi **UnifiedActivity** delegeerimine: selle olemi delegeerimine töötab ainult väljade **ActivityId** ja **CustomerId** jaoks.  
 
-- Lisateavet delegeerimise kohta leiate teemast [Power Appsi delegeeritavad funktsioonid ja toimingud](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+- Lisateavet delegeerimise kohta leiate teemast [Power Appsi delegeeritavad funktsioonid ja toimingud](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
 
 ## <a name="example-gallery-control"></a>Galerii juhtelemendi näide
 
-Näiteks lisate kliendiprofiilid [galerii juhtelementi](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+Näiteks lisate kliendiprofiilid [galerii juhtelementi](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Lisage loodavale rakendusele **Galerii** juhtelement.
 

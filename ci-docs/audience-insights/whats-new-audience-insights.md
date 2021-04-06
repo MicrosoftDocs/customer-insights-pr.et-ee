@@ -1,7 +1,7 @@
 ---
 title: Uued ja tulevased funktsioonid
 description: Teave uute funktsioonide, täiustuste ja veaparanduste kohta.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270427"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598426"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Mis on uut Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis?
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Meil on hea meel teatada uusimatest värskendustest. Selles artiklis võetakse kokku avaliku eelversiooni funktsioonid, üldise kättesaadavuse täiustused ja funktsiooni värskendused. Pikaajaliste funktsiooni plaane vaadake teemast [Dynamics 365 ja Power Platformi väljaandeplaanid](https://docs.microsoft.com/dynamics365/release-plans/).
+Meil on hea meel teatada uusimatest värskendustest. Selles artiklis võetakse kokku avaliku eelversiooni funktsioonid, üldise kättesaadavuse täiustused ja funktsiooni värskendused. Pikaajaliste funktsiooni plaane vaadake teemast [Dynamics 365 ja Power Platformi väljaandeplaanid](/dynamics365/release-plans/).
 
 Viimase kuue kuu jooksul kavandatud võimaluste kohta leiate lisateavet ka järgmistest videotest.
 
@@ -30,6 +30,40 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 
 > [!TIP]
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>2021. aasta veebruari värskendused
+
+2021. aasta veebruari värskendused sisaldavad mitut funktsiooni, jõudlustäiendusi ja veaparandusi.
+
+#### <a name="extensibility"></a>Laiendatavus
+
+- **Eksportige segmente teenusesse AdRoll**
+
+  Oleme laiendanud oma ekspordisihtkohti AdRolli kaasamiseks. Nüüd saate eksportida segmente Customer Insightsist AdRolli sihtrühmadesse ja kasutada neid oma reklaamimise lähtejoonena. Lisateavet leiate teemast [AdRolli konnektor](export-adroll.md).
+
+#### <a name="segments"></a>Segmendid
+ 
+- **Segmendi dubleerimine**
+  
+  Olemasoleval segmendil põhineva uue segmendi loomiseks saate nüüd segmendi dubleerida ja duplikaatsegmenti edasiseks täpsustamiseks redigeerida. 
+
+- **Lisaatribuutide lisamine segmendile**
+
+  Nüüd saate segmendiväljundile atribuute lisada kas siis, kui need atribuudid ei kuulu kliendiprofiili. Näiteks saate segmenti kaasata kordustellimuse ID-d ka siis, kui see kuulub kordustellimuse olemisse, millel on M:1 seos on kliendiolemiga. Niikaua, kui atribuut kuulub kliendiolemiga seotud olemile, saate need atribuudid nüüd lisada.  
+
+#### <a name="predictions"></a>Prognoosid
+
+- **Prognoosivate tootesoovituste loomine**
+
+  Arusaam sellest, millised kliendid on huvitatud ostmisest, on üks esimesi vajalikke samme äritulu parendamiseks ning kliendi lojaalsuse kasvatamiseks isikupärastamise ja kaasatuse kaudu. Kui esitate tootesoovitusi, mis ei ole kooskõlas teie kliendi huvidega, võib see luua kliendi ja teie ettevõtte vahelise ühenduse katkestamistunde ning lõppkokkuvõttes piirata kliendi üldist potentsiaalset tulu ja kogemust. 
+
+  Oma andmete abil saate nüüd luua prognoose toodete kohta, mida teie kliendid tulevikus tõenäoliselt ostavad. Lisateavet leiate teemast [Tootesoovituse prognoos](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Süsteemihaldus
+
+- **Kopeerimiskeskkond toetab rohkem andmeallikatüüpe**
+
+  Administraatorid saavad kopeerida keskkonnakonfiguratsioonid uude keskkonda samas organisatsioonis. See funktsioon laiendab kopeerimiskeskkonna funktsioone teenindusjuhtumite puhul, kus kasutatakse andmejärvest Common Data Service või kaustast Common Data Model pärinevaid andmeallikaid.
 
 ## <a name="january-2021-updates"></a>2021. a jaanuari värskendus
 

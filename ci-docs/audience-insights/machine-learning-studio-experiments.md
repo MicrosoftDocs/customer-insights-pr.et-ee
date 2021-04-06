@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270199"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598334"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Kasutage Azure'i masinõppe stuudio (klassikaline) põhiseid mudeleid
 
@@ -37,7 +37,7 @@ Esimese sammuna peame looma masinõppe stuudio (klassikaline) jaoks tööruumi j
 
 1. OTsige **Masinõppe stuudio tööruum** ja valige **Loo**.
 
-1. Sisestage nõutavad üksikasjad, et [luua tööruum](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Valige **Veebiteenuse plaani hinnajärk** imporditavate andmete hulga alusel. Parima tulemuse saamiseks valige **Asukoht**, mis on teile geograafiliselt kõige lähemal.
+1. Sisestage nõutavad üksikasjad, et [luua tööruum](/azure/machine-learning/studio/create-workspace). Valige **Veebiteenuse plaani hinnajärk** imporditavate andmete hulga alusel. Parima tulemuse saamiseks valige **Asukoht**, mis on teile geograafiliselt kõige lähemal.
 
 1. Pärast ressursi loomist kuvatakse masinõppe stuudio tööruumi armatuurlaud. Valige **Käivita masinõppe stuudio**.
 
@@ -65,7 +65,7 @@ Nüüd saate luua uue eksperimendi või importida olemasoleva eksperimendi malli
 
    ![Ennustava veebiteenuse seadistamine](media/predictive-webservice-control.png)
 
-1. Kui ennustava veebiteenuse katse on edukas, saate selle juurutada automaatseks ajastamiseks. Kui soovite, et veebiteenus töötaks rakendusega Customer Insights, valige käsk **Juuruta veebiteenus** > **Juuruta veebiteenus [uus] eelversioon**. [Lisateave veebiteenuse juurutamise kohta](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Kui ennustava veebiteenuse katse on edukas, saate selle juurutada automaatseks ajastamiseks. Kui soovite, et veebiteenus töötaks rakendusega Customer Insights, valige käsk **Juuruta veebiteenus** > **Juuruta veebiteenus [uus] eelversioon**. [Lisateave veebiteenuse juurutamise kohta](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Ennustava veebiteenuse juurutamine](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Järgmine pilt näitab mudeli treenimise ja hindamise konveierit Azure'i masinõ
 
 ![Azure'i masinõppe stuudio voolavusmudel](media/azure-machine-learning-model.png)
 
-Rakendame ka meetodit nimega **Permutatsiooni funktsiooni olulisus**, mis on oluline mudeli optimeerimise korral. Sisseehitatud mudelitel on vähe või puudub täielik ülevaade mõne konkreetse funktsiooni mõjust lõplikule prognoosile. Funktsiooni olulisuse kalkulaator kasutab kohandatud algoritmi, et arvutada üksikute funktsioonide mõju konkreetse mudeli tulemusele. Funktsiooni olulisus normaliseeritakse vahemikus +1 kuni -1. Negatiivne mõju tähendab, et asjaomasel funktsioonil on tulemusele mittesoovitav mõju ja see tuleks mudelist eemaldada. Positiivne mõju näitab, et funktsioon aitab prognoosimisele palju kaasa. Need väärtused pole korrelatsiooni koefitsiendid, kuna need on erinevad mõõdikud. Lisateavet leiate teemast [Permutatsiooni funktsiooni olulisus](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Rakendame ka meetodit nimega **Permutatsiooni funktsiooni olulisus**, mis on oluline mudeli optimeerimise korral. Sisseehitatud mudelitel on vähe või puudub täielik ülevaade mõne konkreetse funktsiooni mõjust lõplikule prognoosile. Funktsiooni olulisuse kalkulaator kasutab kohandatud algoritmi, et arvutada üksikute funktsioonide mõju konkreetse mudeli tulemusele. Funktsiooni olulisus normaliseeritakse vahemikus +1 kuni -1. Negatiivne mõju tähendab, et asjaomasel funktsioonil on tulemusele mittesoovitav mõju ja see tuleks mudelist eemaldada. Positiivne mõju näitab, et funktsioon aitab prognoosimisele palju kaasa. Need väärtused pole korrelatsiooni koefitsiendid, kuna need on erinevad mõõdikud. Lisateavet leiate teemast [Permutatsiooni funktsiooni olulisus](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Kogu [voolavuse eksperiment on saadaval Azure'i AI galeriis](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Kogu [tootesoovituse eksperimendile pääseb juurde Azure'i AI galerii kaudu.](h
 
 ## <a name="integrate-custom-models"></a>Kohandatud mudelite integreerimine
 
-Nende prognooside kasutamiseks Customer Insightsis peate **eksportima** prognoosid koos kliendi ID-dega. [Eksportige need samasse Azure'i boobimällu](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs), kuhu te lähteandmeid ekspordite. Ennustavat veebiteenust saab ajastada regulaarselt käitamiseks ja skooride värskendamiseks.
+Nende prognooside kasutamiseks Customer Insightsis peate **eksportima** prognoosid koos kliendi ID-dega. [Eksportige need samasse Azure'i boobimällu](/azure/storage/common/storage-import-export-data-from-blobs), kuhu te lähteandmeid ekspordite. Ennustavat veebiteenust saab ajastada regulaarselt käitamiseks ja skooride värskendamiseks.
 
 Kohandatud mudeli loodud andmeid saab kasutada kliendiandmete edasiseks rikastamiseks. Lisateavet vt teemast [Kohandatud masinõppemudelid](custom-models.md).
 

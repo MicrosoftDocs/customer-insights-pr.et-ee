@@ -1,20 +1,20 @@
 ---
 title: API-dega töötamine
 description: Kasutage API-sid ja olge teadlik nende piirangutest.
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267519"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710455"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insightsi API-dega töötamine
 
@@ -36,7 +36,7 @@ See artikkel annab juhiseid Customer Insightsi API-dele juurdepääsemise, Azure
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insightsi API-de lubamine":::
 
-1. API-de proovimiseks valige **Tutvuge meie API-dega**.
+1. [API-de proovimiseks](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) valige **Tutvuge meie API-dega**.
 
 1. Valige API-toiming ja valige **Proovi**.
 
@@ -47,6 +47,9 @@ See artikkel annab juhiseid Customer Insightsi API-dele juurdepääsemise, Azure
 1. Liikuge külgpaanis kõige alla ja valige **Saada**.
 
 HTTP-vastus kuvatakse varsti allpool.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="Animeeritud GIF, mis näitab, kuidas valida API-sid testimiseks.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Uue rakenduse registreeringu loomine Azure'i portaalis
 
@@ -61,6 +64,8 @@ Need juhised aitavad teil alustada Customer Insightsi API-de kasutamist Azure'i 
 
 1. Minge uues rakenduse registreeringus jaotisse **API õigused**.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Animeeritud GIF API-õiguse määramiseks rakenduse registreerimisel.":::
+
 1. Valige **Lisa õigus** ja valige külgpaanil **Customer Insights**.
 
 1. Valige **õiguse tüübiks** **Delegeeritud õigused** ja valige õigus **user_impersonation**.
@@ -71,9 +76,11 @@ Need juhised aitavad teil alustada Customer Insightsi API-de kasutamist Azure'i 
 
 Saate kasutada selle rakenduse registreeringu rakenduse/kliendi ID-d Microsofti autentimisteegis (MSAL), et saada kandeluba, mida koos päringuga API-le saata.
 
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Animeeritud GIF administraatori nõusoleku andmiseks.":::
+
 Lisateavet MSAL kohta leiate teemast [Microsofti autentimisteegi (MSAL) ülevaade](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
 
-Azure'is rakenduste registreerimise kohta lisateabe saamiseks lugege teemat [Uus Azure'i portaali rakenduse registreerimise kogemus](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Azure'is rakenduste registreerimise kohta lisateabe saamiseks lugege teemat [Uus Azure'i portaali rakenduse registreerimise kogemus](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 Lisateavet meie klienditeekide API-de kasutamise kohta leiate jaotisest [Customer Insightsi klienditeegid](#customer-insights-client-libraries).
 
@@ -101,6 +108,8 @@ Lisateavet meie klienditeekide API-de kasutamise kohta leiate jaotisest [Custome
 
 1. Rakenduse registreerimise lõpetamiseks valige **Anna administraatori nõusolek...**.
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Animeeritud GIF administraatori nõusoleku andmiseks.":::
+
 1. Lõpetamiseks peame lisama rakenduse registreeringu nime Customer Insightsis kasutajana.    
    Avage Customer Insights, minge jaotisse **Haldus** > **Õigused** ja valige **Lisa kasutaja**.
 
@@ -108,7 +117,7 @@ Lisateavet meie klienditeekide API-de kasutamise kohta leiate jaotisest [Custome
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insightsi klienditeegid
 
-See jaotis aitab teil alustada klienditeekide kasutamist, mis on saadaval Customer Insightsi API-de jaoks.
+See jaotis aitab teil alustada klienditeekide kasutamist, mis on saadaval Customer Insightsi API-de jaoks. Kõik teegi lähtekoodid ja näidisrakendused leiate lehelt [Customer Insights GitHub](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,7 +136,7 @@ Teave selle kohta, kuidas alustada C# klienditeekide kasutamist, leiate aadressi
 
 #### <a name="use-the-c-client-library"></a>C# klienditeegi kasutamine
 
-1. Kasutage [Microsofti autentimisteeki (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview), et saada `AccessToken`, kasutades oma olemasolevat [Azure'i rakenduse registreeringut](#create-a-new-app-registration-in-the-azure-portal).
+1. Kasutage [Microsofti autentimisteeki (MSAL)](/azure/active-directory/develop/msal-overview), et saada `AccessToken`, kasutades oma olemasolevat [Azure'i rakenduse registreeringut](#create-a-new-app-registration-in-the-azure-portal).
 
 1. Pärast õnnestunud autentimist ja loa omandamist looge uus või kasutage olemasolevat üksust `HttpClient` ning määrake üksuse **DefaultRequestHeaders "Authorization"** väärtuseks **Bearer <access token>** ja üksuse **Ocp-Apim-Subscription-Key** väärtuseks [**tellimuse võti**, mis pärineb teie Customer Insightsi keskkonnast](#get-started-trying-the-customer-insights-apis).    
    Vajadusel lähtestage päis **Autoriseerimine**. Näiteks kui luba on aegunud.
@@ -141,5 +150,12 @@ Teave selle kohta, kuidas alustada C# klienditeekide kasutamist, leiate aadressi
 1. Vastus tüüp on tõenäoliselt `object`, kuna meetod võib tagastada mitut tüüpi (nt `IList<InstanceInfo>` ja `ApiErrorResult`). Vastusetüübi kontrollimiseks saate objektid ohutult teisendada toimingu vastusetüüpideks, mida kirjeldatakse [API üksikasjade lehel](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights).    
    Kui päringu kohta on vaja rohkem teavet, kasutage **http-sõnumi meetodeid**, et pääseda juurde töötlemata vastuseobjektile.
 
+### <a name="nodejs-package"></a>NodeJS-i pakett
+
+Kasutage NPM-i kaudu kättesaadavaid NodeJS-i klienditeeke: https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Pythoni pakett
+
+Kasutage PyPi kaudu kättesaadavaid Pythoni klienditeeke: https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

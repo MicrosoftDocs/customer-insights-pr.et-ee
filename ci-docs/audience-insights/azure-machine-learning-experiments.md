@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267901"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597414"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Kasutage Azure'i masinõppel põhinevaid mudeleid
 
@@ -29,9 +29,9 @@ Dynamics 365 Customer Insightsis olevad koondatud andmed on allikaks masinõppem
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Azure'i masinõppe tööruumi seadistamine
 
-1. Eri võimalused tööruumi loomiseks leiate teemast [Azure'i masinõppe tööruumi loomine](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace). Parimate tulemuste saamiseks looge tööruum Azure'i regioonis, mis on geograafiliselt kõige lähemal teie Customer Insightsi keskkonnale.
+1. Eri võimalused tööruumi loomiseks leiate teemast [Azure'i masinõppe tööruumi loomine](/azure/machine-learning/concept-workspace#-create-a-workspace). Parimate tulemuste saamiseks looge tööruum Azure'i regioonis, mis on geograafiliselt kõige lähemal teie Customer Insightsi keskkonnale.
 
-1. Avage oma tööruum [Azure'i masinõppe stuudio](https://ml.azure.com/) kaudu. Tööruumiga suhtlemiseks on [mitu võimalust](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction).
+1. Avage oma tööruum [Azure'i masinõppe stuudio](https://ml.azure.com/) kaudu. Tööruumiga suhtlemiseks on [mitu võimalust](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction).
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Azure'i masinõppe kujundajaga töötamine
 
@@ -39,13 +39,13 @@ Azure'i masinõppe kujundaja on visuaalne lõuend, kuhu saate lohistada andmekog
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Azure'i masinõppe SDK-ga töötamine
 
-Andmeteadlased ja tehisintellekti arendajad kasutavad [Azure'i masinõppe SDK-d](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true), et luua masinõppetöövooge. SDK abil treenitud mudeleid ei saa praegu otse Customer Insightsi integreerida. Customer Insightsiga integreerimiseks on vaja partiipõhist tuletuskonveierit, mis kasutab seda mudelit.
+Andmeteadlased ja tehisintellekti arendajad kasutavad [Azure'i masinõppe SDK-d](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py), et luua masinõppetöövooge. SDK abil treenitud mudeleid ei saa praegu otse Customer Insightsi integreerida. Customer Insightsiga integreerimiseks on vaja partiipõhist tuletuskonveierit, mis kasutab seda mudelit.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Partiikonveieri nõuded Customer Insightsiga integreerimiseks
 
 ### <a name="dataset-configuration"></a>Andmekogumi konfiguratsioon
 
-Peate looma andmekogumeid, et kasutada Customer Insightsist pärit olemiandmeid oma partiipõhises tuletuskonveieris. Need andmekogumid tuleb tööruumis registreerida. Praegu toetame ainult [tabelina esitatud andmekomplekte](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) CSV-vormingus. Olemiandmetele vastavad andmekomplektid peavad olema parametreeritud konveieri parameetrina.
+Peate looma andmekogumeid, et kasutada Customer Insightsist pärit olemiandmeid oma partiipõhises tuletuskonveieris. Need andmekogumid tuleb tööruumis registreerida. Praegu toetame ainult [tabelina esitatud andmekomplekte](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) CSV-vormingus. Olemiandmetele vastavad andmekomplektid peavad olema parametreeritud konveieri parameetrina.
    
 * Andmekomplekti parameetrid kujundajas
    
@@ -76,7 +76,7 @@ Peate looma andmekogumeid, et kasutada Customer Insightsist pärit olemiandmeid 
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Konveieriandmete importimine Customer Insightsi
 
-* Kujundajas on [andmete eksportimise moodul](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data), mis võimaldab konveieri väljundit eksportida Azure'i salvestusruumi. Praegu peab moodul kasutama andmesalvetüüpi **Azure'i bloobimälu** ning parametreerima **andmesalve** ja suhtelist **teed**. Customer Insights alistab mõlemad parameetrid konveieri käitamisel andmesalve ja teega, mis on sellele tootele juurdepääsetavad.
+* Kujundajas on [andmete eksportimise moodul](/azure/machine-learning/algorithm-module-reference/export-data), mis võimaldab konveieri väljundit eksportida Azure'i salvestusruumi. Praegu peab moodul kasutama andmesalvetüüpi **Azure'i bloobimälu** ning parametreerima **andmesalve** ja suhtelist **teed**. Customer Insights alistab mõlemad parameetrid konveieri käitamisel andmesalve ja teega, mis on sellele tootele juurdepääsetavad.
    > [!div class="mx-imgBorder"]
    > ![Andmete eksportimise mooduli konfiguratsioon](media/intelligence-designer-importdata.png "Andmete eksportimise mooduli konfiguratsioon")
    

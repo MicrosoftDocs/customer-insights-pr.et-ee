@@ -2,23 +2,23 @@
 title: Andmete valmendamine Power Query konnektori kaudu
 description: Power Query-l põhinevate andmeallikate konnektorid.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267763"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596908"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query andmeallikaga ühendamine
 
-Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku nendest konnektoritest toetab Dynamics 365 Customer Insights. Power Query konnektorite põhjal andmeallikate lisamine järgib üldjoontes järgmises jaotises kirjeldatud juhiseid. Olenevalt kasutatavast konnektorist on siiski vaja erinevat teavet. Lisateavet üksikute konnektorite kohta leiate dokumentatsioonist [Power Query konnektorite viide](https://docs.microsoft.com/power-query/connectors/).
+Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku nendest konnektoritest toetab Dynamics 365 Customer Insights. Power Query konnektorite põhjal andmeallikate lisamine järgib üldjoontes järgmises jaotises kirjeldatud juhiseid. Olenevalt kasutatavast konnektorist on siiski vaja erinevat teavet. Lisateavet üksikute konnektorite kohta leiate dokumentatsioonist [Power Query konnektorite viide](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Loo uus andmeallikas
 
@@ -44,7 +44,7 @@ Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku n
    > [!div class="mx-imgBorder"]
    > ![Päringute redigeerimise dialoog](media/data-manager-configure-edit-queries.png "Päringute redigeerimise dialoog")
 
-1. Samuti saate oma andmeid teisendada. Valige redigeeritav või teisendatav olem. Teisenduste rakendamiseks kasutage suvandeid aknas Power Query. Kõik teisendused loetletakse jaotises **Rakendatud etapid**. Power Query pakub arvukalt eelvalmistatud teisendamise võimalusi. Lisateavet leiate teemast [Power Query teisendused](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. Samuti saate oma andmeid teisendada. Valige redigeeritav või teisendatav olem. Teisenduste rakendamiseks kasutage suvandeid aknas Power Query. Kõik teisendused loetletakse jaotises **Rakendatud etapid**. Power Query pakub arvukalt eelvalmistatud teisendamise võimalusi. Lisateavet leiate teemast [Power Query teisendused](/power-query/power-query-what-is-power-query#transformations).
 
 1. Saate lisada oma andmeallikas täiendavaid olemeid, valides **Hangi andmed** dialoogis **Päringute redigeerimise**.
 
@@ -59,7 +59,7 @@ Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku n
 
 ## <a name="available-power-query-data-sources"></a>Saadaolevad Power Query andmeallikad
 
-Ajakohase Customer Insightsi imporditavate konnektorite loendi leiate jaotisest [Power Query konnektorite viide](https://docs.microsoft.com/power-query/connectors/). 
+Ajakohase Customer Insightsi imporditavate konnektorite loendi leiate jaotisest [Power Query konnektorite viide](/power-query/connectors/). 
 
 Konnektorid, millel on märgitud veerg **Customer Insights (andmevood)**, on saadaval Power Query põhjal uute andmeallikate loomiseks. Vaadake üle kindla konnektori dokumendid, et saada lisateavet selle eeltingimuste, piirangute ja muude üksikasjade kohta.
 

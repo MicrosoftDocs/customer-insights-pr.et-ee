@@ -2,19 +2,19 @@
 title: Ekspordisihtkohad
 description: Andmete eksportimine ja eksportimise sihtkohtade haldamine.
 ms.date: 07/21/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477128"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596080"
 ---
 # <a name="export-destinations-preview-overview"></a>Ekspordisihtkohtade (eelversioon) ülevaade
 
@@ -22,22 +22,29 @@ Lehel **Ekspordi sihtkohad** kuvatakse kõik sihtkohad, mis olete seadistanud an
 
 Avage jaotis **Administraator** > **Eksportimise sihtkohad**, et näha järgmisi laiendatavuse valikuid.
 
-- [Dynamics 365 kliendikaardi lisandmoodul](customer-card-add-in.md)
-- [Facebooki reklaamihalduri konnektor](export-facebook.md)
-- [Power Automate'i konnektor](export-power-automate.md)
-- [Power Apps'i konnektor](export-power-apps.md)
-- [Power BI'i konnektor](export-power-bi.md)
+- [Adobe Campaign Standard](export-adobe-campaign-standard.md)
+- [Adobe Experience Platform](export-adobe-experience-platform.md)
+- [AdRoll](export-adroll.md)
 - [Autopiloot](export-autopilot.md)
-- [DotDigital](export-dotdigital.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Azure’i bloobimälu](export-azure-blob-storage.md)
 - [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
-- [SendGrid](export-sendgrid.md)
-- [LiveRamp&reg; konnektor](export-liveramp.md)
 - [Microsoft Teamsi robot](export-teams-bot.md)
-- [Mailchimp](export-mailchimp.md)
 - [Customer Insightsi API](apis.md)
+- [DotDigital](export-dotdigital.md)
+- [Teenus Dynamics 365 Customer Service (kliendikaardi lisandmoodul)](customer-card-add-in.md)
+- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
+- [Dynamics 365 Sales](export-dynamics365-sales.md)
+- [Dynamics 365 müügikeskus (kliendikaardi lisandmoodul)](customer-card-add-in.md)
+- [Facebooki reklaamihaldur](export-facebook.md)
+- [Google Ads](export-google-ads.md)
+- [LiveRamp&reg;](export-liveramp.md)
+- [Mailchimp](export-mailchimp.md)
+- [Marketo](export-marketo.md)
+- [Power Automate](export-power-automate.md)
+- [Power Apps](export-power-apps.md)
+- [Power BI](export-power-bi.md)
+- [SendGrid](export-sendgrid.md)
+- [SFTP](export-sftp.md)
 
 ## <a name="add-a-new-export-destination"></a>Uue ekspordi sihtkoha lisamine
 

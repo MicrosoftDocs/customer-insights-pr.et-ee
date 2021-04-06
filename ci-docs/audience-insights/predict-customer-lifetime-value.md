@@ -2,19 +2,19 @@
 title: Kliendi eluea väärtuse (CLV) prognoos
 description: Prognoosige tulevikus aktiivsete klientide tulupotentsiaali.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268589"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595799"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Kliendi eluea väärtus (CLV) prognoosimine (eelversioon)
 
@@ -194,11 +194,11 @@ Tulemuste lehel on kolm peamist andmete jaotist.
   
   - **Edumäär suure väärtusega klientide prognoosimisel**
 
-  Vaadake erinevust tehisintellekti mudeli abil väärtuslike klientide ennustamisel võrreldes algmudeliga. Näiteks 84% õnnestumismäär tähendab, et kõigi koolitusandmete hea väärtusega klientide seas oli AI-mudeli täpsus 84%. Seejärel võrdleme seda õnnestumismäära baasmudeli õnnestumismääraga, et teatada suhtelisest muudatusest. Seda väärtust kasutatakse mudelile hinnajärgu määramiseks.
+    Vaadake erinevust tehisintellekti mudeli abil väärtuslike klientide ennustamisel võrreldes algmudeliga. Näiteks 84% õnnestumismäär tähendab, et kõigi koolitusandmete hea väärtusega klientide seas oli AI-mudeli täpsus 84%. Seejärel võrdleme seda õnnestumismäära baasmudeli õnnestumismääraga, et teatada suhtelisest muudatusest. Seda väärtust kasutatakse mudelile hinnajärgu määramiseks.
 
   - **Tõrkemõõdikud**
     
-  Teine mõõdik võimaldab teil üle vaadata mudeli üldise toimivuse tulevaste väärtuste ennustamisel esinevate vigade osas. Selle vea hindamiseks kasutame mõõdikut RMSE (Root Mean Squared Error). RMSE on standardne viis mõõta viga kvantitatiivsete andmete prognoosimisel. Tehisintellekti mudeli RMSE-d võrreldakse lähtemudeli RMSE-ga ja esitatakse suhteline erinevus.
+    Teine mõõdik võimaldab teil üle vaadata mudeli üldise toimivuse tulevaste väärtuste ennustamisel esinevate vigade osas. Selle vea hindamiseks kasutame mõõdikut RMSE (Root Mean Squared Error). RMSE on standardne viis mõõta viga kvantitatiivsete andmete prognoosimisel. Tehisintellekti mudeli RMSE-d võrreldakse lähtemudeli RMSE-ga ja esitatakse suhteline erinevus.
 
   AI-mudel prioritiseerib klientide täpse järjestuse vastavalt väärtusele, mille nad teie ettevõttele toovad. Nii et lõpliku mudeli hinde saamiseks kasutatakse ainult väärtuslike klientide ennustamise edukuse määra. RMSE mõõdik on tundlik piirmäärade suhtes. Stsenaariumites, kus teil on väike protsent kliente, kellel on erakordselt suured ostuväärtused, ei pruugi üldine RMSE mõõdik anda täielikku pilti mudeli toimivusest.   
 

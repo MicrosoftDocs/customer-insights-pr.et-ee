@@ -1,20 +1,20 @@
 ---
 title: Segmentide loomine ja haldamine
 description: Looge klientide segmente, et rühmitada neid vastavalt eri atribuutidele.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270351"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597046"
 ---
 # <a name="create-and-manage-segments"></a>Segmentide loomine ja haldamine
 
@@ -35,19 +35,19 @@ Segmente saab hallata lehel **Segmendid**.
 
 1. Avage sihtrühmaülevaadetes leht **Segmendid**.
 
-2. Valige **Uus** > **Tühi segment**.
+1. Valige **Uus** > **Tühi segment**.
 
-3. Valige paanis **Uus segment** segmendi tüüp ja sisestage **nimi**.
+1. Valige paanis **Uus segment** segmendi tüüp ja sisestage **nimi**.
 
    Soovi korral sisestage segmendi tuvastamist hõlbustav näidatav nimi ja kirjeldus.
 
-4. Rühma määramise lehele **Segmendikoostur** minemiseks valige **Järgmine**. Rühm on hulk kliente.
+1. Rühma määramise lehele **Segmendikoostur** minemiseks valige **Järgmine**. Rühm on hulk kliente.
 
-5. Valige olem, mis sisaldab segmenteeritavat atribuuti.
+1. Valige olem, mis sisaldab segmenteeritavat atribuuti.
 
-6. Valige atribuut, mille järgi segmenteerida. Atribuudil võib olla üks neljast väärtuse tüübist: arvuline, string, kuupäev või Boolean.
+1. Valige atribuut, mille järgi segmenteerida. Atribuudil võib olla üks neljast väärtuse tüübist: arvuline, string, kuupäev või Boolean.
 
-7. Valige valitud atribuudi tehtemärk ja väärtus.
+1. Valige valitud atribuudi tehtemärk ja väärtus.
 
    > [!div class="mx-imgBorder"]
    > ![Kohandatud rühma filter](media/customer-group-numbers.png "Kliendi rühma filter")
@@ -64,9 +64,14 @@ Segmente saab hallata lehel **Segmendid**.
    > [!div class="mx-imgBorder"]
    > ![Seose tee segmendi loomise ajal](media/segments-multiple-relationships.png "Seose tee segmendi loomise ajal")
 
-9. Segmendi salvestamiseks valige nupp **Salvesta**. Segment salvestatakse ja töödeldakse, kui kõik nõuded on kinnitatud. Vastasel juhul salvestatakse see mustandina.
+1. Vaikimisi genereerivad segmendid väljundolemi, mis sisaldab määratletud filtritele vastavaid kliendiprofiilide kõiki atribuute. Kui segment põhineb muudel olemitel kui olem *Klient*, saate väljundolendisse lisada rohkem atribuute nendest olemitest. Valige **Projekti tribuudid**, et valida väljundolemile lisatavad atribuudid.  
 
-10. Valige **Tagasi segmentidesse**, et naasta lehele **Segmendid**.
+   
+   Näide: segment põhineb olemil, mis sisaldab klienditegevuse andmeid, mis on seotud olemiga *Klient*. Segment otsib kõiki kliente, kes on viimase 60 päeva jooksul klienditoele helistanud. Saate valida kõne kestuse ja kõnede arvu lisamise kõigile väljundolemi vastavatele kliendikirjeile. See teave võib kasulik olla meili saatmiseks koos kasulike linkidega võrgus asuvatele spikriartiklitele ja KKK-dele klientidele, kes sageli helistasid.
+
+1. Segmendi salvestamiseks valige nupp **Salvesta**. Segment salvestatakse ja töödeldakse, kui kõik nõuded on kinnitatud. Vastasel juhul salvestatakse see mustandina.
+
+1. Valige **Tagasi segmentidesse**, et naasta lehele **Segmendid**.
 
 ## <a name="manage-existing-segments"></a>Olemasolevate segmentide haldamine
 
@@ -85,6 +90,7 @@ Segmendi valimisel on saadaval järgmised tegevused.
 
 - Segmendi üksikasjade **Vaatamine**, sealhulgas liikmete arvu suundumist, segmendi liikmete ülevaadet.
 - Segmendi **Redigeerimine** atribuutide muutmiseks.
+- Segmendi **Duplikaadi loomine**. Saate selle atribuute kohe redigeerida või lihtsalt duplikaadi salvestada.
 - Segmendi **Värskendamine** viimaste andmete kaasamiseks.
 - Segmendi **Aktiveerimine** või **Desaktiveerimine**. Segmentidel on kaks võimalikku olekut – aktiivne või passiivne. Nendest olekutest on kasu segmendi redigeerimise ajal. Passiivsete segmentide puhul segmendi määratlus on olemus, kuid see ei sisalda ühtegi klienti. Kui aktiveerite segmendi, siis selle olekuks muutub valikult passiivne valikule aktiivne ja see hakkab otsima kliente, mis vastavad segmendi määratlusele. Kui [plaanitud värskendus](system.md#schedule-tab) on konfigureeritud, on passiivsete segmentide **olekuks** **Vahele jäetud**, mis näitab, et värskendamist isegi ei proovitud. Kui passiivne segment aktiveeritakse, värskendatakse seda ja lisatakse plaanitud värskendustesse.
   Teise võimalusena saate kasutada ripploendi **Aktiveeri/desaktiveeri** funktsiooni **Ajasta hiljem**, et määrata kindla segmendi aktiveerimise ja desaktiveerimise tulevane kuupäev ja kellaaeg.

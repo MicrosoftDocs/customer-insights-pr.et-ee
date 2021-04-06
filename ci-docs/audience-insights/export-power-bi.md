@@ -2,19 +2,19 @@
 title: Power BI konnektor
 description: Õppige kasutama konnektorit Dynamics 365 Customer Insights Power BI-s.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477083"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596034"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI’i konnektor (eelvaade)
 
@@ -23,7 +23,7 @@ Visualiseerige oma andmeid rakendusega Power BI Desktop. Oma ühendatud kliendia
 ## <a name="prerequisites"></a>Eeltingimused
 
 - Teil on koondatud kliendiprofiilid.
-- Teie arvutisse on installitud rakenduse [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) uusim versioon. [Lisateave: Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- Teie arvutisse on installitud [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) uusim versioon. [Lisateave: Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Konnektori konfigureerimine Power BI jaoks
 
@@ -47,7 +47,7 @@ Visualiseerige oma andmeid rakendusega Power BI Desktop. Oma ühendatud kliendia
 
 ## <a name="large-data-sets"></a>Suured andmekogumid
 
-Customer Insightsi Power BI konnektor on loodud töötama andmekogumitega, mis sisaldavad kuni 1 miljon kliendiprofiili. Suurte andmekogumite importimine võib toimida, kuid see võtab kaua aega. Lisaks võib protsess Power BI piirangute tõttu aeguda. Lisateavet vaadake teemast [Power BI: soovitused mahukate andmekogumite jaoks](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Customer Insightsi Power BI konnektor on loodud töötama andmekogumitega, mis sisaldavad kuni 1 miljon kliendiprofiili. Suurte andmekogumite importimine võib toimida, kuid see võtab kaua aega. Lisaks võib protsess Power BI piirangute tõttu aeguda. Lisateavet vaadake teemast [Power BI: soovitused mahukate andmekogumite jaoks](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Andmete alamhulgaga töötamine
 
@@ -70,4 +70,3 @@ Saate topeltseoseid tuvastada ja eemaldada.
 Pärast topeltseoste eemaldamist proovige Power BI konnektor uuesti konfigureerida. Keskkond peaks olema nüüd saadaval.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

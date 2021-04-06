@@ -2,19 +2,19 @@
 title: Reaalajas andmete valmendamine ja selle piirangud
 description: Üldine teave reaalajas võimaluste kohta sihtrühmaülevaadetes.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270275"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598564"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Reaalajas andmete valmendamine (eelvaade)
 
@@ -54,7 +54,7 @@ Reaalajas API võimaldab teil avaldada uue tegevuse oma lähtesüsteemist (indiv
 
 Reaalajas API-ga ühenduse loomiseks on kaks võimalust.
 
-- [kaudselt](#connect-via-the-dynamics-365-customer-insights-connector), kasutades [Dynamics 365 Customer Insightskonnektorit](https://docs.microsoft.com/connectors/customerinsights/)
+- [kaudselt](#connect-via-the-dynamics-365-customer-insights-connector), kasutades [Dynamics 365 Customer Insightskonnektorit](/connectors/customerinsights/)
 - [otse](#connect-directly-to-the-real-time-api), koodiga
 
 Mõlemal viisil on järgmised eeltingimused.
@@ -66,13 +66,13 @@ Mõlemal viisil on järgmised eeltingimused.
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Ühenduse loomine Dynamics 365 Customer Insights-i konnektori kaudu
 
-Reaalaja API saab alla laadida andmeid spetsiaalsest Power Platform-i konnektorist, [Dynamics 365 Customer Insights-i konnektor](https://docs.microsoft.com/connectors/customerinsights/), ilma et oleks vaja kirjutada ja kasutada mis tahes koodi.    
-Konnektor saab teha samu reaalajalisi toiminguid nagu API. Premium-taseme konnektorite jaoks vajate sobivat litsentsi. Lisateavet vt teemast [Power Apps-i ja Power Automate-i litsentsimise KKK](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+Reaalaja API saab alla laadida andmeid spetsiaalsest Power Platform-i konnektorist, [Dynamics 365 Customer Insights-i konnektor](/connectors/customerinsights/), ilma et oleks vaja kirjutada ja kasutada mis tahes koodi.    
+Konnektor saab teha samu reaalajalisi toiminguid nagu API. Premium-taseme konnektorite jaoks vajate sobivat litsentsi. Lisateavet vt teemast [Power Apps-i ja Power Automate-i litsentsimise KKK](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps ja/või Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logicu rakendused](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps ja/või Power Automate](/connectors/)
+- Azure [Logicu rakendused](/azure/connectors/apis-list)
 
-Voogude loomise üksikasjad leiate [Power Automate-i dokumentatsioonist](https://docs.microsoft.com/power-automate/).
+Voogude loomise üksikasjad leiate [Power Automate-i dokumentatsioonist](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Otse reaalajas API-ga ühenduse loomine
 

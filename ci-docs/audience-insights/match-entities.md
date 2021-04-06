@@ -1,132 +1,136 @@
 ---
 title: Olemite vastavusseviimine andmete koondamiseks
 description: Viige olemid vastavusse, et luua koondatud kliendiprofiile.
-ms.date: 10/14/2020
+ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267473"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595559"
 ---
 # <a name="match-entities"></a>Olemite vastavusseviimine
 
-Pärast vastendamise etappi olete valmis olemite vastavusse viimiseks. Vastavusse viimise etapp täpsustab, kuidas kombineerida andmekogusid koondatud kliendiprofiilide andmekogusse. Vastendamisetapp vajab vähemalt [kahte kaardistatud olemit](map-entities.md).
+Vastavusse viimise etapp täpsustab, kuidas kombineerida andmekogusid koondatud kliendiprofiilide andmekogusse. Pärast [vastendusetapi](map-entities.md) lõpuleviimist andmete koondamisel olete valmis olemeid vastendama. Vastendamisetapp vajab vähemalt kahte kaardistatud olemit.
+
+Vastete leht koosneb kolmest jaotisest: 
+- Põhimõõdikud, mis summeerivad vastendatud kirjete arvu
+- Olemiülese vastendamise vastenduste järjekord ja reeglid
+- Vastendusolemite duplikaadieemalduse reeglid
 
 ## <a name="specify-the-match-order"></a>Vastendamisjärjestuse määramine
 
 Vastandamise faasi alustamiseks minge asukohta **Andmed** > **Ühilda** > **Sobita** ja valige **Määra tellimus**.
 
-Iga vaste ühendab vähemalt kaks olemit üheks olemiks, samas säilitades iga kordumatu kliendi kirjega. Järgmises näited valisime kolm olemit: **ContactCSV: TestData** **primaarse** olemina, **WebAccountCSV: TestData** **2. olemina** ja **CallRecordSmall: TestData** **3. olemina**. Valikute kohal olev diagramm kirjeldab vastendamisjärjestuse toimimist.
+Iga vaste ühendab kaks või enam olemit üheks, konsolideeritud olemiks. Samal ajal säilitab see kordumatud kliendikirjed. Näiteks valisime kaks olemit: **eCommerce:eCommerceContacts** esmase olemina ja **LoyaltyScheme:loyCustomers** teise olemina. Olemite järjestus määrab, millises järjekorras süsteem proovib kirjeid vastendada.
 
-> [!div class="mx-imgBorder"]
-> ![Andmete vastendamisjärjestuse muutmine](media/configure-data-match-order-edit-page.png "Andmete vastendamisjärjestuse muutmine")
+:::image type="content" source="media/match-page.png" alt-text="Andmete koondamise koondamisala vastete lehe kuvatõmmis.":::
   
-**Primaarne** olem vastendataks **2. olemiga**. Esimesest vastest tulenev andmekogum vastab **3. olemile**.
-Selles näites valisime vaid kaks vastet, ent süsteem võimaldab rohkem.
+Esmane olem *eCommerce:eCommerceContacts* vastendatakse järgmise olemiga *LoyaltyScheme:loyCustomers*. Kui teil on rohkem kui kaks olemit, vastendatakse esimese vastendusetapi tulemused järgmise olemiga.
 
 > [!IMPORTANT]
-> Olemil, mille valite **primaarseks** olemiks, hakkab põhinema koondpõhiandmekogumil. Sellele olemile lisatakse täiendavad olemid, mis on valitud vastendamisetapis. Samas ei tähenda see, et ühendatud olem hõlmab *kõiki* sellesse olemisse kaasatud andmeid.
+> Olem, mille valite primaarseks olemiks, saab koondatud profiilide andmekomplekti aluseks. Sellele olemile lisatakse täiendavad olemid, mis on valitud vastendamisetapis. See ei tähenda, et koondatud olem sisaldaks *kõiki* selles olemis sisalduvaid andmeid.
 >
 > Kaks mõtet, mis võivad aidata valida olemite järjestust:
 >
-> - Milline olem on kõige põhjalikum ja mille kliendiandmed on kõige usaldusväärsemad?
-> - Kas äsja tuvastatud olemil on atribuudid, mida jagavad ka teised olemid (näiteks nimi, telefoninumber või e-posti aadress)? Kui ei, siis valige järgmine kõige usaldusväärsem olem.
+> - Esmaseks olemiks valige olem, mille profiiliandmed teie kliendi kohta on kõige täielikumad ja usaldusväärsemad.
+> - Valige olem, mis sisaldab põhiolemina mitut atribuuti, mis on ühised muude olemitega (nt nimi, telefoninumber või meiliaadress).
 
-Valige **valmis**, et salvestada vaste tellimus.
+Pärast vastendusjärjestuse määramist kuvatakse määratletud vastepaarid jaotise **Vastendatud kirjete üksikasjad** valikus **Andmed** > **Koondamine** > **Vastendamine**. Põhimõõdikud on tühjad, kuni vastendusprotsess on lõpule jõudnud.
 
-## <a name="define-rules-for-your-first-match-pair"></a>Määratlege esimese vastenduse paari reeglid
+## <a name="define-rules-for-match-pairs"></a>Vastepaaride reeglite määratlemine
 
-Pärast vastendamisjärjestuse määramist näete määratletud vasteid lehel **Vastendamine**. Ekraani ülaosas olevad paanid jäävad tühjaks kuni käivitate vastendamisjärjestuse.
+Vastendamisreeglid määratlevad loogika, mille alusel vastendatakse kindlat olemite paari.
 
-> [!div class="mx-imgBorder"]
-> ![Reeglite määratlemine](media/configure-data-match-need-rules.png "Reeglite määratlemine")
+Olemi nime kõrval kuvatav hoiatus **Vajab reeglit** viitab sellele, et vastepaari jaoks pole vastendusreeglit määratud. 
 
-Hoiatus **Vajab reegleid** hoiatus viitab sellele, et vastenduse paari jaoks pole määratletud ühtegi vastendusreeglit. Vastendamisreeglid määratlevad loogika, mille alusel vastendatakse kindlat olemite paari.
+:::image type="content" source="media/match-rule-add.png" alt-text="Esiletõstetud reeglite lisamise juhtelemendiga vastendatud kirje üksikasjade jaotise kuvatõmmis.":::
 
-1. Esimese reegli määratlemiseks avage paan **Reeglimääratlus**, valides vastenduste tabelis (1) vastava vasterea ja seejärel valides **Loo uus reegel** (2).
+1. Vastendamisreeglite määratlemiseks valige jaotise **Vastendatud kirjete üksikasjad** olemist käsk **Lisa reeglid**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Loo uus reegel](media/configure-data-match-new-rule2.png "Loo uus reegel")
+1. Konfigureerige paanil **Reegli loomine** reegli tingimused.
 
-2. Seadistage paanis **Reegli muutmine** selle reegli tingimused. Tingimusi väljendatakse kohustuslike valikutega kahe reaga.
+   :::image type="content" source="media/match-rule-conditions.png" alt-text="Lisatud tingimustega avatud vastendusreegli kuvatõmmis.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Uue reegli paan](media/configure-data-match-new-rule-condition.png "Uue reegli paan")
+   - **Olem/väli (esimene rida)**: valige seotud olem ja atribuut kliendi jaoks tõenäoliselt kordumatu kirjeatribuudi määramiseks. Näiteks telefoninumber või meiliaadress. Vältige vastendamist tegevustüübi atribuutide järgi. Näiteks ei leia ostu ID tõenäoliselt teiste kirjetüüpide puhul vasteid.
 
-   Olem/väli (esimene) – esimese vastendamise paari olemi vastendamiseks kasutatav atribuut. Näidete hulgas võib olla telefoninumber või e-postiaadress. Valige atribuut, mis tõenäoliselt on kliendile ainulaadne.
+   - **Olem/väli (teine rida)**: valige atribuut, mis on seotud esimeses reas määratud olemi atribuudiga.
 
-   > [!TIP]
-   > Vältige toimingu tüüpi atribuutidel põhinevat vastendamist. Teisisõnu, kui atribuut tundub olevat tegevus, võib see olla vastendamiseks halb kriteerium.  
+   - **Normaliseeri**: valige valitud atribuutide puhul mõni järgmistest normaliseerimissuvanditest. 
+     - Tühik: eemaldab kõik tühikud. Tekstist *Hello   World* saab tekst *HelloWorld*.
+     - Sümbolid: eemaldab kõik sümbolid ja erimärgid. Tekstist *Head&Shoulder* saab tekst *HeadShoulder*.
+     - Tekst väiketäheliseks: teisendab kõik märgid väiketäheliseks. Tekstist *ALL CAPS ja Title Case* saab *all caps ja title case*.
+     - Unicode ASCII-ks: teisendab Unicode'i tähistuse ASCII-märkideks. */u00B2* asemel on kasutusel *2*.
+     - Numbrid: teisendab muud numbrisüsteemid (nt rooma numbrid) araabia numbriteks. *VIII* asemel on kasutusel *8*.
+     - Semantikatüübid: standardiseerib nimed, pealkirjad, telefoninumbrid, aadressid jne. 
 
-   Olem/väli (teine) – teise vastendamise paari olemi vastendamiseks kasutatav atribuut.
+   - **Täpsus**: saate määrata selle tingimuse jaoks rakendatava täpsustaseme. 
+     - **Põhiline**: valikualus: *väike*, *keskmine*, *suur* ja *täpne*. Vaid 100 protsendiliste kirjete vastendamiseks valige **Täpne**. Alla 100 protsendiliste kirjete vastendamiseks valige üks neljast tasemest.
+     - **Kohandatud**: saate määrata protsendi, millele kirjed peavad vastama. Süsteem vastendab ainult seda läve ületavad kirjed.
 
-   Normaliseerimine – **Normaliseerimismeetod**: valitud atribuutide jaoks on saadaval erinevad normaliseerimisvalikud. Näiteks kirjavahemärkide või tühikute eemaldamine
+1. Sisestage reegli **Nimi**.
 
-   Ettevõtte nime normaliseerimise (eelvaade) puhul saate valida ka **Tüüp (telefon, nimi, ettevõte)**
+1. [Lisage veel tingimusi](#add-conditions-to-a-rule) või valige reegli vormistamiseks **Valmis**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Normaliseerimine – B2B](media/match-normalization-b2b.png "Normaliseerimine – B2B")
+1. Võite ka [rohkem reegleid lisada](#add-rules-to-a-match-pair).
 
-   Täpsuse tase – selle tingimuse puhul kasutatav täpsuse tase. Vaste tingimuse täpsuse taset on kaht tüüpi: **põhiline** ja **Kohandatud**.  
-   - Põhiline: võimaldab valida nelja valikut: madal, keskmine, kõrge ja täpne. Vaid 100 protsendiliste kirjete vastendamiseks valige **Täpne**. Alla 100 protsendiliste kirjete vastendamiseks valige üks neljast tasemest.
-   - Kohandatud: liuguriga määratlete kohandatud protsenti, mida kirjed peavad vastendama või sisestage väärtus välja **Kohandatud**. Süsteem vastendab vaid kirjeid, mis ületavad seda läve ühendatud vastenduse paaridena. Liuguri väärtused on vahemikus 0-1. Seega 0,64 tähendab 64 protsenti.
+1. Vajutage nuppu **Salvesta**, et muudatused rakendada.
 
-3. Reegli salvestamiseks valige **Valmis**.
+### <a name="add-conditions-to-a-rule"></a>Tingimuste lisamine reeglile
 
-### <a name="add-multiple-conditions"></a>Mitme tingimuse lisamine
+Kui soovite olemeid vastendada ainult juhul, kui atribuudid vastavad mitmele tingimusele, lisage vastendusreeglile veel tingimusi. Tingimused on ühendatud loogika tehtemärkiga AND ja käivitatakse seega ainult juhul, kui kõik tingimused on täidetud.
 
-Olemite vastendamiseks vaid siis, kui täidetud on mitu tingimust, lisage veel tingimusi, mis on seotud tehtemärgiga AND.
+1. Avage **Andmed** > **Koondamine** > **Vastendamine** ja valige **Redigeeri** reegli jaoks millele soovite tingimusi lisada.
 
-1. Valige paanil **Reegli muutmine** valik **Tingimuse lisamine**. Soovi korral saate ka kustutada, valides olemasoleva tingimuse kõrval eemaldamisnuppu.
+1. Valige paanil **Reegli muutmine** valik **Tingimuse lisamine**.
 
-2. Reegli salvestamiseks valige **Valmis**.
+1. Reegli salvestamiseks valige **Valmis**.
 
-## <a name="add-multiple-rules"></a>Mitme reegli lisamine
+### <a name="add-rules-to-a-match-pair"></a>Reeglite lisamine vastepaarile
 
-Kõik tingimused kehtivad ühele atribuutide paarile, kuid reeglid tähendavad tingimuste kogumeid. Olemite vastendamiseks eri atribuutide komplektiga saate lisada veel reegleid.
+Vastendusreeglid esindavad tingimuste kogumeid. Mitmel atribuudil põhinevate tingimustega olemite vastendamiseks lisage veel reegleid
 
-1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Koondamine** > **Vastavusseviimine**.
+1.  Avage **Andmed** > **Koondamine** > **Vastendamine** ja valige **Lisa reegel** olemi jaoks millele soovite reegleid lisada.
 
-2. Valige uuendatav olem ja **Lisa reeglid**.
-
-3. Järgige teema [Määratlege esimese vastenduse paari reeglid](#define-rules-for-your-first-match-pair) juhiseid.
+2. Järgige teema [Vastepaaride reeglite määratlemine](#define-rules-for-match-pairs) juhiseid.
 
 > [!NOTE]
-> Reegli järjekord on oluline. Vastendamise algoritm proovib vastendada esimese reegli alusel ja jätkab teise reegliga vaid siis, kui esimese reegli korral ei tuvastatud vasteid.
+> Reeglite järjekorda on oluline. Vastendamise algoritm proovib vastendada esimese reegli alusel ja jätkab teise reegliga vaid siis, kui esimese reegli korral ei tuvastatud vasteid.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Vastendatud olemis duplikaadieemalduse määratlemine
 
-Lisaks ülaltoodud jaotistes kirjeldatud olemitevahelistele vastavusseviimise reeglite määramisele saate määrata ka duplikaadieemalduse reeglid. *Duplikaadieemaldus* on protsess. See tuvastab duplikaatkirjed, ühendab need üheks kirjeks ja lingib kõik lähtekirjed selle ühendatud kirjega koos alternatiivsete ID-dega.
+Lisaks [olemiülestele vastendusreeglitele](#define-rules-for-match-pairs) saate määrata ka duplikaadieemalduse reeglid. *Duplikaadieemaldus* on veel üks kirjete vastendamise toiming. See tuvastab duplikaatkirjed ja ühendab need ühte kirjesse. Lähtekirjed lingitakse alternatiivsete ID-dega ühendatud kirjega.
 
-Pärast eemaldatud duplikaatidega kirje tuvastamist kasutatakse seda olemitevahelises vastavusseviimise protsessis. Duplikaadieemaldust rakendatakse olemi tasemel ja seda saab rakendada iga olemi korral, mida kasutatakse vastavusseviimise protsessis.
+Seejärel kasutatakse seda eemaldatud duplikaatidega kirjet olemiüleses vastendustoimingus. Duplikaadid eemaldatakse üksikutest olemitest ja neid saab konfigureerida vastepaarides kaustatud kõikide olemitega.
+
+Duplikaadieemalduse reeglite määramine pole kohustuslik. Kui selliseid reegleid pole konfigureeritud, rakendatakse süsteemi määratletud reegleid. Nad kombineerivad kõik kirjed ühte kirjesse enne olemi andmete edastamist olemiüleseks vastendamiseks täiustatud jõudluse tagamiseks.
 
 ### <a name="add-deduplication-rules"></a>Duplikaadieemalduse reeglite lisamine
 
-1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Koondamine** > **Vastavusseviimine**.
+1. Avage **Andmed** > **Koondamine** > **Vastendamine**.
 
-1. Valige jaotises **Ühendatud duplikaadid** suvand **Sea olemid**.
+1. Valige jaotises **Ühendatud duplikaadid** suvand **Sea olemid**. Juhul, kui duplikaadieemaldusreeglid on juba loodud, valige **Redigeeri**.
 
-1. Valige jaotises **Ühendamise eelistused** olemid, mille korral soovite duplikaadieemaldust rakendada.
+1. Valige paanil **Ühendamise eelistused** olemid, mille jaoks soovite duplikaadieemaldust käitada.
 
-1. Määrake duplikaatkirjete ühendamise viis ja valige üks kolmest ühendamissuvandist.
-   - *Enim täidetud*: tuvastab võitjana kirje, millel on kõige rohkem täidetud atribuute. See on vaikeühendamissuvand.
-   - *Kõige hiljutisem*: tuvastab võitjana kirje, millega tegeleti kõige viimasena. Hiljutisuse määratlemiseks on vaja kuupäeva- või numbrilist välja.
-   - *Kõige vanem*: tuvastab võitjana kirje, millega tegeleti kõige varem. Hiljutisuse määratlemiseks on vaja kuupäeva- või numbrilist välja.
+1. Määrake duplikaatkirjete kombineerimisviis ja valige üks kolmest ühendamissuvandist.
+   - **Enim täidetud**: tuvastab võitjana kirje, millel on kõige rohkem asustatud atribuudivälju. See on vaikeühendamissuvand.
+   - **Kõige hiljutisem**: tuvastab võitjana kirje, millega tegeleti kõige viimasena. Hiljutisuse määratlemiseks on vaja kuupäeva- või numbrilist välja.
+   - **Kõige vanem**: tuvastab võitjana kirje, millega tegeleti kõige varem. Hiljutisuse määratlemiseks on vaja kuupäeva- või numbrilist välja.
  
    > [!div class="mx-imgBorder"]
    > ![Duplikaadieemalduse reeglite samm 1](media/match-selfconflation.png "Duplikaadieemalduse reeglite samm 1")
  
-1. Kui olemid on valitud ja nende ühendamiseelistus on seatud, valige **Loo uus reegel**, et määratleda duplikaadieemalduse reeglid olemi tasemel.
-   - Suvand **Vali väli** loetleb kõik selle olemi saadaolevad väljad, mille lähteandmetest soovite eemaldada duplikaadid.
-   - Määrake normaliseerimis- ja täpsussätted sarnasel viisil, nagu kirjeldati olemitevahelises vastavusseviimises.
+1. Kui olemid on valitud ja nende ühendamiseelistus on seatud, valige **Lisa reegel**, et määratleda duplikaadieemalduse reeglid olemi tasemel.
+   - **Välja valimine** loetleb kõik sellest olemist pärit saadaolevad väljad. Valige väli, mille duplikaate soovite otsida. Valige väljad, mis on tõenäoliselt iga kliendi jaoks kordumatud. Näiteks meiliaadress või nime, linna ja telefoninumbri kombinatsioon.
+   - Määrake normaliseerimis- ja täpsusesätted.
    - Lisatingimuste määratlemiseks valige **Lisa tingimus**.
  
    > [!div class="mx-imgBorder"]
@@ -138,28 +142,13 @@ Pärast eemaldatud duplikaatidega kirje tuvastamist kasutatakse seda olemitevahe
 
 1. Võitja kirje antakse seejärel üle olemitevahelisele sobitamisele koos kaotaja kirjetega (nt alternatiivsed ID-d), et parandada sobitamiskvaliteeti.
 
-1. Kõik kohandatud vastavusseviimise reeglid, mis on määratletud „alati vastavusseviimise“ ja „mitte kunagi vastavusseviimise“ jaoks, alistavad duplikaadieemalduse reeglid. Kui duplikaadieemalduse reegel tuvastab ühtivad kirjed ja kohandatud vastavusseviimise reegel on seatud neid kirjeid mitte kunagi vastavusse viima, siis neid kahte kirjet ei viida vastavusse.
+1. Kõik määratletud kohandatud vastendusreeglid kirjutavad üle duplikaadieemaldusreeglid. Kui duplikaadieemalduse reegel tuvastab ühtivad kirjed ja kohandatud vastavusseviimise reegel on seatud neid kirjeid mitte kunagi vastavusse viima, siis neid kahte kirjet ei viida vastavusse.
 
-1. Pärast vastavusseviimise protsessi käivitamist näete duplikaadieemalduse andmeid.
-   
-> [!NOTE]
-> Duplikaadieemalduse reeglite määramine pole kohustuslik. Kui selliseid reegleid pole konfigureeritud, rakendatakse süsteemi määratletud reegleid. Need ahendavad kõik kirjed, millel on sama primaarvõtme ja vastendusreeglite väljade väärtuskombinatsiooni (täpne vaste) ühte kirjesse, pärast mida edastatakse olemiandmed olemitevaheliseks vastavusseviimiseks, et jõudlus ja süsteem oleksid paremad.
+1. Pärast [vastavusseviimise käivitamist](#run-the-match-process) kuvatakse põhimõõdikute paanidel duplikaadieemaldusstatistika.
 
-## <a name="run-your-match-order"></a>Käivitage vaste järjestus
+### <a name="deduplication-output-as-an-entity"></a>Pöördduplitseerimise väljund olemina
 
-Pärast vastavusseviimise reeglite (sh olemitevahelise vastavusseviimise ja duplikaadieemalduse reeglite) määratlemist saate käivitada vastavusseviimise korralduse. Toimingu käivitamiseks valige lehel **Vastendamine** valik **Käivita**. Vastendamisalgoritm võib aega võtta. Lehel **Vastendamine** ei saa muuta atribuute kuni vastendamine on lõppenud. Leiate ühendatud kliendiprofiili olemi, mis loodi lehel **Olemid**. Ühendatud kliendiolemit nimetatakse **ConflationMatchPairs : CustomerInsights**.
-
-Täiendavate muudatuste tegemiseks ja etapi uuesti käivitamiseks saate poolelioleva vaste tühistada. Valige tekst **Värskendamine ...** ja valige nähtavale ilmuva külgpaani allosast suvand **Tühista töö**.
-
-Kui vastendamise protsess on lõpule viinud, muutub tekst **Värskendamine ...** tekstiks **Õnnestus**, ja te saate jälle kasutada kõiki lehe funktsioone.
-
-Esimene vastendamine loob koondpõhiolemit. Kõik järgnevad vastendamised laiendavad seda olemit.
-
-> [!TIP]
-> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
-
-## <a name="deduplication-output-as-an-entity"></a>Pöördduplitseerimise väljund olemina
-Lisaks olemitevahelise sobitamise osana loodud ühtsele põhiolemile genereerib pöördduplitseerimine omavahelises protsessis ka uus olem igale olemile sobitustellimusest, et tuvastada pöördduplitseeritud kirjed. Neid olemeid võib leida koos suvandiga **ConflationMatchPairs:CustomerInsights** jaotises **Süsteem** leheküljel **Olemid** nimega **Deduplication_Datasource_Entity**.
+Duplikaadieemaldusega luuakse uus olem iga olemi olemi jaoks vastepaaridest, et tuvastada duplikaadieemaldusega kirjed. Neid olemeid võib leida koos suvandiga **ConflationMatchPairs:CustomerInsights** jaotises **Süsteem** leheküljel **Olemid** nimega **Deduplication_Datasource_Entity**.
 
 Pöördduplitseeritava väljundi olem sisaldab järgmist teavet:
 - ID-d/võtmed
@@ -168,77 +157,71 @@ Pöördduplitseeritava väljundi olem sisaldab järgmist teavet:
   - Deduplication_WinnerId: see väli sisaldab tuvastatud rühma või klastri võitja ID-d. Kui Deduplication_WinnerId on sama, mis kirje primaarvõtme väärtus, tähendab see, et kirje on võitja kirje.
 - Väljad, mida kasutatakse pöördduplitseerimise reeglite määratlemiseks.
 - Reeglid ja punktisumma väljad, mis tähistavad rakendatavaid pöördduplitseerimise reegleid ja millist punktisummat tagastas sobitusalgoritm.
+   
+## <a name="run-the-match-process"></a>Vastenduse käivitamine
+
+Konfigureeritud vastendusreeglitega (sh olemitevahelise vastavusseviimise ja duplikaadieemalduse reeglite) saate käivitada vastavusseviimise. 
+
+Toimingu käivitamiseks valige **Andmed** > **Koondamine** > **Vastendamine** ja valige **Käivita**. Vastendusalgoritmil kulub lõpuleviimiseks veidi aega ja te ei saa konfiguratsiooni muuta ennem kui see on lõpule viidud. Muudatuste tegemiseks saate töötamise tühistada. Valige töö olek ja tehke paanil **Edenemise üksikasjad** valik **Tühista töö**.
+
+Lõpuleviidud käituse tulemuse, koondatud kliendiprofiili olemi leiate lehelt **Olemid**. Kliendi koondolemi nimeks on **Kliendid** jaotises **Profiilid**. Esimene õnnestunud vastekäitus loob koondolemi *Klient*. Kõik järgnevad vastekäitused laiendavad seda olemit.
+
+> [!TIP]
+> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
 
 ## <a name="review-and-validate-your-matches"></a>Vastenduste ülevaatamine ja valideerimine
 
-Hinnake vastepaaride kvaliteeti ja täiustage seda:
+Vastepaaride kvaliteedi hindamiseks ja vajaduse korral nende täpsustamiseks avage **Andmed** > **Koondamine** > **Vastendamine**.
 
-- Lehel **Vastendamine** leiate kaks paani, kus näidatakse esmaseid ülevaateid teie andmetest.
+Lehe ülaosas asuvad paanid kuvavad põhimõõdikuid, summeerides vastendatud kirjete ja duplikaatide arvu.
 
-  - **Kordumatud kliendid**: näitab süsteemi tuvastatud kordumatute profiilide arvu.
-  - **Vastendatud kirjed**: näidatakse vastendamispaaride vastete arvu.
+:::image type="content" source="media/match-KPIs.png" alt-text="Numbrite ja üksikasjadega vastete lehe põhimõõdikute kärbitud kuvatõmmis.":::
 
-- Tabelis **Vaste järjestus** pääsete juurde iga vastendamispaari tulemustele, selleks võrrelge vastepaari olemi kirjete arvu edukalt vastendatud kirjete protsendiga.
+- **Kordumatud lähtekirjed** näitab viimases vastekäituses töödeldud üksikute lähtekirjete arvu.
+- **Vastendatud ja vastendamata kirjed** tõstab esile, mitu kordumatut kirjet on alles pärast vastendusreeglite töötlemist.
+- **Ainult vastendatud kirjed** näitab ainult vastete arvu kõigis vastepaarides.
 
-- Tabeli **Vaste järjestus** olemi jaotises **Reeglid** leiate edukalt vastendatud kirjete protsendi reegli tasemel. Reegli kõrval asuva tabeli sümboli valimisel näete kõiki neid kirjeid reegli tasemel. Soovitame üle vaadata kirjete alamhulka, et kinnitada nende õiget vastendamist.
+Iga vastepaari tulemusi ja selle reegleid saate hinnata tabelis **Vastendatud kirjete üksikasjad**. Võrrelge vastepaarist saadud kirjete arvu edukalt vastendatud kirjete protsendiga.
 
-- Optimaalse väärtuse tuvastamiseks katsetage tingimuste ümber eri täpsusega lävedega.
+Vaadake üle vastepaari reeglid, et näha edukalt vastendatud kirjete protsenti reeglite tasemel. Valige kolmikpunkt (...) ja seejärel valige **Vastete eelversioon**, et näha kõiki neid kirjeid reegli tasemel. Soovitame mõnda kirjet vaadata, et kontrollida, kas need on õigesti vastendatud.
 
-  1. Valige katsetatava vastendamispaari reegli puhul kolme punkti ikooni (...) ja valige **Muuda**.
+Optimaalse väärtuse leidmiseks proovige tingimustes erinevaid täpsuslävesid.
 
-  2. Valige tingimus, millega soovite katsetada. Iga kriteerium asub paanis **Vastendusreegel** ühes reas.
+  1. Valige selle reegli kolmikpunkt (...), millega soovite katseid teha, ja valige **Redigeeri**.
 
-  3. Lehel **Kriteeriumi eelvaade** nähtu sõltub tingimuse täpsuse taset. Leidke valitud tingimuse vastendatud ja vastendamata kirjete arv.
+  2. Muutke täpsuse väärtusi tingimustes, mida soovite muuta.
 
-     Hankige põhjalikke teadmisi eri läve tasemete mõjudest. Saate võrrelda, mitu kirjet vastendataks iga lävetaseme puhul ja vaadake iga valiku kirjeid. Valige kõik paanid ja vaadake üle tabeli jaotise andmed.
+  3. Valige **Eelversioon**, et näha valitud tingimusega vastendatud ja vastendamata kirjete arvu.
 
-## <a name="optimize-your-matches"></a>Vastete optimeerimine
+## <a name="manage-match-rules"></a>Vastendusreeglite haldamine
 
-Parandage kvaliteeti, selleks seadistage uuesti paar vaste näitajat:
+Enamuse vasteparameetritest saate ümber konfigureerida ja peenhäälestada.
 
-- **Muutke vastendamisjärjestust**, selleks valige **Muuda** ja muutke vastendamisjärjekorra välju.
+:::image type="content" source="media/match-rules-management.png" alt-text="Vastendusreegli suvanditega ripploendi kuvatõmmis.":::
 
-  > [!div class="mx-imgBorder"]
-  > ![Andmete vastendamisjärjestuse muutmine](media/configure-data-match-order-edit.png "Andmete vastendamisjärjestuse muutmine")
+- **Muutke reeglite järjestust**, kui määratlesite mitu reeglit. Vastendusreeglite ümberjärjestamiseks saate valida suvandid **Nihuta üles** ja **Nihuta alla** või reegleid pukseerida.
 
-- **Muutke reeglite järjestust**, kui määratlesite mitu reeglit. Saate muuta vastendamisreeglite järjestust, selleks valige vastendamisreeglite ruudustikus **Liigu üles** ja **Liigu alla**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Muutke reegli järjestust](media/configure-data-change-rule-order.png "Muutke reegli järjestust")
-
-- **Paljundage reegleid**, kui olete määratlenud vastendamisreegli ja soovite luua sarnase, ent muudetud reegli. Selleks valige **Duplikaat**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Reegli paljundaminel](media/configure-data-duplicate-rule.png "Reegli paljundamine")
+- **Reegli tingimuste muutmiseks** valige **Redigeeri** ja valige muud väljad.
 
 - **Inaktiveerige reegel**, et säilitada sobitusreegel eraldades seda sobitusprotsessist.
 
-  > [!div class="mx-imgBorder"]
-  > ![Reegli inaktiveerimine](media/configure-data-deactivate-rule.png "Reegli inaktiveerimine")
+- Kui olete vastendusreegli määratlenud, **dubleerige reeglid** ja kui soovite luua sarnase reegli muudatustega, valige **Dubleeri**.
 
-- **Muutke reegleid**, valides sümboli **Muuda**. Saate kasutada järgmisi muudatusi.
+- **Reegli kustutamiseks** valige sümbol **Kustuta**.
 
-  - Muutke tingimuse atribuute: valige kindlas tingimuse read uued atribuudid.
-  - Muutke tingimuse läve: reguleerige täpsusliugurit.
-  - Muutke tingimuse normaliseerimisviisi: uuendage normaliseerimisviisi.
+## <a name="specify-custom-match-conditions"></a>Kohandatud vastetingimuste määramine
 
-## <a name="specify-your-custom-match-records"></a>Määrake muudetud vastendamiskirjed.
+Saate määrata tingimused, et kindlad kirjed peaksid alati vastama või mitte kunagi vastama. Need reeglid saab üles laadida standardse vastenduse alistamiseks. Näiteks kui meie kirjetes olid Tundmatu I ja Tundmatu II, võib süsteem need vastendada ühe inimesena. Kohandatud vaste reeglid võimaldavad määrata, et profiilid viitavad erinevatele inimestele. 
 
-Saate määrata tingimused, et kindlad kirjed peaksid alati vastama või mitte kunagi vastama. Neid reegleid saab vastendamisel üles laadida korraga.
+1. Avage **Andmed** > **Koondamine** > **Vastendamine** ja tehke jaotises **Vastendatud kirjete üksikasjad** valik **Kohandatud vaste**.
 
-1. Valige ekraanil **Vastendamisjärjestus** valikut **Kohandatud vaste**.
+  :::image type="content" source="media/custom-match-create.png" alt-text="Esiletõstetud kohandatud vaste kontrolliga vastendusreeglite kuvatõmmis.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Kohandatud vaste loomine](media/custom-match-create.png "Kohandatud vaste loomine")
+1. Kui te pole kohandatud vastendusreegleid määranud, näete uut, rohkemate üksikasjadega paani **Kohandatud vaste**.
 
-2. Kui olemeid pole üles laaditud, näete uut dialoogikasti **Kohandatud vaste**, mis nõuab teatud andmete sisestamist. Kui olete need andmed varem esitanud, jätkake kaheksanda etapiga.
+1. Valige **Täida mall**, et hankida malli fail, mis määratleb, mis olemite kirjed peaksid kattuma alati või mitte kunagi. Peate „Vastenda alati“ kirjed ja „Vastenda mitte kunagi“ kirjed sisestama eraldi kahte eri faili.
 
-   > [!div class="mx-imgBorder"]
-   > ![Uus kohandatud vaste dialoogikast](media/custom-match-new-dialog-box.png "Uus kohandatud vaste dialoogikast")
-
-3. Valige **Täida mall**, et hankida malli fail, mis määratleb, mis olemite kirjed peaksid kattuma alati või mitte kunagi. Peate „Vastenda alati“ kirjed ja „Vastenda mitte kunagi“ kirjed sisestama eraldi kahte eri faili.
-
-4. Mall sisaldab välju, et täpsustada kohandatud vastendamise olemit ja olemi primaarvõtme väärtusi. Näiteks, kui soovite, et olemi Sales primaarvõti 12345 ühtiks alati olemi Contact primaarvõtmega 34567, peate täpsustama järgmiselt.
+1. Mall sisaldab välju, et täpsustada kohandatud vastendamise olemit ja olemi primaarvõtme väärtusi. Näiteks kui soovite, et esmane võti *12345* olemist *Müük* vastaks alati esmasele võtmele *34567* olemist *Kontakt*, täitke järgmine mall.
     - Entity1: Sales
     - Entity1Key: 12345
     - Entity2: Contact
@@ -248,22 +231,22 @@ Saate määrata tingimused, et kindlad kirjed peaksid alati vastama või mitte k
    
    Kui soovite olemi pöördduplitseerimise määrata kohandatud sobitamisega, sisestage Entity1 ja Entity2 sama olem ja määrake erinevad primaarvõtmed.
 
-5. Pärast kõikide soovitud asenduste lisamist salvestage malli fail.
+1. Pärast kõikide soovitud asenduste lisamist salvestage malli fail.
 
-6. Minge jaotisse **Andmed** > **Andmeallikad** ja valmendage mallifailid uute olemitena. Pärast sisestamist saate nendega määratleda vastendamisseadistust.
+1. Minge jaotisse **Andmed** > **Andmeallikad** ja valmendage mallifailid uute olemitena. Pärast sisestamist saate nendega määratleda vastendamisseadistust.
 
-7. Pärast failide üleslaadimist ja olemite avalikustamist valige uuesti valik **Kohandatud vaste**. Näete valikuid, et täpsustada kaasatavad olemid. Valige rippmenüüst vajalikud olemid.
+1. Pärast failide üleslaadimist ja olemite avalikustamist valige uuesti valik **Kohandatud vaste**. Näete valikuid, et täpsustada kaasatavad olemid. Valige rippmenüüst vajalikud olemid.
 
-   > [!div class="mx-imgBorder"]
-   > ![Kohandatud vaste asendused](media/custom-match-overrides.png "Kohandatud vaste asendused")
+   :::image type="content" source="media/custom-match-overrides.png" alt-text="Dialoogi kuvatõmmis, mis näitab, kuidas valida kohandatud vastendusstsenaariumi alistamised.":::
 
-8. Valige olemid, mida tahate kasutada **Vastenda alati** ja **Vastenda mitte kunagi** puhul, seejärel valige **Valmis**.
+1. Valige olemid, mida tahate kasutada **Vastenda alati** ja **Vastenda mitte kunagi** puhul, seejärel valige **Valmis**.
 
-9. Valige äsja seadistatud kohandatud vaste seadistuse lehel **Vastendamine** valik **Salvesta**.
+1. Kohandatud vastekonfiguratsiooni rakendamiseks tehke lehel **Match** valik **Salvesta**.
 
-10. Vastendamiseks valige lehel **Vastendamine** valik **Käivita** ja kohandatud vaste seadistus läheb kasutusele. Kõik süsteemi vastendatud reeglid asendatakse seadistuskomplektiga.
+1. Vastendusprotsessi käivitamiseks tehke lehel **Match** valik **Käivita**. Muud määratud vastendusreeglid alistatakse kohandatud vastenduskonfiguratsiooniga.
 
-11. Pärast vastendamist saate kinnitada olemi **ConflationMatchPair**, et kinnitada, kas ühendamisvasted asendati.
+> [!TIP]
+> Alistamiste rakendamise kinnitamiseks valige **Andmed** > **Olemid** ja vaadake üle olem **ConflationMatchPair**.
 
 ## <a name="next-step"></a>Järgmine etapp
 
