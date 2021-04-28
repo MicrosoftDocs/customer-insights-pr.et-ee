@@ -1,7 +1,7 @@
 ---
-title: Ekspordisihtkohad
-description: Andmete eksportimine ja eksportimise sihtkohtade haldamine.
-ms.date: 07/21/2020
+title: Andmete eksportimine Customer Insights
+description: Andmete jagamiseks hallake eksporti.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596080"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896138"
 ---
-# <a name="export-destinations-preview-overview"></a><span data-ttu-id="793a7-103">Ekspordisihtkohtade (eelversioon) ülevaade</span><span class="sxs-lookup"><span data-stu-id="793a7-103">Export destinations (preview) overview</span></span>
+# <a name="exports-preview-overview"></a><span data-ttu-id="66ac5-103">Eksportimine (eelversioon) ülevaade</span><span class="sxs-lookup"><span data-stu-id="66ac5-103">Exports (preview) overview</span></span>
 
-<span data-ttu-id="793a7-104">Lehel **Ekspordi sihtkohad** kuvatakse kõik sihtkohad, mis olete seadistanud andmete eksportimiseks.</span><span class="sxs-lookup"><span data-stu-id="793a7-104">The **Export destinations** page shows you all locations you've set up to export data to.</span></span> <span data-ttu-id="793a7-105">Samuti saate lisada uusi eksportimise sihtkohti.</span><span class="sxs-lookup"><span data-stu-id="793a7-105">You can also add new destinations for export.</span></span> <span data-ttu-id="793a7-106">Lisaks kuvatakse siin praegu saadaolevad eksportimissuvandid.</span><span class="sxs-lookup"><span data-stu-id="793a7-106">Additionally, it shows export currently available options.</span></span> <span data-ttu-id="793a7-107">Saate kiire ülevaate, kirjelduse ning teabe selle kohta, mida saate iga laiendatavuse valiku abil teha.</span><span class="sxs-lookup"><span data-stu-id="793a7-107">Get a quick overview, description, and find out what you can do with each extensibility option.</span></span> <span data-ttu-id="793a7-108">Eksportige ühendatud profiilid, meetmed ja segmendid teie äri jaoks olulistesse toetatud rakendustesse.</span><span class="sxs-lookup"><span data-stu-id="793a7-108">Export unified profiles, measures, and segments to supported apps relevant for your business.</span></span>
+<span data-ttu-id="66ac5-104">Lehel **Ekspordid** näete kõiki konfigureeritud eksporte.</span><span class="sxs-lookup"><span data-stu-id="66ac5-104">The **Exports** page shows you all configured exports.</span></span> <span data-ttu-id="66ac5-105">Ekspordid jagavad erinevate rakendustega konkreetseid andmeid.</span><span class="sxs-lookup"><span data-stu-id="66ac5-105">Exports share specific data with various applications.</span></span> <span data-ttu-id="66ac5-106">Need võivad sisaldada kliendiprofiile või olemeid, skeeme ja kaardistamise üksikasju.</span><span class="sxs-lookup"><span data-stu-id="66ac5-106">They can include customer profiles or entities, schemas, and mapping details.</span></span> <span data-ttu-id="66ac5-107">Iga ekspordi jaoks on vaja [ühendust, mille on seadistanud administraator, et hallata autentimist ja juurdepääsu](connections.md).</span><span class="sxs-lookup"><span data-stu-id="66ac5-107">Each export requires a [connection, set up by an administrator, to manage authentication and access](connections.md).</span></span>
 
-<span data-ttu-id="793a7-109">Avage jaotis **Administraator** > **Eksportimise sihtkohad**, et näha järgmisi laiendatavuse valikuid.</span><span class="sxs-lookup"><span data-stu-id="793a7-109">Go to **Admin** > **Export destinations** to find the following extensibility options:</span></span>
+> [!NOTE]
+> <span data-ttu-id="66ac5-108">Kuni 2021. aasta märtsini lõi eksport ühenduse vastava teenusega automaatselt.</span><span class="sxs-lookup"><span data-stu-id="66ac5-108">Until March 2021, exports created a connection to the corresponding service automatically.</span></span> <span data-ttu-id="66ac5-109">Ekspordiks on nüüd vaja [ühendust, mille administraator on loonud ja ühiskasutusse andnud](connections.md) enne kui saate neid luua.</span><span class="sxs-lookup"><span data-stu-id="66ac5-109">Exports now require a [connection, created and shared by an administrator](connections.md) before you can create them.</span></span>
 
-- [<span data-ttu-id="793a7-110">Adobe Campaign Standard</span><span class="sxs-lookup"><span data-stu-id="793a7-110">Adobe Campaign Standard</span></span>](export-adobe-campaign-standard.md)
-- [<span data-ttu-id="793a7-111">Adobe Experience Platform</span><span class="sxs-lookup"><span data-stu-id="793a7-111">Adobe Experience Platform</span></span>](export-adobe-experience-platform.md)
-- [<span data-ttu-id="793a7-112">AdRoll</span><span class="sxs-lookup"><span data-stu-id="793a7-112">AdRoll</span></span>](export-adroll.md)
-- [<span data-ttu-id="793a7-113">Autopiloot</span><span class="sxs-lookup"><span data-stu-id="793a7-113">Autopilot</span></span>](export-autopilot.md)
-- [<span data-ttu-id="793a7-114">Azure’i bloobimälu</span><span class="sxs-lookup"><span data-stu-id="793a7-114">Azure Blob Storage</span></span>](export-azure-blob-storage.md)
-- [<span data-ttu-id="793a7-115">Azure Data Lake Storage Gen2</span><span class="sxs-lookup"><span data-stu-id="793a7-115">Azure Data Lake Storage Gen2</span></span>](export-azure-data-lake-storage-gen2.md)
-- [<span data-ttu-id="793a7-116">Microsoft Teamsi robot</span><span class="sxs-lookup"><span data-stu-id="793a7-116">Bot for Microsoft Teams</span></span>](export-teams-bot.md)
-- [<span data-ttu-id="793a7-117">Customer Insightsi API</span><span class="sxs-lookup"><span data-stu-id="793a7-117">Customer Insights API</span></span>](apis.md)
-- [<span data-ttu-id="793a7-118">DotDigital</span><span class="sxs-lookup"><span data-stu-id="793a7-118">DotDigital</span></span>](export-dotdigital.md)
-- [<span data-ttu-id="793a7-119">Teenus Dynamics 365 Customer Service (kliendikaardi lisandmoodul)</span><span class="sxs-lookup"><span data-stu-id="793a7-119">Dynamics 365 Customer Service (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="793a7-120">Dynamics 365 Marketing</span><span class="sxs-lookup"><span data-stu-id="793a7-120">Dynamics 365 Marketing</span></span>](export-dynamics365-marketing.md)
-- [<span data-ttu-id="793a7-121">Dynamics 365 Sales</span><span class="sxs-lookup"><span data-stu-id="793a7-121">Dynamics 365 Sales</span></span>](export-dynamics365-sales.md)
-- [<span data-ttu-id="793a7-122">Dynamics 365 müügikeskus (kliendikaardi lisandmoodul)</span><span class="sxs-lookup"><span data-stu-id="793a7-122">Dynamics 365 Sales Hub (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="793a7-123">Facebooki reklaamihaldur</span><span class="sxs-lookup"><span data-stu-id="793a7-123">Facebook Ads Manager</span></span>](export-facebook.md)
-- [<span data-ttu-id="793a7-124">Google Ads</span><span class="sxs-lookup"><span data-stu-id="793a7-124">Google Ads</span></span>](export-google-ads.md)
-- [<span data-ttu-id="793a7-125">LiveRamp&reg;</span><span class="sxs-lookup"><span data-stu-id="793a7-125">LiveRamp&reg;</span></span>](export-liveramp.md)
-- [<span data-ttu-id="793a7-126">Mailchimp</span><span class="sxs-lookup"><span data-stu-id="793a7-126">Mailchimp</span></span>](export-mailchimp.md)
-- [<span data-ttu-id="793a7-127">Marketo</span><span class="sxs-lookup"><span data-stu-id="793a7-127">Marketo</span></span>](export-marketo.md)
-- [<span data-ttu-id="793a7-128">Power Automate</span><span class="sxs-lookup"><span data-stu-id="793a7-128">Power Automate</span></span>](export-power-automate.md)
-- [<span data-ttu-id="793a7-129">Power Apps</span><span class="sxs-lookup"><span data-stu-id="793a7-129">Power Apps</span></span>](export-power-apps.md)
-- [<span data-ttu-id="793a7-130">Power BI</span><span class="sxs-lookup"><span data-stu-id="793a7-130">Power BI</span></span>](export-power-bi.md)
-- [<span data-ttu-id="793a7-131">SendGrid</span><span class="sxs-lookup"><span data-stu-id="793a7-131">SendGrid</span></span>](export-sendgrid.md)
-- [<span data-ttu-id="793a7-132">SFTP</span><span class="sxs-lookup"><span data-stu-id="793a7-132">SFTP</span></span>](export-sftp.md)
+<span data-ttu-id="66ac5-110">Minge **Andmed** > **Ekspordid**, et näha ekspordilehte.</span><span class="sxs-lookup"><span data-stu-id="66ac5-110">Go to **Data** > **Exports** to view the exports page.</span></span> <span data-ttu-id="66ac5-111">Kõigil kasutajarollidel on juurdepääs konfigureeritud ekspordi vaatamiseks.</span><span class="sxs-lookup"><span data-stu-id="66ac5-111">All user roles have access to view configured exports.</span></span> <span data-ttu-id="66ac5-112">Kasutage käsuriba otsinguvälja, et leida eksport nende nime, ühenduse nime või ühenduse tüübi järgi.</span><span class="sxs-lookup"><span data-stu-id="66ac5-112">Use of the search field in the command bar to find exports by their name, connection name, or connection type.</span></span>
 
-## <a name="add-a-new-export-destination"></a><span data-ttu-id="793a7-133">Uue ekspordi sihtkoha lisamine</span><span class="sxs-lookup"><span data-stu-id="793a7-133">Add a new export destination</span></span>
+## <a name="set-up-a-new-export"></a><span data-ttu-id="66ac5-113">Uue ekspordi seadistamine</span><span class="sxs-lookup"><span data-stu-id="66ac5-113">Set up a new export</span></span>
 
-<span data-ttu-id="793a7-134">Eksportimise sihtkohtade lisamiseks on teil vaja [administraatoriõigusi](permissions.md).</span><span class="sxs-lookup"><span data-stu-id="793a7-134">To add export destinations, you have [administrator permissions](permissions.md).</span></span> <span data-ttu-id="793a7-135">Kui ekspordite Microsofti teenustesse, eeldame, et mõlemad teenused on samas organisatsioonis.</span><span class="sxs-lookup"><span data-stu-id="793a7-135">If you export to Microsoft services, we assume both services are in the same organization.</span></span>
+<span data-ttu-id="66ac5-114">Ekspordi seadistamiseks või redigeerimiseks peavad teil olema saadaval ühendused.</span><span class="sxs-lookup"><span data-stu-id="66ac5-114">To set up or edit an export, you need to have connections available to you.</span></span> <span data-ttu-id="66ac5-115">Ühendused sõltuvad teie [kasutajarollist](permissions.md):</span><span class="sxs-lookup"><span data-stu-id="66ac5-115">Connections depend on your [user role](permissions.md):</span></span>
+- <span data-ttu-id="66ac5-116">Administraatoritel on juurdepääs kõigile ühendustele.</span><span class="sxs-lookup"><span data-stu-id="66ac5-116">Administrators have access to all connections.</span></span> <span data-ttu-id="66ac5-117">Nad saavad ekspordi seadistamisel luua ka uusi ühendusi.</span><span class="sxs-lookup"><span data-stu-id="66ac5-117">They can also create new connections when setting up an export.</span></span>
+- <span data-ttu-id="66ac5-118">Kaastöötajatel on juurdepääs kindlatele ühendustele.</span><span class="sxs-lookup"><span data-stu-id="66ac5-118">Contributors can have access to specific connections.</span></span> <span data-ttu-id="66ac5-119">Nad sõltuvad administraatoritest, et ühendusi konfigureerida ja jagada.</span><span class="sxs-lookup"><span data-stu-id="66ac5-119">They depend on administrators to configure and share connections.</span></span> <span data-ttu-id="66ac5-120">Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="66ac5-120">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
+- <span data-ttu-id="66ac5-121">Vaatajad saavad vaadata ainult olemasolevaid eksporte, kuid ei loo neid.</span><span class="sxs-lookup"><span data-stu-id="66ac5-121">Viewers can only view existing exports but not create them.</span></span>
 
-1. <span data-ttu-id="793a7-136">Avage **Haldus** > **Ekspordi sihtkohad**.</span><span class="sxs-lookup"><span data-stu-id="793a7-136">Go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="66ac5-122">Minge **Andmed** > **Ekspordid**.</span><span class="sxs-lookup"><span data-stu-id="66ac5-122">Go to **Data** > **Exports**.</span></span>
 
-1. <span data-ttu-id="793a7-137">Vahetage vahekaardile **Minu ekspordi sihtkohad**.</span><span class="sxs-lookup"><span data-stu-id="793a7-137">Switch to the **My export destinations** tab.</span></span>
+1. <span data-ttu-id="66ac5-123">Valige uue ekspordi sihtkoha loomiseks **Lisa eksport**.</span><span class="sxs-lookup"><span data-stu-id="66ac5-123">Select **Add export** to create a new export destination.</span></span>
 
-1. <span data-ttu-id="793a7-138">Uue ekspordi sihtkoha loomiseks valige suvand **Lisa sihtkoht**.</span><span class="sxs-lookup"><span data-stu-id="793a7-138">Select **Add destination** to create a new export destination.</span></span>
+1. <span data-ttu-id="66ac5-124">Valige **Ekspordi loomine** paanil ühendus, mida kasutada.</span><span class="sxs-lookup"><span data-stu-id="66ac5-124">In the **Set up export** pane, select which connection to use.</span></span> <span data-ttu-id="66ac5-125">[Ühendusi](connections.md) haldavad administraatorid.</span><span class="sxs-lookup"><span data-stu-id="66ac5-125">[Connections](connections.md) are managed by administrators.</span></span> 
 
-1. <span data-ttu-id="793a7-139">Valige paanil **Lisa sihtkoht** rippmenüüd ekspordi sihtkoha **tüüp**.</span><span class="sxs-lookup"><span data-stu-id="793a7-139">In the **Add destination** pane, select the **Type** of export destination in the drop-down.</span></span>
+1. <span data-ttu-id="66ac5-126">Sisestage nõutavad üksikasjad ja valige **Salvesta** eksportimise loomiseks.</span><span class="sxs-lookup"><span data-stu-id="66ac5-126">Provide the required details and select **Save** to create the export.</span></span>
 
-1. <span data-ttu-id="793a7-140">Sisestage nõutud üksikasjad ja valige **Edasi**, et luua ekspordi sihtkoht.</span><span class="sxs-lookup"><span data-stu-id="793a7-140">Provide the required details and select **Next** to create the export destination.</span></span>
+### <a name="edit-an-export"></a><span data-ttu-id="66ac5-127">Ekspordi redigeerimine</span><span class="sxs-lookup"><span data-stu-id="66ac5-127">Edit an export</span></span>
 
-<span data-ttu-id="793a7-141">Samuti saate valida vahekaardi **Tuvastamine** paanil suvandi **Häälestamine**.</span><span class="sxs-lookup"><span data-stu-id="793a7-141">You can also select **Set up** on a tile on the **Discover** tab.</span></span>
+1. <span data-ttu-id="66ac5-128">Valige redigeeritava ekspordi sihtkoha vertikaalsed kolm punkti.</span><span class="sxs-lookup"><span data-stu-id="66ac5-128">Select the vertical ellipsis for the export destination you want to edit.</span></span>
 
-## <a name="view-export-destinations"></a><span data-ttu-id="793a7-142">Ekspordi sihtkohtade kuvamine</span><span class="sxs-lookup"><span data-stu-id="793a7-142">View Export destinations</span></span>
+1. <span data-ttu-id="66ac5-129">Valige ripploendist **Redigeeri**.</span><span class="sxs-lookup"><span data-stu-id="66ac5-129">Select **Edit** from the drop-down menu.</span></span>
 
-<span data-ttu-id="793a7-143">Pärast ekspordi sihtkohtade loomist leiate need tabelist vahekaardil **Minu ekspordi sihtkohad**. Sellel tabelil on kolm veergu.</span><span class="sxs-lookup"><span data-stu-id="793a7-143">After creating export destinations, you'll find them in a table on the **My export destinations** tab. This table has three columns:</span></span>
+1. <span data-ttu-id="66ac5-130">Muutke värskendatavad väärtused ja valige **Salvesta**.</span><span class="sxs-lookup"><span data-stu-id="66ac5-130">Change the values you want to update and select **Save**.</span></span>
 
-- <span data-ttu-id="793a7-144">**Kuvatav nimi**: nimi, mille sisestasite sihtkoha loomisel.</span><span class="sxs-lookup"><span data-stu-id="793a7-144">**Display name**: The name you entered when creating the destination.</span></span>
-- <span data-ttu-id="793a7-145">**Tüüp**: eksportimise sihtkoha tüüp, mille määrate sihtkoha loomisel.</span><span class="sxs-lookup"><span data-stu-id="793a7-145">**Type**: The export destination type you set when creating the destination.</span></span>
-- <span data-ttu-id="793a7-146">**Loomiskuupäev**: sihtkoha loomise kuupäev.</span><span class="sxs-lookup"><span data-stu-id="793a7-146">**Created**: The date you created the destination.</span></span>
+## <a name="view-exports-and-export-details"></a><span data-ttu-id="66ac5-131">Ekspordi ja ekspordi üksikasjade kuvamine</span><span class="sxs-lookup"><span data-stu-id="66ac5-131">View Exports and export details</span></span>
 
-## <a name="edit-an-export-destination"></a><span data-ttu-id="793a7-147">Ekspordi sihtkoha redigeerimine</span><span class="sxs-lookup"><span data-stu-id="793a7-147">Edit an export destination</span></span>
+<span data-ttu-id="66ac5-132">Pärast ekspordi sihtkoha loomist on need ära toodud **Andmed** > **Ekspordid** loendis.</span><span class="sxs-lookup"><span data-stu-id="66ac5-132">After creating export destinations, they are listed on **Data** > **Exports**.</span></span> <span data-ttu-id="66ac5-133">Kõik kasutajad saavad vaadata, milliseid andmeid jagatud on ning nende värskeimat olekut.</span><span class="sxs-lookup"><span data-stu-id="66ac5-133">All users can see which data is shared and its latest status.</span></span>
 
-1. <span data-ttu-id="793a7-148">Klõpsake redigeeritava ekspordi sihtkoha juures kolmel vertikaalsel punktil.</span><span class="sxs-lookup"><span data-stu-id="793a7-148">Select the vertical ellipsis for the Export destination you want to edit.</span></span>
+1. <span data-ttu-id="66ac5-134">Minge **Andmed** > **Ekspordid**.</span><span class="sxs-lookup"><span data-stu-id="66ac5-134">Go to **Data** > **Exports**.</span></span>
 
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="793a7-149">![Kolm vertikaalset punkti](media/export-destinations-page-ellipsis.png "Kolm vertikaalset punkti")</span><span class="sxs-lookup"><span data-stu-id="793a7-149">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+1. <span data-ttu-id="66ac5-135">Redigeerimisõiguseta kasutajad valivad **Vaade** eksportimise üksikasjade vaatamiseks **Redigeeri** asemel.</span><span class="sxs-lookup"><span data-stu-id="66ac5-135">Users without edit permissions select **View** instead of **Edit** see the export details.</span></span>
 
-1. <span data-ttu-id="793a7-150">Valige rippmenüüst suvand **Redigeeri**.</span><span class="sxs-lookup"><span data-stu-id="793a7-150">Select **Edit** from the dropdown menu.</span></span>
+1. <span data-ttu-id="66ac5-136">Sellel kõrvalpaanil kuvatakse ekspordi seadistus.</span><span class="sxs-lookup"><span data-stu-id="66ac5-136">This side pane shows the set up of this export.</span></span> <span data-ttu-id="66ac5-137">Ilma redigeerimisõiguseta ei saa väärtusi muuta.</span><span class="sxs-lookup"><span data-stu-id="66ac5-137">Without edit permissions, you can't change values.</span></span> <span data-ttu-id="66ac5-138">Valige **Sulge** ekspordilehele naasmiseks.</span><span class="sxs-lookup"><span data-stu-id="66ac5-138">Select **Close** to return to the exports page.</span></span>
 
-1. <span data-ttu-id="793a7-151">Muutke väärtusi, mis vajavad värskendamist, ja valige **Salvesta**.</span><span class="sxs-lookup"><span data-stu-id="793a7-151">Change the values that require update and select **Save**.</span></span>
+## <a name="run-exports-on-demand"></a><span data-ttu-id="66ac5-139">Käita ekspordid nõudmisel</span><span class="sxs-lookup"><span data-stu-id="66ac5-139">Run exports on demand</span></span>
 
-## <a name="export-data-on-demand"></a><span data-ttu-id="793a7-152">Andmete eksport nõudmisel</span><span class="sxs-lookup"><span data-stu-id="793a7-152">Export data on demand</span></span>
+<span data-ttu-id="66ac5-140">Pärast ekspordi konfigureerimist käitatakse see iga [kavandatud värskendusega](system.md#schedule-tab) kui on olemas töötav ühendus.</span><span class="sxs-lookup"><span data-stu-id="66ac5-140">After configuring an export, it will run with every [scheduled refresh](system.md#schedule-tab) as long as it has a working connection.</span></span>
 
-<span data-ttu-id="793a7-153">Pärast ekspordi sihtkoha konnektori konfigureerimist käivitatakse eksport iga [ajastatud värskendusega](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="793a7-153">After configuring a connector for an export destination, exports will run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+<span data-ttu-id="66ac5-141">Andmete eksportimiseks ilma ajastatud värskendamist ootamata minge **Andmed** > **Eksport**.</span><span class="sxs-lookup"><span data-stu-id="66ac5-141">To export data without waiting for a scheduled refresh, go to **Data** > **Exports**.</span></span> <span data-ttu-id="66ac5-142">Teil on kaks varianti.</span><span class="sxs-lookup"><span data-stu-id="66ac5-142">You have two options:</span></span>
 
-<span data-ttu-id="793a7-154">Andmete eksportimiseks ilma ajastatud värskendamist ootamata, avage vahekaart **Minu ekspordi sihtkohad** suvandis **Haldus** > **Ekspordi sihtkohad**.</span><span class="sxs-lookup"><span data-stu-id="793a7-154">To export data without waiting for a scheduled refresh, go the **My export destinations** tab on **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="66ac5-143">Kõigi ekspordite käivitamiseks valige **Käivita kõik** käsuribalt.</span><span class="sxs-lookup"><span data-stu-id="66ac5-143">To run all exports, select **Run all** in the command bar.</span></span> 
+- <span data-ttu-id="66ac5-144">Üksikekspordi käivitamiseks valige loendiüksuses vertikaalsed kolm punkti (...) ja valige siis **Käivita**.</span><span class="sxs-lookup"><span data-stu-id="66ac5-144">To run a single export, select the ellipsis (...) on a list item and then choose **Run**.</span></span>
 
-> [!div class="mx-imgBorder"]
-> <span data-ttu-id="793a7-155">![Kolm vertikaalset punkti](media/export-destinations-page-ellipsis.png "Kolm vertikaalset punkti")</span><span class="sxs-lookup"><span data-stu-id="793a7-155">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+## <a name="remove-an-export"></a><span data-ttu-id="66ac5-145">Ekspordi eemaldamine</span><span class="sxs-lookup"><span data-stu-id="66ac5-145">Remove an Export</span></span>
 
-- <span data-ttu-id="793a7-156">Kõigi ekspordi sihtkohtade samaaegse ekspordi käitamiseks valige loendi kohal käsk **Ekspordi**,</span><span class="sxs-lookup"><span data-stu-id="793a7-156">Select **Export** above the list to run the export to all export destinations simultaneously.</span></span>
-- <span data-ttu-id="793a7-157">Valige loendiüksuse järel kolmikpunkt (...) ja seejärel valige suvand **Ekspordi**, et käivitada eksportimine ühe ekspordi sihtkoha jaoks.</span><span class="sxs-lookup"><span data-stu-id="793a7-157">Select the ellipsis (...) after a list item and then choose the **Export** option to run the export for a single export destination.</span></span>
+1. <span data-ttu-id="66ac5-146">Minge **Andmed** > **Ekspordid**.</span><span class="sxs-lookup"><span data-stu-id="66ac5-146">Go to **Data** > **Exports**.</span></span>
 
-## <a name="remove-an-export-destination"></a><span data-ttu-id="793a7-158">Ekspordi sihtkoha eemaldamine</span><span class="sxs-lookup"><span data-stu-id="793a7-158">Remove an Export destination</span></span>
+1. <span data-ttu-id="66ac5-147">Klõpsake eemaldatava ekspordi juures kolmel vertikaalsel punktil.</span><span class="sxs-lookup"><span data-stu-id="66ac5-147">Select the vertical ellipsis for the Export you want to remove.</span></span>
 
-<span data-ttu-id="793a7-159">Ekspordi sihtkoha eemaldamiseks alustage lehelt **Ekspordi sihtkohad**.</span><span class="sxs-lookup"><span data-stu-id="793a7-159">To remove an Export destination, start from the main **Export destinations** page.</span></span>
+1. <span data-ttu-id="66ac5-148">Valige rippmenüüst **Eemalda**.</span><span class="sxs-lookup"><span data-stu-id="66ac5-148">Select **Remove** from the dropdown menu.</span></span>
 
-1. <span data-ttu-id="793a7-160">Klõpsake eemaldatava ekspordi sihtkoha juures kolmel vertikaalsel punktil.</span><span class="sxs-lookup"><span data-stu-id="793a7-160">Select the vertical ellipsis for the Export destination you want to remove.</span></span>
-
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="793a7-161">![Kolm vertikaalset punkti](media/export-destinations-page-ellipsis.png "Kolm vertikaalset punkti")</span><span class="sxs-lookup"><span data-stu-id="793a7-161">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
-
-2. <span data-ttu-id="793a7-162">Valige rippmenüüst **Eemalda**.</span><span class="sxs-lookup"><span data-stu-id="793a7-162">Select **Remove** from the dropdown menu.</span></span>
-
-3. <span data-ttu-id="793a7-163">Eemaldamise kinnitamiseks valige kinnitusekraanil **Eemalda**.</span><span class="sxs-lookup"><span data-stu-id="793a7-163">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
+1. <span data-ttu-id="66ac5-149">Eemaldamise kinnitamiseks valige kinnitusekraanil **Eemalda**.</span><span class="sxs-lookup"><span data-stu-id="66ac5-149">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

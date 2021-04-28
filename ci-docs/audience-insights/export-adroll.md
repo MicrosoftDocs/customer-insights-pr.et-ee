@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmete eksportimine AdRolli
-description: Vaadake, kuidas konfigureerida ühendust AdRolliga.
-ms.date: 02/15/2021
+description: Lugege, kuidas konfigureerida ühendust ja eksportida AdRoll-i.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,67 +9,76 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6fedd549c2e7de362f36e3fb23d363200bb92a04
-ms.sourcegitcommit: d24e52150fe5a4fab45128e12d6a03637771d9b9
+ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "5697069"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895954"
 ---
-# <a name="connector-for-adroll-preview"></a><span data-ttu-id="92a6f-103">AdRolli konnektor (eelversioon)</span><span class="sxs-lookup"><span data-stu-id="92a6f-103">Connector for AdRoll (preview)</span></span>
+# <a name="export-segment-lists-to-adroll-preview"></a><span data-ttu-id="46497-103">Segmendiloendite eksportimine AdRoll-i (eelversioon)</span><span class="sxs-lookup"><span data-stu-id="46497-103">Export segment lists to AdRoll (preview)</span></span>
 
-<span data-ttu-id="92a6f-104">Eksportige kliendi koondprofiili segmendid AdRolli ja kasutage neid reklaamimiseks.</span><span class="sxs-lookup"><span data-stu-id="92a6f-104">Export segments of unified customer profiles to AdRoll and use them for advertising.</span></span> 
+<span data-ttu-id="46497-104">Eksportige kliendi koondprofiili segmendid AdRolli ja kasutage neid reklaamimiseks.</span><span class="sxs-lookup"><span data-stu-id="46497-104">Export segments of unified customer profiles to AdRoll and use them for advertising.</span></span> 
 
-## <a name="prerequisites"></a><span data-ttu-id="92a6f-105">Eeltingimused</span><span class="sxs-lookup"><span data-stu-id="92a6f-105">Prerequisites</span></span>
+## <a name="prerequisites-for-a-connection"></a><span data-ttu-id="46497-105">Ühenduse eeltingimus</span><span class="sxs-lookup"><span data-stu-id="46497-105">Prerequisites for a connection</span></span>
 
--   <span data-ttu-id="92a6f-106">Teil on [AdRolli konto](https://www.adroll.com/) ja asjakohane administraatori identimisteave.</span><span class="sxs-lookup"><span data-stu-id="92a6f-106">You have an [AdRoll account](https://www.adroll.com/) and corresponding administrator credentials.</span></span>
--   <span data-ttu-id="92a6f-107">Olete sihtrühmaülevaadetes [segmendid konfigureerinud](segments.md).</span><span class="sxs-lookup"><span data-stu-id="92a6f-107">You have [configured segments](segments.md) in audience insights.</span></span>
--   <span data-ttu-id="92a6f-108">Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.</span><span class="sxs-lookup"><span data-stu-id="92a6f-108">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
+-   <span data-ttu-id="46497-106">Teil on [AdRolli konto](https://www.adroll.com/) ja asjakohane administraatori identimisteave.</span><span class="sxs-lookup"><span data-stu-id="46497-106">You have an [AdRoll account](https://www.adroll.com/) and corresponding administrator credentials.</span></span>
+-   <span data-ttu-id="46497-107">Olete sihtrühmaülevaadetes [segmendid konfigureerinud](segments.md).</span><span class="sxs-lookup"><span data-stu-id="46497-107">You have [configured segments](segments.md) in audience insights.</span></span>
+-   <span data-ttu-id="46497-108">Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.</span><span class="sxs-lookup"><span data-stu-id="46497-108">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
 
-## <a name="connect-to-adroll"></a><span data-ttu-id="92a6f-109">Ühenda AdRolliga</span><span class="sxs-lookup"><span data-stu-id="92a6f-109">Connect to AdRoll</span></span>
+## <a name="known-limitations"></a><span data-ttu-id="46497-109">Teadaolevad piirangud</span><span class="sxs-lookup"><span data-stu-id="46497-109">Known limitations</span></span>
 
-1. <span data-ttu-id="92a6f-110">Avage **Haldus** > **Ekspordi sihtkohad**.</span><span class="sxs-lookup"><span data-stu-id="92a6f-110">Go to **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="46497-110">AdRolli saate ühe ekspordi kohta eksportida kuni 250 000 profiili.</span><span class="sxs-lookup"><span data-stu-id="46497-110">You can export up to 250'000 profiles in per export to AdRoll.</span></span>
+- <span data-ttu-id="46497-111">Vähem kui 100 profiiliga segmente ei saa AdRolli eksportida.</span><span class="sxs-lookup"><span data-stu-id="46497-111">You can't export segments with fewer than 100 profiles to AdRoll.</span></span> 
+- <span data-ttu-id="46497-112">AdRolli saab eksportida ainult segmente.</span><span class="sxs-lookup"><span data-stu-id="46497-112">Exporting to AdRoll is limited to segments.</span></span>
+- <span data-ttu-id="46497-113">Kuni 250 000 profiili eksportimiseks AdRolli võib kuluda kuni 10 minutit.</span><span class="sxs-lookup"><span data-stu-id="46497-113">Exporting up to 250'000 profiles to AdRoll can take up to 10 minutes to complete.</span></span> 
+- <span data-ttu-id="46497-114">AdRolli eksporditavate profiilide arv sõltub AdRollga sõlmitud lepingust ja on sellega piiratud.</span><span class="sxs-lookup"><span data-stu-id="46497-114">The number of profiles that you can export to AdRoll is dependent and limited on your contract with AdRoll.</span></span>
 
-1. <span data-ttu-id="92a6f-111">Tehke jaotises **AdRoll** valik **Seadista**.</span><span class="sxs-lookup"><span data-stu-id="92a6f-111">Under **AdRoll**, select **Set up**.</span></span>
+## <a name="set-up-connection-to-adroll"></a><span data-ttu-id="46497-115">Ühenduse loomine AdRoll'iga</span><span class="sxs-lookup"><span data-stu-id="46497-115">Set up connection to AdRoll</span></span>
 
-1. <span data-ttu-id="92a6f-112">Sisestage väljale **Kuvatav nimi** oma ekspordi sihtkoha äratuntav nimi.</span><span class="sxs-lookup"><span data-stu-id="92a6f-112">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="46497-116">Minge **Administraator** > **Ühendused**.</span><span class="sxs-lookup"><span data-stu-id="46497-116">Go to **Admin** > **Connections**.</span></span>
 
-   :::image type="content" source="media/AdRoll_config.PNG" alt-text="AdRolli ühenduse konfiguratsioonipaan.":::
+1. <span data-ttu-id="46497-117">Valige **Lisa ühendus** ja valige **AdRoll** ühenduse konfigureerimiseks.</span><span class="sxs-lookup"><span data-stu-id="46497-117">Select **Add connection** and choose **AdRoll** to configure the connection.</span></span>
 
-1. <span data-ttu-id="92a6f-114">**Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.</span><span class="sxs-lookup"><span data-stu-id="92a6f-114">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+1. <span data-ttu-id="46497-118">Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**.</span><span class="sxs-lookup"><span data-stu-id="46497-118">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="46497-119">Ühenduse nimi ja tüüp kirjeldavad ühendust.</span><span class="sxs-lookup"><span data-stu-id="46497-119">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="46497-120">Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.</span><span class="sxs-lookup"><span data-stu-id="46497-120">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="92a6f-115">Valige **Ühenda**, et käivitada ühendus AdRolliga.</span><span class="sxs-lookup"><span data-stu-id="92a6f-115">Select **Connect** to initialize the connection to AdRoll.</span></span>
+1. <span data-ttu-id="46497-121">Valige, kes saavad seda ühendust kasutada.</span><span class="sxs-lookup"><span data-stu-id="46497-121">Choose who can use this connection.</span></span> <span data-ttu-id="46497-122">Kui te midagi ei tee, on vaikeväärtuseks Administraatorid.</span><span class="sxs-lookup"><span data-stu-id="46497-122">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="46497-123">Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="46497-123">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="92a6f-116">Valige **Autentimine AdRolliga** ja sisestage oma AdRolli administraatori identimisteave.</span><span class="sxs-lookup"><span data-stu-id="92a6f-116">Select **Authenticate with AdRoll** and provide your admin credentials for AdRoll.</span></span> 
+1. <span data-ttu-id="46497-124">**Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.</span><span class="sxs-lookup"><span data-stu-id="46497-124">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
 
-1. <span data-ttu-id="92a6f-117">Valige **Lisa mind ekspordikasutajana** ja sisestage oma Customer Insightsi identimisteave.</span><span class="sxs-lookup"><span data-stu-id="92a6f-117">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
+1. <span data-ttu-id="46497-125">Valige **Ühenda**, et käivitada ühendus AdRolliga.</span><span class="sxs-lookup"><span data-stu-id="46497-125">Select **Connect** to initialize the connection to AdRoll.</span></span>
 
-1. <span data-ttu-id="92a6f-118">Sisestage **AdRolli reklaamija ID** [AdRoll Advertisable](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles).</span><span class="sxs-lookup"><span data-stu-id="92a6f-118">Enter your **AdRoll Advertiser ID** [AdRoll Advertisable](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles).</span></span>
+1. <span data-ttu-id="46497-126">Valige **Autentimine AdRolliga** ja sisestage oma AdRolli administraatori identimisteave.</span><span class="sxs-lookup"><span data-stu-id="46497-126">Select **Authenticate with AdRoll** and provide your admin credentials for AdRoll.</span></span> 
 
-1. <span data-ttu-id="92a6f-119">Ekspordi konfigureerimiseks valige **Edasi**.</span><span class="sxs-lookup"><span data-stu-id="92a6f-119">Select **Next** to configure the export.</span></span>
+1. <span data-ttu-id="46497-127">Valige **Lisa mind ekspordikasutajana** ja sisestage oma Customer Insightsi identimisteave.</span><span class="sxs-lookup"><span data-stu-id="46497-127">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
 
-## <a name="configure-the-connector"></a><span data-ttu-id="92a6f-120">Konnektori konfigureerimine</span><span class="sxs-lookup"><span data-stu-id="92a6f-120">Configure the connector</span></span>
+1. <span data-ttu-id="46497-128">Ühenduse loomiseks valige **Salvesta**.</span><span class="sxs-lookup"><span data-stu-id="46497-128">Select **Save** to complete the connection.</span></span>
 
-1. <span data-ttu-id="92a6f-121">Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi.</span><span class="sxs-lookup"><span data-stu-id="92a6f-121">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> <span data-ttu-id="92a6f-122">See on vajalik segmentide eksportimiseks AdRolli.</span><span class="sxs-lookup"><span data-stu-id="92a6f-122">It's required to export segments to AdRoll.</span></span>
+## <a name="configure-an-export"></a><span data-ttu-id="46497-129">Ekspordi konfigureerimine</span><span class="sxs-lookup"><span data-stu-id="46497-129">Configure an export</span></span>
 
-1. <span data-ttu-id="92a6f-123">Valige segmendid, mille soovite eksportida.</span><span class="sxs-lookup"><span data-stu-id="92a6f-123">Select the segments you want to export.</span></span> <span data-ttu-id="92a6f-124">Valige vähemalt 100 liikmega segment.</span><span class="sxs-lookup"><span data-stu-id="92a6f-124">Select a segment with a least 100 members.</span></span> <span data-ttu-id="92a6f-125">Väiksemaid segmente ei saa eksportida.</span><span class="sxs-lookup"><span data-stu-id="92a6f-125">You can't export smaller segments.</span></span> <span data-ttu-id="92a6f-126">Lisaks on eksporditava segmendi maksimummaht 250 000 liiget ekspordi kohta.</span><span class="sxs-lookup"><span data-stu-id="92a6f-126">Additionally the maximum size of a segment to export is 250'000 members per export.</span></span> 
+<span data-ttu-id="46497-130">Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida.</span><span class="sxs-lookup"><span data-stu-id="46497-130">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="46497-131">Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="46497-131">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-1. <span data-ttu-id="92a6f-127">Valige **Salvesta**.</span><span class="sxs-lookup"><span data-stu-id="92a6f-127">Select **Save**.</span></span>
+1. <span data-ttu-id="46497-132">Minge **Andmed** > **Ekspordid**.</span><span class="sxs-lookup"><span data-stu-id="46497-132">Go to **Data** > **Exports**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="92a6f-128">Andmete eksportimine</span><span class="sxs-lookup"><span data-stu-id="92a6f-128">Export the data</span></span>
+1. <span data-ttu-id="46497-133">Valige uue ekspordi loomiseks **Lisa sihtkoht**.</span><span class="sxs-lookup"><span data-stu-id="46497-133">To create a new export, select **Add destination**.</span></span>
 
-<span data-ttu-id="92a6f-129">Saate [vajadusel andmeid eksportida](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="92a6f-129">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="92a6f-130">Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="92a6f-130">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+1. <span data-ttu-id="46497-134">Valige **Ekspordiühendus** väljal ühendus AdRoll jaotisest.</span><span class="sxs-lookup"><span data-stu-id="46497-134">In the **Connection for export** field, choose a connection from the AdRoll section.</span></span> <span data-ttu-id="46497-135">Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.</span><span class="sxs-lookup"><span data-stu-id="46497-135">If you don't see this section name, there are no connections of this type available to you.</span></span>
 
-## <a name="known-limitations"></a><span data-ttu-id="92a6f-131">Teadaolevad piirangud</span><span class="sxs-lookup"><span data-stu-id="92a6f-131">Known limitations</span></span>
+1. <span data-ttu-id="46497-136">Sisestage oma **AdRoll Advertiser ID** Lisateavet leiate teemast [AdRoll Advertiser profiilid](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).</span><span class="sxs-lookup"><span data-stu-id="46497-136">Enter your **AdRoll Advertiser ID** For more information, see [AdRoll Advertiser Profiles](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).</span></span>
 
-- <span data-ttu-id="92a6f-132">AdRolli saate ühe ekspordi kohta eksportida kuni 250 000 profiili.</span><span class="sxs-lookup"><span data-stu-id="92a6f-132">You can export up to 250'000 profiles in per export to AdRoll.</span></span>
-- <span data-ttu-id="92a6f-133">Vähem kui 100 profiiliga segmente ei saa AdRolli eksportida.</span><span class="sxs-lookup"><span data-stu-id="92a6f-133">You can't export segments with fewer than 100 profiles to AdRoll.</span></span> 
-- <span data-ttu-id="92a6f-134">AdRolli saab eksportida ainult segmente.</span><span class="sxs-lookup"><span data-stu-id="92a6f-134">Exporting to AdRoll is limited to segments.</span></span>
-- <span data-ttu-id="92a6f-135">Kuni 250 000 profiili eksportimiseks AdRolli võib kuluda kuni 10 minutit.</span><span class="sxs-lookup"><span data-stu-id="92a6f-135">Exporting up to 250'000 profiles to AdRoll can take up to 10 minutes to complete.</span></span> 
-- <span data-ttu-id="92a6f-136">AdRolli eksporditavate profiilide arv sõltub AdRollga sõlmitud lepingust ja on sellega piiratud.</span><span class="sxs-lookup"><span data-stu-id="92a6f-136">The number of profiles that you can export to AdRoll is dependent and limited on your contract with AdRoll.</span></span>
+3. <span data-ttu-id="46497-137">Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi.</span><span class="sxs-lookup"><span data-stu-id="46497-137">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> <span data-ttu-id="46497-138">See on vajalik segmentide eksportimiseks AdRolli.</span><span class="sxs-lookup"><span data-stu-id="46497-138">It's required to export segments to AdRoll.</span></span>
 
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="92a6f-137">Andmete privaatsus ja nõuetele vastavus</span><span class="sxs-lookup"><span data-stu-id="92a6f-137">Data privacy and compliance</span></span>
+1. <span data-ttu-id="46497-139">Valige segmendid, mille soovite eksportida.</span><span class="sxs-lookup"><span data-stu-id="46497-139">Select the segments you want to export.</span></span> <span data-ttu-id="46497-140">Valige vähemalt 100 liikmega segment.</span><span class="sxs-lookup"><span data-stu-id="46497-140">Select a segment with a least 100 members.</span></span> <span data-ttu-id="46497-141">Väiksemaid segmente ei saa eksportida.</span><span class="sxs-lookup"><span data-stu-id="46497-141">You can't export smaller segments.</span></span> <span data-ttu-id="46497-142">Lisaks on eksporditava segmendi maksimummaht 250 000 liiget ekspordi kohta.</span><span class="sxs-lookup"><span data-stu-id="46497-142">Additionally the maximum size of a segment to export is 250'000 members per export.</span></span> 
 
-<span data-ttu-id="92a6f-138">Kui lubate Dynamics 365 Customer Insightsil AdRolli andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed).</span><span class="sxs-lookup"><span data-stu-id="92a6f-138">When you enable Dynamics 365 Customer Insights to transmit data to AdRoll, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="92a6f-139">Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et AdRoll täidab kõik teie privaatsus- või turbenõuded.</span><span class="sxs-lookup"><span data-stu-id="92a6f-139">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that AdRoll meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="92a6f-140">Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="92a6f-140">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+1. <span data-ttu-id="46497-143">Valige **Salvesta**.</span><span class="sxs-lookup"><span data-stu-id="46497-143">Select **Save**.</span></span>
 
-<span data-ttu-id="92a6f-141">Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.</span><span class="sxs-lookup"><span data-stu-id="92a6f-141">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
+<span data-ttu-id="46497-144">Ekspordi salvestamine ei käivita eksporti kohe.</span><span class="sxs-lookup"><span data-stu-id="46497-144">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="46497-145">Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="46497-145">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="46497-146">Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="46497-146">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
+
+
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="46497-147">Andmete privaatsus ja nõuetele vastavus</span><span class="sxs-lookup"><span data-stu-id="46497-147">Data privacy and compliance</span></span>
+
+<span data-ttu-id="46497-148">Kui lubate Dynamics 365 Customer Insightsil AdRolli andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed).</span><span class="sxs-lookup"><span data-stu-id="46497-148">When you enable Dynamics 365 Customer Insights to transmit data to AdRoll, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="46497-149">Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et AdRoll täidab kõik teie privaatsus- või turbenõuded.</span><span class="sxs-lookup"><span data-stu-id="46497-149">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that AdRoll meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="46497-150">Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="46497-150">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+
+<span data-ttu-id="46497-151">Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.</span><span class="sxs-lookup"><span data-stu-id="46497-151">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
