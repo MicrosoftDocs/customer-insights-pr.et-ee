@@ -1,7 +1,7 @@
 ---
 title: LiveRamp konnektor
-description: Vaadake, kuidas eksportida andmeid LiveRampi.
-ms.date: 12/02/2020
+description: Lugege, kuidas konfigureerida ühendust ja eksportida LiveRampi.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,31 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6ef4388b0e8ba8bc5866807765d8a872d41c9c14
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597552"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760322"
 ---
-# <a name="liverampreg-connector-preview"></a>LiveRamp&reg;i konnektor (eelvaade)
+# <a name="export-segments-to-liverampreg-preview"></a>Segmentide eksportimine LiveRamp&reg; (eelversioon)
 
-Aktiveerige oma andmed LiveRampis, et luua ühendus üle 500 digi-, sotsiaal- ja teleökosüsteemi platvormiga. Töötage LiveRampis oma andmetega, et sihistada, tõkestada ja isikupärastada reklaamikampaaniaid.
+Aktiveerige oma andmed LiveRampis, et luua ühendus üle 500 platvormiga nii digitaalmeedias, sotsiaalmeedias kui ka televisioonis. Töötage LiveRampis oma andmetega, et sihistada, tõkestada ja isikupärastada reklaamikampaaniaid.
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites-for-a-connection"></a>Ühenduse eeltingimus
 
 - Selle konnektori kasutamiseks vajate LiveRampi tellimust.
 - Tellimuse hankimiseks võtke otse [LiveRampiga ühendust](https://liveramp.com/contact/). [Lisateave LiveRampi kasutuselevõtu kohta](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>LiveRampiga ühendamine
+## <a name="set-up-connection-to-liveramp"></a>Ühenduse loomine LiveRampiga
 
-1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Eksportimise sihtkohad**.
+1. Minge **Administraator** > **Ühendused**.
 
-1. Valige paanil **LiveRamp** suvand **Seadista**.
+1. Valige **Lisa ühendus** ja valige **LiveRamp** ühenduse konfigureerimiseks.
 
-1. Sisestage väljale **Kuvatav nimi** oma sihtkoha äratuntav nimi.
+1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
+
+1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Sisestage oma LiveRampi Secure FTP (SFTP) konto **kasutajanimi** ja **parool**.
 See identimisteave võib erineda teie LiveRampi kasutuselevõtu identimisteabest.
@@ -40,15 +42,25 @@ See identimisteave võib erineda teie LiveRampi kasutuselevõtu identimisteabest
 
 1. Pärast edukat kinnitamist andke oma nõusolek **Andmete privaatsus ja nõuetele vastavuse** jaoks, valides märkeruudu **Nõustun**.
 
-1. Valige suvand **Järgmine**, et häälestada LiveRampi konnektor.
+1. Ühenduse loomiseks valige **Salvesta**.
 
-## <a name="configure-the-connector"></a>Konnektori konfigureerimine
+## <a name="configure-an-export"></a>Ekspordi konfigureerimine
+
+Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+
+1. Minge **Andmed** > **Ekspordid**.
+
+1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+
+1. Valige **Ekspordiühendus** väljal ühendus LiveRamp jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
 
 1. Valige väljal **Peamise identifikaatori valimine** kas **Meil**, **Nimi ja aadress** või **Telefon**, et saata LiveRampi identimise jaoks.
+   > [!div class="mx-imgBorder"]
+   > ![LiveRampi konnektor atribuutide vastendamisega](media/export-liveramp-segments.png "LiveRampi konnektor atribuutide vastendamisega")
 
 1. Vastendage vastavad atribuudid valitud põhiidentifikaatori ühtsest kliendiolemist.
 
-1. Valige suvand **Lisa atribuut**, et vastendada LiveRampi saatmiseks täiendavaid atribuute.
+1. Valige **Lisa atribuut**, et kaardistada rohkem atribuute LiveRampile saatmiseks.
 
    > [!TIP]
    > Rohkemate põhiidentifikaatorite LiveRampi saatmisel on vastete määr tõenäoliselt suurem.
@@ -57,13 +69,10 @@ See identimisteave võib erineda teie LiveRampi kasutuselevõtu identimisteabest
 
 1. Valige **Salvesta**.
 
-> [!div class="mx-imgBorder"]
-> ![LiveRampi konnektor atribuutide vastendamisega](media/export-liveramp-segments.png "LiveRampi konnektor atribuutide vastendamisega")
+Ekspordi salvestamine ei käivita eksporti kohe.
 
-## <a name="export-the-data"></a>Andmete eksportimine
+Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
 
-Eksportimine algab varsti, kui kõik eksportimiseks vajalikud eeltingimused on täidetud. Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).
-Pärast eksportimise lõpuleviimist saate oma andmete aktiveerimiseks ja levitamiseks LiveRampi kasutuselevõttu sisse logida.
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 

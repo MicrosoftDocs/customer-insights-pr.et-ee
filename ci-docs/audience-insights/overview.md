@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598625"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896460"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Sihtrühma ülevaated Dynamics 365 Customer Insights ülevaatest
 
@@ -27,9 +27,9 @@ Sihtrühmaülevaated aitavad teil oma klientidest põhjalikuma ülevaate luua. 3
   - Saate andmed hõlpsasti ühendada ja ühtlustada, [kasutades eelkoostatud konnektoreid](data-sources.md), et hankida populaarsetest andmeallikatest tehingute, vaatluste ja käitumisega seotud andmed.
   - Saate kliendiandmeid targalt teisendada, koostades ühtlustatud kliendiprofiile, mis on kooskõlas [Common Data Modeliga](/common-data-model/). Saate lahendada kliendi identiteedi AI-/ML-põhiste soovituste abil.
 
-- **Saate rikastada Microsoft Graphis sisalduva sihtrühma teavet**
+- **Rikastage vaatajaskonna intelligentsusega**
 
-  - Saate luua rikkalikumaid kliendiprofiile, kasutades rakenduses [Microsoft Graph sisalduva sihtrühma teabest tuletatud andmeid](enrichment-microsoft-graph.md).  
+  - Looge rikkalikke kliendiprofiile [rikastatud andmete lisamisega](enrichment-hub.md).  
 
 - **Saate edendada oma äriprotsesse ja isikupärastatud kliendikogemust**
 
@@ -43,7 +43,7 @@ Sihtrühmaülevaated aitavad teil oma klientidest põhjalikuma ülevaate luua. 3
 
   - Juurdepääs konnektorite rikkalikule valikule, et valmendada kõik kliendiandmed.
   - Kliendiandmete ühtlustamise ja [Common Data Modeli](/common-data-model/) vormingusse teisendamise funktsioon.
-  - Saate rikastada klienditeavet rakenduses Microsoft Graph sisalduva sihtrühma teabega, nt kaubamärgi külgetõmme ja huvid.
+  - Rikastage klienditeavet vaatajaskonna intelligentsuse, näiteks kaubamärgi huvi ja omandiõiguse põhjal.
   - „Koodi asemel klõpsud“ konfiguratsioon ja silumisfunktsioon, mis aitavad sihtrühmaülevaateid hõlpsasti konfigureerida ja tuvastada võimalikud probleemid.
   - Saate puhastada ja standardida erinevatest allikatest pärinevaid kliendiandmeid AI-põhiste soovituste abil.  
 

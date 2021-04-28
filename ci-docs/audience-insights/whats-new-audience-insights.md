@@ -1,7 +1,7 @@
 ---
 title: Uued ja tulevased funktsioonid
 description: Teave uute funktsioonide, täiustuste ja veaparanduste kohta.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598426"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896230"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Mis on uut Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis?
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598426"
 
 Meil on hea meel teatada uusimatest värskendustest. Selles artiklis võetakse kokku avaliku eelversiooni funktsioonid, üldise kättesaadavuse täiustused ja funktsiooni värskendused. Pikaajaliste funktsiooni plaane vaadake teemast [Dynamics 365 ja Power Platformi väljaandeplaanid](/dynamics365/release-plans/).
 
-Viimase kuue kuu jooksul kavandatud võimaluste kohta leiate lisateavet ka järgmistest videotest.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha funktsioone enne teisi. Kui see pole teisiti määratud teisiti, ei pea te tegema mingeid toiminguid ja värskendame rakendust automaatselt ilma seisakuteta.
 
 > [!TIP]
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Märts 2021 värskendused
+
+2021. aasta märtsi värskendused sisaldavad mitmeid funktsioone, jõudluse versiooniuuendusi ja veaparandusi.
+
+### <a name="activities"></a>Tegevused 
+
+- **Tegevuseviisard ja semantilised tüübid** Oleme oma tegevuse kaardistamise kogemust täiustanud ja värskendanud, et juhendada ja lihtsustada tegevuse kaardistamise loomist. Selles uues kogemuses saavad kasutajad juhendatud kogemuse, et aidata protsessi iga etapi lõpuleviimist. Tegevuse kaardistamise etapis saab kasutaja lisaks paljude tegevusetüüpide vahel valimisele valida andmete semantilise kaardistamise järgnevaks: *Tellimus* ja/või *Müügitellimusye rida* tegevusvaldkonna standardsetele skeemidele, mida saab kasutada edaspidise tarbimise jaoks.    
+  Lisateavet vt teemast [Klienditegevused](activities.md).
+
+### <a name="data-ingestion"></a>Andmete valmendamine
+
+- **Looge ühendus asutusesiseste andmeallikatega, kasutades Power Platform andmevoogu ja väravaid** Meil on hea meel teatada Power Platform andme voogude ja asutusesisese ühenduvuse kasutamise väravate eelvaatest Customer Insights'is, seostatud Power Platform või Dataverse keskkonnaga. Mis tahes uued Customer Insights keskkonnas lingitud Dataverse keskkonnaga loodud andmeallikad on vaikimisi Power Platform andmevood, mis toovad kaasa asutusesisene ja rikkaliku pistikute ja muundamisvõimaluste komplekti.
+
+### <a name="extensibility"></a>Laiendatavus
+
+- **Ekspordid, mis on korraldatud ühenduste ja ekspordiga** Oleme muutnud lehe **Ekspordi sihtkohad** nime **Ühendused** ja lisanud **Ekspordi** jaoks eraldi lehe. Selle värskenduse osana teisaldame olemasoleva ekspordi ühenduse paarideks ja selle ühenduse abil eksportimiseks. Administraatoritel on nüüd väljaminevate andmete osas rohkem selgust **Ühendused** lehel. Kõigil kasutajarollidel on juurdepääs lehele **Ekspordid**, kuid ainult administraatorid saavad valida, kas kaastöötajad saavad jagatud ühendustega redigeerida teatud eksporti.     
+  Lisateavet leiate teemast [Ühenduste ülevaade](connections.md) ja [ja ekspordi ülevaade](export-destinations.md).
+
+- **Campaign Monitor eksportige segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates Campaign Monitori. Nüüd saate eksportida segmente Customer Insights Campaign Monitor loenditesse ja kasutada neid oma turunduskampaaniate lähteandmetena.    
+   Lisateavet leiate teemast [Eksportimine Campaign Monitori](export-campaign-monitor.md).
+
+- **Constant Contact ekspordi segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates Constant Contacti. Nüüd saate eksportida segmente Customer Insights Constant Contact loenditesse ja kasutada neid oma turunduskampaaniate lähteandmetena.   
+   Lisateavet leiate teemast [Eksportimine Constant Contacti](export-constant-contact.md).
+
+- **RollWorks ekspordi segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates RollWorksi. Nüüd saate eksportida segmente Customer Insights RollWorks publikule ja kasutada neid oma B2B turunduskampaaniate lähteandmetena.    
+   Lisateavet leiate teemast [Eksportimine RollWorksi ](export-rollworks.md).
+
+- **Snapchat ekspordi segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates Snapchati. Nüüd saate eksportida segmente Customer Insights Snapchat publikule ja kasutada neid oma turunduskampaaniate lähteandmetena.     
+   Lisateavet leiate teemast [Eksportimine Snapchati](export-snapchat.md).
+
+### <a name="predictions"></a>Prognoosid
+
+- **Tootefiltrite kasutamine prognoosivas toote soovituses** Oleme lisanud võimaluse kasutada tootefiltreid meie toote soovitusmudelis. Nüüd saate luua prognoosi, mis kasutab ainult teie toodete alamhulka.    
+   Lisateavet leiate teemast [Tootefiltrite konfigureerimine](predict-product-recommendation.md#configure-product-filters).
+
+- **Segmentide loomine prognoosimudelile** Oleme lisanud kiire viisi segmentide loomiseks, kasutades prognoosimudelit. Mudelitulemite lehel saate hõlpsasti luua uue segmendi, valides uue suvandi **Loo segment**.    
+  Lisateavet leiate teemast [Segmendi loomine prognoosimudeli põhjal](prediction-based-segment.md).
+
+- **Tootesoovituste seletused** Oleme lisanud teavet, mis selgitab peamisi tegureid, mida tehisintellekti mudel on tootesoovituste loomiseks õppinud, ja seda, mil määral need tegurid aitavad tootesoovitustele kaasa. See teave lisatakse mudelitulemite kuvale.    
+   Lisateavet leiate teemast [Prognoos oleku ja tulemuste läbivaatamine](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>2021. aasta veebruari värskendused
 
@@ -107,7 +144,7 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 
   Lisaks oleme lisanud uued seadistusvõimalused, et paremini kontrollida, kuidas soovite oma kliendiprofiile rikastada. 
 
-  Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft-graph.md).
+  Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft.md).
 
 - **Määrake, milliseid profiile rikastada**
 
@@ -309,8 +346,8 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
 
 - **Huvide afiinsuse rikastamine on saadaval rohkematel turgudel**
 
-  Laiendame USA-st väljapoole jäävate huvidega seotud rikastuste kättesaadavust veel viiel turul: Kanadal, Austraalias, Suurbritannias, Prantsusmaal ja Saksamaal. Selle laienduse abil saate rikastada oma kliendiandmeid nende turgude jaoks kehtivate huvidega. Me rikastame teie nendel turgudel asuvaid kliendiprofiile ka kasutades Microsoft Graphile kuuluvaid kohalikke andmeid.
-  Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft-graph.md)
+  Laiendame USA-st väljapoole jäävate huvidega seotud rikastuste kättesaadavust veel viiel turul: Kanadal, Austraalias, Suurbritannias, Prantsusmaal ja Saksamaal. Selle laienduse abil saate rikastada oma kliendiandmeid nende turgude jaoks kehtivate huvidega. Samuti rikastame teie kliendiprofiile, mis asuvad neil turgudel, kasutades Microsofti kohalikke varaandmeid.
+  Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>2020. aasta juuli värskendused
@@ -330,8 +367,8 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
 
 - **Brändi afiinsuse rikastamine on saadaval rohkematel turgudel**
 
-  Laiendame USA-st väljapoole jäävate brandiga seotud rikastuste kättesaadavust veel viiel turul: Kanadal, Austraalias, Suurbritannias, Prantsusmaal ja Saksamaal. Selle laiendusega saate rikastada oma kliendiandmeid nende turgude kohalike kaubamärkidega. Me rikastame teie nendel turgudel asuvaid kliendiprofiile ka kasutades Microsoft Graphile kuuluvaid kohalikke andmeid.
-  Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft-graph.md)
+  Laiendame USA-st väljapoole jäävate brandiga seotud rikastuste kättesaadavust veel viiel turul: Kanadal, Austraalias, Suurbritannias, Prantsusmaal ja Saksamaal. Selle laiendusega saate rikastada oma kliendiandmeid nende turgude kohalike kaubamärkidega. Samuti rikastame teie kliendiprofiile, mis asuvad neil turgudel, kasutades Microsofti kohalikke varaandmeid.
+  Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>2020. juuni värskendused
 
@@ -355,7 +392,7 @@ Lisaks on veerus **Üksikasjad** olevad tõrked palju üksikasjalikumad ja parem
 - **Eraldi kaubamärgi ja huvi ühtivuse rikastamine**
 
   Kaubamärkide ja huvide ühilduvused on nüüd saadaval kahe eraldi rikastamisena. Eraldatud rikastamine annab teile paindlikkuse nende eraldi konfigureerimiseks ja haldamiseks sõltuvalt teie ettevõtte vajadustest või vajadustest.    
-  Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft-graph.md).
+  Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Laiendatavus
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597184"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906851"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Tehinguvoolavuse prognoos (eelversioon)
 
@@ -46,6 +46,14 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
         - **Ajatempel:** primaarvõtmega tuvastatud sündmuse kuupäev ja kellaaeg.
         - **Sündmus:** sündmuse nimi, mida soovite kasutada. Näiteks väli nimega „UserAction“ võid toidupoe korral märkida, et klient kasutas kupongi.
         - **Üksikasjad:** sündmuse üksikasjalik teave. Näiteks väli nimega „CouponValue“ võib olla toidupoes kupongi rahaline väärtus.
+- Soovitatavad andmete omadused:
+    - Piisavad ajaloolised andmed: Tellimuse andmed vähemalt kahekordistatud valitud ajaaknas. Eelistatavalt kahe kuni kolme aasta tellimisandmed. 
+    - Mitu ostu kliendi kohta: ideaalne oleks vähemalt kaks tehingut kliendi kohta.
+    - Klientide arv: Vähemalt 10 kliendiprofiili, eelistatuult rohkem kui 1000 erinevat klienti. Mudel nurjub, kui kliente on vähem kui 10 ja puuduvad varasemad andmed.
+    - Andmete täielikkus: esitatud olemi andmeväljal on puuduvaid väärtuseid vähem kui 20%.
+
+> [!NOTE]
+> Ettevõtte jaoks, kelle klientide ostu sagedus on kõrge (iga paari nädala tagant), on soovitatav valida lühem prognoosiaken ja voolavuse määratlus. Ostude madal sagedus (iga paari kuu tagant või kord aastas) korral valige pikem prognoosiaken ja voolavuse määratlus.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Tehinguvoolavuse prognoosi loomine
 
@@ -129,7 +137,9 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
 1. Valige prognoos, mille soovite üle vaadata.
    - **Prognoosi nimi:** prognoosi loomisel sellele pandud nimi.
    - **Prognoosi tüüp:** prognoosi jaoks kasutatud mudeli tüüp
-   - **Väljundolem:** olemi nimi, kuhu talletatakse prognoosi väljund. Selle nimega olemi leiate jaotisest **Andmed** > **Olemid**.
+   - **Väljundolem:** olemi nimi, kuhu talletatakse prognoosi väljund. Selle nimega olemi leiate jaotisest **Andmed** > **Olemid**.    
+     Väljundolemis *Voolavuse tulemus* on prognoositud voolavuse tõenäosus ja *On voolavus* on binaarne märgis, mis põhineb *Voolavuse tulemusel* lävendiga 0,5. Vaikelävend ei pruugi teie stsenaariumi puhul töötada. [Looge uus segment](segments.md#create-a-new-segment) teie eelistatud lävendiga.
+     Kõik kliendid ei pruugi olla aktiivsed kliendid. Võimalik, et mõnel neist pole pikka aega ühtegi tegevust olnud ja neid peetakse juba "voolanuks", võttes aluseks teie voolavuse määratluse. Voolavuse riski prognoosimine klientide jaoks, kes on juba "voolanud", ei ole kasulik, kuna nad ei ole huvipakkuv publik.
    - **Prognoositav väli:** see väli täidetakse ainult kindlat tüüpi prognooside korral ja seda ei kasutata voolavuse prognoosimisel.
    - **Olek:** prognoosi käitamise olek.
         - **Järjekorras:** prognoos ootab muude protsesside käivitamist.

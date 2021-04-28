@@ -1,7 +1,7 @@
 ---
 title: Rikastamine kolmanda osapoole rikastamisteenusega ettevõttelt HERE Technologies
 description: Üldine teave ettevõtte HERE Technologies kolmanda osapoole rikastamise kohta.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 8e8d6bfea4e0df54682501f60759c24c893444af
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597736"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896046"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Kliendiprofiilide rikastamine ettevõtte HERE Technologies teenuste abil (eelversioon)
 
@@ -26,35 +26,54 @@ Ettevõtte HERE Technologies rikastamisteenuse konfigureerimiseks peavad olema t
 
 - Teil peab olema aktiivne ettevõtte HERE Technologies tellimus. Tellimuseks saate [registreeruda siin](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) või võtta otse [ühendust ettevõttega HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Lisateave ettevõtte HERE Technologies asukohapõhise rikastamise kohta.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Teil on ettevõtte HERE Technologies API võti.
+- HERE [-ühendus](connections.md) on saadaval *või* teil on [administraatoriõigused](permissions.md#administrator) ja HERE Technologies API-võti.
 
-- Teil on [administraatori](permissions.md#administrator) õigused.
+## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 
-## <a name="configuration"></a>Konfiguratsioon
+1. Avage **Andmed** > **Rikastamine**. 
 
-1. Avage **Andmed** > **Rikastamine**.
-
-1. Valige paanilt HERE Technologies **Rikasta mu andmeid**.
+1. Valige **Mu andmete rikastamine** HERE Technologies paanil ja valige **Alustamine**.
 
    > [!div class="mx-imgBorder"]
    > ![Paan „HERE Technologies“](media/HERE-tile.png "Paan „HERE Technologies“")
 
-1. Sisestage aktiivne **HERE Technologiese API võti**. Vaadake üle ja andke oma nõusolek **Andmete privaatsuse ja nõuetele vastavuse** jaoks, valides märkeruudu **Nõustun**. 
+1. Valige ripploendist [ühendus](connections.md). Kui ühendus pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate ühenduse luua, kui valite suvandi **Lisa ühendus**. Valige ripploendist suvand **HERE Technologies**. 
 
-1. Kinnitage mõlemad sisendid, valides **Loo ühendus HERE-ga**.
+1. Valige **Ühenda HERE Technologies**, et kinnitada valik.
 
-1.  Valige **Lisa andmed** ja valige **Kliendiandmete kogum**, mida soovite HERE Technologiesi asukohaandmetega rikastada. Saate valida olemi **Klient**, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
+1.  Valige **Edasi** ja valige **Kliendi andmekomplekt**, mida soovite HERE Technologies asukoha andmetega rikastada. Saate valida olemi **Klient**, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Kuvatõmmis kliendiandmete kogumi valimisel.":::
 
-1. Valige, kas soovite vastendada väljad esmase ja/või teisese aadressiga. Saate määrata väljavastendused mõlema aadressi jaoks (nt kodu- ja ettevõtte aadress) ning rikastada mõlema aadressi profiile eraldi. Tehke valik **Edasi**.
+1. Valige, kas soovite vastendada väljad esmase ja/või teisese aadressiga. Mõlemale aadressile saate määrata välja kaardistamise ja mõlema aadressi profiilid eraldi rikastada. Näiteks kui olemas on kodu- ja äriaadress. Tehke valik **Edasi**.
 
 1. Määratlege, milliseid teie koondatud profiilide välju tuleks kasutada, et otsida ettevõtte HERE Technologies teenuse kaudu ühtivaid asukohaandmeid. Valitud esmase ja/või teisese aadressi jaoks on vajalikud väljad **Tänav 1** ja **Sihtnumber**. Selleks et vasted oleksid täpsemad, saab lisada rohkem välju.
 
    > [!div class="mx-imgBorder"]
    > ![HERE Technologiese rikastamise konfigureerimise leht](media/enrichment-HERE-configuration.png "HERE Technologiese rikastamise konfigureerimise leht")
 
-1. Valige **Rakenda**, et lõpetada väljade vastendamine.
+1. Valige **Edasi**, et lõpetada väljade kaardistamine.
+
+1. Peate rikastamise jaoks sisestama nime. 
+
+1. Valige **Salvesta rikastamine** pärast valikute läbivaatamist.
+
+## <a name="configure-the-connection-for-here-technologies"></a>Konfigureerige ühendus HERE technologies jaoks 
+
+Ühenduste konfigureerimiseks peate olema administraator. Valige **Lisa ühendus** rikastamise konfigureerimisel *või* minge **Administraator** > **Ühendused** ja valige **Seadista** HERE Technologies paanil.
+
+1. Sisestage ühenduse nimi **Kuvatav nimi** väljale.
+
+1. Sisestage sobiv HERE Technologies API võti.
+
+1. Vaadake üle ja andke oma nõusolek **Andmete privaatsuse ja nõuetele vastavuse** jaoks, valides **Nõustun** märkeruudu
+
+1. Valige **Kontrolli** konfiguratsiooni valideerimiseks.
+
+1. Pärast kontrollimise lõpuleviimist valige **Salvesta**.
+
+> [!div class="mx-imgBorder"]
+   > ![HERE technologies ühenduse konfiguratsiooni leht](media/enrichment-HERE-connection.png "HERE technologies ühenduse konfiguratsiooni leht")
 
 ## <a name="enrichment-results"></a>Rikastamise tulemused
 

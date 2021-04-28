@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmete eksportimine SFTP hostidesse
-description: Teave selle kohta, kuidas konfigureerida ühendust SFTP hostiga.
-ms.date: 01/27/2021
+description: Lugege, kuidas konfigureerida ühendust ja eksportida SFTP asukohta.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,61 +9,70 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9ec14fafa8f99e34b95349371298082e166535d0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96c6026aded315008439740646827ca910cead90
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598380"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760414"
 ---
-# <a name="connector-for-sftp-preview"></a>SFTP konnektor (eelversioon)
+# <a name="export-segment-lists-and-other-data-to-sftp-preview"></a>Segmendiloendite ja muude andmete eksportimine SFTPsse (eelversioon)
 
-Kasutage oma kliendiandmeid kolmanda osapoole rakendustes, eksportides need turvalise failiedastuse protokolli (SFTP) hosti.
+Kliendiandmete kasutamiseks muude tootjate rakendustes eksportige need turvalise failiedastuse protokolli (SFTP) asukohta.
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites-for-connection"></a>Ühenduse eeltingimus
 
 - SFTP-hosti saadavus ja vastav identimisteave.
-
-## <a name="connect-to-sftp"></a>Ühenduse loomine SFTP-ga
-
-1. Avage **Haldus** > **Ekspordi sihtkohad**.
-
-1. Valige jaotises **SFTP** suvand **Seadistamine**.
-
-1. Sisestage väljale **Kuvatav nimi** oma sihtkoha äratuntav nimi.
-
-1. Sisestage oma SFTP konto jaoks **Kasutajanimi**, **Parool**, **Hostinimi** ja **Ekspordikaust**.
-
-1. Valige ühenduse testimiseks **Kinnita**.
-
-1. Pärast edukat kontrollimist valige, kas soovite eksportida oma andmed **GZIP-iks tihendatud** või **Tihendamata** kujul ja valige eksporditud failidele **väljaeraldaja**.
-
-1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
-
-1. Ekspordi konfigureerimise alustamiseks valige **Edasi**.
-
-## <a name="configure-the-export"></a>Ekspordi konfigureerimine
-
-1. Valige olemid, nt segmendid, mida soovite eksportida.
-
-   > [!NOTE]
-   > Igal valitud olemil on eksportimisel kuni viis väljundfaili. 
-
-1. Valige **Salvesta**.
-
-## <a name="export-the-data"></a>Andmete eksportimine
-
-Saate [vajadusel andmeid eksportida](export-destinations.md). Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
 - Ekspordi käitusaeg sõltub teie süsteemi jõudlusest. Soovitame teie serveri minimaalseks konfiguratsiooniks kahte protsessori tuuma ja 1 GB mälu. 
 - Kuni 100 miljoni kliendiprofiiliga olemite eksportimiseks võib kuluda 90 minutit, kui kasutate soovitatud minimaalset kahe protsessori tuuma ja 1 GB mäluga konfiguratsiooni. 
 
+## <a name="set-up-connection-to-sftp"></a>SFTP ühenduse loomine
+
+1. Minge **Administraator** > **Ühendused**.
+
+1. Valige **Lisa ühendus** ja valige **SFTP** ühenduse konfigureerimiseks.
+
+1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
+
+1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Sisestage oma SFTP konto jaoks **Kasutajanimi**, **Parool**, **Hostinimi** ja **Ekspordikaust**.
+
+1. Valige ühenduse testimiseks **Kinnita**.
+
+1. Valige, kas soovite eksportida oma andmed **Gzipped** või **Unzipped** ja **väljaeraldaja** eksporditavate failide jaoks.
+
+1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
+
+1. Ühenduse loomiseks valige **Salvesta**.
+
+## <a name="configure-an-export"></a>Ekspordi konfigureerimine
+
+Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+
+1. Minge **Andmed** > **Ekspordid**.
+
+1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+
+1. Valige **Ekspordiühendus** väljal ühendus SFTP jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+
+1. Valige olemid, nt segmendid, mida soovite eksportida.
+
+   > [!NOTE]
+   > Iga valitud olem tükeldatakse eksportimisel kuni viieks väljundfailiks. 
+
+1. Valige **Salvesta**.
+
+Ekspordi salvestamine ei käivita eksporti kohe.
+
+Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
+
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 
 Kui lubate Dynamics 365 Customer Insightsil SFTP kaudu andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed). Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et ekspordisihtkohad täidavad kõik teie privaatsus- või turbenõuded. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
 Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

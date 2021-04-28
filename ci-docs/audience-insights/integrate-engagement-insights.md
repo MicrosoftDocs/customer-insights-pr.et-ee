@@ -9,12 +9,12 @@ author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 14ebff30d3ec7fc52dca6f86136309a3f454fa27
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9a4cb77bb4c6ef0d88b3f00802f66baab5520a07
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597460"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896414"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Kaasamisülevaadete veebiandmete integreerimine sihtrühmaülevaadetega
 
@@ -46,7 +46,7 @@ Mida võtta arvesse täpsustatud sündmuste loomisel.
     - Signal.Action.Name – tähistab tegevuse üksikasju
     - Signal.User.Id – kasutatakse kliendi ID-ga vastendamiseks
     - Signal.View.Uri – kasutatakse veebiaadressina segmentide või mõõtude alusena
-    - Signal.Export.Id – kasutatakse sündmuste primaarvõtmena <!-- system generated, do we need to list?-->
+    - Signal.Export.Id – kasutatakse sündmuste primaarvõtmena
     - Signal.Timestamp – määratleb tegevuse kuupäeva ja kellaaja
 
 Valige filtrid, et keskenduda sündmustele ja lehtedele, mis teie kasutusjuhtumi jaoks olulised on. Selles näites kasutame tegevuse nime „Meilikampaania”.

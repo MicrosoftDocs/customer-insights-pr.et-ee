@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmete eksportimine Adobe Experience Platformi
 description: Lugege, kuidas kasutada Adobe Experience Platformi sihtrühmaülevaadete segmente.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596264"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760096"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Customer Insightsi segmentide kasutamine Adobe Experience Platformis (eelversioon)
 
@@ -51,21 +51,36 @@ Väljasaatmiseks mõeldud pakkumismeilis on eesnimi, perekonnanimi ja kliendi ko
 
 Kui sihtrühm on tuvastatud, saame konfigureerida ekspordi sihtrühmaülevaadetest Azure'i bloobimälu kontole.
 
-1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Eksportimise sihtkohad**.
+### <a name="configure-a-connection"></a>Ühenduse konfigureerimine
 
-1. Tehke paanil **Azure'i bloobimälu** valik **Häälestamine**.
+1. Minge **Administraator** > **Ühendused**.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure'i bloobimälu konfiguratsioonipaan.":::
+1. Valige **Lisa ühendus** ja valige **Azure Blob Storage** või valige **Seadista** **Azure Blob Storage** paanil:
 
-1. Sisestage uue ekspordisihtkoha jaoks **Kuvatav nimi** ja seejärel sisestage **Konto nimi**, **Konto võti** ja selle Azure'i bloobimälu **Ümbris**, kuhu soovite segmendi eksportida.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure'i bloobimälu konfiguratsioonipaan."::: ühenduse konfigureerimiseks.
+
+1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
+
+1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Sisestage **Konto nimi**, **Konto võti**, ja **Konteiner** Azure Blob Storage kontol, kuhu soovite segmendi eksportida.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Salvestusruumi konto konfiguratsiooni kuvatõmmis. "::: 
+   
+    - Lisateavet bloobimälu konto nime ja konto võtme otsimise kohta leiate [Azure portaalis salvestusruumi konto sätete haldamine](/azure/storage/common/storage-account-manage).
+    - Lisateavet konteineri loomise kohta leiate teemast [Konteineri loomine](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Lisateavet Azure'i bloobimälu konto nime ja kontovõtme kohta vaadake teemast [Salvestuskonto sätete haldamine Azure'i portaalis](/azure/storage/common/storage-account-manage).
+1. Ühenduse loomiseks valige **Salvesta**. 
 
-   - Lisateavet konteineri loomise kohta leiate teemast [Konteineri loomine](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Ekspordi konfigureerimine
 
-1. Tehke valik **Edasi**.
+Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+
+1. Minge **Andmed** > **Ekspordid**.
+
+1. Valige uue ekspordi loomiseks **Lisa eksport**.
+
+1. Valige **Ekspordiühendus** väljal ühendus Azure Blob Storage jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
 
 1. Valige segment, mille soovite eksportida. Selles näites on selleks **ChurnProneCustomers**.
 
@@ -73,11 +88,9 @@ Kui sihtrühm on tuvastatud, saame konfigureerida ekspordi sihtrühmaülevaadete
 
 1. Valige **Salvesta**.
 
-Pärast ekspordisihtkoha valimist leiate selle asukohast **Haldus** > **Ekspordid** > **Minu ekspordisihtkohad**.
+Pärast ekspordi sihtkoha salvestamist leiate selle **Andmed** > **Eksport**.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Esiletõstetud eksportide loendi ja näidissegmendi kuvatõmmis.":::
-
-Nüüd saate [nõudmisel segmendi](export-destinations.md#export-data-on-demand) Eksport käivitub ka iga [ajastatud värskendamisega](system.md).
+Nüüd saate [nõudmisel segmendi](export-destinations.md#run-exports-on-demand) Eksport käivitub ka iga [ajastatud värskendamisega](system.md).
 
 > [!NOTE]
 > Veenduge, et eksporditud segmendi kirjete arv jääb Adobe Campaign Standardi litsentsi lubatud piiridesse.

@@ -1,7 +1,7 @@
 ---
 title: Keskkondade loomine ja haldamine
 description: Siit leiate teavet selle kohta, kuidas teenuse kasutamiseks registreeruda ja kuidas keskkondasid hallata.
-ms.date: 02/01/2021
+ms.date: 03/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598288"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887981"
 ---
 # <a name="manage-environments"></a>Keskkondade haldamine
 
@@ -44,6 +44,9 @@ Selles artiklis kirjeldatakse, kuidas luua uut organisatsiooni ja kuidas keskkon
 
 Uue keskkonna loomiseks on kaks võimalust. Saate määrata kas täiesti uue konfiguratsiooni või kopeerida teatud konfiguratsioonisätteid olemasolevast keskkonnast.
 
+> [!NOTE]
+> Organisatsioonid saavad iga Customer Insights litsentsi jaoks luua *kaks* keskkonda. Kui teie organisatsioon ostab rohkem kui ühe litsentsi, palun [pöörduge meie tugimeeskonna](https://go.microsoft.com/fwlink/?linkid=2079641) poole, et suurendada vabade keskkondade arvu. Võimsuse ja lisandmooduli võimsuse kohta lisateabe saamiseks laadige alla [Dynamics 365 litsentsimisjuhend](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 Uue keskkonna loomine.
 
 1. Valige rakenduse päises valija **Environment** (Keskkond).
@@ -55,14 +58,14 @@ Uue keskkonna loomine.
 
 1. Valige dialoogist **Uue keskkonna loomine** suvand **Uus keskkond**.
 
-   Kui soovite [praegusest keskkonnast andmeid kopeerida](#additional-considerations-for-copy-configuration-preview), valige suvand **Kopeeri olemasolevast keskkonnast**. Näete teie ettevõtte kõigi saadaolevate keskkondade loendit, kust saate andmeid kopeerida.
+   Kui soovite [praegusest keskkonnast andmeid kopeerida](#considerations-for-copy-configuration-preview), valige suvand **Kopeeri olemasolevast keskkonnast**. Näete teie ettevõtte kõigi saadaolevate keskkondade loendit, kust saate andmeid kopeerida.
 
 1. Esitage järgmised andmed.
    - **Nimi**: selle keskkonna nimi. Olemasolevast keskkonnast kopeerides on see väli juba täidetud, kuid saate seda muuta.
    - **Piirkond**: piirkond, kus teenus juurutatakse ja majutatakse.
    - **Tüüp**: valige, kas soovite luua töö- või liivakastikeskkonna.
 
-2. Soovi korral saate valida ka suvandi **Täpsemad sätted**.
+1. Soovi korral saate valida ka suvandi **Täpsemad sätted**.
 
    - **Salvesta kõik andmed**: määrab, kuhu soovite Customer Insightsist loodud väljundandmed talletada. Selleks on kaks võimalust: **Customer Insightsi salvestusruum** (Customer Insightsi meeskonna hallatav Azure Data Lake) ja **Azure Data Lake Storage Gen2** (teie isiklik Azure Data Lake Storage). Vaikimisi on valitud Customer Insightsi salvestusruumi suvand.
 
@@ -75,20 +78,20 @@ Uue keskkonna loomine.
 
    - Azure Data Lake Storage Gen2 korral saate autentimiseks valida ressursipõhise ja tellimusepõhise valiku vahel. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). **Konteineri** nime ei saa muuta ja see on „customerinsights“.
    
-   - Kui soovite kasutada [ennustamise](predictions.md) funktsiooni või konfigureerida andmete jagamist Microsoft Dataverse rakenduste ja lahendustega, sisestage Microsoft Dataverse keskkonna URL jaotises **Andmete ühiskasutuse konfigureerimine rakendusega Microsoft Dataverse ja lubage täiendavad** võimalused. Valige suvand **Enable data sharing** (Luba andmete ühiskasutus), et jagada Customer Insightsi väljundandmeid Microsoft Dataverse Managed Data Lake hallatava andmejärvega.
+   - Kui soovite kasutada [prognoosimise funktsiooni](predictions.md), konfigureerida andmete jagamist rakenduste ja lahendustega, mida pakub Microsoft Dataverse või lubada asutusesisestest andmeallikatest pärinevaid andmetel luua Microsoft Dataverse keskkonna URL-i, **konfigureerige Microsoft Dataverse andmete jagamine ja lubage täiendavad võimalused**. Valige suvand **Enable data sharing** (Luba andmete ühiskasutus), et jagada Customer Insightsi väljundandmeid Microsoft Dataverse Managed Data Lake hallatava andmejärvega.
 
      > [!NOTE]
      > - Andmete jagamine rakendusega Microsoft Dataverse Managed Data Lake täna ei toetata, kui salvestate kõik andmed enda andmejärve Azure Data Lake Storage.
      > - [Puuduvate väärtuste ennustust olemis](predictions.md) ei toetata praegu, kui lubate andmete ühiskasutust rakendusega Microsoft Dataverse Managed Data Lake.
 
      > [!div class="mx-imgBorder"]
-     > ![Konfigureerimissuvandid andmete ühiskasutuse lubamiseks Microsoft Dataverse abil](media/Datasharing-with-DataverseMDL.png)
+     > ![Konfigureerimissuvandid andmete ühiskasutuse lubamiseks Microsoft Dataverse abil](media/datasharing-with-DataverseMDL.png)
 
    Protsesside käitamisel, näiteks andmete valmendamisel või segmendi loomisel, luuakse asjaomased kaustad eespool määratud salvestuskontol. Luuakse andmefailid ja model.json failid ning need lisatakse teie käitatavate protsesside põhjal vastavatesse alamkaustadesse.
 
    Kui loote mitu Customer Insightsi keskkonda ja soovite salvestada väljundolemid nendest keskkondadest oma salvestuskontole, luuakse eraldi kaustad iga keskkonna jaoks, mille konteineris on ci_<environmentid>.
 
-### <a name="additional-considerations-for-copy-configuration-preview"></a>Lisakaalutlused konfiguratsiooni kopeerimise puhul (eelvaade)
+### <a name="considerations-for-copy-configuration-preview"></a>Kopeerimise konfiguratsiooni kaalutlused (eelversioon)
 
 Kopeeritakse järgmised konfiguratsioonisätted.
 
@@ -136,6 +139,18 @@ Saate muuta olemasolevate keskkondade teatud üksikasju.
 4. Kui keskkonna andmete salvestusruumiks on konfigureeritud Azure Data Lake Storage Gen2, siis saate uuendada suvandit **Kontovõti**. Kuid te ei saa muuta **Ettevõtte nime** ja **Konteineri** nime.
 
 5. Soovi korral saate kasutada kontovõtmepõhise ühenduse asemel ressursipõhist või tellimusepõhist ühendust. Pärast selle tegemist ei saa te värskenduse järel hakata uuesti kontovõtit kasutama. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). Ühenduse värskendamisel ei saa te muuta **konteineri** teavet.
+
+6. Lisaks võite ka luua Microsoft Dataverse keskkonna URL-i jaotises **Andmete jagamise konfigureerimine Microsoft Dataverse ja täiendavate võimaluste lubamine**. Need võimalused hõlmavad andmete jagamist rakendustega ja lahendusi, mis põhinevad Microsoft Dataverse, andmete sisestamist kohapealsetest andmeallikatest või [prognoosimist](predictions.md). Valige suvand **Luba andmete ühiskasutus**, et jagada Customer Insights väljundandmeid Microsoft Dataverse hallatava Data Lake'iga.
+
+   > [!NOTE]
+   > - Andmete jagamine rakendusega Microsoft Dataverse Managed Data Lake täna ei toetata, kui salvestate kõik andmed enda andmejärve Azure Data Lake Storage.
+   > - [Prognoosimine puuduvate väärtuste puhul olemis](predictions.md) pole praegu toetatud, kui lubate andmete ühiskasutuse Microsoft Dataverse hallatava Data Lake'iga.
+
+   Kui te lubate andmete jagamise Microsoft Dataverse, käivitatakse ühekordne täielik andmeallikate ja muude protsesside värskendamine. Kui protsessid praegu töötavad ja on järjekorda lisatud, ei näe te suvandit andmete Microsoft Dataverse ühiskasutuse lubamiseks. Võite oodata, kuni need protsessid lõpetavad või tühistada need andmete jagamise lubamiseks. 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Konfigureerimissuvandid andmete jagamise lubamiseks Microsoft Dataverse abil.":::
+   
+   Protsesside käitamisel, näiteks andmete valmendamisel või segmendi loomisel, luuakse asjaomased kaustad eespool määratud salvestuskontol. Sõltuvalt käitatud protsessist luuakse andmefailid ja model.json-failid ning lisatakse need vastavatelsse alamkaustadesse.
 
 ## <a name="reset-an-existing-environment"></a>Olemasoleva keskkonna lähtestamine
 

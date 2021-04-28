@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmete eksportimine rakendusse Adobe Campaign Standard
 description: Lugege, kuidas kasutada Adobe Campaign Standardi sihtrühmaülevaadete segmente.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596310"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760276"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Customer Insightsi segmentide kasutamine Adobe Campaign Standardis (eelversioon)
 
@@ -48,15 +48,21 @@ Väljasaatmiseks mõeldud pakkumismeilis on eesnimi, perekonnanimi ja kliendi ko
 
 ## <a name="export-your-target-audience"></a>Sihtrühma eksportimine
 
+### <a name="configure-a-connection"></a>Ühenduse konfigureerimine
+
 Kui sihtrühm on tuvastatud, saame konfigureerida ekspordi sihtrühmaülevaadetest Azure'i bloobimälu kontole.
 
-1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Eksportimise sihtkohad**.
+1. Avage sihtrühma ülevaadetes **Administraator** > **Ühendused**.
 
-1. Valige paanil **Adobe Campaign** suvand **Häälesta**.
+1. Valige **Lisa ühendus** ja valige **Adobe Campaig** ühenduse konfigureerimiseks või klõpsake **Seadista** **Adobe Campaign** paanil
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Adobe Campaign Standardi konfiguratsioonipaan.":::
 
-1. Sisestage uue ekspordisihtkoha jaoks **Kuvatav nimi** ja seejärel sisestage **Konto nimi**, **Konto võti** ja selle Azure'i bloobimälu **Ümbris**, kuhu soovite segmendi eksportida.  
+1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
+
+1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+
+1. Sisestage **Konto nimi**, **Konto võti**, ja **Konteiner** Azure Blob Storage kontol, kuhu soovite segmendi eksportida.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Salvestusruumi konto konfiguratsiooni kuvatõmmis. "::: 
 
@@ -64,7 +70,17 @@ Kui sihtrühm on tuvastatud, saame konfigureerida ekspordi sihtrühmaülevaadete
 
    - Lisateavet konteineri loomise kohta leiate teemast [Konteineri loomine](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Tehke valik **Edasi**.
+1. Ühenduse loomiseks valige **Salvesta**.
+
+### <a name="configure-an-export"></a>Ekspordi konfigureerimine
+
+Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+
+1. Minge **Andmed** > **Ekspordid**.
+
+1. Valige uue ekspordi loomiseks **Lisa eksport**.
+
+1. Valige **Ekspordiühendus** väljal ühendus Adobe Campaign jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
 
 1. Valige segment, mille soovite eksportida. Selles näites on selleks **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Kui sihtrühm on tuvastatud, saame konfigureerida ekspordi sihtrühmaülevaadete
 
 1. Valige **Salvesta**.
 
-Pärast ekspordisihtkoha valimist leiate selle asukohast **Haldus** > **Ekspordid** > **Minu ekspordisihtkohad**.
+Pärast ekspordi sihtkoha salvestamist leiate selle **Andmed** > **Eksport**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Esiletõstetud eksportide loendi ja näidissegmendi kuvatõmmis.":::
-
-Nüüd saate [nõudmisel segmendi](export-destinations.md#export-data-on-demand) Eksport käivitub ka iga [ajastatud värskendamisega](system.md).
+Nüüd saate [nõudmisel segmendi](export-destinations.md#run-exports-on-demand) Eksport käivitub ka iga [ajastatud värskendamisega](system.md).
 
 > [!NOTE]
 > Veenduge, et eksporditud segmendi kirjete arv jääb Adobe Campaign Standardi litsentsi lubatud piiridesse.

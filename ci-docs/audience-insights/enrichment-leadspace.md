@@ -1,7 +1,7 @@
 ---
 title: Ettevõtteprofiilide rikastamine kolmanda osapoole rikastamisteenusega Leadspace'ilt
 description: Üldine teave Leadspace'i kolmanda osapoole rikastamise kohta.
-ms.date: 11/24/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,46 +9,67 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597644"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895908"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Ettevõtte profiilide rikastamine Leadspace'iga (eelvaade)
 
-Leadspace on andmeteaduse ettevõte, mis pakub kliendi hulgiandmete platvormi. See võimaldab ettevõtetel kliendi koondprofiilidega klientide andmeid rikastada. Rikastamised hõlmavad lisaatribuute, nt ettevõtte suurus, asukoht, valdkond jne.
+Leadspace on andmeteaduse ettevõte, mis pakub kliendi hulgiandmete platvormi. See võimaldab ettevõtetel kliendi koondprofiilidega klientide andmeid rikastada. Rikastused sisaldavad rohkem atribuute, nagu ettevõtte suurus, asukoht, tegevusala ja palju muud.
 
 ## <a name="prerequisites"></a>Eeltingimused
 
 Leadspace'i seadistamiseks peavad olema täidetud järgmised eeltingimused.
 
-- Teil on aktiivne Leadspace'i litsents ja „igavene võti“ (edaspidi **Leadspace'i tõend**). Nende toote kohta üksikasjade saamiseks võtke otse [Leadspace’iga](https://www.leadspace.com/products/leadspace-on-demand/) ühendust.
-- Teil on [administraatori](permissions.md#administrator) õigused.
+- Teil on aktiivne Leadspace litsents.
 - Teil on ettevõtete [kliendi koondprofiilid](customer-profiles.md).
+- Administraator on juba konfigureerinud Leadspace'i ühenduse või teil on [administraatoriõigused](permissions.md#administrator) ja "alaline võti (nimetatakse **Leadspace tokeniks**). Võtke [Leadspaceiga](https://www.leadspace.com/products/leadspace-on-demand/) otse ühendust toodete üksikasjade teabe saamiseks.
 
-## <a name="configuration"></a>Konfiguratsioon
+## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 
 1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Rikastamine**.
 
-1. Valige Leadspace’i paanil suvand **Rikasta minu andmeid**.
+1. Valige **Mu andmete rikastamine** Leadspace paanil ja valige **Alustamine**.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Leadspace'i paani kuvatõmmis.":::
 
-1. Valige **Alusta** ja seejärel sisestage aktiivne **Leadspace'i tõend** (igavene võti). Vaadake üle ja andke oma nõusolek **Andmete privaatsuse ja nõuetele vastavuse** jaoks, valides märkeruudu **Nõustun**. Kinnitage mõlemad sisendid, valides **Loo ühendus Leadspace'iga**.
+1. Valige ripploendist [ühendus](connections.md). Kui ühendusi pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate ühenduse luua, kui valite suvandi **Lisa ühendus** ja valides **Leadspace**. 
 
-1. Valige **Vastenda andmed** ja valige andmete kogum, mida soovite Leadspace'i ettevõtte andmetega rikastada. Saate valida olemi *Klient*, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
+1. Valige **Ühenda Leadspace**, et kinnitada ühendus.
 
-   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Valige kliendiprofiili ja segmendi rikastamise vahel.":::
+1. Valige **Edasi** ja valige **Kliendi andmekomplekt**, mida soovite rikastada ettevõtte andmetega Leadspace'ilt.. Saate valida olemi **Klient**, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
 
-1. Klõpsake suvandit **Edasi** ja määratlege, milliseid teie koondatud profiilide välju tuleks kasutada, et otsida ühtivad andmeid Leadspace'ist. Nõutav on väli **Ettevõtte nimi**. Selleks et vasted oleksid täpsemad, saab lisada kuni kaks muud välja (**Ettevõtte veebisait** ja **Ettevõtte asukoht**).
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Kuvatõmmis kliendiandmete kogumi valimisel.":::
+
+1. Valige **Edasi** ja määratlege, millist tüüpi välju teie ühendatud profiilidest tuleks kasutada Leadspace ettevõtete andmete vastavuse otsimiseks. Nõutav on väli **Ettevõtte nimi**. Selleks et vasted oleksid täpsemad, saab lisada kuni kaks muud välja (**Ettevõtte veebisait** ja **Ettevõtte asukoht**).
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Leadspace'i väljade vastendamise paan.":::
-   
-1. Valige **Rakenda**, et lõpetada väljade vastendamine.
 
-1. Valige ettevõtte profiilide rikastamiseks **Käivita**. Rikastamise kestus sõltub koondatud kliendiprofiilide arvust.
+1. Valige **Edasi**, et lõpetada väljade kaardistamine.
+
+1. Sisestage rikastamiseks nimi ja valige **Salvesta rikastamine** pärast valikute läbivaatamist.
+
+
+## <a name="configure-the-connection-for-leadspace"></a>Konfigureerige ühendus Leadspace'iga 
+
+Ühenduste konfigureerimiseks peate olema administraator. Valige **Lisa ühendus** rikastamise konfigureerimisel *või* minge **Administraator** > **Ühendused** ja valige **Seadista** Leadspace paanil.
+
+1. Valige suvand **Alustamine** 
+
+1. Sisestage ühenduse nimi **Kuvatav nimi** väljale.
+
+1. Sisestage kehtiv Leadspace token.
+
+1. Vaadake üle ja andke oma nõusolek **Andmete privaatsuse ja nõuetele vastavuse** jaoks, valides **Nõustun** märkeruudu
+
+1. Valige **Kontrolli** konfiguratsiooni valideerimiseks.
+
+1. Pärast kontrollimise lõpuleviimist valige **Salvesta**.
+   
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Leadspace ühenduse konfiguratsiooni leht.":::
 
 ## <a name="enrichment-results"></a>Rikastamise tulemused
 

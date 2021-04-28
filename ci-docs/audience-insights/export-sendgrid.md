@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmete eksportimine SendGridi
-description: Vaadake, kuidas konfigureerida ühendust SendGridiga.
-ms.date: 12/08/2020
+description: Lugege, kuidas konfigureerida ühendust ja eksportida SendGrid.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,57 +9,23 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 1a1f679fa42d47d524ebfdd6e931ae2822565f77
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a4c64cf77c682e07f3d0759c43355336b5806fc8
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597276"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759760"
 ---
-# <a name="connector-for-sendgrid-preview"></a>SendGridi konnektor (eelversioon)
+# <a name="export-segments-to-sendgrid-preview"></a>Segmentide eksportimine SendGrid (eelversioon)
 
 Saate eksportida ühendatud kliendiprofiilide segmente SendGridi kontaktiloenditesse ja kasutada neid SendGridis kampaaniate ja meiliturunduste jaoks. 
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites-for-a-connection"></a>Ühenduse eeltingimus
 
 -   Teil on [SendGridi konto](https://sendgrid.com/) ja asjakohane administraatori identimisteave.
 -   SendGridis on olemas kontaktiloendid ja asjakohased ID-d. Lisateavet leiate teemast [SendGrid – kontaktide haldamine](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts).
 -   Olete sihtrühmaülevaadetes [segmendid konfigureerinud](segments.md).
 -   Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
-
-## <a name="connect-to-sendgrid"></a>Ühenda SendGrid
-
-1. Avage **Haldus** > **Ekspordi sihtkohad**.
-
-1. Tehke jaotises **SendGrid** valik **Seadista**.
-
-1. Sisestage väljale **Kuvatav nimi** oma ekspordi sihtkoha äratuntav nimi.
-
-   :::image type="content" source="media/export-sendgrid.PNG" alt-text="SendGridi ekspordi konfiguratsioonipaan.":::
-
-1. Sisestage oma **SendGridi API võti** [SendGridi API võti](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
-
-1. Sisestage oma **[SendGridi loendi ID](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
-
-1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
-
-1. Valige **Ühenda**, et käivitada ühendus SendGridiga.
-
-1. Valige **Lisa mind ekspordikasutajana** ja sisestage oma Customer Insightsi identimisteave.
-
-1. Ekspordi konfigureerimiseks valige **Edasi**.
-
-## <a name="configure-the-connector"></a>Konnektori konfigureerimine
-
-1. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Korrake samu juhiseid muude valikuliste väljade puhul, nagu **Eesnimi**, **Perekonnanimi**, **Riik/piirkond**, **Maakond**, **Linn** ja **Sihtnumber**.
-
-1. Valige segmendid, mille soovite eksportida. Soovitame **tungivalt mitte eksportida kokku üle 100 000 kliendiprofiili** SendGridi. 
-
-1. Valige **Salvesta**.
-
-## <a name="export-the-data"></a>Andmete eksportimine
-
-Saate [vajadusel andmeid eksportida](export-destinations.md). Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
@@ -67,6 +33,48 @@ Saate [vajadusel andmeid eksportida](export-destinations.md). Eksport käivitub 
 - SendGridi saab eksportida ainult segmente.
 - Kuni 100 000 profiili eksportimiseks SendGridi võib kuluda paar tundi. 
 - SendGridi eksporditavate profiilide arv sõltub SendGridiga sõlmitud lepingust.
+
+## <a name="set-up-connection-to-sendgrid"></a>Ühenduse loomine SendGrid
+
+1. Minge **Administraator** > **Ühendused**.
+
+1. Valige **Lisa ühendus** ja valige **SendGrid** ühenduse konfigureerimiseks.
+
+1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
+
+1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Sisestage oma **SendGridi API võti** [SendGridi API võti](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
+
+1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
+
+1. Valige **Ühenda**, et käivitada ühendus SendGridiga.
+
+1. Valige **Lisa mind ekspordikasutajana** ja sisestage oma Customer Insightsi identimisteave.
+
+1. Ühenduse loomiseks valige **Salvesta**.
+
+## <a name="configure-an-export"></a>Ekspordi konfigureerimine
+
+Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+
+1. Minge **Andmed** > **Ekspordid**.
+
+1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+
+1. Valige **Ekspordiühendus** väljal ühendus SendGrid jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+
+1. Sisestage oma **[SendGridi loendi ID](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
+
+1. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Korrake samu juhiseid muude valikuliste väljade puhul, nagu **Eesnimi**, **Perekonnanimi**, **Riik/piirkond**, **Maakond**, **Linn** ja **Sihtnumber**.
+
+1. Valige segmendid, mille soovite eksportida. Soovitame **tungivalt mitte eksportida kokku üle 100 000 kliendiprofiili** SendGridi. 
+
+1. Valige **Salvesta**.
+
+Ekspordi salvestamine ei käivita eksporti kohe.
+
+Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 

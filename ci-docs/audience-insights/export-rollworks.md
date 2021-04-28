@@ -1,6 +1,6 @@
 ---
-title: Customer Insightsi andmete eksportimine AdRolli
-description: Lugege, kuidas konfigureerida ühendust ja eksportida AdRoll-i.
+title: Customer Insights andmete eksportimine RollWorksi
+description: Lugege, kuidas konfigureerida ühendust ja eksportida RollWorksi.
 ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,36 +9,36 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 4979f0147dea2270f11342c1bb6b0693f3c24aea
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895954"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760513"
 ---
-# <a name="export-segment-lists-to-adroll-preview"></a>Segmendiloendite eksportimine AdRoll-i (eelversioon)
+# <a name="export-segment-lists-to-rollworks-preview"></a>Segmendiloendite eksportimine RollWorksi (eelversioon)
 
-Eksportige kliendi koondprofiili segmendid AdRolli ja kasutage neid reklaamimiseks. 
+Saate eksportida ühendatud kliendiprofiilide segmente RollWorksi ja kasutada neid turundustegevuste jaoks. 
 
 ## <a name="prerequisites-for-a-connection"></a>Ühenduse eeltingimus
 
--   Teil on [AdRolli konto](https://www.adroll.com/) ja asjakohane administraatori identimisteave.
+-   Teil on [RollWorks konto](https://www.rollworks.com/) ja vastav administraatori mandaat.
 -   Olete sihtrühmaülevaadetes [segmendid konfigureerinud](segments.md).
 -   Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- AdRolli saate ühe ekspordi kohta eksportida kuni 250 000 profiili.
-- Vähem kui 100 profiiliga segmente ei saa AdRolli eksportida. 
-- AdRolli saab eksportida ainult segmente.
-- Kuni 250 000 profiili eksportimiseks AdRolli võib kuluda kuni 10 minutit. 
-- AdRolli eksporditavate profiilide arv sõltub AdRollga sõlmitud lepingust ja on sellega piiratud.
+- RollWorksi saate eksportida kuni 250 000 profiili ekspordi kohta.
+- Vähem kui 100 profiiliga segmente ei saa RollWorksi eksportida. 
+- Eksportimine RollWorksi on piiratud segmentidega.
+- Kuni 250'000 profiili eksportimine RollWorksi võib võtta kuni 10 minutit lõpuleviimiseks. 
+- RollWorksi eksporditavate profiilide arv sõltub ja on piiratud teie lepinguga RollWorksiga.
 
-## <a name="set-up-connection-to-adroll"></a>Ühenduse loomine AdRoll'iga
+## <a name="set-up-connection-to-rollworks"></a>Ühenduse loomine RollWorksiga
 
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **AdRoll** ühenduse konfigureerimiseks.
+1. Valige **Lisa ühendus** ja valige **RollWorks** ühenduse konfigureerimiseks.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
@@ -46,9 +46,9 @@ Eksportige kliendi koondprofiili segmendid AdRolli ja kasutage neid reklaamimise
 
 1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
 
-1. Valige **Ühenda**, et käivitada ühendus AdRolliga.
+1. Valige **Ühenda** RollWorks ühenduse lähtestamiseks.
 
-1. Valige **Autentimine AdRolliga** ja sisestage oma AdRolli administraatori identimisteave. 
+1. Valige **Autentimine RollWorksiga** ja sisestage oma administraatori mandaadid RollWorksi jaoks.
 
 1. Valige **Lisa mind ekspordikasutajana** ja sisestage oma Customer Insightsi identimisteave.
 
@@ -62,11 +62,11 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
 
-1. Valige **Ekspordiühendus** väljal ühendus AdRoll jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+1. Valige **Ekspordiühendus** väljal ühendus RollWorks jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
 
-1. Sisestage oma **AdRoll Advertiser ID** Lisateavet leiate teemast [AdRoll Advertiser profiilid](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Sisestage oma **RollWorks Advertiser ID** [ID RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. See on vajalik segmentide eksportimiseks AdRolli.
+3. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Segmentide eksportimine RollWorksi on vajalik.
 
 1. Valige segmendid, mille soovite eksportida. Valige vähemalt 100 liikmega segment. Väiksemaid segmente ei saa eksportida. Lisaks on eksporditava segmendi maksimummaht 250 000 liiget ekspordi kohta. 
 
@@ -79,6 +79,6 @@ Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab)
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 
-Kui lubate Dynamics 365 Customer Insightsil AdRolli andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed). Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et AdRoll täidab kõik teie privaatsus- või turbenõuded. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
+Kui lubate, et Dynamics 365 Customer Insights edastab andmeid RollWorksile, lubate, et andmed edastatakse väljaspoole vastavuse piiri Dynamics 365 Customer Insights, sealhulgas võimalikud tundliku iseloomuga andmed nagu isikuandmed. Microsoft kannab sellised andmed üle teie juhiste järgi, kuid teie vastutate selle eest, et RollWorks vastaks teie võimalikele privaatsus- või turvalisuse nõuetele. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
 
 Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.

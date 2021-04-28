@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595651"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906897"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Kordustellimuse voolavuse prognoos (eelvaade)
 
@@ -49,6 +49,12 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
         - **Ajatempel:** primaarvõtmega tuvastatud sündmuse kuupäev ja kellaaeg.
         - **Sündmus:** sündmuse nimi, mida soovite kasutada. Näiteks nimega „UserAction” video voogesituse teenuse väljal võiks olla väärtus „Vaadatud”.
         - **Üksikasjad:** sündmuse üksikasjalik teave. Näiteks nimega „ShowTitle” video voogesituse teenuse väljal võiks olla kliendi vaadatud video väärtus.
+- Soovitatavad andmete omadused:
+    - Piisavad ajaloolised andmed: Tellimuse andmed vähemalt kahekordistatud valitud ajaaknas. Eelistatavalt kahe kuni kolme aasta tellimisandmed.
+    - Tellimuse olek: andmed sisaldavad iga kliendi jaoks aktiivseid ja mitteaktiivseid tellimusi, nii et kliendi ID kohta on mitu kirjet.
+    - Klientide arv: Vähemalt 10 kliendiprofiili, eelistatuult rohkem kui 1000 erinevat klienti. Mudel nurjub, kui kliente on vähem kui 10 ja puuduvad varasemad andmed.
+    - Andmete täielikkus: esitatud olemi andmeväljal on puuduvaid väärtuseid vähem kui 20%.
+   
    > [!NOTE]
    > Teil on vaja vähemalt kahte tegevuse kirjet 50%-le klientidest, kelle voolavust soovite välja arvutada.
 
@@ -67,7 +73,7 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
 ### <a name="define-customer-churn"></a>Määratlege kliendivoolavus
 
 1. Sisestage arv **Päevi möödunud kordustellimuse lõppemisest**, mida teie ettevõte peab olekuks, mil kliendivoolavus on toimunud. Tavaliselt on see periood seotud äritegevustega, nagu pakkumised või muud turundusega seotud pingutused, mis püüavad ära hoida kliendi kaotsiminekut.
-1. Sisestage **päevade arv tulevikus, mille põhjal voolavust prognoosida**, et määrata aken voolavuse prognoosiks. Näiteks selleks, et ennustada järgmise 90 päeva klientide voolavuse riski oma säilitusturunduse jõupingutuste vastavusse viimiseks. Voolavuse riski arvutamine pikemateks või lühemateks ajaperioodideks võib muuta voolavuse riski profiili faktoritega tegelemise keerulisemaks, aga see sõltub palju konkreetsetest ärinõuetest. Jätkamiseks valige **Edasi**
+1. Sisestage **päevade arv tulevikus, mille põhjal voolavust prognoosida**, et määrata aken voolavuse prognoosiks. Näiteks selleks, et ennustada järgmise 90 päeva klientide voolavuse riski oma säilitusturunduse jõupingutuste vastavusse viimiseks. Pöördumisriski ennustamine pikemaks või lühemaks perioodiks võib muuta pöördumisriski profiili tegurite käsitlemise keerulisemaks, sõltuvalt teie konkreetsetest ärinõuetest. Jätkamiseks valige **Edasi**
    >[!TIP]
    > Saate igal hetkel valida **Salvesta ja sule**, et salvestada prognoos mustandina. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid** selle jätkamiseks.
 
@@ -113,7 +119,8 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
 1. Valige prognoos, mille soovite üle vaadata.
    - **Prognoosi nimi:** selle prognoosi loomisel pandud nimi.
    - **Prognoosi tüüp:** prognoosi jaoks kasutatav mudeli tüüp
-   - **Väljundolem:** olemi nimi, kuhu talletatakse prognoosi väljund. Selle nimega olemi leiate jaotisest **Andmed** > **Olemid**.
+   - **Väljundolem:** olemi nimi, kuhu talletatakse prognoosi väljund. Selle nimega olemi leiate jaotisest **Andmed** > **Olemid**.    
+     Väljundolemis *Voolavuse tulemus* on prognoositud voolavuse tõenäosus ja *On voolavus* on binaarne märgis, mis põhineb *Voolavuse tulemusel* lävendiga 0,5. Vaikelävend ei pruugi teie stsenaariumi puhul töötada. [Looge uus segment](segments.md#create-a-new-segment) teie eelistatud lävendiga.
    - **Prognoositud väli:** see väli on asustatud ainult teatud tüüpi prognooside puhul ja seda ei kasutata kordustellimuse voolavuse prognoosides.
    - **Olek:** prognoosi käitamise praegune olek.
         - **Järjekorras:** prognoos ootab praegu muude protsesside käitamist.

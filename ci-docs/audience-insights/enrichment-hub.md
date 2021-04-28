@@ -1,7 +1,7 @@
 ---
 title: Koondatud kliendiprofiilide rikastamine
 description: Kasutage võimalusi kliendiandmete rikastamiseks.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597690"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896000"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Kliendiprofiilide rikastamine (eelvaade)
 
@@ -27,8 +27,8 @@ Rikastamiste loomiseks või redigeerimiseks peavad teil olema kaasautori või ad
 
 Vahekaardilt **Avastamine** leiate järgmised rikastamised.
 
-- [Tootemarke](enrichment-microsoft-graph.md) esitab Microsoft Graph
-- [Huvisid](enrichment-microsoft-graph.md) esitab Microsoft Graph
+- [Brändid](enrichment-microsoft.md), mida pakub Microsoft
+- [Omandiõigused](enrichment-microsoft.md), mida pakub Microsoft
 - [Ettevõtte andmeid](enrichment-leadspace.md) esitab Leadspace
 - [Demograafilisi andmeid](enrichment-experian.md) esitab Experian
 - [Asukohaandmeid](enrichment-here.md) esitab HERE Technologies
@@ -40,7 +40,7 @@ Saate kuvada oma konfigureeritud rikastamisi ja redigeerida nende atribuute vahe
 
 Avage **Minu rikastamised**, et näha kõiki konfigureeritud rikastamisi. Iga rikastamine on esindatud reana, mis sisaldab täiendavat teavet rikastamise kohta.
 
-Saadaolevate suvandite kuvamiseks valige rikastamine. Samuti saate suvandite kuvamiseks valida loendiüksuse kolmikpunkti (...).
+Saadaolevate suvandite kuvamiseks valige rikastamine. Valikute nägemiseks võite loendikirjel valida ka ellipsi (...).
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Rikastamiste haldamise suvandid rikastamiste loendis":::
 
@@ -52,5 +52,12 @@ Saadaolevate suvandite kuvamiseks valige rikastamine. Samuti saate suvandite kuv
 
 Saate korraga käivitada või desaktiveerida mitu rikastamist, valides need loendist. Vaatamise ja redigeerimise suvandid ei ole saadaval hulgitoiminguna ja töötavad korraga ainult ühe rikastamisega.
 
+## <a name="enrichments-and-connections"></a>Rikastamine ja Ühendused
+
+Muude tootjate rikastamised konfigureeritakse kasutades [ühendusi](connections.md), mille administraator koostab volikirjadega ja annab nõusoleku andmete edastamiseks. Ühendusi saavad seejärel kasutada rikastamise konfigureerimiseks nii administraatorid kui ka kaastöötajad.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Mitu sama tüüpi rikastust
+
+Rikastatav olem määratakse rikastamise konfiguratsiooni käigus, mis võimaldab teil rikastada ainult osa oma profiilidest. Näiteks rikastage andmeid ainult konkreetse segmendi kohta. Saate konfigureerida mitut sama tüüpi rikastamist ja sama ühendust uuesti kasutada. Mõnel rikastamisel on piiritletud sama tüüpi rikastuste arv, mida saab luua. Piiranguid ja praegust kasutamist saab vaadata lehel **Rikastamine**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

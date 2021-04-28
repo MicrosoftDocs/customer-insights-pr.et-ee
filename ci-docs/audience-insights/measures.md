@@ -1,7 +1,7 @@
 ---
 title: Mõõdikute loomine ja haldamine
 description: Määratleda ettevõtte äritegevuse analüüsimiseks ja kajastamiseks vajalikud näitajad.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654727"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887935"
 ---
 # <a name="define-and-manage-measures"></a>Meetmete määratlemine ja haldamine
 
-Näitajad aitavad teil paremini mõista kliendi käitumist ja ärijõudlust, tagastades [ühildatud profiilidest](data-unification.md) olulised väärtused. Näiteks soovib ettevõte vaadata, kui palju on kulutatud *kliendi kohta*, et mõista kliendi individuaalset ostuajalugu. Või mõõta *ettevõtte kogu müüki*, et saada aru ettevõtte kogutulu jaotust.  
+See aitab teil paremini mõista kliendi käitumist ja äritegevust. Nad vaatavad asjakohaseid [ühendatud profilide](data-unification.md) väärtusi. Näiteks soovib ettevõte näha *kogukulu kliendile*, et mõista üksikkliendi ostuajalugu või mõõta *ettevõtte kogumüüki*, et saada aru kogu ettevõtte müügituludest.  
 
 Näitajad luuakse meetmete ehitaja abil, mis on erinevate tehtemärkide ja lihtsate vastendussuvanditega andmepäringu platvorm. See võimaldab filtreerida andmeid, rühmitada tulemusi, tuvastada [olemite seoseteid](relationships.md) ja kuvada väljundi eelvaadet.
 
 Kasutage äritegevuste plaanimiseks näitaja ehitajat, pärides kliendiandmeid ja väljastades ülevaateid. Näiteks *kogukulu ühe kliendi kohta* ja *kogutulu ühe kliendi kohta* loomine aitab tuvastada suure kulutamise, kuid suure tootlusega klientide rühm. Saate [luua segmendi](segments.md), mis aitab teil teha järgmist. 
 
-## <a name="create-a-measure"></a>Meetme loomine
+## <a name="build-your-own-measure-from-scratch"></a>Isikliku voo loomine puhtalt lehelt
 
 Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate ehitada näitaja andmeatribuutidega andmeüksustelt, millel on kliendi olemiga ühenduse loomiseks suhe loodud. 
 
 1. Avage sihtrühmaülevaadetes jaotis **Näitajad**.
 
-1. Tehke valik **Uus**.
+1. Valige **Uus** ja valige **Looge ise**.
 
 1. Valige **Redigeeri nimi** ja sisestage näitaja **Nimi**. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate ehitada näita
    1. Valige **Redigeeri dimensioonid**, et lisada andmeatribuute, mille järgi soovite näitaja väärtusi rühmitada. Näiteks linn või sugu. *Klienditaseme näitajate loomiseks* valitakse vaikimisi *CustomerID* dimensioon. Kui soovite luua *äritaseme näitajaid*, saate vaikeeelise eemaldada.
    1. Valige **Valmis**, et lisada dimensioonid näitajale.
 
+1. Kui teie andmetes on väärtusi, mida peate täisarvuga asendama , nt pange *null* asemel *0*, valige **Reeglid**. Konfigureerige reegel ja veenduge, et valite asendusena ainult täisnumbrid.
+
 1. Kui vastendatud andme- ja olemi *Klient* vahel on mitu teed, peate valima ühe tuvastatud [olemi suhte teedest](relationships.md). Näitaja tulemused võivad sõltuvalt valitud teest erineda. 
    1. Valige **andmeelistused** ja seejärel olemi tee, mida tuleks oma näitaja tuvastamiseks kasutada. Kui olemi *Klient* juurde on ainult üks tee, siis seda juhtelementi ei näidata.
    1. Valiku rakendamiseks valige suvand **Valmis**. 
@@ -88,9 +90,57 @@ Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate ehitada näita
 
 1. Vastloodud näitaja nägemiseks loendis, valige **Näitajad**.
 
+## <a name="use-a-template-to-build-a-measure"></a>Malli abil mõõdu loomine
+
+Nende loomiseks võite kasutada tavaliselt kasutatavate meetmete ettemääratud malle. Mallide üksikasjalik kirjeldus ja juhendatud kogemused aitavad teil luua tõhusa mõõtmissüsteemi. Mallid põhinevad olemi *Ühendatud tegevus* kaardistatud andmetele. Seega veenduge, et olete konfigureerinud [klienditegevused](activities.md) enne malli põhjal mõõtühiku loomist.
+
+Saadaval mõõdumallid: 
+- Keskmine tehingu väärtus (ATV)
+- Tehingu väärtus kokku
+- Päeva keskmine tulu
+- Aasta keskmine tulu
+- Kannete arv
+- Teenitud püsikliendipunktid
+- Lunastatud püsikliendipunktid
+- Püsikliendipunktide saldo
+- Aktiivse kliendi eluiga
+- Püsikliendi liikmestaatuse kestus
+- Aega viimasest ostust
+
+Järgmine protseduur kirjeldab etappe uue meetme loomiseks malli abil.
+
+1. Avage sihtrühmaülevaadetes jaotis **Näitajad**.
+
+1. Valige **Uus** ja seejärel **Vali mall**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Rippmenüü ekraanipilt, kui luuakse mallil esiletõstetud uus mõõt.":::
+
+1. Leidke teie vajadusele sobiv mall ja valige **Valige mall**.
+
+1. Vaadake nõutavad andmed läbi ja valige **Alustamine**, kui kõik andmed on olemas.
+
+1. Määrake **Nime muutmine** paanil oma mõõtühiku ja väljundi olemi nimi. 
+
+1. Valige nupp **Valmis**.
+
+1. Määrake **Sea ajaperiood** jaotises ajavahemikud andmete kasutamiseks. Valige, kas soovite, et uus mõõt hõlmaks kogu andmekogumit, valides suvandi **Kogu aeg**. Või kui soovite, et mõõtühiku valikuks oleks **Kindel ajaperiood**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Kuvatõmmis ajavahemiku jaotisest, kui konfigureerite malli põhjal mõõtmise.":::
+
+1. Järgmises jaotises valige **Lisa andmed**, et valida tegevused ja kaardistada oma olemi *Ühendatud tegevus* vastavad andmed.
+
+    1. 1. etapp: valige jaotises **Tegevuse tüüp** selle olemi tüüp, mida soovite kasutada. Valige **Tegevused** jaoks olemid, mida soovite kaardistada.
+    1. 2. etapp: valige atribuut olemist *Ühendatud Tegevus* valemiga nõutava komponendi jaoks. Näiteks keskmise tehingu väärtuse puhul on see atribuut, mis tähistab tehingu väärtust. Valige **Tegevuse ajatempli** jaoks atribuut olemist Ühendatud tegevus, mis tähistab tegevuse kuupäeva ja kellaaega.
+   
+1. Kui andmete kaardistamine õnnestub, näete olekut **Lõpule viidud** ning kaardistatud tegevuste ja atribuutide nime.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Lõpuleviidud mõõtühikumalli konfiguratsiooni kuvatõmmis.":::
+
+1. Nüüd saate valida suvandi **Käita**, et arvutada mõõtmise tulemused. Hiljem viimistlemiseks valige **Salvesta mustand**.
+
 ## <a name="manage-your-measures"></a>Meetmete haldamine
 
-Pärast [näitaja loomist](#create-a-measure) näete lehel **Näitajad** näitajate loendit.
+Meetmete loendi leiate lehelt **Meetmed**.
 
 Leiate teavet näidiku tüübi, autori, loomise kuupäeva, staatuse ja oleku kohta. Kui valite loendist näitaja, saate väljundit eelvaadata ja .CSV-faili alla laadida.
 

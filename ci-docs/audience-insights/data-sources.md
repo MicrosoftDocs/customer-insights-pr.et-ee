@@ -1,7 +1,7 @@
 ---
 title: Andmeallikate kasutamine andmete valmendamiseks
 description: Vaadake, kuidas eri allikatest andmeid importida.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595942"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887889"
 ---
 # <a name="data-sources-overview"></a>Andmeallikate ülevaade
 
@@ -32,8 +32,15 @@ Saate andmeallikat lisada kolmel peamisel viisil.
 - [Common Data Modeli kaustast](connect-common-data-model.md)
 - [Enda Common Data Service’i andmejärvest](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Asutusesisestest andmeallikatest ei saa veel andmeid lisada.
+## <a name="add-data-from-on-premises-data-sources"></a>Andmete lisamine asutusesisene andmeallikatest
+
+Kohalike andmeallikate andmete sisestamine vaatajaskonna statistikas toetub Power Platform andmevoogudele. Andmevooge saab lubada Customer Insights kaudu [pakkudes Microsoft Dataverse keskkonna URL-i](manage-environments.md#create-an-environment-in-an-existing-organization) keskkonna seadistamisel.
+
+Andmeallikad, mis luuakse pärast keskkonna Dataverse seostamist Customer Insights, kasutavad [Power Platform andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) vaikimisi. Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Eemaldage ja looge uuesti andmeallikad, mis olid olemas enne seda, kui Dataverse keskkond seostati asutusesisese andmelüüside kasutamisega.
+
+Andmevõrgud olemasolevast Power BI või Power Apps keskkonnast on nähtavad ja saate neid uuesti kasutada jaotises Customer Insights. Andmeallikate lehel kuvatakse lingid, et minna Power Platform keskkonda, kus te saate vaadata ja konfigureerida asutusesiseseid andmelüüse.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Andmeallikate lehe kuvatõmmis, kus on kuvatud Power Platform keskkonda viivad lingid.":::
 
 ## <a name="review-ingested-data"></a>Sisestatud andmete läbivaatus
 
@@ -65,7 +72,7 @@ Andmeallika värskendamiseks mis tahes ajal toimige järgmiselt.
 
 2. Valige värskendamist vajava andmeallika kõrvalt vertikaalne kolmikpunkt ja valige ripploendist **Värskenda**.
 
-3. Andmeallika jaoks käivitatakse nüüd käsitsivärskendamine. Andmeallika värskendamisel värskendatakse nii olemiskeem kui ka kõigi andmeallikas määratletud olemite andmed.
+3. Andmeallika jaoks käivitatakse nüüd käsitsivärskendamine. Andmeallika värskendamine uuendab nii olemiskeemi kui ka kõigi andmeallikas määratud olemite andmeid.
 
 4. Kui soovite olemasoleva värskendamise tühistada, klõpsake **Lõpeta värskendamine** ja andmeallikas taastatakse viimase värskendamise olekusse.
 
