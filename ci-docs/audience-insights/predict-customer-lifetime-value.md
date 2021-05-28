@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595799"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954574"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Kliendi eluea väärtus (CLV) prognoosimine (eelversioon)
 
@@ -38,11 +38,11 @@ Järgmised andmed on vajalikud ja kui need on märgitud valikulised, soovituslik
 - Kliendi identifikaator: tehingute ja üksikkliendi vastendamise ainuidentifikaator
 
 - Kannete ajalugu: varasemate kannete logi allpoololeva semantilise andmeskeemiga
-    - Tehingu ID: iga tehingu ainuidentifikaator.
-    - Kande kuupäev: kuupäev, iga tehingu ajatempel
-    - Kandesumma: iga kande rahaline väärtus (nt tulu või kasumimarginaal)
-    - Tagastamisele määratud silt (valikuline): loogikaväärtus, mis näitab, kas tegemist on tagastusega 
-    - Toote ID (valikuline): tehinguga seotud toote ID
+    - **Tehingu ID**: Iga tehingu ainuidentifikaator
+    - **Kande kuupäev**: Kuupäev, soovitatavalt iga tehingu ajatempel
+    - **Kandesumma**: Iga kande rahaline väärtus (nt tulu või kasumimarginaal)
+    - **Tagastamisele määratud silt** (valikuline): Loogikaväärtus, mis näitab, kas tegemist on tagastusega 
+    - **Toote ID** (valikuline): tehinguga seotud toote ID
 
 - Lisaandmed (valikuline); näiteks
     - Veebitegevused: veebisaidikülastuse ajalugu, meiliajalugu
@@ -53,10 +53,20 @@ Järgmised andmed on vajalikud ja kui need on märgitud valikulised, soovituslik
     - Kliendi identifikaatorid, mis vastendavad teie klientide tegevusi
     - Tegevuse teave, mis sisaldab tegevuse nime ja kuupäeva
     - Tegevuste semantilise andmeskeemi alla kuuluvad järgmised. 
-        - Primaarvõti: tegevuse ainuidentifikaator
-        - Ajatempel: primaarvõtmega tuvastatud sündmuse kuupäev ja kellaaeg
-        - Sündmus (tegevuse nimi): soovitud sündmuse nimi
-        - Üksikasjad (summa või väärtus): klienditegevuse üksikasjad
+        - **Primaarvõti:**: Tegevuse ainuidentifikaator
+        - **Ajatempel**: Primaarvõtmega tuvastatud sündmuse kuupäev ja kellaaeg
+        - **Sündmus (tegevuse nimi)**: Soovitud sündmuse nimi
+        - **Üksikasjad (summa või väärtus)**: Klienditegevuse üksikasjad
+
+- Soovitatavad andmete omadused:
+    - Piisavad varasemad andmed: Vähemalt ühe aasta tehinguandmeid. Eelistatavalt kahe kuni kolme aasta tehinguandmed, et ennustada CLV-d ühe aasta jooksul.
+    - Mitu ostu kliendi kohta: Ideaaljuhul vähemalt kaks kuni kolm tehingut kliendi ID kohta, eelistatavalt mitme kuupäeva jooksul.
+    - Klientide arv: Vähemalt 100 unikaalset klienti, eelistatuult rohkem kui 10 000 klienti. Mudel nurjub, kui kliente on vähem kui 100 ja puuduvad varasemad andmed
+    - Andmete täielikkus: Sisendandmete nõutavatel väljadel on vähem kui 20% puuduvaid väärtusi   
+
+> [!NOTE]
+> - Mudeli jaoks on vaja teie klientide tehingute ajalugu. Praegu saab konfigureerida ainult ühe kannete ajaloo olemi. Kui ostuolemeid on mitu, tuleb need liita Power Query'ga enne andmete sisestamist.
+> - Täiendavate klienditegevuse andmete jaoks (valikuline) saate siiski lisada nii palju kliendi tegevuse olemeid, kui soovite mudeliga kaaluda.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kliendi eluea väärtuse (CLV) loomine
 
@@ -76,7 +86,7 @@ Järgmised andmed on vajalikud ja kui need on märgitud valikulised, soovituslik
    Vaikimisi on ühikuks seatud kuud. Saate selle muuta aastateks, et kaugemale tulevikku vaadata.
 
    > [!TIP]
-   > Määratletud ajaperioodi CLV täpseks ennustamiseks vajate võrreldavat ajalooliste andmete perioodi. Kui soovite näiteks prognoosida järgmist 12 kuud, on soovitatav kasutada vähemalt 18–24 kuud varasemaid andmeid.
+   > Määratletud ajaperioodi CLV täpseks ennustamiseks vajate võrreldavat ajalooliste andmete perioodi. Kui soovite näiteks prognoosida CLV -i järgmise12 kuu lõikes, on soovitatav kasutada vähemalt 18–24 kuud varasemaid andmeid.
 
 1. Määrake, mida **Aktiivsed kliendid** teie ettevõtte jaoks tähendavad. Määrake ajavahemik, mille jooksul peab kliendil olema olnud vähemalt üks tehing, mida loetakse aktiivseks. Mudel prognoosib, ainult aktiivsete klientide CLV-d. 
    - **Mudelil on soovitatav arvutada ostuperiood (soovitatav)**: mudel analüüsib teie andmeid ja määratleb varasematel ostuaegadel põhineva ajavahemiku.
@@ -181,14 +191,14 @@ Tulemuste lehel on kolm peamist andmete jaotist.
   Kasutades prognoosi konfigureerimisel esitatud suure väärtusega klientide määratlust, hindab süsteem, kuidas tehisintellekti mudel toimis suure väärtusega klientide ennustamisel võrreldes baasmudeliga.    
 
   Astmed määratletakse vastavalt järgmistele reeglitele.
-  - A kui mudel ennustas täpselt vähemalt 5% kõrgema väärtusega kliente võrreldes baasmudeliga.
-  - B kui mudel ennustas täpselt vahemikus 0-5% kõrgema väärtusega kliente võrreldes baasmudeliga.
-  - C kui mudel ennustas täpselt vähem kõrgema väärtusega kliente võrreldes baasmudeliga.
+  - **A** kui mudel ennustas täpselt vähemalt 5% kõrgema väärtusega kliente võrreldes baasmudeliga.
+  - **B** kui mudel ennustas täpselt vahemikus 0-5% kõrgema väärtusega kliente võrreldes baasmudeliga.
+  - **C** kui mudel ennustas täpselt vähem kõrgema väärtusega kliente võrreldes baasmudeliga.
 
   **Mudeli hinnangu** paanil kuvatakse täiendavad üksikasjad AI mudeli jõudluse ja baasmudeli kohta. Baasmudel kasutab tehisintellektivälist lähenemisviisi, et arvutada kliendi eluea väärtus peamiselt klientide varasemate ostude põhjal.     
   Standardvalem, mida kasutatakse CLV arvutamiseks baasmudeli alusel:    
 
-  *CLV iga kliendi kohta = kliendi tehtud keskmine kuu ost aktiivses kliendiaknas * Kuude arv CLV prognoos perioodis * Kõigi klientide üldine retentsioon*
+  _**CLV iga kliendi kohta** = Kliendi tehtud keskmine kuu ost aktiivses kliendiaknas *Kuude arv CLV prognoos perioodis* Kõigi klientide üldine retentsioon*_
 
   AI mudelit võrreldakse kahe mudeli jõudlusemõõdikul põhineva baasmudeliga.
   

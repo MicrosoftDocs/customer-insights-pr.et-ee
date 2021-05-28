@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596402"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049389"
 ---
 # <a name="entities-in-audience-insights"></a>Olemid sihtrühmaülevaadetes
 
@@ -35,14 +35,14 @@ Pärast [andmeallikate konfigureerimist](data-sources.md)minge lehele **Olemid**
 Valige olem, et avastada selles olemis sisalduvaid erinevaid välju ja kirjeid.
 
 > [!div class="mx-imgBorder"]
-> ![Vali olem](media/data-manager-entities-data.png "Vali olem")
+> ![Olemi valimine](media/data-manager-entities-data.png "Vali olem")
 
-- Vahekaart **Andmed** on valitud vaikimisi ja selles kuvatakse tabel, kus loetletakse olemi individuaalsete kirjete üksikasjad.
+- Vahekaardil **Andmed** kuvatakse olemin üksikkirjete tabeli analüüsimise üksikasjad.
 
 > [!div class="mx-imgBorder"]
 > ![Väljade tabel](media/data-manager-entities-fields.PNG "Väljade tabel")
 
-- Vahekaardil **Väljad** kuvatakse tabel, kus saate vaadata valitud olemi üksikasju, nt väljade nimesid, andmetüüpe ja tüüpe. Veerus **Tüüp** kuvatakse ühise andmemudeli seostatavad tüübid, mis on süsteemi poolt automaatselt tuvastatud või mille on kasutajad [käsitsi vastendanud](map-entities.md). Need on semantilised tüübid, mis võivad atribuutide andmetüüpide hulgast erineda, nt allpool on *Meili* välja andmetüüp *Tekst*, kuid selle (semantiline) ühine andmemudel võib olla *Meil* või *Meiliaadress*.
+- Vahekaart **Atribuudid** on vaikimisi valitud ja kuvab tabeli et vaadata üle valitud olemi üksikasjad nagu välja nimed, andmetüübid ja tüübid. Veerus **Tüüp** kuvatakse ühise andmemudeli seostatavad tüübid, mis on süsteemi poolt automaatselt tuvastatud või mille on kasutajad [käsitsi vastendanud](map-entities.md). Need on semantilised tüübid, mis võivad atribuutide andmetüüpide hulgast erineda, nt allpool on *Meili* välja andmetüüp *Tekst*, kuid selle (semantiline) ühine andmemudel võib olla *Meil* või *Meiliaadress*.
 
 > [!NOTE]
 > Mõlemad tabelid näitavad ainult teie olemi andmete näidiseid. Täieliku andmekogumise vaatamiseks minge lehele **Andmeallikad**, valige olem, valige **Redigeeri** ja seejärel vaadake selle olemi andmeid Power Query redaktoriga, nagu on selgitatud [andmeallikates](data-sources.md).

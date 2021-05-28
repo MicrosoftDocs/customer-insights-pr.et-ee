@@ -1,7 +1,7 @@
 ---
-title: Kliendikaardi lisandmooduli installimine ja konfigureerimine
-description: Kliendikaardi lisandmooduli installimine ja konfigureerimine teenuse Dynamics 365 Customer Insights jaoks.
-ms.date: 01/20/2021
+title: Rakenduse Dynamics 365 kliendikaardi lisandmoodul
+description: Saate selle lisandmooduliga kuvada Dynamics 365 rakenduste sihtrühma ülevaadete andmeid.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597322"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059583"
 ---
 # <a name="customer-card-add-in-preview"></a>Kliendikaardi lisandmoodul (eelvaade)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Saate oma klientide kohta täieliku ülevaate otse Dynamics 365 rakendustes. Saate vaadata kliendikaardi lisandmooduliga seotud demograafiat, ülevaateid ja tegevuse ajajooni.
+Saate oma klientide kohta täieliku ülevaate otse Dynamics 365 rakendustes. Kui kliendikaardi lisandmoodul on installitud toetatud Dynamics 365 rakendusse, saate valida demograafia, ülevaadete ja tegevuse ajaskaala kuvamise. Lisandmoodul toob andmed Customer Insights -i kaudu, mõjutamata ühendatud Dynamics 365 rakenduse andmeid. 
 
 ## <a name="prerequisites"></a>Eeltingimused
 
-- Dynamics 365 rakendus (nt müügikeskus või klienditeeninduskeskus), versioon 9.0 ja uuem, kus Unified Interface on lubatud.
-- Kliendiprofiilid, [mis on valmendatud Dynamics 365 rakendusest Common Data Service'i abil](connect-power-query.md).
-- Kliendikaardi lisandmooduli kasutajad tuleb sihtrühmaülevaadetes [lisada kasutajatena](permissions.md).
-- [Konfigureeritud otsingu- ja filtrifunktsioonid](search-filter-index.md).
-- Demograafiliste andmete juhtelement: demograafilised väljad (nt vanus või sugu) on saadaval koondatud kliendiprofiilis.
-- Rikastamise juhtelement: nõuab kliendiprofiilile aktiivsete [rikastamiste](enrichment-hub.md) rakendamist.
-- Ärianalüüsi juhtelement: nõuab Azure'i masinõppe ([prognoosid](predictions.md) või [kohandatud mudelid](custom-models.md)) abil genereeritud andmeid
-- Näitajate juhtelement: nõuab [konfigureeritud näitajaid](measures.md).
-- Ajaskaala juhtelement: nõuab [konfigureeritud tegevusi](activities.md).
+- Lisandmoodul töötab ainult Dynamics 365 mudelipõhiste rakendustega (nt Müük või Klienditeenindus, versioon 9.0 ja uuemad).
+- Et Dynamics 365 andmed vastendaks sihtrühma ülevaadetega kliendiprofiilidega, tuleb neid [Dynamics 365 rakendusest konnektori abil alla laadida Common Data Service](connect-power-query.md).
+- Kõik Dynamics 365 kliendikaardi lisandmooduli kasutajad peavad andmete nägemiseks olema [lisatud kasutajatena](permissions.md) publiku ülevaadetes.
+- [Konfigureeritud otsing ja võimekuste filtreerimine](search-filter-index.md) on publiku ülevaadetes nõutud andmete otsingu töötamise jaoks.
+- Iga lisandmooduli juhtelement kasutab publiku ülevaadetes teatud andmeid:
+  - Näitajate juhtelement: nõuab [konfigureeritud näitajaid](measures.md).
+  - Jälitusteabe juhtelement: Nõuab andmeid, mis on loodud kasutades [prognoosimist](predictions.md) või [kohandatud mudeleid](custom-models.md).
+  - Demograafiliste andmete juhtelement: demograafilised väljad (nt vanus või sugu) on saadaval koondatud kliendiprofiilis.
+  - Rikastamise juhtelement: nõuab kliendiprofiilile aktiivsete [rikastamiste](enrichment-hub.md) rakendamist.
+  - Ajaskaala juhtelement: nõuab [konfigureeritud tegevusi](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Kliendikaardi lisandmooduli installimine
 
@@ -56,9 +57,9 @@ Lahenduse installimiseks teie keskkonda võib kuluda pisut aega.
    > [!NOTE]
    > Kontrollige, et brauseri hüpikakende blokeerija ei blokeeriks autentimise akent, kui valite nupu **Logi sisse**.
 
-1. Valige keskkond, kust soovite andmeid tuua.
+1. Valige Customer Insights -i keskkond, kust soovite andmeid tuua.
 
-1. Määratlege, millised väljad vastendada Dynamics 365 rakenduse kirjetega.
+1. Määratlege väljavastendus Dynamics 365 rakenduses kirjete jaoks. Customer Insights -i andmetest olenevalt saate valida järgmiste suvandite vastendamise:
    - Kontaktiga vastendamiseks valige kliendiolemi väli, mis vastab teie kontaktiolemi ID-le.
    - Kontoga vastendamiseks valige kliendiolemi väli, mis vastab teie kontoolemi ID-le.
 

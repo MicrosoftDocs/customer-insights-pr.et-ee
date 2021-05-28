@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887935"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049245"
 ---
 # <a name="define-and-manage-measures"></a>Meetmete määratlemine ja haldamine
 
@@ -34,7 +34,7 @@ Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate ehitada näita
 
 1. Valige **Redigeeri nimi** ja sisestage näitaja **Nimi**. 
    > [!NOTE]
-   > Kui teie uuel näitaja konfiguratsioonil on ainult kaks välja– näiteks CustomerID ja üks arvutus, lisatakse väljund uue veeruna süsteemi genereeritud olemile nimega Customer_Measure. Näete näitaja väärtust ühtses kliendiprofiilis. Muud näitajad loovad oma olemeid.
+   > Kui teie uuel mõõtühiku konfiguratsioonil on ainult kaks välja (nt CustomerID ja üks arvutus), lisatakse väljund uue veeruna süsteemi genereeritud olemile nimega Customer_Measure. Näete näitaja väärtust ühtses kliendiprofiilis. Muud näitajad loovad oma olemeid.
 
 1. Valige konfiguratsioonialas koondamisfunktsioon ripploendist **Vali funktsioon**. Koondamisfunktsioonid on järgmised. 
    - **Sum**

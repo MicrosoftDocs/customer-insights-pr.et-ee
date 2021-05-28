@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595559"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085617"
 ---
 # <a name="match-entities"></a>Olemite vastavusseviimine
 
@@ -103,6 +103,18 @@ Vastendusreeglid esindavad tingimuste kogumeid. Mitmel atribuudil põhinevate ti
 
 > [!NOTE]
 > Reeglite järjekorda on oluline. Vastendamise algoritm proovib vastendada esimese reegli alusel ja jätkab teise reegliga vaid siis, kui esimese reegli korral ei tuvastatud vasteid.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Olemi järjestuse muutmine reeglite vastendamises
+
+Saate olemid vastavalt reeglitele ümber järjestada, et muuta nende töötlemise järjestust. Reeglid, mis on muudetud tellimuse tõttu vastuolulised, eemaldatakse. Värskendatud konfiguratsiooniga eemaldatud reeglid tuleb uuesti luua.
+
+1. Minge **Andmed** > **Unify** > **Vaste** ja valige **Redigeeri**.
+
+1. Paanil **Reegli redigeerimine** valige juhtelement **Nihuta üles/alla** või lohistage olemid tellimuse muutmiseks.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Suvandid tellimuse olemite sobitamise ajal töötlemise suvandite muutmiseks.":::
+
+1. Reegli salvestamiseks valige **Valmis**.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Vastendatud olemis duplikaadieemalduse määratlemine
 

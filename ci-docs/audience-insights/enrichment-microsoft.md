@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f19033236190547f68d2b91ec6b32074bf7912a
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
+ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896597"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "6064886"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Kliendiprofiilide rikastamine brändi ja huvide ligitõmbavusega (eelvaade)
 
@@ -31,7 +31,7 @@ Huvide külgetõmbe rikastamise konfigureerimiseks minge vahekaardile **Avastami
 
 ## <a name="how-we-determine-affinities"></a>Kuidas määratleme ärisuhteid
 
-Microsoft kasutab veebipõhised otsinguandmed, et leida kaubamärkide ja omandiõiguste vahelisi sidemeid erinevates demograafilistes segmentides (määratletud vanuse, soo või asukoha järgi). Brändi või huvi veebiotsingu maht määratleb, kui palju ligitõmbavust on demograafilisel segmendil selle brändi või huvi suhtes võrreldes teiste segmentidega. Kaubamärki või omandiõigus.
+Microsoft kasutab veebipõhised otsinguandmed, et leida kaubamärkide ja omandiõiguste vahelisi sidemeid erinevates demograafilistes segmentides (määratletud vanuse, soo või asukoha järgi). Brändi või huvi veebiotsingu maht määratleb, kui palju ligitõmbavust on demograafilisel segmendil selle brändi või huvi suhtes võrreldes teiste segmentidega.
 
 ## <a name="affinity-level-and-score"></a>Ühtivuse tase ja skoor
 

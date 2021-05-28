@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887889"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085525"
 ---
 # <a name="data-sources-overview"></a>Andmeallikate ülevaade
 
@@ -36,11 +36,9 @@ Saate andmeallikat lisada kolmel peamisel viisil.
 
 Kohalike andmeallikate andmete sisestamine vaatajaskonna statistikas toetub Power Platform andmevoogudele. Andmevooge saab lubada Customer Insights kaudu [pakkudes Microsoft Dataverse keskkonna URL-i](manage-environments.md#create-an-environment-in-an-existing-organization) keskkonna seadistamisel.
 
-Andmeallikad, mis luuakse pärast keskkonna Dataverse seostamist Customer Insights, kasutavad [Power Platform andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) vaikimisi. Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Eemaldage ja looge uuesti andmeallikad, mis olid olemas enne seda, kui Dataverse keskkond seostati asutusesisese andmelüüside kasutamisega.
+Andmeallikad, mis luuakse pärast keskkonna Dataverse seostamist Customer Insights, kasutavad [Power Platform andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) vaikimisi. Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Eemaldage ja looge uuesti andmeallikad, mis olid olemas enne seda, kui Dataverse -i keskkond seostati [asutusesisese andmelüüside kasutamisega](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Andmevõrgud olemasolevast Power BI või Power Apps keskkonnast on nähtavad ja saate neid uuesti kasutada jaotises Customer Insights. Andmeallikate lehel kuvatakse lingid, et minna Power Platform keskkonda, kus te saate vaadata ja konfigureerida asutusesiseseid andmelüüse.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Andmeallikate lehe kuvatõmmis, kus on kuvatud Power Platform keskkonda viivad lingid.":::
 
 ## <a name="review-ingested-data"></a>Sisestatud andmete läbivaatus
 
