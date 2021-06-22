@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595268"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129894"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Toote soovituste prognoosimise (eelvaate) näidisjuhend
 
@@ -22,7 +22,7 @@ Selles juhendis näidatakse teile otsast lõpuni, kuidas kasutada tootesoovitust
 
 ## <a name="scenario"></a>Stsenaarium
 
-Contoso on ettevõte, mis toodab kvaliteetset kohvi ja kohvimasinaid, mida müüakse veebisaidi Contoso Coffee kaudu. Nende eesmärk on mõista, milliseid tooteid nad peaksid püsiklientidele soovitama. Teades, millised kliendid **tõenäoliselt ostavad**, aitab ettevõttel nendele toodetele keskendudes turundusvõtteid säästa.
+Contoso on ettevõte, mis toodab kvaliteetseid kohvi- ja kohvimasinaid, mida nad müüvad oma Contoso Coffee veebisaidi kaudu. Nende eesmärk on mõista, milliseid tooteid nad peaksid püsiklientidele soovitama. Teades, millised kliendid **tõenäoliselt ostavad**, aitab ettevõttel nendele toodetele keskendudes turundusvõtteid säästa.
 
 ## <a name="prerequisites"></a>Eeltingimused
 
@@ -65,7 +65,7 @@ Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query ko
 
 1. Muutke küljepaanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **eCommercePurchases**.
 
-1. Salvestage andmeallikas.
+1. **Salvestage** andmeallikas.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Kliendiandmete valmendamine lojaalsusskeemi kaudu
@@ -83,11 +83,11 @@ Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query ko
 
 1. Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **loyCustomers**.
 
-1. Salvestage andmeallikas.
+1. **Salvestage** andmeallikas.
 
 ## <a name="task-2---data-unification"></a>Ülesanne 2 – andmete koondamine
 
-Pärast andmete valmendamist alustame protsessi **Vastenda, vii vastavusse, ühenda**, et luua koondatud kliendiprofiil. Lisateavet leiate teemast [Andmete koondamine](data-unification.md).
+Pärast andmete sisestamist alustame andmete ühendamise protsessi, et luua ühtne kliendiprofiil. Lisateavet leiate teemast [Andmete koondamine](data-unification.md).
 
 ### <a name="map"></a>Vastendus
 
@@ -156,7 +156,7 @@ Kui kliendiprofiilid on koondatud, saame käivitada tellimusevoolavuse prognoosi
 
    - **Toodete arv**: määrake selle väärtuseks **5**. See säte määratleb mitu toodet soovite oma klientidele soovitada.
 
-   - **Kas soovitate tooteid, mille kliendid on hiljuti ostnud?**: valige **Jah**, et näidata, kas soovite tooted kaasata soovitusse, mille kliendid on varem ostnud.
+   - **Eeldatud kordusostud**: valige **Jah** näitamaks, et soovite tooteid kaasata soovitusesse, mille teie kliendid on varem ostnud.
 
    - **Tagasivaate aken:** valige vähemalt **365 päeva**. See säte määtatleb, kui kaugele mudel vaatab kliendi aktiivsuse ajas tagasi, et seda kasutada oma soovituste sisendina.
    

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954574"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095505"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Kliendi eluea väärtus (CLV) prognoosimine (eelversioon)
 
@@ -149,7 +149,6 @@ Andmed, mis kajastavad peamisi kliendisuhtlusi (nt veebi-, klienditeenindus- ja 
 
 1. Tehke valik **Edasi**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Mudeli konfiguratsiooni läbivaatamine ja käitamine
 
 1. **Kontrollige mudeli üksikasjade** etapis ülevaatamiseks viisardi prognoos. Saate naasta prognoosi mis tahes osasse, valides suvandi **Redigeeri** kuvatud väärtuse juures. Saate ka edenemise indikaatorist valida konfiguratsiooniastme.
@@ -170,11 +169,10 @@ Andmed, mis kajastavad peamisi kliendisuhtlusi (nt veebi-, klienditeenindus- ja 
 - **Olek**: prognoosi käitamise olek.
     - **Järjekorras**: prognoos ootab muude protsesside lõpetamist.
     - **Värskendamine**: prognoos töötab praegu, et luua tulemusi, mis sisestatakse väljundolemisse.
-    - **Nurjunud**: prognoosi käitamine nurjus. Lisateabe saamiseks [vaadake üle logid](#troubleshoot-a-failed-prediction).
+    - **Nurjunud**: prognoosi käitamine nurjus. Lisateabe saamiseks [vaadake üle logid](manage-predictions.md#troubleshoot-a-failed-prediction).
     - **Õnnestus**: prognoos on õnnestunud. Valige vertikaalsete kolmikpunktide alt suvand **Kuva**, et vaadata prognoos tulemusi.
 - **Redigeeritud**: prognoosi konfiguratsiooni muutmise kuupäev.
 - **Viimati värskendatud**: kuupäev, mil prognoos värskendas tulemusi väljundolemis.
-
 
 ### <a name="review-prediction-results"></a>Prognoosi tulemuste ülevaatamine
 
@@ -216,28 +214,8 @@ Tulemuste lehel on kolm peamist andmete jaotist.
 
 - **Enamus faktoreid on järgmised**: CLV prognoosi loomisel faktoreid, mis põhinevad AI mudelile esitatud sisendandmetel. Kõigi tegurite olulisus arvutatakse selle loodava koondprognoosi jaoks. Nende tegurite abil saate oma prognoosi tulemusi kinnitada. Need tegurid pakuvad ka rohkem teavet kõige mõjukamate tegurite kohta, mis aitasid teie klientidel CLV-d ennustada.
 
-## <a name="refresh-a-prediction"></a>Prognoosi värskendamine
+## <a name="manage-predictions"></a>Prognooside haldamine
 
-Prognoosimine värskendatakse automaatselt samal [ajakaval, andmeid värskendatakse](system.md#schedule-tab) sätetes konfigureeritud viisil. Neid saab värskendada ka käsitsi.
-
-1. Minge jaotisse **Ärianalüüs** > **Prognoosid** ja valige vahekaart **Minu prognoosid**.
-2. Valige vertikaalne kolmikpunkt selle prognoosi kõrval, mida soovite värskendada.
-3. Valige **Värskenda**.
-
-## <a name="delete-a-prediction"></a>Prognoosi kustutamine
-
-Prognoosi kustutamisel eemaldatakse ka selle väljundolem.
-
-1. Minge jaotisse **Ärianalüüs** > **Prognoosid** ja valige vahekaart **Minu prognoosid**.
-2. Valige vertikaalne kolmikpunkt selle prognoosi kõrval, mida soovite kustutada.
-3. Valige **Kustuta**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Nurjunud prognoosi tõrkeotsing
-
-1. Minge jaotisse **Ärianalüüs** > **Prognoosid** ja valige vahekaart **Minu prognoosid**.
-2. Valige vertikaalne kolmikpunkt selle prognoosi kõrval, mille tõrkelogisid soovite vaadata.
-3. Valige **Logid**.
-4. Kõikide tõrgete läbivaatamine. Esineda võib mitmesuguseid tüüpe tõrkeid ja need kirjeldavad, mis olukord selle tõrke tekitad. Näiteks tõrge, et täpselt ennustamiseks pole piisavalt andmeid, lahendatakse tavaliselt täiendavate andmete laadimisega sihtrühma ülevaadetesse.
-
+Prognoose on võimalik optimeerida, tõrkeotsingut teha, värskendada või kustutada. Vaadake sisendandmete kasutatavuse aruanne üle, et teada saada, kuidas muuta prognoos kiiremaks ja usaldusväärsemaks. Lisateavet leiate teemast [Prognooside haldamine](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

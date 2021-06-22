@@ -1,7 +1,7 @@
 ---
 title: Uued ja tulevased funktsioonid
 description: Teave uute funktsioonide, täiustuste ja veaparanduste kohta.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988915"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263246"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Mis on uut Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis?
 
@@ -26,6 +26,37 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 
 > [!TIP]
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>Mai 2021 värskendused
+
+2021. aasta mai värskendused sisaldavad mitmeid funktsioone, jõudluse versiooniuuendusi ja veaparandusi.
+
+### <a name="data-ingestion"></a>Andmete valmendamine
+
+- **Metaandmete või olemite määratluste vaatamine või muutmine andmete manustamise ajal oma Azure Data Lake Storage** andmetest. Saate nüüd metaandmeid või olemi määratlusi vaadata ja redigeerida sihtrühma ülevaadetes, kui manustada oma Azure Data Lake Storage kaustas Common Data Model andmed. See võimalus annab reaalajas tagasisidet, mudeli valideerimist ja tõrkekontrolli. See võimaldab teil sujuvalt redigeerida nii mudelit.json kui manifest.json faili.
+
+### <a name="extensibility"></a>Laiendatavus
+
+- **Täiustatud segmendiekspordid, kohandatud ajakava ja duplitseerimine**: Saate nüüd [vaadata kõiki kindla segmendi eksporte](export-destinations.md#view-exports-and-export-details) loendis. See uus vaade aitab hallata kindla segmendi kasutamist ja kohandada olemasolevaid või luua uusi eksporte.    
+  Saate [kohandatud värskendusgraafikuid määratleda](export-destinations.md#schedule-and-run-exports) nii üksiku ekspordi kui ka mitme ekspordi jaoks korraga. Kuni praeguseni käitatakse kogu eksporti iga süsteemivärskendusega.    
+  Selle asemel, et luua uus eksport algusest peale, võite aja säästmiseks alustada olemasoleva ekspordiga.
+
+- **Microsoft Advertising ekspordi segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates Microsoft Advertisingu. Looge oma koondatud kliendiprofiiliandmetega Microsoft Advertisingus kliendivaste sihtrühmasid ja kasutage neid oma reklaamikampaaniates. Lisateavet leiate teemast [Segmentide eksportimine rakendusse Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Segmentide eksportimine LinkedIn Adsi**. Oleme laiendanud meie ekspordiga seotud kaasates LinkedIn Adsi ja võimaldada teil avada kontaktide sihtimist ja ettevõtte sihtimist LinkedIni kaudu, eksportides oma ühendatud kliendiprofiili andmed. Lisateavet leiate teemast [Segmentide eksportimine rakendusse LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Omnisend ekspordi segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates Omnisendi. Kasutage Omnisendiga kampaaniate loomiseks, meiliturunduse pakkumiseks ja konkreetsetelt kliendirühmade kasutamiseks sihtrühma ülevaates loodud segmente. Lisateavet leiate teemast [Segmentide eksportimine rakendusse Omnisend](export-omnisend.md)
+
+### <a name="predictions"></a>Prognoosid
+
+- **Sisendandmete kasutatavuse aruanne**. Sisendandmete kasutatavuse aruanne annab sisestatud vaate tõrgetest ja hoiatustest, mida teie "karbist väljas" prognoosid võivad põhjustada. See annab ka soovitusi, kuidas mudeli tulemuslikkust parandada.    
+  Aruanne on saadaval pärast seda, kui mudel on oma treeninguprotsessi lõpetanud. See luuakse iga mudeli jaoks eraldi, olenemata sellest, kas see õnnestus või mitte.
+  See funktsioon on praegu saadaval ainult mudeliga Transaction Churn. Lisateavet leiate teemast [Sisendandmete kasutusaruanne](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Suhtlused
+
+- **Seose visualiseerija**. Seose visualiseerija võimaldab näha kõiki olemasolevaid seoseid olemite ja nende kardiaalsust. Seosed on nüüd korraldatud rühmadena: kasutaja loodud, süsteemi ja päritud seosed. Vaate saate eksportida ka pildina. Lisateavet leiate teemast [Kuva seosed](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Aprill 2021 värskendused
 

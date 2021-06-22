@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906759"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095551"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Tootesoovituse ennustamine (eelvaade)
 
@@ -205,33 +205,9 @@ Mõnikord on ainult teatud tooted kasulikud või sobivad teie loodud prognoosi t
        > [!div class="mx-imgBorder"]
        > ![Loend, mis näitab, et üksikuid kliente saab valida kõrge täpsusega soovitustega](media/product-recommendation-highconfidence.PNG "Loend, mis näitab, et üksikuid kliente saab valida kõrge täpsusega soovitustega")
 
-## <a name="fix-a-failed-prediction"></a>Nurjunud prognoosi parandamine
+## <a name="manage-predictions"></a>Prognooside haldamine
 
-1. Avage jaotises **Ärianalüüs** > **Prognoosid** vahekaart **Minu prognoosid**.
-
-1. Valige prognoos, mille tõrkelogisid soovite kuvada, ja valige **Logid**.
-
-1. Kõikide tõrgete läbivaatamine. Esineda võib mitmesuguseid tüüpe tõrkeid ja need kirjeldavad, mis olukord selle tõrke tekitad. Näiteks tõrge, et prognoosimiseks pole piisavalt andmeid, lahendatakse tavaliselt, kui laadite Customer Insights rohkem andmeid.
-
-## <a name="refresh-a-prediction"></a>Prognoosi värskendamine
-
-Prognoosimine värskendatakse automaatselt samal [ajakaval, andmeid värskendatakse](system.md#schedule-tab) sätetes konfigureeritud viisil.
-
-1. Avage jaotises **Ärianalüüs** > **Prognoosid** vahekaart **Minu prognoosid**.
-
-1. Valige vertikaalne kolmikpunkt selle prognoosi kõrval, mida soovite värskendada.
-
-1. Valige **Värskenda**.
-
-## <a name="delete-a-prediction"></a>Prognoosi kustutamine
-
-Prognoosi kustutamine eemaldab ka selle väljundolemi.
-
-1. Avage jaotises **Ärianalüüs** > **Prognoosid** vahekaart **Minu prognoosid**.
-
-1. Valige vertikaalne kolmikpunkt selle prognoosi kõrval, mida soovite kustutada.
-
-1. Valige **Kustuta**.
+Prognoose on võimalik optimeerida, tõrkeotsingut teha, värskendada või kustutada. Vaadake sisendandmete kasutatavuse aruanne üle, et teada saada, kuidas muuta prognoos kiiremaks ja usaldusväärsemaks. Lisateavet leiate teemast [Prognooside haldamine](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

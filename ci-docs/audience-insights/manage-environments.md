@@ -1,7 +1,7 @@
 ---
 title: Keskkondade loomine ja haldamine
 description: Siit leiate teavet selle kohta, kuidas teenuse kasutamiseks registreeruda ja kuidas keskkondasid hallata.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887981"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259094"
 ---
 # <a name="manage-environments"></a>Keskkondade haldamine
 
@@ -76,9 +76,9 @@ Uue keskkonna loomine.
    > Toetame ainult Azure Data Lake Gen2 salvestuskontosid, mis asuvad samas Azure'i regioonis, mille valisite keskkonna loomisel.
    > Toetame ainult salvestuskontosid, kus on lubatud Azure Data Lake Gen 2 hierarhiline nimeruum (HNS).
 
-   - Azure Data Lake Storage Gen2 korral saate autentimiseks valida ressursipõhise ja tellimusepõhise valiku vahel. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). **Konteineri** nime ei saa muuta ja see on „customerinsights“.
+   - Azure Data Lake Storage Gen2 korral saate autentimiseks valida ressursipõhise ja tellimusepõhise valiku vahel. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). **Konteineri** nime ei saa muuta ja see on `customerinsights`.
    
-   - Kui soovite kasutada [prognoosimise funktsiooni](predictions.md), konfigureerida andmete jagamist rakenduste ja lahendustega, mida pakub Microsoft Dataverse või lubada asutusesisestest andmeallikatest pärinevaid andmetel luua Microsoft Dataverse keskkonna URL-i, **konfigureerige Microsoft Dataverse andmete jagamine ja lubage täiendavad võimalused**. Valige suvand **Enable data sharing** (Luba andmete ühiskasutus), et jagada Customer Insightsi väljundandmeid Microsoft Dataverse Managed Data Lake hallatava andmejärvega.
+   - Kui soovite kasutada [prognoosimise funktsiooni](predictions.md), konfigureerida andmete jagamist, mida pakub Microsoft Dataverse või lubada asutusesisestest andmeallikatest pärinevaid andmetel luua Microsoft Dataverse keskkonna URL-i, **konfigureerige Microsoft Dataverse andmete jagamine ja lubage täiendavad võimalused**. Valige suvand **Enable data sharing** (Luba andmete ühiskasutus), et jagada Customer Insightsi väljundandmeid Microsoft Dataverse Managed Data Lake hallatava andmejärvega.
 
      > [!NOTE]
      > - Andmete jagamine rakendusega Microsoft Dataverse Managed Data Lake täna ei toetata, kui salvestate kõik andmed enda andmejärve Azure Data Lake Storage.
@@ -87,7 +87,7 @@ Uue keskkonna loomine.
      > [!div class="mx-imgBorder"]
      > ![Konfigureerimissuvandid andmete ühiskasutuse lubamiseks Microsoft Dataverse abil](media/datasharing-with-DataverseMDL.png)
 
-   Protsesside käitamisel, näiteks andmete valmendamisel või segmendi loomisel, luuakse asjaomased kaustad eespool määratud salvestuskontol. Luuakse andmefailid ja model.json failid ning need lisatakse teie käitatavate protsesside põhjal vastavatesse alamkaustadesse.
+   Protsesside käitamisel, näiteks andmete valmendamisel või segmendi loomisel, luuakse asjaomased kaustad eespool määratud salvestuskontol. Sõltuvalt käitatud protsessist luuakse andmefailid ja model.json-failid ning lisatakse kaustadele sõltuvalt protsessi nimest.
 
    Kui loote mitu Customer Insightsi keskkonda ja soovite salvestada väljundolemid nendest keskkondadest oma salvestuskontole, luuakse eraldi kaustad iga keskkonna jaoks, mille konteineris on ci_<environmentid>.
 
@@ -146,7 +146,7 @@ Saate muuta olemasolevate keskkondade teatud üksikasju.
    > - Andmete jagamine rakendusega Microsoft Dataverse Managed Data Lake täna ei toetata, kui salvestate kõik andmed enda andmejärve Azure Data Lake Storage.
    > - [Prognoosimine puuduvate väärtuste puhul olemis](predictions.md) pole praegu toetatud, kui lubate andmete ühiskasutuse Microsoft Dataverse hallatava Data Lake'iga.
 
-   Kui te lubate andmete jagamise Microsoft Dataverse, käivitatakse ühekordne täielik andmeallikate ja muude protsesside värskendamine. Kui protsessid praegu töötavad ja on järjekorda lisatud, ei näe te suvandit andmete Microsoft Dataverse ühiskasutuse lubamiseks. Võite oodata, kuni need protsessid lõpetavad või tühistada need andmete jagamise lubamiseks. 
+   Pärast andmete jagamise lubamist teenusega Microsoft Dataverse, käivitatakse ühekordne täielik andmeallikate ja muude protsesside värskendamine. Kui protsessid praegu töötavad,, ei näe te suvandit andmete Microsoft Dataverse ühiskasutuse lubamiseks. Oodake, kuni need protsessid lõpetavad või tühistada need andmete jagamise lubamiseks. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Konfigureerimissuvandid andmete jagamise lubamiseks Microsoft Dataverse abil.":::
    

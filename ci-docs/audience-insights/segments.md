@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034007"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111382"
 ---
 # <a name="segments-overview"></a>Segmentide ülevaade
 
@@ -32,22 +32,13 @@ Uue segmendi loomiseks on mitu võimalust.
 - AI-powered soovitused, mis põhinevad mõõtmistel või atribuutidel: [Soovitatavad segmendid mõõtmiste parendamiseks](suggested-segments.md)
 - Tegevustel põhinevad soovitused: [Klienditegevusel põhinevad soovitatavad segmendid](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Ülevaade olemasolevatest segmentidest
-
-Avastage oma olemasolevate segmentide kohta lisateavet [Segmentide ülevaadete](segment-insights.md)abil. Saage teada, mis on kahe segmendi puhul erinev või mis on neil ühist.
-
-## <a name="find-similar-customers"></a>Leia sarnased kliendid
-
-Saate tehisintellekti abil leida kliente, kes on sarnased valitud segmendi liikmetega. Lisateavet leiate teemast [sarnased kliendid ](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Olemasolevate segmentide haldamine
 
 Minge lehele **Segmendid** et vaadata ja hallata kõiki oma salvestatud segmente.
 
 Igat segmenti esindab rida, mis sisaldab segmendi kohta täiendavat teavet.
 
-> [!div class="mx-imgBorder"]
-> ![Olemasoleva segmendi haldamise võimalused](media/segments-selected-segment.png "Olemasoleva segmendi haldamise võimalused")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Valitud segment suvandite ripploendi ja saadaolevate suvanditega.":::
 
 Segmendi valimisel on saadaval järgmised tegevused.
 
@@ -59,7 +50,7 @@ Segmendi valimisel on saadaval järgmised tegevused.
   Teise võimalusena saate kasutada ripploendi **Aktiveeri/desaktiveeri** funktsiooni **Ajasta hiljem**, et määrata kindla segmendi aktiveerimise ja desaktiveerimise tulevane kuupäev ja kellaaeg.
 - Segmendi **Ümbernimetamine**.
 - Liikmete loendi **Allalaadimine** CSV-failina.
-- Suvand **Lisa** saadab segmendi kliendi ID-de loendi teises rakenduses töötlemiseks.
+- **Eksportide haldamine** suvand ekspordiga seotud segmendi kuvamiseks ja haldamiseks. [Lisateave eksportide kohta.](export-destinations.md)
 - Segmendi **Kustutamine**.
 
 ## <a name="refresh-segments"></a>Segmentide värskendamine
@@ -68,6 +59,24 @@ Saate kõiki segmente korraga värskendada, valides lehel **Segmendid** suvandi 
 
 > [!TIP]
 > Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
+
+## <a name="export-segments"></a>Ekspordi segmendid
+
+Segmenti saate eksportida segmentide lehelt või [ekspordilehelt](export-destinations.md). 
+
+1. Minge lehele **Segmendid**.
+
+1. Valige **Kuva rohkem [....]** segmendile, mille soovite eksportida.
+
+1. Valige toimingute rippmenüüst **Eksportide haldamine**.
+
+1. Avaneb **Segmendi ekspordid (eelvaade)** leht. Näete kõiki konfigureeritud eksporte, mis on rühmitatud praegust segmenti sisaldavate või seda mitte sisaldavate ekspordite järgi.
+
+   1. Valitud segmendi lisamiseks ekspordile valige loendist eksport ja valige **Lisa segment**.
+
+   1. Valitud segmendiga uue ekspordi loomiseks valige **Lisa eksport**. Lisateavet ekspordi loomise kohta leiate teemast [Uue ekspordi häälestamine](export-destinations.md#set-up-a-new-export).
+
+1. Segmentide põhilehele naasmiseks klõpsake nuppu **Tagasi**.
 
 ## <a name="view-processing-history-and-segment-members"></a>Vaadake töötlemise ajalugu ja segmendi liikmeid
 

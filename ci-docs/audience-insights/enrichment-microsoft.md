@@ -1,7 +1,7 @@
 ---
 title: Kliendiprofiilide rikastamine Microsofti andmetega
 description: Kasutage Microsofti omandiandmeid kliendiandmete rikastamiseks kaubamärgi ja omandiõigusega seotud andmetega.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064886"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245702"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Kliendiprofiilide rikastamine brändi ja huvide ligitõmbavusega (eelvaade)
 
@@ -69,12 +69,10 @@ Juhendatud kogemus aitab teid läbi rikastamise konfiguratsiooni.
 
 ### <a name="define-your-brands-or-interests"></a>Määratlege oma tootemargid või huvid
 
-Valige üks järgmistest suvanditest.
+Valige kuni viis kaubamärki või huvi, kasutades ühte või mõlemat järgmist valikut.
 
-- **Tööstus** : süsteem tuvastab peamised teie tööstuse jaoks asjakohased tootemargid või huvid ning rikastab nendega teie kliendiandmeid.
-- **Valige enda oma**: valige tootemarkide või huvide loendist viis üksust, mis on teie organisatsiooni jaoks kõige asjakohasemad.
-
-Brändi või huvi lisamiseks sisestage see sisendi alasse, et saada sobivate terminite soovitusi. Kui me ei loetle otsitavaid brände või huvisid, saatke meile tagasisidet, kasutades linki **Soovita**.
+- **Tööstus**: valige ripploendist oma sektor ja valige siis selle valdkonna jaoks kõige populaarsem kaubamärk või huvid.
+- **Valige oma nimi**. Sisestage oma ettevõtte jaoks oluline kaubamärk või huvi ja valige siis valite vastavate soovituste vahel. Kui me ei loetle otsitavaid brände või huvisid, saatke meile tagasisidet, kasutades linki **Soovita**.
 
 ### <a name="review-enrichment-preferences"></a>Rikastamise eelistuste ülevaatamine
 

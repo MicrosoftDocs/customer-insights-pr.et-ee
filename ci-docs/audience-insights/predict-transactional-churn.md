@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906851"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095597"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Tehinguvoolavuse prognoos (eelversioon)
 
@@ -144,7 +144,7 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
    - **Olek:** prognoosi käitamise olek.
         - **Järjekorras:** prognoos ootab muude protsesside käivitamist.
         - **Värskendamine:** prognoos töötab praegu, et luua tulemusi, mis sisestatakse väljundolemisse.
-        - **Nurjunud:** prognoosi käitamine nurjus. Lisateabe saamiseks [vaadake üle logid](#troubleshoot-a-failed-prediction).
+        - **Nurjunud:** prognoosi käitamine nurjus. Lisateabe saamiseks [vaadake üle logid](manage-predictions.md#troubleshoot-a-failed-prediction).
         - **Õnnestus:** prognoos on õnnestunud. Valige prognoosi läbivaatamiseks **Vaade** vertikaalse kolmikpunkti juures
    - **Redigeeritud:** prognoosi konfiguratsiooni muutmise kuupäev.
    - **Viimati värskendatud:** kuupäev, mil prognoos värskendas tulemusi väljundolemis.
@@ -168,35 +168,9 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
        
     1. **Kõige mõjukamad tegurid:** prognoosi loomisel võetakse arvesse paljusid tegureid. Mudeli loodavate koondprognooside jaoks arvutatakse iga teguri olulisus. Nende tegurite abil saate oma prognoosi tulemusi kinnitada. Samuti saate seda teavet hiljem kasutada [segmentide loomiseks](segments.md), mis võiksid aidata mõjutada kliendivoolavuse ohtu.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Nurjunud prognoosi tõrkeotsing
+## <a name="manage-predictions"></a>Prognooside haldamine
 
-1. Minge jaotisse **Ärianalüüs** > **Prognoosid** ja valige vahekaart **Minu prognoosid**.
-
-1. Valige vertikaalne kolmikpunkt selle prognoosi kõrval, mille tõrkelogisid soovite vaadata.
-
-1. Valige **Logid**.
-
-1. Kõikide tõrgete läbivaatamine. Esineda võib mitmesuguseid tüüpe tõrkeid ja need kirjeldavad, mis olukord selle tõrke tekitad. Näiteks tõrge, et täpse prognoosi tegemiseks pole piisavalt andmeid, lahendatakse tavaliselt täiendavate andmete laadimisel Customer Insightsis.
-
-## <a name="refresh-a-prediction"></a>Prognoosi värskendamine
-
-Prognoose värskendatakse automaatselt [teie andmete värskendamiste ajakava](system.md#schedule-tab) järgi, mis on sätetes konfigureeritud. Neid saab värskendada ka käsitsi.
-
-1. Minge jaotisse **Ärianalüüs** > **Prognoosid** ja valige vahekaart **Minu prognoosid**.
-
-1. Valige vertikaalne kolmikpunkt selle prognoosi kõrval, mida soovite värskendada.
-
-1. Valige **Värskenda**.
-
-## <a name="delete-a-prediction"></a>Prognoosi kustutamine
-
-Prognoosi kustutamisel eemaldatakse ka selle väljundolem.
-
-1. Minge jaotisse **Ärianalüüs** > **Prognoosid** ja valige vahekaart **Minu prognoosid**.
-
-1. Valige vertikaalne kolmikpunkt selle prognoosi kõrval, mida soovite kustutada.
-
-1. Valige **Kustuta**.
+Prognoose on võimalik optimeerida, tõrkeotsingut teha, värskendada või kustutada. Vaadake sisendandmete kasutatavuse aruanne üle, et teada saada, kuidas muuta prognoos kiiremaks ja usaldusväärsemaks. Lisateavet leiate teemast [Prognooside haldamine](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

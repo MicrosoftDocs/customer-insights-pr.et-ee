@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906897"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095643"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Kordustellimuse voolavuse prognoos (eelvaade)
 
@@ -147,30 +147,9 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
        > [!div class="mx-imgBorder"]
        > ![Loend mõjukate teguritega ja nende olulisus voolavuse tulemuse prognoosimisel](media/subscription-churn-influentialfactors.PNG "Loend mõjukate teguritega ja nende olulisus voolavuse tulemuse prognoosimisel")
 
-## <a name="fix-a-failed-prediction"></a>Nurjunud prognoosi parandamine
+## <a name="manage-predictions"></a>Prognooside haldamine
 
-1. Avage jaotises **Ärianalüüs** > **Prognoosid** vahekaart **Minu prognoosid**.
-1. Valige prognoos, mille tõrkelogisid soovite kuvada, ja valige **Logid**.
-   > [!div class="mx-imgBorder"]
-   > ![Tulemite menüüriba vaade, mis sisaldab sulgemise, mudeli redigeerimise ja logide nuppe](media/subscription-churn-logsbutton.PNG "Tulemite menüüriba vaade, mis sisaldab sulgemise, mudeli redigeerimise ja logide nuppe")
-1. Kõikide tõrgete läbivaatamine. Esineda võib mitmesuguseid tüüpe tõrkeid ja need kirjeldavad, mis olukord selle tõrke tekitad. Näiteks tõrge, et täpselt ennustamiseks pole piisavalt andmeid, lahendatakse tavaliselt täiendavate andmete laadimisega.
-
-## <a name="refresh-a-prediction"></a>Prognoosi värskendamine
-
-Prognoose värskendatakse automaatselt [teie andmete värskendamiste ajakava](system.md#schedule-tab) järgi, mis on sätetes konfigureeritud.
-
-1. Avage jaotises **Ärianalüüs** > **Prognoosid** vahekaart **Minu prognoosid**.
-1. Valige vertikaalne kolmikpunkt selle prognoosi kõrval, mida soovite värskendada.
-1. Valige **Värskenda**.
-
-## <a name="delete-a-prediction"></a>Prognoosi kustutamine
-
-1. Avage jaotises **Ärianalüüs** > **Prognoosid** vahekaart **Minu prognoosid**.
-1. Valige vertikaalne kolmikpunkt selle prognoosi kõrval, mida soovite kustutada.
-1. Valige **Kustuta**.
-
-> [!NOTE]
-> Prognoosi kustutamine eemaldab selle väljundolemi.
+Prognoose on võimalik optimeerida, tõrkeotsingut teha, värskendada või kustutada. Vaadake sisendandmete kasutatavuse aruanne üle, et teada saada, kuidas muuta prognoos kiiremaks ja usaldusväärsemaks. Lisateavet leiate teemast [Prognooside haldamine](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

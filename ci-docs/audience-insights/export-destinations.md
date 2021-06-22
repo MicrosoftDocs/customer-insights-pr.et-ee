@@ -1,7 +1,7 @@
 ---
 title: Andmete eksportimine Customer Insights
 description: Andmete jagamiseks hallake eksporti.
-ms.date: 03/25/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
+ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016609"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6253035"
 ---
 # <a name="exports-preview-overview"></a>Eksportimine (eelversioon) ülevaade
 
@@ -26,22 +26,36 @@ Minge **Andmed** > **Ekspordid**, et näha ekspordilehte. Kõigil kasutajarollid
 
 Ekspordi seadistamiseks või redigeerimiseks peavad teil olema saadaval ühendused. Ühendused sõltuvad teie [kasutajarollist](permissions.md):
 - Administraatoritel on juurdepääs kõigile ühendustele. Nad saavad ekspordi seadistamisel luua ka uusi ühendusi.
-- Kaastöötajatel on juurdepääs kindlatele ühendustele. Nad sõltuvad administraatoritest, et ühendusi konfigureerida ja jagada. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Kaastöötajatel on juurdepääs kindlatele ühendustele. Nad sõltuvad administraatoritest, et ühendusi konfigureerida ja jagada. Ekspordiloendis kuvatakse kaastöötajad, kes saavad veergu **Teie õigused** eksportimist muuta või ainult vaadata. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 - Vaatajad saavad vaadata ainult olemasolevaid eksporte, kuid ei loo neid.
+
+### <a name="define-a-new-export"></a>Uue ekspordi määratlemine
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige uue ekspordi sihtkoha loomiseks **Lisa eksport**.
+1. Uue ekspordi loomiseks valige **Lisa eksport**.
 
 1. Valige **Ekspordi loomine** paanil ühendus, mida kasutada. [Ühendusi](connections.md) haldavad administraatorid. 
 
 1. Sisestage nõutavad üksikasjad ja valige **Salvesta** eksportimise loomiseks.
 
+### <a name="define-a-new-export-based-on-an-existing-export"></a>Uue ekspordi määratlemine olemasoleva ekspordi põhjal
+
+1. Minge **Andmed** > **Ekspordid**.
+
+1. Valige eksportide loendis eksport, mille soovite duplitseerida.
+
+1. Valitud ekspordi üksikasjadega paani **Defineeri eksport** avamiseks valige käsuribal **Loo duplikaat**.
+
+1. Vaadake eksportimine läbi ja kohandage seda ning valige uue ekspordi loomiseks käsk **Salvesta**.
+
 ### <a name="edit-an-export"></a>Ekspordi redigeerimine
 
-1. Valige redigeeritava ekspordi sihtkoha vertikaalsed kolm punkti.
+1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige ripploendist **Redigeeri**.
+1. Valige eksportide loendis eksport, mille soovite redigeerida.
+
+1. Valige käsuribal käsk **Redigeeri**.
 
 1. Muutke värskendatavad väärtused ja valige **Salvesta**.
 
@@ -53,24 +67,48 @@ Pärast ekspordi sihtkoha loomist on need ära toodud **Andmed** > **Ekspordid**
 
 1. Redigeerimisõiguseta kasutajad valivad **Vaade** eksportimise üksikasjade vaatamiseks **Redigeeri** asemel.
 
-1. Sellel kõrvalpaanil kuvatakse ekspordi seadistus. Ilma redigeerimisõiguseta ei saa väärtusi muuta. Valige **Sulge** ekspordilehele naasmiseks.
+1. Kõrvalpaanil kuvatakse ekspordi konfiguratsioon. Ilma redigeerimisõiguseta ei saa väärtusi muuta. Valige **Sulge** ekspordilehele naasmiseks.
 
-## <a name="run-exports-on-demand"></a>Käita ekspordid nõudmisel
+## <a name="schedule-and-run-exports"></a>Ajasta ja käivita ekspordid
 
-Pärast ekspordi konfigureerimist käitatakse see iga [kavandatud värskendusega](system.md#schedule-tab) kui on olemas töötav ühendus.
+Igal konfigureeritud ekspordil on värskendusgraafik. Värskendamise ajal otsib süsteem uusi või värskendatud andmeid, mida eksporti kaasata. Vaikimisi käitatakse eksport iga [kavandatud süsteemivärskenduse](system.md#schedule-tab) osana. Saate värskendamise ajakava kohandada või selle käsitsi eksportimise käivitamiseks välja lülitada.
 
-Andmete eksportimiseks ilma ajastatud värskendamist ootamata minge **Andmed** > **Eksport**. Teil on kaks varianti.
+Ekspordigraafikud sõltuvad teie keskkonna olekust. Kui plaanitud eksportimisel on [sõltuvuste](system.md#refresh-policies) värskendusi juba tehtud, viib süsteem esmalt sõltuvused lõpule ja käivitab seejärel ekspordi. Näete, millal eksporti viimati veerus **Värskendati**.
 
-- Kõigi ekspordite käivitamiseks valige **Käivita kõik** käsuribalt. 
-- Üksikekspordi käivitamiseks valige loendiüksuses vertikaalsed kolm punkti (...) ja valige siis **Käivita**.
+### <a name="schedule-exports"></a>Eksportide ajastamine
+
+Kohandatud värskendusgraafikuid saab määratleda nii üksiku ekspordi kui ka mitme ekspordi jaoks korraga. Praegu määratletud ajakava on ära toodud ekspordiloendi veerus **Ajakava**. Ajakava muutmise õigus on sama, mis [eksportide redigeerimise ja määratlemise](export-destinations.md#set-up-a-new-export) õigus. 
+
+1. Minge **Andmed** > **Ekspordid**.
+
+1. Valige eksport, mille soovite ajastada.
+
+1. Valige käsuribal käsk **Ajasta**.
+
+1. Määrake paanil **Ajasta eksportimine**, et muuta suvandi **Ajasta käivitus** väärtuseks **Sees** käitamisel automaatselt. Käsitsi värskendamiseks seadke selle väärtuseks **Väljas**.
+
+1. Valige automaatselt värskendatud ekspordi korral väärtus **Korduvus** ja määrake selle üksikasjad. Määratletud aeg kehtib kõigile korduvuse eksemplaridele. On aeg, mil eksport peaks käivituma värskendamisel.
+
+1. Muudatuste rakendamiseks ja aktiveerimiseks klõpsake nuppu **Salvesta**.
+
+Mitme ekspordi ajakava redigeerimisel peate tegema valiku jaotises **Säilita või kirjuta graafikud üle**.
+- **Säilitage üksikud ajakavad**. Saate säilitada valitud ekspordi jaoks varem määratletud ajakava ja ainult keelata või lubada neid.
+- **Kõigi valitud ekspordite jaoks uue ajakava määratlemine**: valitud ekspordi olemasolevate graafikute ülekirjutamine.
+
+### <a name="run-exports-on-demand"></a>Käita ekspordid nõudmisel
+
+Andmete eksportimiseks ilma ajastatud värskendamist ootamata minge **Andmed** > **Eksport**.
+
+- Kõigi ekspordite käivitamiseks valige **Käivita kõik** käsuribalt. Selle toiminguga käitatakse ainult aktiivse ajakavaga eksport.
+- Ühe ekspordi käivitamiseks valige see loendist ja valige käsuribalt **Käivita**. Nii käitate eksportimist ilma aktiivse ajakavata. 
 
 ## <a name="remove-an-export"></a>Ekspordi eemaldamine
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Klõpsake eemaldatava ekspordi juures kolmel vertikaalsel punktil.
+1. Valige eksport, mille soovite eemaldada.
 
-1. Valige rippmenüüst **Eemalda**.
+1. Valige käsuribal käsk **Eemalda**.
 
 1. Eemaldamise kinnitamiseks valige kinnitusekraanil **Eemalda**.
 
