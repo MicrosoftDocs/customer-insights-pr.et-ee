@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085617"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306023"
 ---
 # <a name="match-entities"></a>Olemite vastavusseviimine
 
@@ -209,7 +209,7 @@ Optimaalse väärtuse leidmiseks proovige tingimustes erinevaid täpsuslävesid.
 
 Enamuse vasteparameetritest saate ümber konfigureerida ja peenhäälestada.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Vastendusreegli suvanditega ripploendi kuvatõmmis.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Ripploendi menüü kuvatõmmis koos vastetusreegli suvanditega.":::
 
 - **Muutke reeglite järjestust**, kui määratlesite mitu reeglit. Vastendusreeglite ümberjärjestamiseks saate valida suvandid **Nihuta üles** ja **Nihuta alla** või reegleid pukseerida.
 
@@ -247,7 +247,7 @@ Saate määrata tingimused, et kindlad kirjed peaksid alati vastama või mitte k
 
 1. Minge jaotisse **Andmed** > **Andmeallikad** ja valmendage mallifailid uute olemitena. Pärast sisestamist saate nendega määratleda vastendamisseadistust.
 
-1. Pärast failide üleslaadimist ja olemite avalikustamist valige uuesti valik **Kohandatud vaste**. Näete valikuid, et täpsustada kaasatavad olemid. Valige rippmenüüst vajalikud olemid.
+1. Pärast failide üleslaadimist ja olemite avalikustamist valige uuesti valik **Kohandatud vaste**. Näete valikuid, et täpsustada kaasatavad olemid. Valige ripploendist nõutavad olemid.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Dialoogi kuvatõmmis, mis näitab, kuidas valida kohandatud vastendusstsenaariumi alistamised.":::
 

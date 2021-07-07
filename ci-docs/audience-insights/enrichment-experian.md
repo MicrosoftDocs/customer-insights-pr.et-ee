@@ -1,6 +1,6 @@
 ---
-title: Rikastamine kolmanda osapoole rikastamisteenusega Experianilt
-description: Üldine teave Experiani kolmanda osapoole rikastamise kohta.
+title: Rikastamine kolmanda osapoole rikastamisega Experian
+description: Üldine teave Experian kolmanda osapoole rikastamise kohta.
 ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,67 +9,71 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
+ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896368"
+ms.lasthandoff: 06/28/2021
+ms.locfileid: "6309815"
 ---
-# <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Kliendi profiilide rikastamine Experiani demograafiliste andmetega (eelvaade)
+# <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Kliendiprofiilide rikastamine demograafiaga Experian (eelversioon)
 
-Experian on üleilmne liider tarbijate ja ärikrediidi aruandluse ning turundusega seotud teenuste valdkonnas. Experiani andmete rikastamise teenustega saate oma klientidest luua põhjalikuma ülevaate, rikastades klientide profiile selliste demograafiliste andmetega nagu leibkonna suurus, sissetulek ja palju muud.
+Experian on tarbija- ja ärikrediidi aruandluse ja turundusteenuste ülemaailmne liider. Andmete rikastamise teenuste Experian abil saate oma kliente sügavamalt mõista, rikastades oma kliendiprofiile demograafiliste andmetega, nagu leibkonna suurus, sissetulek ja palju muud.
 
 ## <a name="prerequisites"></a>Eeltingimused
 
-Experiani konfigureerimiseks peavad olema täidetud järgmised eeltingimused.
+Experian konfigureerimiseks peavad olema täidetud järgmised eeltingimused:
 
-- Teil on olemas aktiivne Experiani kordustellimus. Kordustellimuse saamiseks [võtke otse ühendust Experianiga](https://www.experian.com/marketing-services/contact). [vaadake lisateavet Experiani andmete rikastamise kohta](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
+- Teil peab olema aktiivne rakenduse Experian kordustellimus. Kordustellimuse saamiseks [võtke Experian](https://www.experian.com/marketing-services/contact) otse ühendust. [Lugege lisateavet Experian andmerikastamine](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Administraator on Experian ühenduse juba konfigureerinud *või* teil on [administraatori](permissions.md#administrator) õigused. Samuti on teil vaja SSH-toega turvalise transpordi (ST) konto kasutaja ID-d, osapoole ID-d ja mudelinumbrit, mille Experian on teie jaoks loonud.
+- Administraator on Experian ühenduse juba konfigureerinud *või* teil on [administraatori](permissions.md#administrator) õigused. Teil on vaja ka kasutaja ID-d, osapoole ID-d ja mudelinumbrit SSH-toega turvalise transpordi (ST) konto jaoks, mille lõi teile Experian.
+
+## <a name="supported-countriesregions"></a>Toetatud riigid/piirkonnad
+
+Praegu toetame kliendiprofiilide rikastamist ainult Ameerika Ühendriikides.
 
 ## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 
 1. Avage suvandid **Andmed** > **Rikastamine** ja valige vahekaart **Avasta**.
 
-1. Valige Experiani paanilt suvand **Rikasta minu andmeid**.
+1. Valige **Rikasta minu andmed** Experian paanil.
 
    > [!div class="mx-imgBorder"]
-   > ![Experiani paan](media/experian-tile.png "Experiani paan")
+   > ![Experian paan](media/experian-tile.png "Experian tile")
    > 
 
-1. Valige ripploendist [ühendus](connections.md). Kui ühendusi pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate ühenduse luua, valides ripploendist suvandi **Lisa ühendus** ja valides Experian. 
+1. Valige [ühendus](connections.md) ripploendist. Kui ühendusi pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate ühenduse luua, valides **Lisa ühendus** käsu ja valides ripploendist Experian. 
 
-1. Valige **Ühenda Experianiga**, et kinnitada ühenduse valik.
+1. Valige **Ühenda Experian**, et kinnitada ühenduse valik.
 
-1.  Valige **Edasi** ja valige **Kliendi andmekomplekt**, mida soovite Experian demograafiliste andmetega rikastada. Saate valida olemi **Klient**, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
+1.  Valige **Edasi** ja valige **Kliendi andmekomplekt**, mille andmeid soovite Experian demograafiliste andmetega rikastada. Saate valida olemi **Klient**, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Kuvatõmmis kliendiandmete kogumi valimisel.":::
 
-1. Valige **Edasi** ja määratlege, millist tüüpi välju teie ühendatud profiilidest tuleks kasutada Experian demograafiliste andmete sobitamiseks. Vähemalt üks väljadest **Nimi ja aadress**, **Telefon** või **E-post** on nõutav. Suurema sobivuse täpsuse saavutamiseks saab lisada kuni kaks muud välja. See valik mõjutab kaardistamisvälju, millele teil on järgmises etapis juurdepääs.
+1. Valige **Edasi** ja määrake, millist tüüpi välju teie ühendatud profiilidest tuleks kasutada Experian andmetest demograafiliste andmete sobitamiseks. Vähemalt üks väljadest **Nimi ja aadress**, **Telefon** või **E-post** on nõutav. Suurema sobivuse täpsuse saavutamiseks saab lisada kuni kaks muud välja. See valik mõjutab kaardistamisvälju, millele teil on järgmises etapis juurdepääs.
 
     > [!TIP]
-    > Rohkemate võtmeidentifikaatori atribuutide saatmine Experianile annab tõenäoliselt suurema vastavuse määra.
+    > Rohkem võtmeidentifikaatori atribuute, mis Experian-ile saadetakse, tõenäoliselt annab suurema vaste määra.
 
 1. Valige **Edasi**, et alustada väljade kaardistamist.
 
-1. Määratlege, milliseid väljad teie ühendatud profiilidest tuleks kasutada Experianist sobivate demograafiliste andmete otsimiseks. Nõutud väljad on vastavalt tähistatud.
+1. Määratlege, milliseid väljad teie ühendatud profiilidest tuleks kasutada Experian sobivate demograafiliste andmete otsimiseks. Nõutud väljad on vastavalt tähistatud.
 
 1. Sisestage rikastamise nimi ja väljundolemi nimi.
 
 1. Valige **Salvesta rikastamine** pärast valikute läbivaatamist.
 
-## <a name="configure-the-connection-for-experian"></a>Konfigureerige ühendus Experianiga 
+## <a name="configure-the-connection-for-experian"></a>Konfigureerige Experian ühendus 
 
-Ühenduste konfigureerimiseks peate olema administraator. Valige **Lisa ühendus** rikastamise konfigureerimisel *või* minge **Administraator** > **Ühendused** ja valige **Seadista** Experian paanil.
+Ühenduste konfigureerimiseks peate olema administraator. Valige rikastamise konfigureerimisel **Lisa ühendus** *või* minge **Administraator** > **Ühendused** ja valige **Seadista** Experian paanil.
 
 1. Seejärel valige suvand **Alustamine**.
 
 1. Sisestage ühenduse nimi **Kuvatav nimi** väljale.
 
-1. Sisestage oma Experian Secure Transport konto kehtiv kasutajanimi, osapoole ID ja mudeli number.
+1. Sisestage oma Experian turvalise transpordi konto kehtiv kasutaja ID, osapoole ID ja mudeli number.
 
-1. Vaadake üle ja andke oma nõusolek **Andmete privaatsuse ja nõuetele vastavuse** jaoks, valides **Nõustun** märkeruudu
+1. Vaadake üle ja esitage oma nõusolek **Andmete privaatsuse ja nõuetele vastavus** kohta, valides suvandi **Nõustun**.
 
 1. Valige **Kontrolli** konfiguratsiooni valideerimiseks.
 
@@ -79,7 +83,7 @@ Experiani konfigureerimiseks peavad olema täidetud järgmised eeltingimused.
 
 ## <a name="enrichment-results"></a>Rikastamise tulemused
 
-Rikastamistoimingu käivitamiseks valige käsuribalt suvand **Käivita**. Samuti saate lasta süsteemil rikastamise automaatselt käivitada [ajastatud värskenduse osana](system.md#schedule-tab). Töötlemisaeg sõltub teie kliendiandmete mahust ja rikastamistoimingutest, mille Experian on teie konto jaoks seadistanud.
+Rikastamistoimingu käivitamiseks valige käsuribalt suvand **Käivita**. Samuti saate lasta süsteemil rikastamise automaatselt käivitada [ajastatud värskenduse osana](system.md#schedule-tab). Töötlemisaeg sõltub teie kliendiandmete suurusest ja teie Experian konto jaoks seadistatud rikastamisprotsessidest.
 
 Kui rikastamistoiming on tehtud, saate värskelt rikastatud klientide profiile üle vaadata suvandi **Minu rikastamised** alt. Peale selle näete ka viimase värskenduse aega ja rikastatud profiilide arvu.
 
@@ -87,12 +91,12 @@ Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **
 
 ## <a name="next-steps"></a>Järgmised etapid
 
-Rikastatud kliendiandmetele toetumine. Klientidele isikustatud kogemuste pakkumiseks looge suvandid [Segmendid](segments.md), [Meetmed](measures.md) ja isegi [Ekspordi andmed](export-destinations.md).
+Rikastatud kliendiandmetele toetumine. Looge [segmente](segments.md) ja [näitajaid](measures.md) ning isegi [eksportige andmed](export-destinations.md), et pakkuda oma klientidele isikupärastatud kogemust.
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 
-Kui lubate Dynamics 365 Customer Insightsil Experiani andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed). Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et Experian täidab kõik teie privaatsus- või turbenõuded. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
-Teie Dynamics 365 Customer Insightsi administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+Kui lubate Dynamics 365 Customer Insights edastada andmeid Experian-ile, lubate andmete edastamist väljapoole vastavuse piiri Dynamics 365 Customer Insights jaoks, sealhulgas potentsiaalselt tundlikke andmeid, näiteks isikuandmeid. Microsoft edastab sellised andmed teie juhiste alusel, kuid teie vastutate selle eest, et Experian täidaks kõiki privaatsus- või turvakohustusi, mis teil võivad olla. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
+Teie Dynamics 365 Customer Insights administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700663"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305622"
 ---
 # <a name="custom-machine-learning-models"></a>Kohandatud masinõppe mudelid
 
@@ -72,7 +72,7 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
       > [!div class="mx-imgBorder"]
       > ![Mudeli väljundi parameetri paan](media/intelligence-screen3-outputparameters.png "Mudeli väljundi parameetri paan")
 
-1. Valige ripploendist **Kliendi ID tulemustes** ühtiv atribuut, mis tuvastab kliendid, ja seejärel **Salvesta**.
+1. Valige ripploendist **Kliendi ID tulemustes** vastav atribuut, mis tuvastab kliendid ka valige **Salvesta**.
 
    > [!div class="mx-imgBorder"]
    > ![Tulemuste seostamine paanil „Kliendiandmed“](media/intelligence-screen4-relatetocustomer.png "Tulemuste seostamine paanil „Kliendiandmed“")
@@ -100,7 +100,7 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
       1. Valige oma proovikonveierile **Väljundi andmesalve parameetri nimi**.
       1. Valige oma proovikonveierile **Väljundi tee parameetri nimi**.
 
-1. Valige ripploendist **Kliendi ID tulemustes** ühtiv atribuut, mis tuvastab kliendid, ja seejärel **Salvesta**.
+1. Valige ripploendist **Kliendi ID tulemustes** vastav atribuut, mis tuvastab kliendid ka valige **Salvesta**.
    Valige tuletuse väljundist atribuut, mille väärtused on sarnased kliendiolemi veeru „Kliendi ID“ omadega. Kui teie andmekogumis pole sellist veergu, valige atribuut, mis tuvastab rea unikaalselt.
 
 ## <a name="run-a-workflow"></a>Töövoo käitamine

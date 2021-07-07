@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085525"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304691"
 ---
 # <a name="data-sources-overview"></a>Andmeallikate ülevaade
 
@@ -30,15 +30,15 @@ Saate andmeallikat lisada kolmel peamisel viisil.
 
 - [Kümnete Power Query konnektorite kaudu](connect-power-query.md)
 - [Common Data Modeli kaustast](connect-common-data-model.md)
-- [Enda Common Data Service’i andmejärvest](connect-common-data-service-lake.md)
+- [Enda Microsoft Dataverse’i andmejärvest](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Andmete lisamine asutusesisene andmeallikatest
 
-Kohalike andmeallikate andmete sisestamine vaatajaskonna statistikas toetub Power Platform andmevoogudele. Andmevooge saab lubada Customer Insights kaudu [pakkudes Microsoft Dataverse keskkonna URL-i](manage-environments.md#create-an-environment-in-an-existing-organization) keskkonna seadistamisel.
+Kohalike andmeallikate andmete sisestamine vaatajaskonna statistikas toetub Microsoft Power Platform andmevoogudele. Andmevooge saab lubada Customer Insights kaudu [pakkudes Microsoft Dataverse keskkonna URL-i](manage-environments.md#create-an-environment-in-an-existing-organization) keskkonna seadistamisel.
 
-Andmeallikad, mis luuakse pärast keskkonna Dataverse seostamist Customer Insights, kasutavad [Power Platform andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) vaikimisi. Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Eemaldage ja looge uuesti andmeallikad, mis olid olemas enne seda, kui Dataverse -i keskkond seostati [asutusesisese andmelüüside kasutamisega](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
+Andmeallikad, mis luuakse pärast keskkonna Dataverse seostamist Customer Insights, kasutavad [Power Platform andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) vaikimisi. Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Eemaldage ja looge uuesti andmeallikad, mis olid olemas enne seda, kui Dataverse -i keskkond seostati [asutusesisese andmelüüside kasutamisega](/data-integration/gateway/service-gateway-app.md).
 
-Andmevõrgud olemasolevast Power BI või Power Apps keskkonnast on nähtavad ja saate neid uuesti kasutada jaotises Customer Insights. Andmeallikate lehel kuvatakse lingid, et minna Power Platform keskkonda, kus te saate vaadata ja konfigureerida asutusesiseseid andmelüüse.
+Andmevõrgud olemasolevast Power BI või Power Apps keskkonnast on nähtavad ja saate neid uuesti kasutada jaotises Customer Insights. Andmeallikate lehel kuvatakse lingid, et minna Microsoft Power Platform keskkonda, kus saate vaadata ja konfigureerida asutusesiseseid andmevõrke.
 
 ## <a name="review-ingested-data"></a>Sisestatud andmete läbivaatus
 
@@ -56,7 +56,7 @@ Näete iga sisestatud andmeallika nime, selle olekut ja viimast korda, kui neid 
 
 Üksikasjade kuvamiseks valige väärtus mis tahes andmeallika veerus **Olek**. Laiendage paanil **Edenemise üksikasjad** suvandit **Andmeallikad**. Valige **Kuva üksikasjad**, et saada värskendamise oleku kohta lisateavet, sh tõrke üksikasjad ja allavooluprotsesside värskendused.
 
-Andmete laadimine võib veidi aega võtta. Pärast edukat värskendamist saab lisatud andmeid vaadata lehel **Olemid**. Lisateavet vt jaotisest [Olemid](entities.md).
+Andmete laadimine võib võtta aega. Pärast edukat värskendamist saab lisatud andmeid vaadata lehel **Olemid**. Lisateavet vt jaotisest [Olemid](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Andmeallika värskendamine
 
@@ -66,9 +66,9 @@ Minge jaotisse **Haldus** > **Süsteem** > [**Ajastamine**](system.md#schedule-t
 
 Andmeallika värskendamiseks mis tahes ajal toimige järgmiselt.
 
-1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Andmeallikad**
+1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Andmeallikad**.
 
-2. Valige värskendamist vajava andmeallika kõrvalt vertikaalne kolmikpunkt ja valige ripploendist **Värskenda**.
+2. Valige värskendatava andmeallika kõrval vertikaalne ellips ja valige **Värskenda** ripploendist.
 
 3. Andmeallika jaoks käivitatakse nüüd käsitsivärskendamine. Andmeallika värskendamine uuendab nii olemiskeemi kui ka kõigi andmeallikas määratud olemite andmeid.
 
@@ -78,7 +78,7 @@ Andmeallika värskendamiseks mis tahes ajal toimige järgmiselt.
 
 1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Andmeallikad**.
 
-2. Valige eemaldatava andmeallika kõrval asuv vertikaalne kolmikpunkt ja valige rippmenüüst suvand **Kustuta**.
+2. Valige eemaldatava andmeallika kõrval vertikaalne ellips ja valige **Kustuta** ripploendist.
 
 3. Kinnitage, et soovite kustutada.
 

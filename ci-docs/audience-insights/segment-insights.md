@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595329"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306069"
 ---
 # <a name="segment-insights-preview"></a>Segmendi ülevaated (eelversioon)
 
@@ -50,7 +50,7 @@ Analüüsi tulemuste nägemiseks valige ülevaade.
 
 - Liikmete arv, kelle segmendid valitud analüüsis kattuvad.
 - Liikmete arv, mis sisaldub ühes segmendis, kuid mitte teistes segmentides.
-- Kui valisite kattuva analüüsi konfigureerimisel väljad, leiate need vastavatelt vahekaartidelt. Saate kasutada filtri ripploendit, et valida mis tahes atribuudi huvitase ja allosas olev tabel näitab vastavaid andmeid.
+- Kui valisite kattuva analüüsi konfigureerimisel väljad, leiate need vastavatelt vahekaartidelt. Filtri ripploendi abil saate valida mis tahes atribuudi huvitaseme ja allservas olevas tabelis kuvatakse vastavad andmed.
 
 ## <a name="segment-differentiators"></a>Segmendidiferentseerijad
 

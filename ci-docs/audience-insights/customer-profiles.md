@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896322"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304599"
 ---
 # <a name="customer-profiles"></a>Kliendiprofiilid
 
@@ -57,13 +57,13 @@ Valige mis tahes kliendipaan, et avada **Kliendi üksikasjade leht**. See vaade 
 
 Kliendi üksikasjade hulka kuuluvad järgmised.
 
--   **Kliendiprofiili paan:** sellel paanil kuvatakse eri väärtused koondatud kliendiprofiili olemist. Need üksikasjad võivad hõlmata meiliaadressi, nime, linna ja nii edasi. 
+-   **Kliendiprofiili paan**: See paan näitab ühtse kliendiprofiili üksuse erinevaid väärtusi. Need üksikasjad võivad hõlmata meiliaadressi, nime, linna ja nii edasi. 
 
--   **Potentsiaalsed huvid, potentsiaalsed kaubamärgid:** näitab, kui olete konfigureerinud esimese osapoole rikastumise. See esindab sellise kliendi potentsiaalseid huve ja lemmikbrände, kellel on praeguse kliendi omaga sarnanev profiil. Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft.md).
+-   **Potentsiaalsed huvid, potentsiaalsed kaubamärgid**: näitab, kui olete konfigureerinud esimese osapoole rikastamise. See esindab sellise kliendi potentsiaalseid huve ja lemmikbrände, kellel on praeguse kliendi omaga sarnanev profiil. Lisateavet vaadake teemast [Kliendiprofiilide rikastamine kaubamärgi ja huvide ühtivusega](enrichment-microsoft.md).
 
--   **Näitajad:** kuvatakse, kui olete konfigureerinud ühe või mitu näitajat, mis on kindlat tüüpi: kliendiatribuudi näitajad. Nende hulka kuuluvad teie klientide arvutatud KPI-sid iga kliendi tasemel. Lisateavet leiate teemast [Näitajate määratlemine ja haldamine](measures.md).
+-   **Näitajad**: kuvatakse, kui olete konfigureerinud ühe või mitu näitajat, mis on kindlat tüüpi: kliendiatribuudi näitajad. Nende hulka kuuluvad teie klientide arvutatud KPI-sid iga kliendi tasemel. Lisateavet leiate teemast [Näitajate määratlemine ja haldamine](measures.md).
 
--   **Tegevuse ajaskaala:** kuvatakse, kui teil on konfigureeritud tegevused. Ajaskaala vaade sisaldab selle kliendi kronoloogiliselt sorditud tegevusi, alustades kõige hiljutisest tegevusest. Lisateavet vt teemast [Klienditegevused](activities.md).
+-   **Tegevuse ajaskaala**: kuvatakse, kui teil on konfigureeritud tegevused. Ajaskaala vaade sisaldab selle kliendi kronoloogiliselt sorditud tegevusi, alustades kõige hiljutisest tegevusest. Lisateavet vt teemast [Klienditegevused](activities.md).
 
 Valige **Tagasi klientide lehele**, et naasta kliendiotsingu lehele.
 

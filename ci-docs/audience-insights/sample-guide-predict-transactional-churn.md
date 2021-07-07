@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595421"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306115"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Tehinguvoolavuse prognoosi (eelversioon) näidisjuhend
 
-Selles juhendis näidatakse teile otsast lõpuni, kuidas kasutada Customer Insightsis tehinguvoolavuse prognoosi funktsiooni koos alltoodud andmetega. Kõik selles juhendis kasutatud andmed ei ole tegelikud kliendiandmed ja need kuuluvad Contoso andmekogumi hulka, mis asub teie Customer Insightsi tellimuse keskkonnas *Demo*.
+Selles juhendis näidatakse teile otsast lõpuni, kuidas kasutada Customer Insightsis tehinguvoolavuse prognoosi funktsiooni koos alltoodud andmetega. Kõik selles juhendis kasutatavad andmed pole tõelised kliendiandmed ja need on osa Contoso andmehulgast, mis on leitud teie Customer Insights kordustellimuse *Demo* keskkonnast.
 
 ## <a name="scenario"></a>Stsenaarium
 
-Contoso on ettevõte, mis toodab kvaliteetset kohvi ja kohvimasinaid, mida müüakse veebisaidi Contoso Coffee kaudu. Nende eesmärk on teada saada, millised kliendid, kes tavaliselt nende tooteid regulaarselt ostavad, pole enam järgmise 60 päeva jooksul aktiivsed. Teades, millised nende kliendid **tõenäoliselt loobuvad**, aitab ettevõttel nende säilitamisele keskendudes turundusvõtteid säästa.
+Contoso on ettevõte, mis toodab kvaliteetseid kohvi- ja kohvimasinaid, mida nad müüvad oma Contoso Coffee veebisaidi kaudu. Nende eesmärk on teada saada, millised kliendid, kes tavaliselt nende tooteid regulaarselt ostavad, pole enam järgmise 60 päeva jooksul aktiivsed. Teades, millised nende kliendid **tõenäoliselt loobuvad**, aitab ettevõttel nende säilitamisele keskendudes turundusvõtteid säästa.
 
 ## <a name="prerequisites"></a>Eeltingimused
 
@@ -109,9 +109,9 @@ Pärast andmete valmendamist alustame protsessi **Vastenda, vii vastavusse, ühe
 
 1. Liikuge vahekaardile **Vastavusseviimine** ja valige **Määra järjekord**.
 
-1. Valige ripploendis **Peamine** peamiseks andmeallikaks **eCommerceContacts: eCommerce** ja kaasake kõik kirjed.
+1. Valige **Esmane** ripploendist **eCommerceContacts: eCommerce** kui esmane allikas ja kaasake kõik kirjed.
 
-1. Valige ripploendist **Olem 2** **loyCustomers: LoyaltyScheme** ja kaasake kõik kirjed.
+1. Valige **Olem 2** ripploendist väärtus **loyCustomers: LoyaltyScheme** ja kaasake kõik kirjed.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="E-kaubanduse ja lojaalsuse vastavusseviimine vahekaardil „Koondamine“.":::
 
@@ -119,16 +119,16 @@ Pärast andmete valmendamist alustame protsessi **Vastenda, vii vastavusse, ühe
 
 1. Lisage esimene tingimus suvandi FullName abil.
 
-   * Valige andmeallika eCommerceContacts jaoks ripploendist **FullName**.
-   * Valige andmeallika loyCustomers jaoks ripploendist **FullName**.
+   * eCommerceContacts jaoks valige **Täisnimi** rippmenüüst.
+   * loyCustomers jaoks valige **Täisnimi** rippmenüüst.
    * Valige ripploend **Normaliseerimine** ja valige **Tüüp (telefon, nimi, aadress, ...)**.
    * Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.
 
 1. Sisestage uuele reeglile nimi **FullName, Email**.
 
    * Lisage meiliaadressi jaoks teine tingimus, valides suvandi **Lisa tingimus**
-   * Valige olemi eCommerceContacts jaoks ripploendist **Meil**.
-   * Valige olemi loyCustomers jaoks ripploendist **Meil**. 
+   * Olemi eCommerceContacts jaoks valige **EKiri** rippmenüüst.
+   * Olemi loyCustomers jaoks valige **EKiri** rippmenüüst. 
    * Jätke suvand „Normaliseerimine“ tühjaks. 
    * Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965573"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305427"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Kliendiprofiilide rikastamine täiustatud aadressidega
 
@@ -22,11 +22,11 @@ Teie andmetes kuvatud aadressid võivad olla struktureerimata, mittetäielikud v
 
 ## <a name="how-we-enhance-addresses"></a>Kuidas me aadresse täiustame
 
-Meie mudel läbib aadressi täiustamiseks kaheastmelise protsessi. Esiteks sõelub see aadressi oma komponentide tuvastamiseks ja paneb need struktureeritud vormingusse. Seejärel kasutame tehisintellekti aadressi väärtuste parandamiseks, täiendamiseks ja standardimiseks.
+Meie mudel läbib aadressi täiustamiseks kaheastmelise protsessi. Esiteks sõelub see aadressi oma komponentide tuvastamiseks ja paneb need struktureeritud vormingusse. Seejärel kasutame AI-d aadressi väärtuste parandamiseks, lõpuleviimiseks ja standardismiseks.
 
 ### <a name="example"></a>Näide
 
-Aadressiteave võib olla mittestandardses vormingus ja sisaldada õigekirjavigu. Mudel saab need probleemid lahendada ja luua ühtsetes kliendiprofiilides järjepidevaid aadresse.
+Aadressiteave võib olla ebastandartses vormingus ja sisaldada õigekirjavigu. Mudel saab need probleemid lahendada ja luua ühtsetes kliendiprofiilides järjepidevaid aadresse.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Täiustatud aadressid töötavad ainult väärtustega, mis on teie sissetoodud a
 2. Kontrollige, kas mõni väärtustest (nt sihtnumbrid või tänavanimed) on kehtiv.
 3. Muutke väärtusi, mida ta ei tunne.
 
-Mudel kasutab aadresside täiustamiseks masinõppel põhinevaid tehnikaid. Kuigi me rakendame kõrget usaldusläve, kui mudel muudab sisendväärtust, nagu iga ML-põhise mudeli puhul, ei ole 100% täpsus tagatud.
+Mudel kasutab aadresside täiustamiseks masinõppel põhinevaid tehnikaid. Kuigi mudeli sisendväärtuse muutmisel rakendame kõrget usalduskünnist, nagu iga masinõppepõhise mudeli puhul, pole 100-protsendiline täpsus tagatud.
 
 ## <a name="supported-countries-or-regions"></a>Toetatud riikides või regioonides
 
@@ -76,7 +76,7 @@ Aadressid peavad sisaldama riigi/regiooni väärtust. Me ei töötle nende riiki
 1. Valige, kuidas aadresse teie andmekogumis vormindatakse. Valige **Ühe atribuudi aadress** kui teie andmetes kasutatavad aadressid kasutavad ühte välja. Valige **Mitme atribuudi aadress** kui teie andmetes kasutatavad aadressid rohkem kui ühte andmevälja.
 
    > [!NOTE]
-   > Riik/Regioon on kohustuslik nii ühe- kui ka mitme atribuudi aadressis. Aadresse, mis ei sisalda kehtivaid või toetatud riigi/regiooni väärtusi, ei rikastata
+   > Riik/piirkond on kohustuslik nii ühe atribuudi kui ka mitme atribuudiga aadressidel. Aadresse, mis ei sisalda kehtivaid või toetatud riigi/regiooni väärtusi, ei rikastata.
 
 1.  Kaardistage ühendatud kliendiolemi aadressiväljad.
 
@@ -98,6 +98,6 @@ Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **
 
 ## <a name="next-steps"></a>Järgmised etapid
 
-Rikastatud kliendiandmetele toetumine. Klientidele isikustatud kogemuste pakkumiseks looge suvandid [Segmendid](segments.md), [Meetmed](measures.md) ja isegi [Ekspordi andmed](export-destinations.md).
+Rikastatud kliendiandmetele toetumine. Looge [segmente](segments.md) ja [näitajaid](measures.md) ning isegi [eksportige andmed](export-destinations.md), et pakkuda oma klientidele isikupärastatud kogemust.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

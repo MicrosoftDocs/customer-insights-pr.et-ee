@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 87bf8d7b9c23633ebdc929e15ac645c55cc21e4a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 09d449e51a3a47ec916ab3d017419c9d9be1ffcf
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595375"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305705"
 ---
 # <a name="system-configuration"></a>Süsteemikonfiguratsioon
 
@@ -94,7 +94,7 @@ Valige käsk **Salvesta**, et kinnitada valikud.
 
 ## <a name="api-usage-tab"></a>API kasutuse vahekaart
 
-Leidke API reaalajas kasutamise üksikasju ja vaadake, millised sündmused toimusid antud aja jooksul. Soovitud ajaraamistiku saate valida ripploendist **Ajaraamistiku valimine**. 
+Leidke API reaalajas kasutamise üksikasju ja vaadake, millised sündmused toimusid antud aja jooksul. Ajaraami saate valida rippmenüüst **Ajaraami valimine**. 
 
 **API kasutus** sisaldab kolme järgmist jaotist. 
 - **API-päringud** – diagramm, mis visualiseerib valitud aja jooksul API päringute koondarvu.

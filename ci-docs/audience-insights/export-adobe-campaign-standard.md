@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760276"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305381"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Customer Insightsi segmentide kasutamine Adobe Campaign Standardis (eelversioon)
 
-Dynamics 365 Customer Insightsi sihtrühmaülevaadete kasutajana olete võib-olla loonud segmente turunduskampaaniate tõhusamaks muutmiseks asjakohaseid sihtrühmi määrates. Adobe Experience Platformi ja rakendustest, nagu Adobe Campaign Standard pärit segmentide kasutamiseks peate järgima mõnda selles artiklis kirjeldatud juhist.
+Dynamics 365 Customer Insights sihtrühma ülevaadete kasutajana, olete võinud luua segmente, et ,muuta oma turunduskampaaniad tõhusamaks, sihtides asjakohaseid vaatajaskondi. Adobe Experience Platformi ja rakendustest, nagu Adobe Campaign Standard pärit segmentide kasutamiseks peate järgima mõnda selles artiklis kirjeldatud juhist.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Selles artiklis kirjeldatud juhiste protsessiskeem.":::
 
@@ -54,7 +54,7 @@ Kui sihtrühm on tuvastatud, saame konfigureerida ekspordi sihtrühmaülevaadete
 
 1. Avage sihtrühma ülevaadetes **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **Adobe Campaig** ühenduse konfigureerimiseks või klõpsake **Seadista** **Adobe Campaign** paanil
+1. Valige **Lisa ühendus** ja valige **Adobe Campaign** ühenduse konfigureerimiseks või klõpsake **Seadista** **Adobe Campaign** paanil.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Adobe Campaign Standardi konfiguratsioonipaan.":::
 
@@ -66,7 +66,7 @@ Kui sihtrühm on tuvastatud, saame konfigureerida ekspordi sihtrühmaülevaadete
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Salvestusruumi konto konfiguratsiooni kuvatõmmis. "::: 
 
-   - Lisateavet Azure'i bloobimälu konto nime ja kontovõtme kohta vaadake teemast [Salvestuskonto sätete haldamine Azure'i portaalis](/azure/storage/common/storage-account-manage).
+   - Lisateavet Azure Blob Storage konto nime ja kontovõtme kohta vaadake teemast [Salvestuskonto sätete haldamine Azure'i portaalis](/azure/storage/common/storage-account-manage).
 
    - Lisateavet konteineri loomise kohta leiate teemast [Konteineri loomine](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
@@ -80,7 +80,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Valige uue ekspordi loomiseks **Lisa eksport**.
 
-1. Valige **Ekspordiühendus** väljal ühendus Adobe Campaign jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+1. Valige **Ekspordiühendus** väljal ühendus Adobe Campaign jaotisest. Kui te seda jaotise nime ei näe, pole seda tüüpi ühendused teile saadaval.
 
 1. Valige segment, mille soovite eksportida. Selles näites on selleks **ChurnProneCustomers**.
 
@@ -106,7 +106,7 @@ Nüüd saate [nõudmisel segmendi](export-destinations.md#run-exports-on-demand)
 > [!NOTE]
 > Veenduge, et eksporditud segmendi kirjete arv jääb Adobe Campaign Standardi litsentsi lubatud piiridesse.
 
-Eksporditud andmed talletatakse eespool konfigureeritud Azure'i bloobimälu ümbrisesse. Ümbrisesse luuakse automaatselt järgmine kaustatee:
+Eksporditud andmed talletatakse eespool konfigureeritud Azure Blob Storage konteinerisse. Ümbrisesse luuakse automaatselt järgmine kaustatee:
 
 *%ContainerName%/CustomerInsights_%instanceID%/% exportdestination-name%_%segmentname%_%timestamp%.csv*
 
@@ -118,7 +118,7 @@ Kui eksporditakse sihtrühmaülevaadetest pärit segment, sisaldab see veerge, m
 
 Segmendi kasutamiseks Adobe Campaign Standardis peame laiendama Adobe Campaign Standardi profiiliskeemi ja kaasama kaks lisavälja. Siit leiate teavet [profiiliressursside laiendamise](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) kohta uute väljadega Adobe Campaign Standardis.
 
-Meie näites on need väljad *Segmendi nimi ja segmendi kuupäev (valikuline).*
+Meie näites on need väljad *Segmendi nimi ja segmendi kuupäev (valikuline)*.
 
 Nende väljade abil tuvastame profiile, mida soovime selle kampaania jaoks Adobe Campaign Standardis määrata.
 
@@ -128,7 +128,7 @@ Kui Adobe Campaign Standardis pole muid kirjeid, kui need, mille plaanite import
 
 Nüüd, kui kõik on valmis, peame profiilide loomiseks importima ettevalmistatud sihtrühmaandmed sihtrühmaülevaadetest Adobe Campaign Standardisse. Lugege, [kuidas importida Adobe Campaign Standardi profiile](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) töövoo abil.
 
-Alloleval pildil oleva impordi töövoog on konfigureeritud käitama iga 8 tunni järel ja see otsib eksporditud sihtrühmaülevaadete segmente (Azure'i bloobimälu CSV-fail). Töövoog ekstraktib CSV-faili sisu määratud veerujärjestuses. See töövoog on rajatud tegema peamisi tõrketöötlusi ja tagama, et igal kirjel oleks meiliaadress enne enne domeeniandmete laadimist Adobe Campaign Standardis. Töövoog ekstraktib ka segmendi nime failinimest enne ACS-i profiiliandmetesse sisestamist või selle värskendamist.
+Alloleval pildil oleva impordi töövoog on konfigureeritud käitama iga kaheksa tunni järel ja otsima eksporditud sihtrühma ülevaadete segmente (.csv fail Azure Blob Storage'is). Töövoog ekstraktib CSV-faili sisu määratud veerujärjestuses. See töövoog on rajatud tegema peamisi tõrketöötlusi ja tagama, et igal kirjel oleks meiliaadress enne enne domeeniandmete laadimist Adobe Campaign Standardis. Töövoog ekstraktib segmendi nime ka failinimest, enne kui salvestab selle Adobe Campaign Standard profiiliandmetesse.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Adobe Campaign Standardi kasutajaliidese töövoo importimise kuvatõmmis.":::
 

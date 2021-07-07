@@ -1,5 +1,5 @@
 ---
-title: Rikastamine kolmanda osapoole rikastamisteenusega ettevõttelt HERE Technologies
+title: Rikastamine kolmanda osapoole rikastamisega HERE Technologies
 description: Üldine teave ettevõtte HERE Technologies kolmanda osapoole rikastamise kohta.
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896046"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305289"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Kliendiprofiilide rikastamine ettevõtte HERE Technologies teenuste abil (eelversioon)
 
@@ -24,9 +24,9 @@ HERE Technologies on asukohaplatvormi ettevõte, mis pakub asukohapõhist teavet
 
 Ettevõtte HERE Technologies rikastamisteenuse konfigureerimiseks peavad olema täidetud järgmised eeltingimused.
 
-- Teil peab olema aktiivne ettevõtte HERE Technologies tellimus. Tellimuseks saate [registreeruda siin](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) või võtta otse [ühendust ettevõttega HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Lisateave ettevõtte HERE Technologies asukohapõhise rikastamise kohta.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
+- Teil peab olema aktiivne ettevõtte HERE Technologies tellimus. Tellimuseks saate [registreeruda siin](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) või [kontakteeruda ettevõttega HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) otse. [Lisateave ettevõtte HERE Technologies asukohapõhise rikastamise kohta.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- HERE [-ühendus](connections.md) on saadaval *või* teil on [administraatoriõigused](permissions.md#administrator) ja HERE Technologies API-võti.
+- HERE [ühendus](connections.md) on saadaval *või* teil on [administraatori](permissions.md#administrator) õigused ja HERE Technologies API võti.
 
 ## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 
@@ -37,7 +37,7 @@ Ettevõtte HERE Technologies rikastamisteenuse konfigureerimiseks peavad olema t
    > [!div class="mx-imgBorder"]
    > ![Paan „HERE Technologies“](media/HERE-tile.png "Paan „HERE Technologies“")
 
-1. Valige ripploendist [ühendus](connections.md). Kui ühendus pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate ühenduse luua, kui valite suvandi **Lisa ühendus**. Valige ripploendist suvand **HERE Technologies**. 
+1. Valige [ühendus](connections.md) ripploendist. Kui ühendus pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate ühenduse luua, kui valite suvandi **Lisa ühendus**. Valige **HERE Technologies** ripploendist. 
 
 1. Valige **Ühenda HERE Technologies**, et kinnitada valik.
 
@@ -58,7 +58,7 @@ Ettevõtte HERE Technologies rikastamisteenuse konfigureerimiseks peavad olema t
 
 1. Valige **Salvesta rikastamine** pärast valikute läbivaatamist.
 
-## <a name="configure-the-connection-for-here-technologies"></a>Konfigureerige ühendus HERE technologies jaoks 
+## <a name="configure-the-connection-for-here-technologies"></a>Konfigureerige ühendus HERE Technologies jaoks 
 
 Ühenduste konfigureerimiseks peate olema administraator. Valige **Lisa ühendus** rikastamise konfigureerimisel *või* minge **Administraator** > **Ühendused** ja valige **Seadista** HERE Technologies paanil.
 
@@ -66,13 +66,13 @@ Ettevõtte HERE Technologies rikastamisteenuse konfigureerimiseks peavad olema t
 
 1. Sisestage sobiv HERE Technologies API võti.
 
-1. Vaadake üle ja andke oma nõusolek **Andmete privaatsuse ja nõuetele vastavuse** jaoks, valides **Nõustun** märkeruudu
+1. Vaadake üle ja esitage oma nõusolek **Andmete privaatsuse ja nõuetele vastavus** kohta, valides suvandi **Nõustun**.
 
 1. Valige **Kontrolli** konfiguratsiooni valideerimiseks.
 
 1. Pärast kontrollimise lõpuleviimist valige **Salvesta**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![HERE technologies ühenduse konfiguratsiooni leht](media/enrichment-HERE-connection.png "HERE technologies ühenduse konfiguratsiooni leht")
 
 ## <a name="enrichment-results"></a>Rikastamise tulemused
@@ -85,12 +85,12 @@ Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **
 
 ## <a name="next-steps"></a>Järgmised etapid
 
-Rikastatud kliendiandmetele toetumine. Klientidele isikustatud kogemuste pakkumiseks looge suvandid [Segmendid](segments.md), [Meetmed](measures.md) ja isegi [Ekspordi andmed](export-destinations.md).
+Rikastatud kliendiandmetele toetumine. Looge [segmente](segments.md) ja [näitajaid](measures.md) ning isegi [eksportige andmed](export-destinations.md), et pakkuda oma klientidele isikupärastatud kogemust.
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 
 Kui lubate Dynamics 365 Customer Insightsil ettevõttesse HERE Technologies andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed). Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et HERE Technologies täidab kõik teie privaatsus- või turbenõuded. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
-Teie Dynamics 365 Customer Insightsi administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+Teie Dynamics 365 Customer Insights administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

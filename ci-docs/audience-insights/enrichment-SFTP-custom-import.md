@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896276"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304645"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Kliendiprofiilide rikastamine kohandatud andmetega (eelversioon)
 
-Turvalise failiedastuse protokolli (SFTP) kohandatud import võimaldab teil importida andmeid, mis ei pea läbima andmete ühendamise protsessi. See on paindlik, turvaline ja lihtne viis andmete sissetoomiseks. SFTP-põhist kohandatud importimist saab kasutada koos [SFTP-põhise ekspordiga](export-sftp.md), mis võimaldab teil eksportida kliendiprofiili andmeid, mida on vaja rikastamiseks. Seejärel saab andmeid töödelda, rikastada ning SFTP-põhist kohandatud importimist saab kasutada, et tuua rikastatud andmed tagasi Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsiooni.
+Turvalise failiedastuse protokolli (SFTP) põhine kohandatud importimine võimaldab importida andmeid, mida ei pea koondama. See on paindlik, turvaline ja lihtne viis andmete sissetoomiseks. SFTP-põhist kohandatud importimist saab kasutada koos [SFTP-põhise ekspordiga](export-sftp.md), mis võimaldab teil eksportida kliendiprofiili andmeid, mida on vaja rikastamiseks. Andmeid saab seejärel töödelda ja rikastada ning SFTP kohandatud importi saab kasutada, et tuua rikastatud andmed tagasi Dynamics 365 Customer Insights vaatajaskonna ülevaate võimekusse.
 
 ## <a name="prerequisites"></a>Eeltingimused
 
@@ -37,11 +37,11 @@ SFTP-põhise kohandatud importimise konfigureerimiseks peavad olema täidetud j�
 
    :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="SFTP kohandatud impordipaan.":::
 
-1. Valige ripploendist [ühendus](connections.md). Kui ühendusi pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate ühenduse luua, valides ripploendist suvandi **Lisa ühendus** ja valides **SFTP kohandatud importimine**.
+1. Valige [ühendus](connections.md) ripploendist. Kui ühendusi pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate ühenduse luua, valides **Lisa ühendus** käsu ja valides **SFTP Custom Import** ripploendist.
 
 1. Valige **Ühenda kohandatud importimisega**, et kinnitada ühenduse valik.
 
-1.  Valige **Edasi** ning sisestage **Faili nimi** ja **Tee** andmefaili kohta, mida soovite importida.
+1.  Valige **Edasi** ning sisestage imporditava andmefaili **Tee** ja **Failinimi**.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Kuvatõmmis andmeasukoha sisestamisel.":::
 
@@ -55,21 +55,21 @@ SFTP-põhise kohandatud importimise konfigureerimiseks peavad olema täidetud j�
 
 1. Sisestage ühenduse nimi **Kuvatav nimi** väljale.
 
-1. Sisestage imporditavate andmete SFTP-serveri jaoks kehtiv kasutajanimi, parool ja hosti URL.
+1. Sisestage SFTP-serveri jaoks kehtiv kasutajanimi, parool ja hosti URL, kus imporditavad andmed asuvad.
 
 1. Vaadake üle ja andke oma nõusolek **Andmete privaatsuse ja nõuetele vastavuse** jaoks, valides märkeruudu **Nõustun**.
 
 1. Valige **Kontrolli** konfiguratsiooni valideerimiseks.
 
-1. Kui kontroll on lõpule jõudnud, saab ühenduse salvestada, klõpsates nuppu **Salvesta**.
+1. Kui kontroll on lõpule jõudnud, saab ühenduse salvestada, valides **Salvesta**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Experian ühenduse konfiguratsiooni paan](media/enrichment-SFTP-connection.png "Experian ühenduse konfiguratsiooni paan")
 
 
 ## <a name="defining-field-mappings"></a>Väljavastenduste määratlemine 
 
-Kataloog, mis sisaldab faili, mis imporditakse SFTP serveris, peab sisaldama ka faili *model.json*. See fail määratleb andmete importimiseks kasutatava skeemi. Skeem peab väljavastenduste määratlemiseks kasutama [Common Data Modelit](/common-data-model/). Lihtne näide model.json-failist on järgmine.
+Kataloog, mis sisaldab faili, mis imporditakse SFTP serveris, peab sisaldama ka faili *model.json*. See fail määratleb andmete importimiseks kasutatava skeemi. Skeemis tuleb kasutada [Common Data Model](/common-data-model/) välja kaardistamise määramiseks. Lihtne näide model.json-failist on järgmine.
 
 ```
 {
@@ -123,6 +123,6 @@ Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **
 
 ## <a name="next-steps"></a>Järgmised etapid
 
-Rikastatud kliendiandmetele toetumine. Looge [segmente](segments.md), [näitajaid](measures.md) ja [eksportige andmeid](export-destinations.md), et pakkuda klientidele isikupärastatud kogemust.
+Rikastatud kliendiandmetele toetumine. Looge [segmente](segments.md) ja [näitajaid](measures.md) ning [eksportige andmed](export-destinations.md), et pakkuda oma klientidele isikupärastatud kogemust.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

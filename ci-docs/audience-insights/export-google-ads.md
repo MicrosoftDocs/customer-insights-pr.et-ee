@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976313"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305335"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentide eksportimine Google Adsi (eelvaade)
 
-Eksportige koondatud kliendiprofiilide segmendid Google Adsi vaatajaskonna loendisse ning kasutage neid, et näidata reklaame Google'i otsingus, Gmailis, YouTube'is ja Google'i Display-võrgustikus. 
+Eksportige ühtsete kliendiprofiilide segmendid Google Ads vaatajaskonna loendisse ja kasutage neid Google'i otsingus, Gmailis, YouTube ja Google Display Network'is reklaamimiseks. 
 
 ## <a name="prerequisites-for-connection"></a>Ühenduse eeltingimus
 
 -   Teil on [Google Adsi konto](https://ads.google.com/) ja asjakohane administraatori identimisteave.
--   Teil on [kinnitatud Google Ads arendaja token](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Te täidate [Customer Match Policy nõudeid](https://support.google.com/adspolicy/answer/6299717)
--   Te täidate [remarketing list sizes nõudeid](https://support.google.com/google-ads/answer/7558048) 
-
+-   Teil on [kinnitatud Google Ads arendaja token](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Te täidate [Customer Match Policy](https://support.google.com/adspolicy/answer/6299717) nõuded.
+-   Te täidate [uuesti turundamise loendi suurused](https://support.google.com/google-ads/answer/7558048) nõudeid.
 -   Google Adsis on olemas vaatajaskonnad ja asjakohased ID-d. Lisateavet leiate teemast [Google Adsi vaatajaskonnad](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Te olete [konfigureerinud segmendid](segments.md)
--   Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välju, mis tähistavad meiliaadressi, eesnime ja perekonnanime
+-   Te olete [konfigureerinud segmendid](segments.md).
+-   Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välju, mis tähistavad meiliaadressi, eesnime ja perekonnanime.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
@@ -68,7 +67,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
 
-1. Valige **Ekspordiühendus** väljal ühendus Google Ads jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+1. Valige **Ekspordiühendus** väljal ühendus Google Ads jaotisest. Kui te seda jaotise nime ei näe, pole seda tüüpi ühendused teile saadaval.
 
 1. Sisestage oma **[Google Adsi vaatajaskonna ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** ja valige **Ühenda**, et käivitada ühendus Google Adsiga.
 
@@ -78,7 +77,9 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 Ekspordi salvestamine ei käivita eksporti kohe.
 
-Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
+Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). 
+
+Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 

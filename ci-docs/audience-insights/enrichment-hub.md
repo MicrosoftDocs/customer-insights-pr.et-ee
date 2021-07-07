@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954482"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305243"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Kliendiprofiilide rikastamine (eelvaade)
 
@@ -22,7 +22,8 @@ Kliendiandmete rikastamiseks saate kasutada andmeid allikatest, nagu Microsoft j
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Rikastamisekeskuse leht":::
 
-Minge sihtrühmaülevaadetes jaotisse **Andmed** > **Rikastamine**, et töötada rikastamissuvanditega.    
+Minge sihtrühmaülevaadetes jaotisse **Andmed** > **Rikastamine**, et töötada rikastamissuvanditega.  
+
 Rikastamiste loomiseks või redigeerimiseks peavad teil olema kaasautori või administraatori õigused. Lisateavet vt teemast [Õigused](permissions.md).
 
 Vahekaardilt **Avastamine** leiate järgmised rikastamised.
@@ -31,7 +32,7 @@ Vahekaardilt **Avastamine** leiate järgmised rikastamised.
 - [Omandiõigused](enrichment-microsoft.md), mida pakub Microsoft
 - [Microsofti pakutavad täiustatud](enrichment-enhanced-addresses.md) aadressid
 - [Ettevõtte andmeid](enrichment-leadspace.md) esitab Leadspace
-- [Demograafilisi andmeid](enrichment-experian.md) esitab Experian
+- [Demograafiline teave](enrichment-experian.md), mida pakub Experian
 - [Asukohaandmeid](enrichment-here.md) esitab HERE Technologies
 - [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu
 
@@ -39,7 +40,7 @@ Saate kuvada oma konfigureeritud rikastamisi ja redigeerida nende atribuute vahe
 
 ## <a name="manage-existing-enrichments"></a>Olemasolevate rikastamiste haldamine
 
-Avage **Minu rikastamised**, et näha kõiki konfigureeritud rikastamisi. Iga rikastamine on esindatud reana, mis sisaldab täiendavat teavet rikastamise kohta.
+Minge vahekaardile **Minu rikastused**, et näha kõiki konfigureeritud rikastusi. Iga rikastamine on esindatud reana, mis sisaldab täiendavat teavet rikastamise kohta.
 
 Saadaolevate suvandite kuvamiseks valige rikastamine. Valikute nägemiseks võite loendikirjel valida ka ellipsi (...).
 
@@ -59,6 +60,6 @@ Muude tootjate rikastamised konfigureeritakse kasutades [ühendusi](connections.
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Mitu sama tüüpi rikastust
 
-Rikastatav olem määratakse rikastamise konfiguratsiooni käigus, mis võimaldab teil rikastada ainult osa oma profiilidest. Näiteks rikastage andmeid ainult konkreetse segmendi kohta. Saate konfigureerida mitut sama tüüpi rikastamist ja sama ühendust uuesti kasutada. Mõnel rikastamisel on piiritletud sama tüüpi rikastuste arv, mida saab luua. Piiranguid ja praegust kasutamist saab vaadata lehel **Rikastamine**.
+Rikastatav olem määratakse rikastamise konfiguratsiooni käigus, mis võimaldab teil rikastada ainult osa oma profiilidest. Näiteks saate rikastada andmeid ainult kindla segmendi kohta. Saate konfigureerida mitut sama tüüpi rikastamist ja sama ühendust uuesti kasutada. Mõnel rikastamisel on piiritletud sama tüüpi rikastuste arv, mida saab luua. Piiranguid ja praegust kasutamist saab vaadata lehel **Rikastamine**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

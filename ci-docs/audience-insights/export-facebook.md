@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e20c7b7fd3989d7621cb7765f38b85c8ab4adfcb
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976037"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305105"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Segmentide loendi eksportimine Facebook Ads Manageri (eelvaade)
 
@@ -22,12 +22,12 @@ ms.locfileid: "5976037"
 
 ## <a name="prerequisites-for-connection"></a>Ühenduse eeltingimus
 
-- Teil peab olema [**Facebook Ad konto**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), mis sisaldab [**Facebook Business kontot**](https://business.facebook.com/).
-- Peate olema [**Facebooki reklaamikonto**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) administraator.
+- Teil peab olema [**Facebook Ads konto**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), mis sisaldab [**Facebook Business Account**](https://business.facebook.com/).
+- Te peate olema [**Facebook Ads konto**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) administraator.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Facebook Ads Manageri saab eksportida korraga kuni 10 miljonit profiili.
+- Kuni 10 miljoni kliendiprofiili Facebook Ads Manager'i eksportimise kohta.
 - Facebook Ads Manager saab eksportida ainult segmente.
 - Looge või värskendage kohandatud vaatajaskondi ainult Facebook *kliendiloendi* tüüpides.
 - 10 miljoni profiiliga segmentide eksportimine võib kesta kuni 90 minutit.
@@ -42,17 +42,17 @@ Enne, kui kasutajad saavad luua ekspordi, peab administraator konfigureerima tee
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
-1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks **Administraatorid**. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Autendi Facebook Adsiga: 
 
-   1. Valige **Jätka rakendusega Facebook**, et logida oma Facebooki reklaamikampaaniasse sisse.
+   1. Valige **Jätka Facebook**, et logida sisse oma Facebook Ads kontole.
 
    1. Lubage õigus **ads_management** pärast Facebookiga autentimist.
 
    1. Valige **Facebooki reklaamikonto**, millega soovite töötada.
 
-   1. Valige ripploendist **olemasolev kohandatud sihtrühm** või looge **uus kohandatud sihtrühm**. Lisateavet vt teemast [**Sihtrühmad Facebooki reklaamihalduris**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+   1. Valige rippmenüüst **Olemasolev kohandatud vaatajaskond** või looge **Uus kohandatud vaatajaskond**. Lisateavet vt teemast [**Sihtrühmad Facebooki reklaamihalduris**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
       > [!NOTE]
       > Selle ekspordiga saate kohandatud vaatajaskondi luua või värskendada teenuses Facebook ainult tüübiga *kliendiloend*. Mõnel juhul näete rippmenüüs erinevat tüüpi kohandatud vaatajaskondi. Kui valite *kliendiloendist* erineva tüübi, toob see kaasa ebaõnnestunud ekspordi. 
 
@@ -68,14 +68,15 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Valige uue ekspordi loomiseks **Lisa sihtkoht**. 
 
-1. Valige **Ekspordiühendus** väljal ühendus **Facebook Ads Manager** jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+1. Valige **Ekspordiühendus** väljal ühendus **Facebook Ads Manager** jaotisest. Kui te seda jaotise nime ei näe, pole seda tüüpi ühendused teile saadaval.
 
 1. Suvandis **Põhiidentifikaatori välja valimine** valige **Meil**, **Nimi ja aadress** või **Telefon**, et saata Facebooki reklaamihaldurile. 
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**.
 
 1. Vastendage vastavad atribuudid valitud põhiidentifikaatori ühtsest kliendiolemist.
-   > [NÄPUNÄIDE] Parim võimalus vaste ilmnemiseks on, kui valite põhiidentifikaatoriks **Meil**. Täiendavate identifikaatorite lisamine võib vastendamist parandada.
+   > [!TIP]
+   > Parim võimalus vaste ilmnemiseks on, kui valite põhiidentifikaatoriks **E-kiri**. Täiendavate identifikaatorite lisamine võib vastendamist parandada.
 
 1. Valige **Lisa atribuut**, et kaardistada rohkem atribuute Facebook Ads Managerile saatmiseks. Facebook Ads Manageri atribuudid kaardistavad järgmisi kasutajasõbralikke nimesid: **FN** = **Eesnimi**, **LN** = **Perekonnanimi**, **FI** = **Esinimetäht**, **PHONE** = **Telefon**, **GEN** = **Sugu**, **DOB** = **Sünnikuupäev**, **ST** = **Osariik**, **CT** = **Linn**, **ZIP** = **Sihtnumber**, **COUNTRY** = **Riik/Regioon**
 
@@ -85,7 +86,9 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 Ekspordi salvestamine ei käivita eksporti kohe.
 
-Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
+Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). 
+
+Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 

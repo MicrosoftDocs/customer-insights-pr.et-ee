@@ -1,6 +1,6 @@
 ---
 title: Customer Insightsi andmete eksportimine Adobe Experience Platformi
-description: Lugege, kuidas kasutada Adobe Experience Platformi sihtrühmaülevaadete segmente.
+description: Lugege, kuidas kasutada sihtrühma ülevaadete segmente Adobe Experience Platform'il.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760096"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305519"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Customer Insightsi segmentide kasutamine Adobe Experience Platformis (eelversioon)
 
-Dynamics 365 Customer Insightsi sihtrühmaülevaadete kasutajana olete võib-olla loonud segmente turunduskampaaniate tõhusamaks muutmiseks asjakohaseid sihtrühmi määrates. Adobe Experience Platformi ja rakendustest, nagu Adobe Campaign Standard pärit segmentide kasutamiseks peate järgima mõnda selles artiklis kirjeldatud juhist.
+Dynamics 365 Customer Insights sihtrühma ülevaadete kasutajana, olete võinud luua segmente, et ,muuta oma turunduskampaaniad tõhusamaks, sihtides asjakohaseid vaatajaskondi. Adobe Experience Platformi ja rakendustest, nagu Adobe Campaign Standard pärit segmentide kasutamiseks peate järgima mõnda selles artiklis kirjeldatud juhist.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Selles artiklis kirjeldatud juhiste protsessiskeem.":::
 
@@ -55,19 +55,19 @@ Kui sihtrühm on tuvastatud, saame konfigureerida ekspordi sihtrühmaülevaadete
 
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **Azure Blob Storage** või valige **Seadista** **Azure Blob Storage** paanil:
+1. Valige **Lisa ühendus** ja valige **Azure bloobimälu** või valige **Seadistage** paanil **Azure bloobimälu** ühenduse konfigureerimiseks.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure'i bloobimälu konfiguratsioonipaan."::: ühenduse konfigureerimiseks.
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Azure'i bloobimälu konfiguratsioonipaan."::: 
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
 1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Sisestage **Konto nimi**, **Konto võti**, ja **Konteiner** Azure Blob Storage kontol, kuhu soovite segmendi eksportida.  
+1. Sisestage **Konto nimi**, **Konto võti**, ja **Konteiner** Blob Storage konto jaoks, kuhu soovite segmendi eksportida.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Salvestusruumi konto konfiguratsiooni kuvatõmmis. "::: 
    
-    - Lisateavet bloobimälu konto nime ja konto võtme otsimise kohta leiate [Azure portaalis salvestusruumi konto sätete haldamine](/azure/storage/common/storage-account-manage).
+    - Lisateavet Blob Storage konto nime ja konto võtme otsimise kohta leiate [Azure portaalis salvestusruumi konto sätete haldamine](/azure/storage/common/storage-account-manage).
     - Lisateavet konteineri loomise kohta leiate teemast [Konteineri loomine](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Ühenduse loomiseks valige **Salvesta**. 
@@ -80,7 +80,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Valige uue ekspordi loomiseks **Lisa eksport**.
 
-1. Valige **Ekspordiühendus** väljal ühendus Azure Blob Storage jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+1. Valige **Ekspordiühendus** väljal ühendus Azure Blob Storage jaotisest. Kui te seda jaotise nime ei näe, pole seda tüüpi ühendused teile saadaval.
 
 1. Valige segment, mille soovite eksportida. Selles näites on selleks **ChurnProneCustomers**.
 
@@ -95,7 +95,7 @@ Nüüd saate [nõudmisel segmendi](export-destinations.md#run-exports-on-demand)
 > [!NOTE]
 > Veenduge, et eksporditud segmendi kirjete arv jääb Adobe Campaign Standardi litsentsi lubatud piiridesse.
 
-Eksporditud andmed talletatakse eespool konfigureeritud Azure'i bloobimälu ümbrisesse. Ümbrisesse luuakse automaatselt järgmine kaustatee:
+Eksporditud andmed talletatakse eespool konfigureeritud Azure Blob Storage konteinerisse. Ümbrisesse luuakse automaatselt järgmine kaustatee:
 
 *%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv*
 
@@ -121,9 +121,10 @@ Pärast lähteühenduse määratlemist [konfigureerige andmevoog](https://experi
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Adobe Campaign Standardi sihtrühma loomine
 
-Selle kampaania meili saatmiseks kasutame Adobe Campaign Standardit. Pärast andmete importimist Adobe Experience Platformi peame [looma sihtrühma](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) Adobe Campaign Standardis Adobe Experience Platformi andmete abil.
+Selle kampaania meili saatmiseks kasutame Adobe Campaign Standard'it. Pärast andmete importimist Adobe Experience Platformi peame [looma sihtrühma](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) Adobe Campaign Standardis Adobe Experience Platformi andmete abil.
 
-Lugege, kuidas [kasutada segmendikoosturit](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment) Adobe Campaign Standardis, et määratleda sihtrühm Adobe Experience Platformi andmete põhjal.
+
+Lugege, kuidas [kasutada segmendikoosturit](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) Adobe Campaign Standardis, et määratleda sihtrühm Adobe Experience Platformi andmete põhjal.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Meili loomine ja saatmine Adobe Campaign Standardi kaudu
 

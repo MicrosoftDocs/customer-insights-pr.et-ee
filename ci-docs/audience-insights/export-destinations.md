@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253035"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305473"
 ---
 # <a name="exports-preview-overview"></a>Eksportimine (eelversioon) ülevaade
 
 Lehel **Ekspordid** näete kõiki konfigureeritud eksporte. Ekspordid jagavad erinevate rakendustega konkreetseid andmeid. Need võivad sisaldada kliendiprofiile või olemeid, skeeme ja kaardistamise üksikasju. Iga ekspordi jaoks on vaja [ühendust, mille on seadistanud administraator, et hallata autentimist ja juurdepääsu](connections.md).
 
-Minge **Andmed** > **Ekspordid**, et näha ekspordilehte. Kõigil kasutajarollidel on juurdepääs konfigureeritud ekspordi vaatamiseks. Kasutage käsuriba otsinguvälja, et leida eksport nende nime, ühenduse nime või ühenduse tüübi järgi.
+Minge **Andmed** > **Ekspordid**, et näha ekspordilehte. Kõik kasutajarollid saavad vaadata konfigureeritud eksporti. Kasutage käsuriba otsinguvälja, et leida eksporti nime, ühenduse nime või ühenduse tüübi järgi.
 
 ## <a name="set-up-a-new-export"></a>Uue ekspordi seadistamine
 
@@ -65,7 +65,7 @@ Pärast ekspordi sihtkoha loomist on need ära toodud **Andmed** > **Ekspordid**
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Redigeerimisõiguseta kasutajad valivad **Vaade** eksportimise üksikasjade vaatamiseks **Redigeeri** asemel.
+1. Redigeerimisõigusteta kasutajad valivad **Vaade** ekspordi üksikasjade kuvamiseks **Redigeeri** asemel.
 
 1. Kõrvalpaanil kuvatakse ekspordi konfiguratsioon. Ilma redigeerimisõiguseta ei saa väärtusi muuta. Valige **Sulge** ekspordilehele naasmiseks.
 
@@ -73,7 +73,7 @@ Pärast ekspordi sihtkoha loomist on need ära toodud **Andmed** > **Ekspordid**
 
 Igal konfigureeritud ekspordil on värskendusgraafik. Värskendamise ajal otsib süsteem uusi või värskendatud andmeid, mida eksporti kaasata. Vaikimisi käitatakse eksport iga [kavandatud süsteemivärskenduse](system.md#schedule-tab) osana. Saate värskendamise ajakava kohandada või selle käsitsi eksportimise käivitamiseks välja lülitada.
 
-Ekspordigraafikud sõltuvad teie keskkonna olekust. Kui plaanitud eksportimisel on [sõltuvuste](system.md#refresh-policies) värskendusi juba tehtud, viib süsteem esmalt sõltuvused lõpule ja käivitab seejärel ekspordi. Näete, millal eksporti viimati veerus **Värskendati**.
+Ekspordigraafikud sõltuvad teie keskkonna olekust. Kui värskendused on pooleli [sõltuvused](system.md#refresh-policies), kui määratud eksport peaks algama, viib süsteem värskendused esmalt lõpule ja käivitab seejärel ekspordi. Näete, millal eksporti viimati veerus **Värskendati**.
 
 ### <a name="schedule-exports"></a>Eksportide ajastamine
 

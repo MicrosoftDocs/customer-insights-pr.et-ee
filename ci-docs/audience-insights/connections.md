@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896092"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304967"
 ---
 # <a name="connections-preview-overview"></a>Ühenduste (eelversioon) ülevaade
 
@@ -42,7 +42,7 @@ Uusi ühendusi saavad konfigureerida ainult administraatorid, kuid loodud ühend
 
 1. Avage vahekaart **Ühendused**.
 
-1. Valige uue ühenduse loomiseks **Lisa ühendus**. Valige ripploendist, millist tüüpi ühendust te soovite luua.
+1. Valige uue ühenduse loomiseks **Lisa ühendus**. Valige ripploendist, millist tüüpi ühendust soovite luua.
 
 1. Sisestage **Loo ühendus** seadistuse paanil nõutavad üksikasjad. 
    1. **Kuva nimi** ja ühenduse tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
@@ -74,7 +74,9 @@ Ekspordiühenduse seadistamisel või redigeerimisel saate valida, millistel kasu
 
 ## <a name="remove-a-connection"></a>Eemaldage ühendus
 
-Kui eemaldatav ühendus on kasutusel rikastamise või ekspordi puhul, peate need esmalt lahti võtma või eemaldama. Eemaldamise dialoog juhendab teid vastavalt rikastamise või eksportimise osas. Eraldatud rikastamine ja eksport muutuvad passiivseks. Aktiveerite need uuesti, lisades neile teise ühenduse [Rikastamised](enrichment-hub.md) või [Ekspordid](export-destinations.md) lehel.
+Kui eemaldatav ühendus on kasutusel rikastamise või ekspordi puhul, peate need esmalt lahti võtma või eemaldama. Eemaldamise dialoog juhendab teid vastavalt rikastamise või eksportimise osas. 
+
+Eraldatud rikastamine ja eksport muutuvad passiivseks. Aktiveerite need uuesti, lisades neile teise ühenduse [Rikastamised](enrichment-hub.md) või [Ekspordid](export-destinations.md) lehel.
 
 1. Minge **Administraator** > **Ühendused (eelversioon)**.
 

@@ -9,16 +9,16 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
-ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6245702"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305151"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Kliendiprofiilide rikastamine brändi ja huvide ligitõmbavusega (eelvaade)
 
-Kasutage Microsofti omandiandmeid kliendiandmete rikastamiseks kaubamärgi ja omandiõigusega seotud andmetega. Need ühtivused määratakse teie klientidega sarnaste demograafiliste näitajatega inimeste andmete põhjal. See teave aitab teil paremini mõista ja segmentida oma kliente, lähtudes nende ligitõmbavusest konkreetsetele tootemarkidele ja huvidele.
+Kasutage Microsofti omandiandmeid kliendiandmete rikastamiseks kaubamärgi ja omandiõigusega seotud andmetega. Need sarnasused põhinevad teie klientidele sarnase demograafilise demograafiaga inimeste andmetel. See teave aitab teil paremini mõista ja segmentida oma kliente, lähtudes nende ligitõmbavusest konkreetsetele tootemarkidele ja huvidele.
 
 Liikuge sihtrühmaülevaadetes jaotisse **Andmed** > **Rikastamine**, et [seadistada ja vaadata rikastamisi](enrichment-hub.md).
 
@@ -35,7 +35,7 @@ Microsoft kasutab veebipõhised otsinguandmed, et leida kaubamärkide ja omandi�
 
 ## <a name="affinity-level-and-score"></a>Ühtivuse tase ja skoor
 
-Igal rikastatud kliendiprofiilil pakume kahte seotud väärtust – ühtivuse tase ja skoor. Need väärtused aitavad teil määratleda, kui suur ühtivus on selle profiili demograafilisel segmendil teatud tootemargi või huvi jaoks, võrreldes muude demograafiliste segmentidega.
+Igal rikastatud kliendiprofiilil pakume kahte seotud väärtust: afiinsuse tase ja afiinsuse skoor. Need väärtused aitavad teil määratleda, kui suur ühtivus on selle profiili demograafilisel segmendil teatud tootemargi või huvi jaoks, võrreldes muude demograafiliste segmentidega.
 
 *Ühtivustase* koosneb neljast tasemest ja *ühtivuse skoor* arvutatakse 100 punkti skaalal, mis vastendatakse ühtivustasemetega.
 
@@ -53,7 +53,7 @@ Sõltuvalt granulaarsusest, mida soovite ühtivuse mõõtmisel, saate kasutada �
 
 Toetame praegu järgmisi riigi/regiooni suvandeid: Austraalia, Kanada (inglise), Prantsusmaa, Saksamaa, Ühendkuningriik või Ameerika Ühendriigid (inglise).
 
-Riigi valimiseks avage **Tootemarkide rikastamine** või **Huvide rikastamine** ning valige suvand **Muuda** valiku **Riik/piirkond** kõrval. Paanil **Riigi/piirkonna sätted** valige suvand ja valige **Rakenda**.
+Et valida riik või piirkond, avage **Tootemarkide rikastamine** või **Huvide rikastamine** ja valige **Muuda** **Riik/regioon** kõrval. Paanil **Riigi/piirkonna sätted** valige suvand ja valige **Rakenda**.
 
 ### <a name="implications-related-to-country-selection"></a>Riigi valikuga seotud mõjud
 
@@ -61,7 +61,7 @@ Riigi valimiseks avage **Tootemarkide rikastamine** või **Huvide rikastamine** 
 
 - Kui [valite valdkonna](#define-your-brands-or-interests), saate olulisemaid tootemarke või huvisid valitud riigi või piirkonna põhjal.
 
-- Kui [rikastate profiile](#refresh-enrichment), rikastame kõiki kliendiprofiile, mille jaoks saame valitud tootemarkide ja huvide andmeid. Sealhulgas profiilid, mis pole valitud riigis või piirkonnas. Näiteks kui valisite Saksamaa, rikastame Ameerika Ühendriikides asuvad profiilid, kui meil on Ameerika Ühendriikides valitud kaubamärkide ja omandiõiguse andmeid.
+- Kui [rikastame profiile](#refresh-enrichment), rikastame kõiki kliendiprofiile, mille jaoks me saame andmeid valitud tootemarkide ja huvide jaoks, kaasaarvatud profiilid, mis ei ole valitud riigis või piirkonnas. Näiteks kui valisite Saksamaa, rikastame Ameerika Ühendriikides asuvad profiilid, kui meil on Ameerika Ühendriikides valitud kaubamärkide ja omandiõiguse andmeid.
 
 ## <a name="configure-enrichment"></a>Rikastamise konfigureerimine
 
@@ -71,7 +71,7 @@ Juhendatud kogemus aitab teid läbi rikastamise konfiguratsiooni.
 
 Valige kuni viis kaubamärki või huvi, kasutades ühte või mõlemat järgmist valikut.
 
-- **Tööstus**: valige ripploendist oma sektor ja valige siis selle valdkonna jaoks kõige populaarsem kaubamärk või huvid.
+- **Tööstus**: Valige ripploendist oma valdkond ja valige siis selle valdkonna jaoks kõige populaarsem kaubamärk või huvid.
 - **Valige oma nimi**. Sisestage oma ettevõtte jaoks oluline kaubamärk või huvi ja valige siis valite vastavate soovituste vahel. Kui me ei loetle otsitavaid brände või huvisid, saatke meile tagasisidet, kasutades linki **Soovita**.
 
 ### <a name="review-enrichment-preferences"></a>Rikastamise eelistuste ülevaatamine
@@ -88,19 +88,19 @@ Valige **Rikastatud olem** ja valige andmekomplekt, mida soovite rikastada ettev
 
 Vastendage oma ühendatud kliendiolemi väljad demograafilise segmendi määratlemiseks, mida süsteem kasutab teie kliendiandmete rikastamiseks. Vastendage riigi/piirkonna ja vähemalt sünniaja või soo atribuudid. Lisaks peate näitama kaardil vähemalt ühte linna (ja osariiki/maakonda) või sihtnumbrit. Valige suvand **Redigeeri**, et määratleda väljade vastendamine, ja valige suvand **Rakenda**, kui olete lõpetanud. Väljavastenduse lõpule viimiseks valige **Salvesta**.
 
-Toetatakse järgmisi vorminguid ja väärtusi, kuid väärtused pole tõstutundlikud.
+Toetatakse järgmisi vorminguid ja väärtusi (väärtused pole tõstutundlikud):
 
-- **Sünniaeg**: soovitame, et sünniaeg oleks andmete valmendamisel teisendatud DateTime tüüpi. Alternatiivina võib see olla string [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) vormingus "aaaa–KK–pp" või "aaaa–KK–PPTHH:mm:ssZ".
-- **Sugu**: mees, naine, teadmata
-- **Sihtnumber**: viiekohaline sihtnumber USAs, standardne sihtnumber kõikjal mujal
-- **Linn**: linna nimi inglise keeles
+- **Sünniaeg**: soovitame, et sünniaeg oleks andmete valmendamisel teisendatud DateTime tüüpi. Teise võimalusena võib see olla string [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formaadis "yyyy-MM-dd" or "yyyy-MM-ddTHH:mm:ss".
+- **Sugu**: mees, naine, teadmata.
+- **Sihtnumber**: Ameerika Ühendriikide viiekohaline sihtnumber, standardne sihtnumber mujal.
+- **Linn**: linna nimi inglise keeles.
 - **Osariik/maakond**: kahetäheline lühend USA ja Kanada jaoks. Kahe- või kolmetäheline lühend Austraalia jaoks. Ei kohaldata Prantsusmaa, Saksamaa ega Ühendkuningriigi korral.
 - **Riik/piirkond**:
 
   - US: Ameerika Ühendriigid, Ühendriigid, USA, US, Ameerika
   - CA: Kanada, CA
   - GB: Ühendkuningriik, UK, Suurbritannia, GB, Suurbritannia ja Põhja-Iiri Ühendkuningriik, Suurbritannia Ühendkuningriik
-  - AU: Austraalia, AU, Austraalia Commonwealth
+  - AU: Austraalia, AU, Austraalia Liit
   - FR: Prantsusmaa, FR, Prantsuse Vabariik
   - DE: Saksamaa, Saksa, Deutschland, Allemagne, DE, Saksamaa Liitvabariik, Saksamaa Vabariik
 
@@ -113,10 +113,11 @@ Lõpuks saate eelvaadata teavet ja anda rikastamisele nimi.
 ## <a name="refresh-enrichment"></a>Rikastamise värskendamine
 
 Pärast brändide, huvide ja demograafilise väljavastenduse konfigureerimist käivitage rikastamine. Protsessi käivitamiseks valige tootemargi või huvide lehel käsk **Käivita**. Lisaks saate lasta süsteemil käitada rikastamist automaatselt ajastatud värskendamise osana.
+
 Sõltuvalt kliendiandmete mahust võib rikastamise käitamise lõpuleviimiseks kuluda mitu minutit.
 
 > [!TIP]
-> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
+> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud **Vaata detaile** ühe tööülesande kohta, leiate lisateavet: töötlemise aeg, viimane töötlemise kuupäev ning kõik ülesandega seotud vead ja hoiatused.
 
 ## <a name="enrichment-results"></a>Rikastamise tulemused
 
@@ -134,7 +135,7 @@ Kaubamärgi ja huvide ühtivust saate vaadata ka eraldi kliendi kaartidel. Avage
 
 ## <a name="next-steps"></a>Järgmised etapid
 
-Rikastatud kliendiandmetele toetumine. Klientidele isikustatud kogemuste pakkumiseks looge suvandid [Segmendid](segments.md), [Meetmed](measures.md) ja isegi [andmete eksport](export-destinations.md).
+Rikastatud kliendiandmetele toetumine. Looge [Segmendid](segments.md) ja [Näitajaid](measures.md) ning isegi [eksportige andmed](export-destinations.md), et pakkuda oma klientidele isikupärastatud kogemust.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

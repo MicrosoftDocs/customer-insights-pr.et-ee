@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111382"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306252"
 ---
 # <a name="segments-overview"></a>Segmentide ülevaade
 
@@ -68,7 +68,7 @@ Segmenti saate eksportida segmentide lehelt või [ekspordilehelt](export-destina
 
 1. Valige **Kuva rohkem [....]** segmendile, mille soovite eksportida.
 
-1. Valige toimingute rippmenüüst **Eksportide haldamine**.
+1. Valige **Ekspordi haldamine** tegevuste ripploendist.
 
 1. Avaneb **Segmendi ekspordid (eelvaade)** leht. Näete kõiki konfigureeritud eksporte, mis on rühmitatud praegust segmenti sisaldavate või seda mitte sisaldavate ekspordite järgi.
 
