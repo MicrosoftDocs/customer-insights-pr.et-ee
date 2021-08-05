@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597414"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554430"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Kasutage Azure'i masinõppel põhinevaid mudeleid
 
@@ -52,7 +52,7 @@ Peate looma andmekogumeid, et kasutada Customer Insightsist pärit olemiandmeid 
      Avage kujundajas **Vali andmekomplekti veerud** ja valige **Määra konveieri parameetriks**, kus saate parameetrile nime anda.
 
      > [!div class="mx-imgBorder"]
-     > ![Andmekomplekti parametreerimine kujundajas](media/intelligence-designer-dataset-parameters.png "Andmekomplekti parametreerimine kujundajas")
+     > ![Andmekomplekti parametreerimine kujundajas.](media/intelligence-designer-dataset-parameters.png "Andmekomplekti parametreerimine kujundajas")
    
 * Andmekomplekti parameeter SDK-s (Python)
    
@@ -78,7 +78,7 @@ Peate looma andmekogumeid, et kasutada Customer Insightsist pärit olemiandmeid 
 
 * Kujundajas on [andmete eksportimise moodul](/azure/machine-learning/algorithm-module-reference/export-data), mis võimaldab konveieri väljundit eksportida Azure'i salvestusruumi. Praegu peab moodul kasutama andmesalvetüüpi **Azure'i bloobimälu** ning parametreerima **andmesalve** ja suhtelist **teed**. Customer Insights alistab mõlemad parameetrid konveieri käitamisel andmesalve ja teega, mis on sellele tootele juurdepääsetavad.
    > [!div class="mx-imgBorder"]
-   > ![Andmete eksportimise mooduli konfiguratsioon](media/intelligence-designer-importdata.png "Andmete eksportimise mooduli konfiguratsioon")
+   > ![Andmete eksportimise mooduli konfiguratsioon.](media/intelligence-designer-importdata.png "Andmete eksportimise mooduli konfiguratsioon")
    
 * Kui kirjutate tuletusväljundi koodi, saate väljundi üles laadida tööruumis oleva *registreeritud andmesalve* teele. Kui tee ja andmesalv on konveieris parametreeritud, saab Customer Insights tuletuse väljundit lugeda ja importida. Praegu on toetatud ühe tabelina esitatud väljund CSV-vormingus. Tee peab sisaldama kataloogi ja faili nime.
 

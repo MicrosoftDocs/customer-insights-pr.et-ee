@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596540"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554889"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Common Data Modeli kausta ühendamine Azure Data Lake’i kontot kasutades
 
@@ -45,7 +45,7 @@ See artikkel annab teavet selle kohta, kuidas valmendada andmeid Common Data Mod
 
 1. Saate autentimiseks valida ressursipõhise ja tellimusepõhise valiku vahel. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). Sisestage **konteineri** teave ja valige **Edasi**.
    > [!div class="mx-imgBorder"]
-   > ![Azure Data Lake'i uute ühenduse üksikasjade sisestamise dialoogiboks](media/enter-new-storage-details.png)
+   > ![Azure Data Lake'i uute ühenduse üksikasjade sisestamise dialoogiboks.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Ühenduse ja andmeallika loomiseks on vaja ühte järgmistest ülalviidatud konteineri või salvestusruumi konto rollidest.
    >  - Salvestusruumi bloobiandmete luger
@@ -58,11 +58,11 @@ See artikkel annab teavet selle kohta, kuidas valmendada andmeid Common Data Mod
 
 1. Saadaolevate olemite loendi leiate valitud failist model.json või manifest.json. Saate vaadata üle ja valida saadaolevate olemite loendist ning valida suvandi **Salvesta**. Kõik valitud olemid valmendatakse uuest andmeallikast.
    > [!div class="mx-imgBorder"]
-   > ![Dialoogiboks, kus on esitatud model.json failist saadud olemite loetelu](media/review-entities.png)
+   > ![Dialoogiboks, kus on esitatud model.json failist saadud olemite loetelu.](media/review-entities.png)
 
 8. Andmete profiilimise lubamiseks valige soovitud andmeüksused ja valige **Salvesta**. Andmete profiilimine teeb võimalikuks analüüsi ja palju muud. Saate valida kogu olemi, mis valib olemi kõik atribuudid, või valida oma soovi järgi kindlad atribuudid. Vaikimisi pole olemeid andmete profiilimiseks lubatud.
    > [!div class="mx-imgBorder"]
-   > ![Andmete profiilimist kuvav dialoogiboks](media/dataprofiling-entities.png)
+   > ![Andmete profiilimist kuvav dialoogiboks.](media/dataprofiling-entities.png)
 
 9. Pärast valikute salvestamist avaneb leht **Andmeallikad**. Nüüd peaksite nägema Common Data Modeli kausta ühendust andmeallikana.
 
@@ -81,12 +81,12 @@ Saate värskendada pääsuvõtit, mis kuulub salvestuskontole, mis sisaldab Comm
 
 4. Soovi korral saate uuendada **Pääsuvõtit** ja valida seejärel **Järgmine**.
 
-   ![Olemasoleva andmeallika pääsuvõtme redigeerimise ja uuendamise dialoog](media/edit-access-key.png)
+   ![Olemasoleva andmeallika pääsuvõtme redigeerimise ja uuendamise dialoog.](media/edit-access-key.png)
 
 5. Soovi korral saate kasutada kontovõtmepõhise ühenduse asemel ressursi- või tellimusepõhist ühendust. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). Ühenduse värskendamisel ei saa te muuta **konteineri** teavet.
    > [!div class="mx-imgBorder"]
 
-   > ![Ühenduse andmete sisestamise dialoogiboks Azure Data Lake'i ühendamiseks olemasoleva salvestusruumi kontoga](media/enter-existing-storage-details.png)
+   > ![Ühenduse andmete sisestamise dialoogiboks Azure Data Lake'i ühendamiseks olemasoleva salvestusruumi kontoga.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Ühenduse ja andmeallika loomiseks on vaja ühte järgmistest ülalviidatud konteineri või salvestusruumi konto rollidest.

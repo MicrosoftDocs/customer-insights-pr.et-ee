@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304691"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692430"
 ---
 # <a name="data-sources-overview"></a>Andmeallikate ülevaade
 
@@ -30,13 +31,13 @@ Saate andmeallikat lisada kolmel peamisel viisil.
 
 - [Kümnete Power Query konnektorite kaudu](connect-power-query.md)
 - [Common Data Modeli kaustast](connect-common-data-model.md)
-- [Enda Microsoft Dataverse’i andmejärvest](connect-common-data-service-lake.md)
+- [Enda Microsoft Dataverse’i andmejärvest](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Andmete lisamine asutusesisene andmeallikatest
 
-Kohalike andmeallikate andmete sisestamine vaatajaskonna statistikas toetub Microsoft Power Platform andmevoogudele. Andmevooge saab lubada Customer Insights kaudu [pakkudes Microsoft Dataverse keskkonna URL-i](manage-environments.md#create-an-environment-in-an-existing-organization) keskkonna seadistamisel.
+Kohalike andmeallikate andmete sisestamine vaatajaskonna statistikas toetub Microsoft Power Platform andmevoogudele. Andmevooge saab lubada Customer Insights kaudu [pakkudes Microsoft Dataverse keskkonna URL-i](get-started-paid.md) keskkonna seadistamisel.
 
-Andmeallikad, mis luuakse pärast keskkonna Dataverse seostamist Customer Insights, kasutavad [Power Platform andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) vaikimisi. Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Eemaldage ja looge uuesti andmeallikad, mis olid olemas enne seda, kui Dataverse -i keskkond seostati [asutusesisese andmelüüside kasutamisega](/data-integration/gateway/service-gateway-app.md).
+Andmeallikad, mis luuakse pärast keskkonna Dataverse seostamist Customer Insights, kasutavad [Power Platform andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) vaikimisi. Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Eemaldage ja looge uuesti andmeallikad, mis olid olemas enne seda, kui Dataverse -i keskkond seostati [asutusesisese andmelüüside kasutamisega](/data-integration/gateway/service-gateway-app).
 
 Andmevõrgud olemasolevast Power BI või Power Apps keskkonnast on nähtavad ja saate neid uuesti kasutada jaotises Customer Insights. Andmeallikate lehel kuvatakse lingid, et minna Microsoft Power Platform keskkonda, kus saate vaadata ja konfigureerida asutusesiseseid andmevõrke.
 
@@ -45,11 +46,11 @@ Andmevõrgud olemasolevast Power BI või Power Apps keskkonnast on nähtavad ja 
 Näete iga sisestatud andmeallika nime, selle olekut ja viimast korda, kui neid andmeid selle allika jaoks värskendati. Saate andmeallikate loendit iga veeru järgi sortida.
 
 > [!div class="mx-imgBorder"]
-> ![Andmeallikas lisatud](media/configure-data-datasource-added.png "Andmeallikas lisatud")
+> ![Andmeallikas lisatud.](media/configure-data-datasource-added.png "Andmeallikas lisatud")
 
 |Olek  |Kirjeldus  |
 |---------|---------|
-|Õnnestunud   |Andmeallikas valmendati edukalt juhul, kui veerus **Värskendatud** on toodud aeg.
+|Tehtud   |Andmeallikas valmendati edukalt juhul, kui veerus **Värskendatud** on toodud aeg.
 |Pole käivitatud   |Andmeallikas pole valmendatud andmeid või see on ikka mustandirežiimis.         |
 |Värskendamine    |Andmete sisestamine on pooleli. Selle toimingu tühistamiseks valige **Peata värskendamine** **Toimingute** veerus. Andmeallika värskendamise peatamine ennistab selle viimase värskendamise olekusse.       |
 |Ebaõnnestus     |Andmete sisestamisel ilmnesid tõrked.         |

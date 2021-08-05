@@ -1,7 +1,7 @@
 ---
 title: Power BI konnektor
 description: Õppige kasutama konnektorit Dynamics 365 Customer Insights Power BI-s.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596034"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661097"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI’i konnektor (eelvaade)
 
@@ -39,7 +39,7 @@ Visualiseerige oma andmeid rakendusega Power BI Desktop. Oma ühendatud kliendia
 
 1. Dialoogiboksis **Navigaator**. näete kõigi keskkondade loendit, millele teil on juurdepääs. Laiendage keskkond ja avage mis tahes kaust (olemid, näitajad, segmendid, rikastamised). Näiteks avage kaust **Olemid**, et näha kõiki olemeid, mida saate importida.
 
-   ![Power BI konnektori navigaator](media/power-bi-navigator.png "Power BI konnektori navigaator")
+   ![Power BI Konnektori Navigaator.](media/power-bi-navigator.png "Power BI konnektori navigaator")
 
 1. Valige kaasatavate olemite kõrval olevad märkeruudud ja vajutage **Laadi**. Saate valida mitu olemit erinevatest keskkondadest.
 
@@ -68,5 +68,11 @@ Saate topeltseoseid tuvastada ja eemaldada.
 3. Eemaldage tuvastatud topeltseosed.
 
 Pärast topeltseoste eemaldamist proovige Power BI konnektor uuesti konfigureerida. Keskkond peaks olema nüüd saadaval.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Tõrked kuupäevaväljadel olemite laadimisel Power BI Desktop -ile
+
+Kuupäevavorminguga nagu KUU/PÄEV/AASTA, välju sisaldavate olemite laadimisel võivad lokaadivormingute mitteühildumisel ilmneda tõrked. See tõrge ilmneb juhul, kui teie Power BI Desktop -i failis on valitud inglise keeles (USA) asemel mõni muukohavorming, kuna publiku ülevaadete kuupäevaväljad salvestatakse USA vormingus.
+
+Failil Power BI Desktop -il on ükskohasäte, mis rakendatakse andmete toomisel. Kui soovite, et need kuupäevaväljad sadetakse õigesti, määrake selle kohaks . BPI-fail inglise keelde (USA). [Siit saate teada, kuidas muuta Power BI desktop fail](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop) kohta.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

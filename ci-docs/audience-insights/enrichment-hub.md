@@ -1,7 +1,7 @@
 ---
 title: Koondatud kliendiprofiilide rikastamine
 description: Kasutage võimalusi kliendiandmete rikastamiseks.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305243"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555256"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Kliendiprofiilide rikastamine (eelvaade)
 
 Kliendiandmete rikastamiseks saate kasutada andmeid allikatest, nagu Microsoft ja teised partnerid.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Rikastamisekeskuse leht":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Rikastamisekeskuse leht.":::
 
 Minge sihtrühmaülevaadetes jaotisse **Andmed** > **Rikastamine**, et töötada rikastamissuvanditega.  
 
@@ -42,17 +43,17 @@ Saate kuvada oma konfigureeritud rikastamisi ja redigeerida nende atribuute vahe
 
 Minge vahekaardile **Minu rikastused**, et näha kõiki konfigureeritud rikastusi. Iga rikastamine on esindatud reana, mis sisaldab täiendavat teavet rikastamise kohta.
 
-Saadaolevate suvandite kuvamiseks valige rikastamine. Valikute nägemiseks võite loendikirjel valida ka ellipsi (...).
+Valige rikastus, et näha saadaolevaid suvandeid. Valikute nägemiseks võite loendikirjel valida ka ellipsi (...). Kui konfigureerite mitu rikastustegurit, saate selle kiiresti leidmiseks kasutada otsinguvälja.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Rikastamiste haldamise suvandid rikastamiste loendis":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Rikastamiste haldamise suvandid rikastamiste loendis.":::
 
 - Rikastamise üksikasjade **Vaade** koos rikastatud kliendiprofiilide arvuga.
 - Rikastamise konfiguratsiooni **Redigeerimine**.
 - Rikastamise **käivitamine**, et värskendada kliendiprofiile uusimate andmetega.
 - Olemasoleva rikastamise **Desaktiveerimine**, et peatada selle automaatne värskendamine iga ajastatud värskendamisega. Viimasest edukast värskendamisest pärinevad andmed jäävad jätkuvalt kättesaadavaks. Passiivse rikastamise **Aktiveerimine**, et taaskäivitada automaatne värskendamine iga ajastatud värskendamisega.
-- Rikastamise **kustutamine**.
+- **Kustuta** rikastamine.
 
-Saate korraga käivitada või desaktiveerida mitu rikastamist, valides need loendist. Vaatamise ja redigeerimise suvandid ei ole saadaval hulgitoiminguna ja töötavad korraga ainult ühe rikastamisega.
+Käivitage või desaktiveerige mitu rikastumist korraga, valides need loendist. Kuvamis- ja redigeerimissuvandid pole hulgi toiminguna saadaval. Need töötavad korraga ainult ühes rikastuses.
 
 ## <a name="enrichments-and-connections"></a>Rikastamine ja Ühendused
 

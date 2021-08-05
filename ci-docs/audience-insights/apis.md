@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304737"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554476"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insightsi API-dega töötamine
 
@@ -35,7 +35,7 @@ Selles artiklis kirjeldatakse, kuidas pääseda juurde Customer Insights API-del
  
    API-de lubamine loob teie eksemplari jaoks esmase ja teisese tellimuse võtme, mida kasutatakse API-de päringutes. Saate võtmed uuesti luua, kui valite **Loo esmane uuesti** või **Loo teisene uuesti** jaotises **Haldus** > **Õigused** > **API-d**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insightsi API-de lubamine":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insights -i API-de lubamine.":::
 
 1. [API-de proovimiseks](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) valige **Tutvuge meie API-dega**.
 
@@ -129,7 +129,7 @@ Teave selle kohta, kuidas alustada C# klienditeekide kasutamist, leiate aadressi
  
    Teise võimalusena käivitage **NuGeti paketihalduri konsoolis** see käsk: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="NuGeti paketi lisamine Visual Studio projekti":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text=" NuGet -i paketi lisamine Visual Studio projekti.":::
 
 #### <a name="use-the-c-client-library"></a>C# klienditeegi kasutamine
 
@@ -141,7 +141,7 @@ Teave selle kohta, kuidas alustada C# klienditeekide kasutamist, leiate aadressi
 
 1. Edastage `HttpClient` `CustomerInsights`i kliendi meetodisse.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Httpcliendi näidis":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Httpcliendi näidis.":::
 
 1. Helistage kliendiga "laiendusmeetoditele" - näiteks `GetAllInstancesAsync`. Kui eelistate juurdepääsu aluseks olevale üksusele `Microsoft.Rest.HttpOperationResponse`, kasutage „http message methods“, näiteks meetodit `GetAllInstancesWithHttpMessagesAsync`.
 

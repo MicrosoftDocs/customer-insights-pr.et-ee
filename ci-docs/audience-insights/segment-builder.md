@@ -1,7 +1,7 @@
 ---
 title: Segmentide loomine ja haldamine
 description: Looge klientide segmente, et rühmitada neid vastavalt eri atribuutidele.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064932"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685457"
 ---
 # <a name="create-and-manage-segments"></a>Segmentide loomine ja haldamine
+
+> [!IMPORTANT]
+> 2021. aasta septembris on segmentide loomise kogemuseks ümber arvestatud mitu muudatust. 
+> - Segmendi meisterdamine näeb pisut teistsugune välja ümberkujundatud elementide ja täiustatud kasutajavooga.
+> - Uued kuupäeva- ja kellaaja tehtemärgid ja täiustatud kuupäevavalijad on segmendi halduris lubatud.
+> - Saate segmendile tingimusi ja reegleid lisada või neid sealt eemaldada. 
+> - Pesastatud reeglid, mis algavad tingimusega VÕI, muutuvad kättesaadavaks. JA-tingimust pole välimises kihis enam vaja.
+> - Kõrvalpaan atribuutide valimiseks on pidevalt saadaval.
+> - Suvand olemite seose tee valimiseks.
+> Uue segmendimeisterdaja proovimiseks saatke meil pealkirjaga "Taotlus uue segmendi kasutamise lubamiseks" chielp [at] microsoft.com. Lisage oma organisatsioonimise nimi ja teie liivakastikeskkonna ID.
 
 Määratlege keerukad filtrid ühendatud kliendiolemi ümber ja sellega seotud olemid. Pärast töötlemist loob iga segment hulga kliendi kirjeid, mille saate eksportida ja nendega toiminguid teha. Segmente saab hallata lehel **Segmendid**. 
 
@@ -50,7 +60,7 @@ Segmenti luues saate mustandi salvestada. See salvestatakse passiivse segmendina
 1. Valige valitud atribuudi tehtemärk ja väärtus.
 
    > [!div class="mx-imgBorder"]
-   > ![Kohandatud rühma filter](media/customer-group-numbers.png "Kliendi rühma filter")
+   > ![Kohandatud rühma filter.](media/customer-group-numbers.png "Kliendi rühma filter")
 
    |Number |Määratlus  |
    |---------|---------|
@@ -66,7 +76,7 @@ Segmenti luues saate mustandi salvestada. See salvestatakse passiivse segmendina
       - **VÕI** tehtemärk: üks tingimus tuleb täita segmenteerimise võimaldamiseks. See valik on kõige kasulikum juhul, kui määratlete sama olemi mitu tingimusi.
 
       > [!div class="mx-imgBorder"]
-      > ![OR tehtemärk, kus tuleb täita üks tingimustest](media/segmentation-either-condition.png "OR tehtemärk, kus tuleb täita üks tingimustest")
+      > ![OR operaator, kus tuleb täita üks tingimustes.t](media/segmentation-either-condition.png "OR tehtemärk, kus tuleb täita üks tingimustest")
 
       Praegu saab pesastada tehtemärki **OR** tehtemärgi **AND** põhjal, ent mitte vastupidi.
 
@@ -74,12 +84,12 @@ Segmenti luues saate mustandi salvestada. See salvestatakse passiivse segmendina
    Valige **Lisa rühm**.
 
       > [!div class="mx-imgBorder"]
-      > ![Kliendirühma lisamine](media/customer-group-add-group.png "Kliendirühma lisamine")
+      > ![Kliendirühma lisarühm.](media/customer-group-add-group.png "Kliendirühma lisamine")
 
    1. Valige üks tehingukomplekt: **Liit**, **Lõikuv** või **Välja arvatud**.
 
    > [!div class="mx-imgBorder"]
-   > ![Kliendirühma ühendi lisamine](media/customer-group-union.png "Kliendirühma ühendi lisamine")
+   > ![Kliendirühma ühendi lisamine.](media/customer-group-union.png "Kliendirühma ühendi lisamine")
 
    - **ühend** ühendab kaks rühma.
 
@@ -90,7 +100,7 @@ Segmenti luues saate mustandi salvestada. See salvestatakse passiivse segmendina
 1. Kui olem on ühtlustatud kliendi olemiga seotud läbi [seoste](relationships.md), peate määratlema seose tee kehtiva segmendi loomiseks. Lisage olemid seose teest, kuni saate valida ripploendist olemi vormi **Klient: CustomerInsights**. Seejärel valige **Kõik kirjed** iga etapi jaoks.
 
    > [!div class="mx-imgBorder"]
-   > ![Seose tee segmendi loomise ajal](media/segments-multiple-relationships.png "Seose tee segmendi loomise ajal")
+   > ![Seose tee segmendi loomise ajal.](media/segments-multiple-relationships.png "Seose tee segmendi loomise ajal")
 
 1. Vaikimisi genereerivad segmendid väljundolemi, mis sisaldab määratletud filtritele vastavaid kliendiprofiilide kõiki atribuute. Kui segment põhineb muudel olemitel kui olem *Klient*, saate väljundolendisse lisada rohkem atribuute nendest olemitest. Valige **Projekti tribuudid**, et valida väljundolemile lisatavad atribuudid.  
   
@@ -127,7 +137,7 @@ Kiirsegmendid lasevad teil luua lihtsaid segmente ühe tehtega kiiresti, et saad
 4. Süsteem esitab **hinnangulise segmendi mahu**. Saate valida, kas luua määratletud segment või esmalt vaadata seda uuesti, et hankida muus mahus segment.
 
     > [!div class="mx-imgBorder"]
-    > ![Kiirsegmendi nimi ja hinnang](media/quick-segment-name.png "Kiirsegmendi nimi ja hinnang")
+    > ![Kiirsegmendi nimi ja hinnang.](media/quick-segment-name.png "Kiirsegmendi nimi ja hinnang")
 
 5. Sisestage segmendi **nimi**. Soovi korral sisestage **Kuvatav nimi**.
 

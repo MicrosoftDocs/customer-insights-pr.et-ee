@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259186"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650037"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Customer Insights pakub võimalust muuta väljundi olemid kättesaadavaks teenus
 
 **Asutused, kus on olemasolevad Dataverse keskkonnad**
 
-Asutused, mis Dataverse juba kasutavad, saavad [kasutada ühte olemasolevat Dataversekeskkonda](manage-environments.md#create-an-environment-in-an-existing-organization), kui administraator seadistab sihtrühma ülevaated. Andes Dataverse keskkonna URL-i, lisab see uutele publiku ülevaadete keskkonnale. Parima võimaliku toimivuse tagamiseks peavad Customer Insightsi ja Dataverse keskkonnad olema majutatud samas piirkonnas.
+Asutused, mis Dataverse juba kasutavad, saavad [kasutada ühte olemasolevat Dataversekeskkonda](get-started-paid.md), kui administraator seadistab sihtrühma ülevaated. Andes Dataverse keskkonna URL-i, lisab see uutele publiku ülevaadete keskkonnale. Parima võimaliku toimivuse tagamiseks peavad Customer Insightsi ja Dataverse keskkonnad olema majutatud samas piirkonnas.
 
 Dataverse keskkonna manustamiseks laiendage sihtrühma ülevaadete keskkonda luues **täpsemaid sätteid**. Sisestage **Microsoft Dataverse keskkonna URL** ja märkige **andmete ühiskasutuse lubamine ruut**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt-klahv":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="Alt-klahv.":::
 
 **Uus organisatsioon**
 

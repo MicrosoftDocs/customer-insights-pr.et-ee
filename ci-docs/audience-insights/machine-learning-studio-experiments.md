@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598334"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555164"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Kasutage Azure'i masinõppe stuudio (klassikaline) põhiseid mudeleid
 
@@ -41,7 +41,7 @@ Esimese sammuna peame looma masinõppe stuudio (klassikaline) jaoks tööruumi j
 
 1. Pärast ressursi loomist kuvatakse masinõppe stuudio tööruumi armatuurlaud. Valige **Käivita masinõppe stuudio**.
 
-   ![Azure'i masinõppe stuudio kasutajaliides](media/azure-machine-learning-studio.png)
+   ![Azure'i Masinaõppe Stuudio kasutajaliides.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Azure'i masinõppe stuudioga töötamine
 
@@ -55,7 +55,7 @@ Nüüd saate luua uue eksperimendi või importida olemasoleva eksperimendi malli
 
 1. Kui loote uue katse või kasutate galeriist katsemalli, peate konfigureerima valiku **Impordi andmed** atribuudid. Kasutage juhendatud kogemust või sisestage otse üksikasjad, et pääseda juurde Azure'i bloobimälule, mis sisaldab teie andmeid.  
 
-   ![Azure'i masinõppe stuudio katse](media/azure-machine-learning-studio-experiment.png)
+   ![Azure'i masinõppe stuudio katse.](media/azure-machine-learning-studio-experiment.png)
 
 1. Nüüd saate ehitada kohandatud töötlemiskonveieri andmete puhastamiseks ja eeltöötlemiseks, funktsioonide ekstraheerimiseks ja sobiva mudeli treenimiseks.
 
@@ -63,15 +63,15 @@ Nüüd saate luua uue eksperimendi või importida olemasoleva eksperimendi malli
 
 1. Kui olete mudeli kvaliteediga rahul, valige **Seadistage veebiteenus** > **Ennustatav veebiteenus**. See suvand impordib treenitud mudeli ja featuriseerimiskonveieri treenitud katsest ennustavasse teenindusse. Ennustav teenus võib prognooside tegemiseks treeningukatses kasutatud skeemi abil võtta veel ühe sisendandmete komplekti.
 
-   ![Ennustava veebiteenuse seadistamine](media/predictive-webservice-control.png)
+   ![Ennustava veebiteenuse seadistamine.](media/predictive-webservice-control.png)
 
 1. Kui ennustava veebiteenuse katse on edukas, saate selle juurutada automaatseks ajastamiseks. Kui soovite, et veebiteenus töötaks rakendusega Customer Insights, valige käsk **Juuruta veebiteenus** > **Juuruta veebiteenus [uus] eelversioon**. [Lisateave veebiteenuse juurutamise kohta](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Ennustava veebiteenuse juurutamine](media/predictive-webservice-deploy.png)
+   ![Ennustava veebiteenuse juurutamine.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Mudelite näidised galeriist
 
-Selle artikli mudelite jaoks kasutame Contoso hotelli väljamõeldud stsenaariumi. Contoso hotell kogub järgmisi andmeid:
+Selle artikli mudelite jaoks kasutame Contoso Hoteli väljamõeldud stsenaariumi. Contoso Hotel kogub järgmiseid andmeid:
 
 - Hotellis viibimise tegevusest koosnevad CRM-i andmed. Andmekogum sisaldab teavet iga registreeritud kliendi peatumise kuupäevade kohta. See sisaldab ka teavet broneeringu, tubade tüüpide, kulutamise üksikasjade kohta ja nii edasi. Andmed ulatuvad üle nelja aasta, alates jaanuarist 2014 kuni jaanuarist 2018.
 - Hotellikülaliste kliendiprofiilid. Need profiilid sisaldavad teavet iga kliendi kohta, sh nime, sünnikuupäev, postiaadress, sugu ja telefoninumber.
@@ -87,13 +87,13 @@ Voolavuse määratlus võib stsenaariumi põhjal erineda. Selles näites peab k�
 
 Eksperimendi malli saab importida galeriist. Esiteks veenduge, et impordiksite valikud **Hotellis viibimise tegevus**, **Kliendiandmed** ja **Teenusekasutuse andmed** Azure'i bloobimälust.
 
-   ![Andmete importimine voolavuse mudeli jaoks](media/import-data-azure-blob-storage.png)
+   ![Andmete importimine voolavuse mudeli jaoks.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Featuriseerimine
 
 Vastavalt voolavuse määratlusele, tuvastame kõigepealt algsed funktsioonid, mis mõjutavad silti. Seejärel töötleme need algsed funktsioonid numbrilisteks funktsioonideks, mida saab kasutada masinõppe mudelitega. Andmete integreerimine toimub Customer Insightsis, nii et saame need tabelid ühendada üksuse *Kliendi ID* abil.
 
-   ![Liituge imporditud andmetega](media/join-imported-data.png)
+   ![Liituge imporditud andmetega.](media/join-imported-data.png)
 
 Voolavusanalüüsi mudeli ehitamise featuriseerimine võib olla pisut keeruline. Andmed on aja funktsioon, mis algab iga päev registreeritud hotelli tegevusega. Featuriseerimise ajal soovime dünaamilistest andmetest genereerida staatilisi funktsioone. Siinjuhul loome hotellitegevuste alusel mitu funktsiooni, millel on aastane liikuv ajavahemik. Laiendame ka kategooriafunktsioone, näiteks toa tüüp või broneeringutüüp eraldi funktsioonideks, kasutades ühe korraga kodeerimist.  
 
@@ -114,7 +114,7 @@ Nüüd tuleb valida optimaalne algoritm, mida kasutada. Sel juhul põhinevad ena
 
 Järgmine pilt näitab mudeli treenimise ja hindamise konveierit Azure'i masinõppe stuudiost.
 
-![Azure'i masinõppe stuudio voolavusmudel](media/azure-machine-learning-model.png)
+![Azure'i masinõppe stuudio voolavusmudel.](media/azure-machine-learning-model.png)
 
 Rakendame ka meetodit nimega **Permutatsiooni funktsiooni olulisus**, mis on oluline mudeli optimeerimise korral. Sisseehitatud mudelitel on vähe või puudub täielik ülevaade mõne konkreetse funktsiooni mõjust lõplikule prognoosile. Funktsiooni olulisuse kalkulaator kasutab kohandatud algoritmi, et arvutada üksikute funktsioonide mõju konkreetse mudeli tulemusele. Funktsiooni olulisus normaliseeritakse vahemikus +1 kuni -1. Negatiivne mõju tähendab, et asjaomasel funktsioonil on tulemusele mittesoovitav mõju ja see tuleks mudelist eemaldada. Positiivne mõju näitab, et funktsioon aitab prognoosimisele palju kaasa. Need väärtused pole korrelatsiooni koefitsiendid, kuna need on erinevad mõõdikud. Lisateavet leiate teemast [Permutatsiooni funktsiooni olulisus](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Määratleme eesmärgi kui teenusekasutuse maksimeerimine dollarisummas, pakkude
 
 Nagu voolavusmudeli puhul, ühendame hotelli ServiceCustomerID kliendi ID-ga, et luua järjepidevalt soovitusi kliendi ID alusel.
 
-![Featuriseerimise soovituse näidis](media/azure-machine-learning-model-featurization.png)
+![Featuriseerimise soovituse näidis.](media/azure-machine-learning-model-featurization.png)
 
 Andmed pärinevad kolmest erinevast olemist ja funktsioonid on neist tuletatud. Soovituseprobleemi kirjeldus on erinev võrreldes voolavuse või CLTV stsenaariumidega. Soovitusmudel vajab sisendandmeid kolme tunnuste komplekti kujul.
 
@@ -156,13 +156,13 @@ Andmed pärinevad kolmest erinevast olemist ja funktsioonid on neist tuletatud. 
 
 Prognoosime tooteid või teenuseid kasutades algoritmi nimega **Tikutoosialgoritmipõhise soovitaja treenimine**, et treenida soovitusmudelit.
 
-![Tootesoovituse algoritm](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Tootesoovituse algoritm.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Mudeli **Tikutoosialgoritmipõhise soovitaja treenimine** kolm sisendporti kasutavad koolitusteenuse kasutamise andmeid, kliendi kirjeldust (valikuline) ja teenuse kirjeldust. Mudeli hindamiseks on kolm erinevat viisi. Üks on mõeldud mudeli hindamiseks, kus normaliseeritud diskonteeritud kumulatiivse kasvu (NDCG) skoor arvutatakse hinnanguga objektide järjestamiseks. Selles katses on meil NDCG skoor AS 0,97. Kaks muud võimalust on mudeli hindamine kogu soovitatava teenusekataloogi põhjal või ainult selliste kaupade põhjal, mida kasutajad pole varem kasutanud.
 
 Vaadates edasi kogu teenusekataloogi soovituste jaotust, märkame, et telefon, WiFi ja kuller on kõige populaarsemad teenused, mida soovitatakse. See on kooskõlas sellega, mida leidsime teenuse tarbimise andmete jaotustest.
 
-![Soovitusmudeli väljund](media/azure-machine-learning-model-output.png)
+![Soovitusmudeli väljund.](media/azure-machine-learning-model-output.png)
 
 Kogu [tootesoovituse eksperimendile pääseb juurde Azure'i AI galerii kaudu.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

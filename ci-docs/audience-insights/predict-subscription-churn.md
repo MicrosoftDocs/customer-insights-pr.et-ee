@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095643"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556302"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Kordustellimuse voolavuse prognoos (eelvaade)
 
@@ -63,7 +63,7 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
 1. Avage sihtrühmaülevaadetes jaotis **Ärianalüüs** > **Prognoosid**.
 1. Valige paan **Kordustellimuse voolavuse mudel (eelvaade)** ja valige **Kasuta seda mudelit**.
    > [!div class="mx-imgBorder"]
-   > ![Kordustellimuse voolavuse mudeli paan nupuga Kasuta seda mudelit](media/subscription-churn-usethismodel.PNG "Kordustellimuse voolavuse mudeli paan nupuga Kasuta seda mudelit")
+   > ![Kordustellimuse voolavuse mudeli paan nupuga Kasuta seda mudelit.](media/subscription-churn-usethismodel.PNG "Kordustellimuse voolavuse mudeli paan nupuga Kasuta seda mudelit")
 
 ### <a name="name-model"></a>Mudelile nime panemine
 
@@ -86,11 +86,11 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
     1. Valige **Kliendi olem**, mis vastab teie peamisele kliendiolemile.
     1. Tippige seost kirjeldav nimi.
        > [!div class="mx-imgBorder"]
-       > ![Kordustellimuse ajaloo leht, mis kuvab seose loomist kliendile](media/subscription-churn-subscriptionhistoryrelationship.PNG "Kordustellimuse ajaloo leht, mis kuvab seose loomist kliendile")
+       > ![Tellimuse ajaloo leht, mis kuvab seose loomist kliendile.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Kordustellimuse ajaloo leht, mis kuvab seose loomist kliendile")
 1. Tehke valik **Edasi**.
 1. Vastendage semantilised väljad oma kordustellimuse ajalugoo olemi atribuutidega ja valige **Salvesta**. Väljade kirjelduste kohta vaadake teavet [eeltingimustes](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Kordustellimuse ajaloo leht kuvab semantilisi atribuute, mis on vastendatud valitud kordustellimuse ajaloo olemi väljadega](media/subscription-churn-subscriptionhistorymapping.PNG "Kordustellimuse ajaloo leht kuvab semantilisi atribuute, mis on vastendatud valitud kordustellimuse ajaloo olemi väljadega")
+   > ![Tellimuse ajaloo leht kuvab semantilisi atribuute, mis on kaardistatud valitud tellimuste ajaloo üksuste väljadele.](media/subscription-churn-subscriptionhistorymapping.PNG "Kordustellimuse ajaloo leht kuvab semantilisi atribuute, mis on vastendatud valitud kordustellimuse ajaloo olemi väljadega")
 1. Valige suvandis **Kliendi tegevused** **Lisa andmed** ja valige olem, mis pakub kliendi tegevuse teavet, nagu on kirjeldatud eeltingimustes.
 1. Valige tegevuse tüüp, mis vastab konfigureeritavale kliendi tegevuse tüübile.  Valige **Loo uus** ja sisestage nimi, kui teile ei kuvata soovitud tegevuse tüübiga sobivat suvandit.
 1. Peate konfigureerima kliendiolemile seose kliendi tegevuse olemist.
@@ -101,7 +101,7 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
 1. Vastendage semantilised väljad oma kliendi tegevuse olemi atribuutidega ja valige **Salvesta**. Väljade kirjelduste kohta vaadake teavet [eeltingimustes](#prerequisites).
 1. (Valikuline) Kui soovite kaasata mõnda muud kliendi tegevust, korrake ülaltoodud juhiseid.
    > [!div class="mx-imgBorder"]
-   > ![Olemi seose määratlemine](media/subscription-churn-customeractivitiesmapping.PNG "Kliendi tegevuste leht kuvab semantilisi atribuute, mis on vastendatud valitud kliendi tegevuse olemi väljadega")
+   > ![Olemi seose määratlemine.](media/subscription-churn-customeractivitiesmapping.PNG "Kliendi tegevuste leht kuvab semantilisi atribuute, mis on vastendatud valitud kliendi tegevuse olemi väljadega")
 1. Tehke valik **Edasi**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Ajakava seadistamine ja konfiguratsiooni ülevaatamine
@@ -115,7 +115,7 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
 
 1. Avage jaotises **Ärianalüüs** > **Prognoosid** vahekaart **Minu prognoosid**.
    > [!div class="mx-imgBorder"]
-   > ![Lehe Minu prognoosid vaade](media/subscription-churn-mypredictions.PNG "Lehe Minu prognoosid vaade")
+   > ![Lehe Minu prognoosid vaade.](media/subscription-churn-mypredictions.PNG "Lehe Minu prognoosid vaade")
 1. Valige prognoos, mille soovite üle vaadata.
    - **Prognoosi nimi:** selle prognoosi loomisel pandud nimi.
    - **Prognoosi tüüp:** prognoosi jaoks kasutatav mudeli tüüp
@@ -131,7 +131,7 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
    - **Viimati värskendatud:** kuupäev, mil prognoos värskendas tulemusi väljundolemis.
 1. Valige vertikaalne kolmikpunkt prognoosi kõrval, mille tulemusi soovite läbivaadata ja valige **Vaade**.
    > [!div class="mx-imgBorder"]
-   > ![Suvandite vaade prognoosi vertikaalse kolmikpunkti menüüs, sh redigeerimine, värskendamine, vaadet, logid ja kustutamine](media/subscription-churn-verticalellipses.PNG "Suvandite vaade prognoosi vertikaalse kolmikpunkti menüüs, sh redigeerimine, värskendamine, vaadet, logid ja kustutamine")
+   > ![Suvandite vaade prognoosi vertikaalse kolmikpunkti menüüs, sh redigeerimine, värskendamine, vaade, logid ja kustutamine.](media/subscription-churn-verticalellipses.PNG "Suvandite vaade prognoosi vertikaalse kolmikpunkti menüüs, sh redigeerimine, värskendamine, vaadet, logid ja kustutamine")
 1. Tulemuste lehel on kolm peamist andmete jaotist.
     1. **Koolituse mudeli jõudlus:** võimalikud punktisummad on A, B või C. See skoor näitab prognoosi jõudlust ja aitab teil otsustada, kas kasutada väljundolemis talletatud tulemusi.
         - Skoorid määratletakse järgmiste reeglite alusel.
@@ -139,13 +139,13 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
             - **B**, kui mudel ennustas täpselt vähemalt 50% kõikidest prognoosidest ja kui prognooside täpsuse protsent kliendivoolavuse jaoks on ajaloolisest voolavuse määrast kuni 10% võrra suurem.
             - **C**, kui mudel ennustas täpselt vähem kui 50% kõikidest prognoosidest või kui prognooside täpsuse protsent kliendivoolavuse jaoks on väiksem kui ajalooline voolavuse määr.
                > [!div class="mx-imgBorder"]
-               > ![Mudeli jõudluse tulemi vaade](media/subscription-churn-modelperformance.PNG "Mudeli jõudluse tulemi vaade")
+               > ![Mudeli jõudluse tulemi vaade.](media/subscription-churn-modelperformance.PNG "Mudeli jõudluse tulemi vaade")
     1. **Voolavuse tõenäosus (klientide arv):** kliendirühmad nende prognoositud voolavuse riski põhjal. Need andmed aitavad teil hiljem soovi korral luua kõrge voolavuse riskiga klientide segmendi. Sellised segmendid aitavad mõista, kus segmendi liikmelisuse sulgemiskuupäev peaks olema.
        > [!div class="mx-imgBorder"]
-       > ![Graafik, mis kuvab voolavuse tulemuste jaotust, jagatuna vahemikeks 0–100% vahel](media/subscription-churn-resultdistribution.PNG "Graafik, mis kuvab voolavuse tulemuste jaotust, jagatuna vahemikeks 0–100% vahel")
+       > ![Graafik, mis kuvab voolavuse tulemuste jaotust, jagatuna vahemikeks 0–100% vahel.](media/subscription-churn-resultdistribution.PNG "Graafik, mis kuvab voolavuse tulemuste jaotust, jagatuna vahemikeks 0–100% vahel")
     1. **Kõige mõjukamad tegurid:** prognoosi loomisel võetakse arvesse paljusid tegureid. Kõigi tegurite olulisus arvutatakse selle loodava koondprognoosi jaoks. Nende tegurite abil saate oma prognoosi tulemusi kinnitada. Samuti saate seda teavet hiljem kasutada [segmentide loomiseks](segments.md), mis võiksid aidata mõjutada kliendivoolavuse ohtu.
        > [!div class="mx-imgBorder"]
-       > ![Loend mõjukate teguritega ja nende olulisus voolavuse tulemuse prognoosimisel](media/subscription-churn-influentialfactors.PNG "Loend mõjukate teguritega ja nende olulisus voolavuse tulemuse prognoosimisel")
+       > ![Loend mõjukate teguritega ja nende olulisus voolavuse tulemuse prognoosimisel.](media/subscription-churn-influentialfactors.PNG "Loend mõjukate teguritega ja nende olulisus voolavuse tulemuse prognoosimisel")
 
 ## <a name="manage-predictions"></a>Prognooside haldamine
 

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305622"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554843"
 ---
 # <a name="custom-machine-learning-models"></a>Kohandatud masinõppe mudelid
 
@@ -42,7 +42,7 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 1. Sisestage väljale **Nimi** oma kohandatud mudeli äratuntav nimi.
 
    > [!div class="mx-imgBorder"]
-   > ![Uue töövoo paani kuvatõmmis](media/new-workflowv2.png "Uue töövoo paani kuvatõmmis")
+   > ![Uue töövoo paani kuvatõmmis.](media/new-workflowv2.png "Uue töövoo paani kuvatõmmis")
 
 1. Valige veebiteenust sisaldav organisatsioon jaotises **Teie veebiteenust sisaldav rentnik**.
 
@@ -59,7 +59,7 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
    > Kohandatud mudeli töövoog rakendab heuristikat veebiteenuse sisendväljade vastendamiseks olemiatribuutidele, võttes aluseks välja nime ja andmetüübi. Kui veebiteenuse välja ei saa olemile vastendada, kuvatakse tõrge.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfigureeri töövoog](media/intelligence-screen2-updated.png "Konfigureeri töövoog")
+   > ![Konfigureeri töövoog.](media/intelligence-screen2-updated.png "Konfigureeri töövoog")
 
 1. Määrake etapis **Mudeli väljundi parameetrid** järgmised atribuudid.
    - Masinõppe stuudio (klassikaline)
@@ -70,12 +70,12 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
       1. Valige oma partiikonveieri ripploendist **Väljundi tee parameetri nimi**.
 
       > [!div class="mx-imgBorder"]
-      > ![Mudeli väljundi parameetri paan](media/intelligence-screen3-outputparameters.png "Mudeli väljundi parameetri paan")
+      > ![Mudeli väljundi parameetri paan.](media/intelligence-screen3-outputparameters.png "Mudeli väljundi parameetri paan")
 
 1. Valige ripploendist **Kliendi ID tulemustes** vastav atribuut, mis tuvastab kliendid ka valige **Salvesta**.
 
    > [!div class="mx-imgBorder"]
-   > ![Tulemuste seostamine paanil „Kliendiandmed“](media/intelligence-screen4-relatetocustomer.png "Tulemuste seostamine paanil „Kliendiandmed“")
+   > ![Tulemuste seostamine paanil „Kliendiandmed“.](media/intelligence-screen4-relatetocustomer.png "Tulemuste seostamine paanil „Kliendiandmed“")
 
 1. Teile kuvatakse töövoo üksikasjadega kuva **Töövoog salvestatud**.    
    Kui olete konfigureerinud Azure'i masinõppe konveieri jaoks töövoo, lisatakse sihtrühmaülevaated tööruumi, mis sisaldab konveierit. Sihtrühmaülevaadetele antakse Azure'i tööruumis roll **Kaasautor**.

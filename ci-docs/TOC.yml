@@ -2,6 +2,8 @@
   href: index.yml
 - name: Toote ülevaade
   href: overview.md
+- name: Loo prooviversioon
+  href: audience-insights/get-started-trial.md
 - name: Avage oma keskkond
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Sihtrühmaülevaated
@@ -10,12 +12,10 @@
       href: audience-insights/index.yml
     - name: Võimaluste ülevaade
       href: audience-insights/overview.md
-    - name: Tasuta prooviversioon
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Uued ja värskendatud funktsioonid
       href: audience-insights/whats-new-audience-insights.md
-    - name: Loo uus keskkond
-      href: audience-insights/home.md
+    - name: Uue keskkonna loomine
+      href: audience-insights/get-started-paid.md
     - name: Tutvuge moodulitega
       items:
         - name: Andmete valmendamine
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: Common Data Modeli kausta andmeallikana lisamine
           href: audience-insights/connect-common-data-model.md
-        - name: Common Data Service'i hallatava andmejärve lisamine
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: Dataverse'i hallatava andmejärve lisamine
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: Andmeallikate astmeline värskendamine
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Reaalajas andmete valmendamine
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: Rikastamine SFTP-põhise kohandatud importimise kaudu
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmendid ja näitajad
+    - name: Segmendid
       items:
         - name: Segmentide ülevaade
           href: audience-insights/segments.md
-        - name: Segmentide ja kliendirühmade loomine
+        - name: Segmentide loomine
           href: audience-insights/segment-builder.md
         - name: Mõõtmisepõhised segmendisoovitused
           href: audience-insights/suggested-segments.md
@@ -254,6 +254,8 @@
       items:
         - name: Sündmuste loomine ja muutmine
           href: engagement-insights/refined-events.md
+        - name: Tunne ära varem autentitud külastajate veebisündmused
+          href: engagement-insights/unknown-to-known.md
         - name: Ekspordi sündmused
           href: engagement-insights/export-events.md
     - name: Aruanded
@@ -304,7 +306,9 @@
       items:
         - name: Isikuandmete kustutamine ja eksportimine
           href: engagement-insights/delete-export-personal-data.md
+    - name: Regionaalne saadavus
+      href: engagement-insights/regional-availability.md
     - name: Teenusepiirangud
       href: engagement-insights/quotas.md
-- name: Võtke ühendust klienditoega
+- name: Võtke ühendust tugiteenusega
   href: 'https://admin.powerplatform.microsoft.com/support'

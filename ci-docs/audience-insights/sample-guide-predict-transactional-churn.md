@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72f3bd1f32b813fef04dc14618331e3d707b5052
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306115"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556256"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Tehinguvoolavuse prognoosi (eelversioon) näidisjuhend
 
@@ -47,7 +47,7 @@ Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query ko
    - **CreatedOn**: kuupäev/kellaaeg/ajatsoon
 
    [!div class="mx-imgBorder"]
-   ![Sünniaja teisendamine kuupäevaks](media/ecommerce-dob-date.PNG "sünniaja teisendamine kuupäevaks")
+   ![Teisenda DoB kuupäevaks.](media/ecommerce-dob-date.PNG "sünniaja teisendamine kuupäevaks")
 
 1. Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **eCommerceContacts**
 

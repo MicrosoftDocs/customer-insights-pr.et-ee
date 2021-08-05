@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597506"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554307"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Andmesubjekti õigused (DSR) vastavalt GDPR-ile
 
@@ -40,7 +40,7 @@ Customer Insightsi administraator saab nende etappide abil eemaldada kliendiandm
    2. Kontrollige andmeallikas olekut **Oleku** all. Märge tähendab, et värskendamine õnnestus. Ohukolmnurk tähendab, et midagi läks valesti. Kui kuvatakse ohukolmnurk, võtke ühendust aadressil D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
-> ![Kliendiandmete GDPR-i kustutamise taotluste käsitlemine](media/gdpr-data-sources.png "Kliendiandmete GDPR-i kustutamise taotluste käsitlemine")
+> ![Kliendiandmete GDPR-i kustutamise taotluste käsitlemine.](media/gdpr-data-sources.png "Kliendiandmete GDPR-i kustutamise taotluste käsitlemine")
 
 #### <a name="manage-delete-requests-for-user-data"></a>Kasutajaandmete kustutamise taotluste haldamine
 
@@ -52,7 +52,7 @@ Customer Insightsi administraator saab Customer Insightsi kasutaja andmete kustu
 4. Valige **Eemalda**.
 
 > [!div class="mx-imgBorder"]
-> ![Kasutajaandmete GDPR-i põhiste kustutamistaotluste haldamine](media/gdpr-permissions.png "Kasutajaandmete GDPR-i põhiste kustutamistaotluste haldamine")
+> ![Kasutajaandmete GDPR-i põhiste kustutamistaotluste haldamine.](media/gdpr-permissions.png "Kasutajaandmete GDPR-i põhiste kustutamistaotluste haldamine")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>GDPR-i andmesubjekti eksportimistaotlustele vastamine
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596356"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692300"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Olemi skeemid ühises andmemudelis
 
@@ -24,7 +24,7 @@ ms.locfileid: "5596356"
 
 Jagatud andmemudel muudab rakenduste ja andmete lõimijate koostöö lihtsamaks, tagades ühtse andmemääratluse. Ühine andmemudel sisaldab rikkalikku metaandmete süsteemi standardsete olemite, seoste, hierarhiate, tunnuste ja muuga. See pärineb Dynamics 365 rakendustest ning on GitHubis avaliku allikana, kus on üle 260 standardolemi. Üldise andmemudeli tööstuspõhiseid kontseptsioone täiendab suur sise- ja välispartnerite süsteem.
 
-Mitmed süsteemid ja platvormid rakendavad praegu üldist andmemudelit, sh Power BI andmevood ja Azure’i andmeteenused. Seda toetavad juba rakendused Common Data Service, Dynamics 365, Power Apps, Power BI ja varsti avaldatav Azure Data Services, panustades seeläbi otseselt [Open Data Initiative'i](https://www.microsoft.com/open-data-initiative) väärtustamisse.
+Tänapäeval rakendavad Common Data Modelit mitmesugused süsteemid ja platvormid, sh Power BI andmevood ja Azure Data Services. See on juba toetatud rakenduses Microsoft Dataverse, Dynamics 365, Power Apps -is, Power BI -is ja eelseisvates Azure'i andmeteenustes, mis lisavad väärtust [Avatud Andmeinitsatiivile](https://www.microsoft.com/open-data-initiative).
 
 ## <a name="customer-insights-entity-schemas"></a>Customer Insightsi olemi skeemid
 
@@ -44,7 +44,7 @@ Lisateabe saamiseks vt teemat [Customer Insightsi olemi skeemid üldises andmemu
 
 Olemeid saate vaadata [Common Data Modeli oleminavigaatori kaudu](https://microsoft.github.io/CDM/). Valige **Laadige rakendusest GitHub!** nupp ja liikuge järgmiselt: **foundationCommon** > **crmCommon** > **lahendused** > **customerInsights**, kus leiate Customer Insightsi olemite loetelu ja määratlused.
 > [!div class="mx-imgBorder"]
-> ![CDMi Entity Navigatoris kuvatakse kliendi tegevuse olem](media/CDM-entity-navigator.png "CDMi Entity Navigatoris kuvatakse kliendi tegevuse olem")
+> ![CDMi Entity Navigatoris kuvatakse kliendi tegevuse olem.](media/CDM-entity-navigator.png "CDMi Entity Navigatoris kuvatakse kliendi tegevuse olem")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

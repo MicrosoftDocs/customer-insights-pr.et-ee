@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306023"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650313"
 ---
 # <a name="match-entities"></a>Olemite vastavusseviimine
 
@@ -138,7 +138,7 @@ Duplikaadieemalduse reeglite määramine pole kohustuslik. Kui selliseid reeglei
    - **Kõige vanem**: tuvastab võitjana kirje, millega tegeleti kõige varem. Hiljutisuse määratlemiseks on vaja kuupäeva- või numbrilist välja.
  
    > [!div class="mx-imgBorder"]
-   > ![Duplikaadieemalduse reeglite samm 1](media/match-selfconflation.png "Duplikaadieemalduse reeglite samm 1")
+   > ![Duplikaadieemalduse reeglite samm 1.](media/match-selfconflation.png "Duplikaadieemalduse reeglite samm 1")
  
 1. Kui olemid on valitud ja nende ühendamiseelistus on seatud, valige **Lisa reegel**, et määratleda duplikaadieemalduse reeglid olemi tasemel.
    - **Välja valimine** loetleb kõik sellest olemist pärit saadaolevad väljad. Valige väli, mille duplikaate soovite otsida. Valige väljad, mis on tõenäoliselt iga kliendi jaoks kordumatud. Näiteks meiliaadress või nime, linna ja telefoninumbri kombinatsioon.
@@ -146,7 +146,7 @@ Duplikaadieemalduse reeglite määramine pole kohustuslik. Kui selliseid reeglei
    - Lisatingimuste määratlemiseks valige **Lisa tingimus**.
  
    > [!div class="mx-imgBorder"]
-   > ![Duplikaadieemalduse reeglite samm 2](media/match-selfconflation-rules.png "Duplikaadieemalduse reeglite samm 2")
+   > ![Duplikaadieemalduse reeglite samm 2.](media/match-selfconflation-rules.png "Duplikaadieemalduse reeglite samm 2")
 
   Võite olemi jaoks luua mitu duplikaadieemalduse reeglit. 
 
@@ -179,7 +179,9 @@ Toimingu käivitamiseks valige **Andmed** > **Koondamine** > **Vastendamine** ja
 Lõpuleviidud käituse tulemuse, koondatud kliendiprofiili olemi leiate lehelt **Olemid**. Kliendi koondolemi nimeks on **Kliendid** jaotises **Profiilid**. Esimene õnnestunud vastekäitus loob koondolemi *Klient*. Kõik järgnevad vastekäitused laiendavad seda olemit.
 
 > [!TIP]
-> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
+> Pärast vaste protsessi käivitamist valige protsessi olek, et avada **Toimingu üksikasjade** paan. See annab ülevaate töötlemisajast, viimasest töötlemiskuupäevast ja kõigist toiminguga seostatud tõrgetest ja hoiatustest. Valige **Üksikasjade** kuvamine, et näha, millised olemid osalevad vastendusprotsessis, milliseid reegleid neile rakendati ja kas värskendused on avaldatud.  
+> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Süvitsimineku tee et saada protsessi üksikasjad ülesande oleku lingilt.":::
 
 ## <a name="review-and-validate-your-matches"></a>Vastenduste ülevaatamine ja valideerimine
 

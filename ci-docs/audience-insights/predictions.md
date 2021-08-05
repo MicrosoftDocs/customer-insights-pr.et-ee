@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595896"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692522"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Osaliste andmete lõpetamine prognooside abil
 
@@ -31,11 +31,11 @@ Prognooside abil saate hõlpsalt luua ennustatud väärtusi, mis aitavad suurend
 
 Enne kui teie organisatsioon saab prognooside funktsiooni kasutada, peavad olema täidetud järgmised eeltingimused.
 
-1. Teie ettevõttel on eksemplar [Common Data Service'is seadistatud](/ai-builder/build-model#prerequisites) ja see on samas organisatsioonis kui Customer Insights.
+1. Sinu organisatsioonil on näide [seadista Microsoft Dataverse-is](/ai-builder/build-model#prerequisites) ja see on Customer Insights -iga samas organisatsioonis.
 
-2. Teie keskkond on ühendatud teie Common Data Service'i eksemplariga.
+2. Teie publiku ülevaate keskkond on lisatud teie Dataverse eksemplarile.
 
-Kui [loote uue keskkonna](manage-environments.md), konfigureerige see dialoogis **Loo keskkond** ja valige suvand **Täpsem**. Kui olete keskkonna juba loonud, minge selle sätetesse ja valige suvand **Täpsem**. Mõlemal juhul sisestage jaotises **Prognooside kasutamine** Common Data Service'i eksemplari URL, millele soovite oma keskkonna lisada.
+Kui [loote uue keskkonna](get-started-paid.md), konfigureerige see dialoogis **Loo keskkond** ja valige suvand **Täpsem**. Kui olete keskkonna juba loonud, minge selle sätetesse ja valige suvand **Täpsem**. Mõlemal juhul sisestage jaotises **Prognooside kasutamine** Dataverse'i eksemplari URL, millele soovite oma keskkonna lisada.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Prognoosi loomine kliendiolemis
 
@@ -47,17 +47,17 @@ Kui [loote uue keskkonna](manage-environments.md), konfigureerige see dialoogis 
 
 4. Leidke atribuudi nimi, mille jaoks soovite väärtusi prognoosida, ja seejärel valige ikoon **Ülevaade** veerus **Kokkuvõte**.
    > [!div class="mx-imgBorder"]
-   > ![Ülevaateikoon](media/intelligence-overviewicon.png "Ülevaateikoon")
+   > ![Ülevaateikoon.](media/intelligence-overviewicon.png "Ülevaateikoon")
 
 5. Kui teie atribuudil on palju puuduvaid väärtusi, valige prognoosiga jätkamiseks suvand **Prognoosi puuduvad väärtused**.
    > [!div class="mx-imgBorder"]
-   > ![Ülevaate olek koos puuduvate väärtuste prognoosimise nupuga](media/intelligence-overviewpredictmissingvalues.png "Ülevaate olek koos puuduvate väärtuste prognoosimise nupuga")
+   > ![Ülevaate olek koos puuduvate väärtuste prognoosimise nupuga.](media/intelligence-overviewpredictmissingvalues.png "Ülevaate olek koos puuduvate väärtuste prognoosimise nupuga")
 
 6. Esitage prognooside tulemuste jaoks **Kuvanimi** ja **Väljundi olemi nimi**.
 
 7. Eeltäidetud suvandite loend näitab, missugused väärtused saate prognoositud kategooriatesse vastendada. Sel juhul on teie ainsad kategooriavalikud 0 või 1, kuna need on vastendatavad õige/vale prognoosi või prognoosi binaarse iseloomuga. Veerus Kategooria vastendage väljaväärtused, mida soovite veeru Kategooria lõplikus prognoosis kuni 0 klassifitseerida 0-na, ja üksused, mida soovite lõplikus prognoosis kuni 1 klassifitseerida 1-na.
    > [!div class="mx-imgBorder"]
-   > ![Kategooriatega vastendatud väljade väärtuste näide](media/intelligence-categorymapping.png "Kategooriatega vastendatud väljade väärtuste näide")
+   > ![Kategooriatega vastendatud väljade väärtuste näide.](media/intelligence-categorymapping.png "Kategooriatega vastendatud väljade väärtuste näide")
 
 8. Valige **Valmis** ja prognoosi hakatakse töötlema. Andmete töötlemise mahust ja keerukusest olenevalt võib töötlemine aega võtta. Tulemused on saadaval uues olemis, mis põhineb teie loodud prognoosi suvandil **Väljundi olemi nimi**.
 
@@ -77,7 +77,7 @@ Selle voo osana saate valida kindla atribuudi, mis põhineb teie segmendil (nt k
 
 5. Kui äsja loodud segmendil allikavälja andmed on puudulikud, saate valida puuduvate väärtuste prognoosimise.
    > [!div class="mx-imgBorder"]
-   > ![Nupp Prognoos](media/segments-predictoption.png "Nupp Prognoos")
+   > ![Prognoosi Nupp.](media/segments-predictoption.png "Nupp Prognoos")
 
 6. Esitage prognooside tulemuste jaoks **Kuvanimi** ja **Väljundi olemi nimi**.
 
@@ -93,7 +93,7 @@ Selle voo osana saate valida kindla atribuudi, mis põhineb teie segmendil (nt k
 
 4. Näete prognoosi vaates andmepunktide arvu.
    > [!div class="mx-imgBorder"]
-   > ![Prognooside leht](media/intelligence-predictionsviewpage.png "Prognooside leht")
+   > ![Prognooside leht.](media/intelligence-predictionsviewpage.png "Prognooside leht")
 
    - **Prognoositud väärtused** näitavad vastendust, mille lõite väljaväärtuse ja kategooria vastendamisel. Need on teie andmekomplektis olevad väärtused, mis on vastendatud kindla kategooriaga.
    -**Peamised mõjutajad** on teie andmekomplekti tegurid, mis mõjutavad kõige tõenäolisemalt prognoosi usaldusväärsust teie väljaväärtuse vastendamisel kindla kategooriaga.
@@ -139,7 +139,7 @@ Teie prognoosi järgmiseks käivitamiseks kasutatakse teie loodud värskendatud 
 
 ## <a name="troubleshooting"></a>Tõrkeotsing
 
-Kui te ei saa tõrke tõttu Common Data Service'i manustamise protsessi lõpule viia, võite proovida protsessi käsitsi lõpule viia. On kaks teadaolevat probleemi, mis võivad manustamise protsessis esineda.
+Kui te ei saa tõrke tõttu Dataverse'i manustamise protsessi lõpule viia, võite proovida protsessi käsitsi lõpule viia. On kaks teadaolevat probleemi, mis võivad manustamise protsessis esineda.
 
 - Kliendikaardi lisandmooduli lahendus pole installitud.
     1. Täitke [lahenduse installimise ja konfigureerimise](customer-card-add-in.md) juhised.

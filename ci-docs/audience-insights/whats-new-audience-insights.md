@@ -1,7 +1,7 @@
 ---
 title: Uued ja tulevased funktsioonid
 description: Teave uute funktsioonide, täiustuste ja veaparanduste kohta.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263246"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692384"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Mis on uut Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis?
 
@@ -26,6 +26,28 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 
 > [!TIP]
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>2021. juuni värskendused
+
+2021. aasta juuni värskendused sisaldavad mitut funktsiooni, jõudlustäiendusi ja veaparandusi.
+
+### <a name="data-ingestion"></a>Andmete valmendamine
+
+- **Täiustatud andmete ühendamise protsessi värskendused** Saate nüüd vaadata rohkem moodulkujulisi, täiustatud dünaamilisi olekuvärskendusi [andmete ühendamise protsessi](data-unification.md) etappides. See funktsioon võimaldab teil protsessivoo mõistes jälgida üksikasjalikke edusamme ja tegutseda, kui mõnes sammus on vaja tähelepanu.
+
+### <a name="extensibility"></a>Laiendatavus
+
+- **Segmentide ja muude andmete eksportimine Salesforce'i turunduse pilve** on laiendatud meie ekspordisihtkohti, et lisada [Salesforce'i turunduse pilve](export-salesforce.md). Saate nüüd eksportida segmente ja muud tüüpi andmeid Saleforce turunduse pilve läbi kaubamärgiga varustatud SFTP ekspordi. Andmete importimist saab Salesforce'is täielikult automatiseerida ja kasutada tõhusamate turunduskampaaniate loomiseks.  
+ 
+- **Eksportige segmendid aktiivsesse kampaaniasse** Oleme laiendanud oma ekspordi sihtkohti, et kaasata [aktiivne kampaania](export-active-campaign.md). Saate nüüd eksportida segmente üldistesse kampaaniatesse, teostada meiliturundust ja töötada koos konkreetse kliendigrupiga Aktiivses Kampaanias.
+ 
+- **Eksportige segmendid Sendinbluesse** Oleme laiendanud oma ekspordi sihtkohti, et kaasata [Sendinblue](export-sendinblue.md). Saate nüüd eksportida segmente üldistesse kampaaniatesse, teostada meiliturundust ja töötada koos konkreetse kliendigrupiga Sendinbluega.
+ 
+### <a name="ux-updates"></a>UX Värskendused 
+
+- **Uue ja täiustatud klientide leht ja profiili üksikasjade leht** Oleme kujundanud ümber lehe Kliendid ning profiili üksikasjade lehed, et parandada kasutajakogemust ja jõudlust . Nende muudatustega saate kliente vaadata, sortida, otsida ja filtreerida. Filtrid on nüüd URL-is esitatud, et otsingutulemusi teiste kasutajatega sujuvalt ühiskasutusse anda. Otsingutulemusi saab salvestada ka segmendina.    
+  Kliendiprofiilide üksikasjade leht rühmitab nüüd andmed mitmesugustes kaasates, nagu demograafilised andmed, ID-d ja muud profiiliatribuudid, et parandada loetavust. Teised jaotised profiili üksikasjade lehel on nüüd interaktiivsemad. Näiteks jaotis tegevuste jaotis võimaldab nüüd filtreerimist ja sortimist.
+
 
 ## <a name="may-2021-updates"></a>Mai 2021 värskendused
 
@@ -170,7 +192,7 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 
 - **Kopeerimiskeskkond toetab rohkem andmeallikatüüpe**
 
-  Administraatorid saavad kopeerida keskkonnakonfiguratsioonid uude keskkonda samas organisatsioonis. See funktsioon laiendab kopeerimiskeskkonna funktsioone teenindusjuhtumite puhul, kus kasutatakse andmejärvest Common Data Service või kaustast Common Data Model pärinevaid andmeallikaid.
+  Administraatorid saavad kopeerida keskkonnakonfiguratsioonid uude keskkonda samas organisatsioonis. See funktsioon laieneb kopeerimiskeskkonna funktsioonile juhtudel, kui andmeallikad põhinevad Microsoft Dataverse-i hallataval data lake -il või Common Data Modeli kaustadel.
 
 ## <a name="january-2021-updates"></a>2021. a jaanuari värskendus
 

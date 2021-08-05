@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305627"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650129"
 ---
 # <a name="merge-entities"></a>Olemite liitmine
 
@@ -109,7 +109,7 @@ Mõned olemid sisaldavad rohkem üksikasju kui teised. Kui olem sisaldab välja 
 Olenemata sellest, kas liidate atribuute ise või lasete seda teha süsteemil, saate alati käivitada kooste. Toimingu käivitamiseks valige lehel **Liitmine** valik **Käivita**.
 
 > [!div class="mx-imgBorder"]
-> ![Andmete liitmine „Salvesta ja Käivita“](media/configure-data-merge-save-run.png "Andmete liitmine „Salvesta ja Käivita“")
+> ![Andmete liitmine „Salvesta ja Käivita“.](media/configure-data-merge-save-run.png "Andmete liitmine „Salvesta ja Käivita“")
 
 Valige **Käivita ainult ühendamine** juhul, kui soovite näha ainult väljundit ühtses kliendiolemis kajastatuna. Järgnevad protsessid värskendatakse [vastavalt värskendusplaanile](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Vaige **Käivita Ühenda ja järgnevad protsessid** et värskendada süsteemi si
 Kui soovite teha rohkem muudatusi ja etapi uuesti käivitada, saate tühistada poolelioleva ühendamise. Valige **Värskendamine ...** ja valige nähtavale ilmuva külgpaani suvand **Tühista töö**.
 
 > [!TIP]
-> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
+> Pärast liitmise protsessi käivitamist valige protsessi olek, et avada **Toimingu üksikasjade** paan. See annab ülevaate töötlemisajast, viimasest töötlemiskuupäevast ja kõigist toiminguga seostatud tõrgetest ja hoiatustest. Valige **Üksikasjade** kuvamine, et näha, millised olemid osalevad vastendusprotsessis, kas konfliktilahendused õnnestusid ja kas värskendused on avaldatud.  
+> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Süvitsimineku tee et saada protsessi üksikasjad ülesande oleku lingilt.":::
 
 ## <a name="next-step"></a>Järgmine etapp
 

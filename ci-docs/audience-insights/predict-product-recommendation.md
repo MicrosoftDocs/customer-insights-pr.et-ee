@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095551"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556119"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Tootesoovituse ennustamine (eelvaade)
 
@@ -64,7 +64,7 @@ Kui olete huvitatud selle funktsiooni proovimisest, kuid teil pole andmeid allpo
 
 1. Valige paan **Tootesoovituste mudel (eelversioon)** ja seejärel suvand **Kasuta seda mudelit**.
    > [!div class="mx-imgBorder"]
-   > ![Toote soovitusmudeli paan nupuga Kasuta seda mudelit](media/product-recommendation-usethismodel.PNG "Toote soovitusmudeli paan nupuga Kasuta seda mudelit")
+   > ![Toote soovitusmudeli paan nupuga Kasuta seda mudelit.](media/product-recommendation-usethismodel.PNG "Toote soovitusmudeli paan nupuga Kasuta seda mudelit")
 
 1. Vaadake üle mudelinõuete teave. Kui teil on vajalikud andmed, valige **Alustamine**.
 
@@ -93,7 +93,7 @@ Kui olete huvitatud selle funktsiooni proovimisest, kuid teil pole andmeid allpo
 
 1. Vastendage semantilised väljad oma ostuajaloo olemi atribuutidega ja valige **Järgmine**. Väljade kirjelduste kohta vaadake teavet [eeltingimustes](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Olemi seose määratlemine](media/product-recommendation-purchasehistorymapping.PNG "Ostuajaloo leht, kus kuvatakse semantilised atribuudid, mis on vastendatud valitud ostuajaloo üksuse väljadele")
+   > ![Olemi seose määratlemine.](media/product-recommendation-purchasehistorymapping.PNG "Ostuajaloo leht, kus kuvatakse semantilised atribuudid, mis on vastendatud valitud ostuajaloo üksuse väljadele")
 
 1. Kui väljad pole täidetud, konfigureerige oma ostuajaloo olemis seos olemiga *Klient*.
     1. Valige **Ostuajaloo olem**.
@@ -101,7 +101,7 @@ Kui olete huvitatud selle funktsiooni proovimisest, kuid teil pole andmeid allpo
     1. Valige **Kliendi olem**, mis vastab teie peamisele kliendiolemile.
     1. Tippige seost kirjeldav nimi.
        > [!div class="mx-imgBorder"]
-       > ![Ostuajaloo leht, millel on näha kliendiga seose loomine](media/model-purchase-join.png "Ostuajaloo leht, millel on näha kliendiga seose loomine")
+       > ![Ostuajaluu leht, millel on näha kliendiga seose loomine.](media/model-purchase-join.png "Ostuajaloo leht, millel on näha kliendiga seose loomine")
 
 1. Valige **Salvesta**.
 
@@ -145,7 +145,7 @@ Mõnikord on ainult teatud tooted kasulikud või sobivad teie loodud prognoosi t
 
 1. Avage jaotises **Ärianalüüs** > **Prognoosid** vahekaart **Minu prognoosid**.
    > [!div class="mx-imgBorder"]
-   > ![Lehe Minu prognoosid vaade](media/product-recommendation-mypredictions.PNG "Lehe Minu prognoosid vaade")
+   > ![Lehe Minu prognoosid vaade.](media/product-recommendation-mypredictions.PNG "Lehe Minu prognoosid vaade")
 
 1. Valige prognoos, mille soovite üle vaadata.
    - **Prognoosi nimi:** selle prognoosi loomisel pandud nimi.
@@ -163,7 +163,7 @@ Mõnikord on ainult teatud tooted kasulikud või sobivad teie loodud prognoosi t
 
 1. Valige vertikaalne kolmikpunkt prognoosi kõrval, mille tulemusi soovite läbivaadata ja valige **Vaade**.
    > [!div class="mx-imgBorder"]
-   > ![Suvandite vaade prognoosi vertikaalse kolmikpunkti menüüs, sh redigeerimine, värskendamine, vaadet, logid ja kustutamine](media/product-recommendation-verticalellipses.PNG "Suvandite vaade prognoosi vertikaalse kolmikpunkti menüüs, sh redigeerimine, värskendamine, vaadet, logid ja kustutamine")
+   > ![Suvandite vaade prognoosi vertikaalse kolmikpunkti menüüs, sh redigeerimine, värskendamine, vaade, logid ja kustutamine.](media/product-recommendation-verticalellipses.PNG "Suvandite vaade prognoosi vertikaalse kolmikpunkti menüüs, sh redigeerimine, värskendamine, vaadet, logid ja kustutamine")
 
 1. Tulemite lehel on viis esmast andmejaotist:
     1. **Koolituse mudeli jõudlus:** võimalikud punktisummad on A, B või C. See skoor näitab prognoosi jõudlust ja aitab teil otsustada, kas kasutada väljundolemis talletatud tulemusi.
@@ -173,13 +173,13 @@ Mõnikord on ainult teatud tooted kasulikud või sobivad teie loodud prognoosi t
             - **C** Mudelit peetakse **C** kvaliteediga mõõdikuks, kui mõõdik "Success @ K" on baasmäärast madalam.
                
                > [!div class="mx-imgBorder"]
-               > ![Mudeli jõudluse tulemi vaade](media/product-recommendation-modelperformance.PNG "Mudeli jõudluse tulemi vaade")
+               > ![Mudeli jõudluse tulemi vaade.](media/product-recommendation-modelperformance.PNG "Mudeli jõudluse tulemi vaade")
             - **Baasväärtus**: mudel võtab kõigi klientide seas kõige rohkem soovitatud tooteid ostude arvu järgi ja kasutab klientidele soovituste komplekti loomiseks mudeli tuvastatud õpitud reegleid. Seejärel võrreldakse seda prognoositava väärtusega kõige rohkem valmistatud toodetega, arvutatuna vastavalt toote ostnud klientide arvule. Kui kliendi soovitatud toodetes on vähemalt üks toode, mida oli näha ka kõige paremini ostetud toodetes, loetakse teda baasväärtuse osaks. Kui neid kliente oleks kümme, kellel oleks soovitatud toode ostetud 100 kliendi seast, oleks baasväärtus 10%.
             - **Õnnestumise @ K**: tehingute ajaperioodi valideerimiskomplekti abil luuakse kõigi klientide jaoks soovitusi ja võrreldakse neid tehingute valideerimiskomplektiga. Näiteks 12 kuu jooksul võidakse 12. kuu andmed andmete valideerimise kogumina kõrvale jätta. Kui mudel ennustab vähemalt üht asja, mida 12. kuu jooksul ostsid, võttes aluseks viimase 11 kuuga õpitu, suurendaks klient mõõdikut "Success @ K".
     
     1. **Enamik soovitatud tooteid (kokku):** Top viis toodet, mis olid teie klientide jaoks prognoositud.
        > [!div class="mx-imgBorder"]
-       > ![Graafik, kus on kuvatud viis tähtsamat toodet](media/product-recommendation-topproducts.PNG "Graafik, kus on kuvatud viis tähtsamat toodet")
+       > ![Graafik, kus on kuvatud 5 tähtsamat toodet.](media/product-recommendation-topproducts.PNG "Graafik, kus on kuvatud viis tähtsamat toodet")
     
     1. **Peamised soovitustegurid:** Mudel kasutab klientide tehingute ajalugu tootesoovituste tegemiseks. See õpib varasemate ostude põhjal mustreid ja leiab sarnasusi klientide ja toodete vahel. Seejärel kasutatakse neid sarnasusi tootesoovituste loomiseks.
     Järgmised on tegurid, mis võivad mõjutada mudeli põhjal loodud tootesoovituste kasutamist. 
@@ -190,20 +190,20 @@ Mõnikord on ainult teatud tooted kasulikud või sobivad teie loodud prognoosi t
         Iga toote soovitust mõjutab üks või mitu nendest teguritest. Diagrammil visualiseeritakse soovituste protsent, kus iga mõjutegur mängis rolli. Järgmises näites on 100% soovitustest mõjutatud möödunud tehingutest, 60% klientide sarnasusest ja 22% toodete sarnasusest. Hõljutage diagrammi ribade kohal, et näha täpne protsent, kuhu mõjutegurid kaasa aitasid.
 
         > [!div class="mx-imgBorder"]
-        > ![Soovituse peamised tegurid](media/product-recommendation-keyrecommendationfactors.png "Mudelis tootesoovituste genereerimiseks õpitud peamised soovitustegurid")
+        > ![Soovituse peamised tegurid.](media/product-recommendation-keyrecommendationfactors.png "Mudelis tootesoovituste genereerimiseks õpitud peamised soovitustegurid")
        
      
    1. **Andmestatistika**: Annab ülevaate tehingute, klientide ja toodete arvust, mida mudel on arvesse võtnud. See põhineb sisestusandmetel, mida kasutati mustrite õppimiseks ja tootesoovituste loomiseks.
 
       > [!div class="mx-imgBorder"]
-      > ![Andmestatistika](media/product-recommendation-datastatistics.png "Andmete statistika sisendi kohta, mida mudel kasutab mustrite õppimiseks")
+      > ![Andmestatistika.](media/product-recommendation-datastatistics.png "Andmete statistika sisendi kohta, mida mudel kasutab mustrite õppimiseks")
 
       Selles jaotises kuvatakse andmepunktide statistika, mida mudelis kasutati mustrite õppimiseks ja tootesoovituste loomiseks. Mudeli konfiguratsioonis konfigureeritud filtreerimine rakendub mudeli genereeritud väljundile. Kuid mudel kasutab mustrite õppimiseks kõiki saadaolevaid andmeid. Seetõttu, kui kasutate mudelikonfiguratsioonis tootefiltreerimist, kuvatakse selles jaotises nende toodete koguarv, mida mudelis on analüüsitud mustrite õppimiseks, mis võivad määratletud filtreerimiskriteeriumidele vastavatest toodetest erineda.
 
    1. **Hea klienditeenindusega tootesoovitused:** klientidele antud soovituste näide, mis sisaldab teavet selle kohta, et mudel on salvestatud, ostab tõenäoliselt klient.    
       Kui lisatakse tootekataloog, asendatakse toote ID-d tootenimedega. Tootenimed pakuvad prognooside kohta tegusamat ja intuitivsemat teavet.
        > [!div class="mx-imgBorder"]
-       > ![Loend, mis näitab, et üksikuid kliente saab valida kõrge täpsusega soovitustega](media/product-recommendation-highconfidence.PNG "Loend, mis näitab, et üksikuid kliente saab valida kõrge täpsusega soovitustega")
+       > ![Loend, mis näitab, et üksikuid kliente saab valida kõrge täpsusega soovitustega.](media/product-recommendation-highconfidence.PNG "Loend, mis näitab, et üksikuid kliente saab valida kõrge täpsusega soovitustega")
 
 ## <a name="manage-predictions"></a>Prognooside haldamine
 

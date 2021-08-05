@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059583"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692200"
 ---
 # <a name="customer-card-add-in-preview"></a>Kliendikaardi lisandmoodul (eelvaade)
 
@@ -25,7 +25,7 @@ Saate oma klientide kohta täieliku ülevaate otse Dynamics 365 rakendustes. Kui
 ## <a name="prerequisites"></a>Eeltingimused
 
 - Lisandmoodul töötab ainult Dynamics 365 mudelipõhiste rakendustega (nt Müük või Klienditeenindus, versioon 9.0 ja uuemad).
-- Et Dynamics 365 andmed vastendaks sihtrühma ülevaadetega kliendiprofiilidega, tuleb neid [Dynamics 365 rakendusest konnektori abil alla laadida Common Data Service](connect-power-query.md).
+- Et Dynamics 365 andmed vastendaks sihtrühma ülevaadetega kliendiprofiilidega, tuleb neid [Dynamics 365 rakendusest konnektori abil alla laadida Microsoft Dataverse](connect-power-query.md).
 - Kõik Dynamics 365 kliendikaardi lisandmooduli kasutajad peavad andmete nägemiseks olema [lisatud kasutajatena](permissions.md) publiku ülevaadetes.
 - [Konfigureeritud otsing ja võimekuste filtreerimine](search-filter-index.md) on publiku ülevaadetes nõutud andmete otsingu töötamise jaoks.
 - Iga lisandmooduli juhtelement kasutab publiku ülevaadetes teatud andmeid:
@@ -50,7 +50,7 @@ Lahenduse installimiseks teie keskkonda võib kuluda pisut aega.
 1. Valige link **Kuvatav nimi** lahendusele **Dynamics 365 Customer Insightsi kliendikaardi lisandmoodul (eelvaade)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Valige kuvatav nimi](media/select-display-name.png "Valige kuvatav nimi")
+   > ![Vali kuvanimi.](media/select-display-name.png "Valige kuvatav nimi")
 
 1. Valige **Logi sisse** ja sisestage administraatori konto mandaat, mida kasutate rakenduse Customer Insights konfigureerimiseks.
 
@@ -64,7 +64,7 @@ Lahenduse installimiseks teie keskkonda võib kuluda pisut aega.
    - Kontoga vastendamiseks valige kliendiolemi väli, mis vastab teie kontoolemi ID-le.
 
    > [!div class="mx-imgBorder"]
-   > ![Kontakti ID väli](media/contact-id-field.png "Kontakti ID väli")
+   > ![Ühendu ID väljaga.](media/contact-id-field.png "Kontakti ID väli")
 
 1. Sätete salvestamiseks valige **Salvesta konfiguratsioon**.
 
@@ -83,7 +83,7 @@ Lahenduse installimiseks teie keskkonda võib kuluda pisut aega.
 1. Valige kontaktivorm, kuhu soovite kliendikaardi juhtelemendid lisada.
 
     > [!div class="mx-imgBorder"]
-    > ![Kontaktivormi valimine](media/contact-active-forms.png "Kontaktivormi valimine")
+    > ![Kontaktivormi valimine.](media/contact-active-forms.png "Kontaktivormi valimine")
 
 1. Juhtelemendi lisamiseks lohistage väljaredaktoris mistahes väli **Väljauurijast** sinna, kuhu soovite juhtelemendi paigutada.
 
@@ -110,7 +110,7 @@ Kliendikaardi lisandmoodulit ei täiendata automaatselt. Uusimale versioonile t�
 
 1. Valige tegumiribalt **Rakenda lahenduse täiendus**.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Lahenduse täiendamine Dynamics 365 rakenduste kohandamisalal":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Lahenduse täiendamine Dynamics 365 rakenduste kohandamisalal.":::
 
 1. Pärast täiendamisprotsessi käivitamist kuvatakse laadimisnäidik kuni täienduse lõpuleviimiseni. Kui uuemat versiooni pole, kuvab täiendus tõrketeate.
 

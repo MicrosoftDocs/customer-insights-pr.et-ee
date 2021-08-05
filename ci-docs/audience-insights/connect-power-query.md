@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305886"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554678"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query andmeallikaga ühendamine
 
@@ -42,7 +42,7 @@ Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku n
 1. Dialoogiaken **Power Query – päringute redigeerimine** võimaldab andmeid üle vaadata ja täiustada. Olemid, mida süsteemid teie valitud andmeallikas tuvastasid, kuvatakse vasakpoolsel paanil.
 
    > [!div class="mx-imgBorder"]
-   > ![Päringute redigeerimise dialoog](media/data-manager-configure-edit-queries.png "Päringute redigeerimise dialoog")
+   > ![Päringute redigeerimise dialoog.](media/data-manager-configure-edit-queries.png "Päringute redigeerimise dialoog")
 
 1. Samuti saate oma andmeid teisendada. Valige redigeeritav või teisendatav olem. Teisenduste rakendamiseks kasutage suvandeid aknas Power Query. Kõik teisendused loetletakse jaotises **Rakendatud etapid**. Power Query pakub arvukalt eelvalmistatud teisendamise võimalusi. Lisateavet leiate teemast [Power Query teisendused](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Konnektorid, millel on märgitud veerg **Customer Insights (andmevood)**, on saa
 2. Valige muudetava andmeallika kõrval vertikaalne ellips ja valige rippmenüüst **Muuda**.
 
    > [!div class="mx-imgBorder"]
-   > ![Redigeerimise suvand](media/edit-option-data-sources.png "Redigeerimise suvand")
+   > ![Redigeerimise suvand.](media/edit-option-data-sources.png "Redigeerimise suvand")
 
 3. Rakendage muudatused ja teisendused dialoogiaknas **Power Query – päringute redigeerimine**, nii nagu on kirjeldatud jaotises [Uue andmeallika loomine](#create-a-new-data-source).
 

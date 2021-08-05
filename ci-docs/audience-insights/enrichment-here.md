@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305289"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555302"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Kliendiprofiilide rikastamine ettevõtte HERE Technologies teenuste abil (eelversioon)
 
@@ -35,7 +35,7 @@ Ettevõtte HERE Technologies rikastamisteenuse konfigureerimiseks peavad olema t
 1. Valige **Mu andmete rikastamine** HERE Technologies paanil ja valige **Alustamine**.
 
    > [!div class="mx-imgBorder"]
-   > ![Paan „HERE Technologies“](media/HERE-tile.png "Paan „HERE Technologies“")
+   > ![Paan HERE Technologies.](media/HERE-tile.png "Paan „HERE Technologies“")
 
 1. Valige [ühendus](connections.md) ripploendist. Kui ühendus pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate ühenduse luua, kui valite suvandi **Lisa ühendus**. Valige **HERE Technologies** ripploendist. 
 
@@ -50,7 +50,7 @@ Ettevõtte HERE Technologies rikastamisteenuse konfigureerimiseks peavad olema t
 1. Määratlege, milliseid teie koondatud profiilide välju tuleks kasutada, et otsida ettevõtte HERE Technologies teenuse kaudu ühtivaid asukohaandmeid. Valitud esmase ja/või teisese aadressi jaoks on vajalikud väljad **Tänav 1** ja **Sihtnumber**. Selleks et vasted oleksid täpsemad, saab lisada rohkem välju.
 
    > [!div class="mx-imgBorder"]
-   > ![HERE Technologiese rikastamise konfigureerimise leht](media/enrichment-HERE-configuration.png "HERE Technologiese rikastamise konfigureerimise leht")
+   > ![HERE Technologiese rikastamise konfigureerimise leht.](media/enrichment-HERE-configuration.png "HERE Technologiese rikastamise konfigureerimise leht")
 
 1. Valige **Edasi**, et lõpetada väljade kaardistamine.
 
@@ -73,7 +73,7 @@ Ettevõtte HERE Technologies rikastamisteenuse konfigureerimiseks peavad olema t
 1. Pärast kontrollimise lõpuleviimist valige **Salvesta**.
 
    > [!div class="mx-imgBorder"]
-   > ![HERE technologies ühenduse konfiguratsiooni leht](media/enrichment-HERE-connection.png "HERE technologies ühenduse konfiguratsiooni leht")
+   > ![HERE technologies ühenduse konfiguratsiooni leht.](media/enrichment-HERE-connection.png "HERE technologies ühenduse konfiguratsiooni leht")
 
 ## <a name="enrichment-results"></a>Rikastamise tulemused
 

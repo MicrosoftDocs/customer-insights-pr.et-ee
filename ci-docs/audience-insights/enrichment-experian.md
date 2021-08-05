@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309815"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555348"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Kliendiprofiilide rikastamine demograafiaga Experian (eelversioon)
 
@@ -39,7 +39,7 @@ Praegu toetame kliendiprofiilide rikastamist ainult Ameerika Ühendriikides.
 1. Valige **Rikasta minu andmed** Experian paanil.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian paan](media/experian-tile.png "Experian tile")
+   > ![Experian paan.](media/experian-tile.png "Experian tile")
    > 
 
 1. Valige [ühendus](connections.md) ripploendist. Kui ühendusi pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate ühenduse luua, valides **Lisa ühendus** käsu ja valides ripploendist Experian. 

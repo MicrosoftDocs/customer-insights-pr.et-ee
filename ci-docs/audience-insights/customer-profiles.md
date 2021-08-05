@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304599"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554613"
 ---
 # <a name="customer-profiles"></a>Kliendiprofiilid
 
@@ -23,11 +23,11 @@ Lehel **Kliendid** kuvatakse teie klientide kombineeritud vaade, mis põhineb [k
 Klientideks võivad olla eraisikud või ettevõtted (eelvaade). Igat kliendi või ettevõtte profiili esindab pealkiri. Kindla kliendi või ettevõtte täiendava teabe nägemiseks valige paan. Täiendavate kirjete nägemiseks kasutage lehe allservas olevaid lehejaotuse juhtelemente.
 
 > [!div class="mx-imgBorder"] 
-> ![Jaekliendi profiilid](media/profiles-customers.png "Jaekliendi profiilid")
+> ![Jaekliendi profiilid.](media/profiles-customers.png "Jaekliendi profiilid")
 
 Ettevõtted (eelvaade)
 > [!div class="mx-imgBorder"] 
-> ![Jaekliendi profiilid](media/profile-customers-b2b.png "B2B kliendi profiilid")
+> ![Jaekliendi profiilid.](media/profile-customers-b2b.png "B2B kliendi profiilid")
 
 > [!NOTE]
 > Kui te ei näe paane, kui valite navigeerimisel **Kliendid**, peab teie administraator [määratleda vähemalt ühe otsitava atribuudi](search-filter-index.md) jaotises **Otsing ja filtri register**.
@@ -47,7 +47,7 @@ Filtreerige kliente kliendiprofiili olemi väljade alusel. Sarnaselt otsingule p
 2. Märkige atribuutide, mille alusel tahate filtreerida kliente, kõrval asuvad ruudud.
 
    > [!div class="mx-imgBorder"] 
-   > ![Kliendi profiilid](media/profiles-customers3.png "Kliendi profiilid")
+   > ![Kliendi profiilid.](media/profiles-customers3.png "Kliendi profiilid")
 
 3. Eemaldage filtrid, valides lehel **Kliendid** suvand **Eemalda filtrid**.
 

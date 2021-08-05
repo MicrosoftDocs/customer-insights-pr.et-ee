@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595988"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555118"
 ---
 # <a name="map-entities-and-attributes"></a>Olemite ja atribuutide kaardistamine
 
@@ -35,14 +35,14 @@ Lisateavet andmete ühendamise üldvoo kohta vt [Ühenda](data-unification.md).
 3. Valige olemid ja atribuudid, mida soovite etappides *vastendamine* ja *ühendamine* kasutada. Saate valida vajalikud atribuudid olemis individuaalselt või lisada olemist kõik atribuudid, valides olemi tasandil märkeruudu **Kaasa kõik väljas**. Andmete ühendamisest kasu saamiseks soovitame valida vähemalt kaks olemit.
 
    > [!div class="mx-imgBorder"]
-   > ![Lisa olemite näide](media/data-manager-configure-map-add-entities-example.png "Lisa olemite näide")
+   > ![Lisa olemite näide.](media/data-manager-configure-map-add-entities-example.png "Lisa olemite näide")
 
    Selles näites lisame olemid **eCommerceContacts** ja **loyCustomers**. Nende olemite valimisel saate tuletada ülevaateid, kus veebikliendid on püsikliendiprogrammi liikmed.
    
    Saate otsida atribuutide ja olemite üleselt märksõnu, et valida vajalikud atribuudid, mida soovite vastendada.
    
      > [!div class="mx-imgBorder"]
-   > ![Otsinguväljade näide](media/data-manager-configure-map-search-fields-example.png "Otsinguväljade näide")
+   > ![Otsinguväljade näide.](media/data-manager-configure-map-search-fields-example.png "Otsinguväljade näide")
 
 4. Oma valikute kinnitamiseks valige suvand **Rakenda**.
 
@@ -55,7 +55,7 @@ Pärast oma olemite valimist loetleb leht **Kaardistamine** läbivaatamiseks val
 - **Atribuudi semantiline tüüp**: atribuutide kategooriad (nt e-posti aadress või nimi). Selleks et kasutada AI mudeleid semantika nutikaks prognoosiks, säästa aega ja parandada täpsust, määrake suvandi **Intelligentne vastendamine** olekuks **SEES**. Intelligentne vastendamine tõstab esile AI-põhise semantika soovituse väljal **Tüüp**. Kui määrate selle olekuks **VÄLJAS**, näete meie tavalisi vastendamise soovitusi. Saate valida saadaolevate suvandite loendist mis tahes semantilise tüübi ja tühistada soovitatud valiku.
 
 > [!div class="mx-imgBorder"]
-> ![Atribuudi tüüp ja semantiline prognoos](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Atribuudi tüüp ja semantiline prognoos")
+> ![Atribuudi tüüp ja semantiline prognoos.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Atribuudi tüüp ja semantiline prognoos")
 
 Samuti on võimalik lisada enda loodud semantiline tüüp. Valige atribuudi tüübi väärtus ja sisestage enda muudetud semantilise tüübi nimi. Nii saate muuta ka süsteemi tuvastatud atribuudi tüüpe.
 
@@ -64,7 +64,7 @@ Kõik atribuudid, mille semantiline tüüp tuvastatakse automaatselt, on rühmit
 Atribuudid, mida semantilise tüübiga automaatselt ei vastendata, on rühmitatud jaotises **Vastendamata väljade andmete määratlemine**. Valige vastendamata atribuutide jaoks välja semantiline tüüp või sisestage kohandatud atribuudi tüübi nimi.
 
 > [!div class="mx-imgBorder"]
-> ![Primaarvõti ja atribuudi tüüp](media/data-manager-configure-map-add-attributes.png "Primaarvõti ja atribuudi tüüp")
+> ![Primaarvõti ja atribuudi tüüp.](media/data-manager-configure-map-add-attributes.png "Primaarvõti ja atribuudi tüüp")
 
 > [!NOTE]
 > Üks väli peaks olema vastendatud semantilise tüübiga Person.FullName, et lisada kliendi kaardile kliendi nimi. Vastasel juhul kuvatakse kliendikaardid ilma nimeta. 
@@ -76,7 +76,7 @@ Atribuudid, mida semantilise tüübiga automaatselt ei vastendata, on rühmitatu
 2. Lisage või eemaldage atribuute ja olemeid paanil **Redigeeri välju**. Kasutage otsingut või kerige, et leida ja valida teile huvi pakkuvad atribuudid ja olemid. Atribuuti või olemit ei saa eemaldada, kui need on juba vastendatud.
 
    > [!div class="mx-imgBorder"]
-   > ![Atribuutide lisamine või eemaldamine](media/configure-data-map-edit.png "Atribuutide lisamine või eemaldamine")
+   > ![Atribuutide lisamine või eemaldamine.](media/configure-data-map-edit.png "Atribuutide lisamine või eemaldamine")
 
 3. Valige suvand **Rakenda**.
 
