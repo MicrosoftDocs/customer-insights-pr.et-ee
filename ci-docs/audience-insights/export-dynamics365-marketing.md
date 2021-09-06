@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmete eksportimine rakendusse Dynamics 365 Marketing
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Dynamics 365 Marketing.
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
+ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692476"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "7417200"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Kasutage segmente rakendusega Dynamics 365 Marketing (eelversioon)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Kasutage lahenduses Dynamics 365 Marketing kampaaniate loomiseks ja konkreetsete kliendirühmadega ühenduse võtmiseks [segmente](segments.md). Lisateavet leiate teemast [Dynamics 365 Customer Insightsi segmentide kasutamine Dynamics 365 Marketingiga](/dynamics365/marketing/customer-insights-segments)
+Kasutage lahenduses Dynamics 365 Marketing kampaaniate loomiseks ja konkreetsete kliendirühmadega ühenduse võtmiseks [segmente](segments.md). Lisateavet leiate teemast [Dynamics 365 Customer Insightsi segmentide kasutamine Dynamics 365 Marketingiga](/dynamics365/marketing/customer-insights-segments).
+
+Kui kasutate Dynamics 365 Marketing'i uusi võimalusi reaalajas klienditeekonna korraldamiseks Dataverse organisatsioonis, ei pea te Dynamics 365 Marketingisse standardekspordi looma. Sihtrühma ülevaadete kontaktid ja segmendid on pärast Marketing ja Customer Insightsi ühendamist saadaval otse rakenduses Dynamics 365 Marketing. Enne olemasoleva ekspordi kustutamist vaadake üle dokumentatsioon [sihtrühma ülevaadete ja Dynamics 365 Marketing klienditeekonna ühendamiseks](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Ühenduse eeltingimus
 

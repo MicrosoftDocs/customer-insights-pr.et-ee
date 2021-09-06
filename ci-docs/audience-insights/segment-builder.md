@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685457"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377783"
 ---
 # <a name="create-and-manage-segments"></a>Segmentide loomine ja haldamine
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685457"
 > - Kõrvalpaan atribuutide valimiseks on pidevalt saadaval.
 > - Suvand olemite seose tee valimiseks.
 > Uue segmendimeisterdaja proovimiseks saatke meil pealkirjaga "Taotlus uue segmendi kasutamise lubamiseks" chielp [at] microsoft.com. Lisage oma organisatsioonimise nimi ja teie liivakastikeskkonna ID.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Segmendi ehitaja elemendid." lightbox="media/segment-builder-overview.png":::
+>
+> 1 – Korraldage oma segment reeglite ja alamreeglitega. Iga reegel või alamreegel koosneb tingimustest. Tingimuste ühendamine loogikatehtetega
+>
+> 2 – Valige reeglile rakenduvate olemite vaheline [seosetee](relationships.md). Seosetee määratleb, milliseid atribuute saab tingimuses kasutada.
+>
+> 3 – Reeglite ja alamreeglite haldamine. Saate muuta reegli positsiooni või selle kustutada.
+>
+> 4 – Lisage alamreeglite abil tingimused ja looge õige hargnemine alamreeglite abil.
+>
+> 5 – Saate rakendada ühendatud reeglitele salvestatud toiminguid.
+>
+> 6 – Kasutage atribuudipaani, et lisada saadaolevaid olemiatribuute või luua atribuutidel põhinevad tingimused. Paanil kuvatakse valitud seoseteel põhinevate olemite ja atribuutide loend, mis on valitud reegli jaoks saadaval.
+>
+> 7 – Lisage olemasolevatele reeglitele ja alamreeglitele atribuutidel põhinevad tingimused või lisage see uude reeglisse.
+>
+> 8 – Saate segmendi loomise ajal muudatusi tagasi võtta ja uuesti teha.
 
 Määratlege keerukad filtrid ühendatud kliendiolemi ümber ja sellega seotud olemid. Pärast töötlemist loob iga segment hulga kliendi kirjeid, mille saate eksportida ja nendega toiminguid teha. Segmente saab hallata lehel **Segmendid**. 
 
@@ -147,6 +164,6 @@ Kiirsegmendid lasevad teil luua lihtsaid segmente ühe tehtega kiiresti, et saad
 
 ## <a name="next-steps"></a>Järgmised etapid
 
-Kliendi taseme ülevaadete hankimiseks [eksportige segment](export-destinations.md) ja tutvuge [kliendikaardiga](customer-card-add-in.md) ning [ühendajatega](export-power-bi.md).
+[Eksportige segment](export-destinations.md) ja tutvuge [kliendikaardi integratsiooniga](customer-card-add-in.md), et kasutada segmente muudes rakendustes.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

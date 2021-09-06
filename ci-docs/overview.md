@@ -3,21 +3,21 @@ title: Toote ülevaade
 author: m-hartmann
 description: Ülevaade Dynamics 365 Customer Insightsi ja selle funktsioonide kohta.
 ms.author: mhart
-ms.date: 02/16/2021
+ms.date: 07/30/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 1bc75959229fd2ffef9a5fd5617889888eb72e55
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539384"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036506"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insightsi toote ülevaade
 
-Dynamics 365 Customer Insights on osa Microsofti kliendiandmete platvormist (CDP), mis aitab pakkuda isikupärastatud kliendikogemusi. Platvormi võimalused annavad ülevaateid sellest, kes teie kliendid on ja kuidas nad teie platvormiga suhtlevad. Klientide kohta ülevaate saamiseks koondage kliendiandmed mitmetest andmeallikatest.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) on osa Microsofti kliendiandmete platvormist (CDP), mis aitab pakkuda isikupärastatud kliendikogemusi. Platvormi võimalused annavad ülevaateid sellest, kes teie kliendid on ja kuidas nad teie platvormiga suhtlevad. Klientide kohta ülevaate saamiseks koondage kliendiandmed mitmetest andmeallikatest.
 
 
 - [Sihtrühma ülevaated](audience-insights/overview.md) aitavad teil muuta oma äri klientide keskseks organisatsiooniks. Turundus-, müügi- ja teenindusspetsialistidel on ülevaated, mida nad vajavad kogemuste isikupärastamiseks. 360-kraadise kliendivaate loomiseks ühendage andmed tehingu-, käitumis- ja vaatlusallikatest. Nautige tulemusi kiiremini CDP-ga, mis on mõeldud ülevaadete pakkumiseks, mille põhjal saab tegutseda. 

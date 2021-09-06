@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi olemiskeemid Common Data Modelis
 description: Töötage olemitega Common Data Modelis.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692300"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7380738"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Olemi skeemid ühises andmemudelis
 
@@ -42,7 +42,7 @@ Lisateabe saamiseks vt teemat [Customer Insightsi olemi skeemid üldises andmemu
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Olemite kuvamine Common Data Modeli Entity Navigatori kaudu
 
-Olemeid saate vaadata [Common Data Modeli oleminavigaatori kaudu](https://microsoft.github.io/CDM/). Valige **Laadige rakendusest GitHub!** nupp ja liikuge järgmiselt: **foundationCommon** > **crmCommon** > **lahendused** > **customerInsights**, kus leiate Customer Insightsi olemite loetelu ja määratlused.
+Olemeid saate vaadata [Common Data Modeli oleminavigaatori kaudu](https://microsoft.github.io/CDM/). Valige jaotisest Insights Application üksus, et saada loend Customer Insights olemite ja nende määratluste kohta.
 > [!div class="mx-imgBorder"]
 > ![CDMi Entity Navigatoris kuvatakse kliendi tegevuse olem.](media/CDM-entity-navigator.png "CDMi Entity Navigatoris kuvatakse kliendi tegevuse olem")
 

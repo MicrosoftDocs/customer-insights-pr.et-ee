@@ -1,7 +1,7 @@
 ---
 title: Sihtrühma ülevaated Dynamics 365 Customer Insights ülevaatest
 description: Sihtrühma ülevaated rakendusest Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539110"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034355"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Sihtrühma ülevaated Dynamics 365 Customer Insights ülevaatest
 
-Sihtrühmaülevaated aitavad teil oma klientidest põhjalikuma ülevaate luua. 360-kraadise kliendiülevaate loomiseks ühendage varasemad tehingute, käitumise ja vaatlustega seotud allikad. Neid ülevaateid saate kasutada kliendikesksete kogemuste ja protsesside loomiseks. Koondage ja mõistke kliendiandmeid ning rakendage neid intelligentsete ülevaadete ja tegevuste jaoks.
+[Sihtrühma ülevaated, Dynamics 365 Customer Insights võimalus](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) aitab teil luua klientidest arusaamist klientidest. 360-kraadise kliendiülevaate loomiseks ühendage varasemad tehingute, käitumise ja vaatlustega seotud allikad. Neid ülevaateid saate kasutada kliendikesksete kogemuste ja protsesside loomiseks. Koondage ja mõistke kliendiandmeid ning rakendage neid intelligentsete ülevaadete ja tegevuste jaoks.
 
 ## <a name="main-benefits"></a>Peamised eelised 
 
@@ -34,9 +34,9 @@ Sihtrühmaülevaated aitavad teil oma klientidest põhjalikuma ülevaate luua. 3
 
 - **Saate edendada oma äriprotsesse ja isikupärastatud kliendikogemust**
 
-  - Saate kannustada isikupärastatud kaasatust kõikides kanalites, innustades turundus-, müügi- ja teenindusprofessionaale valmisolevate ning kontekstipõhiste kliendiülevaadete ning kohandatud kliendiprofiilide abil, mis on varustatud igapäevaselt kasutatavate ärirakendustega
-  - Saate automatiseerida kliendikesksed kogemused ja protsessid kohandatavate profiilide, ärimeetmete ja segmentide abil.
-  - Saate lubada ja laiendada valdkonnasiseseid kogemusi, mis on loodud rakenduses [Microsoft Power Platform](https://powerplatform.microsoft.com/). Saate kiiresti ehitada rakendusi manustatud ülevaadetega, kasutades võimsat vähest koodikirjutamist vajavat meetodit PowerAppsis.  
+  - Edendage isikupärastatud kaasamist kanalite vahel - edendage turundus-, müügi- ja teenindusspetsialiste. Kasutage kasutuspõhiseid, ülevaateid ja kohandatud kliendiprofiili kaarte, mis on integreeritud juba kasutusel olnud ärirakendustega.
+  - Saate automatiseerida kogemused ja protsessid kohandatavate profiilide, ärimeetmete ja segmentide abil.
+  - Saate lubada ja laiendada valdkonnasiseseid kogemusi, mis on loodud rakenduses [Microsoft Power Platform](https://powerplatform.microsoft.com/). Saate kiiresti ehitada rakendusi manustatud ülevaadetega, kasutades võimsat vähest koodikirjutamist vajavat meetodit Power Appsis.  
 
 ## <a name="key-audiences"></a>Peamised sihtrühmad
 
@@ -50,13 +50,18 @@ Sihtrühmaülevaated aitavad teil oma klientidest põhjalikuma ülevaate luua. 3
 
 - **Ärikasutajad.**
 
-  - Saate koostada ülevaadete abil 360-kraadised kliendiprofiile ning klienditeekonna lõppvaateid.
+  - Saate koostada ülevaadete abil 360-kraadised kliendiprofiile ning klienditeekondi.
   - Saate eelkoostatud pakketidega kuvada 360-kraadised kliendiandmed rakenduse Dynamics 365 äriprotsessides.
 
 - **Ärianalüütikud.**
 
   - Saate luua kohandatavaid profiile, määratleda näitajaid, luua segmente ja kasu ennustavast analüüsist, et koostada oma kliendi kohta teie organisatsioonile sobiv 360-kraadine ülevaade.  
-  - Statistika edasiseks töötlemiseks kasutage mitme Microsofti ja kolmanda osapoole rakenduste või API-de jaoks paketiväliseid ühendusi.
+  - Kasutage ülevaadete töötlemiseks mitme Microsofti ja muude tootjate rakenduste või API-de kasutusvalmis konnektoreid.
 
+## <a name="pricing-and-licensing"></a>Hinnad ja litsentsid
+
+Customer Insights on litsentsitud rentniku kohta ja sisaldab mitut võimalust. Õigustatud võimsused hõlmavad profiilide komplekti, igapäevaseid süsteemi värskendusi, Power Platformi päringuid ja kahte keskkonda. Vaikekvoodi suurendamiseks saate osta veel võimsust ja litsentsi. 
+- Üksikasjalik teave võimsusest ja õigustest: [Dynamics 365 litsentsimisjuhend](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Hinna ülevaade: [Dynamics 365 hinnakujundus](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

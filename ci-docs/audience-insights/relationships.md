@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171159"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035226"
 ---
 # <a name="relationships-between-entities"></a>Olemitevaheline seos
 
@@ -82,7 +82,7 @@ Sellel lehel on olemasolevate ja uute seoste suvandid.
 
 ### <a name="explore-the-relationship-visualizer"></a>Tutvuge seose visualiseerijaga
 
-Seose visualiseerija näitab ühendatud üksuste vaheliste olemasolevate suhete ja nende kardinaalsuse skeemi.
+Seose visualiseerija näitab ühendatud üksuste vaheliste olemasolevate suhete ja nende kardinaalsuse skeemi. Selles visualiseeritakse ka seoseteed.
 
 Vaate kohandamiseks saate muuta kastide asukohta, lohistades neid lõuendil.
 
@@ -92,6 +92,20 @@ Saadaolevad suvandid:
 - **Ekspordi pildina**: praeguse vaate salvestamine pildifailina.
 - **Muuda horisontaal-/vertikaalseks paigutuseks**: muutke olemite ja seoste joondust.
 - **Redigeeri**: redigeerige kohandatud seoste atribuute redigeerimispaanil ja salvestage muudatused.
+
+### <a name="relationship-path"></a>Seose tee
+
+Seosetee kirjeldab olemeid, mis on seotud allika olemi ja sihtüksuse vaheliste suhetega. Seda kasutatakse segmendi või meetme loomisel, mis hõlmab muid üksusi peale ühendatud profiili olemi ja ühendatud profiili olemini jõudmiseks on mitu võimalust.
+
+Seosetee teavitab süsteemi, millistel suhetel on juurdepääs ühendatud profiili olemile. Erinevad seoseteed võivad anda erinevaid tulemusi.
+
+Olemil *eCommerce_eCommercePurchases* on olemiga *Klient* järgmised seosed.
+
+- eCommerce_eCommercePurchases > Klient
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klient
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klient 
+
+Seosetee määrab, milliseid üksusi saab kasutada mõõtude või segmentide reeglite loomisel. Pikima seoseteega valiku tegemine annab tõenäoliselt vähem tulemusi, kuna vastavad kirjed peavad olema osa kõigist olemitest. Selles näites peab klient ostma kaupu e-poe kaudu (eCommerce_eCommercePurchases), müügikohas (POS_posPurchases) ja osalema meie lojaalsusprogrammis (loyaltyScheme_loyCustomers). Esimese suvandi valimisel saate tõenäoliselt rohkem tulemusi, kuna kliendid peavad olema ainult ühes lisaolemis olemas.
 
 ## <a name="manage-existing-relationships"></a>Olemasolevate seoste haldamine 
 
@@ -105,6 +119,6 @@ Valige seos ja üks järgmistest suvanditest:
 
 ## <a name="next-step"></a>Järgmine etapp
 
-Süsteemi ja kohandatud seoseid kasutatakse [segmentide loomiseks](segments.md) vastavalt mitte enam eraldatud mitmele andmeallikale.
+Süsteemi- ja kohandatud seoseid kasutatakse mitme andmeallika põhjal [segmentide](segments.md) ja [mõõdikute](measures.md) loomiseks, mida enam ei kasutata.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
