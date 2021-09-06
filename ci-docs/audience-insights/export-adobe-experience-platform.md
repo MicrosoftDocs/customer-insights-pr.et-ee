@@ -1,5 +1,5 @@
 ---
-title: Customer Insightsi andmete eksportimine Adobe Experience Platformi
+title: Customer Insights andmete eksportimine rakendusse Adobe Experience Platform
 description: Lugege, kuidas kasutada sihtrühma ülevaadete segmente Adobe Experience Platform'il.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305519"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032112"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Customer Insightsi segmentide kasutamine Adobe Experience Platformis (eelversioon)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Kasutage rakenduses Adobe Experience Platform (eelvaade) segmente Customer Insights
 
-Dynamics 365 Customer Insights sihtrühma ülevaadete kasutajana, olete võinud luua segmente, et ,muuta oma turunduskampaaniad tõhusamaks, sihtides asjakohaseid vaatajaskondi. Adobe Experience Platformi ja rakendustest, nagu Adobe Campaign Standard pärit segmentide kasutamiseks peate järgima mõnda selles artiklis kirjeldatud juhist.
+Dynamics 365 Customer Insights sihtrühma ülevaadete kasutajana, olete võinud luua segmente, et ,muuta oma turunduskampaaniad tõhusamaks, sihtides asjakohaseid vaatajaskondi. Adobe Experience Platform sihtrühma ülevaadetest saadud segmendi kasutamiseks ja rakendustes (nt Adobe Campaign Standard) peate järgima mõnda käesolevas artiklis kirjeldatud etappi.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Selles artiklis kirjeldatud juhiste protsessiskeem.":::
 
@@ -26,14 +26,14 @@ Dynamics 365 Customer Insights sihtrühma ülevaadete kasutajana, olete võinud 
 
 -   Dynamics 365 Customer Insightsi litsents
 -   Adobe Experience Platformi litsents
--   Adobe Campaign Standardi litsents
+-   Adobe Campaign Standard litsents
 -   Azure’i bloobimälu konto
 
 ## <a name="campaign-overview"></a>Kampaania ülevaade
 
-Et paremini mõista, kuidas kasutada Adobe Experience Platformi sihtrühmaülevaadete segmente, vaatame väljamõeldud näidiskampaaniat.
+Et paremini mõista, kuidas kasutada sihtrühma ülevaadete segmente, vaadake Adobe Experience Platform väljamõeldud näidiskampaaniat.
 
-Oletame, et teie ettevõte pakub teie USA klientidele igakuiseid, tellimusepõhiseid teenuseid. Soovite tuvastada kliendid, kelle kordustellimusi tuleb järgmise kaheksa päeva pärast uuendada, kuid kes pole veel oma kordustellimust pikendanud. Nende klientide alleshoidmiseks, soovite meili teel saata neile reklaampakkumise Adobe Experience Platformi kaudu.
+Oletame, et teie ettevõte pakub teie USA klientidele igakuiseid, tellimusepõhiseid teenuseid. Soovite tuvastada kliendid, kelle kordustellimusi tuleb järgmise kaheksa päeva pärast uuendada, kuid kes pole veel oma kordustellimust pikendanud. Kui soovite need kliendid säilitada, soovite neile saata meiliga reklaampakkumise, kasutades selleks rakendust Adobe Experience Platform.
 
 Selles näites soovime käivitada ühekordse reklaamikampaania meili teel. See artikkel ei hõlma kampaania läbiviimist rohkem kui üks kord.
 
@@ -93,7 +93,7 @@ Pärast ekspordi sihtkoha salvestamist leiate selle **Andmed** > **Eksport**.
 Nüüd saate [nõudmisel segmendi](export-destinations.md#run-exports-on-demand) Eksport käivitub ka iga [ajastatud värskendamisega](system.md).
 
 > [!NOTE]
-> Veenduge, et eksporditud segmendi kirjete arv jääb Adobe Campaign Standardi litsentsi lubatud piiridesse.
+> Veenduge, et eksporditud segmendis olevate kirjete arv oleks teie Adobe Campaign Standardi litsentsi lubatud piires.
 
 Eksporditud andmed talletatakse eespool konfigureeritud Azure Blob Storage konteinerisse. Ümbrisesse luuakse automaatselt järgmine kaustatee:
 
@@ -105,29 +105,29 @@ Eksporditud olemite *model.json* asub tasemel *%ExportDestinationName%*.
 
 Näide: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Experience Data Modeli (XDM) määratlemine Adobe Experience Platformil
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Kogemuse andmemudeli (XDM) määratlemine rakenduses Adobe Experience Platform
 
-Enne sihtrühmaülevaadetest eksporditu andmete kasutamist Adobe Experience Platformil peame määratlema Experience Data Modeli skeemi ja [konfigureerima reaalajas kliendiprofiili andmed](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Enne, kui sihtrühma ülevaadetest eksporditud andmeid saab kasutada rakenduses Adobe Experience Platform, peab määratlema kogemuse andmemudeli skeemi ja [konfigureerima andmed reaalaja kliendiprofiili jaoks](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Lugege, [mis on XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) ja tutvuge [skeemi loomise põhitõdedega](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
-## <a name="import-data-into-adobe-experience-platform"></a>Andmete importimine Adobe Experience Platformile
+## <a name="import-data-into-adobe-experience-platform"></a>Andmete importimine Adobe Experience Platform'i
 
-Nüüd, kui kõik on valmis, peame profiilide loomiseks importima ettevalmistatud sihtrühmaandmed sihtrühmaülevaadetest Adobe Experience Platformile.
+Nüüd, kui kõik on paigas, peame vaatajaskonna statistika põhjal koostatud vaatajaskonna andmed Adobe Experience Platformi importima.
 
 Esmalt looge [Azure'i bloobimälu l'hteühendus](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Pärast lähteühenduse määratlemist [konfigureerige andmevoog](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) pilvsalvestusruumi pakettühenduse jaoks, et importida sihtrühmaülevaadete segmendiväljund Adobe Experience Platformi.
+Pärast lähteühenduse määratlemist [konfigureerige pilvemälu pakett-ühenduse andmevoog](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials), et importida segmendiväljund publiku ülevaadetest Adobe Experience Platform rakendusse.
 
-## <a name="create-an-audience-in-adobe-campaign-standard"></a>Adobe Campaign Standardi sihtrühma loomine
+## <a name="create-an-audience-in-adobe-campaign-standard"></a>Sihtrühma loomine rakenduses Adobe Campaign Standard
 
-Selle kampaania meili saatmiseks kasutame Adobe Campaign Standard'it. Pärast andmete importimist Adobe Experience Platformi peame [looma sihtrühma](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) Adobe Campaign Standardis Adobe Experience Platformi andmete abil.
+Selle kampaania meili saatmiseks kasutame Adobe Campaign Standard'it. Pärast andmete importimist rakendusse Adobe Experience Platform peame [looma sihtrühma](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission), rakenduses Adobe Campaign Standard kasutades Adobe Experience Platform andmeid.
 
 
-Lugege, kuidas [kasutada segmendikoosturit](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) Adobe Campaign Standardis, et määratleda sihtrühm Adobe Experience Platformi andmete põhjal.
+Lugege, kuidas kasutada Adobe Campaign Standardis [segmentide ehitajat](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html), et määratleda sihtrühma, võttes aluseks Adobe Experience Platform andmed.
 
-## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Meili loomine ja saatmine Adobe Campaign Standardi kaudu
+## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Meili loomine ja saatmine Adobe Campaign Standard abil
 
 Looge meilisisu ja seejärel [testige ja saatke](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) oma meil.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Adobe Campaign Standardi uuenduspakkumisega näidismeil.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Näidismeil uuenduspakkumisega rakendusest Adobe Campaign Standard.":::
