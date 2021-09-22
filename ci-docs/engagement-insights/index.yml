@@ -1,0 +1,86 @@
+### YamlMime:Landing
+title: Kaasamisülevaate (eelvaate) võimalused rakenduses Dynamics 365 Customer Insights
+summary: Koguge oma veebilehe jaoks andmeid. Interaktiivselt klientide interaktiivse suhtluse ja kasutuskogemuse mõistmine saitidel. Kasutage kaasamisülevaadete ja sihtrühma ülevaadete põhjalikku integreerimist, et rikastada oma reaalajalist käitumuslikku analüüsi kliendiprofiilide aruannetega. Rikastage kliendiprofiile veebitegevustega, et saada asjakohaste kliendiandmete kõrval reaalajas käitumisandmeid. Muutke oma ettevõtet nii, et see saaks kliendiandmetest kohese väärtuse.
+metadata:
+  title: Kaasamise ülevaadete (eelvaate) dokumentatsioon
+  description: Spikrikeskus, kus on peamised lingid kaasamisülevaadete jaoks.
+  ms.service: customer-insights
+  ms.subservice: engagement-insights
+  ms.topic: hub-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.reviewer: mhart
+  ms.date: 07/30/2021
+  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.translationtype: HT
+  ms.contentlocale: et-EE
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036233"
+landingContent:
+- title: Teave
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Võimaluste ülevaade
+      url: overview.md
+    - text: Terminid ja mõisted
+      url: glossary.md
+    - text: Kaasamise ülevaadete avastamine
+      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+- title: Sisseelamise toetamine
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Alustamine
+      url: get-started.md
+    - text: Tööruumi loomine
+      url: create-workspace.md
+    - text: Veebisaidile funktsioonide lisamine
+      url: instrument-website.md
+- title: Aruanded
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kuva aruanded
+      url: view-reports.md
+    - text: Kohandatud aruannete loomine
+      url: custom-reports.md
+    - text: Koondatud profiiliaruande vaatamine
+      url: profile-reports.md
+    - text: Lehterdiagrammi aruannete loomine
+      url: funnel-reports.md
+- title: Sündmused
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Täpsemate sündmuste loomine
+      url: refined-events.md
+    - text: Ekspordi sündmused
+      url: export-events.md
+    - text: Isikuandmete kustutamine ja eksportimine
+      url: delete-export-personal-data.md
+- title: Arendaja ressursid
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Arendaja ressursid
+      url: developer-resources.md
+    - text: WebSDK näide
+      url: websdk-sample.md
+    - text: Täpsemad veebi SDK stsenaariumid
+      url: advanced-SDK-implementation.md
+    - text: Android SDK näidis
+      url: get-started-android.md
+    - text: iOS SDK näidis
+      url: get-started-ios.md
+- title: Haldus
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Keskkondade ja tööruumide haldamine
+      url: manage-environments-workspaces.md
+    - text: Ühenduse loomine sihtrühma ülevaadetega
+      url: configure-connections.md
+    - text: Küpsiste ja kasutaja nõusoleku haldamine
+      url: user-consent-storage.md
