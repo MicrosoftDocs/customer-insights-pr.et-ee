@@ -4,17 +4,17 @@ description: Lehteraruannete kasutamine, et mõista, kuidas sihtrühm otsuseid t
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032250"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498637"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Lehterdiagrammi loomine ja haldamine
 
@@ -158,4 +158,21 @@ Lehetraruande nime saate muuta, kustutada või aruande samme muuta.
 1. Valige aruande avamiseks soovitud nimi.
 
 1. Valige eemaldatava etapp ja valige seejärel käsk **Eemalda**.
+
+## <a name="funnel-insights"></a>Lehterdiagrammi ülevaated 
+
+Kaasamisülevaated annavad nüüd klientidele lehterdiagrammi ülevaateid. Lehterdiagrammi ülevaadete abil saate koguda klientide käitumise kohta vihjeid lehtriaruande etappide kohta. Uue lehtriaruande loomisel ja salvestamisel luuakse aruande jaoks automaatselt lehtridiagrammi ülevaated. 
+
+Lehtridiagrammi ülevaateid saate vaadata järgmistest kategooriatest nii põhi- kui ka etapitasemetel. 
+
+ - Teisendusmäär 
+ - Üleminekuaeg 
+ - Lõpuleviimise aeg 
+
+Kasutage neid ülevaateid, et uurida klientide käitumist ja paremini mõista oma lehtriaruandes salvestatud punkte ja teisendusi. 
+
+Lehtridiagrammi ülevaated arvutatakse ümber iga 24 tunni järel või lehtriaruande **salvestamisel**. 
+
+> [!NOTE]
+> Lehtridiagrammi ülevaadete vaatamiseks tuleb aruanne salvestada iga kord, kui teete muudatusi. 
 

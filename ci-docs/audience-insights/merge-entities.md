@@ -1,7 +1,7 @@
 ---
 title: Olemite ühendamine andmete koondamise ajal
 description: Ühendage olemid, et luua koondatud kliendiprofiile.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034997"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494314"
 ---
 # <a name="merge-entities"></a>Olemite liitmine
 
@@ -76,17 +76,40 @@ Atribuudi välistamine ühtsest kliendiprofiilist. Kui seda välja kasutatakse m
 
 Lehel **Ühenda** valige **Välistatud väljad** et näha välistatud väljade loendit. Selle paani abil saate väljad tagasi lisada.
 
+## <a name="edit-a-merged-field"></a>Redigeeri ühendatud välja
+
+1.  Valige ühendatud väli.
+
+1.  Valige **Kuva veel** ja valige **Redigeeri**.
+
+1.  Määrake väljade ühendamise või ühendamise viis ühest kolmest valikust.
+    - **Olulisus**: tuvastab võitja väärtuse osalevatele valdkondadele määratud tähtsusastme alusel. See on vaikeühendamissuvand. Valige järjekoha prioritiseerimiseks **Nihuta üles/alla**.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Tähtsuse valik ühendamisväljade dialoogis."::: 
+    - **Viimased**: tuvastab võitja väärtuse kõige hiljutisema aja järgi. Nõuab kuupäeva või arvvälja iga koosteväljade osalemisolemi jaoks, et määrata olemi aega.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Hiljutisuse valik ühendamisväljade dialoogis.":::
+    - **Hiljutine**: tuvastab võitja väärtuse kõige kaugema aja järgi. Nõuab kuupäeva või arvvälja iga koosteväljade osalemisolemi jaoks, et määrata olemi aega.
+
+1.  Kui soovite koosteprotsessis osaleda, saate lisada veel välju.
+
+1.  Ühendatud välja saate ümber nimetada.
+
+1. Muudatuse rakendamiseks valige **Tehtud**.
+
+1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** . 
+
 ## <a name="manually-combine-fields"></a>Kombineeri välju käsitsi
 
 Määrake ühendatud atribuut käsitsi. 
 
 1. Lehel **Ühenda** valige **Ühenda väljad**.
 
-1. Sisestage **Nimi** ja **Väljundvälja nimi**.
+1. Määrake ripploendis **Väljade ühendamine** koostevõitja poliitika.
 
 1. Valige väli lisamiseks. Valige **Lisa välju** et ühendada rohkem välju.
 
-1. Kinnitage välistamine.
+1. Sisestage **Nimi** ja **Väljundvälja nimi**.
+
+1. Muudatuse rakendamiseks valige **Tehtud**.
 
 1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** . 
 
@@ -103,6 +126,27 @@ Mõned olemid sisaldavad rohkem üksikasju kui teised. Kui olem sisaldab välja 
 1. Kinnitage muudatus.
 
 1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** .
+
+## <a name="configure-customer-id-generation"></a>Kliendi ID loomise konfigureerimine 
+
+Pärast väljade ühendamist saate määratleda, kuidas luua CustomerId väärtusi ja kordumatuid kliendiprofiili identifikaatoreid. Andmete ühendamise protsessi ühendamissamm loob kordumatu kliendiprofiili identifikaatori. Identifikaator on *kliendi* olemi CustomerId, mis on saadud andmete ühendamise protsessist. 
+
+Kliendi olemi CustomerId põhineb mittetühiväärtusega võitja primaarvõtmete esimese väärtuse räsil. Need klahvid on pärit vastetes ja ühendamises kasutatavatest olemitest ning neid mõjutab sobitamisjärjestus.Seega saab genereeritud CustomerID muutuda, kui vastetellimuse esmases olemis muudetakse primaarvõtme väärtust. Primaarvõtme väärtus ei pruugi alati esindada sama klienti.
+
+Stabiilse kliendi ID konfigureerimine võimaldab teil seda käitumist vältida.
+
+**Kliendi kordumatu ID konfigureerimine**
+
+1. Minge **Ühenda** > **Liitmine**.
+
+1. Valige lehel **Liitmine** vahekaart **Võtmed**. 
+
+1. Liikuge kursoriga real **CustomerId** ja valige suvand **Konfigureeri**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Juhtelement ID loomise kohandamiseks.":::
+
+1. Valige kuni viis välja, mille ID on kordumatu ja stabiilsem. Kirjed, mis ei vasta teie konfiguratsioonile, kasutavad selle asemel süsteemi konfigureeritud ID-d.  
+
+1. Muudatuste rakendamiseks tehke valik **Tehtud** ja käivitage koosteprotsess.
 
 ## <a name="run-your-merge"></a>Käivitage kooste
 

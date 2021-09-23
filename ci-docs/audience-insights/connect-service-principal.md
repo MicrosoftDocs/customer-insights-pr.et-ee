@@ -1,7 +1,7 @@
 ---
 title: Ühendu Azure Data Lake Storage kontoga teenuse subjekti abil
 description: Kasutage Azure'i teenuse subjekti oma andmetega ühenduse loomiseks.
-ms.date: 07/23/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 845d1f55eb99f2adf9b437124addec4f6d016fec
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461143"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483520"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Ühendu Azure Data Lake Storage kontoga Azure teenuse subjekti abil
-<!--note from editor: The Cloud Style Guide would have us just use "Azure Data Lake Storage" to mean the current version, unless the old version (Gen1) is mentioned. I've followed this guidance, even though it seems that our docs and Azure docs are all over the map on this.-->
+
 Automatiseeritud tööriistad, mis kasutavad Azure'i teenuseid, peaksid alati omama piiratud õigusi. Selleks et rakendused ei saaks logida sisse kõikide õigustega kasutajana, pakub Azure teenusesubjekte. Lugege edasi, kuidas Dynamics 365 Customer Insights Azure Data Lake Storage kontoga ühenduda kasutades mäluruumi konto võtmete asemel Azure'i teenuse subjekti. 
 
-Teenuse subjekti abil saate turvaliselt [lisada või redigeerida ühisandmemudeli kausta andmeallikas](connect-common-data-model.md) või [luua või värskendada keskkonda](get-started-paid.md).<!--note from editor: Suggested. Or it could be ", or create a new environment or update an existing one". I think "new" is implied with "create". The comma is necessary.-->
+Teenuse subjekti abil saate turvaliselt [lisada või redigeerida ühisandmemudeli kausta andmeallikas](connect-common-data-model.md) või [luua või värskendada keskkonda](get-started-paid.md).
 
 > [!IMPORTANT]
-> - Mäluruumi konto, mis kasutab<!--note from editor: Suggested. Or perhaps it could be "The Data Lake Storage account to which you want to give access to the service principal..."--> teenuse subjekti, peab olema [hierarhilise nimeruumiga lubatud](/azure/storage/blobs/data-lake-storage-namespace).
+> - Teenuse subjekti kasutaval Data Lake Storage kontol peab olema [lubatud hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace).
 > - Teenusesubjekti loomiseks on teil vaja oma Azure'i tellimuse administraatoriõigusi.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Azure'i teenuse subjekti loomine Customer Insightsi abil
@@ -38,7 +38,7 @@ Enne uue teenusepõhimõtte loomist vaatajaskonna statistika või kaasamisstatis
 
 3. Valige jaotises **Halda** suvand **Ettevõtterakendused**.
 
-4. Otsige Microsofti<!--note from editor: Via Microsoft Writing Style Guide.--> Rakenduse ID:
+4. Otsige Microsofti rakenduse ID-d:
    - Sihtrühma ülevaated: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` nimega `Dynamics 365 AI for Customer Insights`
    - Kaasamisülevaated: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` nimega `Dynamics 365 AI for Customer Insights engagement insights`
 
@@ -49,23 +49,23 @@ Enne uue teenusepõhimõtte loomist vaatajaskonna statistika või kaasamisstatis
 6. Kui tulemusi ei tagastata, looge uus teenusesubjekt.
 
 >[!NOTE]
->Kui soovite kasutada täielikku Dynamics 365 Customer Insights võimsust, soovitame teil lisada mõlemad rakendused teenuse subjekti.<!--note from editor: Using the note format is suggested, just so this doesn't get lost by being tucked up in the step.-->
+>Kui soovite kasutada täielikku Dynamics 365 Customer Insights võimsust, soovitame teil lisada mõlemad rakendused teenuse subjekti.
 
 ### <a name="create-a-new-service-principal"></a>Uue teenusesubjekti loomine
-<!--note from editor: Some general formatting notes: The MWSG wants bold for text the user enters (in addition to UI strings and the settings users select), but there's plenty of precedent for using code format for entering text in PowerShell so I didn't change that. Note that italic should be used for placeholders, but not much else.-->
+
 1. Installige Azure Active Directory PowerShell for Graphi uusim versioon. Lisateavet leiate teemast [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2) installimine.
 
-   1. Valige arvutis klaviatuuril Windowsi klahv ja otsige **Windows PowerShell** ning valige **Käivita administraatorina**.<!--note from editor: Or should this be something like "search for **Windows PowerShell** and, if asked, select **Run as administrator**."?-->
+   1. Valige arvutis klaviatuuril Windowsi klahv ja otsige **Windows PowerShell** ning valige **Käivita administraatorina**.
    
    1. Sisestage avanevasse PowerShelli aknasse `Install-Module AzureAD`.
 
 2. Looge Customer Insightsi teenuse subjekt Azure AD PowerShelli mooduliga.
 
-   1. Sisestage PowerShelli aknasse `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Asendage *"[teie rentniku ID]"*<!--note from editor: Edit okay? Or should the quotation marks stay in the command line, in which case it would be "Replace *[your tenant ID]* --> tegeliku rentniku ID-ga, kus soovite teenuse subjekti luua. Keskkonna nime parameeter `AzureEnvironmentName` on valikuline.
+   1. Sisestage PowerShelli aknasse `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Asendage *[your tenant ID]* oma rentniku tegeliku ID-ga, kus soovite teenusesubjekti luua. Keskkonna nime parameeter `AzureEnvironmentName` on valikuline.
   
    1. Sisestage `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. See käsk loob valitud rentnikus teenusesubjekti sihtrühmaülevaadete jaoks. 
 
-   1. Sisestage `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Selle käsuga luuakse kaasamisülevaadete teenusesubjekt<!--note from editor: Edit okay?--> valitud rentnikus.
+   1. Sisestage `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Selle käsuga luuakse kaasamisülevaadete teenusesubjekt valitud rentnikul.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Teenusesubjektile õiguste andmine salvestuskontole juurdepääsemiseks
 
@@ -90,7 +90,7 @@ Muudatuste rakendamiseks võib kuluda kuni 15 minutit.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Salvestuskonto manuse Azure'i ressursi ID või Azure'i tellimuse üksikasjade sisestamine sihtrühma ülevaadetesse
 
-Saate teha järgmist.<!--note from editor: Edit suggested only if this section is optional.--> Manustada sihtrühma ülevaadetes Data Lake mäluruumi konto, et [talletada väljundandmeid](manage-environments.md) või [kasutada seda andmeallikana](connect-common-data-service-lake.md). See suvand võimaldab teil valida ressursipõhise või tellimispõhise lähenemisviisi vahel. Sõltuvalt valitud lähenemisviisist järgige ühte järgmistest jaotistest.<!--note from editor: Suggested.-->
+Saate manustada sihtrühma ülevaadetes Data Lake mäluruumi konto, et [talletada väljundandmeid](manage-environments.md) või [kasutada seda andmeallikana](connect-common-data-service-lake.md). See suvand võimaldab teil valida ressursipõhise või tellimispõhise lähenemisviisi vahel. Sõltuvalt valitud lähenemisviisist järgige ühte järgmistest jaotistest.
 
 ### <a name="resource-based-storage-account-connection"></a>Ressursipõhine salvestuskonto ühendus
 

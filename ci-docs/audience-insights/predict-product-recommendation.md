@@ -1,20 +1,20 @@
 ---
 title: Tootesoovituse ennustamine
 description: Prognoosige tooteid, mida klient tõenäoliselt ostab või millega suhtleb.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034951"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494534"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Tootesoovituse ennustamine (eelvaade)
 
@@ -89,23 +89,24 @@ Kui olete huvitatud selle funktsiooni proovimisest, kuid teil pole andmeid allpo
 
 ### <a name="add-required-data"></a>Lisage nõutud andmed
 
-1. Valige jaotises **Kliendi tehinguajalugu** suvand **Lisa andmeid** ja valige olem, mis sisaldab tehingu-/ostuajaloo teavet, nagu on kirjeldatud [eeltingimustes](#prerequisites).
+1. Valige **Lisa andmed** ja valige tegevusetüüp, mis sisaldab nõutavat kannete või ostuajaloo teavet.
 
-1. Vastendage semantilised väljad oma ostuajaloo olemi atribuutidega ja valige **Järgmine**. Väljade kirjelduste kohta vaadake teavet [eeltingimustes](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Olemi seose määratlemine.](media/product-recommendation-purchasehistorymapping.PNG "Ostuajaloo leht, kus kuvatakse semantilised atribuudid, mis on vastendatud valitud ostuajaloo üksuse väljadele")
+1. Valige jaotises **Tegevuste valik** valitud tegevusest konkreetsed tegevused, millele soovite oma arvutuste puhul keskenduda.
 
-1. Kui väljad pole täidetud, konfigureerige oma ostuajaloo olemis seos olemiga *Klient*.
-    1. Valige **Ostuajaloo olem**.
-    1. Valige **Väli**, mis tuvastab kliendi ostuajaloo olemis. See peab olema seostatud teie olemiga *Klient* esmase kliendi ID-ga.
-    1. Valige **Kliendi olem**, mis vastab teie peamisele kliendiolemile.
-    1. Tippige seost kirjeldav nimi.
-       > [!div class="mx-imgBorder"]
-       > ![Ostuajaluu leht, millel on näha kliendiga seose loomine.](media/model-purchase-join.png "Ostuajaloo leht, millel on näha kliendiga seose loomine")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Kõrvalpaan, kus kuvatakse kindlate tegevuste valimine semantilise tüübi all.":::
+
+1. Kui te pole tegevust veel semantilise tüübiga vastendanud, valige selleks **Redigeeri**. Avaneb juhendav kogemus semantilise tegevuse kaardismiseks. Vastendage oma andmed valitud tegevuste tüübi vastavate väljadega.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Lehe sätte tegevuse tüüp.":::
+
+1. Pärast tegevuse vastendamist vastava semantilise tüübiga jätkamiseks valige **Edasi** 
+ 
+1. Vastendage semantilised atribuudid väljadega, mis on mudeli käivitamiseks vajalikud.
 
 1. Valige **Salvesta**.
 
 1. Tehke valik **Edasi**.
+
 
 ### <a name="configure-product-filters"></a>Tootefiltrite konfigureerimine
 

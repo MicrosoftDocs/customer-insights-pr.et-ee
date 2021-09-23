@@ -1,22 +1,22 @@
 ---
-title: Klienditegevused
-description: Määratlege klienditegevusi ja vaadake neid kliendi ajaskaalal.
-ms.date: 04/07/2021
+title: Kliendi tegevused
+description: Määratleda klienditegevused ja kuvada need kliendiprofiilide ajaskaalal.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033626"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494406"
 ---
-# <a name="customer-activities"></a>Klienditegevused
+# <a name="customer-activities"></a>Kliendi tegevused
 
 Erinevatest andmeallikatest [pärinevaid klienditegevusi](data-sources.md) saate ühendada Dynamics 365 Customer Insights ajaskaala loomiseks, mis sisaldab tegevuste kronoloogilist loendit. Lisage ajajoon Dynamics 365 rakendustesse [kliendikaardi lisandmooduli](customer-card-add-in.md) lahendusega või Power BI juhtpaneelile.
 
@@ -60,12 +60,15 @@ Teie andmeallikad võivad hõlmata mitmesugustest andmeallikatest pärinevaid te
       - **Lisateave**: Väli, kus on selle tegevuse jaoks oluline teave.
       - **Ikoon**: ikoon, mis tähistab seda tegevusetüüpi kõige paremini.
       - **Veebiaadress**: Väli, mis sisaldab selle tegevuse kohta teavet sisaldavat URL-i. Näiteks tehingute süsteem, mis on selle tegevuse allikaks. See URL võib olla andmeallika mis tahes väli või seda saab luua uue väljana Power Query teisenduse abil. URL-i andmed talletatakse olemis *Ühendatud tegevus*, mida saab ära kasutada edaspidi kasutades [API-sid](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Määrake klienditegevuse andmed Ühendatud tegevuse olemis.":::
+
+   - **Kuva ajajoonel**
+      - Märkige, kas soovite kuvada seda tegevust kliendiprofiilide ajaskaala vaates. Kui soovite tegevuse ajaskaalal kuvada, valige **Jah**, tegevuse peitmiseks valige **Ei**.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Määrake klienditegevuse andmed Ühendatud tegevuse olemis.":::
 
 1. Järgmise etapi juurde liikumiseks klõpsake nuppu **Edasi**. Vvõite valida suvandi **Valmis ja ülevaade**, et salvestada tegevus tüüpiga **Muud**. 
 
-1. Valige etapis **Tegevuse tüüp** tegevuse tüüp ja soovi korral valige, kas soovite mõnda tegevusetüüpi semantiliselt kaardistada, et neid oleks võimalik kasutada Customer Insights muudes alades. Praegu, *Kordustellimus* ja *SalesOrderLine* tegevuse tüüpe, saab semantiliselt vastendada pärast väljade vastendamisega nõustumist. Kui tegevustüüp pole uue tegevuse jaoks oluline, võite kohandatud tegevustüübi jaoks valida valiku *Muu* või *Loo uus*.
+1. Valige etapis **Tegevuse tüüp** tegevuse tüüp ja soovi korral valige, kas soovite mõnda tegevusetüüpi semantiliselt kaardistada, et neid oleks võimalik kasutada Customer Insights muudes alades. Praegu, *Tagasiside*, *Lojaalsus*, *SalesOrder*, *SalesOrderLine* ja *Kordustellimus* tegevuse tüüpe, saab semantiliselt vastendada pärast väljade vastendamisega nõustumist. Kui tegevustüüp pole uue tegevuse jaoks oluline, võite kohandatud tegevustüübi jaoks valida valiku *Muu* või *Loo uus*.
 
 1. Järgmise etapi juurde liikumiseks klõpsake nuppu **Edasi**. 
 

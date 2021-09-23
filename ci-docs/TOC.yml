@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Uued ja värskendatud funktsioonid
       href: audience-insights/whats-new-audience-insights.md
-    - name: Uue keskkonna loomine
-      href: audience-insights/get-started-paid.md
+    - name: Alustamine
+      items:
+        - name: Lühijuhend
+          href: audience-insights/get-started.md
+        - name: Uue keskkonna loomine
+          href: audience-insights/get-started-paid.md
+        - name: Sihtrühma ülevaadete vaatamine
+          href: audience-insights/home.md
     - name: Tutvuge moodulitega
       items:
         - name: Andmete valmendamine
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Täiustatud aadressid
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Rikasta Azure Maps abil
+          href: audience-insights/enrichment-azure-maps.md
         - name: Rikastamine ettevõtte HERE Technologies teenusega
           href: audience-insights/enrichment-here.md
         - name: Leadspace'iga rikastamine
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: API ülevaade
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Teenusepiirangud
-      href: audience-insights/service-limits.md
-    - name: DSR-i taotlused vastavalt GDPR-ile
-      href: audience-insights/gdpr.md
 - name: Kaasamisülevaated (eelversioon)
   items:
     - name: Spikrikeskus
       href: engagement-insights/index.yml
     - name: Võimaluste ülevaade
       href: engagement-insights/overview.md
-    - name: Tasuta prooviversioon
-      href: 'https://pi.dynamics.com/'
     - name: Alustamine
       items:
-        - name: Alustamine
+        - name: Lühijuhend
           href: engagement-insights/get-started.md
         - name: Tööruumi loomine
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Keskkondade ja tööruumide haldamine
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Ühenduste konfigureerimine
-          href: engagement-insights/configure-connections.md
         - name: Küpsiste ja kasutaja nõusoleku haldamine
           href: engagement-insights/user-consent-storage.md
-    - name: GDPR
-      items:
-        - name: Isikuandmete kustutamine ja eksportimine
-          href: engagement-insights/delete-export-personal-data.md
     - name: Regionaalne saadavus
       href: engagement-insights/regional-availability.md
-    - name: Teenusepiirangud
-      href: engagement-insights/quotas.md
 - name: Sihtrühma ja kaasamisülevaadete integreerimine
   items:
     - name: Kaasamise ülevaadete ja sihtrühma ülevaadete linkimine
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Demograafiliste sihtide kasutamine käitumusliku teabe tükeldamiseks
       href: engagement-insights/curate-dimensions.md
+- name: Teenusepiirangud
+  href: service-limits.md
+- name: DSR-õigused ja taotlused
+  href: dsr-rights-requests.md
 - name: Hangi tuge
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

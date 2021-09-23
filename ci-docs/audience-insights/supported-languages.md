@@ -1,24 +1,23 @@
 ---
-title: Sihtrühmaülevaadetes toetatud keeled
+title: Rakenduse Dynamics 365 Customer Insights puhul toetatavad keeled
 description: Tutvuge keeletoega ja konfigureerige see.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035134"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483337"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Sihtrühmaülevaadete funktsioonis toetatud keeled
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Rakenduse Dynamics 365 Customer Insights puhul toetatavad keeled
 
-Dynamics 365 Customer Insightsi sihtrühmaülevaated on tõlgitud paljudesse keeltesse. Järgmine loend sisaldab saadaolevaid keeli ja teavet selle kohta, mis on tõlgitud. Saate lisateavet ka keelesätete muutmise kohta. 
+Dynamics 365 Customer Insights on tõlgitud mitmesse keelde. Järgmine loend sisaldab saadaolevaid keeli ja teavet selle kohta, mis on tõlgitud. Saate lisateavet ka keelesätete muutmise kohta. 
 
 ## <a name="languages"></a>Keeled
 
@@ -64,12 +63,12 @@ Dynamics 365 Customer Insightsi sihtrühmaülevaated on tõlgitud paljudesse kee
 | Rootsi | svenska |
 | Tai | ไทย |
 | Türgi | Türkçe |
-| ukraina | українська |
+| Ukraina | українська |
 | vietnami | Tiếng Việt |
 
 ## <a name="whats-translated"></a>Mis on tõlgitud
 
-Rakendus kasutab teie keele-eelistust, et kuvada teie eelistatud keeles elemente, nt menüü, silditekst ja süsteemiteated.
+Customer Insights kasutab teie keele-eelistust, et kuvada teie eelistatud keeles elemente, nt menüü, sildi tekst ja süsteemi sõnumid.
 
 Kuna enamus funktsioone põhineb teie andmetel, jäävad teatud üksused algsesse keelde. Näiteks:
 

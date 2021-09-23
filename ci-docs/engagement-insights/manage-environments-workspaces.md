@@ -4,17 +4,17 @@ description: Tööruumide ja keskkondade loomine, ümbernimetamine ja kustutamin
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034037"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486030"
 ---
 # <a name="manage-environments-and-workspaces"></a>Keskkondade ja tööruumide haldamine
 
@@ -85,13 +85,11 @@ Tööruumi kustutamisel eemaldatakse jäädavalt kogu selle sisu, andmed, sätte
 
 1. Valige **Liikmete lisamine** et anda juurdepääs ja [määrata rollid](user-roles.md). Praegu on ainult **Tööruumi administraator** saadaval.
 
-1. Kui seadistate [ühenduse sihtrühma ülevaadetega](configure-connections.md), saate valida **Luba juurdepääs profiiliandmetele** et liige saaks vaadata aruandeid, mis põhinevad [kasutajaprofiilidel](profile-reports.md).
-
 1. Valige **Lisa liikmed**, et lisada nad oma tööruumi.
 
 ## <a name="manage-an-environment"></a>Halda keskkonda
 
-Keskkonna administraatorina pääsete keskkonnale ligi vasakpoolselt navigeerimispaanilt. Saate konfigureerida keskkonnasätteid, muid keskkonnaadministraatoreid, tööruume ja [ühendusi publiku ülevaadetega](configure-connections.md). Valige halduskeskuse erinevate alade vahel liikumiseks vahekaardid.
+Keskkonna administraatorina pääsete keskkonnale ligi vasakpoolselt navigeerimispaanilt. Saate konfigureerida keskkonnasätteid, muid keskkonnaadministraatoreid ja tööruume. Valige halduskeskuse erinevate alade vahel liikumiseks vahekaardid.
 
 :::image type="content" source="media/New-environment.png" alt-text="Keskkonna halduskeskus.":::
 
@@ -123,8 +121,6 @@ Keskkonna administraatorina pääsete keskkonnale ligi vasakpoolselt navigeerimi
 
 1. Valige **Liikmete lisamine** et värskendada liikmeid ja [määrata rollid](user-roles.md). Praegu on ainult **Keskkonna administraator** saadaval.
 
-1. Kui seadistate [ühenduse sihtrühma ülevaadetega](configure-connections.md), saate valida **Luba juurdepääs profiiliandmetele** et liige saaks vaadata aruandeid, mis põhinevad [kasutajaprofiilidel](profile-reports.md).
-
 1. Valige **Lisa liikmed**, et lisada nad oma tööruumi.
 
 ### <a name="delete-an-environment"></a>Keskkonna kustutamine
@@ -143,7 +139,7 @@ Keskkonnaadministraatorid saavad keskkondi kustutada. Enne keskkonna kustutamist
 
 Sihtrühma ülevaadete ühenduste loomine võimaldab näha aruandeid kaasamisülevaadetes, mis põhinevad ühendatud kliendiprofiilidel. 
 
-Lisateavet leiate teemast [Ühenduste konfigureerimine](configure-connections.md).
+Lisateavet vt: [Sihtrühma ülevaadete ja kaasamisülevaadete vahelise lingi loomine](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Isikuandmete haldamine
 

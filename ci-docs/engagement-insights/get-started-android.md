@@ -4,17 +4,17 @@ description: Teave Android SDK isikupärastamise ja käitamise kohta
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036913"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494270"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Hakake kasutama rakendust Android SDK
 
@@ -35,17 +35,38 @@ Järgmised seadistusvõimalused saab SDK-le edastada:
 
 - Edastusvõti (hankimiseks vaadake allolevaid juhiseid)
 
-## <a name="step-1-integrate-the-sdk-into-your-application"></a>1. etapp. SDK integreerimine rakendusega
+## <a name="integrate-the-sdk-into-your-application"></a>SDK integreerimine rakendusega
 Alustage protsessi, valides töötamiseks tööruumi, valides Android mobiiliplatvormi ja laadides alla Android SDK.
 
 - Valige oma tööruum vasakpoolsel navigeerimispaanil tööruumi vahetaja abil.
 
 - Kui teil pole olemasolevat tööruumi, valige  **Uus tööruum** ja järgige [uue tööruumi](create-workspace.md) loomise juhiseid.
 
-## <a name="step-2-configure-the-sdk"></a>2. etapp. Konfigureeri SDK
+- Pärast tööruumi loomist minge **Administraator** > **Tööruum** ja seejärel valige  **Installijuhend**. 
 
-1. Pärast tööruumi loomist minge **Administraator** > **Tööruum** ja seejärel valige  **Installijuhend**. 
+## <a name="configure-the-sdk"></a>Konfigureeri SDK
 
+Kui olete SDK alla laadinud, saate sellega sündmuste lubamiseks ja määratlemiseks töötada Android Studios. Selle tegemiseks on kaks võimalust.
+### <a name="option-1-using-jitpack-recommended"></a>1. valik: JitPacki kasutamine (soovituslik)
+1. Lisa JitPack repositooriumisse `build.gradle` juur:
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+1. Lisage sõltuvus.
+    ```gradle
+    dependencies {
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        api 'com.google.code.gson:gson:2.8.1'
+    }
+    ```
+
+### <a name="option-2-using-download-link"></a>2. valik: allalaadimislingi kasutamine
 1. Laadige alla [kaasamisülevaated Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) ja paigutage `eiandroidsdk-debug.aar` fail `libs` kausta.
 
 1. Avage oma projekti taseme `build.gradle` fail ja lisage järgmised lõigendid:
@@ -62,7 +83,17 @@ Alustage protsessi, valides töötamiseks tööruumi, valides Android mobiilipla
     }
     ```
 
-1. Saate seadistada kaasamisülevaadete SDK konfiguratsiooni läbi `AndroidManifest.xml` faili, mis asub `manifests` kaustas. 
+1. Lisage oma `manifests` kausta faili `AndroidManifest.xml` võrgu- ja Interneti-juurdepääsu õigused. 
+    ```xml
+    <manifest>
+        ...
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    ```
+    
+1. Saate seadistada kaasamisülevaadete SDK konfiguratsiooni läbi `AndroidManifest.xml` faili. 
+
+## <a name="enable-auto-instrumentation"></a>Luba automaatne instrumentatsioon
 1. Kopeerige XML-lõigend **Installijuhendist**. `Your-Ingestion-Key` peaks asustama automaatselt.
 
    > [!NOTE]
@@ -85,7 +116,7 @@ Alustage protsessi, valides töötamiseks tööruumi, valides Android mobiilipla
    </application>
    ```
 
-1. Saate lubada või keelata `View` sündmuste automaathõivet, määrates ülaltoodud `autoCapture` välja väärtuseks `true` või `false`.
+1. Saate lubada või keelata `View` sündmuste automaathõivet, määrates ülaltoodud `autoCapture` välja väärtuseks `true` või `false`. Praegu tuleb `Action` sündmused käsitsi lisada.
 
 1. (valikuline) Muud konfiguratsioonid hõlmavad lõpp-punkti kogumiga URL seadmist. Need saab lisada edastusvõtme `AndroidManifest.xml` metaandmete alla:
     ```xml
@@ -94,9 +125,9 @@ Alustage protsessi, valides töötamiseks tööruumi, valides Android mobiilipla
             android:value="https://some-endpoint-url.com" />
     ```
 
-## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>3. etapp. Lähtesta SDK üksusest MainActivity 
+## <a name="implement-custom-events"></a>Rakendage kohandatud sündmusi
 
-Pärast SDK initsialiseerimist saate keskkonnas MainActivity töötada sündmuste ja nende atribuutidega.
+Pärast SDK initsialiseerimist saate keskkonnas `MainActivity` töötada sündmuste ja nende atribuutidega.
 
     
 Java:
@@ -147,7 +178,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-### <a name="set-user-details-for-your-event-optional"></a>Määrake oma sündmuse kasutaja üksikasjad (valikuline)
+## <a name="set-user-details-for-your-event-optional"></a>Määrake oma sündmuse kasutaja üksikasjad (valikuline)
 
 SDK võimaldab määratleda kasutajateavet, mida saab saata iga sündmusega. Kasutajateabe määramiseks helistage `setUser(user: User)` API `Analytics` tasemel.
 

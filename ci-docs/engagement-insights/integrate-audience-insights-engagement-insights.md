@@ -1,19 +1,19 @@
 ---
 title: Sihtrühma ülevaadete ja kaasamisülevaadete vahelise lingi loomine
 description: Looge aktiivne link sihtrühma ülevaadete ja kaasamisstatistika vahel, et võimaldada andmete kahesuunalist jagamist.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461008"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487102"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Sihtrühma ülevaadete ja kaasamisülevaadete vahelise lingi loomine
 
@@ -26,14 +26,14 @@ Kasutage kaasamisülevaadete analüüsimiseks ühendatud profiile ja sihtrühma 
 ## <a name="prerequisites"></a>Eeltingimused
 
 - Sihtrühma ülevaadete profiilid peavad olema salvestatud teie Azure Data Lake Storage kontole või hallatavasse [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md) andmekontosse. 
-
+- Teie sihtrühma ülevaadete keskkond peaks olema seotud Dataverse keskkonnaga. Kui see keskkond kasutab andmemäluks Dataverse keskkonda, kontrollige kindlasti vaatajate ülevaadetes valikut **Andmete ühiskasutuse lubamine**. Lisateavet vt: [Looge ja seadistage vaatajaskonna statistikas tasuline keskkond](../audience-insights/get-started-paid.md).
 - Teil on vaja administraatoriõigusi nii kaasamisülevaadete kui ka sihtrühma ülevaadete keskkondade jaoks.
-
 - Lingitud keskkonnad peavad olema samas geograafilises piirkonnas.
 
 > [!NOTE]
 > - Kui teie sihtrühma ülevaadete tellimus on prooviversioon, mis kasutab sihtrühma ülevaateid sisemiselt hallatud andmetest, pöörduge abi saamiseks [pirequest@microsoft.com](mailto:pirequest@microsoft.com). 
-> - Kui teie sihtrühma ülevaadete keskkond kasutab andmete tallemiseks teie Azure Data Lake Storage kontot, peate lisama oma salvestusruumi kontole kaasamisülevaated Azure'i teenuse subjekti. Lisateavet leiate, kui [loote ühenduse Azure Data Lake Storage kontoga Azure'i teenuse subjektiga, et saada sihtrühma ülevaateid](../audience-insights/connect-service-principal.md). Samuti peaks teie sihtrühma ülevaadete keskkonda olema seotud [Dataverse keskkonnaga](../audience-insights/get-started-paid.md). 
+> - Kui teie sihtrühma ülevaadete keskkond kasutab andmete tallemiseks teie Azure Data Lake Storage kontot, peate lisama oma salvestusruumi kontole kaasamisülevaated Azure'i teenuse subjekti. Lisateavet leiate, kui [loote ühenduse Azure Data Lake Storage kontoga Azure'i teenuse subjektiga, et saada sihtrühma ülevaateid](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Keskkonnalingi loomine
 
@@ -75,6 +75,7 @@ Pärast keskkondade linkimist saate lingitud keskkondade jaoks valikulisi funkts
 
    > [!IMPORTANT]
    > Kui te selles etapis sõnaselgelt kasutajaid ei lisa, peidetakse andmed kaasamise statistika kasutajate eest.
+   > Selleks, et sihtrühma ülevaated kuvaksid kaasamisülevaadetes, peate esmalt [käitama kooste- ja järgmised protsessid](../audience-insights/merge-entities.md). Järgmised protsessid on olulised, kuna need loovad ainulaadse tabeli, mis valmistab vaatajaskonna statistika segmendid ette kaasamisstatistikaga jagamiseks. (Süsteemivärskenduse ajasmisel kaasatakse need automaatselt ka järgnevad protsessid.)
 
 1. Vaadake oma valik läbi ja seejärel valige **Valmis**.
 

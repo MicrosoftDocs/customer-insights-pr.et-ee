@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
+ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461098"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466343"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Demograafiliste sihtide kasutamine käitumusliku teabe tükeldamiseks
 
@@ -29,7 +29,7 @@ Kasutades ühtseid profiili demograafilisi mõõtmeid, saavad kaasamisstatistika
 - Kaasamisülevaadete keskkond, kus teil on kliendiprofiili andmed lingitud vaatajaskonna statistika keskkonnaga, kus kliendiprofiilid luuakse. Lisateave: [Sihtrühma ülevaadete ja kaasamisülevaadete vahelise lingi loomine](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Pärast sihtrühma ülevaadete ja kaasamisstatistika keskkondade vahelise lingi loomist vajate ainult kliendiprofiili atribuutide kohta spetsiifilisi andmeid, mis võivad olla kasulikud kaasamisstatistika mõõtmetena. Lisateavet leiate teemast [Sihtrühma ülevaadete ühendatud profiilide atribuutide ja segmentide lubamine](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Pärast sihtrühma ülevaadete ja kaasamisstatistika keskkondade vahelise lingi loomist vajate ainult kliendiprofiili atribuutide kohta spetsiifilisi andmeid, mis võivad olla kasulikud kaasamisstatistika mõõtmetena. Lisateavet leiate teemast [Sihtrühma ülevaadete ühendatud profiilide atribuutide ja segmentide lubamine](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Uue kohandatud aruande loomine
 

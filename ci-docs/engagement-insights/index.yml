@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Kaasamisülevaate (eelvaate) võimalused rakenduses Dynamics 365 Customer Insights
+title: Kaasamisülevaatete võimalused rakenduses Dynamics 365 Customer Insights (eelvaade)
 summary: Koguge oma veebilehe jaoks andmeid. Interaktiivselt klientide interaktiivse suhtluse ja kasutuskogemuse mõistmine saitidel. Kasutage kaasamisülevaadete ja sihtrühma ülevaadete põhjalikku integreerimist, et rikastada oma reaalajalist käitumuslikku analüüsi kliendiprofiilide aruannetega. Rikastage kliendiprofiile veebitegevustega, et saada asjakohaste kliendiandmete kõrval reaalajas käitumisandmeid. Muutke oma ettevõtet nii, et see saaks kliendiandmetest kohese väärtuse.
 metadata:
   title: Kaasamise ülevaadete (eelvaate) dokumentatsioon
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: et-EE
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036233"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494179"
 landingContent:
 - title: Teave
   linkLists:
   - linkListType: overview
     links:
-    - text: Võimaluste ülevaade
+    - text: Võimaluste eelised
       url: overview.md
-    - text: Terminid ja mõisted
+    - text: Mõistete sõnastik
       url: glossary.md
-    - text: Kaasamise ülevaadete avastamine
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Uued ja värskendatud funktsioonid
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Sisseelamise toetamine
   linkLists:
   - linkListType: how-to-guide
@@ -38,28 +38,30 @@ landingContent:
       url: create-workspace.md
     - text: Veebisaidile funktsioonide lisamine
       url: instrument-website.md
-- title: Aruanded
+- title: Aruande kuvamine ja filtreerimine
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Kuva aruanded
       url: view-reports.md
-    - text: Kohandatud aruannete loomine
-      url: custom-reports.md
     - text: Koondatud profiiliaruande vaatamine
       url: profile-reports.md
-    - text: Lehterdiagrammi aruannete loomine
-      url: funnel-reports.md
-- title: Sündmused
+    - text: Aruannete filtreerimine sihtrühma segmentide abil
+      url: integrate-audience-insights-segments.md
+- title: Analüüs
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Lehterdiagrammi aruannete loomine
+      url: funnel-reports.md
+    - text: Käitumusandmete analüüsimine
+      url: curate-dimensions.md
+    - text: Kohandatud aruannete loomine
+      url: custom-reports.md
     - text: Täpsemate sündmuste loomine
       url: refined-events.md
     - text: Ekspordi sündmused
       url: export-events.md
-    - text: Isikuandmete kustutamine ja eksportimine
-      url: delete-export-personal-data.md
 - title: Arendaja ressursid
   linkLists:
   - linkListType: reference
@@ -81,6 +83,10 @@ landingContent:
     - text: Keskkondade ja tööruumide haldamine
       url: manage-environments-workspaces.md
     - text: Ühenduse loomine sihtrühma ülevaadetega
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Küpsiste ja kasutaja nõusoleku haldamine
       url: user-consent-storage.md
+    - text: Isikuandmete kustutamine ja eksportimine
+      url: delete-export-personal-data.md
+    - text: Teenusepiirangud
+      url: ../service-limits.md
