@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487102"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559013"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Sihtrühma ülevaadete ja kaasamisülevaadete vahelise lingi loomine
 
@@ -54,6 +54,9 @@ Saate luua keskkonnalingi, värskendades **Administreerimine** > **Keskkond** s�
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Sihtrühma ülevaadete ühendatud profiilide atribuutide ja segmentide lubamine
 
 Pärast keskkondade linkimist saate lingitud keskkondade jaoks valikulisi funktsioone valida. Need funktsioonid võimaldavad ühtseid profiiliatribuute ja sihtrühma ülevaadete segmente kliendiandmete interaktiivseks analüüsiks.
+
+> [!IMPORTANT]
+> Selleks, et sihtrühma ülevaated kuvaksid kaasamisülevaadetes, peate esmalt [käitama kooste- ja järgmised protsessid](../audience-insights/merge-entities.md). Järgmised protsessid on olulised, kuna need loovad ainulaadse tabeli, mis valmistab vaatajaskonna statistika segmendid ette kaasamisstatistikaga jagamiseks. (Süsteemivärskenduse ajasmisel kaasatakse need automaatselt ka järgnevad protsessid.)
 
 **Veebiandmete analüüsimine kaasamisülevaadetes**
 

@@ -4,17 +4,17 @@ description: Lehteraruannete kasutamine, et mõista, kuidas sihtrühm otsuseid t
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
+ms.date: 09/21/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498637"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558915"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Lehterdiagrammi loomine ja haldamine
 
@@ -163,13 +163,23 @@ Lehetraruande nime saate muuta, kustutada või aruande samme muuta.
 
 Kaasamisülevaated annavad nüüd klientidele lehterdiagrammi ülevaateid. Lehterdiagrammi ülevaadete abil saate koguda klientide käitumise kohta vihjeid lehtriaruande etappide kohta. Uue lehtriaruande loomisel ja salvestamisel luuakse aruande jaoks automaatselt lehtridiagrammi ülevaated. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Lehterdiagrammi ülevaated.":::
+
+> [!NOTE]
+> Lehtriülevaateid saab luua ainult lehtrietappide jaoks, mis **ei** sisalda kohandatud dimensioone. Lehtri kõigi etappide jaoks lehtriülevaadete loomiseks kasutage lehtrietappide loomiseks valmis kaasamisülevaateid. 
+
 Lehtridiagrammi ülevaateid saate vaadata järgmistest kategooriatest nii põhi- kui ka etapitasemetel. 
 
- - Teisendusmäär 
+ - Teisendusmäär
+ -    Teisendusmäär üksuste Siirdu maksma ja Osta vahel on 22%.
  - Üleminekuaeg 
+ -    Keskmine üleminekuaeg üksuste Ostukorv ja Siirdu maksma vahel on 23 minutit. 
  - Lõpuleviimise aeg 
+ -    Kliendi keskmine lehterdiagrammi lõpule viimiseks kuluv aeg on 47 minutit. 
 
 Kasutage neid ülevaateid, et uurida klientide käitumist ja paremini mõista oma lehtriaruandes salvestatud punkte ja teisendusi. 
+
+Kui soovite võrrelda ülevaateid erinevate etappide vahel, valige **Vaadake etappideks liigendamist** või **Võrrelge teiste sammudega** ülevaadete kaartidest. Nendes diagrammides kuvatakse lehtri iga etapi mõõdikuid võrdlev ribagraafik. 
 
 Lehtridiagrammi ülevaated arvutatakse ümber iga 24 tunni järel või lehtriaruande **salvestamisel**. 
 

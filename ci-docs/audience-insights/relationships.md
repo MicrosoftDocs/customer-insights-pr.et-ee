@@ -1,20 +1,20 @@
 ---
 title: Seosed olemite ja olemiteede vahel
 description: Looge ja hallake mitmest andmeallikast pärit olemite vahelisi seoseid.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035226"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557347"
 ---
 # <a name="relationships-between-entities"></a>Olemitevaheline seos
 
@@ -93,11 +93,11 @@ Saadaolevad suvandid:
 - **Muuda horisontaal-/vertikaalseks paigutuseks**: muutke olemite ja seoste joondust.
 - **Redigeeri**: redigeerige kohandatud seoste atribuute redigeerimispaanil ja salvestage muudatused.
 
-### <a name="relationship-path"></a>Seose tee
+## <a name="relationship-paths"></a>Seose teed
 
-Seosetee kirjeldab olemeid, mis on seotud allika olemi ja sihtüksuse vaheliste suhetega. Seda kasutatakse segmendi või meetme loomisel, mis hõlmab muid üksusi peale ühendatud profiili olemi ja ühendatud profiili olemini jõudmiseks on mitu võimalust.
+Seose tee kirjeldab olemeid, mis on seotud lähteolemi ja sihtolemi vaheliste seostega. Seda kasutatakse segmendi või meetme loomisel, mis hõlmab muid üksusi peale ühendatud profiili olemi ja ühendatud profiili olemini jõudmiseks on mitu võimalust. 
 
-Seosetee teavitab süsteemi, millistel suhetel on juurdepääs ühendatud profiili olemile. Erinevad seoseteed võivad anda erinevaid tulemusi.
+Seosetee annab süsteemile teada, millistele seostele ühendatud profiiliolemis juurde pääseda. Erinevad seoseteed võivad anda erinevaid tulemusi.
 
 Olemil *eCommerce_eCommercePurchases* on olemiga *Klient* järgmised seosed.
 
@@ -105,7 +105,43 @@ Olemil *eCommerce_eCommercePurchases* on olemiga *Klient* järgmised seosed.
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klient
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klient 
 
-Seosetee määrab, milliseid üksusi saab kasutada mõõtude või segmentide reeglite loomisel. Pikima seoseteega valiku tegemine annab tõenäoliselt vähem tulemusi, kuna vastavad kirjed peavad olema osa kõigist olemitest. Selles näites peab klient ostma kaupu e-poe kaudu (eCommerce_eCommercePurchases), müügikohas (POS_posPurchases) ja osalema meie lojaalsusprogrammis (loyaltyScheme_loyCustomers). Esimese suvandi valimisel saate tõenäoliselt rohkem tulemusi, kuna kliendid peavad olema ainult ühes lisaolemis olemas.
+Seosetee määratleb, milliseid olemeid saate kasutada mõõtmise reeglite loomiseks või segmentidena. Pikima seoseteega valiku tegemine annab tõenäoliselt vähem tulemusi, kuna vastavad kirjed peavad olema osa kõigist olemitest. Selles näites peab klient ostma kaupu e-poe kaudu (eCommerce_eCommercePurchases), müügikohas (POS_posPurchases) ja osalema meie lojaalsusprogrammis (loyaltyScheme_loyCustomers). Kui valite esimese võimaluse, saate tõenäoliselt rohkem tulemusi, sest kliendid peavad eksisteerima vaid ühes lisaolemis.
+
+### <a name="direct-relationship"></a>Otsene seos
+
+Seos liigitatakse **otsese seosena** kui allika olem suhestub sihtolemiga vaid ühe seosega.
+
+Näiteks kui tegevuseost nimega *eCommerce_eCommercePurchases* loob ühenduse sihtolemiga *eeCommerce_eCommerceContacts*  *Contactld* kaudu, on see otsene seos.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Lähteolem loob ühenduse otse sihtolemiga.":::
+
+#### <a name="multi-path-relationship"></a>Mitme teega seos
+
+**Mitme teega seos** on eri tüüpi otsene seos, mis ühendab lähteolemi mitme sihtolemiga.
+
+Näiteks kui tegevusolem nimega *eCommerce_eCommercePurchases* on seotud kahe sihtolemiga mõlemad nii *eCommerce_eCommerceContacts* kui ka *loyaltyScheme_loyCustomers* on see mitme tee seos.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Lähteolem loob mitme hüppega seose kaudu otse ühenduse rohkem kui ühe sihtolemiga.":::
+
+### <a name="indirect-relationship"></a>Kaudne seos
+
+Seos liigitatakse **kaudse seosena** kui allika olem suhestub ühe või rohkema lisaolemiga enne sihtolemiga seostumist.
+
+#### <a name="multi-hop-relationship"></a>Mitme hüppega seos
+
+*Mitme hüppega seos* on *kaudne seos* , mis lubab sul ühenduda allikaolemi sihtolemiga ühe või rohkema vahendava olemi kaudu.
+
+Näiteks kui tegevusolem nimega *eCommerce_eCommercePurchasesWest* loob ühenduse vahendava olemiga nimega *eCommerce_eCommercePurchasesEast* ja siis ühendub sihtolemiga nimega *eCommerce_eCommerceContacts*, on see mitme hüppega seos.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Lähteolem loob ühenduse otse sihtolemiga koos vahendava olemiga.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Mitme hüppe ja teega seos
+
+Mitmehüppega ja mitme teega seoseid saab kasutada koos mitme **mitme hüppega mitme teega seoste** loomiseks. See eritüüp koondab **mitme hüppega** ja **mitme teega** seoste funktsioonid. See võimaldab luua ühenduse rohkem kui ühe sihtolemiga, kasutades subjektiksolemeid.
+
+Näiteks kui tegevusolem nimega *eCommerce_eCommercePurchasesWest* loob ühenduse vahendava olemiga nimega *eCommerce_eCommercePurchasesEast* ja siis ühendub kahe sihtolemiga nimega *eCommerce_eCommerceContacts* ja *loyaltyScheme_loyCustomers* on see mitme hüppega seos.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Lähteolem loob ühenduse otse ühe sihtolemiga ja loob ühenduse mõne muu sihtolemiga vahendava olemi kaudu.":::
 
 ## <a name="manage-existing-relationships"></a>Olemasolevate seoste haldamine 
 

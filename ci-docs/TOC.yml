@@ -242,7 +242,7 @@
   items:
     - name: Spikrikeskus
       href: engagement-insights/index.yml
-    - name: Võimaluste ülevaade
+    - name: Kaasamisülevaadete kohta
       href: engagement-insights/overview.md
     - name: Alustamine
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Regionaalne saadavus
       href: engagement-insights/regional-availability.md
-- name: Sihtrühma ja kaasamisülevaadete integreerimine
+- name: Andmete ühiskasutus võimaluste vahel
   items:
     - name: Kaasamise ülevaadete ja sihtrühma ülevaadete linkimine
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: DSR-õigused ja taotlused
   href: dsr-rights-requests.md
-- name: Hangi tuge
-  href: 'https://dynamics.microsoft.com/support/'
