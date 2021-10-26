@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmed teenuses Microsoft Dataverse
 description: Customer Insights olemite kasutamine Microsoft Dataverse tabelitena.
-ms.date: 06/15/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032891"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645213"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
 
@@ -24,11 +24,7 @@ Customer Insights pakub võimalust muuta väljundi olemid kättesaadavaks teenus
 
 **Asutused, kus on olemasolevad Dataverse keskkonnad**
 
-Asutused, mis Dataverse juba kasutavad, saavad [kasutada ühte olemasolevat Dataversekeskkonda](get-started-paid.md), kui administraator seadistab sihtrühma ülevaated. Andes Dataverse keskkonna URL-i, lisab see uutele publiku ülevaadete keskkonnale. Parima võimaliku toimivuse tagamiseks peavad Customer Insightsi ja Dataverse keskkonnad olema majutatud samas piirkonnas.
-
-Dataverse keskkonna manustamiseks laiendage sihtrühma ülevaadete keskkonda luues **täpsemaid sätteid**. Sisestage **Microsoft Dataverse keskkonna URL** ja märkige **andmete ühiskasutuse lubamine ruut**.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="Alt-klahv.":::
+Asutused, mis Dataverse juba kasutavad, saavad [kasutada ühte olemasolevat Dataversekeskkonda](create-environment.md), kui administraator seadistab sihtrühma ülevaated. Andes Dataverse keskkonna URL-i, lisab see uutele publiku ülevaadete keskkonnale. Parima võimaliku toimivuse tagamiseks peavad Customer Insightsi ja Dataverse keskkonnad olema majutatud samas piirkonnas.
 
 **Uus organisatsioon**
 

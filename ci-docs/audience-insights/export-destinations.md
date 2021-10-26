@@ -1,7 +1,7 @@
 ---
 title: Andmete eksportimine Customer Insights
 description: Andmete jagamiseks hallake eksporti.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034677"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623096"
 ---
 # <a name="exports-preview-overview"></a>Eksportimine (eelversioon) ülevaade
 
-Lehel **Ekspordid** näete kõiki konfigureeritud eksporte. Ekspordid jagavad erinevate rakendustega konkreetseid andmeid. Need võivad sisaldada kliendiprofiile või olemeid, skeeme ja kaardistamise üksikasju. Iga ekspordi jaoks on vaja [ühendust, mille on seadistanud administraator, et hallata autentimist ja juurdepääsu](connections.md).
+Lehel **Ekspordid** näete kõiki konfigureeritud eksporte. Ekspordid jagavad erinevate rakendustega konkreetseid andmeid. Need võivad sisaldada kliendiprofiile, olemeid, skeeme ja vastendamise üksikasju. Iga ekspordi jaoks on vaja [ühendust, mille on seadistanud administraator, et hallata autentimist ja juurdepääsu](connections.md).
 
 Minge **Andmed** > **Ekspordid**, et näha ekspordilehte. Kõik kasutajarollid saavad vaadata konfigureeritud eksporti. Kasutage käsuriba otsinguvälja, et leida eksporti nime, ühenduse nime või ühenduse tüübi järgi.
 
-## <a name="set-up-a-new-export"></a>Uue ekspordi seadistamine
+## <a name="export-types"></a>Ekspordi tüübid
 
+Eksporditüüpe on kaks peamist:  
+
+- **Andmeekspordiga** saate eksportida mis tahes tüüpi sihtrühma ülevaadetes saadaolevaid olemeid. Ekspordiks valitud olemid eksporditakse kõigi andmeväljade, metaandmete, skeemide ja vastendamise üksikasjadega. 
+- **Segmendi eksporti** abil saate eksportida segmendi olemeid sihtrühma ülevaadetest. Segmendid esindavad kliendiprofiilide loendit. Eksportimise konfigureerimisel valite kaasatud andmeväljad, olenevalt sihtsüsteemist, kus andmeid ekspordite. 
+
+### <a name="export-segments"></a>Ekspordi segmendid
+
+**Segmentide eksportimine keskkondades äriettevõtete (B2B) või üksikklientide jaoks (B2C)**  
+Enamik ekspordisuvandeid toetab mõlemat tüüpi keskkondi. Segmentide eksportimisel erinevatesse sihtsüsteemidesse on erinõuded. Üldiselt sisaldavad segmendi liige ja kliendiprofiil kontaktteavet. Kuigi see kehtib enamasti üksikklientidele (B2C) põhinevate segmentide puhul, ei pruugi see käia ärikontodel (B2B) põhinevate segmentide kohta. 
+
+**Segmendi ekspordikeskkonnad ärikontode jaoks (B2B)**  
+- Segmendid ärikontode keskkondades on rajatud *konto* olemile. Konto segmentide eksportimiseks nagu see on, peab sihtsüsteem toetama puhtaid konto segmente. See kehtib [LinkedIn'i](export-linkedin-ads.md) kohta, kui valite ekspordi määratlemisel suvandi **ettevõte**.
+- Kõik muud sihtsüsteemid nõuavad kontaktiolemi välju. Tagamaks, et ettevõtte segmendid saavad tuua andmeid seotud kontaktidest, peab teie segmendi määratluses olema kontakti olemi projektiatribuudid. Lisateave [segmentide ja projektiatribuutide konfigureerimise kohta](segment-builder.md).
+
+**Segmentide eksport keskkondades üksikklientidele (B2C)**  
+- Segmendid üksikutele klientidele mõeldud keskkondade kontekstis on üles ehitatud olemile *ühendatud kliendiprofiil*. Iga sihtsüsteemide nõuetele (näiteks meiliaadressi) vastavad segmendid võidakse eksportida.
+
+**Segmendiekspordi piirangud**  
+- Muude tootjate sihtsüsteemid võivad piirata ekspordita kliendiprofiilide arvu. 
+- Üksikklientide puhul näete segmendiliikmete tegelikku arvu, kui valite eksportimiseks segmendi. Liiga suure segmendi korral kuvatakse hoiatus. 
+- Äriettevõtete puhul näete segmenti kaasatud ettevõtete arvu; küll aga ei näidata nende kontaktide arvu, mida saab projekteerida. Mõnel juhul võib see kaasa tuua eksporditud segmendi, mis sisaldab tegelikult rohkem kliendiprofiile kui sihtsüsteem aktsepteerib. Sihtsüsteemide tulemuste piirangute ületamine jätab ekspordi vahele. 
+
+## <a name="set-up-a-new-export"></a>Uue ekspordi seadistamine  
 Ekspordi seadistamiseks või redigeerimiseks peavad teil olema saadaval ühendused. Ühendused sõltuvad teie [kasutajarollist](permissions.md):
-- Administraatoritel on juurdepääs kõigile ühendustele. Nad saavad ekspordi seadistamisel luua ka uusi ühendusi.
-- Kaastöötajatel on juurdepääs kindlatele ühendustele. Nad sõltuvad administraatoritest, et ühendusi konfigureerida ja jagada. Ekspordiloendis kuvatakse kaastöötajad, kes saavad veergu **Teie õigused** eksportimist muuta või ainult vaadata. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Vaatajad saavad vaadata ainult olemasolevaid eksporte, kuid ei loo neid.
+- **Administraatoritel** on juurdepääs kõigile ühendustele. Nad saavad ekspordi seadistamisel luua ka uusi ühendusi.
+- **Kaastöötajatel** on juurdepääs kindlatele ühendustele. Nad sõltuvad administraatoritest, et ühendusi konfigureerida ja jagada. Ekspordiloendis kuvatakse kaastöötajad, kes saavad veergu **Teie õigused** eksportimist muuta või ainult vaadata. Lisateavet leiate teemast [Luba toetajatel kasutada ekspordiühendust](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Vaaturid** saavad kuvada ainult olemasolevaid eksporte, mitte neid luu.
 
 ### <a name="define-a-new-export"></a>Uue ekspordi määratlemine
 

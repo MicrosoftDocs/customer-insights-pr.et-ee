@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmete eksportimine Mailchimpi
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Mailchimpi.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033534"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618608"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmentide eksportimine Mailchimpi (eelversioon)
 
@@ -29,10 +29,10 @@ Eksportige koondatud kliendiprofiilide segmendid MailChimpi, et luua teabelehti 
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Mailchimpi saab eksportida korraga kuni miljon profiili.
+- Kuni miljoni kliendiprofiili Mailchimp ekspordi kohta.
 - Mailchimpi saab eksportida ainult segmente.
-- 1 miljoni profiiliga segmentide eksportimiseks võib aega minna kuni kolm tundi. 
-- Mailchimpi eksporditavate profiilide arv sõltub Mailchimpiga sõlmitud lepingust.
+- Miljoni kliendiprofiiliga segmentide eksportimiseks võib aega võtta kuni kolm tundi. 
+- Kliendiprofiilide arv, mida saate Mailchimp'i eksportida, sõltub ja on piiratud vastavalt teie Mailchimp lepingule.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Ühenduse loomine Mailchimpiga
 
@@ -66,7 +66,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage oma **[Mailchimp audience ID](https://mailchimp.com/help/find-audience-id/)**
 
-3. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. 
+1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. 
 
 1. Soovi korral saate eksportida **Eesnimi** ja **Perekonnanimi** isikupärastatud meilide loomiseks. Nende väljade vastendamiseks valige **Lisa atribuut**.
 

@@ -1,7 +1,7 @@
 ---
 title: Customer Insights andmete eksportimine RollWorksi
 description: Lugege, kuidas konfigureerida ühendust ja eksportida RollWorksi.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d8ce4d867835dcb7cf56c6fffff4e25d1f5c109af0e401fc0eb8b3a7427c1de4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f8f6a79db9cb4bb109c03a464d9f8c7f3b862ad5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034585"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617439"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Segmentide eksportimine RollWorksi (eelversioon)
 
@@ -28,11 +28,11 @@ Saate eksportida ühendatud kliendiprofiilide segmente RollWorksi ja kasutada ne
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- RollWorksi saate eksportida kuni 250 000 profiili ekspordi kohta.
-- Vähem kui 100 profiiliga segmente ei saa RollWorksi eksportida. 
+- RollWorks'i saate ekspordi kohta kokku eksportida kuni 250 000 kliendiprofiili.
+- Vähem kui 100 kliendiprofiiliga segmente ei saa RollWorks'i eksportida. 
 - Eksportimine RollWorksi on piiratud segmentidega.
-- Kuni 250'000 profiili eksportimine RollWorksi võib võtta kuni 10 minutit lõpuleviimiseks. 
-- RollWorksi eksporditavate profiilide arv sõltub ja on piiratud teie lepinguga RollWorksiga.
+- Kuni 250 000 kliendiprofiili eksportimine RollWorks'i võib võtta kuni 10 minutit. 
+- Kliendiprofiilide arv, mida saate RollWorks'i eksportida, sõltub ja on piiratud vastavalt teie RollWorks lepingule.
 
 ## <a name="set-up-connection-to-rollworks"></a>Ühenduse loomine RollWorksiga
 
@@ -66,7 +66,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage oma **RollWorks Advertiser ID** [ID RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Segmentide eksportimine RollWorksi on vajalik.
+1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Segmentide eksportimine RollWorksi on vajalik.
 
 1. Valige segmendid, mille soovite eksportida. Valige vähemalt 100 liikmega segment. Väiksemaid segmente ei saa eksportida. Lisaks on eksporditava segmendi maksimummaht 250 000 liiget ekspordi kohta. 
 

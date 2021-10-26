@@ -1,7 +1,7 @@
 ---
 title: Olemite ühendamine andmete koondamise ajal
 description: Ühendage olemid, et luua koondatud kliendiprofiile.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494314"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648249"
 ---
 # <a name="merge-entities"></a>Olemite liitmine
 
@@ -89,7 +91,7 @@ Lehel **Ühenda** valige **Välistatud väljad** et näha välistatud väljade l
     :::image type="content" source="media/recency-merge-option.png" alt-text="Hiljutisuse valik ühendamisväljade dialoogis.":::
     - **Hiljutine**: tuvastab võitja väärtuse kõige kaugema aja järgi. Nõuab kuupäeva või arvvälja iga koosteväljade osalemisolemi jaoks, et määrata olemi aega.
 
-1.  Kui soovite koosteprotsessis osaleda, saate lisada veel välju.
+1.  Saate ühendamise protsessi lisada veel välju.
 
 1.  Ühendatud välja saate ümber nimetada.
 
@@ -131,7 +133,7 @@ Mõned olemid sisaldavad rohkem üksikasju kui teised. Kui olem sisaldab välja 
 
 Pärast väljade ühendamist saate määratleda, kuidas luua CustomerId väärtusi ja kordumatuid kliendiprofiili identifikaatoreid. Andmete ühendamise protsessi ühendamissamm loob kordumatu kliendiprofiili identifikaatori. Identifikaator on *kliendi* olemi CustomerId, mis on saadud andmete ühendamise protsessist. 
 
-Kliendi olemi CustomerId põhineb mittetühiväärtusega võitja primaarvõtmete esimese väärtuse räsil. Need klahvid on pärit vastetes ja ühendamises kasutatavatest olemitest ning neid mõjutab sobitamisjärjestus.Seega saab genereeritud CustomerID muutuda, kui vastetellimuse esmases olemis muudetakse primaarvõtme väärtust. Primaarvõtme väärtus ei pruugi alati esindada sama klienti.
+Kliendi olemi CustomerId põhineb mittetühiväärtusega võitja primaarvõtmete esimese väärtuse räsil. Need klahvid on pärit vastetes ja ühendamises kasutatavatest olemitest ning neid mõjutab sobitamisjärjestus.Seega saab genereeritud CustomerID muutuda, kui vastetellimuse esmases olemis muudetakse primaarvõtme väärtust. Seega ei pruugi esmase võtme väärtus alati sama klienti tähistada.
 
 Stabiilse kliendi ID konfigureerimine võimaldab teil seda käitumist vältida.
 
@@ -139,7 +141,7 @@ Stabiilse kliendi ID konfigureerimine võimaldab teil seda käitumist vältida.
 
 1. Minge **Ühenda** > **Liitmine**.
 
-1. Valige lehel **Liitmine** vahekaart **Võtmed**. 
+1. Valige vahekaart **Võtmed**. 
 
 1. Liikuge kursoriga real **CustomerId** ja valige suvand **Konfigureeri**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Juhtelement ID loomise kohandamiseks.":::
@@ -147,6 +149,30 @@ Stabiilse kliendi ID konfigureerimine võimaldab teil seda käitumist vältida.
 1. Valige kuni viis välja, mille ID on kordumatu ja stabiilsem. Kirjed, mis ei vasta teie konfiguratsioonile, kasutavad selle asemel süsteemi konfigureeritud ID-d.  
 
 1. Muudatuste rakendamiseks tehke valik **Tehtud** ja käivitage koosteprotsess.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Rühmitage profiilid leibkondadesse või klastritesse
+
+Kliendiprofiili loomise konfiguratsiooniprotsessi osana saate määratleda reeglid seotud profiilide rühmitamiseks klastrisse. Praegu on saadaval kahte tüüpi klastrid – Leibkonna ja kohandatud klastrid. Kui *Kliendi* olem sisaldab semantilisi välju *Person.LastName* ja *Location.Address*, valib süsteem eelmääratletud reeglitega subjekti automaatselt. Saate luua klastri ka oma reeglite ja tingimustega, mis sarnanevad [reeglitele](match-entities.md#define-rules-for-match-pairs).
+
+**Määratlege ressurss või klaster**
+
+1. Minge **Ühenda** > **Liitmine**.
+
+1. Vahekaardil **Ühendamine** valige **Täpsem** > **Klastri loomine**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Juhtelement uue klastri loomiseks.":::
+
+1. Valige **Leibkonna** või **Kohandatud** klastri vahel. Kui semantilised väljad *Person.LastName* ja *Location.Address* on olemas *Kliendi* olemis, valitakse automaatselt leibkond.
+
+1. Sisestage klastrile nimi ja valige **Valmis**.
+
+1. Loodud klastri leidmiseks valige vahekaart **Klastrid**.
+
+1. Määrake klastri määratlemiseks reeglid ja tingimused.
+
+1. Valige **Käivita**, et käivitada kirjakoosteprotsess ja luua klaster.
+
+Pärast ühendamisprotsessi käivitamist lisatakse klastri identifikaatorid *Kliendi* olemile uute väljadena.
 
 ## <a name="run-your-merge"></a>Käivitage kooste
 

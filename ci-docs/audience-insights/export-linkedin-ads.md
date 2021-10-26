@@ -1,7 +1,7 @@
 ---
 title: Customer Insights andmete eksportimine LinkedIn Adsi
 description: Lugege, kuidas konfigureerida ühendust ja eksportida LinkedIn Adsi.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034218"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618286"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentide eksportimine LinkedIn Adsi (eelvaade)
 
@@ -28,9 +28,9 @@ Eksportige ühtsete kliendiprofiilide segmendid LinkedIn Adsi, et luua sobivaid 
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- LinkedIn Adsi saate eksportida kuni 100 000 profiili ekspordi kohta.
+- LinkedIn Ads'i saate ekspordi kohta kokku eksportida kuni 100 000 kliendiprofiili.
 - Eksportimine LinkedIn Adsi on piiratud segmentidega.
-- Kuni 100 000 profiili eksportimine LinkedIn Adsi võib võtta kuni 10 minutit lõpuleviimiseks. 
+- Kuni 100 000 kliendiprofiili eksportimine LinkedIn Ads'i võib võtta kuni 10 minutit. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>Loo LinkedIn Adsi ühendus
 
@@ -66,7 +66,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate ekspordi konfigureer
 
 1. Valige, kas soovite eksportida andmeid, et teha [kontaktide sihtimist](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) või [ettevõtte sihtimist](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) LinkedInis. 
 
-1. Valige jaotises **Andmete sobitamine** oma ühtse kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Segmentide eksportimine LinkedIn Adsi on vajalik.
+1. Valige jaotises **Andmete sobitamine** kontakti sihtimise jaoks vähemalt üks väli, mis tähistab kliendi meiliaadressi, Apple'i Ad ID-d, Google Ad ID-d, Google Kasutaja ID-d või eesnime ja perekonnanime. Kui valite ettevõtte sihtimise, valige vähemalt üks väli, mis tähistab ettevõtte nime, meilidomeeni, LinkedIni lehe URL-i, aktsiatähist või veebisaiti. Eksportimise täpsemaks määratlemiseks saab valida täiendavaid välju. 
 
 1. Valige segmendid, mille soovite eksportida. LinkedIn Campaign Manager sobitatud sihtrühmad luuakse automaatselt ekspordiks valitud segmentide nimega. Iga segmendi tulemuseks on eraldi sobitatud sihtrühm. 
 

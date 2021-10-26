@@ -4,27 +4,33 @@ description: Tööruumi liikmete saadaolevate rollide ja õiguste ülevaade.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036688"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645532"
 ---
 # <a name="roles-and-permissions"></a>Rollid ja õigused
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Tööruumis saate talletada ja hallata sündmusi ja aruandeid. Liige on kasutaja, kes pääseb tööruumi juurde. Liikmeid saate määrata oma tööruumi ning määratleda nende rolle ja õigusi. Administraatorirollid haldavad tööruume ja keskkondi teiste kasutajate kaasamisülevaadete konfigureerimiseks. Toetajad on suunatud analüütikute poole, kes ei pea kaasamisülevaateid konfigureerima, kuid soovivad luua oma aruandeid, lehtreid või segmente.
+Tööruum on ruum sündmuste ja aruannete talletamiseks ning haldamiseks. Lisateavet leiate teemast [Tööruumi loomine ja liikmete lisamine](create-workspace.md). 
+
+Tööruum võib sisaldada järgmisi rolle ja õigusi:
+
+- *Liikmed* on kasutajad, kes pääsevad tööruumi juurde. Liikmeid saate määrata oma tööruumi ning määratleda nende rolle ja õigusi. 
+- *Administraatorid* haldavad tööruume ja keskkondi teiste kasutajate kaasamise ülevaadete konfigureerimiseks. 
+- *Toetajad* on suunatud analüütikute poole, kes ei pea kaasamisülevaateid konfigureerima, kuid soovivad luua oma aruandeid, lehte või segmente.
 
 ## <a name="permissions"></a>Õigused
   
-Järgmine diagramm tuvastab iga rolli õiguseid. 
+Järgmine tabel tuvastab iga rolli õigused. 
 
 | Õigus | Keskkonna administraator | Tööruumi administraator | Keskkonna kaasautor | Tööruumi kaasautor | 
 |--|--|--|--|--|

@@ -4,17 +4,17 @@ description: Kasutage saadaolevaid aruandeid oma saidil reaalajas tegevuse koost
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 06/18/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5ccdcb47db597154cf79b9f2e8fc238ab75dfde9
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036643"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582917"
 ---
 # <a name="view-reports"></a>Kuva aruanded
 
@@ -92,12 +92,18 @@ Mobiiliaruanded on rühmitatud reaalajas kasutuse, rakenduse ja kasutaja kategoo
 
 - **Asukohad** kuvab teave rakendsuse külastaja kohta riigi, piirkonna ja linna järgi.
 
-## <a name="filter-by-time-or-value"></a>Filtreeri kellaaja või väärtuse alusel
+## <a name="filter-by-time-or-date-range"></a>Filtreerige kellaaja või kuupäeva vahemiku alusel.
 
-Veebi- või mobiiliaruandes saate valida ajavahemiku või -väärtuse, et keskenduda väärtusele või ajaperioodile. 
+Veebi- või mobiiliaruandes saate valida ajavahemiku või kuupäeva vahemiku, et keskenduda väärtusele või ajaperioodile. 
 
-- Ajaraami valimiseks valige **Veel [...]** aruande ripploendist. Ajavahemiku valimine on reaalajaaruandes keelatud; reaalaja aruande ajavahemik on "praegu."
+- Ajapaneeli valimiseks valige aruandevaate parempoolses ülanurgas aruande ripploendist soovitud väärtus. Saate valida ka väärtuse **Fikseeritud kuupäeva vahemik**. 
 
-- Enamikus aruannetes valige diagrammi või loendi väärtus, et filtreerida valitud väärtuse aruanne.
+  :::image type="content" source="media/filter-by-time.png" alt-text="Filtreerige kellaaja või kuupäeva vahemiku alusel.":::   
+
+- Enamike aruannete korral valige aruande filtreerimiseks diagrammis või loendis soovitud väärtus.
+
+> [!NOTE]
+> Ajavahemiku valimine on reaalajaaruandes keelatud; reaalaja aruande ajavahemik on "praegu."
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

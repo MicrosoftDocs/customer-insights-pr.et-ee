@@ -1,7 +1,7 @@
 ---
 title: Customer Insights andmete eksportimine Azure Blob Storage'isse
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Blob storage'isse.
-ms.date: 06/30/2021
+ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b159f87276581f68e07bb73ffd257080eb3cb56422997b09a613bd7afa4e3980
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: d02c09a1869d0099db4861b65ac8ff006914873e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034723"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605833"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmendiloendi ja muude andmete eksportimine Azure'i Blob Storage'isse (eelversioon)
 
 Saate salvestada oma Customer Insights andmed bloobimällu või kasutada seda oma andmete edastamiseks teistesse rakendustesse.
+
+## <a name="known-limitations"></a>Teadaolevad piirangud
+
+1. Azure'i bloobimälu puhul saate valida [Standardjõudluse ja Premium jõusluse vahel](/azure/storage/blobs/storage-blob-performance-tiers). Kui valite Premium jõudluse järgu, valige [konto tüübiks premium ploki bloobid](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 
 ## <a name="set-up-the-connection-to-blob-storage"></a>Loo Azure Bloobimälu ühendus
 

@@ -4,17 +4,17 @@ description: Segmentide loomine, redigeerimine, kustutamine ja kasutamine.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036143"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623582"
 ---
 # <a name="view-and-create-segments"></a>Segmentide kuvamine ja loomine
 
@@ -44,22 +44,27 @@ Selles jaotises kirjeldatakse, kuidas luua *tühja segmenti*.
 
 1. Valige **Uus segment**.
 
-1. Valige **ressursiteegis** atribuut, mille alusel soovite filtreerida. Praegu saate luua segmente ainult dimensioonide alusel.
+1. Valige **Ressursiteegis** väli (+), mis asub selle atribuudi kõrval, mille alusel soovite filtreerida. Praegu saate luua segmente ainult dimensioonide alusel.
 
-1. Valige valitud atribuudi tehtemärk ja väärtus. Toetatud on järgmised toimingud.
+   :::image type="content" source="media/create-new-segment.png" alt-text="Looge uus segment.":::
+
+1. Valige jaotises **Reegel** tehtemärk ja valitud atribuudi väärtus. Toetatud on järgmised toimingud.
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Valige uue segmendi jaoks tehtemärk.":::
+
    - **on**: väärtuste kaasamiseks on vaja täpset vastet. Kasutab ühe väärtuse jaoks **võrdne** või mitme väärtuse lisamiseks **ükskõik millisest**.
    - **ei ole**: väärtuste välistamiseks on vaja täpset vastet. Kasutab ühe väärtuse jaoks **võrdne** või mitme väärtuse lisamiseks **ükskõik millisest**.
    - **algab sõnega**: sõne, millega vastavad väärtused algavad.
    - **lõppeb sõnega**: sõne, millega vastavad väärtused lõppevad.
    - **sisaldab**: sõne, mis sisaldub kattuvates väärtustes.
 
-1. Rühmale täiendavate tingimuste lisamiseks saate kasutada kaht loogikatehet. Prognoositud atribuudid on teguriks seatud kasutades tehete kogumeid.
+1. Et lisada rühma veel tingimus, võite kasutada loogikatehteid. Prognoositud atribuudid on teguriks seatud kasutades tehete kogumeid.
    - **AND** tehtemärk: mõlemad tingimused tuleb täita segmenteerimise võimaldamiseks. See valik on kõige kasulikum juhul, kui määratlete eri olemite tingimusi.
    - **VÕI** tehtemärk: üks tingimus tuleb täita segmenteerimise võimaldamiseks. See valik on kõige kasulikum juhul, kui määratlete sama olemi mitu tingimusi.
 
 1. Sisestage segmendi nimi ja valige **Salvesta**. 
 
-Segment kuvatakse lehel Segmendid ja saate seda rakendada kõigile tööruumi aruannetele ja lehtritele.
+Segment kuvatakse lehel **Segmendid** ja saate seda rakendada kõigile tööruumi aruannetele ja lehtritele.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Aruande segmendi või lehtri kasutamine
 
@@ -67,7 +72,7 @@ Segmente saate rakendada aruandele või lehtrile, et neid segmentide tingimuste 
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Lehevaadete aruanne laiendatud ripploendiga, mille abil saate valida, millised segmendid rakendada.":::
 
-Segmendi rakendamiseks avage aruanne või lehter. Valige **Lisa tingimus** ja seejärel **Filtreeri segmentide alusel**. Valige loendist segment, mida soovite rakendada. Segment rakendatakse aruandele. Kui diagramm ei toeta segmenti, kuvatakse selles tõrge.
+Segmendi rakendamiseks avage aruanne või lehter. Valige **+ Lisa tingimus** ja seejärel **Filtreeri segmentide alusel**. Valige loendist segment, mida soovite rakendada. Segment rakendatakse aruandele. Kui diagramm ei toeta segmenti, kuvatakse selles tõrge. Lisateavet leiate teemast [Lehterdiagrammi aruannete loomine ja haldamine](funnel-reports.md).
  
 Aruandele või lehtrile saate rakendada *kuni kolm segmenti*.
 
@@ -91,5 +96,7 @@ Aruandele või lehtrile saate rakendada *kuni kolm segmenti*.
 1. Valige segmendiloendist **Veel [...]**. 
 1. Valige ripploendist **Kustuta**.
 1. Kinnitamiseks valige **Kustuta**.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

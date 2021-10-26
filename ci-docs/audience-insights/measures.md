@@ -1,7 +1,7 @@
 ---
 title: Mõõdikute loomine ja haldamine
 description: Määratleda ettevõtte äritegevuse analüüsimiseks ja kajastamiseks vajalikud näitajad.
-ms.date: 04/12/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3593a02ce89233cf1e66c6beee669dd6dd261ba3b0e1d2d0cc966731349d7d0b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7037003"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622854"
 ---
 # <a name="define-and-manage-measures"></a>Meetmete määratlemine ja haldamine
 
@@ -26,15 +26,15 @@ Kasutage äritegevuste plaanimiseks näitaja ehitajat, pärides kliendiandmeid j
 
 ## <a name="build-your-own-measure-from-scratch"></a>Isikliku voo loomine puhtalt lehelt
 
-Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate ehitada näitaja andmeatribuutidega andmeüksustelt, millel on kliendi olemiga ühenduse loomiseks suhe loodud. 
+Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate koostada andmeatribuutudega andmeolemitest mõõtmed, mille seos on seadistatud ühendamiseks ühendatud kliendiprofiili olemiga.
+
+# <a name="individual-customers-b2c"></a>[Üksikud kliendid (B2C)](#tab/b2c)
 
 1. Avage sihtrühmaülevaadetes jaotis **Näitajad**.
 
 1. Valige **Uus** ja valige **Looge ise**.
 
 1. Valige **Redigeeri nimi** ja sisestage näitaja **Nimi**. 
-   > [!NOTE]
-   > Kui teie uuel näitaja konfiguratsioonil on ainult kaks välja-nt CustomerID ja üks arvutus-lisatakse väljund uue veeruna süsteemi genereeritud olemile nimega Customer_Measure. Näete näitaja väärtust ühtses kliendiprofiilis. Muud näitajad loovad oma olemeid.
 
 1. Valige konfiguratsioonialas koondamisfunktsioon **Funktsiooni valimine** rippmenüüst. Koondamisfunktsioonid on järgmised. 
    - **Sum**
@@ -73,11 +73,11 @@ Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate ehitada näita
    1. Valige **Redigeeri dimensioonid**, et lisada andmeatribuute, mille järgi soovite näitaja väärtusi rühmitada. Näiteks linn või sugu. *Klienditaseme näitajate loomiseks* valitakse vaikimisi *CustomerID* dimensioon. Kui soovite luua *äritaseme näitajaid*, saate vaikeeelise eemaldada.
    1. Valige **Valmis**, et lisada dimensioonid näitajale.
 
-1. Kui teie andmetes on väärtusi, mida peate täisarvuga asendama-nt pange *null* asemel *0*-valige **Reeglid**. Konfigureerige reegel ja veenduge, et valite asendusena ainult täisnumbrid.
+1. Kui teie andmetes on väärtused, mida peate täisarvuga asendama, valige **Reeglid**. Konfigureerige reegel ja veenduge, et valite asendusena ainult täisnumbrid. Asendage *null* näiteks väärtusega *0*.
 
 1. Kui vastendatud andme- ja olemi *Klient* vahel on mitu teed, peate valima ühe tuvastatud [olemi suhte teedest](relationships.md). Näitaja tulemused võivad sõltuvalt valitud teest erineda. 
    
-   1. Valige **andmeelistused** ja seejärel olemi tee, mida tuleks oma näitaja tuvastamiseks kasutada. Kui olemi *Klient* juurde on ainult üks tee, siis seda juhtelementi ei näidata.
+   1. Valige **Seosetee** ja valige olemitee, mida tuleks kasutada teie mõõtmete tuvastamiseks. Kui olemi *Klient* juurde on ainult üks tee, siis seda juhtelementi ei näidata.
    1. Valiku rakendamiseks valige suvand **Valmis**. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Saate valida näitajale olemi tee.":::
@@ -92,7 +92,79 @@ Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate ehitada näita
 
 1. Vastloodud näitaja nägemiseks loendis, valige **Näitajad**.
 
+# <a name="business-accounts-b2b"></a>[Ettevõtte kontod (B2B)](#tab/b2b)
+
+1. Avage sihtrühmaülevaadetes jaotis **Näitajad**.
+
+1. Valige **Uus** ja valige **Looge ise**.
+
+1. Valige **Redigeeri nimi** ja sisestage näitaja **Nimi**. 
+
+1. Valige konfiguratsioonialas koondamisfunktsioon **Funktsiooni valimine** rippmenüüst. Koondamisfunktsioonid on järgmised. 
+   - **Sum**
+   - **Keskmine**
+   - **Loenda**
+   - **Kordumatu arv**
+   - **Maks.**
+   - **Min**
+   - **Esimene**: võtab andmekirje esimese väärtuse
+   - **Viimane**: võtab andmekirjesse lisatud viimase väärtuse
+
+   :::image type="content" source="media/measure-operators.png" alt-text="Tehtemärgid näitaja arvutamiseks.":::
+
+1. Valige **Lisa atribuut**, et valida andmed, mida selle näitaja loomiseks vajate.
+   
+   1. Valige vaheleht **Attribuudid**. 
+   1. Andmeolem: valige olem, mis sisaldab mõõdetavat atribuuti. 
+   1. Andmeatribuut: valige atribuut, mida soovite näitaja arvutamiseks koondamisfunktsioonis kasutada. Korraga saate valida ainult ühe atribuudi.
+   1. Olemasolevast näitajast andmeatribuudi valimiseks klõpsake vahekaarti **Näitajad** või otsige olemi või näitaja nime. 
+   1. Valige **Lisa**, et lisada atribuut näitajale.
+
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Valige arvutuses soovitud atribuut.":::
+
+1. Keerukamate näitajate loomiseks võite lisada mõõtmisfunktsioonile rohkem atribuute või kasutada matemaatilisi tehtemärke.
+
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Keerukama näitaja loomine tehtemärkidega.":::
+
+1. Filtrite lisamiseks valige konfiguratsiooniala **Filtreeri**. 
+  
+   1. Valige paani **Filtrid** jaotises **Atribuudi lisamine** atribuut, mida soovite filtrite loomiseks kasutada.
+   1. Määrake filtritehted iga valitud atribuudi filtri määratlemiseks.
+   1. Valige **Rakenda**, et lisada filtrid näitajale.
+
+1. Dimensioonide lisamiseks valige konfiguratsioonialas **Dimensioon**. Dimensioonid kuvatakse näitaja väljundolemis veergudena.
+ 
+   1. Valige **Redigeeri dimensioonid**, et lisada andmeatribuute, mille järgi soovite näitaja väärtusi rühmitada. Näiteks linn või sugu. *Klienditaseme näitajate loomiseks* valitakse vaikimisi *CustomerID* dimensioon. Kui soovite luua *äritaseme näitajaid*, saate vaikeeelise eemaldada.
+   1. Valige **Valmis**, et lisada dimensioonid näitajale.
+
+1. Kui teie andmetes on väärtused, mida peate täisarvuga asendama, valige **Reeglid**. Konfigureerige reegel ja veenduge, et valite asendusena ainult täisnumbrid. Asendage *null* näiteks väärtusega *0*.
+
+1. Saate kasutada **Ettevõtte allüksuste koondamist**, kui te [kasutate hierarhiaga kontosid](relationships.md#set-up-account-hierarchies).
+   - Kui väärtuseks on seatud **Väljas**, arvutatakse iga konto mõõtmed. Iga konto saab oma tulemuse.
+   - Kui väärtuseks on määratud **Sees**, siis valige **Redigeeri**, et valida kontohierarhia vastavalt sisestatud hierarhiatele. Mõõde annab ainult ühe tulemuse, kuna see on koondatud alamkontodega.
+
+1. Kui vastendatud andme- ja olemi *Klient* vahel on mitu teed, peate valima ühe tuvastatud [olemi suhte teedest](relationships.md). Näitaja tulemused võivad sõltuvalt valitud teest erineda. 
+   
+   1. Valige **Seosetee** ja valige olemitee, mida tuleks kasutada teie mõõtmete tuvastamiseks. Kui olemi *Klient* juurde on ainult üks tee, siis seda juhtelementi ei näidata.
+   1. Valiku rakendamiseks valige suvand **Valmis**. 
+
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Saate valida näitajale olemi tee.":::
+
+1. Valige näitajast arvutuse **Duplitseerimiseks**, **Ümber nimetamiseks** või **Eemaldamiseks** **...**.
+
+1. **Eelvaatealal** näete näitaja väljundolemi andmeskeemi (sh filtreid ja dimensioone). Eelvaade reageerib dünaamiliselt konfiguratsiooni muudatustele.
+
+1. Konfigureeritud näitaja tulemuste arvutamiseks valige **Käivita**. Kui soovite praeguse konfiguratsiooni säilitada ja näitajat hiljem käitada, valige **Salvesta ja sule**.
+
+1. Vastloodud näitaja nägemiseks loendis, valige **Näitajad**.
+
+---
+
 ## <a name="use-a-template-to-build-a-measure"></a>Malli abil mõõdu loomine
+
+Nende loomiseks võite kasutada tavaliselt kasutatavate meetmete ettemääratud malle. Mallide üksikasjalik kirjeldus ja juhendatud kogemused aitavad teil luua tõhusa mõõtmissüsteemi. Mallid põhinevad olemi *Ühendatud tegevus* kaardistatud andmetele. Seega veenduge, et olete konfigureerinud [klienditegevused](activities.md) enne malli põhjal mõõtühiku loomist.
+
+# <a name="individual-customers-b2c"></a>[Üksikud kliendid (B2C)](#tab/b2c)
 
 Nende loomiseks võite kasutada tavaliselt kasutatavate meetmete ettemääratud malle. Mallide üksikasjalik kirjeldus ja juhendatud kogemused aitavad teil luua tõhusa mõõtmissüsteemi. Mallid põhinevad olemi *Ühendatud tegevus* kaardistatud andmetele. Seega veenduge, et olete konfigureerinud [klienditegevused](activities.md) enne malli põhjal mõõtühiku loomist.
 
@@ -140,6 +212,12 @@ Järgmine protseduur kirjeldab etappe uue meetme loomiseks malli abil.
 
 1. Nüüd saate valida suvandi **Käita**, et arvutada mõõtmise tulemused. Hiljem viimistlemiseks valige **Salvesta mustand**.
 
+# <a name="business-accounts-b2b"></a>[Ettevõtte kontod (B2B)](#tab/b2b)
+
+See funktsioon on saadaval ainult keskkondades loodud juhtudeks, kus üksikud kliendid on esmaseks sihtrühmaks.
+
+---
+
 ## <a name="manage-your-measures"></a>Meetmete haldamine
 
 Meetmete loendi leiate lehelt **Meetmed**.
@@ -166,6 +244,5 @@ Valige loendist soovitud näitaja järgmiste suvandite jaoks.
 ## <a name="next-step"></a>Järgmine etapp
 
 Olemasolevate näitajate abil saate luua [kliendisegmendi](segments.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

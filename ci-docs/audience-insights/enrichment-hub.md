@@ -1,7 +1,7 @@
 ---
 title: Koondatud kliendiprofiilide rikastamine
 description: Kasutage võimalusi kliendiandmete rikastamiseks.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469961"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617550"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Kliendiprofiilide rikastamine (eelvaade)
 
@@ -27,16 +27,26 @@ Minge sihtrühmaülevaadetes jaotisse **Andmed** > **Rikastamine**, et töötada
 
 Rikastamiste loomiseks või redigeerimiseks peavad teil olema kaasautori või administraatori õigused. Lisateavet vt teemast [Õigused](permissions.md).
 
-Vahekaardilt **Avastamine** leiate järgmised rikastamised.
+Vahekaardil **Avastage** leiate kõik toetatud rikastussuvandid.
 
-- Microsofti [Azure Maps](enrichment-azure-maps.md)
+# <a name="individual-customers-b2c"></a>[Üksikud kliendid (B2C)](#tab/b2c)
+
 - [Brändid](enrichment-microsoft.md), mida pakub Microsoft
 - [Omandiõigused](enrichment-microsoft.md), mida pakub Microsoft
-- [Microsofti pakutavad täiustatud](enrichment-enhanced-addresses.md) aadressid
-- [Ettevõtte andmeid](enrichment-leadspace.md) esitab Leadspace
+- [Microsofti pakutavad täiustatud](enrichment-enhanced-addresses.md) aadressid 
 - [Demograafiline teave](enrichment-experian.md), mida pakub Experian
-- [Asukohaandmeid](enrichment-here.md) esitab HERE Technologies
-- [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu
+- [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu 
+- Microsofti [Azure Maps](enrichment-azure-maps.md)
+
+# <a name="business-accounts-b2b"></a>[Ettevõtte kontod (B2B)](#tab/b2b)
+
+- [Ettevõtte andmeid](enrichment-leadspace.md) esitab Leadspace
+- [Microsofti pakutavad täiustatud](enrichment-enhanced-addresses.md) aadressid 
+- [Asukohaandmeid](enrichment-here.md) esitab HERE Technologies 
+- [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu 
+- Microsofti [Azure Maps](enrichment-azure-maps.md)
+
+---
 
 Saate kuvada oma konfigureeritud rikastamisi ja redigeerida nende atribuute vahekaardil **Minu rikastamised**.
 
@@ -58,7 +68,7 @@ Käivitage või desaktiveerige mitu rikastumist korraga, valides need loendist. 
 
 ## <a name="enrichments-and-connections"></a>Rikastamine ja Ühendused
 
-Muude tootjate rikastamised konfigureeritakse kasutades [ühendusi](connections.md), mille administraator koostab volikirjadega ja annab nõusoleku andmete edastamiseks. Ühendusi saavad seejärel kasutada rikastamise konfigureerimiseks nii administraatorid kui ka kaastöötajad.  
+Muude tootjate rikastamised konfigureeritakse kasutades [ühendusi](connections.md), mille administraator koostab volikirjadega ja annab nõusoleku andmete edastamiseks. Administraatorid ja kaasautorid saavad ühendusi kasutada rikastamise konfigureerimiseks.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Mitu sama tüüpi rikastust
 

@@ -1,7 +1,7 @@
 ---
 title: LiveRamp konnektor
 description: Lugege, kuidas konfigureerida ühendust ja eksportida LiveRampi.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7940db3efacad62ba16099849b3e3ca00d2a5cc1ed31e15a34209c0797e6ae13
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035640"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618930"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Segmentide eksportimine LiveRamp&reg; (eelversioon)
 
@@ -58,7 +58,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
    > [!div class="mx-imgBorder"]
    > ![LiveRampi konnektor atribuutide kaardistamiseks.](media/export-liveramp-segments.png "LiveRampi konnektor atribuutide vastendamisega")
 
-1. Vastendage vastavad atribuudid valitud põhiidentifikaatori ühtsest kliendiolemist.
+1. Vastendage oma *Kliendi* olemi vastavad atribuudid valitud võtmeidentifikaatori jaoks.
 
 1. Valige **Lisa atribuut**, et kaardistada rohkem atribuute LiveRampile saatmiseks.
 

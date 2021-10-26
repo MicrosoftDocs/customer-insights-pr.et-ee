@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmete eksportimine Marketosse
 description: Lugege, kuidas konfigureerida ühendust ja eksportida platvormile Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033488"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619160"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmentide eksportimine platvormile Marketo (eelversioon)
 
@@ -29,10 +29,10 @@ Eksportige Marketo abil koondatud kliendiprofiilide segmente kampaaniate loomise
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Marketosse saab eksportida korraga kuni miljon profiili.
+- Kuni miljoni kliendiprofiili Marketo ekspordi kohta.
 - Marketosse saab eksportida ainult segmente.
-- Miljoni profiiliga segmentide eksportimine võib kesta kuni kolm tundi. 
-- Marketosse eksporditavate profiilide arv sõltub Marketoga sõlmitud lepingust.
+- Miljoni kliendiprofiiliga segmentide eksportimiseks võib aega võtta kuni kolm tundi. 
+- Kliendiprofiilide arv, mida saate Marketo'sse eksportida, sõltub ja on piiratud vastavalt teie Marketo lepingule.
 
 ## <a name="set-up-connection-to-marketo"></a>Ühenduse loomine platvormiga Marketo
 
@@ -64,7 +64,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage oma **[Marketo loendi ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. Loendi ID on lihtsalt arvväärtus. Kui teie Marketo loendi ID on näiteks ST12345A7, eemaldage märk enne ja pärast numbreid ning sisestage `12345`. 
 
-1. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. 
+1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. 
 
 1. Soovi korral saate eksportida **Eesnimi**, **Perekonnanimi**, **Linn**, **Osariik** ja **Riik/regioon**  isikupärastatud meilide loomiseks. Nende väljade vastendamiseks valige **Lisa atribuut**.
 

@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465200"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606059"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Mis on uut Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis?
 
@@ -26,6 +26,20 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 
 > [!TIP]
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>2021. aasta septembri uuendused
+
+2021. aasta septembri värskendused sisaldavad uusi funktsioone, jõudluse versiooniuuendusi ja veaparandusi.
+
+### <a name="activities"></a>Tegevused 
+
+- **Tegevuse ajaskaala täiustused** Oleme laiendanud kliendiprofiilide tegevuse ajaskaala filtreid. Uue filtri abil saate filtreerida ka tegevusetüübi ja kuupäeva alusel. Kuupäevi saab filtreerida erinevate tingimuste abil. Lisateavet leiate teemast [Kliendiprofiilide tegevuse ajaskaala vaatamine](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Suhtlused
+
+- **Mitme-toeline seose tugi** Tegevuste konfigureerimisel ja olemite vaheliste seoste määratlemisel saate kasutada mitme-toelisi seoseid. Mitme-toelised seosed kasutavad kahe olemi ühendamiseks vahepealset olemit. Tegevuse konfigureerimisel saate kasutada mitme-toelist seost oma tegevuse olemi ühendamiseks vahepealse olemiga ja seejärel kliendi olemiga. Saate ühendada mitme-toelised seosed mitme-teeliste seostega. Lisateavet leiate teemast [Mitme-toeline seos](relationships.md#multi-hop-relationship).
+
+- **Mitme-teeline seose tugi** Tegevuste konfigureerimisel ja olemite vaheliste seoste määratlemisel saate kasutada mitme-teelisi seoseid. Mitme-teelised seosed seostavad lähteolemi mitme olemiga. Tegevuse konfigureerimisel saate kasutada mitme-teelist seost oma tegevuse olemi ühendamiseks rohkem kui ühe kliendi olemiga. Saate ühendada mitme-teelised seosed mitme-toeliste seostega. Lisateavet leiate teemast [Mitme-teeline seos](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>2021. aasta augusti värskendused
 
@@ -55,7 +69,7 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 ### <a name="ux-updates"></a>UX Värskendused 
 
 - **Uue ja täiustatud klientide leht ja profiili üksikasjade leht** Oleme kujundanud ümber lehe Kliendid ning profiili üksikasjade lehed, et parandada kasutajakogemust ja jõudlust . Nende muudatustega saate kliente vaadata, sortida, otsida ja filtreerida. Filtrid on nüüd URL-is esitatud, et otsingutulemusi teiste kasutajatega sujuvalt ühiskasutusse anda. Otsingutulemusi saab salvestada ka segmendina.    
-  Kliendiprofiilide üksikasjade leht rühmitab nüüd andmed mitmesugustes kaasates, nagu demograafilised andmed, ID-d ja muud profiiliatribuudid, et parandada loetavust. Teised jaotised profiili üksikasjade lehel on nüüd interaktiivsemad. Näiteks jaotis tegevuste jaotis võimaldab nüüd filtreerimist ja sortimist.
+  Kliendiprofiilide üksikasjade leht rühmitab nüüd andmed mitmesugustes kaasates, nagu demograafilised andmed, ID-d ja muud profiiliatribuudid, et parandada loetavust. Teised jaotised profiili üksikasjade lehel on nüüd interaktiivsemad. Näiteks tegevuste jaotis võimaldab nüüd filtreerimist ja sortimist.
 
 
 ## <a name="may-2021-updates"></a>Mai 2021 värskendused

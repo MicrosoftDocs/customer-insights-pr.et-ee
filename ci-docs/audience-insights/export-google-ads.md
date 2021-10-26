@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558950"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617913"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentide eksportimine Google Adsi (eelvaade)
 
@@ -35,9 +35,9 @@ Eksportige ühtsete kliendiprofiilide segmendid Google Ads vaatajaskonna loendis
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Google Adsi saab eksportida korraga kuni miljon profiili.
+- Kuni miljoni kliendiprofiili Google Ads ekspordi kohta.
 - Google Adsi saab eksportida ainult segmente.
-- Miljoni profiiliga segmentide eksportimiseks võib teenusepakkuja tõttu kuluda kuni viis minutit. 
+- Miljoni kliendiprofiiliga segmentide eksportimiseks võib teenusepakkujapoolsete piirangute tõttu kuluda kuni 5 minutit. 
 - Google Adsis võib vastavusseviimine võtta kuni 48 tundi.
 
 ## <a name="set-up-connection-to-google-ads"></a>Ühenduse Google Ads loomine
@@ -74,7 +74,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage oma **[Google Adsi vaatajaskonna ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** ja valige **Ühenda**, et käivitada ühendus Google Adsiga.
 
-1. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi.
+1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi.
 
 1. Valige segmendid, mille soovite eksportida. Google Adsi saate eksportida kuni miljon kliendiprofiili.
 

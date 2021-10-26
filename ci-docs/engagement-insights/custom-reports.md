@@ -4,23 +4,23 @@ description: Õppige, kuidas luua kohandatud aruandeid.
 author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 2540221710786dc1c84b231fbb23b9749b601cc6a2aeb78614e16002302a80a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3fa801bfc8b0aee65c21b90de2423a3d5d5e4e26
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036958"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582872"
 ---
 # <a name="create-and-edit-custom-reports"></a>Kohandatud aruannete loomine ja muutmine
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Lisaks kasutusvälisaruannetele saate koostada kohandatud aruande koos diagrammi ja tabeli visualiseeringutega, et aidata teil mõista kasutajate käitumist. Selles artiklis kirjeldatakse, kuidas luua tabeli- ja diagrammi visualiseeringute abil aruannet koos andmetega. 
+Lisaks valmisaruannetele (OOB) saate koostada ka diagrammide ja tabeli visualiseeringutega kohandatud aruande, mis aitab teil kasutajakäitumist mõista. Selles artiklis kirjeldatakse, kuidas luua tabeli- ja diagrammi visualiseeringute abil aruannet koos andmetega. Lisateavet OOB aruannete kohta leiate teemast [Aruannete kuvamine](view-reports.md).
 
 ## <a name="create-a-custom-report"></a>Kohandatud aruande loomine
 
@@ -35,11 +35,13 @@ Lisaks kasutusvälisaruannetele saate koostada kohandatud aruande koos diagrammi
     - Valige **Lisa visuaal** käsuribalt, et luua vaikimisi visualiseering.
     - Või valige **Visualiseering** aruanderedaktori paanilt veerg, riba, rida, ala, sektor, rõngas või tabel.
 
-1. Valige **Andmed** paanilt üks kuvatavatest **Mõõdikutest** (nt lehevaated). Seejärel lisage visualiseerimise kuvamiseks **Mõõtmed** (nt riik). Lisateavet lisasuvandite valiku lisamise kohta leiate teemast [Mõõdikute vaatamine ja loomine](metrics.md) ning [Dimensioonide vaatamine ja loomine](dimensions.md).
+1. Valige **Visualiseerimisredaktori** paani jaotises **Andmed** ripploendist **Mõõdik** üks saadaolevaid suvandeid (nt lehevaated). Samuti saate lisada **Mõõtmed** (näiteks riik), et neid visualiseerimisel kuvada. Lisateavet leiate teemadest [Mõõdikute vaatamine ja loomine](metrics.md) ning [Mõõtmete vaatamine ja loomine](dimensions.md).
 
-1. Valige suvand **Kujundus** paanil **Visualiseerimisredaktor**, et määrata **Pealkirja tekst** soovitud **Positsioonil**, **Andmesildid** ja **telg**.  Visualiseeringu muutmiseks võite valida ka mõne muu diagrammitüübi.
+   :::image type="content" source="media/page-views.png" alt-text="Valige oma aruande mõõdikud.":::
 
-1. Saate muuta visualiseeringu mahtu ja positsiooni:
+1. Valige paani **Visualiseerimisredaktor** jaotis **Kujundus**, et lisada **Pealkirja tekst**, ja lülitage **Pealkiri** sisse ja välja.  Visualiseerimistüüpi saate muuta ka siis, kui valite mõne muu diagrammi, näiteks **sektordiagrammi**.
+
+1. Visualiseeringu suuruse ja asukoha muutmiseks:
    - Valige visualiseering ja lohistage seda siis ühest nurgast või piirdest, et selle mahtu reguleerida.
    - Valige visualiseering ja teisaldage see uuele positsioonile. Samuti saate positsiooni muutmiseks kasutada nooleklahve.
 1. Uue visualiseeringu lisamiseks valige käsuriba **Lisa visuaal**.
@@ -47,17 +49,27 @@ Lisaks kasutusvälisaruannetele saate koostada kohandatud aruande koos diagrammi
 
 1. Sisestage kohandatud aruande nimi ja valige **Salvesta** selle loomiseks.
  
+## <a name="filter-a-custom-report"></a>Kohandatud aruande filtreerimine
+
+Kohandatud aruandes saate valida ajavahemiku või kuupäeva vahemiku, et keskenduda väärtusele või ajaperioodile.
+
+Ajapaneeli valimiseks valige aruandevaate parempoolses ülanurgas aruande ripploendist soovitud väärtus. Saate valida ka väärtuse **Fikseeritud kuupäeva vahemik*.
+
+:::image type="content" source="media/filter-time-date-range.png" alt-text="Filtreerige kellaaja või kuupäeva vahemiku alusel.":::
+
+Enamiku aruannete korral valige aruande filtreerimiseks soovitud mõõdik või segment, valige + **Lisa tingimus**. Lisateavet leiate teemast [Segmentide vaatamine ja loomine](segments.md).
+
 ## <a name="edit-a-custom-report"></a>Vaikearuannete redigeerimiseks
 
 1. Minge **Analüüsimine** > **Kohandatud**, et saada juurdepääs kohandatud aruannete loendile.
 
 1. Valige kohandatud aruandeloendist **Veel [...]** 
 
-1. Valige **Redigeeri üksikasju** aruande nime muutmiseks.
+1. Aruande nime muutmiseks valige **Redigeeri nime**.
 
-1. Valige aruande nimi ning kasutage suvandeid **Lisa visualiseering** ja **Muuda** visualiseeringute lisamiseks, eemaldamiseks, ümberpaigutamiseks ja suuruse muutmiseks.
+1. Valige aruande nimi ning kasutage suvandeid **+ Lisa visualiseering** ja **Muuda** visualiseeringute lisamiseks, eemaldamiseks, ümberpaigutamiseks ja suuruse muutmiseks.
 
-1. Visualiseeringu atribuutide muutmiseks valige **...** ja seejärel valige **Redigeeri visuaali**.
+1. Visualiseeringu atribuutide muutmiseks valige soovitud visuaalne kuju, valige **...** ja seejärel **Redigeerige visuaali**.
 
    :::image type="content" source="media/edit-visual-control.png" alt-text="Diagrammi atribuutide kohandamine aruannetes.":::
 
@@ -72,5 +84,6 @@ Lisaks kasutusvälisaruannetele saate koostada kohandatud aruande koos diagrammi
 1. Aruande eemaldamiseks valige **Kustuta**.
 
 1. Aruande jäädavalt eemaldamiseks kinnitage, et soovite selle kustutada.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

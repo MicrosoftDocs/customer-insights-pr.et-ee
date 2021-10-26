@@ -9,58 +9,62 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f7bd0e7e581305836287bd503ef273a2d556bff
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494491"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623000"
 ---
 # <a name="create-segments"></a>Segmentide loomine
 
-Määratlege keerukad filtrid ühendatud kliendiolemi ümber ja sellega seotud olemid. Pärast töötlemist loob iga segment hulga kliendi kirjeid, mille saate eksportida ja nendega toiminguid teha. Segmente saab hallata lehel **Segmendid**. Saate [luua uusi segmente](#create-a-new-segment) kasutades [segmendikoosturit](#segment-builder) või [looge kiirsegmente](#quick-segments) rakenduse muudelt aladelt.
+Määratlege keerukad filtrid ühendatud kliendiolemi ümber ja sellega seotud olemid. Pärast töötlemist loob iga segment hulga kliendi kirjeid, mille saate eksportida ja nendega toiminguid teha. Segmente saab hallata lehel **Segmendid**. Saate luua [uusi segmente](#create-a-new-segment) kasutades segmendikoosturit või [luua kiirsegmente](#quick-segments) rakenduse muudelt aladelt. 
+
+> [!TIP]
+> - Kiirsegmente toetatakse ainult **üksikklientide** keskkondades.    
+> - **Üksikklientidel** põhinevad segmendid sisaldavad automaatselt segmendi liikmete jaoks saadaolevat kontaktteavet. **Ärikontode** keskkondades põhinevad segmendid kontodel (ettevõtetel või tütarettevõtetel). Kontaktteabe kaasamiseks segmenti kasutage segmendi meisterdamisfunktsiooni **Projekti atribuudid**.
 
 ## <a name="segment-builder"></a>Segmentide koostamine
 
-Järgmine pilt illustreerib segmendikoosturi erinevaid aspekte. Sellel kuvatakse segment, mille tulemuseks on klientide rühm. Kliendid tellisid kaupa kindla ajavahemiku jooksul ja kogusid mitmeid preemiapunkte või kulutasid teatud summa raha. 
+Järgmine pilt illustreerib segmendikoosturi erinevaid aspekte. Sellel kuvatakse segment, mille tulemuseks on klientide rühm. Kliendid tellisid kaupa kindla aja jooksul ja kogusid punkte või kulutasid teatud rahasumma. 
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="Segmendi ehitaja elemendid." lightbox="media/segment-builder-overview.png":::
 
-1 – Korraldage oma segment reeglite ja alamreeglitega. Iga reegel või alamreegel koosneb tingimustest. Tingimuste ühendamine loogikatehtetega
+1. Korraldage oma segment reeglite ja alamreeglitega. Iga reegel või alamreegel koosneb tingimustest. Tingimuste ühendamine loogikatehtetega
 
-2 – Valige reeglile rakenduvate olemite vaheline [seosetee](relationships.md). Seosetee määratleb, milliseid atribuute saab tingimuses kasutada.
+1. Valige reeglile rakenduvate olemite vaheline [seosetee](relationships.md). Seosetee määratleb, milliseid atribuute saab tingimuses kasutada.
 
-3 – Reeglite ja alamreeglite haldamine. Saate muuta reegli positsiooni või selle kustutada.
+1. Reeglite ja alamreeglite haldamine. Saate muuta reegli positsiooni või selle kustutada.
 
-4 – Lisage alamreeglite abil tingimused ja looge õige hargnemine alamreeglite abil.
+1. Lisage alamreeglite abil tingimused ja looge õige hargnemine alamreeglite abil.
 
-5 – Saate rakendada ühendatud reeglitele salvestatud toiminguid.
+1. Saate rakendada ühendatud reeglitele salvestatud toiminguid.
 
-6 – Kasutage atribuudipaani, et lisada saadaolevaid olemiatribuute või luua atribuutidel põhinevad tingimused. Paanil kuvatakse valitud seoseteel põhinevate olemite ja atribuutide loend, mis on valitud reegli jaoks saadaval.
+1. Kasutage atribuudipaani, et lisada saadaolevaid olemiatribuute või luua atribuutidel põhinevad tingimused. Paanil kuvatakse valitud seoseteel põhinevate olemite ja atribuutide loend, mis on valitud reegli jaoks saadaval.
 
-7 – Lisage olemasolevatele reeglitele ja alamreeglitele atribuutidel põhinevad tingimused või lisage see uude reeglisse.
+1. Lisage olemasolevatele reeglitele ja alamreeglitele atribuutidel põhinevad tingimused või lisage see uude reeglisse.
 
-8 – Saate segmendi loomise ajal muudatusi tagasi võtta ja uuesti teha.
+1. Saate segmendi loomise ajal muudatusi tagasi võtta ja uuesti teha.
 
 Ülaltoodud näites on kirjeldatud segmentimisvõimalust. Oleme määratlenud segmenti klientidele, kes koguvad vähemalt $500 veebikaupu *ja* on huvitatud tarkvara arendamisest.
 
 ## <a name="create-a-new-segment"></a>Looge uus segment
 
-Uue segmendi loomiseks on mitu võimalust. Selles jaotises kirjeldatakse, kuidas luua oma segmenti tühjalt lehelt. Samuti saate luua olemasolevatel olemitel põhineva *kiirsegmendi* või kasutada Masinõpe mudeleid et saada *soovitatud segmente*. Lisateave: [Segmentide ülevaade](segments.md).
+Uue segmendi loomiseks on mitu võimalust. Selles jaotises kirjeldatakse, kuidas luua oma segmenti tühjalt lehelt. Samuti saate luua olemasolevatel olemitel põhineva *kiirsegmendi* või kasutada Masinõpe mudeleid et saada *soovitatud segmente*. Lisateabe saamiseks minge [Segmentide ülevaade](segments.md).
 
-Segmenti luues saate mustandi salvestada. See salvestatakse passiivse segmendina ja seda ei saa kehtiva konfiguratsiooniga aktiveeritud olla.
+Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment passiivse segmendina. Kui olete segmendi konfiguratsiooni lõpule viinud, käivitage see segmenti aktiveerimiseks. Võite segmendi ka _ **Aktiveerida** _ lehelt *Kõik segmendid*.
 
 1. Minge lehele **Segmendid**.
 
 1. Valige **Uus** > **Ehita enda oma**.
 
-1. Segmendikoosturi lehel määrate esimese reegli. Reegel koosneb ühest või mitmest tingimusest ja määratleb klientide komplekti.
+1. Segmendi osade lehel saate määratleda või koostada reegleid. Reegel koosneb ühest või mitmest tingimusest mis määratleb klientide komplekti.
 
 1. Valige jaotisest **Rule1** selle olemi atribuut, mille alusel soovite kliente filtreerida. Atribuutide valimiseks on kaks viisi. 
    - Vaadake paanil **Lisa reeglile** saadaolevad olemid ja atribuudid läbi ja valige lisamisatribuudi kõrval soovitud **+** ikoon. Valige, kas soovite lisada atribuudi olemasolevale reeglile või kasutada seda uue reegli loomiseks.
    - Kui soovite näha kattuvate soovituste kuvamist, tippige atribuudi nimi reegli jaotisesse.
 
-1. Valige tingimuse kattuvate väärtuste määramiseks tehtemärgid. Atribuudil võib olla üks neljast andmetüübist: arv, string, kuupäev või tõeväärtus. Sõltuvalt atribuudi andmetüübist on tingimuse määramiseks saadaval erinevad tehtemärgid. 
+1. Valige tingimuse kattuvate väärtuste määramiseks tehtemärgid. Atribuudil võib olla üks neljast andmetüübist: arv, string, kuupäev või tõeväärtus. Sõltuvalt atribuudi andmetüübist on tingimuse määramiseks saadaval erinevad tehtemärgid. Ärikontodega segmentide puhul on saadaval kaks eritehtet, et kaasata allaneetud ettevõtete potentsiaalsed hierarhiad. Kasutage seotud kontode kaasamiseks tehteid *laps* ja *vanem*. 
 
 1. Kui soovite reeglile lisada veel tingimusi, valige **Lisa tingimus**. Praeguse reegli alla reegli loomiseks valige käsk **Lisa alamreegel**.
 
@@ -72,69 +76,65 @@ Segmenti luues saate mustandi salvestada. See salvestatakse passiivse segmendina
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Klient
    - eCommerce_eCommercePurchases > Klient
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klient
-   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klient Viimase suvandi valimisel võime kaasata reeglitingimustesse kõigi loetletud olemite atribuudid. Tõenäoliselt saame vähem tulemusi, kuna kattuvad kliendikirjed peavad kuuluma kõigi olemite alla. Selles näites peavad nad ostma kaupu e-poe kaudu (*eCommerce_eCommercePurchases*), müügikohas (*POS_posPurchases*) ja osalema meie lojaalsusprogrammis (*loyaltyScheme_loyCustomers*). Teise suvandi valimisel saame valida atribuute ainult olemist *eCommerce_eCommercePurchases* ja *kliendi* olemi atribuute. Selle tulemuseks on tõenäoliselt rohkem saadud kliendiprofiile.
+   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klient Viimase suvandi valimisel võime kaasata reeglitingimustesse kõigi loetletud olemite atribuudid. Tõenäoliselt saame vähem tulemusi, kuna kattuvad kliendikirjed peavad olema kõigi olemite osa. Selles näites peavad nad ostma kaupu e-poe kaudu (*eCommerce_eCommercePurchases*), müügikohas (*POS_posPurchases*) ja osalema meie lojaalsusprogrammis (*loyaltyScheme_loyCustomers*). Teise suvandi valimisel saame valida atribuute ainult olemist *eCommerce_eCommercePurchases* ja *kliendi* olemi atribuute. Selle tulemuseks on tõenäoliselt rohkem saadud kliendiprofiile.
 
-1. Kui reeglis on mitu tingimust, saate valida, milline loogiline tehtemärk neid ühendab.
-
+1. Kui reeglis on mitu tingimust, saate valida, milline loogiline tehtemärk neid ühendab.  
    - **JA** tehtemärk: kirje segmenti kaasamiseks peavad olema täidetud kõik tingimused. See valik on kõige kasulikum juhul, kui määratlete eri olemite tingimusi.
-
    - **VÕI** tehtemärk: kirje segmenti kaasamiseks peab olema täidetud üks tingimustest. See valik on kõige kasulikum juhul, kui määratlete sama olemi mitu tingimusi.
 
    :::image type="content" source="media/segmentation-either-condition.png" alt-text="Reegel kahe JA tingimustega.":::
 
    VÕI tehtemärki kasutades peavad kõik tingimused põhinema seoseteel kaasatud olemitel.
 
-   1. Kliendikirjete erinevate kogumite loomiseks saate luua mitu reeglit. Saate ühendada rühmad, et kaasata teie ärijuhtumi jaoks nõutavad kliendid. Uue reegli loomiseks valige **Lisa reegel**. Täpsemalt kui te ei saa määratud seosetee tõttu reeglisse lisada ega olemit kaasata, peate looma uue reegli, et valida sellest atribuute.
+   - Kliendikirjete erinevate kogumite loomiseks saate luua mitu reeglit. Saate ühendada rühmad, et kaasata teie ärijuhtumi jaoks nõutavad kliendid. Uue reegli loomiseks valige **Lisa reegel**. Täpsemalt kui te ei saa määratud seosetee tõttu reeglisse lisada ega olemit kaasata, peate looma uue reegli, et valida sellest atribuute.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Lisage segmendile uus reegel ja valige seatud tehtemärk.":::
 
-   1. Valige üks tehingukomplekt: **Liit**, **Lõikuv** või **Välja arvatud**.
+   - Valige üks tehingukomplekt: **Liit**, **Lõikuv** või **Välja arvatud**.
 
-   - **ühend** ühendab kaks rühma.
-
-   - **Ühisosa** kattub kahe rühmaga. Koondatud rühma jäetakse alles ainult andmed, mis on mõlemas rühmas *ühised*.
-
-   - **Välja arvatud** kombineerib kaks rühma. Alles jäetakse ainult sellised rühma A andmed, mida *ei leidu* rühmas B.
+      - **ühend** ühendab kaks rühma.
+      - **Ühisosa** kattub kahe rühmaga. Koondatud rühma jäetakse alles ainult andmed, mis on mõlemas rühmas *ühised*.
+      - **Välja arvatud** kombineerib kaks rühma. Alles jäetakse ainult sellised rühma A andmed, mida *ei leidu* rühmas B.
 
 1. Vaikimisi genereerivad segmendid väljundolemi, mis sisaldab kõiki määratletud filtritele vastavaid kliendiprofiilide atribuute. Kui segment põhineb muudel olemitel kui olem *Klient*, saate väljundolendisse lisada rohkem atribuute nendest olemitest. Valige **Projekti tribuudid**, et valida väljundolemile lisatavad atribuudid.  
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Näide väljundolemile lisatava küljepaanil valitud projitseeritud atribuutidest.":::
   
-   Näide: segment põhineb olemil, mis sisaldab *kliendi* olemiga seotud ostuandmeid. Segmendis otsitakse kõiki Hispaaniast pärit kliente, kes on praeguse aasta jooksul oma kaupa ostnud. Saate lisada atribuute, nagu kaupade hind, või ostukuupäeva kõigile väljundolemi kattuvatele kliendikirjetele. See teave võib olla kasulik, et analüüsida hooajalist korrelatsiooni kogukuludega.
+   Näiteks: Segment põhineb olemil, mis sisaldab *Kliendi* olemiga seotud ostuandmeid. Segmendis otsitakse kõiki Hispaaniast pärit kliente, kes on praeguse aasta jooksul oma kaupa ostnud. Saate lisada atribuute, nagu kaupade hind, või ostukuupäeva kõigile väljundolemi kattuvatele kliendikirjetele. See teave võib olla kasulik, et analüüsida hooajalist korrelatsiooni kogukuludega.
 
    > [!NOTE]
-   > - Prognoositud atribuudid töötavad ainult olemitega, kellel on üks-mitmele-seos kliendiolemiga. Näiteks võib ühel kliendil olla mitu tellimust.
-   > - Saate luua ainult selle olemi projektiatribuute, mida kasutatakse igas kasutatavas segmendipäringu reeglis.
-   > - Prognoositud atribuudid on teguriks seatud kasutades tehete kogumeid.
+   > - **Projektiatribuudid** töötavad ainult olemitele, mille seos kliendiolemiga on üks-mitmele. Näiteks võib ühel kliendil olla mitu tellimust.
+   > - Kui atribuut, mida soovite projekti jaoks kasutada, on *Kliendi* olemist rohkem kui ühe hüppe kaugusel, nagu see on seoses määratletud, tuleks seda atribuuti kasutada igas teie ettevõttes kasutatava segmendipäringu reeglis. 
+   > - Kui atribuut, mida soovite projekti jaoks kasutada, on *Kliendi* olemist ühe hüppe kaugusel, siis seda atribuuti ei pea kasutama igas teie ettevõttes kasutatava segmendipäringu reeglis. 
+   > - **Prognoositud atribuudid** on seatud teguriks kasutades tehete kogumeid.
+   > - Ärikontodel põhinevate segmentide puhul tuleb iga ettevõtte ühe või mitme kontakti üksikasjad kaasata segmenti, et see segment oleks aktiveeritud või eksporditud kaasamiskohaks, mis nõuab kontaktteavet.
 
-1. Enne segmendi salvestamist ja käivitamist valige segmendi nime kõrval käsk **Redigeeri üksikasju**. Andke oma segmendile nimi ja värskendage segmendile soovitatud **väljundolemi nime**. Segmendile saate lisada ka kirjelduse.
+1. Enne segmendi salvestamist ja käivitamist valige segmendi nime kõrval käsk **Redigeeri üksikasju**. Andke oma segmendile nimi ja värskendage segmendile soovitatud **Väljundolemi nime**. Segmendile saate lisada ka kirjelduse.
 
-1. Kui kõik nõuded on valideeritud, valige käsk **Käivita**, et segment salvestada ja töödelda. Vastasel juhul salvestatakse see passiivse segmendi mustandina.
+1. Valige käsk **Käivita**, et salvestada segment, see aktiveerida ja alustada segmendi töötlemist kõigi reeglite ja tingimuste alusel. Vastasel juhul salvestatakse see passiivse segmendina.
 
 1. Valige **Tagasi segmentidesse**, et naasta lehele **Segmendid**.
 
 > [!TIP]
 > - Segmendi tehtemärgid ei soovita tingimuste jaoks tehtemärkide seadmisel olemite kehtivaid väärtusi. Minge **Andmed** > **Olemid** ja laadige alla olemi andmed, et näha, millised väärtused on saadaval.
 > - Kuupäevadel põhinevad tingimused võimaldavad teil vahetada fikseeritud kuupäevade ja ujuva kuupäevavahemiku vahel.
-> - Kui teil on oma segmendi jaoks mitu reeglit, leiate redigeeritava reegli ümber sinise rea.
+> - Kui teil on oma segmendi jaoks mitu reeglit, on redigeeritud reegli kõrval vertikaalne sinine joon. 
 > - Reegleid ja tingimusi saate segmendi määratluses teisaldada ka muudesse kohtadesse. Valige reegli või tingimuse kõrval väärtus [...] ja valige, kuidas ja kuhu seda teisaldada.
-> - Käsuribal juhtelementide **Võta tagasi** ja **Tee uuesti** abil saate muudatused tagasi võtta.
+> - Käsuribal juhtelementide **Võta tagasi** ja **Tee uuesti** abil saate muudatusi tagasi võtta.
 
 ## <a name="quick-segments"></a>Kiirsegmendid
 
 Kiirsegmendid lasevad teil luua lihtsaid segmente ühe tehtega kiiresti, et saada kiiremaid ülevaateid.
 
 1. Lehel **Segmendid** klõpsake **Uus** > **Loo vorm**.
-
    - Valige suvand **Profiilid** etehitada segment, mis põhineb *ühendatud kliendi* olemil.
-   - Valige suvand **Mõõtmised**, et luua segment juba loodud segmentide ümber.
+   - Valige suvand **Mõõtmed**, et luua segment juba loodud mõõtmete ümber.
    - Valige suvand **Ärianalüüs**, et luua segment ümber ühe väljundi olemi, mille olete loonud, kasutades kas **Prognooside** või **Kohandatud mudelite** võimalusi.
 
 2. Valige dialoogiboksis **Uus kiirsegment** atribuut ripploendist **Väli**.
 
 3. Süsteem pakub rohkem ülevaateid, mis aitavad teil luua klientidest paremaid segmente.
    - Kategooria väljade puhul näitame 10 peamist kliendi arvu. Valige **Väärtus** ja **Ülevaatamine**.
-
    - Süsteem näitab numbrilise atribuudi puhul, mis atribuudi väärtus langeb iga kliendi protsendiili alla. Valige **Tehtemärk**, **Väärtus** ja **Ülevaatamine**.
 
 4. Süsteem esitab **hinnangulise segmendi mahu**. Saate valida, kas luua määratletud segment või esmalt vaadata seda uuesti, et hankida muus mahus segment.

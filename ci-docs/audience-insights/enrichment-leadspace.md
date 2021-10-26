@@ -1,32 +1,32 @@
 ---
 title: Ettevõtteprofiilide rikastamine kolmanda osapoole rikastamisteenusega Leadspace'ilt
 description: Üldine teave Leadspace'i kolmanda osapoole rikastamise kohta.
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031698"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617346"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Ettevõtte profiilide rikastamine Leadspace'iga (eelvaade)
 
-Leadspace on andmeteaduse ettevõte, mis pakub kliendi hulgiandmete platvormi. See võimaldab ettevõtetel kliendi koondprofiilidega klientide andmeid rikastada. Rikastused sisaldavad rohkem atribuute, nagu ettevõtte suurus, asukoht, tegevusala ja palju muud.
+Leadspace on andmeteaduse ettevõte, mis pakub kliendi hulgiandmete platvormi. See võimaldab keskkondades, kus on ettevõtetel põhinevad unified kliendiprofiilid, nende andmeid rikastada. Rikastage *Kliendiprofiile* selliste atribuutidega nagu ettevõtte suurus, asukoht või tööstus. Rikastage *Kontaktiprofiile* atribuutidega nagu pealkiri, isik või meili kontrollimine.
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites"></a>eeltingimused
 
 Leadspace'i seadistamiseks peavad olema täidetud järgmised eeltingimused.
 
 - Teil on aktiivne Leadspace litsents.
-- Teil on ettevõtete [kliendi koondprofiilid](customer-profiles.md).
-- Administraator on juba konfigureerinud Leadspace'i ühenduse või teil on [administraatoriõigused](permissions.md#administrator) ja "alaline võti (nimetatakse **Leadspace tokeniks**). Võtke [Leadspaceiga](https://www.leadspace.com/products/leadspace-on-demand/) otse ühendust toodete üksikasjade teabe saamiseks.
+- Teil on [ühendatud kliendiprofiilid](customer-profiles.md) kontode põhjal.
+- Administraator on juba konfigureerinud Leadspace'i ühenduse või teil on [administraatoriõigused](permissions.md#administrator) ja "alaline võti (nimetatakse **Leadspace tokeniks**). Võtke [Leadspaceiga](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) otse ühendust toodete üksikasjade teabe saamiseks.
 
 ## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 
@@ -50,6 +50,10 @@ Leadspace'i seadistamiseks peavad olema täidetud järgmised eeltingimused.
 
 1. Valige **Edasi**, et lõpetada väljade kaardistamine.
 
+1. Märkige ruut, kui teil on *Kontaktiprofiilid*, mida soovite rikastada. Sihtrühma ülevaated vastendavad nõutavad väljad automaatselt.
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Müügivihjeruumi kontaktikirjete rikastamine.":::
+ 
 1. Sisestage rikastamiseks nimi ja valige **Salvesta rikastamine** pärast valikute läbivaatamist.
 
 
@@ -81,7 +85,8 @@ Lisateavet leiate teemast [Leadspace'i API-d](https://support.leadspace.com/hc/e
 
 ## <a name="next-steps"></a>Järgmised etapid
 
-Rikastatud kliendiandmetele toetumine. Looge [segmente](segments.md) ja [näitajaid](measures.md) ning isegi [eksportige andmed](export-destinations.md), et pakkuda oma klientidele isikupärastatud kogemust.
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 

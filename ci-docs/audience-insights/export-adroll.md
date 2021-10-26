@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmete eksportimine AdRolli
 description: Lugege, kuidas konfigureerida ühendust ja eksportida AdRoll-i.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e48f67ec21bb9b883dd30544ccf4dcfbf487acb1abaf0a0557764bc3d955e41a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032066"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617330"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Segmentide eksportimine AdRoll-i (eelversioon)
 
@@ -28,11 +28,11 @@ Eksportige kliendi koondprofiili segmendid AdRolli ja kasutage neid reklaamimise
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Korraga saate AdRoll'i eksportida kuni 250 000 profiili.
-- Vähem kui 100 profiiliga segmente ei saa AdRolli eksportida. 
+- Korraga saate AdRoll'i eksportida kuni 250 000 kliendiprofiili.
+- Vähem kui 100 kliendiprofiiliga segmente ei saa AdRoll'i eksportida. 
 - AdRolli saab eksportida ainult segmente.
-- Kuni 250 000 profiili eksportimiseks AdRolli võib kuluda kuni 10 minutit. 
-- AdRoll'i eksporditavate profiilide arv sõltub teie Adroll lepingust.
+- Kuni 250 000 kliendiprofiili eksportimine AdRoll'i võib võtta kuni 10 minutit. 
+- Kliendiprofiilide arv, mida saate AdRolli'i eksportida, sõltub teie AdRoll lepingust.
 
 ## <a name="set-up-connection-to-adroll"></a>Ühenduse loomine AdRoll'iga
 
@@ -66,7 +66,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage oma **AdRoll Advertiser ID**. Lisateavet leiate teemast [AdRoll Advertiser Profiilid](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. See on vajalik segmentide eksportimiseks AdRolli.
+1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. See on vajalik segmentide eksportimiseks AdRolli.
 
 1. Valige segmendid, mille soovite eksportida. Valige vähemalt 100 liikmega segment. Väiksemaid segmente ei saa eksportida. Lisaks on eksporditava segmendi maksimummaht 250 000 liiget ekspordi kohta. 
 

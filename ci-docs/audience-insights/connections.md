@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033213"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605944"
 ---
 # <a name="connections-preview-overview"></a>Ühenduste (eelversioon) ülevaade
 
@@ -47,6 +47,7 @@ Uusi ühendusi saavad konfigureerida ainult administraatorid, kuid loodud ühend
 1. Sisestage **Loo ühendus** seadistuse paanil nõutavad üksikasjad. 
    1. **Kuva nimi** ja ühenduse tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
    1. Täpsed väljad sõltuvad teenusest, millega loote ühenduse. Saate teavet konkreetse ühendusetüübi kohta sihtteenuse artklis.
+   1. Kui [kasutate oma võtmehoidlat](use-azure-key-vault.md) saladuste salvestamiseks, aktiveerige **Kasutage võtmehoidlat** ja valige loendist saladus.
 
 1. Uue ühenduse loomiseks valige **Salvesta**.
 
@@ -93,3 +94,6 @@ Eraldatud rikastamine ja eksport muutuvad passiivseks. Aktiveerite need uuesti, 
 
 1. Valige käsk **Eemalda**, et kinnitada kustutamine.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Saate seadistada ühendusi saladustega, mida haldab teie oma võtmehoidla.
+
+Mõne ühenduse puhul on vaja saladusi, nagu API-võtmed või paroolid. Mõned ühendused toetavad saladusi, mis on talletatud teie enda võtmehoidlasse. Lisateave toetatud ühenduste kohta ja kuidas seadistada [oma võtmehoidlas publiku ülevaadete jaoks](use-azure-key-vault.md).

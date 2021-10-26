@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557347"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622995"
 ---
 # <a name="relationships-between-entities"></a>Olemitevaheline seos
 
@@ -67,6 +67,20 @@ Seos koosneb *lähteolemist*, mis sisaldab võõrvõtit ja *sihtolemit*, millele
    - **Sihtvõtme väli**: sihtolemi võtme väli. Näiteks võib klient kasutada võtmevälja **CustomerID**.
 
 4. Kohandatud seose loomiseks valige **Salvesta**.
+
+## <a name="set-up-account-hierarchies"></a>Seadistage konto hierarhiad
+
+Keskkondades, mis on konfigureeritud kasutama ärikontosid peamise sihtrühmana, saavad konfigureerida seostuvate ärikontode hierarhiaid. Näiteks ettevõte, kus on eraldi äriüksused. 
+
+Asutused ja organisatsioonid loovad ettevõttehierarhiaid, et ettevõtteid ja nende suhteid üksteisega paremini hallata. Sihtrühma ülevaadete võimalus toetab peamise ja alluva konto hierarhiaid, mis on juba allaneetud kliendiandmetes olemas. Näiteks ettevõtted rakendusest Dynamics 365 Sales. Neid hierarhiaid saab konfigureerida sihtrühma ülevaadete lehel **Seosed** konto hierarhia vahekaardil.
+
+1. Minge **Andmed** > **Seosed**.
+1. Valige **Konto hierarhia** vahekaart.
+1. Valige **Uus konto hierarhia**. 
+1. Sisestage **Konto hierarhia** paanil hierarhiale nimi. Süsteem loob väljundolemile nime. Saate muuta väljundi nime olemit.
+1. Valige olem, mis sisaldab teie konto hierarhiat. Tavaliselt on see samas olemis, mis sisaldab kontosid.
+1. Valige valitud olemist **Konto ID** ja **Konto peamine ID** 
+1. Sätete rakendamiseks ja kontohierarhia lõplikuks muutmiseks valige käsk **Salvesta**.
 
 ## <a name="view-relationships"></a>Kuva seosed
 

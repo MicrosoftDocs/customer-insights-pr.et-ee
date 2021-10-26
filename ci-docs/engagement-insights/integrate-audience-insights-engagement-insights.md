@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7559013"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645577"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Sihtrühma ülevaadete ja kaasamisülevaadete vahelise lingi loomine
 
@@ -26,7 +26,7 @@ Kasutage kaasamisülevaadete analüüsimiseks ühendatud profiile ja sihtrühma 
 ## <a name="prerequisites"></a>Eeltingimused
 
 - Sihtrühma ülevaadete profiilid peavad olema salvestatud teie Azure Data Lake Storage kontole või hallatavasse [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md) andmekontosse. 
-- Teie sihtrühma ülevaadete keskkond peaks olema seotud Dataverse keskkonnaga. Kui see keskkond kasutab andmemäluks Dataverse keskkonda, kontrollige kindlasti vaatajate ülevaadetes valikut **Andmete ühiskasutuse lubamine**. Lisateavet vt: [Looge ja seadistage vaatajaskonna statistikas tasuline keskkond](../audience-insights/get-started-paid.md).
+- Teie sihtrühma ülevaadete keskkond peaks olema seotud Dataverse keskkonnaga. Kui see keskkond kasutab andmemäluks Dataverse keskkonda, kontrollige kindlasti vaatajate ülevaadetes valikut **Andmete ühiskasutuse lubamine**. Lisateavet leiate teemast [Keskkonna loomine ja konfigureerimine publiku ülevaadetes](../audience-insights/create-environment.md).
 - Teil on vaja administraatoriõigusi nii kaasamisülevaadete kui ka sihtrühma ülevaadete keskkondade jaoks.
 - Lingitud keskkonnad peavad olema samas geograafilises piirkonnas.
 

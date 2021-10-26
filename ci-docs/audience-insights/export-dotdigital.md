@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmete eksportimine DotDigitali
 description: Lugege, kuidas konfigureerida ühendust ja eksportida DotDigitali.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f09be0dfa599c1ef7cf0055b7ce1df8784cf447ada64b56bc7543c214f9a5b99
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3e3a79603f9f5746ee176d3d4299a30510c7459e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034631"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618378"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Segmentide eksportimine DotDigitali (eelversioon)
 
@@ -22,17 +22,17 @@ Eksportige koondatud kliendiprofiilid DotDigitali aadressiraamatutesse ning kasu
 
 ## <a name="prerequisites-for-a-connection"></a>Ühenduse eeltingimus
 
--   Teil on [DotDigitali konto](https://dotdigital.com/) ja asjakohane administraatori identimisteave.
+-   Teil on [DotDigital'i konto](https://dotdigital.com/) ja olete loonud [API-kasutaja](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Ühenduse loomiseks on vaja API kasutaja mandaati
 -   DotDigitalis on olemas aadressiraamatud ja asjakohased ID-d. ID leiate URL-ist, kui valite ja avate aadressiraamatu. Lisateavet leiate teemast [DotDigitali aadressiraamatud](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Olete sihtrühmaülevaadetes [segmendid konfigureerinud](segments.md).
 -   Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- DotDigitali saab eksportida korraga kuni miljon profiili.
+- Kuni miljoni kliendiprofiili DotDigitali ekspordi kohta.
 - DotDigitali saab eksportida ainult segmente.
-- Miljoni profiiliga segmentide eksportimiseks võib teenusepakkuja tõttu kuluda kuni kolm tundi. 
-- DotDigitali eksporditavate profiilide arv sõltub DotDigitaliga sõlmitud lepingust.
+- Miljoni kliendiprofiiliga segmentide eksportimiseks võib teenusepakkujapoolsete piirangute tõttu kuluda kuni 3 tundi. 
+- Kliendiprofiilide arv, mida saate DotDigital'i eksportida, sõltub ja on piiratud vastavalt teie DotDigital lepingule.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Ühenduse loomine DotDigitaliga
 
@@ -44,7 +44,7 @@ Eksportige koondatud kliendiprofiilid DotDigitali aadressiraamatutesse ning kasu
 
 1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Sisestage oma **DotDigitali kasutajanimi ja parool**.
+1. Sisestage oma **DotDigitali API kasutajanimi ja parool**. 
 
 1. Sisestage oma **[DotDigitali aadressiraamatu ID](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
 
@@ -67,7 +67,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 1. Valige **Ekspordiühendus** väljal ühendus DotDigital jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
 
 
-1. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Korrake samu juhiseid muude valikuliste väljade puhul, nagu **Eesnimi**, **Perekonnanimi**, **Täisnimi**, **Sugu** ja **Sihtnumber**.
+1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Korrake samu juhiseid muude valikuliste väljade puhul, nagu **Eesnimi**, **Perekonnanimi**, **Täisnimi**, **Sugu** ja **Sihtnumber**.
 
 1. Valige segmendid, mille soovite eksportida. DotDigitali saate eksportida kuni miljon kliendiprofiili.
 

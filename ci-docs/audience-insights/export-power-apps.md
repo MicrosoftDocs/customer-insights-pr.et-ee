@@ -1,7 +1,7 @@
 ---
 title: Power Apps konnektor
 description: Ühendumine Power Appsi ja Power Automate'iga.
-ms.date: 01/19/2021
+ms.date: 10/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: fc0af656cd5b436d9efd65b2a2c75dde9c9deb9dbcdd56ffc6a960f5878a631f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 985e6c85795fba8ca3063cdffc7f9012e798856a
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031744"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623218"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps’i konnektor (eelvaade)
 
@@ -30,48 +30,47 @@ Vaadake Power Appsi dokumentatsiooni, et saada teada, kuidas [lisada rakendusele
 
 Pärast Customer Insightsi andmeühendusena lisamist saate Power Appsis valida järgmised olemid.
 
-- Klient: [ühendatud kliendiprofiili](customer-profiles.md) andmete kasutamine.
-- UnifiedActivity: rakenduses [tegevuse ajajoone](activities.md) kuvamiseks.
+- **Klient**: andmete kasutamine [ühendatud kliendiprofiililt](customer-profiles.md).
+- **UnifiedActivity** : [tegevuse ajaskaala](activities.md) kuvamiseks rakenduses.
+- **ContactProfile** : kliendi kontaktide kuvamiseks. See olem on saadaval ainult ärikontode sihtrühma ülevaadete keskkondades.
 
 ## <a name="limitations"></a>Piirangud
 
 ### <a name="retrievable-entities"></a>Toodavad olemid
 
-Saate tuua ainult olemid **Klient**, **UnifiedActivity** ja **Segmendid** Power Appsi konnektori kaudu. Teised olemid on näidatud, kuna aluseks olevad konnektorid toetavad neid läbi Power Automate’i päästikute.  
+Power Apps konnektori kaudu saate tuua olemid **Klient**, **UnifiedActivity**, **Segmendid** ja **ContactProfile**. ContactProfile on saadaval ainult ärikontode sihtrühma ülevaadete eksemplarides. Teised olemid on näidatud, kuna aluseks olevad konnektorid toetavad neid läbi Power Automate’i päästikute.
 
 ### <a name="delegation"></a>Delegeerimine
 
-Delegeerimine töötab ainult olemi Klient ja olemi UnifiedActivity jaoks. 
+Delegeerimine töötab ainult olemi **Klient** ja olemi **UnifiedActivity** jaoks. 
 
 - Olemi **Klient** delegatsioon: selle olemi korral delegatsiooni kasutamiseks peavad väljad olema indekseeritud [Otsingu- ja filtriregistris](search-filter-index.md).  
-
 - Olemi **UnifiedActivity** delegeerimine: selle olemi delegeerimine töötab ainult väljade **ActivityId** ja **CustomerId** jaoks.  
+- Delegeerimine **ContactProfile** jaoks: Selle üksuse delegeerimine toimib ainult väljade **ContactId** ja **CustomerId** puhul. ContactProfile on saadaval ainult ärikontode sihtrühma ülevaadete keskkondades.
 
-- Lisateavet delegeerimise kohta leiate teemast [Power Appsi delegeeritavad funktsioonid ja toimingud](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+Lisateavet delegatsiooni kohta leiate [Power Apps delegeeritavad funktsioonid ja toimingud](/powerapps/maker/canvas-apps/delegation-overview). 
 
 ## <a name="example-gallery-control"></a>Galerii juhtelemendi näide
 
-Näiteks lisate kliendiprofiilid [galerii juhtelementi](/powerapps/maker/canvas-apps/add-gallery).
+Kliendiprofiile saate lisada [galerii juhtelemendile](/powerapps/maker/canvas-apps/add-gallery).
 
-1. Lisage loodavale rakendusele **Galerii** juhtelement.
-
-> [!div class="mx-imgBorder"]
-> ![Galerii elemendi lisamine.](media/connector-powerapps9.png "Galerii elemendi lisamine")
-
-1. Valige üksuste andmeallikaks **Klient**.
+1. Lisage loodavale rakendusele **galerii** juhtelement.
 
     > [!div class="mx-imgBorder"]
-    > ![Andmeallika valimine.](media/choose-datasource-powerapps.png "Andmeallika valimine")
+    > ![Galerii elemendi lisamine.](media/connector-powerapps9.png "Galerii elemendi lisamine.")
 
-1. Kliendi olemi galerii välja valimiseks saate muuta paremal asuvat andmete paneeli.
+2. Valige üksuste andmeallikaks **Klient**.
 
-1. Kui tahate näidata galeriis valitud kliendi mistahes välja, täitke sildi teksti atribuut:  **{Name_of_the_gallery}.Selected.{property_name}**
+    > [!div class="mx-imgBorder"]
+    > ![Andmeallika valimine.](media/choose-datasource-powerapps.png "Andmeallika valimine.")
 
-    Näide: Gallery1.Selected.address1_city
+3. Kliendi olemi galerii välja valimiseks saate muuta paremal asuvat andmete paneeli.
 
-1. Kliendi ühtse ajajoone näitamiseks lisage galerii element ja üksuste atribuut: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
+4. Kui tahate näidata galeriis valitud kliendi mistahes välja, täitke sildi **Teksti** atribuut kasutades **{Name_of_the_gallery}.Valitud.{property_name}**  
+    - Näide: _Gallery1.Selected.address1_city_
 
-    Näide: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+5. Kliendi ühtse ajajoone näitamiseks lisage galerii element ja ja lisage **Üksused** atribuut, kasutades **Filter('UnifiedActivity', CustomerId = {Customer_Id})**  
+    - Näide: _Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

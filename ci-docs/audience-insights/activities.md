@@ -1,7 +1,7 @@
 ---
 title: Kliendi tegevused
 description: Määratleda klienditegevused ja kuvada need kliendiprofiilide ajaskaalal.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494406"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617964"
 ---
 # <a name="customer-activities"></a>Kliendi tegevused
 
@@ -24,8 +24,7 @@ Erinevatest andmeallikatest [pärinevaid klienditegevusi](data-sources.md) saate
 
 Teie andmeallikad võivad hõlmata mitmesugustest andmeallikatest pärinevaid tehingute ja tegevustega seotud andmeid sisaldavaid olemeid. Tuvastage need olemid ja valige tegevused, mida soovite kliendi ajajoonel kuvada. Valige olem, mis hõlmab teie sihttegevust või -tegevusi.
 
-> [!NOTE]
-> Olemil peab olema vähemalt üks **Kuupäeva** tüüpi atribuut, mis lisatakse kliendi ajajoonele ning ilma **Kuupäeva** väljata olemeid ei saa lisada. Kui sellist olemit ei leita, siis **Lisa tegevus** funktsioon keelatakse.
+Olemil peab olema vähemalt üks **Kuupäeva** tüüpi atribuut, mis lisatakse kliendi ajajoonele ning ilma **Kuupäeva** väljata olemeid ei saa lisada. Kui sellist olemit ei leita, siis **Lisa tegevus** funktsioon keelatakse.
 
 1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Tegevused**.
 
@@ -41,13 +40,16 @@ Teie andmeallikad võivad hõlmata mitmesugustest andmeallikatest pärinevaid te
 
 1. Valige **Edasi** järgmise etapi juurde minemiseks.
 
-1. Konfigureerige **Seosed** etapis üksikasjad, et ühendada oma tegevuseandmed vastava kliendiga. Selle sammuga visualiseeritakse olemite vaheline ühendus.  
+1. Konfigureerige **Seose** sammus üksikasjad, et ühendada oma tegevuseandmed vastava kliendikirjega. Selle sammuga visualiseeritakse olemite vaheline ühendus.  
 
    - **Esimeseks**: Teie tegevusolemi tundmatu väli, mida kasutatakse seose loomiseks teise olemiga.
    - **Teiseks**: Vastava lähtekliendi olem, kellega teie tegevusolem on seoses. Saate olla seotud ainult lähtekliendi olemitega, mida kasutatakse andmete ühendamise protsessis.
    - **Kolmandaks**: kui selle tegevuseolemi ja valitud lähtekliendi olemi vaheline seos on juba olemas, on seose nimi kirjutuskaitstud režiimis. Kui sellist seost pole, luuakse uus seos, mille nime sisestate sellel väljal.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Olemi seose määratlemine.":::
+
+   > [!TIP]
+   > B2B keskkondades saate valida nii konto olemite kui ka muude olemite vahel. Kui valite konto olemi, seatakse seose tee automaatselt. Muude olemite puhul peate määratlema seose tee ühe või mitme vaheolemi üle, kuni olete jõudnud konto olemini.
 
 1. Valige **Edasi** järgmise etapi juurde minemiseks. 
 
@@ -95,5 +97,34 @@ Järgmised toimingud on saadaval tegevuse valimiseks.
 - **Ümbernimetamine** : Avab dialoogi, kus saab sisestada valitud tegevusele mõne muu nime. Vajutage nuppu **Salvesta**, et muudatused rakendada.
 
 - **Kustuta**: Avab dialoogi, mis kinnitab valitud tegevuse kustutamise. Korraga saate kustutada ka mitu tegevust, valides tegevused ja seejärel valides kustutamisikooni. Valige käsk **Kustuta**, et kinnitada kustutamine.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Tegevuse ajaskaala kuvamine kliendiprofiilides
+
+Pärast klienditegevuste konfigureerimist valige tegevuse konfiguratsioonis suvand **Kuva tegevuse ajaskaalal**, et leida nende kliendiprofiililt kõik teie kliendi tegevused.
+
+Kliendi jaoks ajaskaala avamiseks minge jaotisesse **Kliendid** ja valige kliendiprofiil, mida soovite vaadata.
+
+Kui klient on osalenud teie konfigureeritud tegevuses, leiate selle jaotisest **Tegevuse ajaskaala**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Konfigureeritud tegevuste kuvamine kliendiprofiilides.":::
+
+Tegevuste filtreerimiseks tegevuse ajaskaalal on mitu võimalust:
+
+- Saate valida ühe või mitu tegevuse ikooni, et viimistleda oma tulemusi ainult valitud tüüpide kaasamiseks.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Tegevuste filtreerimine ikoonide abil tüübi järgi.":::
+
+- Filtripaneeli avamiseks saate ajaskaalafiltrite konfigureerimiseks valida **Filtri**.
+
+   1. Filtreerida saate *ActivityType'i* ja *Kuupäeva* alusel
+   1. Tegevuse ajaskaalal filtrite kasutamiseks tehke valik **Rakenda**.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Filtripaneeli abil saate konfigureerida filtri tingimusi.":::
+
+Filtrite eemaldamiseks valige ajaskaalale rakendatud filtri kõrval **x** või **Tühjendage filtrid**.
+
+
+> [!NOTE]
+> Kliendiprofiilist lahkudes eemaldatakse tegevuse filtrid. Need tuleb rakendada iga kord kliendiprofiilil avamisel.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Segmendid publiku ülevaates
 description: Ülevaade segmentidest ning kuidas neid luua ja hallata.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036368"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617370"
 ---
 # <a name="segments-overview"></a>Segmentide ülevaade
 
@@ -26,11 +26,19 @@ Kliendiprofiile, mis vastavad segmendi määratluse filtritele, nimetatakse segm
 
 Uue segmendi loomiseks on mitu võimalust. 
 
-- Keerukas segment segmendi ehitajaga: [Tühi segment](segment-builder.md#create-a-new-segment)
-- Lihtsad segmendid ühe tehtega: [Kiirsegment](segment-builder.md#quick-segments)
-- AI-powered viis sarnaste klientide leidmiseks: [Sarnased Kliendid](find-similar-customer-segments.md)
-- AI-powered soovitused, mis põhinevad mõõtmistel või atribuutidel: [Soovitatavad segmendid mõõtmiste parendamiseks](suggested-segments.md)
-- Tegevustel põhinevad soovitused: [Klienditegevusel põhinevad soovitatavad segmendid](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Üksikud kliendid (B2C)](#tab/b2c)
+
+- Keerukas segment segmendi ehitajaga: [Ehita enda oma](segment-builder.md#create-a-new-segment) 
+- Lihtsad segmendid ühe tehtega: [Kiirsegment](segment-builder.md#quick-segments) 
+- AI-powered viis sarnaste klientide leidmiseks: [Sarnased Kliendid](find-similar-customer-segments.md) 
+- AI-powered soovitused, mis põhinevad mõõtmistel või atribuutidel: [Soovitatavad segmendid mõõtmiste parendamiseks](suggested-segments.md) 
+- Tegevustel põhinevad soovitused: [Klienditegevusel põhinevad soovitatavad segmendid](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Ettevõtte kontod (B2B)](#tab/b2b)
+
+- Keerukas segment segmendi ehitajaga: [Ehita enda oma](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Olemasolevate segmentide haldamine
 
@@ -70,9 +78,9 @@ Segmenti saate eksportida segmentide lehelt või [ekspordilehelt](export-destina
 
 1. Valige **Ekspordi haldamine** tegevuste ripploendist.
 
-1. Avaneb **Segmendi ekspordid (eelvaade)** leht. Näete kõiki konfigureeritud eksporte, mis on rühmitatud praegust segmenti sisaldavate või seda mitte sisaldavate ekspordite järgi.
+1. Avaneb **Segmendi ekspordid (eelvaade)** leht. Näete kõiki konfigureeritud eksporte rühmitatud selle järgi, kas need sisaldavad praegust segmenti või mitte.
 
-   1. Valitud segmendi lisamiseks ekspordile valige loendist eksport ja valige **Lisa segment**.
+   1. Valitud segmendi lisamiseks eksporti **Redigeerige** vastavat eksporti, et valida vastav segment, seejärel salvestage. Üksikklientide keskkondades saate valida loendist ekspordi ja valida sama tulemuse saavutamiseks suvandi **Lisa segment**.
 
    1. Valitud segmendiga uue ekspordi loomiseks valige **Lisa eksport**. Lisateavet ekspordi loomise kohta leiate teemast [Uue ekspordi häälestamine](export-destinations.md#set-up-a-new-export).
 

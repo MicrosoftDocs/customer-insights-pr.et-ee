@@ -4,23 +4,23 @@ description: Täpsustatud sündmuste ja baassündmuste eksportimine.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 04/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7881f8f63134170a7f76e3c75dcfc5fa8930754b
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032380"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606200"
 ---
 # <a name="export-events"></a>Sündmuste eksportimine
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Sündmus tähistab kasutaja käitumist. See kirje salvestab, kui kasutaja vaatab lehte (kuvasündmus) või suhtleb sisuga (toimingusündmus). Kui saate otsustada, millised andmete atribuudid soovite aruandes kuvada, nimetatakse seda andmete virtuaalvaadet *Täpsustatud sündmuseks*. 
+Sündmus tähistab kasutaja käitumist. See kirje salvestab, kui kasutaja vaatab lehte (kuvasündmus) või suhtleb sisuga (toimingusündmus). Kui saate otsustada, millised andmete atribuudid soovite aruandes kuvada, nimetatakse seda andmete virtuaalvaadet *Täpsustatud sündmuseks*. Lisateavet leiate teemast [Sündmuste loomine ja muutmine](refined-events.md).
 
 - Saate eksportida sündmusi ja täpsustatud sündmusi välismälusse. 
 - Eksport on edasine andmevoog. Voogu ei saa uuesti täita. 
@@ -45,26 +45,28 @@ Enne ekspordi seadistamist peab teil olema juurdepääs Azure'i portaalile ja ak
 
 ## <a name="export-events"></a>Ekspordi sündmused
 
-Sündmuse ekspordiks on kaks võimalust: 
+Dialoogi **Sündmuste eksportimine** avamiseks on kaks võimalust: 
 - Minge jaotisesse **Andmed** > **Eksport** ja valige **Uus eksport**.
 - Minge **Andmed** > **Sündmused**, valige **Veel [...]** sündmuse kõrvalt, mida te soovite eksportida ja valige ripploendist käsk **Ekspordi**. 
 
+:::image type="content" source="media/new-export.png" alt-text="Uue ekspordi loomine.":::
+
 Teid juhendatakse ekspordi loomisel:
 
-1. Sisestage **Ekspordinimi**.
+1. Sisestage **Ekspordi nimi** ja seejärel valige **Edasi**.
 
 1. Valige **Sündmuste valik** ripploendist baassündmused ja täpsustatud sündmused, mille soovite eksporti kaasata. 
 
-1. Jaotises **Faili struktuur** valige kadents, et luua uusi faile sihtlaos. Sündmusi eksporditakse saabudes pidevalt.
+1. Valige jaotises **Faili struktuur** soovitud sagedus (tund või päev), et luua sihtmälus uued failid, ja seejärel valige **Edasi**. Sündmusi eksporditakse saabudes pidevalt.
 
-1. Valige ekspordivorming. Saate valida nii **Common Data Model**, **CSV** kui ka **JSON** vormingu. Eksportimiseks koos muude Dynamics 365 rakendustega soovitame kasutada Common Data Model vormingut.
+1. Valige ekspordivorming dialoogis **Vormingu valimine**. Valige suvand **Tavalised andmemudelid**, **CSV** ja **JSON** vormingud. Eksportimiseks koos muude Dynamics 365 rakendustega soovitame kasutada **Common Data Model** vormingut.
 
-1. Määrake jaotises **Valige sihtkoha** samm, täpsustades Azure Data Lake Storage Gen 2 asukoht.
+1. Määrake dialoogiboksis **Sihtkoha valimine** Azure Data Lake Storage Gen 2 asukoht.
     1. **ADLS Gen 2 konto nimi** on selle mäluruumikonto nimi, kuhu soovite eksportimise salvestada. 
     1. **Kaustatee** määratleb, kuhu ekspordi tuleks salvestada salvestusruumikonto failisüsteemis ja kataloogistruktuuris.
     1. **Ühisvõti** on saadaval Azure'i portaalis salvestusruumi konto jaoks.
 
-1. Vaadake üle ja kinnitage oma valikud.
+1. Vaadake oma valikud läbi ja kinnitage, et soovite lõpetada.
 
 ## <a name="view-and-manage-exports"></a>Veebilehtede vaatamine ja haldamine
 
