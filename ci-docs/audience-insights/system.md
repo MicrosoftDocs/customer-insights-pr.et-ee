@@ -1,7 +1,7 @@
 ---
 title: Süsteemikonfiguratsioon sihtrühmaülevaadetes
 description: Lisateave süsteemisätete kohta Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035894"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651835"
 ---
 # <a name="system-configuration"></a>Süsteemikonfiguratsioon
 
@@ -24,9 +24,9 @@ Leht **Süsteem** sisaldab järgmisi vahekaarte.
 - [API kasutus](#api-usage-tab)
 - [Teave](#about-tab)
 - [Üldist](#general-tab)
+- [Turve](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Süsteemi leht.](media/system-tabs.png "Süsteemi leht")
+:::image type="content" source="media/system-tabs.png" alt-text="Sätete vahekaardid süsteemilehel.":::
 
 ## <a name="status-tab"></a>Oleku vaehekaart
 
@@ -84,9 +84,15 @@ Vahekaart **Teave** sisaldab teie organisatsiooni **Kuvatavat nime**, aktiivset 
 
 ## <a name="general-tab"></a>Vahekaart Üldine
 
-Vahekaardil **Üldine** on kaks valikut, **Keel** ja **Riigi/regiooni vorming**.
+Vahekaardil **Üldine** saate muuta keelt ja riigi/regiooni vormingut.
 
-Rakendus [toetab mitu keelt](supported-languages.md). Eelistatud keele muutmiseks valige ripploendist **Keel**.
+Customer Insights [toetab mitmeid keeli](/dynamics365/get-started/availability). Rakendus kasutab teie keele-eelistust, et kuvada teie eelistatud keeles elemente, nt menüü, silditekst ja süsteemiteated.
+
+Käsitsi sisestatud imporditud andmeid ja teavet ei tõlgita.
+
+### <a name="update-the-settings"></a>Värskenda sätteid
+
+Eelistatud keele muutmiseks valige ripploendist **Keel**.
 
 Eelistatud kuupäeva, kellaaja ja numbrite vormingute muutmiseks kasutage ripploendit **Riigi/piirkonna vorming**. Vormindamise eelvaade kuvatakse selle välja all. Kui valite uue keele, soovitab süsteem automaatselt valikut.
 
@@ -105,6 +111,13 @@ Leidke API reaalajas kasutamise üksikasju ja vaadake, millised sündmused toimu
 
    [Reaalajalisi andmeatrikulaate](real-time-data-ingestion.md) kasutavad toimingud sisaldavad binokulaarse sümboliga nuppu reaalaja API kasutuse kuvamiseks. Valige nupp, et avada külgpaan, mis sisaldab reaalajas API kasutamise üksikasju praeguses keskkonnas.   
    Kasutage paanil **Reaalajaline API kasutus** välja **Rühmita kui**, et valida kuidas reaalajalist suhtlust kõige paremini esitada. Andmeid saate rühmitada API meetodi, olemi kvalifitseeritud nime (valmendatud olem), looja (sündmuse allikas), tulemuse (õnnestumine või nurjumine) või tõrkekoodide järgi. Andmed on saadaval ajaloodiagrammina ja tabelina.
+
+## <a name="security-tab"></a>Turvevahekaart
+
+Vahekaart **Turve** võimaldab teil linkida ja hallata keskkonna oma [Azure'i võtmehoidlat](/azure/key-vault/general/basic-concepts).
+Sihtotstarbelise võtmehoidla abil saab etappe luua ja kasutada saladusi organisatsiooni vastavuse piirides. Sihtrühma ülevaated saavad kasutada Azure'i võtmehoidla saladusi [ühenduste loomiseks](connections.md) muude tootjate süsteemidega.
+
+Lisateavet leiate jaotisest [Enda Azure'i võtmehoidla loomine](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

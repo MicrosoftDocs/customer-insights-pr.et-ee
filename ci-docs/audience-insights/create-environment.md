@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645680"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673386"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Looge sihtrühma ülevaates keskkond
 
@@ -46,7 +46,7 @@ Valige **Põhiteabe** etapis, kas soovite luua soovitud keskkonda kopeerimiskesk
 
 Esitage järgmised andmed.
    - **Nimi**: selle keskkonna nimi. Olemasolevast keskkonnast kopeerides on see väli juba täidetud, kuid saate seda muuta.
-   - **Valige oma ettevõte**: Valige uue keskkonna jaoks peamine sihtrühm. Saate töötada klientidega (B2C) või [ärikontodega](work-with-business-accounts.md) (B2B).
+   - **Valige oma ettevõte**: Valige uue keskkonna jaoks peamine sihtrühm. Võite töötada eraklientidega (B2C) või [ ettevõtetega](work-with-business-accounts.md) (B2B).
    - **Tüüp**: Valige, kas soovite luua töö- või liivakastikeskkonna. Liivakastikeskkonnad ei luba ajastatud andmeid värskendada ja on mõeldud eelinstallimiseks ja testimiseks. Liivakastikeskkonnad kasutavad põhilist sihtrühma, kes on praegu valitud töökeskkonnas.
    - **Piirkond**: piirkond, kus teenus juurutatakse ja majutatakse.
 
@@ -66,7 +66,7 @@ Salvestades andmed Azure Data Lake Storage-sse, nõustute, et andmed kantakse ü
 > - Azure Data Lake Storage kontod samast Azure'i piirkonnast, mille valisite keskkonna loomisel.
 > - Azure Data Lake Storage kontod, millel on *hierarhiline nimeruum* lubatud.
 
-Selle Azure Data Lake Storage suvandi puhul saate valida ressursipõhise ja kordustellimusel põhineva autentimise suvandi. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). **Konteineri** nimi on `customerinsights` ja seda ei saa muuta.
+Selle Azure Data Lake Storage suvandi puhul saate valida ressursipõhise ja kordustellimusel põhineva autentimise suvandi. Lisateavet leiate teemast [Azure Data Lake Storage kontoga ühenduse loomine Azure'i teenuse subjekti](connect-service-principal.md) abil. **Konteineri** nimi on `customerinsights` ja seda ei saa muuta.
 
 Kui süsteemiprotsessid, nagu andmete allaneelamine, on lõpule jõudnud, loob süsteem teie määratud salvestusruumikontole vastavad kaustad. Andmefailid ja *model.json* failid luuakse ning lisatakse kaustadesse protsessi nime põhjal.
 
@@ -76,14 +76,14 @@ Kui loote Customer Insights'i mitu keskkonda ja salvestate nendest keskkondadest
    
 **Microsoft Dataverse** etapp lubab teil Customer Insights'i oma Dataverse keskkonnaga ühendada.
 
-Kui soovite kasutada [karbist välja ennustamise mudeleid](predictions-overview.md#out-of-box-models), siis konfigureerige andmete ühiskasutus rakendusega Dataverse. Võite ka lubada asutusesisestest allikatest pärinevad andmed, pakkudes teie Microsoft Dataverse organisatsiooni hallatava keskkonna URL-i. Valige suvand **Enable data sharing** (Luba andmete ühiskasutus), et jagada Customer Insightsi väljundandmeid Dataverse Managed Data Lake hallatava andmejärvega.
+Kui soovite kasutada [karbist välja ennustamise mudeleid](predictions-overview.md#out-of-box-models), siis konfigureerige andmete ühiskasutus rakendusega Dataverse. Võite ka lubada asutusesisestest allikatest pärinevad andmed, pakkudes teie Microsoft Dataverse organisatsiooni hallatava keskkonna URL-i. Valige suvand **Luba andmete ühiskasutus**, et jagada Customer Insights väljundandmeid Dataverse hallatava Data Lake'iga.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigureerimissuvandid andmete jagamise lubamiseks Microsoft Dataverse abil.":::
 
 > [!NOTE]
 > Customer Insights ei toeta järgmisi andmete jagamise stsenaariume:
-> - Kui salvestate kõik andmed enda Azure Data Lake Storage abil, siis ei saa te lubada andmete jagamist Microsoft Dataverse hallatava Data Lake-iga.
-> - Kui lubate andmete ühiskasutuse Microsoft Dataverse hallatava Data Lake-iga, ei saa te [olemis luua ennustatud ega puuduvad väärtused](predictions.md).
+> - Kui salvestate kõik andmed enda Azure Data Lake Storage abil, siis ei saa te lubada andmete jagamist Dataverse hallatava Data Lake-iga.
+> - Kui lubate andmete ühiskasutuse Dataverse-ga, ei saa te [olemis luua ennustatud ega puuduvad väärtused](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Neljas etapp: Viige sätted lõpule
 
@@ -93,10 +93,10 @@ Enamikku sätetest saate hiljem ka muuta. Lisateavet leiate teemast [Keskkondade
 
 ## <a name="work-with-your-new-environment"></a>Uue keskkonnaga töötamine
 
-Vaadake läbi järgmised artiklid, mis aitavad teil Customer Insights -i konfigureerimisega algust teha. 
+Kliendiülevaadete konfigureerimise alustamiseks vaadake üle järgmised artiklid. 
 
 - [Lisage veel kasutajaid ja määrake õiguseid](permissions.md)i.
 - [Tooge sisse oma andmeallikaid](data-sources.md) ja käivitage need [andmete ühendamise protsessis](data-unification.md) , et [saada ühtseid kliendiprofiile](customer-profiles.md).
 - [Rikastage ühendatud kliendiprofiile](enrichment-hub.md) või [käivitage ennetavad mudeleid](predictions-overview.md).
-- [Looge segmente](segments.md) klientide rühmitamiseks ja [mõõdikuid](measures.md) KPI-de ülevaatamiseks.
+- [Looge segmente](segments.md) klientide rühmitamiseks ja [mõõdikuid](measures.md) KPI-de arvustamiseks.
 - [Seadistage ühendused](connections.md) ja [eksporte](export-destinations.md) andmete alamhulkade töötlemiseks muudes rakendustes.

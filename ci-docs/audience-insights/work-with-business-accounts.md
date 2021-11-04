@@ -1,7 +1,7 @@
 ---
 title: Alustage ärikontodega peamise sihtrühmana
 description: Õppige ärikontode kohta peamise sihtrühmana Dynamics 365 Customer Insights abil.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644983"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673682"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Ärikontodega töötamine sihtrühma ülevaadetes
 
-Sihtrühma ülevaadete võimalus rakenduses Dynamics 365 Customer Insights võimaldab teil konfigureerida oma keskkonda erinevate esmaste sihtrühmade jaoks: üksikud kliendid (B2C) ja ärikontod (B2B). B2C stsenaariumide puhul on andmed üksikisikutele keskendunud. B2B puhul on esmaseks sihtrühmaks kontod – organisatsioonid või ettevõtted – ja kontaktid. See artikkel aitab teil alustada äriettevõtete jaoks mõeldud keskkonnaga. Selles on välja toodud erinevused funktsioonivaldkondades, mis on välja toodud sihtrühma ülevaadetes, olenevalt teie keskkonna fookusest. Lisateavet erinevuste kohta leiate funktsioonialade arvustuse dokumentidest. 
+Sihtrühma ülevaadete võimalus rakenduses Dynamics 365 Customer Insights võimaldab teil konfigureerida oma keskkonda erinevate esmaste sihtrühmade jaoks: eratarbijad (B2C) ja ärikontod (B2B). B2C stsenaariumide puhul on andmed üksikisikutele keskendunud. B2B puhul on esmaseks sihtrühmaks kontod – organisatsioonid või ettevõtted – ja kontaktid. See artikkel aitab teil alustada äriettevõtete jaoks mõeldud keskkonnaga. Selles on välja toodud erinevused funktsioonivaldkondades, mis on välja toodud sihtrühma ülevaadetes, olenevalt teie keskkonna fookusest. Lisateavet erinevuste kohta leiate funktsioonialade arvustuse dokumentidest. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Ärikonto jaoks keskkonna loomine
 
@@ -32,7 +32,7 @@ Pärast andmete ühendamist [määrake konto hierarhiad](relationships.md#set-up
 
 Kui teie asutuses hallatakse keskkondasid üksikklientide ja äriettevõtete jaoks, saate vasakpoolsel paanil valida lüliti abil peamise sihtrühma.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Vahetaja, et muuta põhilist sihtrühma eraklientide ja ärikontode vahel.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Vahetaja, et muuta põhilist sihtrühma eraklientide ja ärikontode vahel.":::
 
 ## <a name="supported-feature-areas"></a>Toetatud funktsioonialad
 

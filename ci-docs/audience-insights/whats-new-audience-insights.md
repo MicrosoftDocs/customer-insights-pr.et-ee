@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606059"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673823"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Mis on uut Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis?
 
@@ -166,7 +166,7 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 - **Constant Contact ekspordi segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates Constant Contacti. Nüüd saate eksportida segmente Customer Insights Constant Contact loenditesse ja kasutada neid oma turunduskampaaniate lähteandmetena.   
    Lisateavet leiate teemast [Eksportimine Constant Contacti](export-constant-contact.md).
 
-- **RollWorks ekspordi segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates RollWorksi. Nüüd saate eksportida segmente Customer Insights RollWorks publikule ja kasutada neid oma B2B turunduskampaaniate lähteandmetena.    
+- **RollWorks ekspordi segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates RollWorksi. Nüüd saate eksportida segmente Customer Insightsist RollWorksi sihtrühmadele ja kasutada neid B2B-reklaamide lähtejoonena.    
    Lisateavet leiate teemast [Eksportimine RollWorksi ](export-rollworks.md).
 
 - **Snapchat ekspordi segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates Snapchati. Nüüd saate eksportida segmente Customer Insights Snapchat publikule ja kasutada neid oma turunduskampaaniate lähteandmetena.     

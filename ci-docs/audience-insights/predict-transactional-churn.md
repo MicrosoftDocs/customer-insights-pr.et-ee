@@ -1,7 +1,7 @@
 ---
 title: Tehinguvoolavuse prognoos
 description: Prognoosige, kas on oht, et klient ei osta enam teie ettevõtte tooteid või teenuseid.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643372"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673040"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Tehinguvoolavuse prgonoos (eelversioon)
 
@@ -28,6 +28,32 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
 > Proovige näidisandmete abil tehingute arvu prognoosi õpetust: [Tehinguvoolavuse prognoosi (eelversioon) näidisjuhend](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>eeltingimused
+
+# <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
+
+- Vähemalt [Kaasautori õigused](permissions.md) Customer Insightsis.
+- Äriteadmised voolavuse tähendusest teie ettevõttes. Toetame ajapõhiseid voolavuse määratlusi, mis tähendab, et klient loetakse loobunuks, kui ta pole mingi perioodi jooksul oste teinud.
+- Andmed teie tehingute/ostude ja nende ajaloo kohta.
+    - Tehinguidentifikaatorid, et eristada oste/tehinguid.
+    - Kliendiidentifikaatorid, et ühitada tehingud teie klientidega.
+    - Tehingusündmuse kuupäevad, mis määratlevad tehingu toimumise kuupäevad.
+    - Ostude/tehingute semantilise andmeskeemi jaoks on vajalik järgmine teave.
+        - **Tehingu ID**: Ostu või tehingu ainuidentifikaator.
+        - **Tehingu kuupäev**: Ostu või tehingu kuupäev.
+        - **Tehingu väärtus**: Tehingu/kauba rahalise/numbrilise väärtuse summa.
+        - (Valikuline) **Kordumatu toote ID**: Ostetud toote või teenuse ID, kui teie andmed on reakauba tasemel.
+        - (Valikuline) **Kas see tehing oli tagastamine**: Tõene/väär väli, mis määrab, kas tehingu puhul oli tegemist tagastamisega või mitte. Kui **Tehingu väärtus** on negatiivne, kasutame seda teavet samuti tagastamise järeldamiseks.
+- (Valikuline) Andmed klienditegevuste kohta.
+    - Tegevuse identifikaatorid, mis eristavad sama tüüpi tegevusi.
+    - Kliendi identifikaatorid, mis vastendavad teie klientide tegevusi.
+    - Tegevuse teave, mis sisaldab tegevuse nime ja kuupäeva.
+    - Kliendi tegevuste semantiline andmete skeem sisaldab järgmist.
+        - **Primaarvõti:** tegevuse ainuidentifikaator. Näiteks veebisaidikülastus või kasutuskirje, mis näitab, et klient proovis teie toote näidist.
+        - **Ajatempel:** primaarvõtmega tuvastatud sündmuse kuupäev ja kellaaeg.
+        - **Sündmus:** sündmuse nimi, mida soovite kasutada. Näiteks väli nimega „UserAction“ võid toidupoe korral märkida, et klient kasutas kupongi.
+        - **Üksikasjad:** sündmuse üksikasjalik teave. Näiteks väli nimega „CouponValue“ võib olla toidupoes kupongi rahaline väärtus.
+
+# <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
 
 - Vähemalt [Kaasautori õigused](permissions.md) Customer Insightsis.
 - Äriteadmised voolavuse tähendusest teie ettevõttes. Toetame ajapõhiseid voolavuse määratlusi, mis tähendab, et klient loetakse loobunuks, kui ta pole mingi perioodi jooksul oste teinud.
@@ -59,6 +85,9 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
         - **Riik:** Kliendi riik.
         - **Valdkond:** Kliendi valdkonnatüüp. Näiteks kohvi röstkoja väli „Tööstus” võib näidata, kas klient oli jaemüügis.
         - **Klassifitseerimine:** Kliendi liigitus teie ettevõtte jaoks. Näiteks kohvi röstkoja väli „ValueSegment” võib olla kliendi tasand kliendi suuruse põhjal.
+
+---
+
 - Soovitatavad andmete omadused:
     - Piisavad ajaloolised andmed: Tellimuse andmed vähemalt kahekordistatud valitud ajaaknas. Eelistatavalt kahe kuni kolme aasta tehingute ajalugu. 
     - Mitu ostu kliendi kohta: ideaalne oleks vähemalt kaks tehingut kliendi kohta.
@@ -114,6 +143,32 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
 
 1. Tehke valik **Edasi**.
 
+# <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Lisage Lisaandmed (valikuline)
+
+Konfigureerige seos oma klienditegevuse olemist *Kliendi* olemiga.
+
+1. Valige väli, mis tuvastab kliendi klienditegevuse tabelis. See võib olla otse *Kliendi* olemi peamise kliendi-ID-ga.
+
+1. Valige olem, mis on teie peamine *Kliendi* olem.
+
+1. Tippige seost kirjeldav nimi.
+
+#### <a name="customer-activities"></a>Kliendi tegevused
+
+1. Soovi korral valige jaotises **Klienditegevused** suvand **Lisa andmed**.
+
+1. Valige semantilise tegevuse tüüp, mis sisaldab andmeid, mida soovite kasutada, ja seejärel valige jaotises **Tegevused** üks või mitu tegevust.
+
+1. Valige tegevuse tüüp, mis vastab konfigureeritavale kliendi tegevuse tüübile. Valige **Loo uus** ja valige saadaolev tegevusetüüp või looge uus tüüp.
+
+1. Valige suvand **Edasi** ja seejärel **Salvesta**.
+
+1. Kui teil on mõni muu klienditegevus, mida soovite kaasata, korrake ülaltoodud samme.
+
+# <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Valige progonoosi tase
 
 Enamik ennustusi luuakse kliendi tasandil. Mõnes olukorras ei pruugi see olla nii suur, et see vastaks teie ärivajadustele. Seda funktsiooni saate kasutada näiteks kliendi haru ennustamiseks, mitte kliendi kui terviku jaoks.
@@ -122,9 +177,9 @@ Enamik ennustusi luuakse kliendi tasandil. Mõnes olukorras ei pruugi see olla n
 
 1. Laiendage olemid, millelt soovite teisese taseme valida, või kasutage valitud suvandite filtreerimiseks otsingufiltrivälja.
 
-1. Valige atribuut, mida soovite kasutada teisese tasemena, ja seejärel valige **Lisa**
+1. Valige atribuut, mida soovite kasutada teisese tasemena, ja seejärel valige **Lisa**.
 
-1. Vali **Järgmine**
+1. Tehke valik **Edasi**.
 
 > [!NOTE]
 > Selles jaotises saadaolevad olemid kuvatakse seetõttu, et neil on seos eelmises jaotises valitud olemiga. Kui te ei näe olemit, mida lisada soovite, siis veenduge, et sellel oleks seostes kehtiv **Seos**. Konfiguratsiooni puhul sobivad ainult üks-ühele ja mitu-ühele seosed.
@@ -159,7 +214,7 @@ Konfigureerige seos oma klienditegevuse olemist *Kliendi* olemiga.
 
 1. Tehke valik **Edasi**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Esitab valikulise loendi ettevõtetest, mis on seotud kontodega (ainult ärikontodega)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Esitab valikulise loendi ettevõtetest, mis on seotud kontodega
 
 Lisage loend äriklientidest ja ettevõtetest, mida soovite kasutada kriteeriumite lisana. Saate [detailid nende võrdluskontode kohta](#review-a-prediction-status-and-results), sealhulgas nende aeglustumisskoori ja kõige mõjukamad funktsioonid, mis mõjutasid nende arvu ennustamist.
 
@@ -168,6 +223,8 @@ Lisage loend äriklientidest ja ettevõtetest, mida soovite kasutada kriteeriumi
 1. Valige võrdlusalusena tegutsevad kliendid.
 
 1. Jätkamiseks valige **Edasi**.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Ajakava seadistamine ja konfiguratsiooni ülevaatamine
 
@@ -201,6 +258,25 @@ Lisage loend äriklientidest ja ettevõtetest, mida soovite kasutada kriteeriumi
 1. Valige vertikaalne kolmikpunkt prognoosi kõrval, mille tulemusi soovite läbivaadata ja valige **Vaade**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Juhtelement „Kuva“ prognoosi tulemuste vaatamiseks.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
+
+1. Tulemuste lehel on kolm peamist andmete jaotist.
+   - **Koolituse mudeli jõudlus**: Võimalikud punktisummad on A, B või C. See skoor näitab prognoosi jõudlust ja aitab teil otsustada, kas kasutada väljundolemis talletatud tulemusi. Skoorid määratletakse järgmiste reeglite alusel. 
+        - **A**, kui vähemalt 50% kõikidest prognoosidest olid täpsed ja kui täpsete loobunud klientide prognooside protsent on alusmäärast vähemalt 10% suurem.
+            
+        - **B**, kui vähemalt 50% kõikidest prognoosidest olid täpsed ja kui täpsete loobunud klientide prognooside protsent on alusmäärast kuni 10% suurem.
+            
+        - **C**, kui vähem kui 50% kõikidest prognoosidest olid täpsed või kui täpsete loobunud klientide prognooside protsent on alusmäärast väiksem.
+               
+        - **Aluse** jaoks võetakse mudeli prognoosiajavahemiku sisend (näiteks üks aasta) ja luuakse eri ajalõigud, jagades ajavahemikku kahega, kuni see on üks kuu või väiksem. Mudel kasutab neid ajalõike, et luua ärireegel klientidele, kes pole selles ajavahemikus oste teinud. Need kliendid loetakse loobunuks. Alusmudeliks valitakse ajapõhine ärireegel, mis ennustab kõige täpsemini, kes võib loobuda.
+            
+    - **Voolavuse tõenäosus (klientide arv)**: Kliendirühmad nende prognoositud voolavuse riski põhjal. Need andmed aitavad teil hiljem soovi korral luua kõrge voolavuse riskiga klientide segmendi. Sellised segmendid aitavad mõista, kus segmendi liikmelisuse sulgemiskuupäev peaks olema.
+       
+    - **Kõige mõjukamad tegurid**: Prognoosi loomisel võetakse arvesse paljusid tegureid. Mudeli loodavate koondprognooside jaoks arvutatakse iga teguri olulisus. Nende tegurite abil saate oma tulemuste valideerimist prognoos või saate selle teabe abil hiljem [luua segmente](segments.md), mis võivad aidata klientide puhul identimisriske mõjutada.
+
+
+# <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
 
 1. Tulemuste lehel on kolm peamist andmete jaotist.
    - **Koolituse mudeli jõudlus**: Võimalikud punktisummad on A, B või C. See skoor näitab prognoosi jõudlust ja aitab teil otsustada, kas kasutada väljundolemis talletatud tulemusi. Skoorid määratletakse järgmiste reeglite alusel. 
@@ -237,6 +313,11 @@ Lisage loend äriklientidest ja ettevõtetest, mida soovite kasutada kriteeriumi
        Kui ennustate ettevõtte tasemel voolavust, võetakse kõiki kontosid arvesse voogude segmentide funktsioonide keskmiste väärtuste tuletamisel. Iga konto sekundaarse taseme voolavuse ennustuste puhul sõltub voolavuse segmentide tuletamine külgpaneelil valitud üksuse teisest tasemest. Näiteks kui üksusel on tootekategooria teine tase = kontoritarbed, siis võetakse voolavuse segmentide omaduste keskmiste väärtuste tuletamisel arvesse ainult neid tooteid, mille tootekategooriaks on kontoritarbed. Seda loogikat rakendatakse üksuse funktsiooniväärtuste ja keskmise väärtuse õiglase võrdluse tagamiseks nii väikese, keskmise kui ka kõrge voolavusega segmentides.
 
        Mõnel juhul on madala, keskmise või kõrge voolavusega segmentide keskmine väärtus tühi või pole saadaval, kuna vastavasse voolavuse segmenti pole ülaltoodud määratluse alusel vastavaid üksusi.
+       
+       > [!NOTE]
+       > Keskmiselt madalate, keskmiste ja kõrgete veergude all olevate väärtuste tõlgendamine on kategooria tunnuste (nt riik või tööstus) puhul erinev. Kuna tunnuse "keskmise" väärtuse mõiste ei kehti kategooriliste funktsioonide kohta, on nendes veergudes olevad väärtused madala, keskmise või suure kliendihulgaga segmentides olevate klientide osakaal, kellel on üksuse omaga võrreldes sama kategoorilise funktsiooni väärtus külgpaneelil valitud.
+
+---
 
 ## <a name="manage-predictions"></a>Prognooside haldamine
 

@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 685b1683b0c90eab04b130552d2cb23a8ab7a235
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617346"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673225"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Ettevõtte profiilide rikastamine Leadspace'iga (eelvaade)
 
-Leadspace on andmeteaduse ettevõte, mis pakub kliendi hulgiandmete platvormi. See võimaldab keskkondades, kus on ettevõtetel põhinevad unified kliendiprofiilid, nende andmeid rikastada. Rikastage *Kliendiprofiile* selliste atribuutidega nagu ettevõtte suurus, asukoht või tööstus. Rikastage *Kontaktiprofiile* atribuutidega nagu pealkiri, isik või meili kontrollimine.
+Leadspace on andmeteadusega tegelev ettevõtte, mis pakub B2B kliendiandmete platvormi. See võimaldab keskkondades, kus on ettevõtetel põhinevad unified kliendiprofiilid, nende andmeid rikastada. Rikastage *Kliendiprofiile* selliste atribuutidega nagu ettevõtte suurus, asukoht või tööstus. Rikastage *Kontaktiprofiile* atribuutidega nagu pealkiri, isik või meili kontrollimine.
 
 ## <a name="prerequisites"></a>eeltingimused
 

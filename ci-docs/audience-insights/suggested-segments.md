@@ -1,7 +1,7 @@
 ---
 title: Masinõpe soovitatavad segmendid
 description: Las masinõpe aitab teil leida uusi ja huvitavaid segmente, mis põhinevad kliendi atribuutidel.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028355"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673178"
 ---
 # <a name="suggested-segments-preview"></a>Soovitatud segmendid (eelvaade)
 
@@ -23,7 +23,7 @@ Tehisintellekti mudeli abil saate avastada oma klientide huvitavaid segmente. Se
 > [!NOTE]
 > Pakutud segmentide funktsioon kasutab andmete hindamiseks ja nende põhjal prognooside tegemiseks automatiseeritud vahendeid ning seetõttu on seda võimalik kasutada profileerimise meetodina, nagu see mõiste on määratletud isikuandmete kaitse üldmääruses (GDPR). Selle funktsiooni kasutamise kohta andmete töötlemisel võib kehtida kas GDPR või muud seadused või määrused. Teie vastutate selle eest, et Dynamics 365 Customer Insightsi kasutades (sh antud funktsiooni kasutades) järgite te kõiki kohaldatavaid seadusi ja määrusi, sh eraelu puutumatuse, isikuandmete, biomeetriliste andmete, andmekaitse ja suhtluse konfidentsiaalsusega seotud seadusi.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Kliendiülevaadete soovitatud segmentide leht, kus kuvatakse külgpaanil soovituse üksikasjad.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Soovitatavate segmentide leht, kus kuvatakse külgpaanil soovituse üksikasjad.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Soovitatavad segmendid KPI-de täiustamiseks
 
@@ -49,7 +49,7 @@ Segmendisoovitused on erinevad, kui valite esmase atribuudina arvatribuudi või 
 
 Kui süsteemi põhiatribuudiks on arvatribuut, näiteks *aastane sissetulek* või *liikmesperiood*, soovitab süsteem segmente, mille arvatribuudi keskmine väärtus on kõigi klientidega võrreldes suurem või väiksem.
 
-Kategoriseeriv atribuut, nagu *kliendi rahulolu* esmase atribuudina, hõlmab soovitatavaid segmente, mille protsent teatud kategooriasse kuuluvate klientide seas on suurem või väiksem, võrreldes kõigi sellesse kategooriasse kuuluvate klientide protsendiga. Näiteks valitakse esmaseks atribuudiks *kliendi rahulolu* ja see koosneb kolmest kategooriast (*Madal*, *Keskmine* ja *Kõrge*). Iga kategooria puhul soovitatakse segmente, mille protsent sellesse kategooriasse kuuluvate klientide seas on oluliselt suurem või väiksem, võrreldes kõigi sama kategooria klientide osaga. Kui 22% klientidest on *hea* rahuloluga, siis soovitatakse selles kategoorias kasutada ainult segmente, mille klientide osa on oluliselt suurem või väiksem osa *kõrge* kliendirahuloluga osa, võrreldes 22%-ga, mida antud kategoorias soovitatakse. Sarnaselt soovitatakse segmente iga teise kategooria puhul (*Madal* ja *Keskmine*), kui need on statistiliselt olulised.
+Kategoriseeriv atribuut, nagu *kliendi rahulolu* esmase atribuudina, hõlmab soovitatavaid segmente, mille protsent teatud kategooriasse kuuluvate klientide seas on suurem või väiksem, võrreldes kõigi sellesse kategooriasse kuuluvate klientide protsendiga. Näiteks valitakse esmaseks atribuudiks *kliendi rahulolu* ja see koosneb kolmest kategooriast (*Madal*, *Keskmine* ja *Kõrge*). Iga kategooria jaoks pakutakse segmente, mille klientide osakaal sellesse kategooriasse kuulub suurem või väiksem, võrreldes kõigi samasse kategooriasse kuuluvate klientide osakaaluga. Kui 22% kõigist klientidest on *kõrge* rahuloluga, siis sellesse kategooriasse soovitatakse ainult neid segmente, mille *kõrge* rahuloluga klientide osakaal on suurem või väiksem kui 22%. Sarnaselt soovitatakse segmente iga teise kategooria puhul (*Madal* ja *Keskmine*), kui need on statistiliselt olulised.
 
 > [!NOTE]
 > Praegu toetame ainult esmaseid kategoorilisi atribuute, millel on kuni 10 kategooriat. Kui soovite näha segmendisoovitusi, mis põhinevad enam kui 10 kategooriat omaval põhiatribuudil, soovitame grupeerida mõned kategooriad, et vähendada kategooriate arvu 10-le või vähemale. See piirang kehtib ainult esmaste atribuutide puhul. Mõjutavate kategoriseeritavate atribuutide puhul toetame praegu maksimaalselt 100 kategooriat.
@@ -77,7 +77,7 @@ Kategoriseeriv atribuut, nagu *kliendi rahulolu* esmase atribuudina, hõlmab soo
 
 Kui AI-mudel on soovitusi loonud, leiate need jaotisest **Segmendid** > **Soovitused (eelvaade)**.
  
-Valige soovitatud segment, et vaadata selle soovituse üksikasju, sealhulgas keskmise väärtuse ja segmendi liikmete arvu võrdlust. Saate vaadata ka atribuudiväärtusi või reegleid, mille tehisintellekti mudel õppis valitud lõiku soovitama.
+Valige soovitatud segment, et vaadata üle selle soovituse üksikasjad. Saate vaadata ka atribuudiväärtusi või reegleid, mille tehisintellekti mudel õppis valitud lõiku soovitama.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Salvestage soovitus segmendina
 

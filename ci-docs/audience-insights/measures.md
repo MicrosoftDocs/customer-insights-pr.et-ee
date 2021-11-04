@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622854"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673365"
 ---
 # <a name="define-and-manage-measures"></a>Meetmete määratlemine ja haldamine
 
@@ -28,7 +28,7 @@ Kasutage äritegevuste plaanimiseks näitaja ehitajat, pärides kliendiandmeid j
 
 Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate koostada andmeatribuutudega andmeolemitest mõõtmed, mille seos on seadistatud ühendamiseks ühendatud kliendiprofiili olemiga.
 
-# <a name="individual-customers-b2c"></a>[Üksikud kliendid (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
 
 1. Avage sihtrühmaülevaadetes jaotis **Näitajad**.
 
@@ -92,7 +92,7 @@ Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate koostada andme
 
 1. Vastloodud näitaja nägemiseks loendis, valige **Näitajad**.
 
-# <a name="business-accounts-b2b"></a>[Ettevõtte kontod (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
 
 1. Avage sihtrühmaülevaadetes jaotis **Näitajad**.
 
@@ -164,7 +164,7 @@ Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate koostada andme
 
 Nende loomiseks võite kasutada tavaliselt kasutatavate meetmete ettemääratud malle. Mallide üksikasjalik kirjeldus ja juhendatud kogemused aitavad teil luua tõhusa mõõtmissüsteemi. Mallid põhinevad olemi *Ühendatud tegevus* kaardistatud andmetele. Seega veenduge, et olete konfigureerinud [klienditegevused](activities.md) enne malli põhjal mõõtühiku loomist.
 
-# <a name="individual-customers-b2c"></a>[Üksikud kliendid (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
 
 Nende loomiseks võite kasutada tavaliselt kasutatavate meetmete ettemääratud malle. Mallide üksikasjalik kirjeldus ja juhendatud kogemused aitavad teil luua tõhusa mõõtmissüsteemi. Mallid põhinevad olemi *Ühendatud tegevus* kaardistatud andmetele. Seega veenduge, et olete konfigureerinud [klienditegevused](activities.md) enne malli põhjal mõõtühiku loomist.
 
@@ -212,7 +212,7 @@ Järgmine protseduur kirjeldab etappe uue meetme loomiseks malli abil.
 
 1. Nüüd saate valida suvandi **Käita**, et arvutada mõõtmise tulemused. Hiljem viimistlemiseks valige **Salvesta mustand**.
 
-# <a name="business-accounts-b2b"></a>[Ettevõtte kontod (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
 
 See funktsioon on saadaval ainult keskkondades loodud juhtudeks, kus üksikud kliendid on esmaseks sihtrühmaks.
 

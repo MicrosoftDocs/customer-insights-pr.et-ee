@@ -1,7 +1,7 @@
 ---
 title: Looge segmente segmendikoosturiga
 description: Looge klientide segmente, et rühmitada neid vastavalt eri atribuutidele.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623000"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673545"
 ---
 # <a name="create-segments"></a>Segmentide loomine
 
@@ -23,6 +23,7 @@ Määratlege keerukad filtrid ühendatud kliendiolemi ümber ja sellega seotud o
 > [!TIP]
 > - Kiirsegmente toetatakse ainult **üksikklientide** keskkondades.    
 > - **Üksikklientidel** põhinevad segmendid sisaldavad automaatselt segmendi liikmete jaoks saadaolevat kontaktteavet. **Ärikontode** keskkondades põhinevad segmendid kontodel (ettevõtetel või tütarettevõtetel). Kontaktteabe kaasamiseks segmenti kasutage segmendi meisterdamisfunktsiooni **Projekti atribuudid**.
+>    - Veenduge, et kontakti andmeallikad oleks [semantselt vastendatud olemiga ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Segmentide koostamine
 
@@ -52,7 +53,7 @@ Järgmine pilt illustreerib segmendikoosturi erinevaid aspekte. Sellel kuvatakse
 
 Uue segmendi loomiseks on mitu võimalust. Selles jaotises kirjeldatakse, kuidas luua oma segmenti tühjalt lehelt. Samuti saate luua olemasolevatel olemitel põhineva *kiirsegmendi* või kasutada Masinõpe mudeleid et saada *soovitatud segmente*. Lisateabe saamiseks minge [Segmentide ülevaade](segments.md).
 
-Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment passiivse segmendina. Kui olete segmendi konfiguratsiooni lõpule viinud, käivitage see segmenti aktiveerimiseks. Võite segmendi ka _ **Aktiveerida** _ lehelt *Kõik segmendid*.
+Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment passiivse segmendina. Kui olete segmendi konfiguratsiooni lõpule viinud, käivitage see segmenti aktiveerimiseks. Võite segmendi ka ***Aktiveerida** lehelt **Kõik segmendid***.
 
 1. Minge lehele **Segmendid**.
 
@@ -86,17 +87,25 @@ Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment pa
 
    VÕI tehtemärki kasutades peavad kõik tingimused põhinema seoseteel kaasatud olemitel.
 
-   - Kliendikirjete erinevate kogumite loomiseks saate luua mitu reeglit. Saate ühendada rühmad, et kaasata teie ärijuhtumi jaoks nõutavad kliendid. Uue reegli loomiseks valige **Lisa reegel**. Täpsemalt kui te ei saa määratud seosetee tõttu reeglisse lisada ega olemit kaasata, peate looma uue reegli, et valida sellest atribuute.
+   - Kliendikirjete erinevate kogumite loomiseks saate luua mitu reeglit. Saate ühendada rühmad, et kaasata teie ärijuhtumi jaoks nõutavad kliendid. Uue reegli loomiseks valige **Lisa reegel**. Täpsemalt kui te ei saa määratud seosetee tõttu reeglisse lisada ega olemit lisada, peate looma uue reegli, et valida atribuutide vorm.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Lisage segmendile uus reegel ja valige seatud tehtemärk.":::
 
    - Valige üks tehingukomplekt: **Liit**, **Lõikuv** või **Välja arvatud**.
 
       - **ühend** ühendab kaks rühma.
-      - **Ühisosa** kattub kahe rühmaga. Koondatud rühma jäetakse alles ainult andmed, mis on mõlemas rühmas *ühised*.
-      - **Välja arvatud** kombineerib kaks rühma. Alles jäetakse ainult sellised rühma A andmed, mida *ei leidu* rühmas B.
+      - **Ühisosa** kattub kahe rühmaga. Ühtsesse rühma jäävad ainult need andmed, mis on mõlema rühma jaoks *ühised*.
+      - **Välja arvatud** kombineerib kaks rühma. Säilitatakse ainult rühma A andmed, mis *ei ole ühised* rühma B andmetele.
 
-1. Vaikimisi genereerivad segmendid väljundolemi, mis sisaldab kõiki määratletud filtritele vastavaid kliendiprofiilide atribuute. Kui segment põhineb muudel olemitel kui olem *Klient*, saate väljundolendisse lisada rohkem atribuute nendest olemitest. Valige **Projekti tribuudid**, et valida väljundolemile lisatavad atribuudid.  
+1. Vaikimisi genereerivad segmendid väljundolemi, mis sisaldab kõiki määratletud filtritele vastavaid kliendiprofiilide atribuute. Kui segment põhineb muudel olemitel kui olem *Klient*, saate väljundolendisse lisada rohkem atribuute nendest olemitest. Valige **Projekti tribuudid**, et valida väljundolemile lisatavad atribuudid. 
+
+   > [!IMPORTANT]
+   > Ärikontodel põhinevate segmentide puhul tuleb iga ettevõtte ühe või mitme kontakti üksikasjad *ContactProfile* olemist kaasata segmenti, et see segment oleks aktiveeritud või eksporditud kaasamiskohaks, mis nõuab kontaktteavet. Olemi *ContactProfile* kohta leiate lisateavet teemast [Semantilised vastendused](semantic-mappings.md).
+   > Kontaktide prognoositud atribuutidega ärikontodel põhineva segmendi näidisväljund võiks välja näha järgmine: 
+   >
+   > |ID  |Konto nimi  |Tulu  |Kontaktisiku nimi  | Kontakti roll|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [tegevjuht, hankejuht]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Näide väljundolemile lisatava küljepaanil valitud projitseeritud atribuutidest.":::
   
@@ -107,13 +116,14 @@ Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment pa
    > - Kui atribuut, mida soovite projekti jaoks kasutada, on *Kliendi* olemist rohkem kui ühe hüppe kaugusel, nagu see on seoses määratletud, tuleks seda atribuuti kasutada igas teie ettevõttes kasutatava segmendipäringu reeglis. 
    > - Kui atribuut, mida soovite projekti jaoks kasutada, on *Kliendi* olemist ühe hüppe kaugusel, siis seda atribuuti ei pea kasutama igas teie ettevõttes kasutatava segmendipäringu reeglis. 
    > - **Prognoositud atribuudid** on seatud teguriks kasutades tehete kogumeid.
-   > - Ärikontodel põhinevate segmentide puhul tuleb iga ettevõtte ühe või mitme kontakti üksikasjad kaasata segmenti, et see segment oleks aktiveeritud või eksporditud kaasamiskohaks, mis nõuab kontaktteavet.
 
 1. Enne segmendi salvestamist ja käivitamist valige segmendi nime kõrval käsk **Redigeeri üksikasju**. Andke oma segmendile nimi ja värskendage segmendile soovitatud **Väljundolemi nime**. Segmendile saate lisada ka kirjelduse.
 
 1. Valige käsk **Käivita**, et salvestada segment, see aktiveerida ja alustada segmendi töötlemist kõigi reeglite ja tingimuste alusel. Vastasel juhul salvestatakse see passiivse segmendina.
-
+   
 1. Valige **Tagasi segmentidesse**, et naasta lehele **Segmendid**.
+
+1. Vaikimisi luuakse segment dünaamilise segmendina. See tähendab, et segmenti värskendatakse süsteemivärskenduste käigus. [Automaatse värskendamise peatamiseks](segments.md#manage-existing-segments) valige segment ja suvand **Muuda staatiliseks**. Staatilisi segmente saab igal ajal [värskendada ainult käsitsi](segments.md#refresh-segments).
 
 > [!TIP]
 > - Segmendi tehtemärgid ei soovita tingimuste jaoks tehtemärkide seadmisel olemite kehtivaid väärtusi. Minge **Andmed** > **Olemid** ja laadige alla olemi andmed, et näha, millised väärtused on saadaval.
