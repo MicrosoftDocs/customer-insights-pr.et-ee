@@ -1,7 +1,7 @@
 ---
 title: Mõõdikute loomine ja haldamine
 description: Määratleda ettevõtte äritegevuse analüüsimiseks ja kajastamiseks vajalikud näitajad.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673365"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732721"
 ---
 # <a name="define-and-manage-measures"></a>Meetmete määratlemine ja haldamine
 
@@ -238,8 +238,7 @@ Valige loendist soovitud näitaja järgmiste suvandite jaoks.
 - Meetme **Kustutamine**.
 - **Aktiveeri** või **Inaktiveeri**. Passiivseid näitajad ei värskendata [kavandatud värskenduse](system.md#schedule-tab) ajal.
 
-> [!TIP]
-> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud **Vaata detaile** ühe tööülesande kohta, leiate lisateavet: töötlemise aeg, viimane töötlemise kuupäev ning kõik ülesandega seotud vead ja hoiatused.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="next-step"></a>Järgmine etapp
 

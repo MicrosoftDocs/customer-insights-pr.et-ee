@@ -1,7 +1,7 @@
 ---
 title: Segmendid publiku ülevaates
 description: Ülevaade segmentidest ning kuidas neid luua ja hallata.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 56978c984a91e85e86956e7eac1d59609c349b6a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673828"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732583"
 ---
 # <a name="segments-overview"></a>Segmentide ülevaade
 
@@ -65,8 +65,7 @@ Segmendi valimisel on saadaval järgmised tegevused.
 
 Saate kõiki segmente korraga värskendada, valides lehel **Segmendid** suvandi **Värskenda kõik** või saate ühte või mitut segmenti värskendada, kui valite need ja valite suvandite hulgast **Värskenda**. Teise võimalusena saate konfigureerida korduva värskendamise, valides **Administraator** > **Süsteem** > **Ajasta**.
 
-> [!TIP]
-> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Ekspordi segmendid
 
@@ -105,5 +104,6 @@ Alaosa sisaldab segmendi liikmete loendit.
 > Selle loendi väljad põhinevad segmendi olemite atribuutidel.
 >
 >Loend on eelvaade kattuvatest segmendi liikmetest ja näitab segmendi 100 esimest kirjet, et saaksite vajadusel kiiresti seda hinnata ja kontrollida selle määratlusi. Kõikide kattuvate kirjete nägemiseks peate [eksportima segmendi](export-destinations.md).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

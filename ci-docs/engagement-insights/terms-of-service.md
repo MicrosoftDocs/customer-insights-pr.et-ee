@@ -9,22 +9,22 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: d43d3c49c81ab343db5623ee4f5ebeb100d3b2b7
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
-ms.translationtype: HT
+ms.openlocfilehash: e6b69a6f681c929ddc4fe1877e4ad1c45ffe5c57b42f1485f55728eb4f9988b6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6218933"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7774120"
 ---
 # <a name="microsoft-dynamics-365-customer-insights--engagement-insights-preview"></a>Microsoft DYNAMICS 365 CUSTOMER INSIGHTS – Kaasamisülevaated (eelvaade) 
 
-Kaasamisülevaated (eelvaade) on väljalaske-eelne eelvaatefunktsioon, mis tähendab, et sellel on vähem või erinevad turbe-, privaatsus- ja andmeasukoha võimalused kui funktsioonidel ja võimalustel, mis on tehtud kättesaadavaks jaotises Dynamics 365 Customer Insights. Vaadake läbi allolevad mõisted ja tootedokumentatsioon, et teha kindlaks, kas kaasamisülevaated (eelvaade) on teie andmete jaoks sobivad.
+Kaasamisülevaade (eelvaade) on väljalaske-eelne eelvaate võimalus, mis tähendab, et sellel on vähem või erinevaid turbe-, privaatsus- ja andmeasukoha meetmeid kui Dynamics 365 Customer Insights üldiselt kättesaadavaks tehtud funktsioonid ja võimalused. Vaadake läbi allolevad mõisted ja tootedokumentatsioon, et teha kindlaks, kas kaasamisülevaated (eelvaade) on teie andmete jaoks sobivad.
 
 ## <a name="preview-terms-of-service"></a>TEENUSE TINGIMUSTE EELVAADE
 
 VÄRSKENDATUD OKTOOBRIS 2020 
 
-Rakenduse Dynamics 365 Customer Insights - Engagement ülevaadete teenuste eelvaatele juurdepääsemine või selle kasutamine (koos mis tahes Microsofti pakutavate andmeallikatega "Teenused"), nõustute te selle lepingu tingimustega. Kui te neid ei aktsepteeri, ärge sisenege teenustesse ega kasutage neid.
+Dynamics 365 Customer Insights – Engagement-ülevaadete (koos microsofti esitatud andmeallikate, "teenuste") teenuste eelvaatega või nende kasutamisega nõustute käesoleva lepingu tingimustega. Kui te neid ei aktsepteeri, ärge sisenege teenustesse ega kasutage neid.
 
 ## <a name="1-what-this-agreement-covers"></a>1. MIDA SEE LEPING HÕLMAB
 
@@ -154,7 +154,7 @@ SEADUSTEGA LUBATUD ULATUSES EI SAA MICROSOFT ÜHELGI JUHUL KAUDSE, JUHUSLIKU, TA
 
 ### <a name="111-term"></a>11.1. Mõiste
 
-See leping kehtib kuupäeval, mil te sellega esimest korda nõustute. See leping asendab kõik varasemad kokkulepped, mille alusel olete varem Dynamics 365 Product Insights teenuseid kasutanud või mistahes eelkäija teenused. Käesolev leping lõpeb varasemal kuupäeval (i) kuupäevast, mil teenused on kaubanduslikult välja antud (kui kunagi varem), või (ii) päeval, mil Microsoft teatab teile lõpetamisest. Microsoft võib mis tahes põhjusel ja oma õigusel peatada või tühistada teie kasutamise ja juurdepääsu kõigile või kõigile teenuste osadele või selle lepingu lõpetada.
+See leping kehtib kuupäeval, mil te sellega esimest korda nõustute. Käesolev leping asendab kõik varasemad kokkulepped, mille alusel olete kasutanud Dynamics 365 Product Insights või lähteteenuseid. Käesolev leping lõpeb varasemal kuupäeval (i) kuupäevast, mil teenused on kaubanduslikult välja antud (kui kunagi varem), või (ii) päeval, mil Microsoft teatab teile lõpetamisest. Microsoft võib mis tahes põhjusel ja oma õigusel peatada või tühistada teie kasutamise ja juurdepääsu kõigile või kõigile teenuste osadele või selle lepingu lõpetada.
 
 ### <a name="112-effect-of-termination"></a>11.2. Lõpetamise mõju
 

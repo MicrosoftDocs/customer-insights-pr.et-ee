@@ -1,7 +1,7 @@
 ---
 title: Semantilised vastendused (Eelversioon)
 description: Ülevaade semantilisest vastendusest ja kuidas neid kasutada.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622930"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731938"
 ---
 # <a name="semantic-mappings"></a>Semantilised vastendused
 
@@ -75,8 +75,7 @@ Semantilised vastendused lasevad teil vastendada oma mittetegevuseandmed eelmä�
 
 1. Semantilise vastenduse hilisemaks käivitamiseks valige semantiline vastendus ja valige **Värskenda**.
 
-> [!TIP]
-> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Olemasolevate semantilise vastenduste haldamine
 
@@ -91,5 +90,6 @@ Väljal **Andmed** > **Semantilised vastendusel (eelversioon)** saate vaadata k�
 - **Nimeta ümber**: Avab dialoogi, kuhu saate valitud semantilise vastenduse jaoks sisestada teistsuguse nime. Vajutage nuppu **Salvesta**, et muudatused rakendada.
 
 - **Kustuta**: Avab dialoogi, mis kinnitab valitud semantilise vastenduse kustutamist. Korraga saate kustutada ka mitu semantilist vastendust, valides semantilised vastendused ja kustutamise ikooni. Valige käsk **Kustuta**, et kinnitada kustutamine.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

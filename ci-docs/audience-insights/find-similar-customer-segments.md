@@ -9,19 +9,21 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034530"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799677"
 ---
 # <a name="similar-customers-preview"></a>Sarnased kliendid (eelversioon)
 
 See funktsioon võimaldab tehisintellekti kasutades leida teie kliendibaasist sarnaseid kliente. Selle funktsiooni kasutamiseks peab teil olema loodud vähemalt üks segment. Olemasoleva segmendi kriteeriumide laiendamine aitab leida sellele segmendile sarnaseid kliente.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
+
 > [!NOTE]
-> *Sarnaste klientide leidmine* kasutab automatiseeritud vahendeid andmete hindamiseks ja andmete põhjal prognooside tegemiseks ning seega saab seda kasutada ka profiilimismeetodina, nagu see mõiste on isikuandmete kaitse üldmääruses (GDPR) määratletud. Kui klient seda funktsiooni andmete töötlemiseks kasutab, võivad kohalduda GDPR või muud seadused ja määrused. Teie vastutate selle eest, et Dynamics 365 Customer Insightsi kasutades (sh prognoose kasutades) järgite te kõiki kohaldatavaid seadusi ja määrusi, sh eraelu puutumatuse, isikuandmete, biomeetriliste andmete, andmekaitse ja suhtluse konfidentsiaalsusega seotud seadusi.
+> *Sarnaste klientide leidmine* kasutab automatiseeritud vahendeid andmete hindamiseks ja andmete põhjal prognooside tegemiseks ning seega saab seda kasutada ka profiilimismeetodina, nagu see mõiste on isikuandmete kaitse üldmääruses (GDPR) määratletud. Kui klient seda funktsiooni andmete töötlemiseks kasutab, võivad kohalduda GDPR või muud seadused ja määrused. Teie vastutate selle eest, et teie Dynamics 365 Customer Insights kasutamine, sealhulgas prognoosid, vastaks kõigile kohaldatavatele seadustele ja määrustele, sealhulgas eraelu puutumatuse, isikuandmete, biomeetriliste andmete, andmekaitse ja side konfidentsiaalsusega seotud seadustele.
 
 ## <a name="finding-similar-customers"></a>Sarnaste klientide leidmine
 

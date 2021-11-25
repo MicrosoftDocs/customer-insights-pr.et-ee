@@ -1,7 +1,7 @@
 ---
 title: Kliendi tegevused
 description: Määratleda klienditegevused ja kuvada need kliendiprofiilide ajaskaalal.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673132"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732440"
 ---
 # <a name="customer-activities"></a>Kliendi tegevused
 
-Erinevatest andmeallikatest [pärinevaid klienditegevusi](data-sources.md) saate ühendada Dynamics 365 Customer Insights ajaskaala loomiseks, mis sisaldab tegevuste kronoloogilist loendit. Lisage ajajoon Dynamics 365 rakendustesse [kliendikaardi lisandmooduli](customer-card-add-in.md) lahendusega või Power BI juhtpaneelile.
+Saate kombineerida [Dynamics 365 Customer Insights erinevatest andmeallikatest pärinevaid klienditegevusi, et](data-sources.md) luua ajaskaala, mis loetleb tegevused kronoloogiliselt. Lisage ajaskaala Dynamics 365 [rakendustesse kliendikaardi lisandmooduli](customer-card-add-in.md) lahendusega või Power BI armatuurlauale.
 
 ## <a name="define-an-activity"></a>Määratle tegevus
 
@@ -82,9 +82,7 @@ Olemil peab olema vähemalt üks **Kuupäeva** tüüpi atribuut, mis lisatakse k
 
 1. Valige **Tegevused** lehel suvand **Käita** tegevuse töötlemiseks. 
 
-> [!TIP]
-> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Olemasolevate tegevuste haldamine
 

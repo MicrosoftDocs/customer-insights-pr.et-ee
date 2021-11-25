@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033580"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732259"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insightsi API-dega töötamine
 
-Dynamics 365 Customer Insights pakub API-sid oma rakenduste ehitamiseks, lähtudes teie Customer Insights andmetest.
+Dynamics 365 Customer Insights pakub API-sid, et luua oma rakendusi, mis põhinevad teie andmetel kliendiülevaates.
 
 > [!IMPORTANT]
 > Nende API-de üksikasjad on toodud [Customer Insights API-de ülevaade](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Need sisaldavad lisateavet toimingute, parameetrite ja vastuste kohta.
@@ -117,29 +117,29 @@ See jaotis aitab teil alustada klienditeekide kasutamist, mis on saadaval Custom
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Teave selle kohta, kuidas alustada C# klienditeekide kasutamist, leiate aadressilt NuGet.org. Lisateavet NuGeti paketi kohta leiate teemast [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). See pakett kasutab praegu netstandard2.0 ja netcoreapp2.0 raamistikke.
+Siin on teavet selle kohta, kuidas alustada NuGet.org C# klienditeekide kasutamist. NuGet paketi kohta leiate lisateavet teemast [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). See pakett kasutab praegu netstandard2.0 ja netcoreapp2.0 raamistikke.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>C# klienditeegi lisamine C# projekti
 
-1. Avage Visual Studios oma projekti **NuGeti paketihaldur**.
+1. Avage Visual Studio **oma projekti NuGet paketihaldur.**
 
 1. Otsige API-t **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Selleks, et lisada pakett projekti, valige **Installi**.
  
-   Teise võimalusena käivitage **NuGeti paketihalduri konsoolis** see käsk: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Teise võimalusena käivitage see käsk **NuGet Package Manageri konsoolis:**`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text=" NuGet -i paketi lisamine Visual Studio projekti.":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Saate Visual Studio projekti lisada NuGet paketi.":::
 
 #### <a name="use-the-c-client-library"></a>C# klienditeegi kasutamine
 
 1. Kasutage [Microsofti autentimisteeki (MSAL)](/azure/active-directory/develop/msal-overview), et saada `AccessToken`, kasutades oma olemasolevat [Azure'i rakenduse registreeringut](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Pärast õnnestunud autentimist ja loa omandamist looge uus või kasutage olemasolevat üksust `HttpClient` ning määrake üksuse **DefaultRequestHeaders "Authorization"** väärtuseks **Bearer <access token>** ja üksuse **Ocp-Apim-Subscription-Key** väärtuseks [**tellimuse võti**, mis pärineb teie Customer Insightsi keskkonnast](#get-started-trying-the-customer-insights-apis).   
+1. Pärast loa edukat autentimist ja omandamist looge uus või kasutage `HttpClient` olemasolevat, mille täiendav **DefaultRequestHeaders "Autoriseerimine"** on seatud **Bearer "juurdepääsuluba"** ja **Ocp-Apim-Subscription-Key** seatud tellimuse võti oma kliendi ülevaate [**·** keskkonnast](#get-started-trying-the-customer-insights-apis).   
  
    Vajadusel lähtestage päis **Autoriseerimine**. Näiteks kui luba on aegunud.
 
-1. Edastage `HttpClient` `CustomerInsights`i kliendi meetodisse.
+1. Edastage `HttpClient` `CustomerInsights` i kliendi meetodisse.
 
    :::image type="content" source="media/httpclient-sample.png" alt-text="Httpcliendi näidis.":::
 

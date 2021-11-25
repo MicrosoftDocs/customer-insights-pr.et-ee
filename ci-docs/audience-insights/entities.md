@@ -1,7 +1,7 @@
 ---
 title: Olemid ja andmekomplektid
 description: Saate vaadata andmeid olemite lehel.
-ms.date: 04/16/2020
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 137de726b243b501491fcbe7866820aaee26097fcf379270c423c277374ae9a4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033810"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732075"
 ---
 # <a name="entities-in-audience-insights"></a>Olemid sihtrühmaülevaadetes
 
-Pärast [andmeallikate konfigureerimist](data-sources.md)minge lehele **Olemid**, et hinnata sisestatud andmete kvaliteeti. Olemeid käsitletakse andmekogumitena. Nende olemite põhjal on loodud mitu Dynamics 365 Customer Insightsi funktsiooni. Nende lähedasem läbivaatamine aitab teil nende võimaluste väljundit valideerida.
+Pärast [andmeallikate konfigureerimist](data-sources.md) minge lehele [Olemid](data-sources.md), et hinnata sisestatud andmete kvaliteeti. Olemeid käsitletakse andmekogumitena. Nende olemite ümber on loodud mitu Dynamics 365 Customer Insights võimalust. Nende lähedasem läbivaatamine aitab teil nende võimaluste väljundit valideerida.
 
 **Olemite** lehel loetletakse olemid ja see sisaldab mitut veergu.
 
@@ -26,9 +26,10 @@ Pärast [andmeallikate konfigureerimist](data-sources.md)minge lehele **Olemid**
 - **Allikas**: andmeallika tüüp, mis olemisse sisestati
 - **Looja**: olemi loonud inimese nimi
 - **Loodud**: olemi loomise kuupäev ja kellaaeg
-- **Värskendaja**: olemit värskendanud inimese nimi
-- **Viimati värskendatud**: olemi viimase värskendamise kuupäev ja kellaaeg
-- **Viimane värskendatud**: viimase andmete värskendamise kuupäev ja kellaaeg
+- **Värskendatud** : olemit värskendanud isiku nimi
+- **Olem** : olemi viimase värskenduse üksikasjad
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Avasta kindlat andmeüksust
 

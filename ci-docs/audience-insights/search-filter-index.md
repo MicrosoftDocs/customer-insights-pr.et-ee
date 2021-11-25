@@ -1,7 +1,7 @@
 ---
 title: Kliendiprofiilide otsimine ja filtreerimine
 description: Leidke kiiresti teavet ühtsete klientide profiilide kohta ja filtreerige määratud atribuute.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,20 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
-ms.translationtype: HT
+ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469962"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732029"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Kliendiprofiilid: otsing ja filtri register
 
-Kliendiandmete ühtlustamise tulemusena tekib kliendiprofiili olem, mis pakub kogu kliendibaasi ühtset vaadet. [Kindla kliendi või klientide rühma teabe](customer-profiles.md) kiireks leidmiseks saate seadistada lehe **Kliendid** võimalused **Otsi** ja **Filtreeri**. Lugege edasi, et õppida, kuidas administraatorid saavad muuta lehe **Otsing ja filtri register** atribuute, millega kasutajad saavad otsida ja filtreerida.
+Kliendiandmete ühtlustamise tulemusena tekib kliendiprofiili olem, mis pakub kogu kliendibaasi ühtset vaadet. [Kindla kliendi või klientide rühma teabe](customer-profiles.md) kiireks leidmiseks saate seadistada lehe [Kliendid](customer-profiles.md) võimalused [Otsi](customer-profiles.md) ja [Filtreeri](customer-profiles.md). Lugege edasi, et õppida, kuidas administraatorid saavad muuta lehe **Otsing ja filtri register** atribuute, millega kasutajad saavad otsida ja filtreerida.
 
-> [!div class="mx-imgBorder"]
-> ![Otsingufilter.](media/search-filter.png "Otsingufilter")
+   :::image type="content" source="media/search-filter.png" alt-text="Otsingufilter":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Lisage välju ja määrake atribuute
 

@@ -1,6 +1,6 @@
 ---
 title: Andmesubjekti õigused (DSR) vastavalt GDPR-ile | Microsoft Docs
-description: Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsiooni andmesubjekti taotlustele vastamine.
+description: Vastake andmesubjekti taotlustele Dynamics 365 Customer Insights vaatajaskonna ülevaate võimaluse kohta.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483658"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732675"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Andmesubjekti õigused (DSR) vastavalt GDPR-ile
 
@@ -24,7 +24,7 @@ Oleme pühendunud sellele, et aitame klientidel täita GDPR-i nõudeid. See hõl
 
 ## <a name="audience-insights"></a>Sihtrühmaülevaated
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsiooni GDPR-i andmesubjekti kustutamistaotlustele vastamine
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>GDPR-i andmesubjektile vastamine kustutab Dynamics 365 Customer Insights vaatajaskonna ülevaate võimaluse taotlused
 
 Õigus isikuandmete eemaldamiseks ettevõtte kliendiandmetest on isikuandmete kaitse üldmääruse (GDPR-i) põhikaitse. Isikuandmete eemaldamine hõlmab kogi isiklike andmete ja süsteemi loodud logide eemaldamist, va auditi logi teabe.
 
@@ -39,7 +39,7 @@ Sihtrühmaülevaadete funktsioon pakub järgmisi tootega seotud kogemusi, et kus
 
 Customer Insightsi administraator saab nende etappide abil eemaldada kliendiandmeid, mis kustutati andmeallikas.
 
-1. Logige sisse rakendusse Dynamics 365 Customer Insights.
+1. Logige Dynamics 365 Customer Insights sisse.
 2. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Andmeallikad**
 3. Tehke iga loendis oleva andmeallikaga, mis sisaldab kustutatud kliendiandmeid, järgmist.
    1. Valige (...) ja seejärel valige nupp **Värskenda**.
@@ -52,7 +52,7 @@ Customer Insightsi administraator saab nende etappide abil eemaldada kliendiandm
 
 Customer Insightsi administraator saab Customer Insightsi kasutaja andmete kustutamiseks toimida järgmiselt.
 
-1. Logige sisse rakendusse Dynamics 365 Customer Insights.
+1. Logige Dynamics 365 Customer Insights sisse.
 2. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Õigused**.
 3. Valige märkeruutude abil kasutaja, kelle soovite kustutada.
 4. Valige **Eemalda**.
@@ -79,7 +79,14 @@ Rentniku administraator võib järgida andmete eksportimisel järgmisi etappe.
 2. Kinnitage taotletud kasutajale andmete eksportimise luba.
 3. Saage eksporditud andmed rentniku administraatori meiliaadressi kaudu.
 
-## <a name="engagement-insights"></a>Kaasamisülevaated
+## <a name="consent-management-preview"></a>Nõusoleku haldus (eelvaade)
+
+Nõusoleku haldamise võimalus ei kogu kasutajaandmeid otse. See impordib ja töötleb ainult nõusolekuandmeid, mida kasutajad on esitanud muudes rakendustes.
+
+Nõusolekuandmete eemaldamiseks konkreetsete kasutajate kohta eemaldage need andmeallikatest, mis on neelatud nõusoleku haldamise võimalusele. Pärast andmeallikas värskendamist kustutatakse eemaldatud andmed ka nõusolekukeskuses. Rakendused, mis kasutavad nõusoleku olemit, kustutavad ka andmed, mis eemaldati allikast pärast [värskendamist](audience-insights/system.md#refresh-processes). Soovitame andmeallikad kiiresti värskendada pärast andmesubjekti taotlusele vastamist, et eemaldada kasutaja andmed kõigist muudest protsessidest ja rakendustest.
+
+
+## <a name="engagement-insights-preview"></a>Kaasamisülevaated (eelversioon)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Lõppkasutajat tuvastada võimaldavat teavet sisaldavate sündmuseandmete kustutamine ja eksportimine
 

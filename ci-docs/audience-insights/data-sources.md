@@ -1,7 +1,7 @@
 ---
 title: Andmeallikate kasutamine andmete valmendamiseks
 description: Vaadake, kuidas eri allikatest andmeid importida.
-ms.date: 04/12/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645350"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732137"
 ---
 # <a name="data-sources-overview"></a>Andmeallikate ülevaade
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioon ühendub andmetega, mis on pärit paljudest allikatest. Andmeallikaga ühendamist nimetatakse sageli *andmete sisestamiseks*. Pärast andmete sisestamist saate need [ühendada](data-unification.md) ja nendega toiminguid teha.
+Publiku taipamise võimalus Dynamics 365 Customer Insights ühendub laiast allikatest pärinevate andmetega. Andmeallikaga ühendamist nimetatakse sageli *andmete sisestamiseks*. Pärast andmete sisestamist saate need [ühendada](data-unification.md) ja nendega toiminguid teha.
 
 ## <a name="add-a-data-source"></a>Lisa andmeallikas
 
@@ -31,15 +31,15 @@ Saate andmeallikat lisada kolmel peamisel viisil.
 
 - [Kümnete Power Query konnektorite kaudu](connect-power-query.md)
 - [Common Data Modeli kaustast](connect-common-data-model.md)
-- [Enda Microsoft Dataverse’i andmejärvest](connect-dataverse-managed-lake.md)
+- [Oma Microsoft Dataverse järvest](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Andmete lisamine asutusesisene andmeallikatest
 
-Kohalike andmeallikate andmete sisestamine vaatajaskonna statistikas toetub Microsoft Power Platform andmevoogudele. Andmevooge saab lubada Customer Insights kaudu [pakkudes Microsoft Dataverse keskkonna URL-i](create-environment.md) keskkonna seadistamisel.
+Microsoft Power Platform andmevoogude põhjal toetatakse asutusesisene andmeallikate andmete allaneelamist vaatajaskonna ülevaates. Andmevoogusid saab lubada kliendiülevaates, [pakkudes keskkonna seadistamisel Microsoft Dataverse keskkonna URL-i.](create-environment.md)
 
-Andmeallikad, mis luuakse pärast keskkonna Dataverse seostamist Customer Insights, kasutavad [Power Platform andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) vaikimisi. Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Eemaldage ja looge uuesti andmeallikad, mis olid olemas enne seda, kui Dataverse -i keskkond seostati [asutusesisese andmelüüside kasutamisega](/data-integration/gateway/service-gateway-app).
+Andmeallikad, mis luuakse pärast Dataverse keskkonna seostamist kliendiülevaatega, kasutavad [vaikimisi Power Platform andmevooge.](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Eemaldage ja looge uuesti andmeallikad, mis olid olemas enne Dataverse keskkonna [seostamist asutusesisene andmelüüside kasutamiseks](/data-integration/gateway/service-gateway-app).
 
-Andmevõrgud olemasolevast Power BI või Power Apps keskkonnast on nähtavad ja saate neid uuesti kasutada jaotises Customer Insights. Andmeallikate lehel kuvatakse lingid, et minna Microsoft Power Platform keskkonda, kus saate vaadata ja konfigureerida asutusesiseseid andmevõrke.
+Olemasoleva Power BI või Power Apps keskkonna andmelüüsid on nähtavad ja saate neid klientide ülevaates uuesti kasutada. Andmeallikate lehel kuvatakse lingid, mis lähevad Microsoft Power Platform keskkonda, kus saate asutusesisene andmelüüse vaadata ja konfigureerida.
 
 ## <a name="review-ingested-data"></a>Sisestatud andmete läbivaatus
 
@@ -48,14 +48,7 @@ Näete iga sisestatud andmeallika nime, selle olekut ja viimast korda, kui neid 
 > [!div class="mx-imgBorder"]
 > ![Andmeallikas lisatud.](media/configure-data-datasource-added.png "Andmeallikas lisatud")
 
-|Olek  |Kirjeldus  |
-|---------|---------|
-|Tehtud   |Andmeallikas valmendati edukalt juhul, kui veerus **Värskendatud** on toodud aeg.
-|Pole käivitatud   |Andmeallikas pole valmendatud andmeid või see on ikka mustandirežiimis.         |
-|Värskendamine    |Andmete sisestamine on pooleli. Selle toimingu tühistamiseks valige **Peata värskendamine** **Toimingute** veerus. Andmeallika värskendamise peatamine ennistab selle viimase värskendamise olekusse.       |
-|Ebaõnnestus     |Andmete sisestamisel ilmnesid tõrked.         |
-
-Üksikasjade kuvamiseks valige väärtus mis tahes andmeallika veerus **Olek**. Laiendage paanil **Edenemise üksikasjad** suvandit **Andmeallikad**. Valige **Kuva üksikasjad**, et saada värskendamise oleku kohta lisateavet, sh tõrke üksikasjad ja allavooluprotsesside värskendused.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 Andmete laadimine võib võtta aega. Pärast edukat värskendamist saab lisatud andmeid vaadata lehel **Olemid**. Lisateavet vt jaotisest [Olemid](entities.md).
 

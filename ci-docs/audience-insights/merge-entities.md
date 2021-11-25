@@ -1,7 +1,7 @@
 ---
 title: Olemite ühendamine andmete koondamise ajal
 description: Ühendage olemid, et luua koondatud kliendiprofiile.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648249"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732767"
 ---
 # <a name="merge-entities"></a>Olemite liitmine
 
@@ -187,10 +187,9 @@ Vaige **Käivita Ühenda ja järgnevad protsessid** et värskendada süsteemi si
 
 Kui soovite teha rohkem muudatusi ja etapi uuesti käivitada, saate tühistada poolelioleva ühendamise. Valige **Värskendamine ...** ja valige nähtavale ilmuva külgpaani suvand **Tühista töö**.
 
-> [!TIP]
-> Pärast liitmise protsessi käivitamist valige protsessi olek, et avada **Toimingu üksikasjade** paan. See annab ülevaate töötlemisajast, viimasest töötlemiskuupäevast ja kõigist toiminguga seostatud tõrgetest ja hoiatustest. Valige **Üksikasjade** kuvamine, et näha, millised olemid osalevad vastendusprotsessis, kas konfliktilahendused õnnestusid ja kas värskendused on avaldatud.  
-> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Süvitsimineku tee et saada protsessi üksikasjad ülesande oleku lingilt.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Süvitsimineku tee et saada protsessi üksikasjad ülesande oleku lingilt.":::
 
 ## <a name="next-step"></a>Järgmine etapp
 

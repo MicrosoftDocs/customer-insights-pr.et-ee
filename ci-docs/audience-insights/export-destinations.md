@@ -1,7 +1,7 @@
 ---
 title: Andmete eksportimine Customer Insights
 description: Andmete jagamiseks hallake eksporti.
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673318"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732130"
 ---
 # <a name="exports-preview-overview"></a>Eksportimine (eelversioon) ülevaade
 
@@ -36,7 +36,7 @@ Eksporditüüpe on kaks peamist:
 Enamik ekspordisuvandeid toetab mõlemat tüüpi keskkondi. Segmentide eksportimisel erinevatesse sihtsüsteemidesse on erinõuded. Üldiselt sisaldavad segmendi liige ja kliendiprofiil kontaktteavet. Kuigi see kehtib enamasti eratarbijate (B2C) põhinevate segmentide puhul, ei pruugi see käia ärikontodel (B2B) põhinevate segmentide kohta. 
 
 **Segmendi ekspordikeskkonnad ärikontode jaoks (B2B)**  
-- Segmendid ärikontode keskkondades on rajatud *konto* olemile. Konto segmentide eksportimiseks nagu see on, peab sihtsüsteem toetama puhtaid konto segmente. See kehtib [LinkedIn'i](export-linkedin-ads.md) kohta, kui valite ekspordi määratlemisel suvandi **ettevõte**.
+- Segmendid ärikontode keskkondades on rajatud *konto* olemile. Konto segmentide eksportimiseks nagu see on, peab sihtsüsteem toetama puhtaid konto segmente. See kehtib [LinkedIn'i](export-linkedin-ads.md) kohta, kui valite ekspordi määratlemisel suvandi [ettevõte](export-linkedin-ads.md).
 - Kõik muud sihtsüsteemid nõuavad kontaktiolemi välju. Tagamaks, et ettevõtte segmendid saavad tuua andmeid seotud kontaktidest, peab teie segmendi määratluses olema kontakti olemi projektiatribuudid. Lisateave [segmentide ja projektiatribuutide konfigureerimise kohta](segment-builder.md).
 
 **Segmentide eksport keskkondades eratarbijatele (B2C)**  
@@ -97,7 +97,9 @@ Pärast ekspordi sihtkoha loomist on need ära toodud **Andmed** > **Ekspordid**
 
 Igal konfigureeritud ekspordil on värskendusgraafik. Värskendamise ajal otsib süsteem uusi või värskendatud andmeid, mida eksporti kaasata. Vaikimisi käitatakse eksport iga [kavandatud süsteemivärskenduse](system.md#schedule-tab) osana. Saate värskendamise ajakava kohandada või selle käsitsi eksportimise käivitamiseks välja lülitada.
 
-Ekspordigraafikud sõltuvad teie keskkonna olekust. Kui värskendused on pooleli [sõltuvused](system.md#refresh-policies), kui määratud eksport peaks algama, viib süsteem värskendused esmalt lõpule ja käivitab seejärel ekspordi. Näete, millal eksporti viimati veerus **Värskendati**.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+Ekspordigraafikud sõltuvad teie keskkonna olekust. Kui värskendused on pooleli [sõltuvused](system.md#refresh-processes), kui määratud eksport peaks algama, viib süsteem värskendused esmalt lõpule ja käivitab seejärel ekspordi. Näete, millal eksporti viimati veerus **Värskendati**.
 
 ### <a name="schedule-exports"></a>Eksportide ajastamine
 

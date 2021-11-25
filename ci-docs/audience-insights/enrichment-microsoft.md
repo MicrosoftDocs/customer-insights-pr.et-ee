@@ -1,7 +1,7 @@
 ---
 title: Kliendiprofiilide rikastamine Microsofti andmetega
 description: Kasutage Microsofti omandiandmeid kliendiandmete rikastamiseks kaubamärgi ja omandiõigusega seotud andmetega.
-ms.date: 06/14/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 51b150cbf5d9cfb3a5df42e680bcfa57ec5496cb
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617872"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732537"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Kliendiprofiilide rikastamine brändi ja huvide ligitõmbavusega (eelvaade)
 
@@ -116,8 +116,7 @@ Pärast brändide, huvide ja demograafilise väljavastenduse konfigureerimist k�
 
 Sõltuvalt kliendiandmete mahust võib rikastamise käitamise lõpuleviimiseks kuluda mitu minutit.
 
-> [!TIP]
-> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud **Vaata detaile** ühe tööülesande kohta, leiate lisateavet: töötlemise aeg, viimane töötlemise kuupäev ning kõik ülesandega seotud vead ja hoiatused.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="enrichment-results"></a>Rikastamise tulemused
 
