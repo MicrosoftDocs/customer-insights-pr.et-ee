@@ -1,7 +1,7 @@
 ---
 title: Olemite vastavusseviimine andmete koondamiseks
-description: Vastendage olemid andmehulkadega ja looge ühendatud kliendiprofiilid.
-ms.date: 11/01/2021
+description: Viige olemid vastavusse, et luua koondatud kliendiprofiile.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732629"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863806"
 ---
 # <a name="match-entities"></a>Olemite vastavusseviimine
 
@@ -79,7 +79,7 @@ Olemi nime kõrval kuvatav hoiatus **Vajab reeglit** viitab sellele, et vastepaa
 
 1. Sisestage reegli **Nimi**.
 
-1. [Lisage veel tingimusi](#add-conditions-to-a-rule) või valige reegli vormistamiseks [Valmis\]\(...\).
+1. [Lisage veel tingimusi](#add-conditions-to-a-rule) või valige reegli vormistamiseks **Valmis**.
 
 1. Võite ka [rohkem reegleid lisada](#add-rules-to-a-match-pair).
 
@@ -224,17 +224,24 @@ Enamuse vasteparameetritest saate ümber konfigureerida ja peenhäälestada.
 
 ## <a name="specify-custom-match-conditions"></a>Kohandatud vastetingimuste määramine
 
-Saate määrata tingimused, et kindlad kirjed peaksid alati vastama või mitte kunagi vastama. Need reeglid saab üles laadida standardse vastenduse alistamiseks. Näiteks kui meie kirjetes olid Tundmatu I ja Tundmatu II, võib süsteem need vastendada ühe inimesena. Kohandatud vaste reeglid võimaldavad määrata, et profiilid viitavad erinevatele inimestele. 
+Saate määrata tingimused, mis alistavad vaikevaste loogika. Saadaval on neli võimalust. 
+
+|Variant  |Kirjeldus |Näide  |
+|---------|---------|---------|
+|Ühtib alati     | Määratleb väärtused, mis on alati sobitatud.         |  Alati sobivad *Mike*'i ja *MikeR-iga*.       |
+|Ei ühti kunagi     | Määratleb väärtused, mis kunagi ei ühti.        | Ära kunagi sobi *Johni* ja *Jonathaniga*.        |
+|Kohandatud möödumine     | Määratleb väärtused, mida süsteem peaks mängufaasis alati ignoreerima. |  Ignoreerige väärtusi *11111* ja *Tundmatut* matši ajal.        |
+|Pseudonüümi vastendus    | Väärtuste määratlemine, mida süsteem peaks sama väärtusena kaaluma.         | Mõtle, *et Joe on* *Joosepiga* võrdne.        |
 
 1. Avage **Andmed** > **Koondamine** > **Vastendamine** ja tehke jaotises **Vastendatud kirjete üksikasjad** valik **Kohandatud vaste**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Esiletõstetud kohandatud vaste kontrolliga vastendusreeglite kuvatõmmis.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Esiletõstetud kohandatud vaste kontrolliga vastendusreeglite kuvatõmmis.":::
 
-1. Kui te pole kohandatud vastendusreegleid määranud, näete uut, rohkemate üksikasjadega paani **Kohandatud vaste**.
+1. Avage **paanil** Kohandatud **vahekaart** Kirjed.
 
-1. Valige **Täida mall**, et hankida malli fail, mis määratleb, mis olemite kirjed peaksid kattuma alati või mitte kunagi. Peate „Vastenda alati“ kirjed ja „Vastenda mitte kunagi“ kirjed sisestama eraldi kahte eri faili.
+1. Valige ripploendist Kohandatud vaste **suvand Kohandatud** ja valige Laadi mall **alla**. Iga mängusuvandi jaoks on vaja eraldi malli.
 
-1. Mall sisaldab välju, et täpsustada kohandatud vastendamise olemit ja olemi primaarvõtme väärtusi. Näiteks kui soovite, et esmane võti *12345* olemist *Müük* vastaks alati esmasele võtmele *34567* olemist *Kontakt*, täitke järgmine mall.
+1. Mallifaili allalaadimine. Avage see ja täitke üksikasjad. Mall sisaldab välju, et täpsustada kohandatud vastendamise olemit ja olemi primaarvõtme väärtusi. Näiteks kui soovite, et esmane võti *12345* olemist *Müük* vastaks alati esmasele võtmele *34567* olemist *Kontakt*, täitke järgmine mall.
     - Entity1: Sales
     - Entity1Key: 12345
     - Entity2: Contact
@@ -244,26 +251,32 @@ Saate määrata tingimused, et kindlad kirjed peaksid alati vastama või mitte k
    
    Kui soovite olemi pöördduplitseerimise määrata kohandatud sobitamisega, sisestage Entity1 ja Entity2 sama olem ja määrake erinevad primaarvõtmed.
 
-1. Pärast kõikide soovitud asenduste lisamist salvestage malli fail.
+1. Pärast kõigi alistamiste lisamist salvestage mallifail.
 
-1. Minge jaotisse **Andmed** > **Andmeallikad** ja valmendage mallifailid uute olemitena. Pärast sisestamist saate nendega määratleda vastendamisseadistust.
+1. Minge jaotisse **Andmed** > **Andmeallikad** ja valmendage mallifailid uute olemitena.
 
-1. Pärast failide üleslaadimist ja olemite avalikustamist valige uuesti valik **Kohandatud vaste**. Näete valikuid, et täpsustada kaasatavad olemid. Valige ripploendist nõutavad olemid.
+1. Pärast failide üleslaadimist ja olemite avalikustamist valige uuesti valik **Kohandatud vaste**. Näete valikuid, et täpsustada kaasatavad olemid. Valige rippmenüüst vajalikud olemid ja valige **Valmis**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Dialoogi kuvatõmmis, mis näitab, kuidas valida kohandatud vastendusstsenaariumi alistamised.":::
 
-1. Valige olemid, mida tahate kasutada **Vastenda alati** ja **Vastenda mitte kunagi** puhul, seejärel valige **Valmis**.
+1. Kohandatud vaste rakendamine sõltub mängusuvandist, mida soovite kasutada. 
+
+   - Kui **mäng on alati sobiv või mitte kunagi sobiv, jätkake järgmise** **sammuga**.
+   - **Kohandatud ümbersõidu** või **pseudonüümi vastendamise** puhul valige Redigeeri olemasoleva **mängureegli** alusel või looge uus reegel. Valige ripploendis Normaliseerimised **suvand Kohandatud** ümbersõidu- või **pseudonüümi vastendamine** ja valige **Valmis**.
 
 1. Kohandatud vastekonfiguratsiooni rakendamiseks tehke lehel **Match** valik **Salvesta**.
 
 1. Vastendusprotsessi käivitamiseks tehke lehel **Match** valik **Käivita**. Muud määratud vastendusreeglid alistatakse kohandatud vastenduskonfiguratsiooniga.
 
-> [!TIP]
-> Alistamiste rakendamise kinnitamiseks valige **Andmed** > **Olemid** ja vaadake üle olem **ConflationMatchPair**.
+### <a name="known-issues"></a>Teadaolevad probleemid
+
+- Enesesketseerimine ei näita normaliseeritud andmeid deduplatsiooniolemites. Kuid see rakendab normaliseerimist sisemiselt deduplatsiooni ajal. See on disaini järgi kõigi normaliseerimiste jaoks. 
+- Kui semantiline tüübisäte eemaldatakse **kaardifaasis**, kui vastereegel kasutab pseudonüümi vastendust või kohandatud ümbersõitu, siis normaliseerimist ei rakendata. See juhtub ainult siis, kui tühjendate semantilise tüübi pärast normaliseerimise konfigureerimist mängureeglis, kuna semantiline tüüp on teadmata.
+
 
 ## <a name="next-step"></a>Järgmine etapp
 
-Pärast vähemalt ühe vastendamispaari vastendamist võite lahendada andmete võimalikud vastuolud, selleks lugege teemat [**Liitmine**](merge-entities.md).
+Pärast vähemalt ühe matšipaari matšiprotsessi lõpetamist jätkake [**·**](merge-entities.md) sammu Ühenda.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

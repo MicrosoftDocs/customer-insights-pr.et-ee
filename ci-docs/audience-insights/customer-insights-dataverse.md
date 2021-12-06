@@ -1,7 +1,7 @@
 ---
-title: Customer Insightsi andmed teenuses Microsoft Dataverse
-description: Customer Insights olemite kasutamine Microsoft Dataverse tabelitena.
-ms.date: 10/14/2021
+title: Customer Insightsi andmed Microsoft Dataverse
+description: Customer Insightsi olemite kasutamine tabelitena Microsoft Dataverse.
+ms.date: 11/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,35 +9,35 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645213"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866929"
 ---
-# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
+# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Customer Insightsi andmetega töötamine Microsoft Dataverse
 
-Customer Insights pakub võimalust muuta väljundi olemid kättesaadavaks teenuses [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). See integratsioon võimaldab lihtsat andmete jagamist ja kohandatud arendamist vähese koodiga/koodita. Väljundi olemid on saadaval tabelitena teenuses Dataverse. Need tabelid võimaldavad stsenaariumeid, nagu [automaatsed töövood Power Automate](/power-automate/getting-started), [mudelipõhised rakendused](/powerapps/maker/model-driven-apps/) ja [lõuendirakendused](/powerapps/maker/canvas-apps/) Power Apps kaudu. Saate kasutada andmeid mis tahes muu Dataverse tabelitel põhineva rakenduse jaoks. Praegune juurutus toetab peamiselt otsinguid, kus konkreetse kliendi ID jaoks saab hankida andmeid olemasolevate vaatajaskonna statistiliste üksuste kohta.
+Customer Insights pakub võimalust teha väljundolemid [Microsoft Dataverse kättesaadavaks](/powerapps/maker/data-platform/data-platform-intro.md). See integratsioon võimaldab lihtsat andmete jagamist ja kohandatud arendamist vähese koodiga/koodita. Väljundolemid on saadaval tabelitena Dataverse. Need tabelid võimaldavad Power Apps kaudu stsenaariume, nagu [automatiseeritud töövood](/power-automate/getting-started)[Power Automate, mudelipõhiste rakenduste](/powerapps/maker/model-driven-apps/) ja [lõuendirakenduste](/powerapps/maker/canvas-apps/) kaudu. Andmeid saate kasutada mis tahes muu rakenduse jaoks, mis põhineb Dataverse tabelitel. Praegune juurutus toetab peamiselt otsinguid, kus konkreetse kliendi ID jaoks saab hankida andmeid olemasolevate vaatajaskonna statistiliste üksuste kohta.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Dataverse Customer Insignts keskkonna lisamiseks
+## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Dataverse keskkonna lisamine Customer Insightsile
 
-**Asutused, kus on olemasolevad Dataverse keskkonnad**
+**Organisatsioonid, millel on olemasolevad Dataverse keskkonnad**
 
-Asutused, mis Dataverse juba kasutavad, saavad [kasutada ühte olemasolevat Dataversekeskkonda](create-environment.md), kui administraator seadistab sihtrühma ülevaated. Andes Dataverse keskkonna URL-i, lisab see uutele publiku ülevaadete keskkonnale. Parima võimaliku toimivuse tagamiseks peavad Customer Insightsi ja Dataverse keskkonnad olema majutatud samas piirkonnas.
+Organisatsioonid, kes juba kasutavad Dataverse saavad [kasutada mõnda oma olemasolevat Dataverse](create-environment.md) keskkonda, kui administraator häälestab vaatajaskonna ülevaateid. Pakkudes URL-i Dataverse keskkonnale, lisab see nende uue vaatajaskonna ülevaatekeskkonna. Parima võimaliku jõudluse tagamiseks tuleb samas piirkonnas majutada Customer Insightsi ja Dataverse keskkondi.
 
 **Uus organisatsioon**
 
 Kui loote Customer Insightsi seadistamisel uue organisatsiooni, saate automaatselt uue Dataverse keskkonna.
 
 > [!NOTE]
-> Kui teie organisatsioonid kasutavad juba rentnikus teenust Dataverse, on oluline meeles pidada, et [Dataverse keskkonna loomist kontrollib administraator](/power-platform/admin/control-environment-creation.md). Näiteks kui seadistate uut sihtrühma ülevaatekeskkonda oma ettevõttega ja administraator on keelanud proovikeskkondade loomise kõigile peale administraatorite, ei saa te luua uut Dataverse proovikeskkonda.
+> Kui teie organisatsioonid juba kasutavad oma rentnikus Dataverse, on oluline meeles pidada, et [Dataverse keskkonna loomist kontrollib administraator](/power-platform/admin/control-environment-creation.md) . Näiteks kui häälestate oma organisatsioonikontoga uut vaatajaskonna ülevaatekeskkonda ja administraator on keelanud Dataverse proovikeskkondade loomise kõigile peale administraatorite, ei saa te uut proovikeskkonda luua.
 > 
-> Customer Insightsi kaudu loodud Dataverse proovikeskkondades on 3 GB mäluruumi, mida ei arvestata rentniku kogu mäluruumi sisse. Tasulised Dataverse kordustellimused annavad 15 GB andmebaasi mäluruumi ja 20 GB faili mäluruumi.
+> Customer Insightsis loodud Dataverse proovikeskkondadel on 3 GB salvestusruumi, mida ei arvestata rentnikule õigusega üldise võimsuse hulka. Tasulised tellimused saavad Dataverse andmebaasi jaoks 15 GB ja failisalvestuse jaoks 20 GB.
 
 ## <a name="output-entities"></a>Väljundolemid
 
-Mõned sihtrühma ülevaadete väljundolemid on saadaval Dataverse tabelitena. Allolevates jaotistes kirjeldatakse nende tabelite eeldatavat skeemi.
+Mõned vaatajaskonna ülevaate väljundolemid on saadaval tabelitena Dataverse. Allolevates jaotistes kirjeldatakse nende tabelite eeldatavat skeemi.
 
 - [Kliendi profiil](#customerprofile)
 - [AlternateKey](#alternatekey)
@@ -45,6 +45,7 @@ Mõned sihtrühma ülevaadete väljundolemid on saadaval Dataverse tabelitena. A
 - [CustomerMeasure](#customermeasure)
 - [Rikastamine](#enrichment)
 - [Prognoos](#prediction)
+- [Segmendi liikmelisus](#segment-membership)
 
 
 ### <a name="customerprofile"></a>Kliendi profiil
@@ -60,7 +61,7 @@ Tabel AlternateKey sisaldab olemite võtmeid, mis osalevad ühildamisprotsessis.
 |DataSourceName    |String         | Andmeallika nimi. Näiteks: `datasource5`.”        |
 |EntityName        | String        | Olemi nimi sihtrühma ülevaadetes. Näiteks: `contact1`.”        |
 |AlternateValue (Alternatiivne väärtus)    |String         |Alternatiivne ID, mis on vastendatud kliendi ID-ga. Näide: `cntid_1078`         |
-|KeyRing           | Mitmerealine tekstiväli        | JSON-väärtus  </br> Näide: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|KeyRing           | Mitmerealine tekstiväli        | JSON-väärtus  </br> Näidis: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"võtmed":[" cntid_1078"]}]       |
 |CustomerId         | String        | Ühildatud kliendiprofiili ID.         |
 |AlternateKeyId     | GUID         |  AlternateKeyl deterministlik GUID, mis põhineb msdynci_identifier       |
 |msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Näidis: `testdatasource|contact1|cntid_1078`    |
@@ -121,3 +122,16 @@ See tabel sisaldab mudeliprognooside väljundit.
 | Väärtused               | JSON-sõne | Mudeliga seotud atribuutide loend |
 | msdynci_predictionid | GUID        | Deterministlik GUID, mis on loodud msdynci_identifierilt | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Segmendi liikmelisus
+
+See tabel sisaldab kliendiprofiilide segmendi liikmelisuse teavet.
+
+| Column        | Tüüp | Kirjeldus                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | Kliendiprofiili ID        |
+| SegmentProvider      | String       | Rakendus, mis avaldab segmente. Vaikeülevaated: vaatajaskonna ülevaated         |
+| SegmentMembershipType | String       | Selle segmendi liikmesuse kirje kliendi tüüp. Toetab mitut tüüpi, näiteks klient, kontakt või konto. Vaikeväärtus: klient  |
+| Segmendid       | JSON-sõne  | Kordumatute segmentide loend, mille liige kliendiprofiil on      |
+| msdynci_identifier  | String   | Segmendi liikmesuse kirje ainuidentifikaator. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | Deterministlik GUID, mis on loodud`msdynci_identifier`          |
