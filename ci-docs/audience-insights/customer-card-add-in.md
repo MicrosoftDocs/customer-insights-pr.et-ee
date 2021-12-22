@@ -1,20 +1,20 @@
 ---
-title: Rakenduse Dynamics 365 kliendikaardi lisandmoodul
+title: Dynamics 365 rakenduste kliendikaardi lisandmoodul (video)
 description: Saate selle lisandmooduliga kuvada Dynamics 365 rakenduste sihtrühma ülevaadete andmeid.
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
-ms.translationtype: MT
+ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
+ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792022"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "7921860"
 ---
 # <a name="customer-card-add-in-preview"></a>Kliendikaardi lisandmoodul (eelvaade)
 
@@ -27,20 +27,20 @@ Saate oma klientide kohta täieliku ülevaate otse Dynamics 365 rakendustes. Kui
 ## <a name="prerequisites"></a>Eeltingimused
 
 - Lisandmoodul töötab ainult Dynamics 365 mudelipõhiste rakendustega (nt Müük või Klienditeenindus, versioon 9.0 ja uuemad).
-- Dynamics 365 andmete vastendamiseks vaatajaskonna ülevaate kliendiprofiilidega tuleb need [Dynamics 365 rakendusest alla neelata Microsoft Dataverse konnektori abil](connect-power-query.md).
+- Et Dynamics 365 andmed vastendaks sihtrühma ülevaadetega kliendiprofiilidega, tuleb neid [Dynamics 365 rakenduse Microsoft Dataverse konnektori abil alla laadida](connect-power-query.md).
 - Kõik Dynamics 365 kliendikaardi lisandmooduli kasutajad peavad andmete nägemiseks olema [lisatud kasutajatena](permissions.md) publiku ülevaadetes.
 - [Konfigureeritud otsing ja võimekuste filtreerimine](search-filter-index.md) on publiku ülevaadetes nõutud andmete otsingu töötamise jaoks.
 - Iga lisandmooduli juhtelement kasutab sihtrühma ülevaadetes teatud andmeid. Teatud andmed ja juhtelemendid on saadaval ainult mingit kindlat tüüpi keskkondades. Lisandmooduli konfiguratsioon annab teile teada, kui juhtelement pole valitud keskkonnatüübi tõttu saadaval. Lisateave [keskkondade kasutamise kohta](work-with-business-accounts.md).
   - **Mõõtühiku juhtelement**: Nõuab [konfigureeritud mõõtmetega](measures.md) kliendi atribuutide tüüpe.
-  - **Jälitusteabe juhtelement**: Nõuab andmeid, mis on loodud kasutades [prognoosimist](predictions.md) või [kohandatud mudeleid](custom-models.md).
+  - **Luurekontroll** : nõuab ennustuste või kohandatud mudelite abil loodud [andmeid](predictions-overview.md).
   - **Kliendi üksikasjade juhtelement**: Kõik profiili väljad on saadaval ühendatud kliendiprofiilis.
-  - **Rikastamise juhtelement**: Nõuab kliendiprofiilile aktiivsete [rikastamiste](enrichment-hub.md) rakendamist. Kaardi lisandmoodul toetab neid rikastamisi: [Microsofti pakutavad](enrichment-microsoft.md) kaubamärgid, Microsofti pakutavad [...](enrichment-microsoft.md) huvid.
+  - **Rikastamise juhtelement**: Nõuab kliendiprofiilile aktiivsete [rikastamiste](enrichment-hub.md) rakendamist. Kaardi lisandmoodul toetab neid rikastumiseid: [Microsofti](enrichment-microsoft.md) [pakutavad kaubamärgid, Microsofti pakutavad huvid](enrichment-microsoft.md) ja Microsofti esitatud [Office'i kaasamise](enrichment-office.md) andmed.
   - **Kontaktide juhtelement**: Vaja on semantilise kontaktitüübi olemi määratlust.
   - **Ajaskaala juhtelement**: Nõuab [konfigureeritud tegevusi](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Kliendikaardi lisandmooduli installimine
 
-Kliendikaardi lisandmoodul on rakenduste Customer engagement lahendus Dynamics 365-s. Lahenduse installimiseks minge AppSource ja otsige **Dynamicsi kliendikaarti**. Valige [AppSource kliendikaardi lisandmoodul](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) ja valige **Hangi see kohe**.
+Kliendikaardi lisandmoodul on rakenduste Customer engagement lahendus Dynamics 365-s. Lahenduse installimiseks avage AppSource ja otsige jaotist **Dynamicsi kliendikaart**. Valige [AppSource'is kliendikaardi lisandmoodul](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) ja valige **Hangi kohe**.
 
 Lahenduse installimiseks võib olla vajalik rakenduse Dynamics 365 administraatori mandaadiga sisse logida. Lahenduse installimiseks teie keskkonda võib kuluda pisut aega.
 
@@ -48,7 +48,7 @@ Lahenduse installimiseks võib olla vajalik rakenduse Dynamics 365 administraato
 
 1. Administraatorina minge teenuses Dynamics 365 jaotisesse **Sätted** ja valige **Lahendused**.
 
-1. Valige **Dynamics 365 Customer Insights** **kliendikaardi lisandmooduli (eelvaade) lahenduse jaoks link Kuvatav** nimi.
+1. Valige link **Kuvatav nimi** lahendusele **Dynamics 365 Customer Insightsi kliendikaardi lisandmoodul (eelvaade)**.
 
    > [!div class="mx-imgBorder"]
    > ![Vali kuvanimi.](media/select-display-name.png "Valige kuvatav nimi.")

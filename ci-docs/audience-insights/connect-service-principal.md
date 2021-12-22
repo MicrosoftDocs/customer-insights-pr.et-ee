@@ -1,7 +1,7 @@
 ---
 title: Ühendu Azure Data Lake Storage kontoga teenuse subjekti abil
 description: Kasutage Azure'i teenuse subjekti oma andmetega ühenduse loomiseks.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645167"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900253"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Ühendu Azure Data Lake Storage kontoga Azure teenuse subjekti abil
 
-Automatiseeritud tööriistad, mis kasutavad Azure'i teenuseid, peaksid alati omama piiratud õigusi. Selleks et rakendused ei saaks logida sisse kõikide õigustega kasutajana, pakub Azure teenusesubjekte. Lugege edasi, kuidas Dynamics 365 Customer Insights Azure Data Lake Storage kontoga ühenduda kasutades mäluruumi konto võtmete asemel Azure'i teenuse subjekti. 
+Selles artiklis käsitletakse, kuidas kontoga ühenduse Dynamics 365 Customer Insights Azure Data Lake Storage luua, kasutades salvestusruumikonto võtmete asemel Azure'i teenusedirektorit. 
 
-Teenuse subjekti abil saate turvaliselt [lisada või redigeerida ühisandmemudeli kausta andmeallikas](connect-common-data-model.md) või [luua või värskendada keskkonda](create-environment.md).
+Automatiseeritud tööriistad, mis kasutavad Azure'i teenuseid, peaksid alati omama piiratud õigusi. Selleks et rakendused ei saaks logida sisse kõikide õigustega kasutajana, pakub Azure teenusesubjekte. Teenuse põhijuhtide abil saate [ühisandmete mudeli kausta turvaliselt lisada või redigeerida andmeallikas](connect-common-data-model.md) või [luua või värskendada keskkonda](create-environment.md).
 
 > [!IMPORTANT]
 > - Teenuse subjekti kasutaval Data Lake Storage kontol peab olema [lubatud hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace).
-> - Teenusesubjekti loomiseks on teil vaja oma Azure'i tellimuse administraatoriõigusi.
+> - Teenuse põhiteenuse loomiseks on vaja Azure'i tellimuse administraatoriõigusi.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Azure'i teenuse subjekti loomine Customer Insightsi abil
 
-Enne uue teenusepõhimõtte loomist vaatajaskonna statistika või kaasamisstatistika jaoks kontrollige, kas see on teie organisatsioonis juba olemas.
+Enne Customer Insightsi uue hooldusdirektori loomist kontrollige, kas see on teie asutuses juba olemas.
 
 ### <a name="look-for-an-existing-service-principal"></a>Olemasoleva teenusesubjekti otsimine
 

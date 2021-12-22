@@ -1,7 +1,7 @@
 ---
 title: Andmeallikate kasutamine andmete valmendamiseks
 description: Vaadake, kuidas eri allikatest andmeid importida.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,36 +10,39 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732137"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900337"
 ---
 # <a name="data-sources-overview"></a>Andmeallikate ülevaade
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Publiku taipamise võimalus Dynamics 365 Customer Insights ühendub laiast allikatest pärinevate andmetega. Andmeallikaga ühendamist nimetatakse sageli *andmete sisestamiseks*. Pärast andmete sisestamist saate need [ühendada](data-unification.md) ja nendega toiminguid teha.
+Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioon ühendub andmetega, mis on pärit paljudest allikatest. Andmeallikaga ühendamist nimetatakse sageli *andmete sisestamiseks*. Pärast andmete sisestamist saate need [ühendada](data-unification.md) ja nendega toiminguid teha.
 
 ## <a name="add-a-data-source"></a>Lisa andmeallikas
 
-Vaadake üksikasjalikke artikleid selle kohta, kuidas andmeallikat lisada, olenevalt sellest, millise suvandi te valite.
+Sõltuvalt valitud valikust vaadake üksikasjalikke artikleid andmeallikas lisamiseks.
 
-Saate andmeallikat lisada kolmel peamisel viisil.
+Saate lisada järgmisi andmeallikaid.
 
-- [Kümnete Power Query konnektorite kaudu](connect-power-query.md)
-- [Common Data Modeli kaustast](connect-common-data-model.md)
-- [Oma Microsoft Dataverse järvest](connect-dataverse-managed-lake.md)
+- [Power Query konnektorid](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse järv](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Kui kasutate prooviversiooni, sisaldab impordimeetodite jaotis **Customer Insightsi andmeteegi** suvandit. Valige see suvand, et valida näidisandmestik, mis on saadaval erinevatele tööstusharudele. Lisateavet leiate [Dynamics 365 Customer Insights teemast Kohtuprotsess](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Andmete lisamine asutusesisene andmeallikatest
 
-Microsoft Power Platform andmevoogude põhjal toetatakse asutusesisene andmeallikate andmete allaneelamist vaatajaskonna ülevaates. Andmevoogusid saab lubada kliendiülevaates, [pakkudes keskkonna seadistamisel Microsoft Dataverse keskkonna URL-i.](create-environment.md)
+Kohalike andmeallikate andmete sisestamine vaatajaskonna statistikas toetub Microsoft Power Platform andmevoogudele. Saate lubada Andmevood Customer [Insightsis, pakkudes Microsoft Dataverse keskkonna seadistamisel keskkonna URL-i.](create-environment.md)
 
-Andmeallikad, mis luuakse pärast Dataverse keskkonna seostamist kliendiülevaatega, kasutavad [vaikimisi Power Platform andmevooge.](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Eemaldage ja looge uuesti andmeallikad, mis olid olemas enne Dataverse keskkonna [seostamist asutusesisene andmelüüside kasutamiseks](/data-integration/gateway/service-gateway-app).
+Andmeallikad, mis luuakse pärast keskkonna seostamist Dataverse Customer Insightsiga, kasutavad [Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) vaikimisi andmevooge. Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Saate eemaldada ja taasluua andmeallikad, mis eksisteerisid enne Dataverse keskkonna [seostamist asutusesisene andmelüüside abil](/data-integration/gateway/service-gateway-app).
 
-Olemasoleva Power BI või Power Apps keskkonna andmelüüsid on nähtavad ja saate neid klientide ülevaates uuesti kasutada. Andmeallikate lehel kuvatakse lingid, mis lähevad Microsoft Power Platform keskkonda, kus saate asutusesisene andmelüüse vaadata ja konfigureerida.
+Andmevõrgud olemasolevast Power BI või Power Apps keskkonnast on nähtavad ja saate neid uuesti kasutada jaotises Customer Insights. Andmeallikate lehel kuvatakse lingid, et minna Microsoft Power Platform keskkonda, kus saate vaadata ja konfigureerida asutusesiseseid andmevõrke.
 
 ## <a name="review-ingested-data"></a>Sisestatud andmete läbivaatus
 

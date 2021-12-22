@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770112"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884211"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Kliendiprofiilide rikastamine (eelvaade)
 
@@ -34,7 +34,7 @@ Vahekaardil **Avastage** leiate kõik toetatud rikastussuvandid.
 - [Brändid](enrichment-microsoft.md), mida pakub Microsoft
 - [Omandiõigused](enrichment-microsoft.md), mida pakub Microsoft
 - [Microsofti pakutavad täiustatud](enrichment-enhanced-addresses.md) aadressid 
-- [Demograafilisi andmeid](enrichment-experian.md) esitab Experian
+- [Demograafiline teave](enrichment-experian.md), mida pakub Experian
 - [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu 
 - Microsofti [Azure Maps](enrichment-azure-maps.md)
 
@@ -42,10 +42,11 @@ Vahekaardil **Avastage** leiate kõik toetatud rikastussuvandid.
 
 - [Ettevõtte andmeid](enrichment-leadspace.md) esitab Leadspace
 - [Microsofti pakutavad täiustatud](enrichment-enhanced-addresses.md) aadressid 
-- [Microsofti esitatud täiustatud ettevõtteandmed](enrichment-enhanced-company-data.md)
+- [Microsofti esitatud täiustatud ettevõtte andmed](enrichment-enhanced-company-data.md)
 - [Asukohaandmeid](enrichment-here.md) esitab HERE Technologies 
 - [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu 
 - Microsofti [Azure Maps](enrichment-azure-maps.md)
+- [Microsofti esitatud konto kaasamise andmed](enrichment-office.md)
 
 ---
 
@@ -77,7 +78,7 @@ Rikastatav olem määratakse rikastamise konfiguratsiooni käigus, mis võimalda
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Rikastamisprotsessi edenemise kuvamine
 
-Saate otsida rikastamise töötlemise üksikasju (sh olekut ja võimalikke probleeme värskendamise ajal või pärast värskendamist). Aru saada, millised protsessid on seotud rikastamise värskendamisega ja kui kaua kulus protsesside käivitamiseks. Rikastamise olekut toetavad Experian, Leadspace, HERE Technologies, SFTP Import ja Azure Maps.
+Saate otsida rikastamise töötlemise üksikasju (sh olekut ja võimalikke probleeme värskendamise ajal või pärast värskendamist). Aru saada, millised protsessid on seotud rikastamise värskendamisega ja kui kaua kulus protsesside käivitamiseks. Rikastamise olekut toetatakse Experian, Leadspace-i, HERE-tehnoloogiate, SFTP Impordi ja Azure Mapsi puhul.
 
 Rikastamise oleku kuvamine
 

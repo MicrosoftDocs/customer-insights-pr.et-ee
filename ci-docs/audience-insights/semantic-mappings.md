@@ -1,7 +1,7 @@
 ---
 title: Semantilised vastendused (Eelversioon)
 description: Ülevaade semantilisest vastendusest ja kuidas neid kasutada.
-ms.date: 11/01/2021
+ms.date: 12/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7731938"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881825"
 ---
-# <a name="semantic-mappings"></a>Semantilised vastendused
+# <a name="semantic-mappings-preview"></a>Semantilised vastendused (Eelversioon)
 
 Semantilised vastendused lasevad teil vastendada oma mittetegevuseandmed eelmääratletud skeemidega. Need skeemid aitavad sihtrühma ülevaadetel oma andmeatribuute paremini mõista. Semantiline vastendamine ja esitatud andmed võimaldavad publiku ülevaadetes uusi ülevaateid ja funktsioone. Tegevuseandmete vastendamiseks skeemidega vaadake [tegevuste](activities.md) dokumentatsioon üle.
 
@@ -91,5 +91,40 @@ Väljal **Andmed** > **Semantilised vastendusel (eelversioon)** saate vaadata k�
 
 - **Kustuta**: Avab dialoogi, mis kinnitab valitud semantilise vastenduse kustutamist. Korraga saate kustutada ka mitu semantilist vastendust, valides semantilised vastendused ja kustutamise ikooni. Valige käsk **Kustuta**, et kinnitada kustutamine.
 
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Kontaktitaseme tegevuste loomiseks kasutage ContactProfile semantilist olemi vastendust
+
+Pärast *ContactProfile* semantilise olemi vastenduse loomist saate jäädvustada kontaktide tegevusi. See võimaldab teil näha tegevuse ajaskaalal ettevõtte, mille kontakt vastutas iga tegevuse eest. Enamik juhiseid järgib tüüpilist tegevuste vastendamise konfiguratsiooni.
+
+   > [!NOTE]
+   > Kontaktitaseme tegevuste toimimiseks peavad teil olema nii AccountID kui **ka** **ContactID** atribuudid iga tegevuseandmete kirje kohta.
+
+1. [Määratlege *ContactProfile* semantilise olemi vastendamine.](#define-a-contactprofile-semantic-entity-mapping) Ja käivitage semantiline kaardistamine.
+
+1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Tegevused**.
+
+1. Uue tegevuse loomiseks valige **Lisa** tegevus.
+
+1. Nimetage tegevus, valige lähtetegevuse olem ja valige tegevuse olemi primaarvõti.
+
+1. Looge **jaotises Seosed** kaudne seos oma tegevuse lähteandmete ja kontode vahel, kasutades oma kontaktandmeid vahendajana. Lisateavet vt [otse- ja kaudsete seoste teed](relationships.md#relationship-paths).
+   - Ostuga seotud tegevuse *näidissuhe*:
+      - **Ostud Lähtetegevuse andmed** > **Kontaktandmed** atribuudil **ContactID**
+      - **Kontaktandmete** > **konto andmed** atribuudi **kontoID kohta**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Näidissuhte häälestus.":::
+
+1. Pärast seoste seadistamist valige **Edasi ja viige tegevuse** vastendamise konfiguratsioon lõpule. Tegevuse loomise üksikasjalikke samme leiate teemast [Tegevuse määratlemine](activities.md).
+
+1. Käivitage oma tegevuste vastended.
+
+1. Teie kontaktitaseme tegevused on nüüd nähtavad teie kliendi ajaskaalal.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Lõpptulemus pärast kontaktitegevuste konfigureerimist":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Kontaktitaseme tegevuse ajaskaala filtreerimine
+
+Pärast kontaktitaseme tegevuste vastendamise konfigureerimist ja selle käivitamist värskendatakse teie klientide tegevuse ajaskaalat. See sisaldab nende ID-sid või nimesid, olenevalt teie *ContactProfile* konfiguratsioonist, tegevuste jaoks, mida nad tegutsesid. Saate filtreerida tegevusi ajaskaalal olevate kontaktide kaupa, et näha konkreetseid teid huvitatud kontakte. Lisaks näete kõiki tegevusi, mis pole konkreetsele kontaktile määratud, valides **Kontaktiga vastendusse mitte vastetuna tegevused**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Kontaktitaseme tegevuste jaoks saadaolevad filtreerimissuvandid.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

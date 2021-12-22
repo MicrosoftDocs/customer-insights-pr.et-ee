@@ -1,5 +1,5 @@
 ---
-title: Customer Insightsi andmete eksportimine SFTP hostidesse
+title: Customer Insightsi andmete eksportimine SFTP hostimistesse (video)
 description: Lugege, kuidas konfigureerida ühendust ja eksportida SFTP asukohta.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a54025588945e4db6ab800dca034520b5f08d49b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 568e5826175417175bd09435d697031f0ab64223
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673911"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927552"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Segmentide ja muude andmete eksportimine SFTPsse (eelversioon)
 
@@ -28,6 +28,7 @@ Kliendiandmete kasutamiseks muude tootjate rakendustes eksportige need turvalise
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
+- Tulemüüride taga asuvaid SFTP sihtkohti praegu ei toetata. 
 - Ekspordi käitusaeg sõltub teie süsteemi jõudlusest. Soovitame teie serveri minimaalseks konfiguratsiooniks kahte protsessori tuuma ja 1 GB mälu. 
 - Kuni 100 miljoni kliendiprofiiliga olemite eksportimiseks võib kuluda 90 minutit, kui kasutate soovitatud minimaalset kahe protsessori tuuma ja 1 GB mäluga konfiguratsiooni. 
 

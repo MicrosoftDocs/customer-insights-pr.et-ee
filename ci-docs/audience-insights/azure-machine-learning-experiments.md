@@ -1,7 +1,7 @@
 ---
 title: Azure'i masinõppe eksperimendid
 description: Kasutage Azure'i masinõppel põhinevaid mudeleid rakenduses Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033167"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881733"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Kasutage Azure'i masinõppel põhinevaid mudeleid
 
-Dynamics 365 Customer Insightsis olevad koondatud andmed on allikaks masinõppemudelite loomisele, mis võivad luua täiendavaid äriülevaateid. Customer Insights integreerub masinõppe stuudio (klassikaline) ja Azure'i masinõppega, et saaksite kasutada omaenda kohandatud mudeleid. Teemast [Masinõppe stuudio (klassikaline) eksperimendid](machine-learning-studio-experiments.md) leiate näited eksperimentide kohta, mis on loodud masinõppe stuudios (klassikaline). 
+Dynamics 365 Customer Insightsis olevad koondatud andmed on allikaks masinõppemudelite loomisele, mis võivad luua täiendavaid äriülevaateid. Customer Insights integreerib Azure'i masinõppe oma kohandatud mudelite kasutamiseks.
 
 ## <a name="prerequisites"></a>Eeltingimused
 
@@ -35,7 +35,7 @@ Dynamics 365 Customer Insightsis olevad koondatud andmed on allikaks masinõppem
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Azure'i masinõppe kujundajaga töötamine
 
-Azure'i masinõppe kujundaja on visuaalne lõuend, kuhu saate lohistada andmekogumeid ja mooduleid, nii nagu masinõppe stuudioski (klassikaline). Kujundajas loodud partiikonveierit saab integreerida Customer Insightsi, kui need on nii konfigureeritud. 
+Azure Masinõpe disainer pakub visuaalset lõuendit, kus saate andmekogumeid ja mooduleid lohistada. Kujundajas loodud partiikonveierit saab integreerida Customer Insightsi, kui need on nii konfigureeritud. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Azure'i masinõppe SDK-ga töötamine
 

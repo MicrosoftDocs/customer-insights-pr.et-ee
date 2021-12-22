@@ -1,7 +1,7 @@
 ---
-title: Andmete valmendamine Power Query konnektori kaudu
+title: Andmete sissemaksmine Power Query-liidese kaudu (Video)
 description: Power Query-l põhinevate andmeallikate konnektorid.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732213"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903835"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Power Query andmeallikaga ühendamine
 
-Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku neist konnektoritest toetab Dynamics 365 Customer Insights. Power Query konnektorite põhjal andmeallikate lisamine järgib üldjoontes järgmises jaotises kirjeldatud juhiseid. Olenevalt kasutatavast konnektorist on siiski vaja erinevat teavet. Lisateavet üksikute konnektorite kohta leiate dokumentatsioonist [Power Query konnektorite viide](/power-query/connectors/).
+Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku nendest konnektoritest toetab Dynamics 365 Customer Insights. 
+
+Andmeallikate lisamine Power Query konnektorite põhjal järgib tavaliselt selles jaotises kirjeldatud juhiseid. Olenevalt kasutatavast konnektorist on siiski vaja erinevat teavet. Lisateavet leiate Power Query konnektori viite üksikute konnektorite [dokumentatsioonist](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku n
 
 1. Valige **Lisa andmeallikas**.
 
-1. Valige meetod **Andmete importimine** ja valige **Edasi**.
+1. Valige **Microsoft Power Query, seejärel valige** **Edasi**.
 
-1. Sisestage andmeallikale **Nimi** ja valige andmeallika loomiseks nupp **Edasi**. Nime juhised: 
-   - peab algama tähega;
-   - kasutage ainult tähti ja numbreid; erimärkide ja tühikute sisestamine pole lubatud;
-   - kasutage 3–64 tähemärki.
+1. Sisestage andmeallikale **Nimi** ja valige andmeallika loomiseks nupp **Edasi**.
 
-1. Valige üks [saadaolevatest konnektoritest](#available-power-query-data-sources). Selles näites valime **Teksti/CSV** konnektori.
+1. Valige üks [saadaolevatest konnektoritest](#available-power-query-data-sources). Selles näites valime **teksti/CSV** konnektori.
 
 1. Sisestage valitud konnektorile jaotises **Konnektori sätted** nõutavad üksikasjad ja valige andmete üle vaatamiseks nupp **Edasi**.
 
@@ -50,7 +49,7 @@ Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku n
 
 1. Saate lisada oma andmeallikas täiendavaid olemeid, valides **Hangi andmed** dialoogis **Päringute redigeerimise**.
 
-   Need teisendused on väga soovitatavad.
+   Soovitame kasutada järgmisi teisendusi.
 
    - Kui valmendate andmeid CSV-failist, siis esimene rida sisaldab sageli päiseid. Avage **Tabeli teisendamine** ja valige suvand **Kasuta päiseid esimese reana**.
    - Veenduge, et andmetüüp oleks õigesti seadistatud.
@@ -61,7 +60,7 @@ Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku n
 
 ## <a name="available-power-query-data-sources"></a>Saadaolevad Power Query andmeallikad
 
-Ajakohase Customer Insightsi imporditavate konnektorite loendi leiate jaotisest [Power Query konnektorite viide](/power-query/connectors/). 
+Vaadake [Power Query konnektorite](/power-query/connectors/) loendit, mida saate kasutada andmete importimiseks Customer Insightsi. 
 
 Konnektorid, millel on märgitud veerg **Customer Insights (andmevood)**, on saadaval Power Query põhjal uute andmeallikate loomiseks. Vaadake üle kindla konnektori dokumendid, et saada lisateavet selle eeltingimuste, piirangute ja muude üksikasjade kohta.
 
@@ -70,7 +69,7 @@ Konnektorid, millel on märgitud veerg **Customer Insights (andmevood)**, on saa
 > [!NOTE]
 > Ei pruugi olla võimalik muuta andmeallikaid, mis on samaaegselt kasutusel mõnes rakenduse protsessis (nt *segmentimine*, *vaste* või *ühinemine*). 
 >
-> Lehe **Sätted** abil saate jälgida iga aktiivse protsessi kulgu. Protsessi lõpuleviimisel saate naasta **Andmeallikate** lehele ja teha soovitud muudatused.
+> Lehel **Sätted** saate jälgida iga aktiivse protsessi edenemist. Protsessi lõpuleviimisel saate naasta **Andmeallikate** lehele ja teha soovitud muudatused.
 
 1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Andmeallikad**.
 

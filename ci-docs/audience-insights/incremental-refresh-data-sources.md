@@ -1,7 +1,7 @@
 ---
 title: Power Query põhiste andmeallikate astmeline värskendamine
 description: Suurte Power Query põhiste andmeallikate uute ja värskendatud andmete värskendamine.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
-ms.translationtype: HT
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377829"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900250"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Power Query põhiste andmeallikate astmeline värskendamine
+
+Selles artiklis käsitletakse andmeallikate järkjärgulist värskendamist Power Query põhjal.
 
 Andmeallikate astmelisel värskendamisel on järgmised eelised.
 
@@ -30,9 +32,9 @@ Sihtrühmaülevaated võimaldavad värskendada astmeliselt Power Query kaudu imp
 
 1. [Looge Power Queryl põhinev uus andmeallikas](connect-power-query.md).
 
-1. Andke andmeallikale nimi.
+1. Sisestage **andmeallikas** nimi.
 
-1. Valige andmeallikas, mis toetab astmelist värskendamist (nt Azure SQL-i andmebaas).
+1. Valige andmeallikas, mis toetab järkjärgulist värskendamist (nt [Azure'i SQL-andmebaas)](/power-query/connectors/azuresqldatabase).
 
 1. Valige olemid või tabelid, mida soovite sisestada.
 

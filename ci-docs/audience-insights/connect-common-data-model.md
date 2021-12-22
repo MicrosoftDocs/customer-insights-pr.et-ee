@@ -1,7 +1,7 @@
 ---
 title: Common Data Modeli andmete ühendamine Azure Data Lake'i kontoga
 description: Töötage Common Data Modeli andmete kallal Azure Data Lake Storage'i abil.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033121"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900192"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Common Data Modeli kausta ühendamine Azure Data Lake’i kontot kasutades
 
@@ -30,7 +30,7 @@ See artikkel annab teavet selle kohta, kuidas valmendada andmeid Common Data Mod
 
 - Azure Data Lake, millega soovite ühenduda ja millest andmeid valmendada, peab olema samas Azure'i regioonis nagu Dynamics 365 Customer Insightsi keskkond. Ühendused Common Data Modeli kausta ja muus Azure'i regioonis oleva andmejärve vahel pole toetatud. Selleks et uurida välja keskkonna Azure'i regioon, minge sihtrühmaülevaadetes jaotisse **Haldus** > **Süsteem** > **Teave**.
 
-- Võrguteenustes talletatud andmed võivad olla talletatud mõnes muus kohas, mis erineb kohast, kus Dynamics 365 Customer Insightsis andmeid töödeldakse või talletatakse. Kui impordite võrguteenustes talletatavaid andmeid või ühendate konto teenusega, siis nõustute, et andmeid võidakse transportida ja salvestada rakenduses Dynamics 365 Customer Insights. [Lisateavet leiate Microsofti usalduskeskusest.](https://www.microsoft.com/trust-center)
+- Võrguteenustesse salvestatud andmeid võidakse talletada muus kohas kui seal, kus andmeid töödeldakse või talletatakse Dynamics 365 Customer Insights.Veebiteenustes talletatud andmete importimisel või nendega ühenduse loomisel nõustute, et andmeid saab edastada ja Dynamics 365 Customer Insights talletada.  [Lisateavet leiate Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Loo ühendus Common Data Modeli kaustaga
 
@@ -38,12 +38,11 @@ See artikkel annab teavet selle kohta, kuidas valmendada andmeid Common Data Mod
 
 1. Valige **Lisa andmeallikas**.
 
-1. Valige **Loo ühendus Common Data Modeli kaustaga**, sisestage andmeallikale **Nimi** ja valige **Edasi**. Nime juhised: 
-   - peab algama tähega;
-   - kasutage ainult tähti ja numbreid; erimärkide ja tühikute sisestamine pole lubatud;
-   - kasutage 3–64 tähemärki.
+1. Valige **Azure'i andmejärve talletus**, sisestage andmeallikas nimi ja seejärel **valige** **Edasi**.
 
-1. Saate autentimiseks valida ressursipõhise ja tellimusepõhise valiku vahel. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). Sisestage **konteineri** teave ja valige **Edasi**.
+   - Kui küsitakse, valige üks näidisandmestikest, mis on seotud teie valdkonnaga, seejärel valige **Edasi**. 
+
+1. Saate autentimiseks valida ressursipõhise ja tellimusepõhise valiku vahel. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). Sisestage **serveri aadress, valige logi sisse, seejärel valige Edasi** **·** **·**.
    > [!div class="mx-imgBorder"]
    > ![Azure Data Lake'i uute ühenduse üksikasjade sisestamise dialoogiboks.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ See artikkel annab teavet selle kohta, kuidas valmendada andmeid Common Data Mod
    > [!NOTE]
    > Keskkonnas muu andmeallikaga seotud faile model.json või manifest.json ei kuvata loendis.
 
-1. Saadaolevate olemite loendi leiate valitud failist model.json või manifest.json. Saate vaadata üle ja valida saadaolevate olemite loendist ning valida suvandi **Salvesta**. Kõik valitud olemid valmendatakse uuest andmeallikast.
+1. Valitud failis model.json või manifest.json näete saadaolevate olemite loendit. Vaadake saadaolevate olemite loendist üle ja valige sealt, seejärel valige **Salvesta**. Kõik valitud olemid valmendatakse uuest andmeallikast.
    > [!div class="mx-imgBorder"]
    > ![Dialoogiboks, kus on esitatud model.json failist saadud olemite loetelu.](media/review-entities.png)
 
-8. Andmete profiilimise lubamiseks valige soovitud andmeüksused ja valige **Salvesta**. Andmete profiilimine teeb võimalikuks analüüsi ja palju muud. Saate valida kogu olemi, mis valib olemi kõik atribuudid, või valida oma soovi järgi kindlad atribuudid. Vaikimisi pole olemeid andmete profiilimiseks lubatud.
+8. Saate määrata, millised andmeolemid soovite andmete profileerimise lubada, seejärel valige **Salvesta**. Andmete profiilimine teeb võimalikuks analüüsi ja palju muud. Saate valida kogu olemi, mis valib olemi kõik atribuudid, või valida oma soovi järgi kindlad atribuudid. Vaikimisi pole olemeid andmete profiilimiseks lubatud.
    > [!div class="mx-imgBorder"]
    > ![Andmete profiilimist kuvav dialoogiboks.](media/dataprofiling-entities.png)
 

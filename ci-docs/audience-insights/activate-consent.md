@@ -1,7 +1,7 @@
 ---
 title: Segmentide nõusolekureeglite aktiveerimine
-description: Nõusolekuandmete linkimiseks ja nõusolekukontrolli aktiveerimiseks vaatajaskonna ülevaates tehke järgmist. Administraator saab keelata ka nõusolekukontrollid.
-ms.date: 11/03/2021
+description: Nõusolekuandmete linkimiseks ja nõusolekukontrollide aktiveerimiseks vaatajaskonna ülevaates järgige neid juhiseid. Administraator võib keelata ka nõusolekukontrollid.
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,43 +9,46 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790771"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884069"
 ---
 # <a name="activate-consent-rules"></a>Nõusolekureeglite aktiveerimine
 
-[Nõusolekukeskus (eelvaade)](../consent-management/overview.md) aitab teil ühtlustada erinevatest allikatest pärinevaid nõusolekuandmeid. Nõusoleku vaikekontrollide rakendamiseks kasutage ühtse *·* nõusoleku olemit. Pärast nõusolekuandmete importimist nõusolekukeskusesse ja andmete reeglite konfigureerimist *·* sünkroonitakse nõusolekuolem automaatselt sihtrühma ülevaadetega.
+[Nõusolekukeskus (eelvaade)](../consent-management/overview.md) aitab teil ühtlustada eri allikatest pärinevaid nõusolekuandmeid. Nõusoleku vaikekontrollide rakendamiseks kasutage ühtset *nõusoleku* olemit. Pärast nõusolekuandmete importimist nõusolekukeskusesse ja andmete reeglite konfigureerimist *sünkroonitakse* olem Nõusoleku olem automaatselt vaatajaskonna statistikaga.
 
 ## <a name="enable-consent-checks"></a>Nõusolekukontrollide lubamine
 
-Nõusolekukeskusesse (eelvaade) imporditud nõusolekuandmete ja seadistatud reeglite abil saate nõusolekukontrollid lubada. 
+Nõusolekukeskusesse (eelvaade) imporditud nõusolekuandmete ja seadistatud reeglite abil saate lubada nõusolekukontrolli. 
 
-:::image type="content" source="../consent-management/media/enable-consent-checks-audience-insights.png" alt-text="Publiku ülevaatesätete vahekaart Nõusolek aktiveeritud nõusolekuandmetega.":::
-
-1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Süsteem**.
-
-1. Valige **vahekaart Nõusolek** (eelvaade).
-
-1. Seadke **jaotises Nõusolekukontrollide** lubamine kõigi lubatavate alade tumblerlüliti **·** väärtuseks Sees.
-
-1. **·** Kindlas segmendis jõustatud nõusoleku vaikekontrollide eemaldamiseks märkige ruut Luba nõusoleku vaikereeglite alistamine. 
-
-1. Valige rippmenüüst koht, kus soovite alistamised lubada.     
-
-1. Valige **jaotises Kliendiprofiilidega nõusoleku linkimine** atribuut, mida kasutatakse identifikaatorina nõusolekuandmete linkimiseks kliendiandmetega. Tõenäoliselt on see telefoninumber või e-posti aadress. 
-
-1. Sätete rakendamiseks klõpsake nuppu **·** Salvesta.
-
-## <a name="disable-consent-checks"></a>Keela nõusoleku kontroll
-
-Nõusolekuandmete kasutamise lõpetamiseks vaatajaskonna ülevaates peab administraator süsteemisätteid vastavalt värskendama.
+:::image type="content" source="../consent-management/media/enable-consent-checks-audience-insights.png" alt-text="Nõusoleku vahekaart vaatajaskonna ülevaatesätetes koos aktiveeritud nõusolekuandmetega.":::
 
 1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Süsteem**.
 
-1. Valige **vahekaart Nõusolek** (eelvaade).
+1. Valige **vahekaart Nõusolek (eelvaade).**
 
-1. Seadke **jaotises Nõusolekukontrollide** lubamine tumblernuhv . **·**
+1. **Määrake jaotises Nõusolekukontrollide lubamine** kõigi lubatavate alade tumblernupp **Sees**.
+
+1. Märkige **ruut Luba vaikimisi nõusolekureeglite** alistamine, et eemaldada konkreetsele segmendile jõustatud vaikimisi nõusolekukontrollid. 
+
+1. Valige rippmenüüst, kus soovite alistamise lubada.     
+
+1. Valige **jaotises Kliendiprofiilidega nõusoleku linkimine** atribuut, mida kasutatakse identifikaatorina nõusolekuandmete linkimiseks kliendiandmetega. See on tõenäoliselt telefoninumber või e-posti aadress. 
+
+1. Sätete rakendamiseks valige **Salvesta**.
+
+## <a name="disable-consent-checks"></a>Nõusolekukontrollide keelamine
+
+Nõusolekuandmete kasutamise lõpetamiseks vaatajaskonna statistikas peab administraator süsteemi sätteid vastavalt värskendama.
+
+1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Süsteem**.
+
+1. Valige **vahekaart Nõusolek (eelvaade).**
+
+1. **Määrake jaotises Nõusolekukontrollide** lubamine tumblernupp **välja**.
+
+> [!TIP]
+> Nõusolekuhaldusvõime kasutamise lõpetamise kohta leiate lisateavet [teemast Süsteemisätted nõusolekukeskuses (eelvaade).](../consent-management/system-settings.md)

@@ -1,7 +1,7 @@
 ---
 title: Keskkondade loomine ja haldamine
 description: Siit leiate teavet selle kohta, kuidas teenuse kasutamiseks registreeruda ja kuidas keskkondasid hallata.
-ms.date: 11/12/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799631"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892379"
 ---
 # <a name="manage-environments"></a>Keskkondade haldamine
 
@@ -40,18 +40,21 @@ Saate muuta olemasolevate keskkondade teatud üksikasju.
 
 Keskkonna sätete kohta leiate lisateavet teemast [Uue keskkonna loomine](create-environment.md).
 
-## <a name="connect-to-microsoft-dataverse"></a>Ühenduse loomine Microsoft Dataverse
+## <a name="connect-to-microsoft-dataverse"></a>Microsoft Dataverse’iga ühenduse loomine
    
-**Microsoft Dataverse samm võimaldab teil ühendada Customer** Insightsi oma Dataverse keskkonnaga.
+**Microsoft Dataverse** etapp lubab teil Customer Insights'i oma Dataverse keskkonnaga ühendada.
 
-[Väljaminevate prognoos mudelite kasutamiseks](predictions-overview.md#out-of-box-models) konfigureerige andmete jagamine Dataverse. Samuti saate lubada andmete allaneelamise asutusesisene andmeallikatest, pakkudes Microsoft Dataverse keskkonna URL-i, mida teie asutus haldab. Valige **Luba andmete jagamine,** et jagada Customer Insightsi väljundandmeid Dataverse'i hallatava andmejärvega.
+Kui soovite kasutada [karbist välja ennustamise mudeleid](predictions-overview.md#out-of-box-models), siis konfigureerige andmete ühiskasutus rakendusega Dataverse. Võite ka lubada asutusesisestest allikatest pärinevad andmed, pakkudes teie Microsoft Dataverse organisatsiooni hallatava keskkonna URL-i. Valige suvand **Luba andmete ühiskasutus**, et jagada Customer Insights väljundandmeid Dataverse hallatava Data Lake'iga.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfiguratsioonisuvandid andmete jagamise lubamiseks Microsoft Dataverse.":::
+> [!IMPORTANT]
+> Customer Insights ja Dataverse peab andmete jagamise lubamiseks olema samas piirkonnas.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigureerimissuvandid andmete jagamise lubamiseks Microsoft Dataverse abil.":::
 
 > [!NOTE]
 > Customer Insights ei toeta järgmisi andmete jagamise stsenaariume:
-> - Kui salvestate kõik andmed oma Azure Data Lake Storage, ei saa te andmejagamist Dataverse'i hallatava andmejärvega lubada.
-> - Kui lubate andmete jagamise Dataverse, ei saa te [olemis luua ennustatud või puuduvaid](predictions.md) väärtusi.
+> - Kui salvestate kõik andmed enda Azure Data Lake Storage abil, siis ei saa te lubada andmete jagamist Dataverse hallatava Data Lake-iga.
+> - Kui lubate andmete ühiskasutuse Dataverse-ga, ei saa te [olemis luua ennustatud ega puuduvad väärtused](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Kopeerige keskkonna konfiguratsioon
 
@@ -81,7 +84,7 @@ Järgnevaid andmeid *ei* kopeerita:
 - Kliendiprofiilid.
 - Andmeallika identimisteave. Peate sisestama identimisteabe iga andmeallika jaoks ja värskendama andmeallikaid käsitsi.
 
-- Andmeallikad kaustast Common Data Model ja Dataverse'i hallatavast andmejärvest. Peate need andmeallikad looma käsitsi sama nimega kui lähtekeskkond.
+- Andmeallikad ühisandmemudeli kaustast ja Dataverse hallatavatest Data Lake-st. Peate need andmeallikad looma käsitsi sama nimega kui lähtekeskkond.
 
 Keskkonna kopeerimisel näete kinnitusteadet, et loodi uus keskkond. Andmeallikate loendi nägemiseks valige suvand **Ava andmeallikad**.
 

@@ -1,7 +1,7 @@
 ---
 title: Uued ja tulevased funktsioonid
 description: Teave uute funktsioonide, täiustuste ja veaparanduste kohta.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,57 +9,69 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753112"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884257"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Mis on uut publiku taipamise võimekuses Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Mis on uut Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis?
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Meil on hea meel teatada uusimatest värskendustest. Selles artiklis võetakse kokku avaliku eelversiooni funktsioonid, üldise kättesaadavuse täiustused ja funktsiooni värskendused. Pikaajaliste funktsiooniplaanide vaatamiseks vaadake [Dynamics 365 ja Power Platform väljalaskeplaane](/dynamics365/release-plans/).
+Meil on hea meel teatada uusimatest värskendustest. Selles artiklis võetakse kokku avaliku eelversiooni funktsioonid, üldise kättesaadavuse täiustused ja funktsiooni värskendused. Pikaajaliste funktsiooni plaane vaadake teemast [Dynamics 365 ja Power Platformi väljaandeplaanid](/dynamics365/release-plans/).
 
 Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha funktsioone enne teisi. Kui see pole teisiti määratud teisiti, ei pea te tegema mingeid toiminguid ja värskendame rakendust automaatselt ilma seisakuteta.
 
 > [!TIP]
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="november-2021-updates"></a>2021. aasta novembri värskendused
+
+2021. aasta novembri värskendused sisaldavad uusi funktsioone, jõudluse uuendamist ja veaparandusi.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Segmendi liikmelisus on nüüd saadaval Dataverse
+
+Kliendiprofiilide segmendi liikmelisuse teave on nüüd saadaval Dataverse koos kliendiprofiilide ja ülevaadetega. Dynamics 365 tegevusrakendused ja mudelipõhised rakendused saavad neid andmeid kasutada, et otsida konkreetse kliendi segmendi liikmelisuse üksikasju.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Tegevused toetavad ärikontode kontakttaseme üksikasju
+
+Nüüd saate konfigureerida, kuvada ja filtreerida oma ettevõtte ettevõtte tegevuse ajaskaalal kontaktide tegevusi, et paremini mõista, millised kontokontaktid konkreetsetes tegevustes osalesid.
+
 ## <a name="october-2021-updates"></a>2021. aasta oktoobri värskendused
 
-2021. aasta oktoobri värskendused sisaldavad uusi funktsioone, jõudluse täiendusi ja veaparandusi.
+2021. aasta oktoobris sisaldavad värskendused uusi funktsioone, jõudluse uuendamist ja veaparandusi.
 
-### <a name="b-to-b"></a>B-B
+### <a name="b-to-b"></a>B-B-le
 
-Alates 2021. aasta oktoobrist saate kliendiülevaates töötada ärikontode ja nendega seotud kontaktidega. Varem oli rakendus enamasti kohandatud üksiktarbijatele. Lisaks uuele keskkonnatüübile värskendati mitmeid funktsioonivaldkondi, et toetada B-B stsenaariume. Toetatud B-to-B funktsioonide ülevaate leiate teemast [Ärikontodega töötamine vaatajaskonna ülevaates](work-with-business-accounts.md).
+Alates 2021. aasta oktoobrist saate customer Insightsis töötada ärikontode ja nendega seotud kontaktidega. Varem oli rakendus enamasti kohandatud üksiktarbijatele. B-B-stsenaariumide toetamiseks värskendati mitmeid funktsioonialasid, et toetada uut keskkonnatüüpi B-B-stsenaariume. Toetatud B-to-B funktsioonide kohta leiate ülevaate teemast [Ärikontodega töötamine vaatajaskonna ülevaates](work-with-business-accounts.md).
 
-Järgmistes jaotistes tõstetakse esile mõned peamised valdkonnad, mida kohandati ettevõtluskontode ja üksiktarbijate toetamiseks.
+Järgmistes jaotistes tuuakse välja mõned peamised valdkonnad, mida kohandati ettevõtete kontode ja üksiktarbijate toetamiseks.
 
-#### <a name="export-segments-based-on-business-accounts"></a>Ekspordi segmendid ärikontode põhjal
+#### <a name="export-segments-based-on-business-accounts"></a>Ärikontodel põhinevate segmentide eksportimine
 
-Kogu segmendi eksport vaatajaskonna ülevaates on saadaval ärikontode kontekstis. Enamik segmendieksporte [nõuab, et aluseks olevates segmentides projitseeritud lisakonfiguratsioon ja kontaktteave](segment-builder.md#create-a-new-segment) kehtiksid ärikontode puhul. Lisateavet vt teemast [Export segments](export-destinations.md#export-segments).
+Kogu segmendi eksport vaatajaskonna ülevaates on saadaval ärikontode kontekstis. Enamik segmendieksporti nõuab, et aluseks olevates segmentides prognoositud täiendav konfiguratsioon ja [kontaktteave](segment-builder.md#create-a-new-segment) kehtiksid ärikontode jaoks. Lisateavet vt teemast [Export segments](export-destinations.md#export-segments).
 
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>LinkedIn Adsi ekspordi kasutamine koos ettevõttekontodega
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>LinkedIn Adsi ekspordi kasutamine ärikontodega
 
-LinkedIn Adsi eksport on nüüd saadaval kontaktide ja ettevõtte sihtimiseks ärikontode kontekstis. Valides LinkedIni ekspordi peamiseks fookuseks ettevõtte sihtimise, saate eksportida ärikontodele loodud segmente ilma kontaktteabe projektita. Lisateabe saamiseks minge [dokumentidesse LinkedIn Adsi ekspordi](export-linkedin-ads.md) ja kontaktide [sihtimise ja ettevõtte](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting)[sihtimise erinevuse kohta](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+LinkedIn Adsi eksport on nüüd saadaval kontaktide ja ettevõtte sihtimiseks ärikontode kontekstis. Kui valite LinkedIni ekspordi põhifookuseks ettevõtte sihtimise, saate eksportida ärikontodele rajatud segmente ilma kontaktandmeid projitseerida. Lisateabe saamiseks minge [LinkedIn Adsi ekspordi ning](export-linkedin-ads.md) kontaktide [sihtimise](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ja ettevõtte [sihtimise erinevuse kohta](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Ärikontodel ja nende hierarhial põhinevate meetmete loomine
 
-Mõõtude koostaja võimaldab teil luua ettevõttekontode ümber mõõduvõtteid ja kasutada soovi korral hierarhiateavet. Hierarhiateavet kasutatakse mõõduarvutuse ümberarvestamiseks kogu kontol ja kõigil sellega seotud alamkontodel. Näiteks saate luua selliseid meetmeid nagu kogutulu iga nende hierarhia järgi tuvastatud ärikontode grupi jaoks. Lisateavet leiate teemast [Näitajate määratlemine ja haldamine](measures.md).
+Mõõdu koostaja võimaldab teil luua ettevõttekontode ümber meetmeid ja kasutada valikuliselt hierarhiateavet. Hierarhiateavet kasutatakse mõõdu arvutamise arvestuse võtmiseks kontol ja kõigil selle seotud alamkontodel. Näiteks saate luua mõõdud, näiteks kogutulu iga nende hierarhia järgi tuvastatud ärikontode rühma jaoks. Lisateavet leiate teemast [Näitajate määratlemine ja haldamine](measures.md).
 
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Segmentide loomine ettevõttekontode ja nende hierarhia põhjal
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Segmentide loomine ärikontode ja nende hierarhia põhjal
 
-Segmendikoostur võimaldab teil luua ärikontode segmente, mis valikuliselt sisaldavad segmendi iga ettevõtte kontaktteavet. Kui olete kontohierarhia seadistanud, saate segmendi loomisel kasutada kontohierarhia teavet. Lisateavet vt teemast [Create a new segment](segment-builder.md#create-a-new-segment).
+Segmendikoosturil on võimalik luua ärikontode segmente, mis valikuliselt sisaldavad segmendi iga ettevõtte kontaktandmeid. Kui teil on kontohierarhia seadistatud, saate segmendi loomisel kasutada kontohierarhia teavet. Lisateavet vt teemast [Create a new segment](segment-builder.md#create-a-new-segment).
 
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Säilitage oma ettevõtte kontod sügava ülevaatega nende churn tendentsist
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Säilitage oma ärikontod sügavate ülevaadete kohta nende churn-tendentsist
 
-Kliendi churn prognoos mudel toetab nüüd ka ärikontosid. Te saate hinnata mitte ainult konto, vaid ka konto ja toote- või teenusekategooria kombinatsiooni riski, mida nad teilt ostavad. See täiendus aitab teil mõista, kas konto lõpetab suurema tõenäosusega teilt ostmise üldiselt või ainult teatud kaupade või teenuste kategooria jaoks. Selle tehisintellekti mudeli edasiseks kasutamiseks loetletakse ka põhjused, miks konto tõenäoliselt kukub. Lisateavet vt teemast [Transaction churn prognoos (preview)](predict-transactional-churn.md).
+Kliendi churn prognoos mudel toetab nüüd ka ärikontosid. Saate hinnata mitte ainult konto, vaid ka konto ja toote või teenuse kategooria kombinatsiooni, mida nad teilt ostavad. See täiendus aitab teil mõista, kas konto lõpetab tõenäolisemalt teilt üldiselt ostmise või ainult teatud kaupade või teenuste kategooria jaoks. Selle AI-mudeli täiendavaks abistamiseks loetletakse ka põhjused, miks konto tõenäoliselt hakkab. Lisateavet vt [teemast Transaction churn prognoos (preview)](predict-transactional-churn.md).
 
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Ärikonto kontaktide vaatamine kliendivaates
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Ärikonto kontaktide kuvamine kliendivaates
 
-Kui ärikontod on vastendatud seotud kontodega, kuvatakse rakendus Customer Insights need seotud kontaktid kliendi üksikasjade vaate osana. Lisateavet vt teemast [Customer profiles](customer-profiles.md).
+Kui ärikontod on vastetatud seotud kontodega, kuvab rakendus Customer Insights need seotud kontaktid kliendi üksikasjade vaate osana. Lisateavet vt [teemast Customer profiles](customer-profiles.md).
 
 
 ## <a name="september-2021-updates"></a>2021. aasta septembri uuendused
@@ -113,7 +125,7 @@ Kui ärikontod on vastendatud seotud kontodega, kuvatakse rakendus Customer Insi
 
 ### <a name="data-ingestion"></a>Andmete valmendamine
 
-- **Metaandmete või olemi määratluse kuvamine või muutmine andmete manustamisel Azure Data Lake Storage Nüüd saate vaadata** ja redigeerida metaandmeid või olemi määratlust vaatajaskonna ülevaates, kui manustate andmeid oma Azure Data Lake Storage kaustast Common Data Model. See võimalus annab reaalajas tagasisidet, mudeli valideerimist ja tõrkekontrolli. See võimaldab teil sujuvalt redigeerida nii mudelit.json kui manifest.json faili.
+- **Metaandmete või olemite määratluste vaatamine või muutmine andmete manustamise ajal oma Azure Data Lake Storage** andmetest. Saate nüüd metaandmeid või olemi määratlusi vaadata ja redigeerida sihtrühma ülevaadetes, kui manustada oma Azure Data Lake Storage kaustas Common Data Model andmed. See võimalus annab reaalajas tagasisidet, mudeli valideerimist ja tõrkekontrolli. See võimaldab teil sujuvalt redigeerida nii mudelit.json kui manifest.json faili.
 
 ### <a name="extensibility"></a>Laiendatavus
 
@@ -188,7 +200,7 @@ Kui ärikontod on vastendatud seotud kontodega, kuvatakse rakendus Customer Insi
 
 ### <a name="data-ingestion"></a>Andmete valmendamine
 
-- **Asutusesisene andmeallikatega ühenduse loomine Power Platform andmevoogude ja lüüside abil** Meil on hea meel teatada Power Platform andmevoogude ja asutusesisene ühenduvuse eelvaatest kliendiülevaate lüüside abil koos seotud Power Platform või Dataverse keskkond. Kõik uued andmeallikad, mis on loodud lingitud Dataverse keskkonnaga kliendiülevaate keskkonnas, Power Platform andmevooge, mis toovad sisse asutusesisene andmeühenduvuse ning rikkaliku konnektorite ja teisendusvõimaluste komplekti.
+- **Looge ühendus asutusesiseste andmeallikatega, kasutades Power Platform andmevoogu ja väravaid** Meil on hea meel teatada Power Platform andme voogude ja asutusesisese ühenduvuse kasutamise väravate eelvaatest Customer Insights'is, seostatud Power Platform või Dataverse keskkonnaga. Mis tahes uued Customer Insights keskkonnas lingitud Dataverse keskkonnaga loodud andmeallikad on vaikimisi Power Platform andmevood, mis toovad kaasa asutusesisene ja rikkaliku pistikute ja muundamisvõimaluste komplekti.
 
 ### <a name="extensibility"></a>Laiendatavus
 
@@ -202,7 +214,7 @@ Kui ärikontod on vastendatud seotud kontodega, kuvatakse rakendus Customer Insi
    Lisateavet leiate teemast [Eksportimine Constant Contacti](export-constant-contact.md).
 
 - **RollWorks ekspordi segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates RollWorksi. Nüüd saate eksportida segmente Customer Insightsist RollWorksi sihtrühmadele ja kasutada neid B2B-reklaamide lähtejoonena.    
-   Lisateavet leiate teemast [Eksportimine RollWorksi](export-rollworks.md).
+   Lisateavet leiate teemast [Eksportimine RollWorksi ](export-rollworks.md).
 
 - **Snapchat ekspordi segmendid** Oleme laiendanud oma ekspordi sihtkohti kaasates Snapchati. Nüüd saate eksportida segmente Customer Insights Snapchat publikule ja kasutada neid oma turunduskampaaniate lähteandmetena.     
    Lisateavet leiate teemast [Eksportimine Snapchati](export-snapchat.md).
@@ -250,7 +262,7 @@ Kui ärikontod on vastendatud seotud kontodega, kuvatakse rakendus Customer Insi
 
 - **Kopeerimiskeskkond toetab rohkem andmeallikatüüpe**
 
-  Administraatorid saavad kopeerida keskkonnakonfiguratsioonid uude keskkonda samas organisatsioonis. See funktsioon laiendab kopeerimiskeskkonna funktsioone juhtudel, kui kasutatakse Microsoft Dataverse hallataval andmejärvel või kaustal Ühine andmemudel põhinevaid andmeallikaid.
+  Administraatorid saavad kopeerida keskkonnakonfiguratsioonid uude keskkonda samas organisatsioonis. See funktsioon laieneb kopeerimiskeskkonna funktsioonile juhtudel, kui andmeallikad põhinevad Microsoft Dataverse-i hallataval data lake -il või Common Data Modeli kaustadel.
 
 ## <a name="january-2021-updates"></a>2021. a jaanuari värskendus
 
@@ -276,7 +288,7 @@ Kui ärikontod on vastendatud seotud kontodega, kuvatakse rakendus Customer Insi
 
 #### <a name="system-administration"></a>Süsteemihaldus
 
-- **Andmete sujuv jagamine Microsoft Dataverse** Nüüd saate Microsoft Dataverse hallatavate andmete järve abil jagada kliendiülevaate väljundit Microsoft Dataverse rakendustega. Kui olete Dataverse keskkonna kliendiülevaatega seostanud, saate andmete ühiskasutuse lubamise suvandi.
+- **Andmete sujuvaks jagamiseks rakendusse Microsoft Dataverse** saate nüüd jagada Customer Insightsi väljundit Microsoft Dataverse rakendustega, kasutades Microsoft Dataverse Managed Data Lake hallatavad andmejärve. Kui olete keskkonna Dataverse Customer Insights kliendiülevaadetega seostanud, saate võimaluse andmete ühiskasutuse lubamiseks.
   Lisateavet leiate teemast [Keskkondade haldamine](manage-environments.md).
 
 

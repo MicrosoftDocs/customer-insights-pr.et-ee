@@ -1,7 +1,7 @@
 ---
 title: Ettevõtte andmete täiustamine
 description: Rikastage ja normaliseerige ettevõtte andmeid Microsofti mudelitega.
-ms.date: 11/15/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813913"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927577"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Ettevõtte profiilide rikastamine täiustatud ettevõtte andmetega
 
@@ -84,7 +84,17 @@ Kui rikastamistoiming on tehtud, saate värskelt rikastatud klientide profiile �
 
 Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **Kuva rikastatud andmed**.
 
-## <a name="next-steps"></a>Järgmised etapid
+### <a name="overview-card"></a>Ülevaate kaart
+
+Ülevaatekaardil kuvatakse üksikasjad rikastamise katvuse kohta. 
+
+* **Kliendid töödeldud ja muudetud** : edukalt rikastatud kliendiprofiilide arv.
+
+* **Kliendid, keda töödeldi ja mida ei** muudetud: tuvastatud, kuid muutmata kliendiprofiilide arv. Tavaliselt juhtub see siis, kui sisendandmed on kehtivad ja rikastamine ei saa neid parandada.
+
+* **Kliendid, keda ei töödeldud ega muudetud** : tuvastamata profiilide arv. Tavaliselt sisendandmete puhul, mis on kehtetud või mida rikastamine ei toeta.
+
+## <a name="next-steps"></a>Järgmised toimingud
 
 [!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 

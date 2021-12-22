@@ -1,7 +1,7 @@
 ---
 title: Kohandatud masinõppe mudelid | Microsoft Docs
 description: Azure'i masinõppe kohandatud mudelitega töötamine rakenduses Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032937"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881779"
 ---
 # <a name="custom-machine-learning-models"></a>Kohandatud masinõppe mudelid
+
+> [!NOTE]
+> Masinõpe Studio (klassika) tugi lõpeb 31. augustil 2024. Soovitame selleks kuupäevaks üle minna [Azure](/azure/machine-learning/overview-what-is-azure-machine-learning) Masinõpe.
+>
+> Alates 1. detsembrist 2021 ei saa te luua uusi Masinõpe Studio (klassikaline) ressursse. Kuni 31. augustini 2024 saate jätkata olemasolevate Masinõpe Studio (klassikaliste) ressursside kasutamist. Lisateavet vt teemast [Migrate to Azure Masinõpe](/azure/machine-learning/migrate-overview).
+
 
 Jaotises **Ärianalüüs** > **Kohandatud mudelid** saate hallata töövooge Azure'i masinõppe mudelite põhjal. Töövood aitavad teil valida andmed, mille põhjal soovite ülevaateid luua, ja vastendada tulemused teie koondatud kliendiandmetega. Lisateavet kohandatud masinõppemudelite loomise kohta leiate teemast [Azure'i masinaõppe põhiste mudelite kasutamine](azure-machine-learning-experiments.md).
 
@@ -24,9 +30,9 @@ Jaotises **Ärianalüüs** > **Kohandatud mudelid** saate hallata töövooge Azu
 
 Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning ärivõimaluste ja tulu parandamiseks. Soovitame teil oma prognoosi väärtuse hindamisel võtta eetiliselt arvesse selle mõju ja kallutusi, milleni see võib viia. Lugege lisateavet selle kohta, kuidas Microsoft [käsitleb vastutustundlikku tehisintellekti](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Samuti saate tutvuda Azure'i masinõppega seotud [vastutustundliku masinõppe meetodite ja protsessidega](/azure/machine-learning/concept-responsible-ml).
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites"></a>eeltingimused
 
-- See funktsioon toetab praegu veebiteenuseid, mis on avaldatud [masinõppe stuudio (klassikaline)](https://studio.azureml.net) ja [Azure'i masinõppe partiikonveierite](/azure/machine-learning/concept-ml-pipelines) kaudu.
+- See funktsioon toetab Veebiteenuseid, mis on avaldatud [Azure Masinõpe pakett-konveieri kaudu](/azure/machine-learning/concept-ml-pipelines).
 
 - Selle funktsiooni kasutamiseks on vaja Azure Data Lake Gen2 salvestuskontot, mis on seotud teie Azure Studio eksemplariga. Lisateavet leiate teemast [Azure Data Lake Storage Gen2 salvestuskonto loomine](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 
 1. Kui teie Azure'i masinõppe kordustellimus on mõnes muus rentnikus kui Customer Insights, valige suvand **Logi sisse** oma valitud organisatsiooni mandaadiga.
 
-1. Valige oma veebiteenusega seotud **tööruumid**. Seal on kaks jaotist, üks Azure'i masinõppe v1 (masinõppe stuudio (klassikaline)) ja üks Azure'i masinõppe v2 (Azure'i masinõpe) jaoks. Kui te pole kindel, milline tööruum on teie masinõppe stuudio (klassikaline) veebiteenuse jaoks õige, valige **Suvaline**.
+1. Valige oma veebiteenusega seotud **tööruumid**. 
 
-1. Valige masinõppe stuudio (klassikaline) veebiteenus või Azure'i masinõppe konveier ripploendis **Veebiteenus, mis sisaldab teie mudelit**. Seejärel valige suvand **Edasi**.
-   - Lugege lisateavet [veebiteenuse avaldamise kohta masinõppe stuudios (klassikaline)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Lugege lisateavet [konveieri avaldamise kohta Azure'i masinõppes kujundaja abil](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) või [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) kohta. Teie konveier peab olema avaldatud [konveieri lõpp-punktis](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Valige veebiteenuses Azure Masinõpe **torujuhe, mis sisaldab teie mudeli** rippmenüüd. Seejärel valige suvand **Edasi**.    
+   Lugege lisateavet [konveieri avaldamise kohta Azure'i masinõppes kujundaja abil](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) või [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) kohta. Teie konveier peab olema avaldatud [konveieri lõpp-punktis](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Valige iga **veebiteenuse sisendi** kohta sihtrühmaülevaadetest vastav **Olem** ja valige **Järgmine**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
    > ![Konfigureeri töövoog.](media/intelligence-screen2-updated.png "Konfigureeri töövoog")
 
 1. Määrake etapis **Mudeli väljundi parameetrid** järgmised atribuudid.
-   - Masinõppe stuudio (klassikaline)
-      1. Sisestage väljundi **Olemi nimi**, millesse soovite veebiteenuse väljundi tulemusi salvestada.
-   - Azure’i masinõpe
       1. Sisestage väljundi **Olemi nimi**, millesse soovite konveieri väljundi tulemusi salvestada.
       1. Valige oma partiikonveieri ripploendist **Väljundi andmesalve parameetri nimi**.
       1. Valige oma partiikonveieri ripploendist **Väljundi tee parameetri nimi**.
@@ -93,9 +95,6 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 1. Iga **veebiteenuse sisendi** korral saate värskendada sihtrühmaülevaadetes ühtivat **olemit**. Seejärel valige suvand **Edasi**.
 
 1. Määrake etapis **Mudeli väljundi parameetrid** järgmised atribuudid.
-   - Masinõppe stuudio (klassikaline)
-      1. Sisestage väljundi **Olemi nimi**, millesse soovite veebiteenuse väljundi tulemusi salvestada.
-   - Azure’i masinõpe
       1. Sisestage väljundi **Olemi nimi**, millesse soovite konveieri väljundi tulemusi salvestada.
       1. Valige oma proovikonveierile **Väljundi andmesalve parameetri nimi**.
       1. Valige oma proovikonveierile **Väljundi tee parameetri nimi**.
