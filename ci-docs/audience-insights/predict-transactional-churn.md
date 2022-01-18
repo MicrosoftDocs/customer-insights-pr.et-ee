@@ -1,7 +1,7 @@
 ---
-title: Kande churn prognoos (Video)
+title: Kande churn prognoos (sisaldab videot)
 description: Prognoosige, kas on oht, et klient ei osta enam teie ettevõtte tooteid või teenuseid.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904067"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967742"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Tehinguvoolavuse prgonoos (eelversioon)
 
@@ -103,10 +103,10 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
 
 1. Valige paan **Kliendivoolavuse mudel (eelversioon)** ja seejärel suvand **Kasuta seda mudelit**.
 
-1. Valige **Kliendivoolavuse mudelipaanil** **Tehing** ja seejärel **Alustage**.
+1. Valige **paanil Kliendi churn mudel (eelvaade)** **Kanne ja valige** **Alustamine**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Kuvatõmmis kliendivoolavuse mudelipaanil valitud kandessuvandiga.":::
-
+ 
 ### <a name="name-model"></a>Mudelile nime panemine
 
 1. Sisestage mudelile nimi, et eristada seda teistest mudelitest.
@@ -117,11 +117,11 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
 
 ### <a name="define-customer-churn"></a>Määratlege kliendi teenusest loobumine
 
-1. Sisestage loobumise ennustamiseks kasutatav päevade arv väljale **Tuvasta kliendid, kes võivad loobuda ajavahemikus**. Näiteks ennustage oma klientide voolavusriski järgmise 90 päeva jooksul, et kohandada oma klientide säilitamise jõupingutusi. Voolavusriski ennustamine pikema või lühema ajavahemiku jooksul võib raskendada voolavusriski tekitavate tegurite käsitlemist, kuid see sõltub teie ettevõtte vajadustest.
+1. Seadke **prognoos aken**. Näiteks ennustage oma klientide voolavusriski järgmise 90 päeva jooksul, et kohandada oma klientide säilitamise jõupingutusi. Voolavusriski ennustamine pikema või lühema ajavahemiku jooksul võib raskendada voolavusriski tekitavate tegurite käsitlemist, kuid see sõltub teie ettevõtte vajadustest.
    >[!TIP]
-   > Saate igal hetkel valida **Salvesta ja sule**, et salvestada prognoos mustandina. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid** selle jätkamiseks.
+   > **prognoos mustandina salvestamiseks saate igal ajal valida** Salvesta mustand. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid** selle jätkamiseks.
 
-1. Sisestage voolavuse määratlemiseks päevade arv väljale **Klient on loobunud, kui ta pole teinud ühtegi ostu ajavahemikus**. Näiteks kui klient pole viimase 30 päeva jooksul oste teinud, võib neid pidada teie ettevõttest loobunuks. 
+1. Sisestage päevade arv, et määratleda churn **definitsiooniväljale**. Näiteks kui klient pole viimase 30 päeva jooksul oste teinud, võib neid pidada teie ettevõttest loobunuks. 
 
 1. Jätkamiseks valige **Edasi**.
 
@@ -129,19 +129,16 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
 
 1. Valige **Lisa andmed** ja valige tegevusetüüp, mis sisaldab nõutavat kannete või ostuajaloo teavet.
 
-1. Valige jaotises **Tegevuste valik** valitud tegevusest konkreetsed tegevused, millele soovite oma arvutuste puhul keskenduda.
+1. Valige jaotises **Tegevuste valimine** valitud tegevusetüübist konkreetsed tegevused, millele soovite arvutust keskenduda.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Kõrvalpaan, kus kuvatakse kindlate tegevuste valimine semantilise tüübi all.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Kõrvalpaan, kus kuvatakse kindlate tegevuste valimine semantilise tüübi all.":::
 
-1. Kui te pole tegevust veel semantilise tüübiga vastendanud, valige selleks **Redigeeri**. Avaneb juhendav kogemus semantilise tegevuse kaardismiseks. Vastendage oma andmed valitud tegevuste tüübi vastavate väljadega.
+   Kui te pole tegevust veel semantilise tüübiga vastendanud, valige selleks **Redigeeri**. Avaneb juhendav kogemus semantilise tegevuse kaardismiseks. Vastendage oma andmed valitud tegevuste tüübi vastavate väljadega.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Lehe sätte tegevuse tüüp.":::
+1. Vastendage semantilised atribuudid väljadega, mis on mudeli käivitamiseks vajalikud. Kui allolevad väljad pole täidetud, konfigureerige oma ostuajaloo olemis seos *Kliendi* olemiga. Valige **Salvesta**.
 
-1. Pärast tegevuse vastendamist vastava semantilise tüübiga jätkamiseks valige **Edasi**
+1. Kui **te ei soovi rohkem tegevusi lisada, valige toimingus Nõutavate andmete lisamine** **jätkamiseks** Edasi.
 
-1. Vastendage semantilised atribuudid väljadega, mis on mudeli käivitamiseks vajalikud. Kui allolevad väljad pole täidetud, konfigureerige oma ostuajaloo olemis seos *Kliendi* olemiga.
-
-1. Tehke valik **Edasi**.
 
 # <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
 

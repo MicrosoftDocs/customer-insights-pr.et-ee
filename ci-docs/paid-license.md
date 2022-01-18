@@ -5,21 +5,21 @@ description: Tutvuge esimese Dynamics 365 Customer Insights kasutuskogemusega ja
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673431"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977640"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Alustage pärast Customer Insights'i ostmist
 
 Selles artiklis kirjeldatakse, kuidas teha esimesi toiminguid Dynamics 365 Customer Insights-ga pärast seda, kui organisatsioon on tellimuse ostnud. Kui soovite osta Customer Insights -i, on meie kontaktisuvandid loetletud [Dynamics 365 Customer Insights veebisaidil](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Pärast Customer Insights -i tellimuse litsentsi ostmist saab Microsoft 365 rentniku globaaladministraator meili, mis kutsub neid keskkonda looma. 
+Pärast Customer Insightsi tellimislitsentsi ostmist saab rentniku üldadministraator Microsoft 365 meilisõnumi, mis kutsub neid üles keskkonda looma. 
 
 Customer Insights on litsentsitud rentniku kohta ja sisaldab mitut võimalust. Vaikekvoodi suurendamiseks saate rohkem võimsust ja litsentse osta. 
 - [Hinnastamise ülevaade](https://dynamics.microsoft.com/ai/customer-insights/pricing/)

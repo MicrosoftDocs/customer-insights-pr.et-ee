@@ -44,7 +44,7 @@
       items:
         - name: Andmeallikate ülevaade
           href: audience-insights/data-sources.md
-        - name: Power Query konnektorite kaudu andmeallikate lisamine
+        - name: Andmeallikate lisamine Power Query konnektorite kaudu
           href: audience-insights/connect-power-query.md
         - name: Common Data Modeli kausta andmeallikana lisamine
           href: audience-insights/connect-common-data-model.md
@@ -80,7 +80,7 @@
       items:
         - name: Kliendiprofiilide rikastamine
           href: audience-insights/enrichment-hub.md
-        - name: Tootemargi ja huvide külgetõmme
+        - name: Kaubamärgid ja huvid
           href: audience-insights/enrichment-microsoft.md
         - name: Täiustatud aadressid
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Tehinguvoolavuse prognoos
               href: audience-insights/predict-transactional-churn.md
+            - name: Kliendi tagasiside tunnete analüüsimine
+              href: audience-insights/sentiment-analysis.md
             - name: Azure'i masinõppe kohandatud mudelite kasutamine
               href: audience-insights/custom-models.md
             - name: Osaliselt puuduvate andmete täiustamine

@@ -5,17 +5,16 @@ ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 05485fc7def3d699d5179bcaa005ceb57024f840
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732130"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977962"
 ---
 # <a name="exports-preview-overview"></a>Eksportimine (eelversioon) ülevaade
 
@@ -36,7 +35,7 @@ Eksporditüüpe on kaks peamist:
 Enamik ekspordisuvandeid toetab mõlemat tüüpi keskkondi. Segmentide eksportimisel erinevatesse sihtsüsteemidesse on erinõuded. Üldiselt sisaldavad segmendi liige ja kliendiprofiil kontaktteavet. Kuigi see kehtib enamasti eratarbijate (B2C) põhinevate segmentide puhul, ei pruugi see käia ärikontodel (B2B) põhinevate segmentide kohta. 
 
 **Segmendi ekspordikeskkonnad ärikontode jaoks (B2B)**  
-- Segmendid ärikontode keskkondades on rajatud *konto* olemile. Konto segmentide eksportimiseks nagu see on, peab sihtsüsteem toetama puhtaid konto segmente. See kehtib [LinkedIn'i](export-linkedin-ads.md) kohta, kui valite ekspordi määratlemisel suvandi [ettevõte](export-linkedin-ads.md).
+- Segmendid ärikontode keskkondades on rajatud *konto* olemile. Konto segmentide eksportimiseks nagu see on, peab sihtsüsteem toetama puhtaid konto segmente. See kehtib [LinkedIn'i](export-linkedin-ads.md) kohta, kui valite ekspordi määratlemisel suvandi **ettevõte**.
 - Kõik muud sihtsüsteemid nõuavad kontaktiolemi välju. Tagamaks, et ettevõtte segmendid saavad tuua andmeid seotud kontaktidest, peab teie segmendi määratluses olema kontakti olemi projektiatribuudid. Lisateave [segmentide ja projektiatribuutide konfigureerimise kohta](segment-builder.md).
 
 **Segmentide eksport keskkondades eratarbijatele (B2C)**  

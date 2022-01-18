@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
-ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
-ms.translationtype: HT
+ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
+ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "7417200"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "7975119"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Kasutage segmente rakendusega Dynamics 365 Marketing (eelversioon)
 
@@ -45,7 +45,7 @@ Kui kasutate Dynamics 365 Marketing'i uusi võimalusi reaalajas klienditeekonna 
 
 1. Jaotises **Serveri administraatorikonto** valige suvand **Logi sisse** ja valige rakenduse Dynamics 365 Marketing konto.
 
-1. Vastendage kliendi ID väli Dynamics 365 kontakti ID-ga.
+1. Vastendage olemi Kliendi välja Kontakti ID Dynamics 365 kontakti ID-ga.
 
 1. Ühenduse loomiseks valige **Salvesta**. 
 

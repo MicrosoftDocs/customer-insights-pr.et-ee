@@ -1,5 +1,5 @@
 ---
-title: Tellimuse churn prognoos (video)
+title: Tellimuse churn prognoos (sisaldab videot)
 description: Saate prognoosida, kas on oht, et klient ei kasuta enam teie ettevõtte kordustellimuse tooteid või teenuseid.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903944"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967696"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Kordustellimuse voolavuse prognoos (eelvaade)
 
@@ -77,7 +77,7 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
 1. Sisestage arv **Päevi möödunud kordustellimuse lõppemisest**, mida teie ettevõte peab olekuks, mil kliendivoolavus on toimunud. Tavaliselt on see periood seotud äritegevustega, nagu pakkumised või muud turundusega seotud pingutused, mis püüavad ära hoida kliendi kaotsiminekut.
 1. Sisestage **päevade arv tulevikus, mille põhjal voolavust prognoosida**, et määrata aken voolavuse prognoosiks. Näiteks selleks, et ennustada järgmise 90 päeva klientide voolavuse riski oma säilitusturunduse jõupingutuste vastavusse viimiseks. Pöördumisriski ennustamine pikemaks või lühemaks perioodiks võib muuta pöördumisriski profiili tegurite käsitlemise keerulisemaks, sõltuvalt teie konkreetsetest ärinõuetest. Jätkamiseks valige **Edasi**
    >[!TIP]
-   > Saate igal hetkel valida **Salvesta ja sule**, et salvestada prognoos mustandina. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid** selle jätkamiseks.
+   > **prognoos mustandina salvestamiseks saate igal ajal valida** Salvesta mustand. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid** selle jätkamiseks.
 
 ### <a name="add-required-data"></a>Lisa nõutud andmed
 

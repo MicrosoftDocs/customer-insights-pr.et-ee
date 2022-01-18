@@ -1,7 +1,7 @@
 ---
 title: Customer Insights -i andmete eksportimine Azure Synapse Analytic -usse
 description: Lugege, kuidas konfigureerida ühendust Azure Synapse Analytic -ule.
-ms.date: 04/12/2021
+ms.date: 01/05/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f206043298bdbf8a84b0ef37b47a43290653beba7d3d0e8b807ec74513614aa8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
+ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031928"
+ms.lasthandoff: 01/10/2022
+ms.locfileid: "7951037"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Ekspordi andmed Azure Synapse Analytics -i (Eelvaatesse)
 
@@ -49,6 +49,8 @@ Azure -is:
 
 ### <a name="configure-a-connection"></a>Ühenduse konfigureerimine
 
+Ühenduse loomiseks vajavad teenuse põhi- ja kasutajakonto Customer Insightsis **selle** ressursirühma readeri õigusi, *kus asub* Sünapsi analüüsi tööruum. Lisaks vajavad Synapse Analyticsi tööruumi teenuse juht ja kasutaja **Synapse'i administraatori** õigusi. 
+
 1. Minge **Administraator** > **Ühendused**.
 
 1. Valige **Lisa ühendus** ja valige  **Azure Synapse Analytics**  või valige **Loo** paanil **Azure Synapse Analytics** ühenduse konfigureerimiseks.
@@ -63,7 +65,7 @@ Azure -is:
 
 ### <a name="configure-an-export"></a>Ekspordi konfigureerimine
 
-Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Ekspordi konfigureerimiseks ühisühendusega on vaja customer Insightsis vähemalt **kaasautori** õigusi. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
 
 1. Minge **Andmed** > **Ekspordid**.
 
@@ -82,6 +84,8 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 Ekspordi salvestamine ei käivita eksporti kohe.
 
 Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand).
+
+Synapse Analyticsisse eksporditud andmete päringute tegemiseks on vaja **salvestusruumi blob data reader** juurdepääsu ekspordi tööruumi sihtkoha salvestusruumile. 
 
 ### <a name="update-an-export"></a>Ekspordi värskendamine
 

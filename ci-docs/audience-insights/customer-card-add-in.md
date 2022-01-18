@@ -1,7 +1,7 @@
 ---
-title: Dynamics 365 rakenduste kliendikaardi lisandmoodul (video)
+title: Dynamics 365 rakenduste kliendikaardi lisandmoodul (sisaldab videot)
 description: Saate selle lisandmooduliga kuvada Dynamics 365 rakenduste sihtrühma ülevaadete andmeid.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
-ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
-ms.translationtype: HT
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "7921860"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945422"
 ---
 # <a name="customer-card-add-in-preview"></a>Kliendikaardi lisandmoodul (eelvaade)
 
@@ -27,12 +27,12 @@ Saate oma klientide kohta täieliku ülevaate otse Dynamics 365 rakendustes. Kui
 ## <a name="prerequisites"></a>Eeltingimused
 
 - Lisandmoodul töötab ainult Dynamics 365 mudelipõhiste rakendustega (nt Müük või Klienditeenindus, versioon 9.0 ja uuemad).
-- Et Dynamics 365 andmed vastendaks sihtrühma ülevaadetega kliendiprofiilidega, tuleb neid [Dynamics 365 rakenduse Microsoft Dataverse konnektori abil alla laadida](connect-power-query.md).
+- Kui teie Dynamics 365 andmed vastendavad vaatajaskonna ülevaate kliendiprofiilidega, soovitame need [konnektori abil alla neelata Rakendusest Dynamics 365. Microsoft Dataverse](connect-power-query.md) Kui kasutate Dynamics 365 kontaktide (või kontode) allaneelamiseks mõnda muud meetodit, peate `contactid` veenduma, et väli (või `accountid`) on andmete ühendamise protsessi kaardietapis seatud selle andmeallikas [esmaseks võtmeks](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Kõik Dynamics 365 kliendikaardi lisandmooduli kasutajad peavad andmete nägemiseks olema [lisatud kasutajatena](permissions.md) publiku ülevaadetes.
 - [Konfigureeritud otsing ja võimekuste filtreerimine](search-filter-index.md) on publiku ülevaadetes nõutud andmete otsingu töötamise jaoks.
 - Iga lisandmooduli juhtelement kasutab sihtrühma ülevaadetes teatud andmeid. Teatud andmed ja juhtelemendid on saadaval ainult mingit kindlat tüüpi keskkondades. Lisandmooduli konfiguratsioon annab teile teada, kui juhtelement pole valitud keskkonnatüübi tõttu saadaval. Lisateave [keskkondade kasutamise kohta](work-with-business-accounts.md).
   - **Mõõtühiku juhtelement**: Nõuab [konfigureeritud mõõtmetega](measures.md) kliendi atribuutide tüüpe.
-  - **Luurekontroll** : nõuab ennustuste või kohandatud mudelite abil loodud [andmeid](predictions-overview.md).
+  - **Luurekontroll** : nõuab [ennustuste või kohandatud mudelite abil loodud andmeid](predictions-overview.md).
   - **Kliendi üksikasjade juhtelement**: Kõik profiili väljad on saadaval ühendatud kliendiprofiilis.
   - **Rikastamise juhtelement**: Nõuab kliendiprofiilile aktiivsete [rikastamiste](enrichment-hub.md) rakendamist. Kaardi lisandmoodul toetab neid rikastumiseid: [Microsofti](enrichment-microsoft.md) [pakutavad kaubamärgid, Microsofti pakutavad huvid](enrichment-microsoft.md) ja Microsofti esitatud [Office'i kaasamise](enrichment-office.md) andmed.
   - **Kontaktide juhtelement**: Vaja on semantilise kontaktitüübi olemi määratlust.

@@ -1,42 +1,43 @@
 ---
 title: Android SDK kasutamise alustamine
-description: Vaadake, kuidas Android SDK-d isikupärastada ja käivitada
+description: Teave Android SDK isikupärastamise ja käitamise kohta
 author: britl
 ms.reviewer: mhart
+ms.custom: intro-internal
 ms.author: britl
 ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
-ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
+ms.openlocfilehash: 71ec4841303bd17d3f605547be8d6032c58a7b21
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7655337"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977508"
 ---
-# <a name="get-started-with-the-android-sdk"></a>Android SDK kasutamise alustamine
+# <a name="get-started-with-the-android-sdk"></a>Hakake kasutama rakendust Android SDK
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-See õpetus juhendab teid oma Android rakenduse instrumenteerimisel Dynamics 365 Customer Insights kaasamise ülevaatega SDK. Te saate portaalis sündmusi näha viie minuti pärast või varem.
+See juhend juhatab teid Android rakenduse intrumentimise protsessist läbi Dynamics 365 Customer Insights kaasamisülevaadete SDK abil. Te saate portaalis sündmusi näha viie minuti pärast või varem.
 
 ## <a name="configuration-options"></a>Konfigureerimissuvandid
 Järgmised seadistusvõimalused saab SDK-le edastada:
 
 - **ingestionKey**: Edastusvõti saadab sündmused teie tööruumi.
 
-## <a name="prerequisites"></a>eeltingimused
+## <a name="prerequisites"></a>Eeltingimused
 
 - Android Studio
 
-- Minimaalne Android API tase: 16 (Jelly Bean)
+- Miinimum Android API tase: 16 (Jelly Bean)
 
 - Edastusvõti (hankimiseks vaadake allolevaid juhiseid)
 
 ## <a name="integrate-the-sdk-into-your-application"></a>SDK integreerimine rakendusega
-Protsessi alustamiseks valige tööruum, valige Android mobiiliplatvorm ja laadige alla Android SDK.
+Alustage protsessi, valides töötamiseks tööruumi, valides Android mobiiliplatvormi ja laadides alla Android SDK.
 
 - Valige oma tööruum vasakpoolsel navigeerimispaanil tööruumi vahetaja abil.
 
@@ -46,7 +47,7 @@ Protsessi alustamiseks valige tööruum, valige Android mobiiliplatvorm ja laadi
 
 ## <a name="configure-the-sdk"></a>Konfigureeri SDK
 
-Kui olete SDK alla laadinud, saate sellega sündmuste lubamiseks ja määratlemiseks Android Studio töötada. Selle tegemiseks on kaks võimalust.
+Kui olete SDK alla laadinud, saate sellega sündmuste lubamiseks ja määratlemiseks töötada Android Studios. Selle tegemiseks on kaks võimalust.
 ### <a name="option-1-use-jitpack-recommended"></a>1. võimalus: kasutage JitPacki (soovitatav)
 1. Lisa JitPack repositooriumisse `build.gradle` juur:
     ```gradle
@@ -66,8 +67,8 @@ Kui olete SDK alla laadinud, saate sellega sündmuste lubamiseks ja määratlemi
     }
     ```
 
-### <a name="option-2-use-download-link"></a>2. valik: kasutage allalaadimislinki
-1. Laadige alla [SDK Android kaasamisülevaated](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) ja asetage fail `eiandroidsdk-debug.aar``libs` kausta.
+### <a name="option-2-use-download-link"></a>2. võimalus: kasutage allalaadimislinki
+1. Laadige alla [kaasamisülevaated Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) ja paigutage `eiandroidsdk-debug.aar` fail `libs` kausta.
 
 1. Avage oma projekti taseme `build.gradle` fail ja lisage järgmised lõigendid:
     ```gradle
@@ -120,9 +121,9 @@ Kui olete SDK alla laadinud, saate sellega sündmuste lubamiseks ja määratlemi
 1. Saate lubada või keelata `View` sündmuste automaathõivet, määrates ülaltoodud `autoCapture` välja väärtuseks `true` või `false`. 
 
    >[!NOTE]
-   >`Action` sündmused tuleb lisada käsitsi.
+   >`Action` Sündmused tuleb lisada käsitsi.
 
-1. (valikuline) Muud konfiguratsioonid hõlmavad lõpp-punkti kogumiga URL seadmist. Neid saab lisada jaotises Allaneelamise võtme metaandmete alla `AndroidManifest.xml`.
+1. (valikuline) Muud konfiguratsioonid hõlmavad lõpp-punkti kogumiga URL seadmist. Neid saab lisada allaneelamise võtme metaandmete alla `AndroidManifest.xml`.
 
    ```xml
         <meta-data

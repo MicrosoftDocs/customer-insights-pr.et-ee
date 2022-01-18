@@ -1,5 +1,5 @@
 ---
-title: Customer Insightsi andmete eksportimine SFTP hostimistesse (video)
+title: Customer Insightsi andmete eksportimine SFTP hostimistesse (sisaldab videot)
 description: Lugege, kuidas konfigureerida ühendust ja eksportida SFTP asukohta.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 568e5826175417175bd09435d697031f0ab64223
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: HT
+ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927552"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934882"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Segmentide ja muude andmete eksportimine SFTPsse (eelversioon)
 
