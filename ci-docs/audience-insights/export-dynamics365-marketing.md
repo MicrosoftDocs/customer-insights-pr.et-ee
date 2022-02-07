@@ -1,6 +1,6 @@
 ---
 title: Customer Insightsi andmete eksportimine rakendusse Dynamics 365 Marketing
-description: Lugege, kuidas konfigureerida ühendust ja eksportida Dynamics 365 Marketing.
+description: 'Lugege, kuidas konfigureerida ühendust ja eksportida Dynamics 365 Marketing.'
 ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,11 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
-ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
-ms.translationtype: MT
-ms.contentlocale: et-EE
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "7975119"
 ---
+
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Kasutage segmente rakendusega Dynamics 365 Marketing (eelversioon)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Kasutage lahenduses Dynamics 365 Marketing kampaaniate loomiseks ja konkreetsete kliendirühmadega ühenduse võtmiseks [segmente](segments.md). Lisateavet leiate teemast [Dynamics 365 Customer Insightsi segmentide kasutamine Dynamics 365 Marketingiga](/dynamics365/marketing/customer-insights-segments).
 

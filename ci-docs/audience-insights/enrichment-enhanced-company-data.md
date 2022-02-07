@@ -1,7 +1,7 @@
 ---
 title: Ettevõtte andmete täiustamine
 description: Rikastage ja normaliseerige ettevõtte andmeid Microsofti mudelitega.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,15 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: MT
-ms.contentlocale: et-EE
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927577"
 ---
+
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Ettevõtte profiilide rikastamine täiustatud ettevõtte andmetega
 
-Ettevõtte profiilide parandamiseks, täiendamiseks ja standardimiseks kasutage Microsofti mudeleid ja ettevõtte andmeid. Parema täpsuse ja ülevaate saamiseks kasutame [common data model](/common-data-model/schema/core/applicationcommon/account) vormingut.
+Ettevõtte profiilide parandamiseks, täiendamiseks ja standardimiseks kasutage Microsofti mudeleid ja ettevõtte andmeid. Parema täpsuse ja ülevaate saamiseks kasutame [common data model vormingut](/common-data-model/schema/core/applicationcommon/account).
 
 ## <a name="how-we-enhance-company-data"></a>Kuidas me ettevõtte andmeid täiustame?
 
-Meie mudel läbib kaheastmelise protsessi ettevõtte profiili suurendamiseks. Esiteks normaliseerib see ettevõtte nime. Näiteks *Microsoft Corp* parandatakse ja standardiseeritakse *Microsoft Corporationiks*. See püüab leida vastet Microsofti koostatud ettevõtte andmetest. Kui leitakse vaste, rikastame ettevõtte profiili meie koostatud ettevõtte andmetest saadud teabega, sealhulgas ettevõtte nimest.
+Meie mudel läbib kaheastmelise protsessi ettevõtte profiili suurendamiseks. Esiteks normaliseerib see ettevõtte nime. Näiteks *Microsoft Corp* parandatakse ja standardiseeritakse Microsoft *Corporationiks*. See püüab leida vastet Microsofti koostatud ettevõtte andmetest. Kui leitakse vaste, rikastame ettevõtte profiili meie koostatud ettevõtte andmetest saadud teabega, sealhulgas ettevõtte nimest.
 
 
 ### <a name="example"></a>Näide
@@ -58,7 +53,7 @@ Täiustatud andmetega on mõned piirangud. Mudel ei toeta allolevas loendis olev
 
 1. Avage **Andmed** > **Rikastamine**.
 
-1. Valige **·** **Paanil Täiustatud ettevõtte andmepaan suvand Rikasta minu** andmeid.
+1. Valige Paanil **Täiustatud** ettevõtte andmepaan **suvand Rikasta minu andmeid**.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Rikastamisplaat ettevõtte andmete rikastamiskeskuses.":::
 
@@ -82,17 +77,17 @@ Rikastamistoimingu käivitamiseks valige käsuribalt suvand **Käivita**. Samuti
 
 Kui rikastamistoiming on tehtud, saate värskelt rikastatud klientide profiile üle vaadata suvandi **Minu rikastamised** alt. Peale selle näete ka viimase värskenduse aega ja rikastatud profiilide arvu.
 
-Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **Kuva rikastatud andmed**.
+Rikastatud andmete näidist näete paanil **Rikastatud kliendid** eelvaates. Valige **Vaata lisaks** ja vali **vahekaart Andmed**, et pääseda juurde iga rikastatud profiili üksikasjalikule vaatele.
 
 ### <a name="overview-card"></a>Ülevaate kaart
 
 Ülevaatekaardil kuvatakse üksikasjad rikastamise katvuse kohta. 
 
-* **Kliendid töödeldud ja muudetud** : edukalt rikastatud kliendiprofiilide arv.
+* **Töödeldud ja muudetud** ettevõtted: edukalt rikastatud kliendiettevõtete profiilide arv.
 
-* **Kliendid, keda töödeldi ja mida ei** muudetud: tuvastatud, kuid muutmata kliendiprofiilide arv. Tavaliselt juhtub see siis, kui sisendandmed on kehtivad ja rikastamine ei saa neid parandada.
+* **Töödeldud ja muutmata** ettevõtted: kliendiettevõtte profiilide arv, mis tuvastati, kuid mida ei muudetud. See juhtub tavaliselt siis, kui sisendandmed on kehtivad ja rikastamine ei saa neid parandada.
 
-* **Kliendid, keda ei töödeldud ega muudetud** : tuvastamata profiilide arv. Tavaliselt sisendandmete puhul, mis on kehtetud või mida rikastamine ei toeta.
+* **Ettevõtted, mida ei töödeldud ega muudetud**: kliendiettevõtte profiilide arv, mida ei tuvastatud. See juhtub tavaliselt sisendandmete puhul, mis on kehtetud või mida rikastamine ei toeta.
 
 ## <a name="next-steps"></a>Järgmised toimingud
 

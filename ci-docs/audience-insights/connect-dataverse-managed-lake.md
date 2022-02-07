@@ -9,25 +9,20 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: et-EE
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900146"
 ---
+
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Andmetega ühendamine Microsoft Dataverse’i hallatavas andmejärves
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-See artikkel annab teavet selle kohta, kuidas Dataverse kasutajad saavad hallatava järve analüütiliste üksustega kiiresti ühendust Microsoft Dataverse võtta. 
+
+See artikkel annab teavet selle kohta, kuidas Dataverse kasutajad saavad hallatava järve analüütiliste üksustega Microsoft Dataverse kiiresti ühendust võtta. 
 
 > [!NOTE]
-> Dataverse Hallatavas järves saadaolevate olemite loendi vaatamiseks peate olema organisatsiooni administraator.
+> Hallatavas järves Dataverse saadaolevate olemite loendi vaatamiseks peate olema organisatsiooni administraator.
 
 ## <a name="important-considerations"></a>Olulised kaalutlused
 
-Võrguteenustes nagu Azure Data Lake Storage talletatavaid andmeid saab talletada muus asukohas kui see, kus andmeid rakenduses Dynamics 365 Customer Insights töödeldakse või talletatakse.Veebiteenustes talletatud andmete importimisel või nendega ühenduse loomisel nõustute, et andmeid saab edastada ja Dynamics 365 Customer Insights talletada.  [Lisateavet leiate Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
+Võrguteenustes nagu Azure Data Lake Storage talletatavaid andmeid saab talletada muus asukohas kui see, kus andmeid rakenduses Dynamics 365 Customer Insights töödeldakse või talletatakse.Veebiteenustes talletatud andmete importimisel või nendega ühenduse loomisel nõustute, et andmeid saab edastada ja talletada.Dynamics 365 Customer Insights  [Lisateavet leiate Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Teenuse Dataverse hallatava järvega ühenduse loomine
 

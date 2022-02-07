@@ -1,7 +1,7 @@
 ---
 title: Aadressi täiustamise rikastamine (sisaldab videot)
 description: Rikastage ja normaliseerige kliendiprofiilide aadressiteavet Microsofti mudelitega.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
-ms.translationtype: MT
-ms.contentlocale: et-EE
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934918"
 ---
+
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Kliendiprofiilide rikastamine täiustatud aadressidega
 
 Teie andmetes kuvatud aadressid võivad olla struktureerimata, mittetäielikud või valed. Kasutage Microsofti mudeleid aadresside normaliseerimiseks ja rikastamiseks [Common Data Model vormingusse,](/common-data-model/schema/core/applicationcommon/address) et saada paremat täpsust ja ülevaadet.
@@ -100,17 +95,17 @@ Rikastamistoimingu käivitamiseks valige käsuribalt suvand **Käivita**. Samuti
 
 Kui rikastamistoiming on tehtud, saate värskelt rikastatud klientide profiile üle vaadata suvandi **Minu rikastamised** alt. Peale selle näete ka viimase värskenduse aega ja rikastatud profiilide arvu.
 
-Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **Kuva rikastatud andmed**.
+Rikastatud andmete näidist näete paanil **Rikastatud kliendid** eelvaates. Valige **Vaata lisaks** ja vali **vahekaart Andmed**, et pääseda juurde iga rikastatud profiili üksikasjalikule vaatele.
 
 ### <a name="overview-card"></a>Ülevaate kaart
 
 Ülevaatekaardil kuvatakse üksikasjad rikastamise katvuse kohta. 
 
-* **Kliendid töödeldud ja muudetud** : edukalt rikastatud kliendiprofiilide arv.
+* **Töödeldud ja muudetud** aadressid: edukalt rikastatud aadressidega kliendiprofiilide arv.
 
-* **Kliendid, keda töödeldi ja mida ei** muudetud: tuvastatud, kuid muutmata kliendiprofiilide arv. Tavaliselt juhtub see siis, kui sisendandmed on kehtivad ja rikastamine ei saa neid parandada.
+* **Töödeldud ja muutmata** aadressid: kliendiprofiilide arv aadressidega, mis tuvastati, kuid mida ei muudetud. Tavaliselt juhtub see siis, kui sisendandmed on kehtivad ja rikastamine ei saa neid parandada.
 
-* **Kliendid, keda ei töödeldud ega muudetud** : tuvastamata profiilide arv. Tavaliselt sisendandmete puhul, mis on kehtetud või mida rikastamine ei toeta.
+* **Aadresse ei töödeldud ega muudetud**: profiilide arv aadressidega, mida ei tuvastatud. Tavaliselt sisendandmete puhul, mis on kehtetud või mida rikastamine ei toeta.
 
 ## <a name="next-steps"></a>Järgmised toimingud
 

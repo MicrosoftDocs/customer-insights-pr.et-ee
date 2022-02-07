@@ -1,7 +1,7 @@
 ---
 title: Olemite ühendamine andmete koondamise ajal
-description: Ühendage olemid, et luua koondatud kliendiprofiile.
-ms.date: 11/01/2021
+description: 'Ühendage olemid, et luua koondatud kliendiprofiile.'
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732767"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Olemite liitmine
 
 Liitmine on andmete ühendamise viimane etapp. Selle eesmärk on vastavusse viia vastuolus andmed. Vastuolulisteks andmeteks võivad olla kahes andmebaasis olev kliendi nimi, mida näidatakse veidi erinevalt (võrrelge: „Grant Marshall“ ja „Grant Marshal“) või erinevas vormingus telefoninumber (võrrelge: 617-803-091X ja 617803091X). Nende vastuoluliste andmepunktide liitmine toimub järgmisel alusel: atribuut atribuudi järel.
@@ -99,11 +94,13 @@ Lehel **Ühenda** valige **Välistatud väljad** et näha välistatud väljade l
 
 1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** . 
 
-## <a name="manually-combine-fields"></a>Kombineeri välju käsitsi
+## <a name="combine-fields-manually"></a>Väljade käsitsi kombineerimine
 
-Määrake ühendatud atribuut käsitsi. 
+Määrake ühendatud atribuut käsitsi.
 
-1. Lehel **Ühenda** valige **Ühenda väljad**.
+1. Valige **lehel Ühendamine** suvand **Kombineeri**.
+
+1. Valige **suvand Väljad**.
 
 1. Määrake ripploendis **Väljade ühendamine** koostevõitja poliitika.
 
@@ -114,6 +111,26 @@ Määrake ühendatud atribuut käsitsi.
 1. Muudatuse rakendamiseks valige **Tehtud**.
 
 1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** . 
+
+## <a name="combine-a-group-of-fields"></a>Väljade rühma ühendamine
+
+Käsitlege väljarühma ühe ühikuna. Näiteks kui meie kirjetes on väljad Aadressid1, Aadress2, Linn, Osariik ja Zip. Tõenäoliselt ei soovi me ühineda teise kirje aadressiga2, arvates, et see muudaks meie andmed täielikumaks
+
+1. Valige **lehel Ühendamine** suvand **Kombineeri**.
+
+1. Valige **suvand Väljade** rühm.
+
+1. Määrake koostevõitja poliitika **ripploendis** Ridadesse.
+
+1. Valige **Lisa** ja valige, kas soovite väljadele lisada veel välju või lisarühmi.
+
+1. Sisestage **igale kombineeritud väljale nimi** ja **väljundnimi**.
+
+1. Sisestage **väljade** rühma nimi. 
+
+1. Muudatuse rakendamiseks valige **Tehtud**.
+
+1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** .
 
 ## <a name="change-the-order-of-fields"></a>Väljade järjekorra muutmine
 

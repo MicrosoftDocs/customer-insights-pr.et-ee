@@ -1,7 +1,7 @@
 ---
 title: Common Data Modeli andmete ühendamine Azure Data Lake'i kontoga
 description: Töötage Common Data Modeli andmete kallal Azure Data Lake Storage'i abil.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: et-EE
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900192"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Common Data Modeli kausta ühendamine Azure Data Lake’i kontot kasutades
 
 See artikkel annab teavet selle kohta, kuidas valmendada andmeid Common Data Modeli kaustast, kasutades Azure Data Lake Storage Gen2 kontot.
@@ -26,11 +21,13 @@ See artikkel annab teavet selle kohta, kuidas valmendada andmeid Common Data Mod
 
 - Andmete valmendamise korral toetatakse ainult Azure Data Lake *Gen2* salvestuskontosid. Andmete valmendamiseks ei saa kasutada Azure Data Lake Gen1 salvestuskontosid.
 
+- Azure Data Lake'i salvestuskontol [peab olema lubatud hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace).
+
 - Azure'i teenusesubjektiga autentimiseks veenduge, et see oleks teie rentnikus konfigureeritud. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md).
 
 - Azure Data Lake, millega soovite ühenduda ja millest andmeid valmendada, peab olema samas Azure'i regioonis nagu Dynamics 365 Customer Insightsi keskkond. Ühendused Common Data Modeli kausta ja muus Azure'i regioonis oleva andmejärve vahel pole toetatud. Selleks et uurida välja keskkonna Azure'i regioon, minge sihtrühmaülevaadetes jaotisse **Haldus** > **Süsteem** > **Teave**.
 
-- Võrguteenustesse salvestatud andmeid võidakse talletada muus kohas kui seal, kus andmeid töödeldakse või talletatakse Dynamics 365 Customer Insights.Veebiteenustes talletatud andmete importimisel või nendega ühenduse loomisel nõustute, et andmeid saab edastada ja Dynamics 365 Customer Insights talletada.  [Lisateavet leiate Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
+- Võrguteenustesse salvestatud andmeid võidakse talletada muus kohas kui seal, kus andmeid töödeldakse või talletatakse Dynamics 365 Customer Insights.Veebiteenustes talletatud andmete importimisel või nendega ühenduse loomisel nõustute, et andmeid saab edastada ja talletada.Dynamics 365 Customer Insights  [Lisateavet leiate Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Loo ühendus Common Data Modeli kaustaga
 
@@ -38,11 +35,11 @@ See artikkel annab teavet selle kohta, kuidas valmendada andmeid Common Data Mod
 
 1. Valige **Lisa andmeallikas**.
 
-1. Valige **Azure'i andmejärve talletus**, sisestage andmeallikas nimi ja seejärel **valige** **Edasi**.
+1. Valige **Azure'i andmejärve talletus**, sisestage **andmeallikas nimi** ja seejärel valige **Edasi**.
 
    - Kui küsitakse, valige üks näidisandmestikest, mis on seotud teie valdkonnaga, seejärel valige **Edasi**. 
 
-1. Saate autentimiseks valida ressursipõhise ja tellimusepõhise valiku vahel. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). Sisestage **serveri aadress, valige logi sisse, seejärel valige Edasi** **·** **·**.
+1. Saate autentimiseks valida ressursipõhise ja tellimusepõhise valiku vahel. Lisateavet leiate teemast [Sihtrühmaülevaadete ühendamine Azure Data Lake Storage Gen2 kontoga Azure'i teenusesubjekti kaudu](connect-service-principal.md). Sisestage **serveri aadress**, valige **logi sisse** ja seejärel valige **Edasi**.
    > [!div class="mx-imgBorder"]
    > ![Azure Data Lake'i uute ühenduse üksikasjade sisestamise dialoogiboks.](media/enter-new-storage-details.png)
    > [!NOTE]
