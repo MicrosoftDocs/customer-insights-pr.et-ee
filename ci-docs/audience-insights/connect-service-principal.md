@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900253"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088142"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Ühendu Azure Data Lake Storage kontoga Azure teenuse subjekti abil
 
-Selles artiklis käsitletakse, kuidas kontoga ühenduse Dynamics 365 Customer Insights Azure Data Lake Storage luua, kasutades salvestusruumikonto võtmete asemel Azure'i teenusedirektorit. 
+Selles artiklis käsitletakse, kuidas kontoga Dynamics 365 Customer Insights ühenduse luua Azure Data Lake Storage, kasutades salvestusruumikonto võtmete asemel Azure'i teenusedirektorit. 
 
-Automatiseeritud tööriistad, mis kasutavad Azure'i teenuseid, peaksid alati omama piiratud õigusi. Selleks et rakendused ei saaks logida sisse kõikide õigustega kasutajana, pakub Azure teenusesubjekte. Teenuse põhijuhtide abil saate [ühisandmete mudeli kausta turvaliselt lisada või redigeerida andmeallikas](connect-common-data-model.md) või [luua või värskendada keskkonda](create-environment.md).
+Automatiseeritud tööriistad, mis kasutavad Azure'i teenuseid, peaksid alati omama piiratud õigusi. Selleks et rakendused ei saaks logida sisse kõikide õigustega kasutajana, pakub Azure teenusesubjekte. Teenuse põhijuhtide abil saate andmeallikas [või](connect-common-data-model.md) keskkonna loomiseks või värskendamiseks turvaliselt [lisada või redigeerida common data model kausta](create-environment.md).
 
 > [!IMPORTANT]
-> - Teenuse subjekti kasutaval Data Lake Storage kontol peab olema [lubatud hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace).
+> - Teenuse principali kasutav Data Lake Storage'i konto peab olema Gen2 ja lubatud peab olema [hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace). Azure Data Lake Gen1 salvestusruumikontosid ei toetata.
 > - Teenuse põhiteenuse loomiseks on vaja Azure'i tellimuse administraatoriõigusi.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Azure'i teenuse subjekti loomine Customer Insightsi abil

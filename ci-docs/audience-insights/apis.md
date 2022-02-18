@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
+ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732259"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "8100135"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insightsi API-dega töötamine
 
-Dynamics 365 Customer Insights pakub API-sid, et luua oma rakendusi, mis põhinevad teie andmetel kliendiülevaates.
+Dynamics 365 Customer Insights pakub API-sid oma rakenduste ehitamiseks, lähtudes teie Customer Insights andmetest.
 
 > [!IMPORTANT]
 > Nende API-de üksikasjad on toodud [Customer Insights API-de ülevaade](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Need sisaldavad lisateavet toimingute, parameetrite ja vastuste kohta.
@@ -35,7 +35,7 @@ Selles artiklis kirjeldatakse, kuidas pääseda juurde Customer Insights API-del
  
    API-de lubamine loob teie eksemplari jaoks esmase ja teisese tellimuse võtme, mida kasutatakse API-de päringutes. Saate võtmed uuesti luua, kui valite **Loo esmane uuesti** või **Loo teisene uuesti** jaotises **Haldus** > **Õigused** > **API-d**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Customer Insights -i API-de lubamine.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. [API-de proovimiseks](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) valige **Tutvuge meie API-dega**.
 
@@ -49,7 +49,7 @@ Selles artiklis kirjeldatakse, kuidas pääseda juurde Customer Insights API-del
 
 HTTP-vastus kuvatakse varsti allpool.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="Kuidas API-sid testida.":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Uue rakenduse registreeringu loomine Azure'i portaalis
 
@@ -65,7 +65,7 @@ Need etapid aitavad teil kasutada Azure'i rakenduses Customer Insights API-sid, 
 
 1. Minge uues rakenduse registreeringus jaotisse **API õigused**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="API-õiguste määramine rakenduse registreerimiseks.":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Valige **Lisa õigus** ja valige külgpaanil **Customer Insights**.
 
@@ -77,7 +77,7 @@ Need etapid aitavad teil kasutada Azure'i rakenduses Customer Insights API-sid, 
 
 Saate kasutada selle rakenduse registreeringu rakenduse/kliendi ID-d Microsofti autentimisteegis (MSAL), et saada kandeluba, mida koos päringuga API-le saata.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Administraatori loa andmine.":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 Lisateavet MSAL kohta leiate teemast [Microsofti autentimisteegi (MSAL) ülevaade](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +103,7 @@ Lisateavet API-de kasutamise kohta meie klienditeekides leiate teemast [Customer
 
 1. Rakenduse registreerimise lõpetamiseks valige **Anna administraatori nõusolek...**.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Administraatori loa andmine.":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. Lõpetamiseks peame lisama rakenduse registreeringu nime Customer Insightsis kasutajana.  
    
@@ -117,31 +117,31 @@ See jaotis aitab teil alustada klienditeekide kasutamist, mis on saadaval Custom
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Siin on teavet selle kohta, kuidas alustada NuGet.org C# klienditeekide kasutamist. NuGet paketi kohta leiate lisateavet teemast [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). See pakett kasutab praegu netstandard2.0 ja netcoreapp2.0 raamistikke.
+Teave selle kohta, kuidas alustada C# klienditeekide kasutamist, leiate aadressilt NuGet.org. Lisateavet NuGeti paketi kohta leiate teemast [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). See pakett kasutab praegu netstandard2.0 ja netcoreapp2.0 raamistikke.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>C# klienditeegi lisamine C# projekti
 
-1. Avage Visual Studio **oma projekti NuGet paketihaldur.**
+1. Avage Visual Studios oma projekti **NuGeti paketihaldur**.
 
 1. Otsige API-t **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Selleks, et lisada pakett projekti, valige **Installi**.
  
-   Teise võimalusena käivitage see käsk **NuGet Package Manageri konsoolis:**`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Teise võimalusena käivitage **NuGeti paketihalduri konsoolis** see käsk: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Saate Visual Studio projekti lisada NuGet paketi.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>C# klienditeegi kasutamine
 
 1. Kasutage [Microsofti autentimisteeki (MSAL)](/azure/active-directory/develop/msal-overview), et saada `AccessToken`, kasutades oma olemasolevat [Azure'i rakenduse registreeringut](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Pärast loa edukat autentimist ja omandamist looge uus või kasutage `HttpClient` olemasolevat, mille täiendav **DefaultRequestHeaders "Autoriseerimine"** on seatud **Bearer "juurdepääsuluba"** ja **Ocp-Apim-Subscription-Key** seatud tellimuse võti oma kliendi ülevaate [**·** keskkonnast](#get-started-trying-the-customer-insights-apis).   
+1. Pärast loa edukat autentimist ja omandamist ehitage uus või kasutage olemasolevat`HttpClient`, mille täiendavad **DefaultRequestHeaders "Authorization"** on seatud **esitaja "juurdepääsuloale"** ja **Ocp-Apim-Subscription-Key** komplektile tellimuse võtmele [**customer** Insightsi keskkonnast](#get-started-trying-the-customer-insights-apis).   
  
    Vajadusel lähtestage päis **Autoriseerimine**. Näiteks kui luba on aegunud.
 
-1. Edastage `HttpClient` `CustomerInsights` i kliendi meetodisse.
+1. Edastage `HttpClient` `CustomerInsights`i kliendi meetodisse.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Httpcliendi näidis.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Helistage kliendiga "laiendusmeetoditele" - näiteks `GetAllInstancesAsync`. Kui eelistate juurdepääsu aluseks olevale üksusele `Microsoft.Rest.HttpOperationResponse`, kasutage „http message methods“, näiteks meetodit `GetAllInstancesWithHttpMessagesAsync`.
 

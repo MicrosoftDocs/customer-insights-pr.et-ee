@@ -2,6 +2,22 @@
   href: index.yml
 - name: Toote ülevaade
   href: overview.md
+- name: Õppekataloog
+  items:
+    - name: Hakkame pihta
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Andmete valmendamine
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Kliendi koondprofiili loomine
+      href: /learn/modules/unified-customer-profile/
+    - name: Vaatajaskonna ülevaadetega töötamine
+      href: /learn/modules/working-with-customer-insights/
+    - name: Andmete rikastamine ja ennustuste idemine
+      href: /learn/modules/enrich-data/
+    - name: Väliste ühenduste haldamine
+      href: /learn/modules/configure-third-party-connections/
+    - name: Customer Insightsi haldamine
+      href: /learn/modules/administer-customer-data-platform/
 - name: Tasuta prooviversioon
   items:
     - name: Tasuta prooviversiooni kasutajaks registreerumine
@@ -30,21 +46,11 @@
           href: audience-insights/home.md
     - name: Ärikontodega töötamine
       href: audience-insights/work-with-business-accounts.md
-    - name: Tutvuge moodulitega
-      items:
-        - name: Andmete valmendamine
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Kliendi koondprofiili loomine
-          href: /learn/modules/unified-customer-profile/
-        - name: Rakendusega töötamine
-          href: /learn/modules/working-with-customer-insights/
-        - name: Andmete ja prognooside rikastamine
-          href: /learn/modules/enrich-data/
     - name: Andmeallikad
       items:
         - name: Andmeallikate ülevaade
           href: audience-insights/data-sources.md
-        - name: Andmeallikate lisamine Power Query konnektorite kaudu
+        - name: Andmeallikate lisamine konnektorite kaudu Power Query
           href: audience-insights/connect-power-query.md
         - name: Common Data Modeli kausta andmeallikana lisamine
           href: audience-insights/connect-common-data-model.md
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: DSR-õigused ja taotlused
   href: dsr-rights-requests.md
+- name: Hangi tuge
+  href: /power-platform/admin/get-help-support

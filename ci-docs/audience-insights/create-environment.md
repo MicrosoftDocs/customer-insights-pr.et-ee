@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892333"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088097"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Looge sihtrühma ülevaates keskkond
 
@@ -28,7 +28,7 @@ Organisatsioonid saavad iga Customer Insights litsentsi jaoks luua *kaks* keskko
 
 ## <a name="create-a-new-environment"></a>Uue keskkonna loomine
 
-Pärast Customer Insights -i tellimuse litsentsi ostmist saab Microsoft 365 rentniku globaaladministraator meili, mis kutsub neid keskkonda looma. Alustamiseks minge [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
+Pärast Customer Insightsi tellimislitsentsi ostmist saab rentniku Microsoft 365 üldadministraator meilisõnumi, mis kutsub neid üles keskkonda looma. Alustamiseks minge [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
 
 Juhendav kogemus aitab teil koguda uue keskkonna jaoks vajalikku teavet. Keskkondade loomiseks ja haldamiseks on vaja [administraatori õigusi](permissions.md) sihtrühma ülevaadetes.
 
@@ -64,7 +64,7 @@ Salvestades andmed Azure Data Lake Storage-sse, nõustute, et andmed kantakse ü
 > Customer Insights toetab praegu järgmist:
 > - Allaneelatud olemid Power BI andmevoogudest, mis on talletatud Microsoft Dataverse hallatavasse Data Lake'i.  
 > - Azure Data Lake Storage kontod samast Azure'i piirkonnast, mille valisite keskkonna loomisel.
-> - Azure Data Lake Storage kontod, millel on *hierarhiline nimeruum* lubatud.
+> - Azure Data Lake Storage kontod, mis on Gen2 ja millel on *lubatud hierarhiline nimeruum*. Azure Data Lake Gen1 salvestusruumikontosid ei toetata.
 
 Selle Azure Data Lake Storage suvandi puhul saate valida ressursipõhise ja kordustellimusel põhineva autentimise suvandi. Lisateavet leiate teemast [Azure Data Lake Storage kontoga ühenduse loomine Azure'i teenuse subjekti](connect-service-principal.md) abil. **Konteineri** nimi on `customerinsights` ja seda ei saa muuta.
 

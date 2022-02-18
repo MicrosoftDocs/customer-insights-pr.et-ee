@@ -4,15 +4,15 @@ metadata:
   author: m-hartmann
   description: Otsige asjakohaseid artikleid, et alustada spikri kasutamist.
   ms.author: mhart
-  ms.date: 07/30/2021
+  ms.date: 03/02/2022
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e6a658f43b382934ee9b9b55c54fc1dff3f4df72
-  ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+  ms.openlocfilehash: e154b37f57bb2765f48a9f6b38f86dffcb05f403
+  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
   ms.translationtype: HT
   ms.contentlocale: et-EE
-  ms.lasthandoff: 09/17/2021
-  ms.locfileid: "7498592"
+  ms.lasthandoff: 02/10/2022
+  ms.locfileid: "8107194"
 title: Dynamics 365 Customer Insightsi dokumentatsioon
 summary: Saate leida kasulikke ressursse, et alustada ning saada teavet Customer Insightsi funktsioonide ja võimaluste kohta.
 landingContent:
@@ -23,9 +23,13 @@ landingContent:
     - text: Customer Insightsi ülevaade
       url: overview.md
     - text: Väljalaskeplaanid
-      url: /dynamics365-release-plan/
+      url: /dynamics365/release-plans/
     - text: Avastage CDP
       url: https://dynamics.microsoft.com/ai/customer-insights/
+  - linkListType: learn
+    links:
+    - text: Customer Insights õppetee
+      url: /learn/paths/build-customer-insights/
 - title: Customer Insightsiga alustamine
   linkLists:
   - linkListType: get-started
@@ -34,8 +38,26 @@ landingContent:
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
     - text: Mis on uut sihtrühma ülevaadetes
       url: audience-insights/whats-new-audience-insights.md
-    - text: Mis on uut kaasamisülevaadetes
-      url: https://docs.microsoft.com/dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
+    - text: Lühijuhend
+      url: audience-insights/get-started.md
+  - linkListType: learn
+    links:
+    - text: Hakkame pihta
+      url: /learn/modules/get-started-customer-data-platform/
+- title: Sihtrühmaülevaadete haldamine
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Süsteemi konfigureerimine
+      url: audience-insights/system.md
+    - text: Kasutajaõiguste määratlemine
+      url: audience-insights/permissions.md
+    - text: Mitme keskkonna haldamine
+      url: audience-insights/manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Customer Insightsi haldamine
+      url: /learn/modules/administer-customer-data-platform/
 - title: Võtke ühendust
   linkLists:
   - linkListType: overview
@@ -66,16 +88,6 @@ landingContent:
       url: audience-insights/customer-card-add-in.md
     - text: Power BI konnektor
       url: audience-insights/export-power-bi.md
-- title: Sihtrühmaülevaadete haldamine
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Süsteemi konfigureerimine
-      url: audience-insights/system.md
-    - text: Kasutajaõiguste määratlemine
-      url: audience-insights/permissions.md
-    - text: Mitme keskkonna haldamine
-      url: audience-insights/manage-environments.md
 - title: Kaasamisülevaadete teave (eelversioon)
   linkLists:
   - linkListType: overview

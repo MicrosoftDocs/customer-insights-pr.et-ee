@@ -1,7 +1,7 @@
 ---
 title: Uued ja tulevased funktsioonid
-description: 'Teave uute funktsioonide, täiustuste ja veaparanduste kohta.'
-ms.date: 01/27/2022
+description: Teave uute funktsioonide, täiustuste ja veaparanduste kohta.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: et-EE
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088280"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Mis on uut Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis?
 
 
@@ -21,6 +26,17 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 
 > [!TIP]
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>2022. a jaanuari värskendus
+
+2022. aasta jaanuari värskendused sisaldavad uusi funktsioone, jõudluse uuendamist ja veaparandusi.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Kliendi tagasiside tundeanalüüs
+
+Customer Insights pakub uut tehisintellektil põhinevat funktsiooni, et sünteesida klientide tundeid ja tuvastada konkreetsed äriaspektid sihipäraste täiustuste võimalustena. Analüüsides oma klientide kirjalikku tagasisidet, saate täpseid teadmisi madalate kuludega. Sentimenti analüüs, mis põhineb loomuliku keele töötlemise (NLP) mudelitel, mis genereerivad iga kliendi ID kohta kaks tuletatud ülevaadet. Sentiment skoor (-5 kuni 5) ja nimekiri kohaldatavatest äriaspektidest. 
+
+Lisateavet vt teemast [Analyze sentiment in customer feedback (Preview)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>2021. aasta detsembrikuu värskendused
@@ -37,7 +53,7 @@ Lisateavet vt teemast [Log forwarding with Dynamics 365 Customer Insights Azure 
 
 Kasutage andmeid Microsoft Office 365, et rikastada oma kliendikonto profiile rakenduste kaudu Office 365 seotud töövõttude kohta. Töövõtuandmed koosnevad e-posti ja koosolekutegevusest, mis koondatakse konto tasandile. Näiteks ettevõttekontolt saadetud e-kirjade arv või kontoga kohtumiste arv. Üksikute kasutajate kohta andmeid ei jagata. See rikastamine on saadaval järgmistes piirkondades: Ühendkuningriik, Euroopa, Põhja-Ameerika.
 
-Lisateavet vt teemast [Rikasta kliendiprofiile kaasamisandmetega (eelvaade)](enrichment-office.md)
+Lisateavet vt teemast [Rikasta kliendiprofiile kaasamisandmetega (eelvaade)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Täpsemad andmete ühendamise funktsioonid
 
@@ -55,7 +71,7 @@ On aegu, mil peate määrama erandi üldistest reeglitest, et kirjeid mitte sobi
 
 Erandid tagavad, et andmete ebaõiget ühendamist saab käsitleda ühtlustamiseeskirjades. Reeglile saate lisada mitu erandit.
 
-Lisateavet leiate teemast [Reegli erandite lisamine](match-entities.md#add-exceptions-to-a-rule).
+Lisateavet leiate teemast [Reegli](match-entities.md#add-exceptions-to-a-rule) erandite lisamine.
 
 #### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Täiendavate konfliktide lahendamise poliitikate pakkumine ja atribuutide rühmitamise lubamine
 
