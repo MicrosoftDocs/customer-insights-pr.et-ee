@@ -9,8 +9,13 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
+ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
+ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.translationtype: HT
+ms.contentlocale: et-EE
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8010892"
 ---
-
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Ettevõtte profiilide rikastamine täiustatud ettevõtte andmetega
 
 Ettevõtte profiilide parandamiseks, täiendamiseks ja standardimiseks kasutage Microsofti mudeleid ja ettevõtte andmeid. Parema täpsuse ja ülevaate saamiseks kasutame [common data model vormingut](/common-data-model/schema/core/applicationcommon/account).

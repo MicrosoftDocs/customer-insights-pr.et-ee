@@ -1,6 +1,6 @@
 ---
 title: Tundeanalüüs klientide tagasiside jaoks
-description: 'Vaadake, kuidas kasutada tundeanalüüsi mudelit klientide tagasiside kohta Dynamics 365 Customer Insights.'
+description: Vaadake, kuidas kasutada tundeanalüüsi mudelit klientide tagasiside kohta Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: et-EE
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008760"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Kliendi tagasiside tunnete analüüsimine (eelvaade)
 
 Kliendid ootavad tänapäeval kvaliteetseid tooteid, teenuseid ja kogemusi. Eriti kliendid, kes jagavad oma tagasisidet. Organisatsioonidel on väga raske analüüsida suurenevat andmemahtu, vähendamata täpsust ja kõrgemaid tööjõukulusid. Dynamics 365 Customer Insights pakub klientide tagasiside jaoks sentimentanalüüsi mudelit, mis võimaldab organisatsioonidel oma andmeid täpsemalt ja madalama hinnaga analüüsida.

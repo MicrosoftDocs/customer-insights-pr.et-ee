@@ -1,6 +1,6 @@
 ---
 title: Olemite ühendamine andmete koondamise ajal
-description: 'Ühendage olemid, et luua koondatud kliendiprofiile.'
+description: Ühendage olemid, et luua koondatud kliendiprofiile.
 ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: et-EE
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046558"
 ---
-
 # <a name="merge-entities"></a>Olemite liitmine
 
 Liitmine on andmete ühendamise viimane etapp. Selle eesmärk on vastavusse viia vastuolus andmed. Vastuolulisteks andmeteks võivad olla kahes andmebaasis olev kliendi nimi, mida näidatakse veidi erinevalt (võrrelge: „Grant Marshall“ ja „Grant Marshal“) või erinevas vormingus telefoninumber (võrrelge: 617-803-091X ja 617803091X). Nende vastuoluliste andmepunktide liitmine toimub järgmisel alusel: atribuut atribuudi järel.
