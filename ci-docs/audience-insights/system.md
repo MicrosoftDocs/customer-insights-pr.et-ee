@@ -1,7 +1,7 @@
 ---
 title: Süsteemikonfiguratsioon sihtrühmaülevaadetes
-description: Siin on teavet Dynamics 365 Customer Insights vaatajaskonna ülevaate võimaluse süsteemisätete kohta.
-ms.date: 11/01/2021
+description: Lisateave süsteemisätete kohta Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis.
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,14 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732356"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651835"
 ---
-# <a name="system-configuration"></a>Süsteemi konfiguratsioon
-
-Süsteemikonfiguratsioonidele juurdepääsuks vaatajaskonna ülevaates valige vasakpoolsel navigeerimisribal **·** > **·** Süsteemiülesannete ja -protsesside loendi kuvamiseks Administraator.
+# <a name="system-configuration"></a>Süsteemikonfiguratsioon
 
 Leht **Süsteem** sisaldab järgmisi vahekaarte.
 - [Olek](#status-tab)
@@ -32,55 +30,39 @@ Leht **Süsteem** sisaldab järgmisi vahekaarte.
 
 ## <a name="status-tab"></a>Oleku vaehekaart
 
-**Vahekaardil Olek** saate jälgida ülesannete edenemist, andmete allaneelamist, andmeeksporti ja mitmeid muid olulisi tooteprotsesse. Vaadake sellel vahekaardil olev teave üle, et tagada aktiivsete ülesannete ja protsesside täielikkus.
+Vahekaardil **Olek** lubab jälgida andmete kogumise, andmeekspordi ja mitme muu olulise tooteprotsessi edenemist. Vaadake sellel vahekaardil olev teave üle, et tagada aktiivsete protsesside terviklikkus.
 
-Vahekaart sisaldab oleku ja erinevate protsessidega teabetöötlustabeleid. Iga tabel jälgib tööülesande **Nime** ja sellele vastavat olemit, viimase käitamise **Olekut** ja millal seda viimati **Värskendati**. Viimaste sõitude üksikasju saate vaadata, valides ülesande või protsessi nime. 
+Vahekaart sisaldab oleku ja erinevate protsessidega teabetöötlustabeleid. Iga tabel jälgib tööülesande **Nime** ja sellele vastavat olemit, viimase käitamise **Olekut** ja millal seda viimati **Värskendati**.
 
-Valige veerus Olek ülesande või protsessi kõrval olev **·** olek, et avada **·** üksikasjapaan Edenemine.
+Tööülesande viimaste käitamiste üksikasjade kuvamiseks valige selle nimi.
 
-   :::image type="content" source="media/system-progress-details.png" alt-text="Süsteemi edenemise üksikasjade paan":::
+### <a name="status-types"></a>Oleku tüübid
 
-### <a name="status-definitions"></a>Oleku määratlused
+Ülesannete jaoks on kuus tüüpi olekuid. Järgmised olekutüübid on näha ka lehtedel *Vastendamine*, *Liitmine*, *Andmeallikaid*, *Segmendid*, *Meetmed*, *Rikastamine*, *Tegevused* ja *Prognoosid*.
 
-Süsteem kasutab ülesannete ja protsesside jaoks järgmisi olekuid:
+- **Töötlemine:** toiming on pooleli. Olekuks võib muutuda kas Õnnestunud või Ebaõnnestunud.
+- **Õnnestunud:** tööülesande lõpuleviimine õnnestus.
+- **Vahele jäetud:** tööülesanne jäeti vahele. Üks või mitu järgnevat protsessi, millest see tööülessane sõltub, nurjuvad või jäid vahele.
+- **Ebaõnnestunud:** tööülesande töötlemine ebaõnnestus.
+- **Tühistatud:** kasutaja tühistas töötlemise enne selle lõpuleviimist.
+- **Järjekorda lisatud**: töötlemine on lisatud järjekorda ja algab siis, kui kõik järjekorratoimingud on lõpule viidud. Lisateavet leiate jaotisest [Värskendamise poliitika](#refresh-policies).
 
-|Olek  |Määratlus  |
-|---------|---------|
-|Tühistatud |Kasutaja tühistas töötlemise enne selle lõpetamist.   |
-|Ebaõnnestus   |Andmete sisestamisel ilmnesid tõrked.         |
-|Tõrge  |Töötlemine nurjus.  |
-|Pole alustatud   |Andmeallikas pole valmendatud andmeid või see on ikka mustandirežiimis.         |
-|Töötlemine  |Ülesanne või protsess on pooleli.  |
-|Värskendamine    |Andmete sisestamine on pooleli. Selle toimingu tühistamiseks valige **Peata värskendamine** **Toimingute** veerus. Andmeallika värskendamise peatamine ennistab selle viimase värskendamise olekusse.       |
-|Vahele jäetud  |Tööülesanne või protsess jäeti vahele. Üks või mitu järgnevat protsessi, millest see tööülessane sõltub, nurjuvad või jäid vahele.|
-|Tehtud  |Ülesanne või protsess on edukalt lõpule viidud. Andmeallikate puhul näitab, et andmed on edukalt neelatud, kui aeg on mainitud **·** veerus Värskendatud.|
-|Järjekorras | Töötlemine on järjekorras ja käivitub, kui kõik eelnevad ülesanded ja protsessid on lõpule viidud. Lisateavet vt teemast [Refresh processes](#refresh-processes).|
+### <a name="refresh-policies"></a>Värskendamise poliitika
 
-### <a name="refresh-processes"></a>Värskenda protsessid
+Selles loendis kuvatakse iga põhiprotsessi värskendamise poliitika.
 
-Tööülesannete ja protsesside värskendamine käivitatakse vastavalt [konfigureeritud ajakavale](#schedule-tab). 
+- **Andmeallikad:** käivitub vastavalt [konfigureeritud ajakavale](#schedule-tab). Ei sõltu muudest protsessidest. Vastendamine sõltub selle protsessi edukast lõpuleviimisest.
+- **Vastendamine:** käivitub vastavalt [konfigureeritud ajakavale](#schedule-tab). Sõltub vastenduse määratluses kasutatud andmeallikate töötlemisest. Ühendamine sõltub selle protsessi edukast lõpuleviimisest.
+- **Ühendamine:** käivitub vastavalt [konfigureeritud ajakavale](#schedule-tab). Sõltub vastenduse protsessi lõpuleviimisest. Segmendid, meetmed, rikastamine, otsing, tegevused, prognoosid ja andmete ettevalmistamine sõltuvad selle protsessi edukast lõpuleviimisest.
+- **Segmendid**: käivitatakse käsitsi (ühekordne värskendamine) ja vastavalt [konfigureeritud ajakavale](#schedule-tab). Sõltub ühendamisest. Ülevaated sõltuvad selle töötlemisest.
+- **Meetmed**: käivitatakse käsitsi (ühekordne värskendamine) ja vastavalt [konfigureeritud ajakavale](#schedule-tab). Sõltub ühendamisest.
+- **Tegevused**: käivitatakse käsitsi (ühekordne värskendamine) ja vastavalt [konfigureeritud ajakavale](#schedule-tab). Sõltub ühendamisest.
+- **Rikastamine**: käivitatakse käsitsi (ühekordne värskendamine) ja vastavalt [konfigureeritud ajakavale](#schedule-tab). Sõltub ühendamisest.
+- **Otsing**: käivitatakse käsitsi (ühekordne värskendamine) ja vastavalt [konfigureeritud ajakavale](#schedule-tab). Sõltub ühendamisest.
+- **Andmete ettevalmistamine:** käivitub vastavalt [konfigureeritud ajakavale](#schedule-tab). Sõltub ühendamisest.
+- **Ülevaated**: käivitatakse käsitsi (ühekordne värskendamine) ja vastavalt [konfigureeritud ajakavale](#schedule-tab). Sõltub segmentidest.
 
-|Töötle  |Kirjeldus  |
-|---------|---------|
-|Tegevus  |Käivitatakse käsitsi (ühekordne värskendamine). Sõltub koosteprotsessist. Ülevaated sõltuvad selle töötlemisest.|
-|Analüüsi linkimine |Käivitatakse käsitsi (ühekordne värskendamine). Sõltub segmentidest.  |
-|Analüüsi ettevalmistamine |Käivitatakse käsitsi (ühekordne värskendamine). Sõltub segmentidest.  |
-|Andmete ettevalmistamine   |Sõltub ühendamisest.   |
-|Andmeallikad   |Ei sõltu muudest protsessidest. Vastendamine sõltub selle protsessi edukast lõpuleviimisest.  |
-|Rikastamised   |Käivitatakse käsitsi (ühekordne värskendamine). Sõltub koosteprotsessist. |
-|Ekspordi sihtkohad |Käivitatakse käsitsi (ühekordne värskendamine). Sõltub segmentidest.  |
-|Ülevaated |Käivitatakse käsitsi (ühekordne värskendamine). Sõltub segmentidest.  |
-|Ärianalüüs   |Sõltub ühendamisest.   |
-|Vastenda |Sõltub vastenduse määratluses kasutatud andmeallikate töötlemisest.      |
-|Näitajad  |Käivitatakse käsitsi (ühekordne värskendamine). Sõltub koosteprotsessist.  |
-|Ühendamine   |Sõltub vastenduse protsessi lõpuleviimisest. Segmendid, meetmed, rikastamine, otsing, tegevused, prognoosid ja andmete ettevalmistamine sõltuvad selle protsessi edukast lõpuleviimisest.   |
-|Profiilid   |Käivitatakse käsitsi (ühekordne värskendamine). Sõltub koosteprotsessist. |
-|Otsige   |Käivitatakse käsitsi (ühekordne värskendamine). Sõltub koosteprotsessist. |
-|Segmendid  |Käivitatakse käsitsi (ühekordne värskendamine). Sõltub koosteprotsessist. Ülevaated sõltuvad selle töötlemisest.|
-|Süsteem   |Sõltub vastenduse protsessi lõpuleviimisest. Segmendid, meetmed, rikastamine, otsing, tegevused, prognoosid ja andmete ettevalmistamine sõltuvad selle protsessi edukast lõpuleviimisest.   |
-|Kasutaja  |Käivitatakse käsitsi (ühekordne värskendamine). Sõltub olemite kohta.  |
-
-Saate valida protsessi oleku, et näha kogu selle töö edenemise üksikasju, milles see oli. Ülaltoodud värskendusprotsessid aitavad mõista, mida saate teha **vahelejäetud** või järjekorras **seisnud tööülesande või protsessi** lahendamiseks.
+Kogu seda sisaldava töö edenemise üksikasjade nägemiseks valige tööülesande olek. Eelnimetatud värskendamise poliitika aitab mõista, mida saate teha **Vahele jäetud** või **Järjekorda pandud** tööülesandega tegelemiseks.
 
 ## <a name="schedule-tab"></a>Ajastamise vahekaart
 
@@ -104,7 +86,7 @@ Vahekaart **Teave** sisaldab teie organisatsiooni **Kuvatavat nime**, aktiivset 
 
 Vahekaardil **Üldine** saate muuta keelt ja riigi/regiooni vormingut.
 
-Kliendiülevaade [toetab paljusid keeli](/dynamics365/get-started/availability). Rakendus kasutab teie keele-eelistust, et kuvada teie eelistatud keeles elemente, nt menüü, silditekst ja süsteemiteated.
+Customer Insights [toetab mitmeid keeli](/dynamics365/get-started/availability). Rakendus kasutab teie keele-eelistust, et kuvada teie eelistatud keeles elemente, nt menüü, silditekst ja süsteemiteated.
 
 Käsitsi sisestatud imporditud andmeid ja teavet ei tõlgita.
 
@@ -127,7 +109,7 @@ Leidke API reaalajas kasutamise üksikasju ja vaadake, millised sündmused toimu
 
 -  **Toimingud** – tabel, kus on reaga iga saadaolev API-toiming ja teave toimingute kasutamise kohta. Võite valida toimingu nime, et minna [API-viitele](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Toimingud, mis kasutavad [reaalajas andmete allaneelamist,](real-time-data-ingestion.md) sisaldavad binokli sümboliga nuppu, et vaadata reaalajas API kasutust. Valige nupp, et avada külgpaan, mis sisaldab reaalajas API kasutamise üksikasju praeguses keskkonnas.   
+   [Reaalajalisi andmeatrikulaate](real-time-data-ingestion.md) kasutavad toimingud sisaldavad binokulaarse sümboliga nuppu reaalaja API kasutuse kuvamiseks. Valige nupp, et avada külgpaan, mis sisaldab reaalajas API kasutamise üksikasju praeguses keskkonnas.   
    Kasutage paanil **Reaalajaline API kasutus** välja **Rühmita kui**, et valida kuidas reaalajalist suhtlust kõige paremini esitada. Andmeid saate rühmitada API meetodi, olemi kvalifitseeritud nime (valmendatud olem), looja (sündmuse allikas), tulemuse (õnnestumine või nurjumine) või tõrkekoodide järgi. Andmed on saadaval ajaloodiagrammina ja tabelina.
 
 ## <a name="security-tab"></a>Turvevahekaart

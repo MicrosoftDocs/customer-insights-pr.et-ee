@@ -1,7 +1,7 @@
 ---
 title: Tabelitega ühenduse loomine Microsoft Dataverse -is
 description: Andmete importimine Microsoft Dataverse'i hallatavast andmejärvest.
-ms.date: 12/06/2021
+ms.date: 07/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,25 +9,22 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: 436345d8932820eb4c517a9e9164b1377c1f62d3
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: f92d64723e6a4d2fcebdbb3758519d4bfd4aeaf4
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046420"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692569"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Andmetega ühendamine Microsoft Dataverse’i hallatavas andmejärves
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-
-See artikkel annab teavet selle kohta, kuidas Dataverse kasutajad saavad hallatava järve analüütiliste üksustega Microsoft Dataverse kiiresti ühendust võtta. 
-
-> [!NOTE]
-> Hallatavas järves Dataverse saadaolevate olemite loendi vaatamiseks peate olema organisatsiooni administraator.
+Selles artiklis antakse teavet selle kohta kuidas Dataverse -i kasutajad saavad Dataverse hallatavas järves kiiresti analüüsiüksustega ühendust luua. Peate olema Dataverse'i organisatsiooni administraator, et jätkata ja näha hallatavas järves saadaolevate olemite loendit.
 
 ## <a name="important-considerations"></a>Olulised kaalutlused
 
-Võrguteenustes nagu Azure Data Lake Storage talletatavaid andmeid saab talletada muus asukohas kui see, kus andmeid rakenduses Dynamics 365 Customer Insights töödeldakse või talletatakse.Veebiteenustes talletatud andmete importimisel või nendega ühenduse loomisel nõustute, et andmeid saab edastada ja talletada.Dynamics 365 Customer Insights  [Lisateavet leiate Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
+Võrguteenustes nagu Azure Data Lake Storage talletatavaid andmeid saab talletada muus asukohas kui see, kus andmeid rakenduses Dynamics 365 Customer Insights töödeldakse või talletatakse. Kui impordite võrguteenustes talletatavaid andmeid või ühendate konto teenusega, siis nõustute, et andmeid võidakse transportida ja salvestada rakenduses Dynamics 365 Customer Insights. [Lisateavet leiate Microsofti usalduskeskusest.](https://www.microsoft.com/trust-center)
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Teenuse Dataverse hallatava järvega ühenduse loomine
 
@@ -35,9 +32,12 @@ Võrguteenustes nagu Azure Data Lake Storage talletatavaid andmeid saab talletad
 
 2. Valige **Lisa andmeallikas**.
 
-3. Valige **Microsoft Dataverse** ja valige **Edasi**.
+3. Valige **Connect Microsoft Dataverse -i hallatavate järvedega** ja seejärel **Edasi**.
 
-4. Sisestage andmeallika **Nimi** ja valige **Järgmine**. 
+4. Sisestage andmeallika **Nimi** ja valige **Järgmine**. Nime juhised: 
+   - peab algama tähega;
+   - kasutage ainult tähti ja numbreid; erimärkide ja tühikute sisestamine pole lubatud;
+   - kasutage 3–64 tähemärki.
 
 5. Sisestage **Serveri aadress** Dataverse organisatsiooni jaoks ja seejärel valige **Sisselogimine**.
 

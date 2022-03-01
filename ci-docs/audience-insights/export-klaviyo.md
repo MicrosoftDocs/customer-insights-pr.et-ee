@@ -1,7 +1,7 @@
 ---
 title: Customer Insights andmete eksportimine Klaviyo'sse
 description: Vaadake, kuidas konfigureerida ühendust ja eksportida Klaviyo.
-ms.date: 10/08/2021
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5f7c91afed8eeb1f767f1efc58dceb7782c37bb4
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619068"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7385783"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Segmendiloendite eksportimine Klaviyosse (eelvaade)
 
@@ -28,10 +28,10 @@ Eksportige ühtsete kliendiprofiilide segmendid Klaviyo ja kasutage neid turundu
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Klaviyo'sse saate ekspordi kohta kokku eksportida kuni 100 000 kliendiprofiili.
+- Iga ekspordi kohta saate Klaviyosse eksportida kuni 100 000 profiili.
 - Klaviyo eksportimine on piiratud segmentidega.
-- Kuni miljoni kliendiprofiili eksportimine Klaviyo'sse võib võtta kuni 20 minutit. 
-- Kliendiprofiilide arv, mida saate Klaviyo'sse eksportida, sõltub ja on piiratud vastavalt teie Klaviyo lepingule.
+- Kuni 1 miljoni profiili eksportimiseks Klaviyosse võib kuluda kuni 20 minutit. 
+- Klaviyo'sse eksporditavate profiilide arv sõltub Klaviyo lepingust ja on piiratud.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Klaviyo ühenduse häälestamine
 
@@ -67,7 +67,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage oma [**Klaviyo loendi ID**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
 
-3. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Segmentide Klaviyo eksportimine on vajalik.
+3. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Segmentide Klaviyo eksportimine on vajalik.
 
 1. Valige **Salvesta**.
 

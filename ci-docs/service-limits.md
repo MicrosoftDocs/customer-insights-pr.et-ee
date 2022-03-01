@@ -1,5 +1,5 @@
 ---
-title: Teenuse limiidid Dynamics 365 Customer Insights
+title: Teenusepiirangud rakenduses Dynamics 365 Customer Insights
 description: Tutvuge piirangutega.
 ms.date: 09/03/2021
 ms.service: customer-insights
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7791976"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483659"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Teenusepiirangud rakenduse Customer Insights võimalustes
 
@@ -22,11 +22,11 @@ Selles artiklis kirjeldatakse rakendusse Customer Insights sisseehitatud piirang
 
 ## <a name="audience-insights"></a>Sihtrühmaülevaated
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Teenuselimiidid Dynamics 365 Customer Insights vaatajaskonna ülevaate võimekuses
+### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Teenusepiirangud Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis
 
 | Ala  | Limiidid  | Märkused |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmendid, mõõdud ja prognoosid | 300  | [Segmentide, mõõtude ja prognooside koguarv](audience-insights/segments.md) kokku ei tohi [...](audience-insights/measures.md)[...](audience-insights/predictions.md) ületada 300.  |
+| Segmendid ja näitajad | 100 segmenti või näitajat. | Aktiivsete [segmentide](audience-insights/segments.md) ja [näitajate](audience-insights/measures.md) koguarv ei tohi ületada 100.  |
 | Suhtlused | 20 sügavustaset olemitee seoste puhul. | Luues [segmente](audience-insights/segments.md) või [mõõte](audience-insights/measures.md) kasutades meisterdamisliidest, võib olemiteedel olla kuni 20 seosehüpet alguse- ja lõpuolemi vahel.  |
 
 

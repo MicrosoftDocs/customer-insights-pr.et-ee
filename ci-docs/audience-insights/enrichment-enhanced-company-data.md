@@ -1,7 +1,7 @@
 ---
 title: Ettevõtte andmete täiustamine
 description: Rikastage ja normaliseerige ettevõtte andmeid Microsofti mudelitega.
-ms.date: 01/19/2022
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,20 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010892"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813913"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Ettevõtte profiilide rikastamine täiustatud ettevõtte andmetega
 
-Ettevõtte profiilide parandamiseks, täiendamiseks ja standardimiseks kasutage Microsofti mudeleid ja ettevõtte andmeid. Parema täpsuse ja ülevaate saamiseks kasutame [common data model vormingut](/common-data-model/schema/core/applicationcommon/account).
+Ettevõtte profiilide parandamiseks, täiendamiseks ja standardimiseks kasutage Microsofti mudeleid ja ettevõtte andmeid. Parema täpsuse ja ülevaate saamiseks kasutame [common data model](/common-data-model/schema/core/applicationcommon/account) vormingut.
 
 ## <a name="how-we-enhance-company-data"></a>Kuidas me ettevõtte andmeid täiustame?
 
-Meie mudel läbib kaheastmelise protsessi ettevõtte profiili suurendamiseks. Esiteks normaliseerib see ettevõtte nime. Näiteks *Microsoft Corp* parandatakse ja standardiseeritakse Microsoft *Corporationiks*. See püüab leida vastet Microsofti koostatud ettevõtte andmetest. Kui leitakse vaste, rikastame ettevõtte profiili meie koostatud ettevõtte andmetest saadud teabega, sealhulgas ettevõtte nimest.
+Meie mudel läbib kaheastmelise protsessi ettevõtte profiili suurendamiseks. Esiteks normaliseerib see ettevõtte nime. Näiteks *Microsoft Corp* parandatakse ja standardiseeritakse *Microsoft Corporationiks*. See püüab leida vastet Microsofti koostatud ettevõtte andmetest. Kui leitakse vaste, rikastame ettevõtte profiili meie koostatud ettevõtte andmetest saadud teabega, sealhulgas ettevõtte nimest.
 
 
 ### <a name="example"></a>Näide
@@ -58,7 +58,7 @@ Täiustatud andmetega on mõned piirangud. Mudel ei toeta allolevas loendis olev
 
 1. Avage **Andmed** > **Rikastamine**.
 
-1. Valige Paanil **Täiustatud** ettevõtte andmepaan **suvand Rikasta minu andmeid**.
+1. Valige **·** **Paanil Täiustatud ettevõtte andmepaan suvand Rikasta minu** andmeid.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Rikastamisplaat ettevõtte andmete rikastamiskeskuses.":::
 
@@ -82,19 +82,9 @@ Rikastamistoimingu käivitamiseks valige käsuribalt suvand **Käivita**. Samuti
 
 Kui rikastamistoiming on tehtud, saate värskelt rikastatud klientide profiile üle vaadata suvandi **Minu rikastamised** alt. Peale selle näete ka viimase värskenduse aega ja rikastatud profiilide arvu.
 
-Rikastatud andmete näidist näete paanil **Rikastatud kliendid** eelvaates. Valige **Vaata lisaks** ja vali **vahekaart Andmed**, et pääseda juurde iga rikastatud profiili üksikasjalikule vaatele.
+Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **Kuva rikastatud andmed**.
 
-### <a name="overview-card"></a>Ülevaate kaart
-
-Ülevaatekaardil kuvatakse üksikasjad rikastamise katvuse kohta. 
-
-* **Töödeldud ja muudetud** ettevõtted: edukalt rikastatud kliendiettevõtete profiilide arv.
-
-* **Töödeldud ja muutmata** ettevõtted: kliendiettevõtte profiilide arv, mis tuvastati, kuid mida ei muudetud. See juhtub tavaliselt siis, kui sisendandmed on kehtivad ja rikastamine ei saa neid parandada.
-
-* **Ettevõtted, mida ei töödeldud ega muudetud**: kliendiettevõtte profiilide arv, mida ei tuvastatud. See juhtub tavaliselt sisendandmete puhul, mis on kehtetud või mida rikastamine ei toeta.
-
-## <a name="next-steps"></a>Järgmised toimingud
+## <a name="next-steps"></a>Järgmised etapid
 
 [!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 

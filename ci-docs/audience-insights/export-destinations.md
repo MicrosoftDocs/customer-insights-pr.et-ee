@@ -1,141 +1,97 @@
 ---
-title: Andmete eksportimine Customer Insights
-description: Andmete jagamiseks hallake eksporti.
-ms.date: 11/01/2021
-ms.reviewer: mhart
+title: Ekspordisihtkohad
+description: Andmete eksportimine ja eksportimise sihtkohtade haldamine.
+ms.date: 07/21/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05485fc7def3d699d5179bcaa005ceb57024f840
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977962"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4643858"
 ---
-# <a name="exports-preview-overview"></a>Eksportimine (eelversioon) ülevaade
+# <a name="export-destinations-preview"></a>Ekspordisihtkohad (eelvaade)
 
-Lehel **Ekspordid** näete kõiki konfigureeritud eksporte. Ekspordid jagavad erinevate rakendustega konkreetseid andmeid. Need võivad sisaldada kliendiprofiile, olemeid, skeeme ja vastendamise üksikasju. Iga ekspordi jaoks on vaja [ühendust, mille on seadistanud administraator, et hallata autentimist ja juurdepääsu](connections.md).
+Lehel **Ekspordi sihtkohad** kuvatakse kõik sihtkohad, mis olete seadistanud andmete eksportimiseks. Samuti saate lisada uusi eksportimise sihtkohti. Lisaks kuvatakse siin praegu saadaolevad eksportimissuvandid. Saate kiire ülevaate, kirjelduse ning teabe selle kohta, mida saate iga laiendatavuse valiku abil teha. Eksportige ühendatud profiilid, meetmed ja segmendid teie äri jaoks olulistesse toetatud rakendustesse.
 
-Minge **Andmed** > **Ekspordid**, et näha ekspordilehte. Kõik kasutajarollid saavad vaadata konfigureeritud eksporti. Kasutage käsuriba otsinguvälja, et leida eksporti nime, ühenduse nime või ühenduse tüübi järgi.
+Avage jaotis **Administraator** > **Eksportimise sihtkohad**, et näha järgmisi laiendatavuse valikuid.
 
-## <a name="export-types"></a>Ekspordi tüübid
+- [Dynamics 365 kliendikaardi lisandmoodul](customer-card-add-in.md)
+- [Facebooki reklaamihalduri konnektor](export-facebook.md)
+- [Power Automate'i konnektor](export-power-automate.md)
+- [Power Apps'i konnektor](export-power-apps.md)
+- [Power BI'i konnektor](export-power-bi.md)
+- [DotDigital](export-dotdigital.md)
+- [Dynamics 365 Sales](export-dynamics365-sales.md)
+- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
+- [Azure’i bloobimälu](export-azure-blob-storage.md)
+- [LiveRamp&reg; konnektor](export-liveramp.md)
+- [Microsoft Teamsi robot](export-teams-bot.md)
+- [Mailchimp](export-mailchimp.md)
+- [Customer Insightsi API](apis.md)
 
-Eksporditüüpe on kaks peamist:  
+## <a name="add-a-new-export-destination"></a>Uue ekspordi sihtkoha lisamine
 
-- **Andmeekspordiga** saate eksportida mis tahes tüüpi sihtrühma ülevaadetes saadaolevaid olemeid. Ekspordiks valitud olemid eksporditakse kõigi andmeväljade, metaandmete, skeemide ja vastendamise üksikasjadega. 
-- **Segmendi eksporti** abil saate eksportida segmendi olemeid sihtrühma ülevaadetest. Segmendid esindavad kliendiprofiilide loendit. Eksportimise konfigureerimisel valite kaasatud andmeväljad, olenevalt sihtsüsteemist, kus andmeid ekspordite. 
+Eksportimise sihtkohtade lisamiseks on teil vaja [administraatoriõigusi](permissions.md). Kui ekspordite Microsofti teenustesse, eeldame, et mõlemad teenused on samas organisatsioonis.
 
-### <a name="export-segments"></a>Ekspordi segmendid
+1. Avage **Haldus** > **Ekspordi sihtkohad**.
 
-**Segmentide eksportimine keskkondades äriettevõtete (B2B) või eratarbijate jaoks (B2C)**  
-Enamik ekspordisuvandeid toetab mõlemat tüüpi keskkondi. Segmentide eksportimisel erinevatesse sihtsüsteemidesse on erinõuded. Üldiselt sisaldavad segmendi liige ja kliendiprofiil kontaktteavet. Kuigi see kehtib enamasti eratarbijate (B2C) põhinevate segmentide puhul, ei pruugi see käia ärikontodel (B2B) põhinevate segmentide kohta. 
+1. Vahetage vahekaardile **Minu ekspordi sihtkohad**.
 
-**Segmendi ekspordikeskkonnad ärikontode jaoks (B2B)**  
-- Segmendid ärikontode keskkondades on rajatud *konto* olemile. Konto segmentide eksportimiseks nagu see on, peab sihtsüsteem toetama puhtaid konto segmente. See kehtib [LinkedIn'i](export-linkedin-ads.md) kohta, kui valite ekspordi määratlemisel suvandi **ettevõte**.
-- Kõik muud sihtsüsteemid nõuavad kontaktiolemi välju. Tagamaks, et ettevõtte segmendid saavad tuua andmeid seotud kontaktidest, peab teie segmendi määratluses olema kontakti olemi projektiatribuudid. Lisateave [segmentide ja projektiatribuutide konfigureerimise kohta](segment-builder.md).
+1. Uue ekspordi sihtkoha loomiseks valige suvand **Lisa sihtkoht**.
 
-**Segmentide eksport keskkondades eratarbijatele (B2C)**  
-- Segmendid üksikutele klientidele mõeldud keskkondade kontekstis on üles ehitatud olemile *ühendatud kliendiprofiil*. Iga sihtsüsteemide nõuetele (näiteks meiliaadressi) vastavad segmendid võidakse eksportida.
+1. Valige paanil **Lisa sihtkoht** rippmenüüd ekspordi sihtkoha **tüüp**.
 
-**Segmendiekspordi piirangud**  
-- Muude tootjate sihtsüsteemid võivad piirata ekspordita kliendiprofiilide arvu. 
-- Üksikklientide puhul näete segmendiliikmete tegelikku arvu, kui valite eksportimiseks segmendi. Liiga suure segmendi korral kuvatakse hoiatus. 
-- Äriettevõtete puhul näete segmenti kaasatud ettevõtete arvu; küll aga ei näidata nende kontaktide arvu, mida saab projekteerida. Mõnel juhul võib see kaasa tuua eksporditud segmendi, mis sisaldab tegelikult rohkem kliendiprofiile kui sihtsüsteem aktsepteerib. Sihtsüsteemide tulemuste piirangute ületamine jätab ekspordi vahele. 
+1. Sisestage nõutud üksikasjad ja valige **Edasi**, et luua ekspordi sihtkoht.
 
-## <a name="set-up-a-new-export"></a>Uue ekspordi seadistamine  
-Ekspordi seadistamiseks või redigeerimiseks peavad teil olema saadaval ühendused. Ühendused sõltuvad teie [kasutajarollist](permissions.md):
-- **Administraatoritel** on juurdepääs kõigile ühendustele. Nad saavad ekspordi seadistamisel luua ka uusi ühendusi.
-- **Kaastöötajatel** on juurdepääs kindlatele ühendustele. Nad sõltuvad administraatoritest, et ühendusi konfigureerida ja jagada. Ekspordiloendis kuvatakse kaastöötajad, kes saavad veergu **Teie õigused** eksportimist muuta või ainult vaadata. Lisateavet leiate teemast [Luba toetajatel kasutada ekspordiühendust](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- **Vaaturid** saavad kuvada ainult olemasolevaid eksporte, mitte neid luu.
+Samuti saate valida vahekaardi **Tuvastamine** paanil suvandi **Häälestamine**.
 
-### <a name="define-a-new-export"></a>Uue ekspordi määratlemine
+## <a name="view-export-destinations"></a>Ekspordi sihtkohtade kuvamine
 
-1. Minge **Andmed** > **Ekspordid**.
+Pärast ekspordi sihtkohtade loomist leiate need tabelist vahekaardil **Minu ekspordi sihtkohad**. Sellel tabelil on kolm veergu.
 
-1. Uue ekspordi loomiseks valige **Lisa eksport**.
+- **Kuvatav nimi**: nimi, mille sisestasite sihtkoha loomisel.
+- **Tüüp**: eksportimise sihtkoha tüüp, mille määrate sihtkoha loomisel.
+- **Loomiskuupäev**: sihtkoha loomise kuupäev.
 
-1. Valige **Ekspordi loomine** paanil ühendus, mida kasutada. [Ühendusi](connections.md) haldavad administraatorid. 
+## <a name="edit-an-export-destination"></a>Ekspordi sihtkoha redigeerimine
 
-1. Sisestage nõutavad üksikasjad ja valige **Salvesta** eksportimise loomiseks.
+1. Klõpsake redigeeritava ekspordi sihtkoha juures kolmel vertikaalsel punktil.
 
-### <a name="define-a-new-export-based-on-an-existing-export"></a>Uue ekspordi määratlemine olemasoleva ekspordi põhjal
+   > [!div class="mx-imgBorder"]
+   > ![Kolm vertikaalset punkti](media/export-destinations-page-ellipsis.png "Kolm vertikaalset punkti")
 
-1. Minge **Andmed** > **Ekspordid**.
+1. Valige rippmenüüst suvand **Redigeeri**.
 
-1. Valige eksportide loendis eksport, mille soovite duplitseerida.
+1. Muutke väärtusi, mis vajavad värskendamist, ja valige **Salvesta**.
 
-1. Valitud ekspordi üksikasjadega paani **Defineeri eksport** avamiseks valige käsuribal **Loo duplikaat**.
+## <a name="export-data-on-demand"></a>Andmete eksport nõudmisel
 
-1. Vaadake eksportimine läbi ja kohandage seda ning valige uue ekspordi loomiseks käsk **Salvesta**.
+Pärast ekspordi sihtkoha konnektori konfigureerimist käivitatakse eksport iga [ajastatud värskendusega](system.md#schedule-tab).
 
-### <a name="edit-an-export"></a>Ekspordi redigeerimine
+Andmete eksportimiseks ilma ajastatud värskendamist ootamata, avage vahekaart **Minu ekspordi sihtkohad** suvandis **Haldus** > **Ekspordi sihtkohad**.
 
-1. Minge **Andmed** > **Ekspordid**.
+> [!div class="mx-imgBorder"]
+> ![Kolm vertikaalset punkti](media/export-destinations-page-ellipsis.png "Kolm vertikaalset punkti")
 
-1. Valige eksportide loendis eksport, mille soovite redigeerida.
+- Kõigi ekspordi sihtkohtade samaaegse ekspordi käitamiseks valige loendi kohal käsk **Ekspordi**,
+- Valige loendiüksuse järel kolmikpunkt (...) ja seejärel valige suvand **Ekspordi**, et käivitada eksportimine ühe ekspordi sihtkoha jaoks.
 
-1. Valige käsuribal käsk **Redigeeri**.
+## <a name="remove-an-export-destination"></a>Ekspordi sihtkoha eemaldamine
 
-1. Muutke värskendatavad väärtused ja valige **Salvesta**.
+Ekspordi sihtkoha eemaldamiseks alustage lehelt **Ekspordi sihtkohad**.
 
-## <a name="view-exports-and-export-details"></a>Ekspordi ja ekspordi üksikasjade kuvamine
+1. Klõpsake eemaldatava ekspordi sihtkoha juures kolmel vertikaalsel punktil.
 
-Pärast ekspordi sihtkoha loomist on need ära toodud **Andmed** > **Ekspordid** loendis. Kõik kasutajad saavad vaadata, milliseid andmeid jagatud on ning nende värskeimat olekut.
+   > [!div class="mx-imgBorder"]
+   > ![Kolm vertikaalset punkti](media/export-destinations-page-ellipsis.png "Kolm vertikaalset punkti")
 
-1. Minge **Andmed** > **Ekspordid**.
+2. Valige rippmenüüst **Eemalda**.
 
-1. Redigeerimisõigusteta kasutajad valivad **Vaade** ekspordi üksikasjade kuvamiseks **Redigeeri** asemel.
-
-1. Kõrvalpaanil kuvatakse ekspordi konfiguratsioon. Ilma redigeerimisõiguseta ei saa väärtusi muuta. Valige **Sulge** ekspordilehele naasmiseks.
-
-## <a name="schedule-and-run-exports"></a>Ajasta ja käivita ekspordid
-
-Igal konfigureeritud ekspordil on värskendusgraafik. Värskendamise ajal otsib süsteem uusi või värskendatud andmeid, mida eksporti kaasata. Vaikimisi käitatakse eksport iga [kavandatud süsteemivärskenduse](system.md#schedule-tab) osana. Saate värskendamise ajakava kohandada või selle käsitsi eksportimise käivitamiseks välja lülitada.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
-
-Ekspordigraafikud sõltuvad teie keskkonna olekust. Kui värskendused on pooleli [sõltuvused](system.md#refresh-processes), kui määratud eksport peaks algama, viib süsteem värskendused esmalt lõpule ja käivitab seejärel ekspordi. Näete, millal eksporti viimati veerus **Värskendati**.
-
-### <a name="schedule-exports"></a>Eksportide ajastamine
-
-Kohandatud värskendusgraafikuid saab määratleda nii üksiku ekspordi kui ka mitme ekspordi jaoks korraga. Praegu määratletud ajakava on ära toodud ekspordiloendi veerus **Ajakava**. Ajakava muutmise õigus on sama, mis [eksportide redigeerimise ja määratlemise](export-destinations.md#set-up-a-new-export) õigus. 
-
-1. Minge **Andmed** > **Ekspordid**.
-
-1. Valige eksport, mille soovite ajastada.
-
-1. Valige käsuribal käsk **Ajasta**.
-
-1. Määrake paanil **Ajasta eksportimine**, et muuta suvandi **Ajasta käivitus** väärtuseks **Sees** käitamisel automaatselt. Käsitsi värskendamiseks seadke selle väärtuseks **Väljas**.
-
-1. Valige automaatselt värskendatud ekspordi korral väärtus **Korduvus** ja määrake selle üksikasjad. Määratletud aeg kehtib kõigile korduvuse eksemplaridele. On aeg, mil eksport peaks käivituma värskendamisel.
-
-1. Muudatuste rakendamiseks ja aktiveerimiseks klõpsake nuppu **Salvesta**.
-
-Mitme ekspordi ajakava redigeerimisel peate tegema valiku jaotises **Säilita või kirjuta graafikud üle**.
-- **Säilitage üksikud ajakavad**. Saate säilitada valitud ekspordi jaoks varem määratletud ajakava ja ainult keelata või lubada neid.
-- **Kõigi valitud ekspordite jaoks uue ajakava määratlemine**: valitud ekspordi olemasolevate graafikute ülekirjutamine.
-
-### <a name="run-exports-on-demand"></a>Käita ekspordid nõudmisel
-
-Andmete eksportimiseks ilma ajastatud värskendamist ootamata minge **Andmed** > **Eksport**.
-
-- Kõigi ekspordite käivitamiseks valige **Käivita kõik** käsuribalt. Selle toiminguga käitatakse ainult aktiivse ajakavaga eksport.
-- Ühe ekspordi käivitamiseks valige see loendist ja valige käsuribalt **Käivita**. Nii käitate eksportimist ilma aktiivse ajakavata. 
-
-## <a name="remove-an-export"></a>Ekspordi eemaldamine
-
-1. Minge **Andmed** > **Ekspordid**.
-
-1. Valige eksport, mille soovite eemaldada.
-
-1. Valige käsuribal käsk **Eemalda**.
-
-1. Eemaldamise kinnitamiseks valige kinnitusekraanil **Eemalda**.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+3. Eemaldamise kinnitamiseks valige kinnitusekraanil **Eemalda**.

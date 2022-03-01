@@ -2,19 +2,19 @@
 title: Reaalajas andmete valmendamine ja selle piirangud
 description: Üldine teave reaalajas võimaluste kohta sihtrühmaülevaadetes.
 ms.date: 10/27/2020
-ms.reviewer: mhart
+ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 897c876306a39cd9d5842487b96cb2f0a8df7e656de0fb7f10fe8c7f53e2db6b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035272"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689170"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Reaalajas andmete valmendamine (eelvaade)
 
@@ -54,7 +54,7 @@ Reaalajas API võimaldab teil avaldada uue tegevuse oma lähtesüsteemist (indiv
 
 Reaalajas API-ga ühenduse loomiseks on kaks võimalust.
 
-- [kaudselt](#connect-via-the-dynamics-365-customer-insights-connector), kasutades [Dynamics 365 Customer Insightskonnektorit](/connectors/customerinsights/)
+- [kaudselt](#connect-via-the-dynamics-365-customer-insights-connector), kasutades [Dynamics 365 Customer Insightskonnektorit](https://docs.microsoft.com/connectors/customerinsights/)
 - [otse](#connect-directly-to-the-real-time-api), koodiga
 
 Mõlemal viisil on järgmised eeltingimused.
@@ -66,13 +66,13 @@ Mõlemal viisil on järgmised eeltingimused.
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Ühenduse loomine Dynamics 365 Customer Insights-i konnektori kaudu
 
-Reaalaja API saab alla laadida andmeid spetsiaalsest Power Platform-i konnektorist, [Dynamics 365 Customer Insights-i konnektor](/connectors/customerinsights/), ilma et oleks vaja kirjutada ja kasutada mis tahes koodi.    
-Konnektor saab teha samu reaalajalisi toiminguid nagu API. Premium-taseme konnektorite jaoks vajate sobivat litsentsi. Lisateavet vt teemast [Power Apps-i ja Power Automate-i litsentsimise KKK](/power-platform/admin/powerapps-flow-licensing-faq).
+Reaalaja API saab alla laadida andmeid spetsiaalsest Power Platform-i konnektorist, [Dynamics 365 Customer Insights-i konnektor](https://docs.microsoft.com/connectors/customerinsights/), ilma et oleks vaja kirjutada ja kasutada mis tahes koodi.    
+Konnektor saab teha samu reaalajalisi toiminguid nagu API. Premium-taseme konnektorite jaoks vajate sobivat litsentsi. Lisateavet vt teemast [Power Apps-i ja Power Automate-i litsentsimise KKK](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps ja/või Power Automate](/connectors/)
-- Azure [Logicu rakendused](/azure/connectors/apis-list)
+- Power Platform [Power Apps ja/või Power Automate](https://docs.microsoft.com/connectors/)
+- Azure [Logicu rakendused](https://docs.microsoft.com/azure/connectors/apis-list)
 
-Voogude loomise üksikasjad leiate [Power Automate-i dokumentatsioonist](/power-automate/).
+Voogude loomise üksikasjad leiate [Power Automate-i dokumentatsioonist](https://docs.microsoft.com/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Otse reaalajas API-ga ühenduse loomine
 
@@ -83,7 +83,6 @@ Selle API üksikasjad, sh parameetrid ja vastused, leiate jaotisest **EntityData
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Oma reaalajas kasutuse mõistmine telemeetria abil
 
-Teil on võimalik vaadata ülevaadet reaalajas API-le saadetud päringute arvu ja süsteemi võimalike probleemide kohta. Pääsete [ligi reaalajalisele telemeetriale](system.md#api-usage-tab) 
+Teil on võimalik vaadata ülevaadet reaalajas API-le saadetud päringute arvu ja süsteemi võimalike probleemide kohta. Saate [juurde pääseda reaalajas telemeetriale](system.md#api-usage-tab), minnes jaotisse **Administraator** > **Süsteem** > **API kasutus**. Tabelis **Toimingud** on reaalajas meetodeid kasutavate API toimingute ridade juures nupp reaalajas API kasutamise vaatamiseks. Nupp näeb välja nagu binokkel. Valige nupp, et avada külgpaan, mis sisaldab reaalajas API kasutamise üksikasju praeguses keskkonnas.
 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Kasutage valijat **Rühmitusalus**, et valida parim viis oma reaalajas suhtluste esitamiseks ajaskaalal, alates viimasest 24 tunnist kuni 30 päevani. Andmeid saate rühmitada API meetodi, olemi kvalifitseeritud nime (valmendatud olem), looja (sündmuse allikas), tulemuse (õnnestumine või nurjumine) või tõrkekoodide järgi. Andmed on saadaval ajaloodiagrammina ja tabelina.

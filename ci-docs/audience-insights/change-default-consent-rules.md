@@ -1,55 +1,40 @@
 ---
-title: Segmentide nõusoleku vaikereeglite haldamine
-description: Nõusoleku haldamise võimaluse abil saate nõusoleku vaikereeglid keelata või muuta, kui alistamine on lubatud.
-ms.date: 12/01/2021
+title: Segmentide vaikimisi nõusolekureeglite haldamine
+description: Kui alistamised on lubatud, saate nõusoleku vaikereeglid keelata või neid muuta.
+ms.date: 10/30/2021
 ms.service: customer-insights
 mms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 28c9ea49b1f3aebd3abd7d4de58fe61e6474158b
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 358ec05d0f7b5fe4ef15d65054b66eaaad301626
+ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884165"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7790717"
 ---
 # <a name="disable-or-change-default-consent-rules"></a>Nõusoleku vaikereeglite keelamine või muutmine
 
-Kui teie organisatsioonid kasutavad [nõusolekuhalduse võimalust](../consent-management/overview.md) koos vaatajaskonna statistikaga, [saavad administraatorid](activate-consent.md) jõustada segmentide nõusolekureegleid. 
+Kui teie organisatsioonid kasutavad [nõusolekuhalduse võimalust](../consent-management/overview.md) koos vaatajaskonna ülevaatega, [saavad administraatorid](activate-consent.md) segmentide nõusolekureegleid jõustada. 
 
-Segmendipiirkonna jõustatud nõusolekureeglitega teavitab iga segment nõusolekukontrolli ja reeglite seisu. Kui alistamine on lubatud, lülitatakse konkreetsete segmentide puhul vaikeloa reeglid välja. Iga segmendi looja saab segmendile vaikereeglite peale lisada rohkem nõusolekureegleid. 
+Segmendi piirkonnas jõustatud nõusolekureeglitega teavitab iga segment nõusoleku kontrolli ja reeglite olekust. Kui alistamised on lubatud, lülitatakse nõusoleku vaikereeglid teatud segmentide puhul välja. Iga segmendi looja saab sellele segmendile lisada rohkem nõusolekureegleid. 
 
-## <a name="for-administrators"></a>Administraatoritele
-
-:::image type="content" source="../consent-management/media/consent-rules-segment.png" alt-text="Segmendi koostaja nõusolekureegli suvanditega.":::
+:::image type="content" source="../consent-management/media/consent-rules-segment.png" alt-text="Segmendikoostur nõusolekureegli suvanditega.":::
 
 **Nõusoleku vaikereeglite desaktiveerimiseks**
 
-1. Valige **nõusolekureeglite** teatises **Vaata üksikasju**. 
+1. Valige **·** nõusolekureeglite teatises **Kuva üksikasjad**. 
 
-1. Määrake **tumblernupud** Vaikimisi nõusolekureeglid väärtuseks **Väljas**.
+1. Seadke **nõusoleku vaikereeglid** sisse/ välja **·** lülitama.
 
-**Nõusolekureeglite lisamiseks**
+**Nõusolekureeglite lisamiseks:**
 
-1. Valige **nõusolekureeglite** teatises **Vaata üksikasju**. 
+1. Valige **·** nõusolekureeglite teatises **Kuva üksikasjad**. 
 
-1. Valige **Lisa nõusolekureeglid** ja valige nõusolekureegel **ripploendist Valige nõusoleku** andmetüüp.
+1. Valige **·** **rippmenüüst Nõusoleku andmetüübi valimine suvand Lisa nõusolekureeglid ja valige** nõusolekureegel.
 
-1. Uue reegli rakendamiseks segmendile valige **Salvesta**.
-
-## <a name="for-contributors"></a>Toetajatele
-
-Segmendi loomiseks ilma jõustatud nõusolekureegliteta peate tegema koostööd oma administraatoriga, et need oma segmendis keelata. Siiski saate lisada oma nõusolekureeglid segmentidele, mida omate ja haldate.
-
-See on kolmeastmeline protsess: 
-1. [Looge segment](segments.md) vaatajaskonna ülevaates ja salvestage see. 
-
-1. Jagage segmendi nime oma administraatoriga ja paluge neil [lubada teie segmendi alistamine](activate-consent.md). 
-
-1. Avage oma segmendid uuesti. Valige **nõusolekureeglite** teatises **Kuva üksikasjad ja** lisage nõusolekureeglid, mida soovite rakendada. Seejärel **salvestage** ja **käivitage** oma segment.
-
-
+1. **Uue** reegli rakendamiseks segmendile klõpsake nuppu Salvesta.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

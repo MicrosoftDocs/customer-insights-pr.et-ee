@@ -1,7 +1,7 @@
 ---
 title: Osaliste andmete täiendamine prognooside abil
 description: Kasutage prognoose, et täiendada mittetäielikke kliendiandmeid.
-ms.date: 11/01/2021
+ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,32 +9,31 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732373"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645029"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Täitke oma osalised andmed ennustustega (aegunud)
+# <a name="complete-your-partial-data-with-predictions"></a>Osaliste andmete lõpetamine prognooside abil
 
-> [!IMPORTANT]
-> See funktsioon **aegub** alates **5. novembrist 2021**. Praegused rakendusfunktsioonid töötavad edasi kuni funktsiooni eemaldamiseni, kuid te ei saa allolevate juhiste abil uusi integratsioone luua.
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Prognooside abil saate hõlpsalt luua ennustatud väärtusi, mis aitavad suurendada teie arusaamist kliendist. Saate valida lehel **Ärianalüüs** > **Prognoosid** suvandi **Minu prognoosid**, et näha prognoose, mille olete konfigureerinud sihtrühmaülevaadetes muudes kohtades, ning neid veelgi kohandada.
 
 > [!NOTE]
 > Seda funktsiooni ei saa kasutada, kui teie keskkond kasutab Azure Data Lake Gen 2 mäluruumi.
 >
-> Prognooside funktsioon kasutab andmete hindamiseks ja andmete põhjal prognooside tegemiseks automatiseeritud vahendeid. Seetõttu on seda võimalik kasutada profileerimisviisina, selle termini isikuandmete kaitse üldmääruses (edaspidi „GDPR”) toodud definitsiooni kohaselt. Kui klient seda funktsiooni andmete töötlemiseks kasutab, võivad kohalduda GDPR või muud seadused ja määrused. Teie vastutate selle eest, et teie Dynamics 365 Customer Insights kasutamine, sealhulgas prognoosid, vastaks kõigile kohaldatavatele seadustele ja määrustele, sealhulgas eraelu puutumatuse, isikuandmete, biomeetriliste andmete, andmekaitse ja side konfidentsiaalsusega seotud seadustele.
+> Prognooside funktsioon kasutab andmete hindamiseks ja andmete põhjal prognooside tegemiseks automatiseeritud vahendeid. Seetõttu on seda võimalik kasutada profileerimisviisina, selle termini isikuandmete kaitse üldmääruses (edaspidi „GDPR”) toodud definitsiooni kohaselt. Kui klient seda funktsiooni andmete töötlemiseks kasutab, võivad kohalduda GDPR või muud seadused ja määrused. Teie vastutate selle eest, et Dynamics 365 Customer Insightsi kasutades (sh prognoose kasutades) järgite te kõiki kohaldatavaid seadusi ja määrusi, sh eraelu puutumatuse, isikuandmete, biomeetriliste andmete, andmekaitse ja suhtluse konfidentsiaalsusega seotud seadusi.
 
 ## <a name="prerequisites"></a>Eeltingimused
 
 Enne kui teie organisatsioon saab prognooside funktsiooni kasutada, peavad olema täidetud järgmised eeltingimused.
 
-1. Teie asutuses on [Microsoft Dataverse seadistatud eksemplar](/ai-builder/build-model#prerequisites) ja see on samas organisatsioonis kui kliendiülevaated.
+1. Sinu organisatsioonil on näide [seadista Microsoft Dataverse-is](/ai-builder/build-model#prerequisites) ja see on Customer Insights -iga samas organisatsioonis.
 
-2. Teie vaatajaskonna ülevaatekeskkond on seotud teie Dataverse eksemplariga.
+2. Teie publiku ülevaate keskkond on lisatud teie Dataverse eksemplarile.
 
 Lisateavet leiate teemast [Uue keskkonna loomine](create-environment.md).
 
@@ -61,8 +60,6 @@ Lisateavet leiate teemast [Uue keskkonna loomine](create-environment.md).
    > ![Kategooriatega vastendatud väljade väärtuste näide.](media/intelligence-categorymapping.png "Kategooriatega vastendatud väljade väärtuste näide")
 
 8. Valige **Valmis** ja prognoosi hakatakse töötlema. Andmete töötlemise mahust ja keerukusest olenevalt võib töötlemine aega võtta. Tulemused on saadaval uues olemis, mis põhineb teie loodud prognoosi suvandil **Väljundi olemi nimi**.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Prognoosi loomine segmendi loomisel
 
@@ -142,7 +139,7 @@ Teie prognoosi järgmiseks käivitamiseks kasutatakse teie loodud värskendatud 
 
 ## <a name="troubleshooting"></a>Tõrkeotsing
 
-Kui te ei saa manustamisprotsessi Dataverse tõrke tõttu lõpule viia, võite proovida protsessi käsitsi lõpule viia. On kaks teadaolevat probleemi, mis võivad manustamise protsessis esineda.
+Kui te ei saa tõrke tõttu Dataverse'i manustamise protsessi lõpule viia, võite proovida protsessi käsitsi lõpule viia. On kaks teadaolevat probleemi, mis võivad manustamise protsessis esineda.
 
 - Kliendikaardi lisandmooduli lahendus pole installitud.
     1. Täitke [lahenduse installimise ja konfigureerimise](customer-card-add-in.md) juhised.

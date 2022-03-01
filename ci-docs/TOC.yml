@@ -2,30 +2,8 @@
   href: index.yml
 - name: Toote ülevaade
   href: overview.md
-- name: Õppekataloog
-  items:
-    - name: Hakkame pihta
-      href: /learn/modules/get-started-customer-data-platform/
-    - name: Andmete valmendamine
-      href: /learn/modules/ingest-data-customer-insights/
-    - name: Kliendi koondprofiili loomine
-      href: /learn/modules/unified-customer-profile/
-    - name: Vaatajaskonna ülevaadetega töötamine
-      href: /learn/modules/working-with-customer-insights/
-    - name: Andmete rikastamine ja ennustuste idemine
-      href: /learn/modules/enrich-data/
-    - name: Väliste ühenduste haldamine
-      href: /learn/modules/configure-third-party-connections/
-    - name: Customer Insightsi haldamine
-      href: /learn/modules/administer-customer-data-platform/
-- name: Tasuta prooviversioon
-  items:
-    - name: Tasuta prooviversiooni kasutajaks registreerumine
-      href: trial-signup.md
-    - name: Prooviversiooni KKK
-      href: trial-FAQ.md
-- name: Alustage tasulise litsentsiga
-  href: paid-license.md
+- name: Loo prooviversioon
+  href: audience-insights/get-started-trial.md
 - name: Avage oma keskkond
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Sihtrühmaülevaated
@@ -41,16 +19,24 @@
         - name: Lühijuhend
           href: audience-insights/get-started.md
         - name: Uue keskkonna loomine
-          href: audience-insights/create-environment.md
+          href: audience-insights/get-started-paid.md
         - name: Sihtrühma ülevaadete vaatamine
           href: audience-insights/home.md
-    - name: Ärikontodega töötamine
-      href: audience-insights/work-with-business-accounts.md
+    - name: Tutvuge moodulitega
+      items:
+        - name: Andmete valmendamine
+          href: /learn/modules/ingest-data-customer-insights/
+        - name: Kliendi koondprofiili loomine
+          href: /learn/modules/unified-customer-profile/
+        - name: Rakendusega töötamine
+          href: /learn/modules/working-with-customer-insights/
+        - name: Andmete ja prognooside rikastamine
+          href: /learn/modules/enrich-data/
     - name: Andmeallikad
       items:
         - name: Andmeallikate ülevaade
           href: audience-insights/data-sources.md
-        - name: Andmeallikate lisamine konnektorite kaudu Power Query
+        - name: Power Query konnektorite kaudu andmeallikate lisamine
           href: audience-insights/connect-power-query.md
         - name: Common Data Modeli kausta andmeallikana lisamine
           href: audience-insights/connect-common-data-model.md
@@ -80,18 +66,14 @@
           href: audience-insights/relationships.md
         - name: Kliendi tegevuste loendamine
           href: audience-insights/activities.md
-        - name: Semantiliste vastenduste määratlemine
-          href: audience-insights/semantic-mappings.md
     - name: Andmete rikastamine
       items:
         - name: Kliendiprofiilide rikastamine
           href: audience-insights/enrichment-hub.md
-        - name: Kaubamärgid ja huvid
+        - name: Tootemargi ja huvide külgetõmme
           href: audience-insights/enrichment-microsoft.md
         - name: Täiustatud aadressid
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Täiustatud ettevõtte andmed
-          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Rikasta Azure Maps abil
           href: audience-insights/enrichment-azure-maps.md
         - name: Rikastamine ettevõtte HERE Technologies teenusega
@@ -100,8 +82,6 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Rikastage koos Experian-iga
           href: audience-insights/enrichment-experian.md
-        - name: Andmetega rikastamine Office 365
-          href: audience-insights/enrichment-office.md
         - name: Rikastamine SFTP-põhise kohandatud importimise kaudu
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmendid
@@ -134,10 +114,8 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Kordustellimuste voolavuse prognoosimine
               href: audience-insights/predict-subscription-churn.md
-            - name: Tehinguvoolavuse prognoos
+            - name: Tehinguvoolavuse prognoosimine
               href: audience-insights/predict-transactional-churn.md
-            - name: Kliendi tagasiside tunnete analüüsimine
-              href: audience-insights/sentiment-analysis.md
             - name: Azure'i masinõppe kohandatud mudelite kasutamine
               href: audience-insights/custom-models.md
             - name: Osaliselt puuduvate andmete täiustamine
@@ -154,6 +132,8 @@
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Eksperimendid Azure’i masinõppega
               href: audience-insights/azure-machine-learning-experiments.md
+            - name: Azure'i masinõppe stuudio eksperimendid
+              href: audience-insights/machine-learning-studio-experiments.md
         - name: Prognooside haldamine
           href: audience-insights/manage-predictions.md
         - name: Prognoosidel põhinevate segmentide loomine
@@ -242,14 +222,10 @@
           href: audience-insights/connections.md
         - name: Mitme keskkonna haldamine
           href: audience-insights/manage-environments.md
-        - name: Turve
-          items:
-            - name: Tooge oma Key Vault
-              href: audience-insights/use-azure-key-vault.md
-            - name: ADLS-i salvestuskontoga ühenduse loomine teenusesubjekti kaudu
-              href: audience-insights/connect-service-principal.md
-            - name: Diagnostikalogide eksportimine
-              href: audience-insights/diagnostics.md
+        - name: ADLS-i salvestuskontoga ühenduse loomine teenusesubjekti kaudu
+          href: audience-insights/connect-service-principal.md
+        - name: Toetatud keeled
+          href: audience-insights/supported-languages.md
     - name: Laiendatavus
       items:
         - name: Veebiandmete integreerimine kaasamisülevaadetest
@@ -262,52 +238,16 @@
           href: audience-insights/apis.md
         - name: API ülevaade
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Nõusolekuhaldus (eelvaade)
-  items:
-    - name: Spikrikeskus
-      href: consent-management/index.yml
-    - name: Võimaluste ülevaade
-      href: consent-management/overview.md
-    - name: Hakkame pihta
-      items:
-        - name: Hakkame pihta
-          href: consent-management/get-started.md
-        - name: Mõisted ja terminid
-          href: consent-management/glossary.md
-    - name: Nõusoleku andmete importimine
-      items:
-        - name: Nõusoleku andmete importimine
-          href: consent-management/import-consent-data.md
-        - name: Nõusolekuandmete seadmine ja nõusolekueelistuste rakendamine
-          href: consent-management/set-consent-rules.md
-    - name: Nõusolekuandmete haldamine
-      items:
-        - name: Nõusolekureeglite lubamine vaatajaskonna ülevaates
-          href: audience-insights/activate-consent.md
-        - name: Vaatajaskonna statistikasegmentides nõusoleku vaikereeglite haldamine
-          href: audience-insights/change-default-consent-rules.md
-    - name: Sätete ja kasutajate haldamine
-      items:
-        - name: Süsteemisätete konfigureerimine
-          href: consent-management/system-settings.md
-        - name: Kasutajate ja õiguste haldamine
-          href: consent-management/manage-users.md
-    - name: Nõusolekuandmete kasutamine
-      items:
-        - name: Nõusolekuandmetega ennustuste loomine
-          href: consent-management/predictions-consent-data.md
 - name: Kaasamisülevaated (eelversioon)
   items:
     - name: Spikrikeskus
       href: engagement-insights/index.yml
-    - name: Kaasamisülevaadete kohta
+    - name: Võimaluste ülevaade
       href: engagement-insights/overview.md
     - name: Alustamine
       items:
         - name: Lühijuhend
           href: engagement-insights/get-started.md
-        - name: Keskkonna loomine
-          href: engagement-insights/create-new-environment.md
         - name: Tööruumi loomine
           href: engagement-insights/create-workspace.md
         - name: Jäädvustage sündmusi veebisaitidelt ja mobiilirakendustest
@@ -366,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Regionaalne saadavus
       href: engagement-insights/regional-availability.md
-- name: Andmete ühiskasutus võimaluste vahel
+- name: Sihtrühma ja kaasamisülevaadete integreerimine
   items:
     - name: Kaasamise ülevaadete ja sihtrühma ülevaadete linkimine
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -379,4 +319,4 @@
 - name: DSR-õigused ja taotlused
   href: dsr-rights-requests.md
 - name: Hangi tuge
-  href: /power-platform/admin/get-help-support
+  href: 'https://dynamics.microsoft.com/support/'

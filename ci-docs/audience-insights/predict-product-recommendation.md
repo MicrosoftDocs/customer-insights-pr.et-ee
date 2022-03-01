@@ -1,7 +1,7 @@
 ---
 title: Tootesoovituse ennustamine
 description: Prognoosige tooteid, mida klient tõenäoliselt ostab või millega suhtleb.
-ms.date: 01/13/2022
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967789"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494534"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Tootesoovituse ennustamine (eelvaade)
 
@@ -54,7 +54,7 @@ Kui olete huvitatud selle funktsiooni proovimisest, kuid teil pole andmeid allpo
 
 > [!NOTE]
 > - Mudeli jaoks on vaja teie klientide tehingute ajalugu. Tehingu määratlus on üsna paindlik. Sisendina võivad töötada kõik andmed, mis kirjeldavad kasutaja ja toote koostoimet. Näiteks toote ostmine, tunnis käimine või sündmusest osa võtmine.
-> - Praegu saab konfigureerida ainult ühe kannete ajaloo olemi. Kui ostuolemit on mitu, ühendage need Power Query enne andmete allaneelamist.
+> - Praegu saab konfigureerida ainult ühe kannete ajaloo olemi. Kui ostuolemeid on mitu, tuleb need liita Power Query'ga enne andmete sisestamist.
 > - Kui tellimus ja tellimuse üksikasjad on erinevad olemid, liitke need enne mudelis kasutamist. Mudel ei tööta ainult tellimuse ID-ga või kviitungi ID-ga olemis.
 
 
@@ -79,11 +79,11 @@ Kui olete huvitatud selle funktsiooni proovimisest, kuid teil pole andmeid allpo
 1. Määrake kliendile soovitatavate **toodete arv**. See väärtus sõltub sellest, kuidas teie tarneviis andmeid täidab. Kui oskate soovitada kolme toodet, määrake see väärtus vastavalt.
    
    >[!TIP]
-   > **prognoos mustandina salvestamiseks saate igal ajal valida** Salvesta mustand. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid**.
+   > Saate igal hetkel valida **Salvesta ja sule**, et salvestada prognoos mustandina. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid**.
 
-1. Valige, kas soovite kaasata tooteid, mille kliendid on hiljuti ostnud **väljale Eeldatav ostude kordamine.**
+1. Valige, kas soovite **soovitada tooteid, mida kliendid on hiljuti ostnud**.
 
-1. Seadke **aken Vaata tagasi**. Antud säte määrab ajavahemiku, mida mudel kaalub enne toote kasutajale uuesti soovitamist. Näiteks saate määrata, et klient ostab iga kahe aasta järel sülearvuti. See aken näitab viimase kahe aasta ostuajalugu ja kui nad leitakse üksus, filtreeritakse üksus soovituste põhjal.
+1. Kui olete valinud hiljuti ostetud toodete *soovitamata* jätmise, seadistage **Tagasiminemise aken**. Antud säte määrab ajavahemiku, mida mudel kaalub enne toote kasutajale uuesti soovitamist. Näiteks saate määrata, et klient ostab iga kahe aasta järel sülearvuti. See aken näitab viimase kahe aasta ostuajalugu ja kui nad leitakse üksus, filtreeritakse üksus soovituste põhjal.
 
 1. Vali **Järgmine**
 

@@ -1,27 +1,27 @@
 ---
 title: Microsoft Teamsi robot
 description: Otsige roboti abil Microsoft Teamsis koondatud kliendiprofiile.
-ms.date: 10/08/2021
+ms.date: 04/21/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: conceptual
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6a9575de922bc2ff9c9d2212b99b4c0c8b61ab0e
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967814"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405555"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Teamsi robot Dynamics 365 Customer Insightsi jaoks (eelversioon)
 
 Ühenduge Microsoft Teamsiga, et lasta robotil otsida koondatud kliendiprofiile Teamsi kanalites.
 
 > [!div class="mx-imgBorder"]
-> ![Kliendi kirjet kuvav Teamsi robot.](media/teams-bot.png "Kliendi kirjet kuvav Teamsi robot")
+> ![Kliendi kirjet kuvav Teamsi robot](media/teams-bot.png "Kliendi kirjet kuvav Teamsi robot")
 
 ## <a name="prerequisites"></a>Eeltingimused
 
@@ -31,10 +31,7 @@ Boti seadistamiseks ja konfigureerimiseks peavad olema täidetud järgmised eelt
 - [Ühendamisprotsess](data-unification.md) on lõpule viidud.
 - [Otsingu ja filtri indeksisse](search-filter-index.md) on lisatud väljad.
 - Customer Insights ja Teams on samas organisatsioonis.
-- Teie keskkonnas on peamiseks sihtrühmaks seatud üksikkliendid. Ettevõtte kontosid ei toetata.
 
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Boti konfigureerimine
 
 1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Eksportimise sihtkohad**.
@@ -55,6 +52,3 @@ Bot pakub ühendatud kliendiprofiilide otsinguvõimalusi.
 - Kui teie organisatsioon haldab ühes organisatsioonis mitut Customer Insightsi keskkonda, saate sisestada **switchinstance**, et valida, millise keskkonnaga soovite robotit ühendada.
 
 - Sisestage märksõna **spikker** boti jaoks saadaolevate käskude loendi kuvamiseks.  
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

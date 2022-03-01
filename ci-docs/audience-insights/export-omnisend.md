@@ -1,7 +1,7 @@
 ---
 title: Customer Insights andmete eksportimine Omnisendi
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Omnisendi.
-ms.date: 10/08/2021
+ms.date: 05/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619023"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124478"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Segmentide eksportimine Omnisendi (eelversioon)
 
@@ -28,9 +28,9 @@ Saate eksportida ühendatud kliendiprofiilide segmente Omnisendi ja kasutada nei
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Ühe ekspordi kohta saate eksportida kuni miljon kliendiprofiili Omnisend'i ja see võib võtta kuni 4 tundi.
+- Omnisendi saate eksportida kuni 1 miljon profiili ekspordi kohta ja selle lõpuleviimiseks võib kuluda kuni 4 tundi.
 - Eksportimine Omnisendi on piiratud segmentidega.
-- Kliendiprofiilide arv, mida saate Omnisend'i eksportida, sõltub teie Omnisend lepingust.
+- Omnisendi eksporditavate profiilide arv sõltub teie lepingust Omnisendiga.
 
 ## <a name="set-up-connection-to-omnisend"></a>Ühenduse loomine Omnisendiga
 
@@ -62,7 +62,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Valige **Ekspordiühendus** väljal ühendus Omnisend jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
 
-1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Segmentide eksportimine Omnisendi on vajalik. Soovi korral saate eksportida Eesnimi, Perekonnanimi, Aadress, Riik/regioon, Osariik, Linn ja Postiindeks isikupärastatud meilide loomiseks. Nende väljade vastendamiseks valige **Lisa atribuut**.
+1. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Segmentide eksportimine Omnisendi on vajalik. Soovi korral saate eksportida Eesnimi, Perekonnanimi, Aadress, Riik/regioon, Osariik, Linn ja Postiindeks isikupärastatud meilide loomiseks. Nende väljade vastendamiseks valige **Lisa atribuut**.
 
 1. Valige **Salvesta**.
 

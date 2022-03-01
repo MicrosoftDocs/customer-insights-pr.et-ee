@@ -1,20 +1,20 @@
 ---
 title: Kasutajaõiguste haldamine
 description: Lisateave õiguste ja kasutajarollide kohta.
-ms.date: 03/25/2021
-ms.reviewer: mhart
+ms.date: 10/27/2020
+ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 430ad902a5a75552243bc4a094361a749364383717278f687dd6e8ef33749c6f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7de78c0ef71ec5b83870d396de36a7dcabbd14e5
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028309"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689215"
 ---
 # <a name="user-permissions"></a>Kasutajaõigused
 
@@ -31,7 +31,7 @@ Rolle on kolme tüüpi.
 - Lehe **Rikastamine** kuvamine ja sellega tutvumine.
 - Olemite avastamine ja eksportimine lehel **Olemid**.
 - Vaadake süsteemi protsesside olekut lehel **Süsteem**.
-- Kuvage ekspordid **Ekspordid** lehel.
+- Eksportige segmendid lehelt **Segmendid**.
 - Installige ja kasutage armatuurlauda **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Kaasautor
@@ -43,7 +43,6 @@ Rolle on kolme tüüpi.
 - Looge segmente lehel **Segmendid**.
 - Mõõtude loomine lehe **Mõõdud** abil.
 - Hallake konfiguratsiooni ja rikastage kliendiprofiile lehel **Rikastamine** (ainult esimese osapoole rikastamine).
-- Hallake ja looge ekspordid kaastöötajatega jagatud ühenduste põhjal. [Lisateave selle kohta, kuidas administraatorid lubavad kaastöötajatel kasutada ekspordi jaoks ühendust](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administraator
 
@@ -51,9 +50,8 @@ Rolle on kolme tüüpi.
 - Muutke lehel **Süsteem** sätteid, sealhulgas süsteemiprotsesside töökeel ja värskendamise ajakavad.
 - Vaadake ja lisage õigusi lehel **Õigused**.
 - Sisestage klientide lehe otsingu- ja filtrimääratlused lehel **Otsingu- ja filtriregister** (sellele pääseb juurde lehelt **Kliendid**).
-- Hallata ühendusi ja lubada neil kasutada teistel kasutajarollidel **Ühendused** lehel.
+- Määratlege Dynamics 365 Salesi segmendi sihtkohad lehel **Sihtkohtade eksportimine**.
 - Hallake konfiguratsiooni ja rikastage kliendiprofiile lehel **Rikastamine** (kõik rikastamised).
-- Eksportide haldamine ja loomine **Ekspordid** lehel.
 - **Kliendikaardi lisandmooduli** paigaldamine ja kasutamine.
 - Lisage ja kasutage **Power Appsi konnektorit**.
 - Lubage [Customer Insightsi API-de](apis.md) kasutamine.
@@ -76,6 +74,3 @@ Minge sihtrühmaülevaadetes jaotisse **Haldus** > **Õigused**, et näha, milli
 - Rollid on määratletud veerus **Roll**.
 - Valige mis tahes veeru pealkiri, et sortida tulemeid selle veeru väärtusega.
 - Kasutage lehe ülaservas välja **Otsing** kindlate kasutajate leidmiseks.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

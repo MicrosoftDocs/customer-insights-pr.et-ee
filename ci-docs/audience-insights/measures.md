@@ -1,247 +1,113 @@
 ---
-title: Mõõdikute loomine ja haldamine
-description: Määratleda ettevõtte äritegevuse analüüsimiseks ja kajastamiseks vajalikud näitajad.
-ms.date: 11/01/2021
+title: Näitajate loomine ja muutmine
+description: Määratlege kliendiga seotud meetmed, et analüüsida ja kajastada teatud ärialade tootlikkust.
+ms.date: 10/15/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: wameng
-ms.reviewer: mhart
+ms.author: mhart
+ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732721"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405565"
 ---
 # <a name="define-and-manage-measures"></a>Meetmete määratlemine ja haldamine
 
-See aitab teil paremini mõista kliendi käitumist ja äritegevust. Nad vaatavad asjakohaseid [ühendatud profilide](data-unification.md) väärtusi. Näiteks soovib ettevõte näha, kui palju on *kogukulud kliendi kohta*, et mõista üksikkliendi ostuajalugu või mõõta *ettevõtte kogumüüki*, et aru saada kogu ettevõtte kogutaseme tuludest.  
+**Meetmed** tähendavad juhtimismõõdikuid (KPI-d), mis kajastavad teatud ärialade tootlikkust ja seisu. Sihtrühmaülevaated pakuvad intuitiivset kogemust eri tüüpi näitajate loomiseks, kasutades päringukujundajat, milles pole vaja koodi kirjutada ega näitajaid manuaalselt kontrollida. Saate lehel **Avaleht** jälgida ettevõtte meetmeid, vaadata **kliendikaardi** klientide meetmeid ja määratleda meetmetega kliendisegmente lehel **Segmendid**.
 
-Näitajad luuakse meetmete ehitaja abil, mis on erinevate tehtemärkide ja lihtsate vastendussuvanditega andmepäringu platvorm. See võimaldab filtreerida andmeid, rühmitada tulemusi, tuvastada [olemite seoseteid](relationships.md) ja kuvada väljundi eelvaadet.
+## <a name="create-a-measure"></a>Meetme loomine
 
-Kasutage äritegevuste plaanimiseks näitaja ehitajat, pärides kliendiandmeid ja väljastades ülevaateid. Näiteks *kogukulu ühe kliendi kohta* ja *kogutulu ühe kliendi kohta* loomine aitab tuvastada suure kulutamise, kuid suure tootlusega klientide rühm. Saate [luua segmendi](segments.md), mis aitab teil teha järgmist. 
-
-## <a name="build-your-own-measure-from-scratch"></a>Isikliku voo loomine puhtalt lehelt
-
-Selles jaotises tutvustatakse uue näitaja loomist nullist. Saate koostada andmeatribuutudega andmeolemitest mõõtmed, mille seos on seadistatud ühendamiseks ühendatud kliendiprofiili olemiga.
-
-# <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
+See jaotis juhendab teid uue meetme loomisel. Saate luua meetmeid mitme kliendi olemi kaudu ühendatud andmeallika andmete alusel. Kehtivad [teenusepiirangud](service-limits.md).
 
 1. Avage sihtrühmaülevaadetes jaotis **Näitajad**.
 
-1. Valige **Uus** ja valige **Looge ise**.
+2. Valige **Uus meede**.
 
-1. Valige **Redigeeri nimi** ja sisestage näitaja **Nimi**. 
+3. Valige meede **Tüüp**.
 
-1. Valige konfiguratsioonialas koondamisfunktsioon **Funktsiooni valimine** rippmenüüst. Koondamisfunktsioonid on järgmised. 
-   - **Sum**
-   - **Keskmine**
-   - **Loenda**
-   - **Kordumatu arv**
-   - **Maks.**
-   - **Min**
-   - **Esimene**: võtab andmekirje esimese väärtuse
-   - **Viimane**: võtab andmekirjesse lisatud viimase väärtuse
+   - **Kliendi atribuut**: üks väli kliendi kohta, kus on kliendi skoor, väärtus või olek. Kliendiatribuudid luuakse uue süsteemi loodud olemi atribuutidena, mida nimetatakse **kliendi meetmeks**.
 
-   :::image type="content" source="media/measure-operators.png" alt-text="Tehtemärgid näitaja arvutamiseks.":::
+   - **Kliendi meede**: kliendikäitumise ülevaated struktuuriga, mis põhineb valitud mõõtmetel. Iga meetme jaoks luuakse uus olem, potentsiaalselt mitme kirjega kliendi kohta.
 
-1. Valige **Lisa atribuut**, et valida andmed, mida selle näitaja loomiseks vajate.
-   
-   1. Valige vaheleht **Attribuudid**. 
-   1. Andmeolem: valige olem, mis sisaldab mõõdetavat atribuuti. 
-   1. Andmeatribuut: valige atribuut, mida soovite näitaja arvutamiseks koondamisfunktsioonis kasutada. Korraga saate valida ainult ühe atribuudi.
-   1. Olemasolevast näitajast andmeatribuudi valimiseks klõpsake vahekaarti **Näitajad** või otsige olemi või näitaja nime. 
-   1. Valige **Lisa**, et lisada atribuut näitajale.
+   - **Ärimeede**: jälgib äri tootlikkust ja seisu. Ärimeetmetel võib olla kaks eri väljundit: lehel **Avaleht** asuv numbriline väljund või uus olem, mille leiate lehelt **Olemid**.
 
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Valige arvutuses soovitud atribuut.":::
+4. Sisestage **Nimi** ja valikuline **Kuvatav nimi**, seejärel valige **Järgmine**.
 
-1. Keerukamate näitajate loomiseks võite lisada mõõtmisfunktsioonile rohkem atribuute või kasutada matemaatilisi tehtemärke.
+5. Jaotises **Olemid** valige ripploendist esimene olem. Sellel hetkel peaksite otsustama, kas mõõdu määratlusel läheb vaja täiendavaid olemeid.
 
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Keerukama näitaja loomine tehtemärkidega.":::
+   > [!div class="mx-imgBorder"]
+   > ![Mõõdu määratlus](media/measure-definition.png "Mõõdu määratlus")
 
-1. Filtrite lisamiseks valige konfiguratsiooniala **Filtreeri**. 
-  
-   1. Valige paani **Filtrid** jaotises **Atribuudi lisamine** atribuut, mida soovite filtrite loomiseks kasutada.
-   1. Määrake filtritehted iga valitud atribuudi filtri määratlemiseks.
-   1. Valige **Rakenda**, et lisada filtrid näitajale.
+   Täiendavate olemite lisamiseks valige **Lisa olem** ja valige meetmetes kasutatavad olemid.
 
-1. Dimensioonide lisamiseks valige konfiguratsioonialas **Dimensioon**. Dimensioonid kuvatakse näitaja väljundolemis veergudena.
- 
-   1. Valige **Redigeeri dimensioonid**, et lisada andmeatribuute, mille järgi soovite näitaja väärtusi rühmitada. Näiteks linn või sugu. *Klienditaseme näitajate loomiseks* valitakse vaikimisi *CustomerID* dimensioon. Kui soovite luua *äritaseme näitajaid*, saate vaikeeelise eemaldada.
-   1. Valige **Valmis**, et lisada dimensioonid näitajale.
+   > [!NOTE]
+   > Võite valida ainult olemeid, millel on alustamise olemiga seosed. Lisateavet suhete määratlemise kohta leiate jaotisest [Suhted](relationships.md).
 
-1. Kui teie andmetes on väärtused, mida peate täisarvuga asendama, valige **Reeglid**. Konfigureerige reegel ja veenduge, et valite asendusena ainult täisnumbrid. Asendage *null* näiteks väärtusega *0*.
+6. Soovi korral saate seadistada muutujaid. Tehke jaotises **Muutujad** valik **Uus muutuja**.
 
-1. Kui vastendatud andme- ja olemi *Klient* vahel on mitu teed, peate valima ühe tuvastatud [olemi suhte teedest](relationships.md). Näitaja tulemused võivad sõltuvalt valitud teest erineda. 
-   
-   1. Valige **Seosetee** ja valige olemitee, mida tuleks kasutada teie mõõtmete tuvastamiseks. Kui olemi *Klient* juurde on ainult üks tee, siis seda juhtelementi ei näidata.
-   1. Valiku rakendamiseks valige suvand **Valmis**. 
+   Muutujad on arvutused, mis luuakse iga valitud kirje puhul. Näiteks iga kliendi kirje puhul kokkuvõtlik müügipunkt (POS) ja võrgumüügid.
 
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Saate valida näitajale olemi tee.":::
+7. Sisestage muutuja **nimi**.
 
-1. Kui soovite näitajat veel arvutada, valige **Uus arvutus**. Uute arvutuste jaoks saate kasutada ainult samal olemiteel olevaid üksusi. Täiendavad arvutused kuvatakse näitaja väljundolemis uute veergudena.
+8. Jaotises **Avaldis** valige välju, millega algav arvutus.
 
-1. Valige näitajast arvutuse **Duplitseerimiseks**, **Ümber nimetamiseks** või **Eemaldamiseks** **...**.
+9. Sisestage avaldis jaotisesse **Avaldis**, samas valige veel välju, mida lisada arvutusse.
 
-1. **Eelvaatealal** näete näitaja väljundolemi andmeskeemi (sh filtreid ja dimensioone). Eelvaade reageerib dünaamiliselt konfiguratsiooni muudatustele.
+   > [!NOTE]
+   > Praegu toetatakse ainult aritmeetilisi avaldisi. Lisaks ei toetata eri [olemi teede](relationships.md) muutuja arvutust.
 
-1. Konfigureeritud näitaja tulemuste arvutamiseks valige **Käivita**. Kui soovite praeguse konfiguratsiooni säilitada ja näitajat hiljem käitada, valige **Salvesta ja sule**.
+10. Valige nupp **Valmis**.
 
-1. Vastloodud näitaja nägemiseks loendis, valige **Näitajad**.
+11. Jaotises **Mõõdu määratlus** saate määratleda, kuidas teie valitud olemid ja arvutatud muutujad liidetakse uue mõõdu olemile või atribuudile.
 
-# <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
+12. Valige **Uus dimensioon**. Dimensiooni võib ette kujutada ka funktsioonina *rühmitamisalus*. Meetme olemi või atribuudi andmete väljund rühmitatakse kõikide määratletud dimensioonide alusel.
 
-1. Avage sihtrühmaülevaadetes jaotis **Näitajad**.
+    > [!div class="mx-imgBorder"]
+    > ![Koondtsükli valimine](media/measures-businessreport-measure-definition2.png "Koondtsükli valimine")
 
-1. Valige **Uus** ja valige **Looge ise**.
+    Valige või sisestage järgmine teave dimensiooni määratluse osana:
 
-1. Valige **Redigeeri nimi** ja sisestage näitaja **Nimi**. 
+    - **Olem**: kui määratlete meetme olemi, peaks see sisaldama vähemalt üht atribuuti. Kui määratlete meetme atribuudi, sisaldab see tavaliselt vaid üht atribuuti. See valik käib atribuudiga olemi valimise kohta.
+    - **Väli**: valige kindel atribuut, mis lisatakse meetme olemisse või atribuuti.
+    - **Salv**: valige, kas soovite koondada andmed iga päev, iga kuu või iga aasta. See on kohustuslik valik ainult juhul, kui olete valinud atribuudi tüübi Kuupäev.
+    - **Kui**: määratleb uue välja nime.
+    - **Kuvatav nimi**: määratleb välja kuvatava nime.
 
-1. Valige konfiguratsioonialas koondamisfunktsioon **Funktsiooni valimine** rippmenüüst. Koondamisfunktsioonid on järgmised. 
-   - **Sum**
-   - **Keskmine**
-   - **Loenda**
-   - **Kordumatu arv**
-   - **Maks.**
-   - **Min**
-   - **Esimene**: võtab andmekirje esimese väärtuse
-   - **Viimane**: võtab andmekirjesse lisatud viimase väärtuse
+    > [!NOTE]
+    > Ettevõtte meede salvestatakse ühe numbrilise olemina ja ilmub lehel **Avaleht**, kui te ei lisa meetmesse täiendavaid dimensioone. Pärast täiendavate dimensioonide lisamist *ei* ilmu meede lehel **Avaleht**.
 
-   :::image type="content" source="media/measure-operators.png" alt-text="Tehtemärgid näitaja arvutamiseks.":::
+13. Soovi korral lisage liitmisfunktsioonid. Kõikide liitmiste summadeks on uus väärtus, mis jääb mõõtude olemi või atribuudi raamesse. Toetatud liitmisfunktsioonid on: **min**, **max**, **keskmine**, **mediaan**, **Sum**, **kordumatu arv**, **esimene** (kasutab dimensiooni väärtuse esimest kirjet) ja **viimane** (kasutab dimensiooni väärtusele lisatud viimast kirjet).
 
-1. Valige **Lisa atribuut**, et valida andmed, mida selle näitaja loomiseks vajate.
-   
-   1. Valige vaheleht **Attribuudid**. 
-   1. Andmeolem: valige olem, mis sisaldab mõõdetavat atribuuti. 
-   1. Andmeatribuut: valige atribuut, mida soovite näitaja arvutamiseks koondamisfunktsioonis kasutada. Korraga saate valida ainult ühe atribuudi.
-   1. Olemasolevast näitajast andmeatribuudi valimiseks klõpsake vahekaarti **Näitajad** või otsige olemi või näitaja nime. 
-   1. Valige **Lisa**, et lisada atribuut näitajale.
-
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Valige arvutuses soovitud atribuut.":::
-
-1. Keerukamate näitajate loomiseks võite lisada mõõtmisfunktsioonile rohkem atribuute või kasutada matemaatilisi tehtemärke.
-
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Keerukama näitaja loomine tehtemärkidega.":::
-
-1. Filtrite lisamiseks valige konfiguratsiooniala **Filtreeri**. 
-  
-   1. Valige paani **Filtrid** jaotises **Atribuudi lisamine** atribuut, mida soovite filtrite loomiseks kasutada.
-   1. Määrake filtritehted iga valitud atribuudi filtri määratlemiseks.
-   1. Valige **Rakenda**, et lisada filtrid näitajale.
-
-1. Dimensioonide lisamiseks valige konfiguratsioonialas **Dimensioon**. Dimensioonid kuvatakse näitaja väljundolemis veergudena.
- 
-   1. Valige **Redigeeri dimensioonid**, et lisada andmeatribuute, mille järgi soovite näitaja väärtusi rühmitada. Näiteks linn või sugu. *Klienditaseme näitajate loomiseks* valitakse vaikimisi *CustomerID* dimensioon. Kui soovite luua *äritaseme näitajaid*, saate vaikeeelise eemaldada.
-   1. Valige **Valmis**, et lisada dimensioonid näitajale.
-
-1. Kui teie andmetes on väärtused, mida peate täisarvuga asendama, valige **Reeglid**. Konfigureerige reegel ja veenduge, et valite asendusena ainult täisnumbrid. Asendage *null* näiteks väärtusega *0*.
-
-1. Saate kasutada **Ettevõtte allüksuste koondamist**, kui te [kasutate hierarhiaga kontosid](relationships.md#set-up-account-hierarchies).
-   - Kui väärtuseks on seatud **Väljas**, arvutatakse iga konto mõõtmed. Iga konto saab oma tulemuse.
-   - Kui väärtuseks on määratud **Sees**, siis valige **Redigeeri**, et valida kontohierarhia vastavalt sisestatud hierarhiatele. Mõõde annab ainult ühe tulemuse, kuna see on koondatud alamkontodega.
-
-1. Kui vastendatud andme- ja olemi *Klient* vahel on mitu teed, peate valima ühe tuvastatud [olemi suhte teedest](relationships.md). Näitaja tulemused võivad sõltuvalt valitud teest erineda. 
-   
-   1. Valige **Seosetee** ja valige olemitee, mida tuleks kasutada teie mõõtmete tuvastamiseks. Kui olemi *Klient* juurde on ainult üks tee, siis seda juhtelementi ei näidata.
-   1. Valiku rakendamiseks valige suvand **Valmis**. 
-
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Saate valida näitajale olemi tee.":::
-
-1. Valige näitajast arvutuse **Duplitseerimiseks**, **Ümber nimetamiseks** või **Eemaldamiseks** **...**.
-
-1. **Eelvaatealal** näete näitaja väljundolemi andmeskeemi (sh filtreid ja dimensioone). Eelvaade reageerib dünaamiliselt konfiguratsiooni muudatustele.
-
-1. Konfigureeritud näitaja tulemuste arvutamiseks valige **Käivita**. Kui soovite praeguse konfiguratsiooni säilitada ja näitajat hiljem käitada, valige **Salvesta ja sule**.
-
-1. Vastloodud näitaja nägemiseks loendis, valige **Näitajad**.
-
----
-
-## <a name="use-a-template-to-build-a-measure"></a>Malli abil mõõdu loomine
-
-Nende loomiseks võite kasutada tavaliselt kasutatavate meetmete ettemääratud malle. Mallide üksikasjalik kirjeldus ja juhendatud kogemused aitavad teil luua tõhusa mõõtmissüsteemi. Mallid põhinevad olemi *Ühendatud tegevus* kaardistatud andmetele. Seega veenduge, et olete konfigureerinud [klienditegevused](activities.md) enne malli põhjal mõõtühiku loomist.
-
-# <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
-
-Nende loomiseks võite kasutada tavaliselt kasutatavate meetmete ettemääratud malle. Mallide üksikasjalik kirjeldus ja juhendatud kogemused aitavad teil luua tõhusa mõõtmissüsteemi. Mallid põhinevad olemi *Ühendatud tegevus* kaardistatud andmetele. Seega veenduge, et olete konfigureerinud [klienditegevused](activities.md) enne malli põhjal mõõtühiku loomist.
-
-Saadaval mõõdumallid: 
-- Keskmine tehingu väärtus (ATV)
-- Tehingu väärtus kokku
-- Päeva keskmine tulu
-- Aasta keskmine tulu
-- Kannete arv
-- Teenitud püsikliendipunktid
-- Lunastatud püsikliendipunktid
-- Püsikliendipunktide saldo
-- Aktiivse kliendi eluiga
-- Püsikliendi liikmestaatuse kestus
-- Aega viimasest ostust
-
-Järgmine protseduur kirjeldab etappe uue meetme loomiseks malli abil.
-
-1. Avage sihtrühmaülevaadetes jaotis **Näitajad**.
-
-1. Valige **Uus** ja seejärel **Vali mall**.
-
-   :::image type="content" source="media/measure-use-template.png" alt-text="Rippmenüü ekraanipilt uue mõõtühiku loomisel malli esiletõstmisega.":::
-
-1. Leidke teie vajadusele sobiv mall ja valige **Valige mall**.
-
-1. Vaadake nõutavad andmed läbi ja valige **Alustamine**, kui kõik andmed on olemas.
-
-1. Määrake **Nime muutmine** paanil oma mõõtühiku ja väljundi olemi nimi. 
-
-1. Valige nupp **Valmis**.
-
-1. Määrake **Sea ajaperiood** jaotises ajavahemikud andmete kasutamiseks. Valige, kas soovite uue näitaja abil hõlmata kogu andmekogumi, valides suvandi **Kogu aeg** või soovite, et näitaja keskenduks **Kindlale ajaperioodile**.
-
-   :::image type="content" source="media/measure-set-time-period.png" alt-text="Kuvatõmmis ajavahemiku jaotisest, kui konfigureerite malli põhjal mõõtmise.":::
-
-1. Järgmises jaotises valige **Lisa andmed**, et valida tegevused ja kaardistada oma olemi *Ühendatud tegevus* vastavad andmed.
-
-    1. 1. etapp: valige jaotises **Tegevuse tüüp** selle olemi tüüp, mida soovite kasutada. Valige **Tegevused** jaoks olemid, mida soovite kaardistada.
-    1. 2. etapp: valige atribuut olemist *Ühendatud Tegevus* valemiga nõutava komponendi jaoks. Näiteks keskmise tehingu väärtuse puhul on see atribuut, mis tähistab tehingu väärtust. Valige **Tegevuse ajatempli** jaoks atribuut olemist Ühendatud tegevus, mis tähistab tegevuse kuupäeva ja kellaaega.
-   
-1. Kui andmete kaardistamine õnnestub, näete olekut **Lõpule viidud** ning kaardistatud tegevuste ja atribuutide nime.
-
-   :::image type="content" source="media/measure-template-configured.png" alt-text="Lõpuleviidud mõõtühikumalli konfiguratsiooni kuvatõmmis.":::
-
-1. Nüüd saate valida suvandi **Käita**, et arvutada mõõtmise tulemused. Hiljem viimistlemiseks valige **Salvesta mustand**.
-
-# <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
-
-See funktsioon on saadaval ainult keskkondades loodud juhtudeks, kus üksikud kliendid on esmaseks sihtrühmaks.
-
----
+14. Mõõtmele tehtud muudatuste kasutamiseks klõpsake käsku **Salvesta**.
 
 ## <a name="manage-your-measures"></a>Meetmete haldamine
 
-Meetmete loendi leiate lehelt **Meetmed**.
+Pärast vähemalt ühe näitaja loomist näete lehel **Näitajad** näitajate loendit.
 
-Leiate teavet näidiku tüübi, autori, loomise kuupäeva, staatuse ja oleku kohta. Kui valite loendist soovitud näitaja, saate vaadata väljundi eelversiooni ja laadida alla CSV-faili.
+Leiate teavet mõõtme tüübi, looja, loomise kuupäeva ja kellaaja, viimase muutmise kuupäeva ja kellaaja, oleku (kas mõõde on aktiivne, passiivne või nurjunud) ning viimase värskendamise kuupäeva ja kellaaja kohta. Kui valite loendist mõõdu, näete selle väljundi eelvaadet.
 
 Kõigi oma meetmete korraga värskendamiseks valige **Värskenda kõik** ilma kindlat meedet valimata.
 
 > [!div class="mx-imgBorder"]
-> ![Toimingud üksikute näitajate haldamiseks.](media/measure-actions.png "Toimingud üksikute näitajate haldamiseks.")
+> ![Toimingud üksikute meetmete haldamiseks](media/measure-actions.png "Toimingud üksikute meetmete haldamiseks")
 
-Valige loendist soovitud näitaja järgmiste suvandite jaoks.
+Teise võimalusena valige loendist meede ja tehke üks järgmistest toimingutest.
 
 - Valige meetme nimi, et näha selle üksikasju.
 - Meetme konfiguratsiooni **Redigeerimine**.
-- **Värskendage** näitajat, võttes aluseks värskeimad andmed.
 - Meetme **Ümbernimetamine**.
 - Meetme **Kustutamine**.
-- **Aktiveeri** või **Inaktiveeri**. Passiivseid näitajad ei värskendata [kavandatud värskenduse](system.md#schedule-tab) ajal.
+- Valige kolmikpunkt (...) ja seejärel **Värskenda**, et käivitada meetme värskendamisprotsess.
+- Valige kolmikpunkt (...) ja seejärel **Laadi alla**, et saada meetme .CSV-fail.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
 
 ## <a name="next-step"></a>Järgmine etapp
 
-Olemasolevate näitajate abil saate luua [kliendisegmendi](segments.md).
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Esimese kliendisegmendi loomiseks lehel **Segmendid** saate kasutada olemasolevaid mõõte. Lisateavet vt [Segmendid](segments.md).

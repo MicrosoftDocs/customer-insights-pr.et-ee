@@ -1,7 +1,7 @@
 ---
 title: Customer Insights andmete eksportimine ActiveCampaigni
 description: Vaadake, kuidas konfigureerida ühendust ja eksportida ActiveCampaigni.
-ms.date: 10/08/2021
+ms.date: 06/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
+ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618148"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6314602"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Segmentide eksportimine ActiveCampaigni (eelversioon)
 
@@ -28,9 +28,9 @@ Eksportige ühtsete kliendiprofiilide segmendid ActiveCampaigni ja kasutage neid
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Ühe ekspordi kohta saate eksportida kuni miljon kliendiprofiili ActiveCampaign'i ja see võib võtta kuni 90 minutit.
+- ActiveCampaigni saate eksportida kuni 1 miljon profiili ekspordi kohta ja selle lõpuleviimiseks võib kuluda kuni 90 minutit.
 - ActiveCampaign eksportimine on piiratud segmentidega.
-- Kliendiprofiilide arv, mida saate ActiveCampaign'i eksportida, sõltub teie ActiveCampaign lepingust.
+- ActiveCampaign eksporditavate profiilide arv sõltub teie ActiveCampaign lepingust.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Saate häälestada ActiveCampaign ühendust
 
@@ -64,7 +64,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate ekspordi konfigureer
 
 1. Sisestage oma [**ActiveCampaigni loendi ID**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Segmentide ActiveCampaign eksportimine on vajalik. Soovi korral saate isikupärastatud meilide loomiseks eksportida eesnime, perekonnanime ja telefoni. Nende väljade vastendamiseks valige Lisa atribuut.
+3. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Segmentide ActiveCampaign eksportimine on vajalik. Soovi korral saate isikupärastatud meilide loomiseks eksportida eesnime, perekonnanime ja telefoni. Nende väljade vastendamiseks valige Lisa atribuut.
 
 1. Valige **Salvesta**.
 

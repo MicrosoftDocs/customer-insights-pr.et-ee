@@ -1,7 +1,7 @@
 ---
 title: Customer Insights andmete eksportimine Snapchati
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Snapchati.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618655"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760510"
 ---
-# <a name="export-segments-to-snapchat-preview"></a>Segmentide eksportimine Snapchati (eelversioon)
+# <a name="export-segment-lists-to-snapchat-preview"></a>Segmendiloendite eksportimine Snapchati (eelversioon)
 
 Saate eksportida ühendatud kliendiprofiilide segmente Snapchati ja kasutada neid turundustegevuste jaoks. 
 
@@ -29,7 +29,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente Snapchati ja kasutada nei
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
 - Eksportimine Snapchati on piiratud segmentidega.
-- Kuni miljoni kliendiprofiili eksportimine Snapchat'i võib võtta kuni 15 minutit. 
+- Kuni 1 miljoni profiili eksportimine Snapchati võib võtta kuni 15 minutit lõpuleviimiseks. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Ühenduse loomine Snapchatiga
 
@@ -63,7 +63,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage [**Snapchat Audience ID**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Segmentide eksportimine Snapchati on vajalik.
+1. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Segmentide eksportimine Snapchati on vajalik.
 
 1. Valige segmendid, mille soovite eksportida. 
 

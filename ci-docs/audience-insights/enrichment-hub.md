@@ -1,7 +1,7 @@
 ---
 title: Koondatud kliendiprofiilide rikastamine
 description: Kasutage võimalusi kliendiandmete rikastamiseks.
-ms.date: 02/07/2022
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5c3dda3b9bae828857258025ff79958ee22bdb6f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098784"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7672994"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Kliendiprofiilide rikastamine (eelvaade)
 
@@ -37,17 +37,14 @@ Vahekaardil **Avastage** leiate kõik toetatud rikastussuvandid.
 - [Demograafiline teave](enrichment-experian.md), mida pakub Experian
 - [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu 
 - Microsofti [Azure Maps](enrichment-azure-maps.md)
-- [Asukohaandmeid](enrichment-here.md) esitab HERE Technologies 
 
 # <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
 
 - [Ettevõtte andmeid](enrichment-leadspace.md) esitab Leadspace
 - [Microsofti pakutavad täiustatud](enrichment-enhanced-addresses.md) aadressid 
-- [Microsofti esitatud täiustatud ettevõtte andmed](enrichment-enhanced-company-data.md)
 - [Asukohaandmeid](enrichment-here.md) esitab HERE Technologies 
 - [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu 
 - Microsofti [Azure Maps](enrichment-azure-maps.md)
-- [Microsofti esitatud konto kaasamise andmed](enrichment-office.md)
 
 ---
 
