@@ -1,37 +1,38 @@
 ---
 title: LiveRamp konnektor
-description: Vaadake, kuidas eksportida andmeid LiveRampi.
-ms.date: 12/02/2020
-ms.reviewer: kishorem
-ms.service: customer-insights
+description: Lugege, kuidas konfigureerida ühendust ja eksportida LiveRampi.
+ms.date: 10/08/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: kishorem-ms
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 86aa8c66a47ee61741082c95f05d2e5ce3f06f35
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
-ms.translationtype: HT
+ms.openlocfilehash: 4c0f58083e8486d2042d8efcc8b3690020efb1c3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667179"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226347"
 ---
-# <a name="liverampreg-connector-preview"></a>LiveRamp&reg;i konnektor (eelvaade)
+# <a name="export-segments-to-liverampreg-preview"></a>Segmentide eksportimine LiveRamp&reg; (eelversioon)
 
-Aktiveerige oma andmed LiveRampis, et luua ühendus üle 500 digi-, sotsiaal- ja teleökosüsteemi platvormiga. Töötage LiveRampis oma andmetega, et sihistada, tõkestada ja isikupärastada reklaamikampaaniaid.
+Aktiveerige oma andmed LiveRampis, et luua ühendus üle 500 platvormiga nii digitaalmeedias, sotsiaalmeedias kui ka televisioonis. Töötage LiveRampis oma andmetega, et sihistada, tõkestada ja isikupärastada reklaamikampaaniaid.
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites-for-a-connection"></a>Ühenduse eeltingimus
 
 - Selle konnektori kasutamiseks vajate LiveRampi tellimust.
 - Tellimuse hankimiseks võtke otse [LiveRampiga ühendust](https://liveramp.com/contact/). [Lisateave LiveRampi kasutuselevõtu kohta](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>LiveRampiga ühendamine
+## <a name="set-up-connection-to-liveramp"></a>Ühenduse loomine LiveRampiga
 
-1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Eksportimise sihtkohad**.
+1. Minge **Administraator** > **Ühendused**.
 
-1. Valige paanil **LiveRamp** suvand **Seadista**.
+1. Valige **Lisa ühendus** ja valige **LiveRamp** ühenduse konfigureerimiseks.
 
-1. Sisestage väljale **Kuvatav nimi** oma sihtkoha äratuntav nimi.
+1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
+
+1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Sisestage oma LiveRampi Secure FTP (SFTP) konto **kasutajanimi** ja **parool**.
 See identimisteave võib erineda teie LiveRampi kasutuselevõtu identimisteabest.
@@ -40,15 +41,25 @@ See identimisteave võib erineda teie LiveRampi kasutuselevõtu identimisteabest
 
 1. Pärast edukat kinnitamist andke oma nõusolek **Andmete privaatsus ja nõuetele vastavuse** jaoks, valides märkeruudu **Nõustun**.
 
-1. Valige suvand **Järgmine**, et häälestada LiveRampi konnektor.
+1. Ühenduse loomiseks valige **Salvesta**.
 
-## <a name="configure-the-connector"></a>Konnektori konfigureerimine
+## <a name="configure-an-export"></a>Ekspordi konfigureerimine
+
+Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+
+1. Minge **Andmed** > **Ekspordid**.
+
+1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+
+1. Valige **Ekspordiühendus** väljal ühendus LiveRamp jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
 
 1. Valige väljal **Peamise identifikaatori valimine** kas **Meil**, **Nimi ja aadress** või **Telefon**, et saata LiveRampi identimise jaoks.
+   > [!div class="mx-imgBorder"]
+   > ![LiveRampi konnektor atribuutide kaardistamiseks.](media/export-liveramp-segments.png "LiveRampi konnektor atribuutide vastendamisega")
 
-1. Vastendage vastavad atribuudid valitud põhiidentifikaatori ühtsest kliendiolemist.
+1. Vastendage oma *Kliendi* olemi vastavad atribuudid valitud võtmeidentifikaatori jaoks.
 
-1. Valige suvand **Lisa atribuut**, et vastendada LiveRampi saatmiseks täiendavaid atribuute.
+1. Valige **Lisa atribuut**, et kaardistada rohkem atribuute LiveRampile saatmiseks.
 
    > [!TIP]
    > Rohkemate põhiidentifikaatorite LiveRampi saatmisel on vastete määr tõenäoliselt suurem.
@@ -57,15 +68,14 @@ See identimisteave võib erineda teie LiveRampi kasutuselevõtu identimisteabest
 
 1. Valige **Salvesta**.
 
-> [!div class="mx-imgBorder"]
-> ![LiveRampi konnektor atribuutide vastendamisega](media/export-liveramp-segments.png "LiveRampi konnektor atribuutide vastendamisega")
+Ekspordi salvestamine ei käivita eksporti kohe.
 
-## <a name="export-the-data"></a>Andmete eksportimine
+Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
 
-Eksportimine algab varsti, kui kõik eksportimiseks vajalikud eeltingimused on täidetud. Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).
-Pärast eksportimise lõpuleviimist saate oma andmete aktiveerimiseks ja levitamiseks LiveRampi kasutuselevõttu sisse logida.
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 
 Kui lubate Dynamics 365 Customer Insightsil Liverampi andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed). Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et Liveramp täidab kõik teie privaatsus- või turbenõuded. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
 Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

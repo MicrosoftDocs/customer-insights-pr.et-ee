@@ -1,38 +1,50 @@
 ---
 title: Customer Insightsi andmete eksportimine rakendusse Dynamics 365 Sales
-description: Vaadake, kuidas konfigureerida ühendust rakendusega Dynamics 365 Sales.
-ms.date: 08/21/2020
-ms.reviewer: philk
-ms.service: customer-insights
+description: Lugege, kuidas konfigureerida ühendust ja eksportida Dynamics 365 Sales'i.
+ms.date: 03/03/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
-ms.translationtype: HT
+searchScope:
+- ci-export
+- customerInsights
+ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643813"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355012"
 ---
-# <a name="connector-for-dynamics-365-sales-preview"></a>Ühendus rakendusega Dynamics 365 for Sales (eelvaateversioon)
+# <a name="use-segments-in-dynamics-365-sales-preview"></a>Kasutage segmente rakendusega Dynamics 365 Sales (eelversioon)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Kasutage kliendiandmeid turundusloendite loomiseks, töövoogude järeltegevusteks ja kampaaniate saatmiseks Dynamics 365 Salesi abil.
 
-## <a name="prerequisite"></a>Eeltingimus
+## <a name="known-limitations"></a>Teadaolevad piirangud
 
-Kontaktikirjed [rakendusest Dynamics 365 Sales on valmendatud Common Data Service'i abil](connect-power-query.md).
+- Eksport Dynamics 365 Salesi on piiratud 100 000 liikmega segmendi kohta.
+- Segmendi eksport Dynamics 365 müügile võib võtta kuni 3 tundi. 
 
-## <a name="configure-the-connector-for-sales"></a>Konnektori konfigureerimine Salesi jaoks
+## <a name="prerequisite-for-connection"></a>Ühenduse eeltingimus
 
-1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Eksportimise sihtkohad**.
+1. Enne segmendi eksportimist Customer Insightsist Salesi, peavad kontaktikirjed olema olemas rakenduses Dynamics 365 Sales. Lugege lisateavet selle kohta, kuidas valmendada kontakte [Dynamics 365 Salesis Microsoft Dataversei abil](connect-power-query.md).
 
-1. Jaotises **Dynamics 365 Sales** valige suvand **Häälestamine**.
+   > [!NOTE]
+   > Segmentide eksportimine sihtrühmaülevaadetest Salesi ei loo uusi kontaktikirjeid Salesi eksemplaris. Salesi kontaktikirjed peavad olema valmendatud sihtrühmaülevaadetes ja neid tuleb kasutada andmeallikana. Need tuleb lisada ka ühendatud kliendi olemisse, et vastendada kliendi ID-d ja kontakti ID-deks, enne kui segmente saab eksportida.
 
-1. Sisestage väljale **Kuvatav nimi** oma ekspordi sihtkoha äratuntav nimi.
+## <a name="set-up-the-connection-to-sales"></a>Ühenduse loomine Sales'iga
+
+1. Minge **Administraator** > **Ühendused**.
+
+1. Valige **Lisa ühendus** ja valige **Dynamics 365 Sales** ühenduse konfigureerimiseks.
+
+1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
+
+1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Sisestage väljale **Serveri aadress** oma organisatsiooni Salesi URL.
 
@@ -40,12 +52,24 @@ Kontaktikirjed [rakendusest Dynamics 365 Sales on valmendatud Common Data Servic
 
 1. Vastendage kliendi ID väli Dynamics 365 kontakti ID-ga.
 
-1. Tehke valik **Edasi**.
+1. Ühenduse loomiseks valige **Salvesta**. 
+
+## <a name="configure-an-export"></a>Ekspordi konfigureerimine
+
+Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+
+1. Minge **Andmed** > **Ekspordid**.
+
+1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+
+1. Valige **Ekspordiühendus** väljal ühendus Dynamics 365 Sales jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
 
 1. Valige üks või mitu segmenti.
 
-1. Valige **Salvesta**.
+1. Valige **Salvesta**
 
-## <a name="export-the-data"></a>Andmete eksportimine
+Ekspordi salvestamine ei käivita eksporti kohe.
 
-Saate [vajadusel andmeid eksportida](export-destinations.md). Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).
+Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

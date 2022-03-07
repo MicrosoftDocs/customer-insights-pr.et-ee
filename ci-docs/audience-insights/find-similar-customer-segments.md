@@ -1,24 +1,29 @@
 ---
-title: Sarnaste klientide leidmine tehisintellekti abil
+title: Sarnaste klientide leidmine tehisintellektiga (sisaldab videot)
 description: Leidke tehisintellekti abil sarnaseid kliendi segmente.
 ms.date: 06/25/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-segment-builder
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034530"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355240"
 ---
 # <a name="similar-customers-preview"></a>Sarnased kliendid (eelversioon)
 
 See funktsioon võimaldab tehisintellekti kasutades leida teie kliendibaasist sarnaseid kliente. Selle funktsiooni kasutamiseks peab teil olema loodud vähemalt üks segment. Olemasoleva segmendi kriteeriumide laiendamine aitab leida sellele segmendile sarnaseid kliente.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Sarnaste klientide leidmine* kasutab automatiseeritud vahendeid andmete hindamiseks ja andmete põhjal prognooside tegemiseks ning seega saab seda kasutada ka profiilimismeetodina, nagu see mõiste on isikuandmete kaitse üldmääruses (GDPR) määratletud. Kui klient seda funktsiooni andmete töötlemiseks kasutab, võivad kohalduda GDPR või muud seadused ja määrused. Teie vastutate selle eest, et Dynamics 365 Customer Insightsi kasutades (sh prognoose kasutades) järgite te kõiki kohaldatavaid seadusi ja määrusi, sh eraelu puutumatuse, isikuandmete, biomeetriliste andmete, andmekaitse ja suhtluse konfidentsiaalsusega seotud seadusi.

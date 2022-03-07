@@ -4,17 +4,16 @@ description: Täpsemad stsenaariumid, mida oma veebisaidi SDK-ga seadistamisel a
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 11/12/2020
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 7455d276035bfaf1f8a93d0e3b0b0884353a4010715c05d1d696309f7eb4b233
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: a083d8215f295af0884257a016b62b8c7e4ab2c7
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036323"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227193"
 ---
 # <a name="advanced-web-sdk-instrumentation"></a>Veebi SDK täpsem dokumentatsioon
 
@@ -33,20 +32,20 @@ Objekt `IUser` sisaldab järgmisi stringi atribuute:
 - **autenditudTüüp**: autentimistüüp, mida kasutati autenditud kasutaja ID saamiseks.
 - **nimi**: Kasutaja nimi.
 - **ekiri**: Saatja ekirja aadress.
-    
-Järgmises näites on toodud näiteks koodilõigend teabe saatmine. Kui näete funktsioone, mida tähistab *, asendage see oma nende väärtustele helistamise funktsiooniga:  
+
+Järgmises näites on toodud näiteks koodilõigend teabe saatmine. Kui näete funktsioone, mille eel on tärnitähis *, asendage funktsioon oma kohandatud rakendamisega.
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     user:{
@@ -58,25 +57,25 @@ window, document
 […]
 ```
 
-Kasutajateavet saate määrata ka `setUser(user: IUser)` SDK-s API-le helistades. Pärast helistamist saadetud `setUser API` telemeetria sisaldab kasutaja teavet.
+Kasutajateavet saate määrata ka`setUser(user: IUser)` API-le helistades. Telemeetria, mis saadetakse pärast `setUser` API -le helistamist, sisaldab kasutajateavet.
 
 ## <a name="adding-custom-properties-for-each-event"></a>Iga sündmuse jaoks kohandatud atribuutide lisamine
 
-SDK võimaldab määratleda kasutajateavet, mida saab saata iga sündmusega. Saate määrata kohandatud atribuudid objektina, mis sisaldab võtmeväärtuse paare (väärtus võib olla tüüpidest `string | number | boolean`). Objekti saab lisada atribuudisse nimega, mis on `props` sarnane atribuudiga `src`, `name`, ja `cfg` koodilõigend konfiguratsioonis. 
+SDK võimaldab määratleda kasutajateavet, mida saab saata iga sündmusega. Saate määrata kohandatud atribuudid objektina, mis sisaldab võtmeväärtuse paare (väärtus võib olla tüüpidest `string | number | boolean`). Saate lisada objekti atribuudile nimega `props`, mis on sarnane `src`,`name`ja `cfg` -iga koodilõigendi konfiguratsioonis.
 
 Järgmine näide näitab koodilõiku, mis saadab kohandatud atribuute:
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     props:{
@@ -87,7 +86,7 @@ window, document
 […]
 ```
 
-Kohandatud atribuute saate määrata a individuaalselt, helistades `setProperty(name: string, value: string | number | boolean)` SDK-s API-le.
+Kohandatud atribuute saate määrata ka individuaalselt, helistades `setProperty(name: string, value: string | number | boolean)` API -le.
 
 ## <a name="sending-custom-events"></a>Kohandatud sündmuste saatmine
 

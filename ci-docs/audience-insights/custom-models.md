@@ -3,25 +3,27 @@ title: Kohandatud masinõppe mudelid | Microsoft Docs
 description: Azure'i masinõppe kohandatud mudelitega töötamine rakenduses Dynamics 365 Customer Insights.
 ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
-ms.translationtype: HT
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881779"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355046"
 ---
 # <a name="custom-machine-learning-models"></a>Kohandatud masinõppe mudelid
 
 > [!NOTE]
-> Masinõpe Studio (klassika) tugi lõpeb 31. augustil 2024. Soovitame selleks kuupäevaks üle minna [Azure](/azure/machine-learning/overview-what-is-azure-machine-learning) Masinõpe.
+> Masinõpe Studio (klassikaline) tugi lõpeb 31. augustil 2024. Soovitame selleks kuupäevaks üle minna [Azure Masinõpe](/azure/machine-learning/overview-what-is-azure-machine-learning).
 >
-> Alates 1. detsembrist 2021 ei saa te luua uusi Masinõpe Studio (klassikaline) ressursse. Kuni 31. augustini 2024 saate jätkata olemasolevate Masinõpe Studio (klassikaliste) ressursside kasutamist. Lisateavet vt teemast [Migrate to Azure Masinõpe](/azure/machine-learning/migrate-overview).
+> Alates 1. detsembrist 2021 ei saa te luua uusi Masinõpe Studio (klassikalisi) ressursse. Kuni 31. augustini 2024 saate jätkata olemasolevate Masinõpe Studio (klassikaliste) ressursside kasutamist. Lisateavet leiate teemast [Azure Masinõpe migreerimine](/azure/machine-learning/migrate-overview).
 
 
 Jaotises **Ärianalüüs** > **Kohandatud mudelid** saate hallata töövooge Azure'i masinõppe mudelite põhjal. Töövood aitavad teil valida andmed, mille põhjal soovite ülevaateid luua, ja vastendada tulemused teie koondatud kliendiandmetega. Lisateavet kohandatud masinõppemudelite loomise kohta leiate teemast [Azure'i masinaõppe põhiste mudelite kasutamine](azure-machine-learning-experiments.md).
@@ -32,7 +34,7 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- See funktsioon toetab Veebiteenuseid, mis on avaldatud [Azure Masinõpe pakett-konveieri kaudu](/azure/machine-learning/concept-ml-pipelines).
+- See funktsioon toetab Azure Masinõpe pakett-konveieri kaudu [avaldatud veebiteenuseid](/azure/machine-learning/concept-ml-pipelines).
 
 - Selle funktsiooni kasutamiseks on vaja Azure Data Lake Gen2 salvestuskontot, mis on seotud teie Azure Studio eksemplariga. Lisateavet leiate teemast [Azure Data Lake Storage Gen2 salvestuskonto loomine](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -40,6 +42,8 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 
    > [!NOTE]
    > Andmed edastatakse teie Customer Insightsi eksemplaride ja töövoos valitud Azure'i veebiteenuste või konveierite vahel. Andmete edastamisel Azure'i teenusele veenduge, et teenus oleks konfigureeritud andmeid töötlema vajalikul viisil ja kohas, mis vastaks mis tahes juriidilistele või regulatiivsetele nõuetele nende andmete puhul teie organisatsioonis.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Uue töövoo lisamine
 
@@ -56,7 +60,7 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 
 1. Valige oma veebiteenusega seotud **tööruumid**. 
 
-1. Valige veebiteenuses Azure Masinõpe **torujuhe, mis sisaldab teie mudeli** rippmenüüd. Seejärel valige suvand **Edasi**.    
+1. Valige veebiteenuses **Azure Masinõpe torujuhe, mis sisaldab teie mudeli** rippmenüüd. Seejärel valige suvand **Edasi**.    
    Lugege lisateavet [konveieri avaldamise kohta Azure'i masinõppes kujundaja abil](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) või [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) kohta. Teie konveier peab olema avaldatud [konveieri lõpp-punktis](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Valige iga **veebiteenuse sisendi** kohta sihtrühmaülevaadetest vastav **Olem** ja valige **Järgmine**.

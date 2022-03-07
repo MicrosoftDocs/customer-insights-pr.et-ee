@@ -3,18 +3,17 @@ title: Kliendiprofiilide rikastamine Azure Mapsi asukohaandmetega
 description: Üldine teave Azure Maps esimese osapoole rikastamise kohta.
 ms.date: 08/31/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 63f241c27ec86f357c83a301d6797f9ff87c2241
-ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
+ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466757"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226444"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Kliendiprofiilide rikastamine Azure Mapsi abil (eelvaade)
 
@@ -86,7 +85,7 @@ Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **
 
 ## <a name="next-steps"></a>Järgmised etapid
 
-Rikastatud kliendiandmetele toetumine. Klientidele isikustatud kogemuste pakkumiseks looge suvandid [Segmendid](segments.md), [Meetmed](measures.md) ja isegi [Ekspordi andmed](export-destinations.md).
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 

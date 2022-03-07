@@ -1,32 +1,34 @@
 ---
-title: Dynamics 365 Customer Insights Audit azure monitoriga
-description: Vaadake, kuidas saata logisid Microsoft Azure Monitorile.
+title: Audit Dynamics 365 Customer Insights azure monitoriga
+description: Vaadake, kuidas saata logisid Monitorile Microsoft Azure.
 ms.date: 12/14/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: article
 author: brndkfr
 ms.author: bkief
 manager: shellyha
-ms.openlocfilehash: d962c359d70a068fcf939b61e340f86de088b419
-ms.sourcegitcommit: 0c3c473e0220de9ee3c1f1ee1825de0b3b3663c3
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/14/2021
-ms.locfileid: "7920865"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354382"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Azure Monitori abil edasisaatmine Dynamics 365 Customer Insights (Eelvaade)
 
-Dynamics 365 Customer Insights pakub otsest integreerimist Azure Monitoriga. Azure Monitori ressursilogid võimaldavad teil jälgida ja saata logisid [Azure](https://azure.microsoft.com/services/storage/) Storage'i, [Azure Log Analyticsisse või](/azure/azure-monitor/logs/log-analytics-overview) voogesitada neid [Azure Event Hubsisse](https://azure.microsoft.com/services/event-hubs/).
+Dynamics 365 Customer Insights pakub otsest integreerimist Azure Monitoriga. Azure Monitori ressursilogid võimaldavad teil jälgida ja saata logisid [Azure Storage'i](https://azure.microsoft.com/services/storage/), [Azure Log Analyticsisse](/azure/azure-monitor/logs/log-analytics-overview) või voogesitada neid [Azure Event Hubsisse](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights saadab järgmised sündmuste logid.
 
 - **Auditisündmused**
-  - **APIEvent** - võimaldab kasutajaliidese kaudu tehtud muudatuste jälgimist. Dynamics 365 Customer Insights
+  - **APIEvent** - võimaldab kasutajaliidese kaudu tehtud muudatuste jälgimist Dynamics 365 Customer Insights.
 - **Operatiivsündmused**
-  - **WorkflowEvent** – töövoog võimaldab seadistada [andmeallikaid](data-sources.md), [ühendada](data-unification.md) ja [rikastada](enrichment-hub.md) ning lõpuks [eksportida](export-destinations.md) andmeid teistesse süsteemidesse. Kõiki neid samme saab teha individuaalselt (nt käivitada üks eksport) või orkestreerida (nt andmete värskendamine andmeallikatest, mis käivitavad ühendamisprotsessi, mis toob kaasa täiendavad rikastamised ja kui see on tehtud, ekspordivad andmed teise süsteemi). Lisateavet leiate [teemast WorkflowEvent Schema](#workflow-event-schema).
-  - **APIEvent** - kõik API kõned klientide eksemplari. Dynamics 365 Customer Insights Lisateavet vt [APIEvent Schema](#api-event-schema).
+  - **WorkflowEvent** – töövoog võimaldab seadistada [andmeallikaid](data-sources.md), [ühendada ja](data-unification.md) rikastada [ning](enrichment-hub.md) lõpuks [eksportida](export-destinations.md) andmeid teistesse süsteemidesse. Kõiki neid samme saab teha individuaalselt (nt käivitada üks eksport) või orkestreerida (nt andmete värskendamine andmeallikatest, mis käivitavad ühendamisprotsessi, mis toob kaasa täiendavad rikastamised ja kui see on tehtud, ekspordivad andmed teise süsteemi). Lisateavet leiate teemast [WorkflowEvent skeem](#workflow-event-schema).
+  - **APIEvent** - kõik API kõned klientide eksemplari.Dynamics 365 Customer Insights Lisateavet leiate APIEvent [Skeemist](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Diagnostikasätete häälestamine
 
@@ -35,57 +37,57 @@ Customer Insights saadab järgmised sündmuste logid.
 Diagnostika konfigureerimiseks Customer Insightsis peavad olema täidetud järgmised eeltingimused.
 
 - Teil on aktiivne [Azure'i tellimus](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Teil on [customer](permissions.md#administrator) Insightsis administraatoriõigused.
-- **Azure'i** sihtressursil on roll kaasautori ja **kasutajajuurdepääsu** administraatori rollis. Ressurss võib olla Azure'i salvestusruumikonto, Azure Event Hub või Azure Log Analyticsi tööruum. Lisateavet leiate teemast [Azure'i rolliülesannete lisamine või eemaldamine Azure'i portaali abil](/azure/role-based-access-control/role-assignments-portal).
-- [Azure](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) Storage'i, Azure Event Hubi või Azure Log Analyticsi sihtkohanõuded kohtusid.
+- Teil on [customer Insightsis administraatoriõigused](permissions.md#administrator).
+- Azure'i **sihtressursil on roll kaasautori** ja **kasutajajuurdepääsu administraatori** rollis. Ressurss võib olla Azure'i salvestusruumikonto, Azure Event Hub või Azure Log Analyticsi tööruum. Lisateavet leiate teemast [Azure'i rolliülesannete lisamine või eemaldamine Azure'i portaali](/azure/role-based-access-control/role-assignments-portal) abil.
+- [Azure Storage'i, Azure Event Hubi või Azure Log Analyticsi sihtkohanõuded](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) kohtusid.
 - Teil on vähemalt **lugeja** roll ressursirühmas, kuhu ressurss kuulub.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Diagnostika häälestamine Azure Monitoriga
 
-1. Valige customer **Insightsis** > **süsteemidiagnostika,** et näha diagnostika sihtkohti, mis on konfigureeritud selle eksemplari.
+1. Valige Customer Insightsis **SystemDiagnostics** > **,** et näha selle eksemplari konfigureeritud diagnostika sihtkohti.
 
 1. Valige **Lisa sihtkoht**.
 
    > [!div class="mx-imgBorder"]
    > ![Diagnostika ühendus](media/diagnostics-pane.png "Diagnostika ühendus")
 
-1. Sisestage nimi **väljal Diagnostika sihtkoha** nimi.
+1. Sisestage nimi väljal **Diagnostika sihtkoha** nimi.
 
-1. Valige **azure**'i tellimuse rentnik sihtressursiga ja valige **logi sisse**.
+1. **Valige azure'i tellimuse rentnik** sihtressursiga ja valige **logi sisse**.
 
-1. Valige **ressursitüüp** (salvestuskonto, sündmuse keskus või logianalüüs).
+1. **Valige ressursitüüp** (salvestuskonto, sündmuse keskus või logianalüüs).
 
-1. Valige **sihtressursi** tellimus.
+1. Valige **sihtressursi tellimus**.
 
 1. Valige **sihtressursi jaoks rühm** Ressurss.
 
 1. Valige **ressurss**.
 
-1. Kinnitage **andmete privaatsus- ja** vastavusavaldus.
+1. **Kinnitage andmete privaatsus- ja vastavusavaldus**.
 
-1. **Sihtressursiga ühenduse loomiseks valige Ühenda** süsteemiga. Logid hakkavad sihtkohas ilmuma 15 minuti pärast, kui API on kasutusel ja tekitab sündmusi.
+1. Sihtressursiga ühenduse loomiseks valige **Ühenda süsteemiga**. Logid hakkavad sihtkohas ilmuma 15 minuti pärast, kui API on kasutusel ja tekitab sündmusi.
 
 ### <a name="remove-a-destination"></a>Sihtkoha eemaldamine
 
-1. Avage **·** > **süsteemidiagnostika**.
+1. **Avage SystemDiagnostics** > **·**.
 
 1. Valige loendist diagnostika sihtkoht.
 
-1. Valige **veerus** Toimingud **ikoon** Kustuta.
+1. Valige **veerus** Toimingud **ikoon Kustuta**.
 
-1. Kinnitage kustutamine logi edasisaatmise peatamiseks. Azure'i tellimuse ressurssi ei kustutata. Saate valida **lingi** veerus Toimingud, et avada valitud ressursi Azure'i portaal ja kustutada see seal.
+1. Kinnitage kustutamine logi edasisaatmise peatamiseks. Azure'i tellimuse ressurssi ei kustutata. Saate valida lingi veerus **Toimingud**, et avada valitud ressursi Azure'i portaal ja kustutada see seal.
 
 ## <a name="log-categories-and-event-schemas"></a>Logikategooriad ja sündmuste skeemid
 
 Praegu [toetatakse API-sündmusi](apis.md) ja töövoosündmusi ning kehtivad järgmised kategooriad ja skeemid.
-Logiskeem järgib [Azure Monitori ühist skeemi](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
+Logiskeem järgib Azure Monitori [ühist skeemi](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
 
 ### <a name="categories"></a>Kategooriad
 
 Customer Insights pakub kahte kategooriat.
 
-- **Auditisündmused** : API sündmused teenuse [konfiguratsioonimuudatuste](#api-event-schema) jälgimiseks. `POST|PUT|DELETE|PATCH` Operatsioonid lähevad sellesse kategooriasse.
-- **Tegevussündmused** : teenuse kasutamise käigus loodud [API-sündmused](#api-event-schema) või [töövoosündmused.](#workflow-event-schema)  Näiteks `GET` töövoo päringud või täitmissündmused.
+- **Auditisündmused**: [API sündmused](#api-event-schema) teenuse konfiguratsioonimuudatuste jälgimiseks. `POST|PUT|DELETE|PATCH` Operatsioonid lähevad sellesse kategooriasse.
+- **Tegevussündmused**: [teenuse kasutamise ajal loodud API-sündmused](#api-event-schema) või [töövoosündmused](#workflow-event-schema).  Näiteks `GET` töövoo päringud või täitmissündmused.
 
 ## <a name="configuration-on-the-destination-resource"></a>Sihtressursi konfiguratsioon
 
@@ -93,30 +95,30 @@ Ressursitüübi valiku põhjal rakendatakse automaatselt järgmisi juhiseid.
 
 ### <a name="storage-account"></a>Salvestusruumi konto
 
-Customer Insightsi teenuse juht saab **valitud** ressursi salvestusruumikonto kaasautori õiguse ja loob valitud nimeruumi all kaks konteinerit.
+Customer Insightsi teenuse juht saab **valitud ressursi salvestusruumikonto kaasautori** õiguse ja loob valitud nimeruumi all kaks konteinerit.
 
-- `insight-logs-audit`**auditisündmusi sisaldav**
-- `insight-logs-operational`**tegevussündmusi sisaldav**
+- `insight-logs-audit` auditisündmusi **sisaldav**
+- `insight-logs-operational` tegevussündmusi **sisaldav**
 
 ### <a name="event-hub"></a>Sündmuskeskus
 
 Customer Insightsi teenuse juht saab **ressursi azure event hubs andmeomaniku** õiguse ja loob valitud nimeruumi all kaks sündmusekeskust.
 
-- `insight-logs-audit`**auditisündmusi sisaldav**
-- `insight-logs-operational`**tegevussündmusi sisaldav**
+- `insight-logs-audit` auditisündmusi **sisaldav**
+- `insight-logs-operational` tegevussündmusi **sisaldav**
 
 ### <a name="log-analytics"></a>Logianalüütika
 
-Customer Insightsi teenuse juht saab **ressursi** logianalüüsi kaasautori õiguse. Logid on saadaval **jaotises** > **Logitabelite** > **logihaldus valitud** Logianalüüsi tööruumis. Laiendage **logihalduse** lahendust ning leidke `CIEventsAudit` tabelid ja `CIEventsOperational` tabelid.
+Customer Insightsi teenuse juht saab **ressursi logianalüüsi kaasautori** õiguse. Logid on saadaval jaotises **LogisTablesLogi** > **·** > **haldus** valitud Logianalüütika tööruumis. Laiendage **logihalduse** lahendust ning leidke `CIEventsAudit` tabelid ja `CIEventsOperational` tabelid.
 
-- `CIEventsAudit`**auditisündmusi sisaldav**
-- `CIEventsOperational`**tegevussündmusi sisaldav**
+- `CIEventsAudit` auditisündmusi **sisaldav**
+- `CIEventsOperational` tegevussündmusi **sisaldav**
 
-Laiendage **aknas Päringud** **auditilahendust** ja leidke otsinguga esitatud näidispäringud. `CIEvents`
+Laiendage **aknas Päringud** auditilahendust **ja** leidke otsinguga `CIEvents` esitatud näidispäringud.
 
 ## <a name="event-schemas"></a>Sündmuste skeemid
 
-API sündmustel ja töövoosündmustel on ühine struktuur ja üksikasjad, kus need erinevad, vt [API sündmuste skeemi või](#api-event-schema)[töövoosündmuste skeemi](#workflow-event-schema).
+API sündmustel ja töövoosündmustel on ühine struktuur ja üksikasjad, kus need erinevad, vt [API sündmuste skeemi](#api-event-schema) või [töövoosündmuste skeemi](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>API sündmuste skeem
 
@@ -130,9 +132,9 @@ API sündmustel ja töövoosündmustel on ühine struktuur ja üksikasjad, kus n
 | `resultSignature` | String    | Valikuline          | Sündmuse tulemi olek. Kui toiming vastab REST API kõnele, on see HTTP-oleku kood.        | `200`             |
 | `durationMs`      | Pikk      | Valikuline          | Operatsiooni kestus millisekundites.     | `133`     |
 | `callerIpAddress` | String    | Valikuline          | Helistaja IP-aadress, kui toiming vastab API-kõnele, mis pärineb avalikult kättesaadavalt IP-aadressilt.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Valikuline          | JSON-objekt, mis kirjeldab toimingu teinud kasutaja või rakenduse identiteeti.       | Vaadake [jaotist](#identity-schema) Identiteet.     |  |
-| `properties`      | String    | Valikuline          | JSON-objekt, millel on konkreetse sündmuste kategooria jaoks rohkem atribuute.      | Vt [jaotis](#api-properties-schema) Atribuudid.    |
-| `level`           | String    | Nõutav          | Sündmuse raskusastme tase.    | `Informational`, `Warning``Error` või `Critical`.           |
+| `identity`        | String    | Valikuline          | JSON-objekt, mis kirjeldab toimingu teinud kasutaja või rakenduse identiteeti.       | Vaadake [jaotist Identiteet](#identity-schema).     |  |
+| `properties`      | String    | Valikuline          | JSON-objekt, millel on konkreetse sündmuste kategooria jaoks rohkem atribuute.      | Vt [jaotis Atribuudid](#api-properties-schema).    |
+| `level`           | String    | Nõutav          | Sündmuse raskusastme tase.    | `Informational``Warning`, `Error` või `Critical`.           |
 | `uri`             | String    | Valikuline          | Absoluutne taotlus URI.    |               |
 
 #### <a name="identity-schema"></a>Identiteediskeem
@@ -159,11 +161,11 @@ API sündmustel ja töövoosündmustel on ühine struktuur ja üksikasjad, kus n
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `Authorization.UserRole`      | Kasutajale või rakendusele määratud roll. Lisateavet leiate teemast [Kasutajaõigused](permissions.md).                                     |
 | `Authorization.RequiredRoles` | Operatsiooni tegemiseks vajalikud rollid. `Admin` Rollil on lubatud teha kõiki toiminguid.                                                    |
-| `Claims`                      | Kasutaja või rakenduse JSON veebiloa (JWT) nõuded. Nõude atribuudid on organisatsiooni ja konfiguratsiooni lõikes Azure Active Directory erinevad. |
+| `Claims`                      | Kasutaja või rakenduse JSON veebiloa (JWT) nõuded. Nõude atribuudid on organisatsiooni ja Azure Active Directory konfiguratsiooni lõikes erinevad. |
 
 #### <a name="api-properties-schema"></a>API atribuutide skeem
 
-[API](apis.md) sündmustel on järgmised omadused.
+[API sündmustel](apis.md) on järgmised omadused.
 
 | Väli                        | Kirjeldus                                                                                                            |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -180,7 +182,7 @@ API sündmustel ja töövoosündmustel on ühine struktuur ja üksikasjad, kus n
 
 ### <a name="workflow-event-schema"></a>Töövoo sündmuse skeem
 
-Töövoog sisaldab mitut toimingut. [Andmeallikate,](data-sources.md)[ühendage,](data-unification.md)[rikastage](enrichment-hub.md) ja [eksportige](export-destinations.md) andmeid. Kõik need sammud võivad töötada individuaalselt või orkestreerida järgmiste protsessidega. 
+Töövoog sisaldab mitut toimingut. [Andmeallikate](data-sources.md) neelamine, [andmete ühendamine, rikastamine](data-unification.md)[ja](enrichment-hub.md) [eksportimine](export-destinations.md). Kõik need sammud võivad töötada individuaalselt või orkestreerida järgmiste protsessidega. 
 
 #### <a name="operation-types"></a>Toimingu tüübid
 
@@ -212,7 +214,7 @@ Töövoog sisaldab mitut toimingut. [Andmeallikate,](data-sources.md)[ühendage,
 | --------------- | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `time`          | Üksuse ajatempel | Nõutav          | Sündmuse ajatempl (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Nõutav          | Sündmuse eraldanud eksemplari ResourceId.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
-| `operationName` | String    | Nõutav          | Selle sündmusega esindatud toimingu nimi. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Vt [viite kohta operatsioonitüübid.](#operation-types) | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
+| `operationName` | String    | Nõutav          | Selle sündmusega esindatud toimingu nimi. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Vt [viite kohta operatsioonitüübid](#operation-types). | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
 | `category`      | String    | Nõutav          | Sündmuse logikategooria. Alati `Operational` töövoosündmuste jaoks                                                                                           | `Operational`                                                                                                                                                            | 
 | `resultType`    | String    | Nõutav          | Sündmuse olek. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Pikk      | Valikuline          | Operatsiooni kestus millisekundites.                                                                                                                    | `133`                                                                                                                                                                    |
@@ -230,7 +232,7 @@ Töövoosündmustel on järgmised atribuudid.
 | `properties.workflowJobId`                   | Ja      | Ja  | Töövoo käivitamise ID. Kõigil töövoo käivitamise töövoo- ja ülesandesündmustel on samad `workflowJobId`.                                                                                                                                   |
 | `properties.operationType`                   | Ja      | Ja  | Toimingu ID vt [Operatsioonitüübid]. (#operation tüüpi)                                                                                                                                                                                       |
 | `properties.tasksCount`                      | Ja      | No   | Ainult töövoog. Töövoo käivitatud ülesannete arv.                                                                                                                                                                                                       |
-| `properties.submittedBy`                     | Ja      | No   | Valikuline. Ainult töövoo sündmused. Azure Active Directory [Töövoo käivitanud kasutaja objektiid](/azure/marketplace/find-tenant-object-id#find-user-object-id) vt ka `properties.workflowSubmissionKind`.                                   |
+| `properties.submittedBy`                     | Ja      | No   | Valikuline. Ainult töövoo sündmused. Töövoo Azure Active Directory [käivitanud kasutaja](/azure/marketplace/find-tenant-object-id#find-user-object-id) objektiid vt ka `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Ja      | No   | `full` või `incremental` värskendada.                                                                                                                                                                                                                            |
 | `properties.workflowSubmissionKind`          | Ja      | No   | `OnDemand` või `Scheduled`.                                                                                                                                                                                                                                  |
 | `properties.workflowStatus`                  | Ja      | No   | `Running` või `Successful`.                                                                                                                                                                                                                                 |
@@ -241,7 +243,7 @@ Töövoosündmustel on järgmised atribuudid.
 | `properties.identifier`                      | No       | Ja  | - Operatsioonitüübi = `Export` puhul on identifikaatoriks ekspordikonfiguratsiooni guid. <br> - Operatsioonitüübi = `Enrichment` puhul on see rikastamise kavand <br> - Operatsioonitüübi `Measures` ja `Segmentation`, identifikaatoriks on olemi nimi. |
 | `properties.friendlyName`                    | No       | Ja  | Ekspordi või töödeldava olemi kasutajasõbralik nimi.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Ja  | Valikuline. Tõrketeade koos üksikasjadega.                                                                                                                                                                                                                  |
-| `properties.additionalInfo.Kind`             | No       | Ja  | Valikuline. Ainult operatsioonitüübi `Export` jaoks. Tuvastab ekspordi tüübi. Lisateavet leiate [ekspordisihtkohtade ülevaatest](export-destinations.md).                                                                                          |
+| `properties.additionalInfo.Kind`             | No       | Ja  | Valikuline. Ainult operatsioonitüübi `Export` jaoks. Tuvastab ekspordi tüübi. Lisateavet leiate [ekspordisihtkohtade](export-destinations.md) ülevaatest.                                                                                          |
 | `properties.additionalInfo.AffectedEntities` | No       | Ja  | Valikuline. Ainult operatsioonitüübi `Export` jaoks. Sisaldab ekspordis konfigureeritud olemite loendit.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Ja  | Valikuline. Ainult operatsioonitüübi `Export` jaoks. Ekspordi üksikasjalik sõnum.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Ja  | Valikuline. Ainult operatsioonitüübi `Segmentation` jaoks. Näitab segmendi liikmete koguarvu.                                                                                                                                                    |

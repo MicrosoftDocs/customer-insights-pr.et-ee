@@ -3,26 +3,28 @@ title: Tellimusevoolavuse prognoosi näidisjuhend
 description: Kasutage seda näidisjuhendit, et proovida kasutamiseks valmis tellimusevoolavuse prognoosi mudelit.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306298"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355608"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Tellimusevoolavuse prognoosi (eelversioon) näidisjuhend
+# <a name="subscription-churn-prediction-sample-guide"></a>Tellimusevoolavuse prognoosi näidisjuhend
 
 Selles juhendis näidatakse teile otsast lõpuni, kuidas kasutada tellimusevoolavuse prognoosi funktsiooni koos alltoodud näidisandmetega. 
 
 ## <a name="scenario"></a>Stsenaarium
 
-Contoso on ettevõte, mis toodab kvaliteetseid kohvi- ja kohvimasinaid, mida nad müüvad oma Contoso Coffee veebisaidi kaudu. Hiljuti hakkasid nad pakkuma kordustellimusi, et kliendid saaksid kohvi regulaarselt. Nende eesmärk on mõista, millised tellimusega liitunud kliendid võivad järgmise paari kuu jooksul tellimuse tühistada. Teades, millised nende kliendid **tõenäoliselt loobuvad**, aitab ettevõttel nende säilitamisele keskendudes turundusvõtteid säästa.
+Contoso on ettevõte, mis toodab kvaliteetset kohvi ja kohvimasinaid, mida müüakse veebisaidi Contoso Coffee kaudu. Hiljuti hakkasid nad pakkuma kordustellimusi, et kliendid saaksid kohvi regulaarselt. Nende eesmärk on mõista, millised tellimusega liitunud kliendid võivad järgmise paari kuu jooksul tellimuse tühistada. Teades, millised nende kliendid **tõenäoliselt loobuvad**, aitab ettevõttel nende säilitamisele keskendudes turundusvõtteid säästa.
 
 ## <a name="prerequisites"></a>Eeltingimused
 
@@ -31,7 +33,7 @@ Contoso on ettevõte, mis toodab kvaliteetseid kohvi- ja kohvimasinaid, mida nad
 
 ## <a name="task-1---ingest-data"></a>Ülesanne 1 – andmete valmendamine
 
-Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query konnektorite abil andmete importimise](connect-power-query.md) kohta. Järgmises teabes eeldatakse, et olete andmete valmendamisega üldiselt tuttav. 
+Vaadake üle artiklid [andmete allaneelamise](data-sources.md) ja [andmeallikate importimise kohta, kasutades Power Query konkreetselt konnektoreid](connect-power-query.md). Järgmises teabes eeldatakse, et olete andmete valmendamisega üldiselt tuttav. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>E-kaubanduse platvormist pärit kliendiandmete valmendamine
 
@@ -168,7 +170,7 @@ Pärast andmete valmendamist alustame protsessi **Vastenda, vii vastavusse, ühe
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Ülesanne 3 – tellimusevoolavuse prognoosi konfigureerimine
 
-Kui kliendiprofiilid on koondatud, saame käivitada tellimusevoolavuse prognoosi. Üksikasjalikud juhised leiate artiklist [Tellimusevoolavuse prognoos (eelversioon)](predict-subscription-churn.md). 
+Kui kliendiprofiilid on koondatud, saame käivitada tellimusevoolavuse prognoosi. Üksikasjalike juhiste leiate artiklist [Tellimuse prognoos](predict-subscription-churn.md). 
 
 1. Minge jaotisse **Ärianalüüs** > **Avastamine** ja valige kasutamiseks **Kliendivoolavuse mudel**.
 

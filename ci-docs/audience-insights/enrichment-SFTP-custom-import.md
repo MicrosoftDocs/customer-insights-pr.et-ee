@@ -3,18 +3,17 @@ title: Rikastamine SFTP-põhist kohandatud importimist kasutades
 description: Üldine teave SFTP-põhise kohandatud importimise kaudu rikastamise kohta.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304645"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229633"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Kliendiprofiilide rikastamine kohandatud andmetega (eelversioon)
 
@@ -45,6 +44,8 @@ SFTP-põhise kohandatud importimise konfigureerimiseks peavad olema täidetud j�
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Kuvatõmmis andmeasukoha sisestamisel.":::
 
+1. Valige **Edasi** ja seejärel kliendi andmekomplekt. Need võivad olla kõik kliendiprofiilid või segment.
+
 1. Valige **Edasi** ja sisestage rikastamise nimi ja väljundolemi nimi. 
 
 1. Valige **Salvesta rikastamine** pärast valikute läbivaatamist.
@@ -64,7 +65,7 @@ SFTP-põhise kohandatud importimise konfigureerimiseks peavad olema täidetud j�
 1. Kui kontroll on lõpule jõudnud, saab ühenduse salvestada, valides **Salvesta**.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian ühenduse konfiguratsiooni paan](media/enrichment-SFTP-connection.png "Experian ühenduse konfiguratsiooni paan")
+   > ![Experian ühenduse konfiguratsiooni paan.](media/enrichment-SFTP-connection.png "Experian ühenduse konfiguratsiooni paan")
 
 
 ## <a name="defining-field-mappings"></a>Väljavastenduste määratlemine 
@@ -123,6 +124,6 @@ Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **
 
 ## <a name="next-steps"></a>Järgmised etapid
 
-Rikastatud kliendiandmetele toetumine. Looge [segmente](segments.md) ja [näitajaid](measures.md) ning [eksportige andmed](export-destinations.md), et pakkuda oma klientidele isikupärastatud kogemust.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

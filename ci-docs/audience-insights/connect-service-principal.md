@@ -1,62 +1,73 @@
 ---
-title: Azure Data Lake Storage Gen2 kontoga ühenduse loomine teenusesubjekti kaudu
-description: Kasutage Azure'i teenusesubjekti sihtrühmaülevaadete jaoks, et luua ühendus oma Data Lake'iga, kui lisate selle sihtrühmaülevaadetele.
-ms.date: 02/10/2021
-ms.service: customer-insights
+title: Ühendu Azure Data Lake Storage kontoga teenuse subjekti abil
+description: Kasutage Azure'i teenuse subjekti oma andmetega ühenduse loomiseks.
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+searchScope:
+- ci-system-security
+- customerInsights
+ms.openlocfilehash: d593880b06bd21e96826039a67382b75a4296a87
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692108"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354183"
 ---
-# <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Azure Data Lake Storage Gen2 kontoga ühendumine Azure'i teenusesubjekti kaudu sihtrühmaülevaadeteks
+# <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Ühendu Azure Data Lake Storage kontoga Azure teenuse subjekti abil
 
-Automatiseeritud tööriistad, mis kasutavad Azure'i teenuseid, peaksid alati omama piiratud õigusi. Selleks et rakendused ei saaks logida sisse kõikide õigustega kasutajana, pakub Azure teenusesubjekte. Lugege edasi, et teada saada, kuidas ühendada sihtrühmaülevaated Azure Data Lake Storage Gen2 kontoga, kasutades selleks salvestuskonto võtmete asemel Azure'i teenusesubjekti. 
+Selles artiklis käsitletakse, kuidas kontoga Dynamics 365 Customer Insights ühenduse luua Azure Data Lake Storage, kasutades salvestusruumikonto võtmete asemel Azure'i teenusedirektorit. 
 
-Saate kasutada teenusesubjekti, et turvaliselt [lisada või redigeerida Common Data Modeli kausta andmeallikana](connect-common-data-model.md) või [luua uus keskkond või värskendada olemasolevat](get-started-paid.md).
+Automatiseeritud tööriistad, mis kasutavad Azure'i teenuseid, peaksid alati omama piiratud õigusi. Selleks et rakendused ei saaks logida sisse kõikide õigustega kasutajana, pakub Azure teenusesubjekte. Teenuse põhijuhtide abil saate ühisandmete mudeli kausta turvaliselt [lisada või redigeerida andmeallikas](connect-common-data-model.md) või [luua või värskendada keskkonda](create-environment.md).
 
 > [!IMPORTANT]
-> - Azure Data Lake Gen2 salvestusruumi kontol, mis kasutab teenusesubjekti, peab olema [lubatud hierarhiline nimeruum (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
-> - Teenusesubjekti loomiseks on teil vaja oma Azure'i tellimuse administraatoriõigusi.
+> - Teenuse principali kasutav Data Lake Storage'i konto peab olema Gen2 ja lubatud peab olema [hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace). Azure Data Lake Gen1 salvestusruumikontosid ei toetata.
+> - Teenuse põhiteenuse loomiseks on vaja Azure'i tellimuse administraatoriõigusi.
 
-## <a name="create-azure-service-principal-for-audience-insights"></a>Azure'i teenusesubjekti loomine sihtrühmaülevaadeteks
+## <a name="create-an-azure-service-principal-for-customer-insights"></a>Azure'i teenuse subjekti loomine Customer Insightsi abil
 
-Enne uue teenusesubjekti loomist sihtrühmaülevaadete jaoks kontrollige, kas see on teie ettevõttes juba olemas.
+Enne Customer Insightsi uue hooldusdirektori loomist kontrollige, kas see on teie asutuses juba olemas.
 
 ### <a name="look-for-an-existing-service-principal"></a>Olemasoleva teenusesubjekti otsimine
 
 1. Minge [Azure'i haldusportaali](https://portal.azure.com) ja logige sisse oma organisatsiooni.
 
-2. Valige Azure'i teenustest **Azure Active Directory**.
+2. Valige suvandist **Azure teenused** suvand **Azure Active Directory**.
 
 3. Valige jaotises **Halda** suvand **Ettevõtterakendused**.
 
-4. Otsige sihtrühmaülevaadete esimese osapoole rakenduse ID-d `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` või nime `Dynamics 365 AI for Customer Insights`.
+4. Otsige Microsofti rakenduse ID-d:
+   - Sihtrühma ülevaated: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` nimega `Dynamics 365 AI for Customer Insights`
+   - Kaasamisülevaated: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` nimega `Dynamics 365 AI for Customer Insights engagement insights`
 
-5. Kui leiate ühtiva kirje, tähendab see, et teenusesubjekt on sihtrühmaülevaadete jaoks olemas. Teil pole vaja seda uuesti luua.
+5. Kui leiate vastava kirje, tähendab see, et teenuse subjekt on juba olemas. 
    
-   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Kuvatõmmis olemasolevast teenusesubjektist.":::
+   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Kuvatõmmis olemasoleva teenuse subjekti kohta.":::
    
 6. Kui tulemusi ei tagastata, looge uus teenusesubjekt.
 
+>[!NOTE]
+>Kui soovite kasutada täielikku Dynamics 365 Customer Insights võimsust, soovitame teil lisada mõlemad rakendused teenuse subjekti.
+
 ### <a name="create-a-new-service-principal"></a>Uue teenusesubjekti loomine
 
-1. Installige rakenduse **Azure Active Directory PowerShell for Graph** uusim versioon. Lisateavet leiate teemast [Azure Active Directory PowerShell for Graphi installimine](/powershell/azure/active-directory/install-adv2).
-   - Valige arvutis klaviatuuril Windowsi klahv ja otsige programmi **Windows PowerShell** ning **käivitage see administraatorina**.
-   
-   - Sisestage avanevasse PowerShelli aknasse `Install-Module AzureAD`.
+1. Installige Azure Active Directory PowerShell for Graphi uusim versioon. Lisateavet leiate teemast [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2) installimine.
 
-2. Looge Azure AD PowerShelli mooduli abil teenusesubjekt sihtrühmaülevaadete jaoks.
-   - Sisestage PowerShelli aknasse `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Asendage „your tenant ID“ oma rentniku tegeliku ID-ga, kus soovite teenusesubjekti luua. Keskkonna nime parameeter `AzureEnvironmentName` on valikuline.
+   1. Valige arvutis klaviatuuril Windowsi klahv ja otsige **Windows PowerShell** ning valige **Käivita administraatorina**.
+   
+   1. Sisestage avanevasse PowerShelli aknasse `Install-Module AzureAD`.
+
+2. Looge Customer Insightsi teenuse subjekt Azure AD PowerShelli mooduliga.
+
+   1. Sisestage PowerShelli aknasse `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Asendage *[your tenant ID]* oma rentniku tegeliku ID-ga, kus soovite teenusesubjekti luua. Keskkonna nime parameeter `AzureEnvironmentName` on valikuline.
   
-   - Sisestage `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. See käsk loob valitud rentnikus teenusesubjekti sihtrühmaülevaadete jaoks.  
+   1. Sisestage `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. See käsk loob valitud rentnikus teenusesubjekti sihtrühmaülevaadete jaoks. 
+
+   1. Sisestage `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Selle käsuga luuakse kaasamisülevaadete teenusesubjekt valitud rentnikul.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Teenusesubjektile õiguste andmine salvestuskontole juurdepääsemiseks
 
@@ -66,51 +77,49 @@ Minge Azure'i portaali, et anda teenusesubjektile õigused selle salvestuskonto 
 
 1. Avage salvestuskonto, millele peaks sihtrühmaülevaadete jaoks mõeldud teenusesubjektil juurdepääs olema.
 
-1. Valige navigeerimispaanilt **Juurdepääsu haldus (IAM)** ja valige **Lisa** > **Lisa rollimäärang**.
-   
-   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Kuvatõmmis Azure'i portaalist rollimäärangu lisamise ajal.":::
-   
-1. Määrake paanil **Rollimäärangu lisamine** järgmised atribuudid.
-   - Roll: *salvestusruumi bloobiandmete kaasautor*
-   - Juurdepääsu määramine: *kasutaja, rühm või teenusesubjekt*
-   - Valige: *Dynamics 365 AI Customer Insightsi jaoks* ([teie loodud teenusesubjekt](#create-a-new-service-principal))
+1. Valige vasakpoolsel paanil **Juurdepääsu juhtelement (IAM)** ja seejärel käsk **Lisa** > **Lisa rolli määratlus**.
+
+   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Kuvatõmmis, kus kuvatakse Azure'i portaal rolli määramise lisamise ajal.":::
+
+1. Määrake paanil **Lisa rolli määratlus** järgmised atribuudid.
+   - Roll: **salvestusruumi bloobiandmete kaasautor**
+   - Juurdepääsu määramine: **kasutaja, rühm või teenusesubjekt**
+   - Valige: **Dynamics 365 AI for Customer Insights** ja **Dynamics 365 AI for Customer Insights kaasamise ülevaated** (kaks [teenuse subjekti](#create-a-new-service-principal), mille olete varem protseduuri jooksul loonud)
 
 1.  Valige **Salvesta**.
 
 Muudatuste rakendamiseks võib kuluda kuni 15 minutit.
 
-## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Salvestuskonto manuse Azure'i ressursi ID või Azure'i tellimuse üksikasjade sisestamine sihtrühmaülevaadetesse.
+## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Salvestuskonto manuse Azure'i ressursi ID või Azure'i tellimuse üksikasjade sisestamine sihtrühma ülevaadetesse
 
-Lisage Azure Data Lake'i salvestuskonto sihtrühmaülevaadetesse, et [talletada väljundandmeid](manage-environments.md) või [kasutage seda andmeallikana](connect-dataverse-managed-lake.md). Azure Data Lake'i valimise korral saate valida ressurssidel või tellimusel põhineva meetodi vahel.
-
-Järgige allolevaid juhiseid, et sisestada valitud meetodi jaoks vajalik teave.
+Saate manustada sihtrühma ülevaadetes Data Lake mäluruumi konto, et [talletada väljundandmeid](manage-environments.md) või [kasutada seda andmeallikana](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). See suvand võimaldab teil valida ressursipõhise või tellimispõhise lähenemisviisi vahel. Sõltuvalt valitud lähenemisviisist järgige ühte järgmistest jaotistest.
 
 ### <a name="resource-based-storage-account-connection"></a>Ressursipõhine salvestuskonto ühendus
 
 1. Minge [Azure'i haldusportaali](https://portal.azure.com), logige oma tellimusse sisse ja avage salvestuskonto.
 
-1. Minge navigeerimispaanil jaotisse **Sätted** > **Atribuudid**.
+1. Minge vasakpoolsel paanil **Sätted** > **Atribuudid**.
 
 1. Kopeerige salvestuskonto ressursi-ID väärtus.
 
    :::image type="content" source="media/ADLS-SP-ResourceId.png" alt-text="Salvestuskonto ressursi-ID kopeerimine.":::
 
-1. Sisestage sihtrühmaülevaadetes ressursi ID ressursiväljale, mis on kuvatud salvestuskonto ühenduse ekraanil.
+1. Sihtrühma ülevaadetes sisestage ressursi ID mäluruumi konto ühenduskuval kuvatavale ressursi väljale.
 
    :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Salvestuskonto ressursi-ID teabe sisestamine.":::   
-   
+
 1. Jätkake sihtrühmaülevaadetes allesjäänud sammude järgimist, et lisada salvestuskonto.
 
 ### <a name="subscription-based-storage-account-connection"></a>Tellimusepõhine salvestuskonto ühendus
 
 1. Minge [Azure'i haldusportaali](https://portal.azure.com), logige oma tellimusse sisse ja avage salvestuskonto.
 
-1. Minge navigeerimispaanil jaotisse **Sätted** > **Atribuudid**.
+1. Minge vasakpoolsel paanil **Sätted** > **Atribuudid**.
 
 1. Vaadake üle salvestuskonto väärtused **Tellimus**, **Ressursirühm** ja **Nimi**, sihtrühmaülevaadetes oleksid valitud õiged väärtused.
 
-1. Valige sihtrühmaülevaadetes salvestuskontot lisades väärtused või asjaomased väljad.
-   
+1. Valige sihtrühma ülevaadetes salvestusruumikonto manustamise korral vastavate väljade väärtused.
+
 1. Jätkake sihtrühmaülevaadetes allesjäänud sammude järgimist, et lisada salvestuskonto.
 
 

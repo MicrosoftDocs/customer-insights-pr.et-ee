@@ -3,20 +3,24 @@ title: Kliendi eluea väärtuse (CLV) prognoos
 description: Prognoosige tulevikus aktiivsete klientide tulupotentsiaali.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035364"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355784"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Kliendi eluea väärtus (CLV) prognoosimine (eelversioon)
+# <a name="customer-lifetime-value-clv-prediction"></a>Kliendi eluea väärtuse (CLV) prognoos
 
 Prognoosige potentsiaalset väärtust (tulu), mille üksikud aktiivsed kliendid teie ettevõttesse toovad, määratletud tulevase ajavahemiku jooksul. Antud funktsioon aitab teil saavutada mitmesuguseid eesmärke. 
 - Tehke kindlaks kõrge väärtusega kliendid ja töötlege seda ülevaadet
@@ -65,7 +69,7 @@ Järgmised andmed on vajalikud ja kui need on märgitud valikulised, soovituslik
     - Andmete täielikkus: Sisendandmete nõutavatel väljadel on vähem kui 20% puuduvaid väärtusi   
 
 > [!NOTE]
-> - Mudeli jaoks on vaja teie klientide tehingute ajalugu. Praegu saab konfigureerida ainult ühe kannete ajaloo olemi. Kui ostuolemeid on mitu, tuleb need liita Power Query'ga enne andmete sisestamist.
+> - Mudeli jaoks on vaja teie klientide tehingute ajalugu. Praegu saab konfigureerida ainult ühe kannete ajaloo olemi. Kui ostu-/tehinguolemit on mitu, saate need Power Query enne andmete allaneelamist liita.
 > - Täiendavate klienditegevuse andmete jaoks (valikuline) saate siiski lisada nii palju kliendi tegevuse olemeid, kui soovite mudeliga kaaluda.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kliendi eluea väärtuse (CLV) loomine
@@ -74,7 +78,7 @@ Järgmised andmed on vajalikud ja kui need on märgitud valikulised, soovituslik
 
 1. Valige paan **Kliendi eluea väärtus** ja seejärel **Kasuta mudelit**. 
 
-1. Valige paanil **Kliendi eluea väärtus (eelvaade)** suvand **Alustamine**.
+1. Valige paanil **Kliendi** eluaegne väärtus **Käsk Alustamine**.
 
 1. **Nimeta see mudel** ja **Väljundi olemi nimi**, et neid muudest mudelitest või olemitest eristada.
 

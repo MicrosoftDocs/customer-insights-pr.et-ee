@@ -1,50 +1,74 @@
 ---
-title: Customer Insightsi andmete eksportimine Azure'i bloobimällu
-description: Vaadake, kuidas konfigureerida Azure’i bloobimälu ühendus.
-ms.date: 09/18/2020
-ms.reviewer: philk
-ms.service: customer-insights
+title: Customer Insights andmete eksportimine Azure Blob Storage'isse
+description: Lugege, kuidas konfigureerida ühendust ja eksportida Blob storage'isse.
+ms.date: 10/06/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 925b53260e7c633e17d7f172d2dd2d581e982e10
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
-ms.translationtype: HT
+ms.openlocfilehash: 5ea8e58822e1bb901552ff1de960d5340d340003
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667134"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231246"
 ---
-# <a name="connector-for-azure-blob-storage-preview"></a>Azure’i bloobimälu konnektor (eelvaade)
+# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmendiloendi ja muude andmete eksportimine Azure'i Blob Storage'isse (eelversioon)
 
-Salvestage oma Customer Insightsi andmed Azure'i bloobimällu või kasutage seda oma andmete edastamiseks teistesse rakendustesse.
+Saate salvestada oma Customer Insights andmed bloobimällu või kasutada seda oma andmete edastamiseks teistesse rakendustesse.
 
-## <a name="configure-the-connector-for-azure-blob-storage"></a>Azure’i bloobimälu konnektori konfigureerimine
+## <a name="known-limitations"></a>Teadaolevad piirangud
 
-1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Eksportimise sihtkohad**.
+1. Azure'i bloobimälu puhul saate valida [Standardjõudluse ja Premium jõusluse vahel](/azure/storage/blobs/storage-blob-performance-tiers). Kui valite Premium jõudluse järgu, valige [konto tüübiks premium ploki bloobid](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 
-1. Jaotises **Azure’i bloobimälu** valige suvand **Seadista**.
+## <a name="set-up-the-connection-to-blob-storage"></a>Loo Azure Bloobimälu ühendus
 
-1. Sisestage Azure’i bloobimälu kontole **Konto nimi**, **Konto võti** ja **Konteiner**.
-    - Lisateavet Azure'i bloobimälu konto nime ja kontovõtme kohta vaadake teemast [Salvestuskonto sätete haldamine Azure'i portaalis](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
-    - Lisateavet konteineri loomise kohta leiate teemast [Konteineri loomine](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+1. Minge **Administraator** > **Ühendused**.
 
-1. Sisestage väljale **Kuvatav nimi** oma sihtkoha äratuntav nimi.
+1. Valige **Lisa ühendus** ja valige **Azure Blob Storage** ühenduse konfigureerimiseks.
 
-1. Tehke valik **Edasi**.
+1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
+
+1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Sisestage **Konto nimi**, **Konto võti** ja **Konteiner** bloobimälu konto jaoks.
+    - Lisateavet Blob Storage konto nime ja konto võtme otsimise kohta leiate [Azure portaalis salvestusruumi konto sätete haldamine](/azure/storage/common/storage-account-manage).
+    - Lisateavet konteineri loomise kohta leiate teemast [Konteineri loomine](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+
+1. Ühenduse loomiseks valige **Salvesta**. 
+
+## <a name="configure-an-export"></a>Ekspordi konfigureerimine
+
+Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+
+> [!IMPORTANT]
+> Kui lülitasite sisse Azure'i bloobimälu konto ajutise kustutamise sätte, ekspordid nurjuvad. Andmete bloobidele eksportimiseks lülitage ajutine kustutamine välja. Lisateavet leiate teemast [Bloobi ajutise kustutamise lubamine](/azure/storage/blobs/soft-delete-blob-enable.md)
+
+1. Minge **Andmed** > **Ekspordid**.
+
+1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+
+1. Valige **Ekspordiühendus** väljal ühendus Azure Blob Storage jaotisest. Kui te seda jaotise nime ei näe, pole seda tüüpi ühendused teile saadaval.
 
 1. Märgistage lahter iga olemi kõrval, mida soovite antud sihtkohta eksportida.
 
 1. Valige **Salvesta**.
 
-Eksporditud andmed salvestatakse teie konfigureeritud Azure’i bloobimälu konteinerisse. Konteineris luuakse automaatselt järgmised kaustateed.
+Ekspordi salvestamine ei käivita eksporti kohe.
 
-- Lähteolemite ja süsteemi loodud olemite jaoks: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
+Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab).     
+
+Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
+
+Eksporditud andmed salvestatakse konfigureeritud bloobimälukonteinerisse. Konteineris luuakse automaatselt järgmised kaustateed.
+
+- Lähteolemite ja süsteemi loodud olemite jaoks:   
+  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Näide: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- Eksporditud olemite model.json hakkab olema %ExportDestinationName%-i tasemel
+ 
+- Model.json eksporditud olemitele on %ExportDestinationName% tasemel.  
   - Näide: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
-## <a name="export-the-data"></a>Andmete eksportimine
-
-Saate [vajadusel andmeid eksportida](/export-destinations.md#export-data-on-demand). Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

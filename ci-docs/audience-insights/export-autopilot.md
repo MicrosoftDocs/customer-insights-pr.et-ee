@@ -1,42 +1,48 @@
 ---
 title: Customer Insightsi andmete eksportimine Autopilotisse
-description: Vaadake, kuidas konfigureerida ühendust Autopilotiga.
-ms.date: 12/08/2020
-ms.reviewer: philk
-ms.service: customer-insights
+description: Lugege, kuidas konfigureerida ühendust ja eksportida Autopilot'isse.
+ms.date: 10/08/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 33a8cd1ae4a77ce2248bc2805d25687c9a2c2732
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+ms.openlocfilehash: 7a7a67a52fcf39da8d50bd95817d25470fc90b6f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269233"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227661"
 ---
-# <a name="connector-for-autopilot-preview"></a>Autopiloti konnektor (eelversioon)
+# <a name="export-segments-to-autopilot-preview"></a>Segmentide eksportimine Autopilot'isse (eelversioon)
 
 Saate eksportida ühendatud kliendiprofiilide segmente Autopiloti kontaktiloenditesse ja kasutada neid Autopilotis kampaaniate ja meiliturunduste jaoks. 
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites-for-a-connection"></a>Ühenduse eeltingimus
 
 -   Teil on [Autopiloti konto](https://www.autopilothq.com/) ja asjakohane administraatori identimisteave.
 -   Olete sihtrühmaülevaadetes [segmendid konfigureerinud](segments.md).
 -   Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
-## <a name="connect-to-autopilot"></a>Ühenda Autopilotiga
+## <a name="known-limitations"></a>Teadaolevad piirangud
 
-1. Avage **Haldus** > **Ekspordi sihtkohad**.
+- Autopilotisse saate kokku eksportida kuni 100 000 kliendiprofiili.
+- Autopilotisse saab eksportida ainult segmente.
+- Kuni 100 000 kliendiprofiili eksportimine Autopilot'i võib võtta paar tundi. 
+- Kliendiprofiilide arv, mida saate Autopilot'i eksportida, sõltub ja on piiratud vastavalt teie Autopilot lepingule.
 
-1. Tehke jaotises **Autopilot** valik **Seadista**.
+## <a name="set-up-connection-to-autopilot"></a>Ühenduse loomine Autopilot'iga
 
-1. Sisestage väljale **Kuvatav nimi** oma ekspordi sihtkoha äratuntav nimi.
+1. Minge **Administraator** > **Ühendused**.
 
-   :::image type="content" source="media/export-autopilot.PNG" alt-text="Autopiloti ühenduse konfiguratsioonipaan.":::
+1. Valige **Lisa ühendus** ja valige **Autopilot** ühenduse konfigureerimiseks.
 
-1. Sisestage oma **Autopiloti API võti** [Autopiloti API võti](https://autopilot.docs.apiary.io/#).
+1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
+
+1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Sisestage oma [Autopiloti API võti](https://autopilot.docs.apiary.io/#).
 
 1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
 
@@ -44,26 +50,27 @@ Saate eksportida ühendatud kliendiprofiilide segmente Autopiloti kontaktiloendi
 
 1. Valige **Lisa mind ekspordikasutajana** ja sisestage oma Customer Insightsi identimisteave.
 
-1. Ekspordi konfigureerimiseks valige **Edasi**.
+1. Ühenduse loomiseks valige **Salvesta**.
 
-## <a name="configure-the-connector"></a>Konnektori konfigureerimine
+## <a name="configure-an-export"></a>Ekspordi konfigureerimine
 
-1. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Korrake samu juhiseid muude valikuliste väljade puhul, nagu **Eesnimi** ja **Perekonnanimi**.
+Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+
+1. Minge **Andmed** > **Ekspordid**.
+
+1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+
+1. Valige **Ekspordiühendus** väljal ühendus Autopilot jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+
+1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Korrake samu juhiseid muude valikuliste väljade puhul, nagu **Eesnimi** ja **Perekonnanimi**.
 
 1. Valige segmendid, mille soovite eksportida. Soovitame **tungivalt mitte eksportida kokku üle 100 000 kliendiprofiili** Autopilotisse. 
 
 1. Valige **Salvesta**.
 
-## <a name="export-the-data"></a>Andmete eksportimine
+Ekspordi salvestamine ei käivita eksporti kohe.
 
-Saate [vajadusel andmeid eksportida](export-destinations.md). Eksport käivitub ka iga [ajastatud värskendamisega](system.md#schedule-tab).
-
-## <a name="known-limitations"></a>Teadaolevad piirangud
-
-- Autopilotisse saate eksportida kuni 100 000 profiili.
-- Autopilotisse saab eksportida ainult segmente.
-- Kuni 100 000 profiili eksportimiseks Autopilotisse võib kuluda paar tundi. 
-- Autopilotisse eksporditavate profiilide arv sõltub Autopilotiga sõlmitud lepingust.
+Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 

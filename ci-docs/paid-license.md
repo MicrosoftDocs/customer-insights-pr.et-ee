@@ -4,22 +4,21 @@ author: m-hartmann
 description: Tutvuge esimese Dynamics 365 Customer Insights kasutuskogemusega ja tutvuge selle võimalustega.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645679"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350126"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Alustage pärast Customer Insights'i ostmist
 
 Selles artiklis kirjeldatakse, kuidas teha esimesi toiminguid Dynamics 365 Customer Insights-ga pärast seda, kui organisatsioon on tellimuse ostnud. Kui soovite osta Customer Insights -i, on meie kontaktisuvandid loetletud [Dynamics 365 Customer Insights veebisaidil](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Pärast Customer Insights -i tellimuse litsentsi ostmist saab Microsoft 365 rentniku globaaladministraator meili, mis kutsub neid keskkonda looma. 
+Pärast Customer Insightsi tellimislitsentsi ostmist saab rentniku Microsoft 365 üldadministraator meilisõnumi, mis kutsub neid üles keskkonda looma. 
 
 Customer Insights on litsentsitud rentniku kohta ja sisaldab mitut võimalust. Vaikekvoodi suurendamiseks saate rohkem võimsust ja litsentse osta. 
 - [Hinnastamise ülevaade](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -40,10 +39,7 @@ Esimese kasutuskogemuse abil saate valida oma algse fookuse Customer Insights'i 
 
 ## <a name="create-your-own-environment"></a>Oma keskkonna loomine
 
-Pärast esmast sisselogimist näete näidisandmetega keskkonda. Nende andmete abil saate uurida funktsioone ja rakendusega tuttavaks saada. Oma andmete kasutamiseks peate looma keskkonna, kus soovite töötada.
-
-- [Looge sihtrühma ülevaadetes keskkond.](audience-insights/get-started-paid.md)
-- [Looge kaasatuse ülevaadetes keskkond.](engagement-insights/create-new-environment.md) 
+Pärast esmast sisselogimist näete näidisandmetega keskkonda. Nende andmete abil saate uurida funktsioone ja rakendusega tuttavaks saada. Oma andmete kasutamiseks peate looma [keskkonna](audience-insights/get-started-paid.md).
 
 
 

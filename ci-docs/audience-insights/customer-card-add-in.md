@@ -1,20 +1,24 @@
 ---
 title: Dynamics 365 rakenduste kliendikaardi lisandmoodul (sisaldab videot)
 description: Saate selle lisandmooduliga kuvada Dynamics 365 rakenduste sihtrühma ülevaadete andmeid.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 98597600c2a39f8bb707af8461df4736f913e6bc
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
-ms.translationtype: HT
+searchScope:
+- ci-customers-page
+- ci-search-filter
+- ci-customer-card
+- customerInsights
+ms.openlocfilehash: d67d8e2cb30cf20de204bfb293bb8ce81c7bb2f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046467"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353860"
 ---
 # <a name="customer-card-add-in-preview"></a>Kliendikaardi lisandmoodul (eelvaade)
 
@@ -118,5 +122,26 @@ Kliendikaardi lisandmoodulit ei täiendata automaatselt. Uusimale versioonile t�
 
 1. Pärast täiendamisprotsessi käivitamist kuvatakse laadimisnäidik kuni täienduse lõpuleviimiseni. Kui uuemat versiooni pole, kuvab täiendus tõrketeate.
 
+## <a name="troubleshooting"></a>Tõrkeotsing
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Kliendikaardi lisandmooduli juhtelemendid ei leia andmeid
+
+**Probleem:**
+
+Isegi õigesti konfigureeritud ID-väljade puhul ei leia juhtelemendid andmeid ühegi kliendi kohta.  
+
+**Lahendus.**
+
+1. Veenduge, et konfigureerisite kaardi lisandmooduli vastavalt juhistele: [Kliendikaardi lisandmooduli konfigureerimine](#configure-the-customer-card-add-in) 
+
+1. Vaadake üle andmete allaneelamise konfiguratsioon. Redigeerige dynamics 365 süsteemi andmeallikas, mis sisaldab kontakti ID GUID-d. Kui kontakti ID GUID kuvatakse redaktoris Power Query suurtähtedega, proovige järgmist. 
+    1. Redigeerige andmeallikas, et avada andmeallikas redaktoris Power Query.
+    1. Valige kontakti ID veerg.
+    1. Saadaolevate toimingute kuvamiseks valige **päiseribal Teisenda**.
+    1. Valige **väiketäht**. Kinnitage, kas tabelis olevad GUID-d on nüüd väiketähed.
+    1. Salvestage andmeallikas.
+    1. Käivitage andmete allaneelamine, ühendamine ja järgnevad protsessid GUID muudatuste levitamiseks. 
+
+Pärast täieliku värskendamise lõpetamist peaksid kliendikaardi lisandmooduli juhtelemendid näitama oodatud andmeid. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

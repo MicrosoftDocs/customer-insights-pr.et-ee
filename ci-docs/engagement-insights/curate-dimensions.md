@@ -2,18 +2,17 @@
 title: Demograafiliste sihtide kasutamine käitumusliku teabe tükeldamiseks (kureeritud mõõtmed)
 description: Kasutage ühtset profiili kureeritud mõõtmeid, et lubada vaatajaskonna statistika kliendiprofiili atribuute.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
-ms.translationtype: HT
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461098"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233042"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Demograafiliste sihtide kasutamine käitumusliku teabe tükeldamiseks
 
@@ -29,7 +28,7 @@ Kasutades ühtseid profiili demograafilisi mõõtmeid, saavad kaasamisstatistika
 - Kaasamisülevaadete keskkond, kus teil on kliendiprofiili andmed lingitud vaatajaskonna statistika keskkonnaga, kus kliendiprofiilid luuakse. Lisateave: [Sihtrühma ülevaadete ja kaasamisülevaadete vahelise lingi loomine](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Pärast sihtrühma ülevaadete ja kaasamisstatistika keskkondade vahelise lingi loomist vajate ainult kliendiprofiili atribuutide kohta spetsiifilisi andmeid, mis võivad olla kasulikud kaasamisstatistika mõõtmetena. Lisateavet leiate teemast [Sihtrühma ülevaadete ühendatud profiilide atribuutide ja segmentide lubamine](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Pärast sihtrühma ülevaadete ja kaasamisstatistika keskkondade vahelise lingi loomist vajate ainult kliendiprofiili atribuutide kohta spetsiifilisi andmeid, mis võivad olla kasulikud kaasamisstatistika mõõtmetena. Lisateavet leiate teemast [Sihtrühma ülevaadete ühendatud profiilide atribuutide ja segmentide lubamine](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Uue kohandatud aruande loomine
 

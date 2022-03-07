@@ -1,21 +1,25 @@
 ---
 title: Koondatud kliendiprofiilide rikastamine
 description: Kasutage võimalusi kliendiandmete rikastamiseks.
-ms.date: 09/30/2021
+ms.date: 02/18/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7672994"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372697"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Kliendiprofiilide rikastamine (eelvaade)
 
@@ -37,14 +41,18 @@ Vahekaardil **Avastage** leiate kõik toetatud rikastussuvandid.
 - [Demograafiline teave](enrichment-experian.md), mida pakub Experian
 - [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu 
 - Microsofti [Azure Maps](enrichment-azure-maps.md)
+- [Asukohaandmeid](enrichment-here.md) esitab HERE Technologies 
+- [LiveRamp AbiliTeci identiteet](enrichment-liveramp.md)
 
 # <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
 
 - [Ettevõtte andmeid](enrichment-leadspace.md) esitab Leadspace
 - [Microsofti pakutavad täiustatud](enrichment-enhanced-addresses.md) aadressid 
+- [Microsofti esitatud täiustatud ettevõtte andmed](enrichment-enhanced-company-data.md)
 - [Asukohaandmeid](enrichment-here.md) esitab HERE Technologies 
 - [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu 
 - Microsofti [Azure Maps](enrichment-azure-maps.md)
+- [Microsofti esitatud konto kaasamise andmed](enrichment-office.md)
 
 ---
 
@@ -73,6 +81,10 @@ Muude tootjate rikastamised konfigureeritakse kasutades [ühendusi](connections.
 ## <a name="multiple-enrichments-of-the-same-type"></a>Mitu sama tüüpi rikastust
 
 Rikastatav olem määratakse rikastamise konfiguratsiooni käigus, mis võimaldab teil rikastada ainult osa oma profiilidest. Näiteks saate rikastada andmeid ainult kindla segmendi kohta. Saate konfigureerida mitut sama tüüpi rikastamist ja sama ühendust uuesti kasutada. Mõnel rikastamisel on piiritletud sama tüüpi rikastuste arv, mida saab luua. Piiranguid ja praegust kasutamist saab vaadata lehel **Rikastamine**.
+
+## <a name="enrich-data-sources-before-unification"></a>Andmeallikate rikastamine enne ühendamist
+
+Saate rikastada oma kliendiandmeid enne andmete ühendamist, et aidata parandada andmete vaste kvaliteeti. Lisateavet vt [andmeallikas rikastamine](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Rikastamisprotsessi edenemise kuvamine
 

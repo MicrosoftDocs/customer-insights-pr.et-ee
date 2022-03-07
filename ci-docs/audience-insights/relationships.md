@@ -1,20 +1,32 @@
 ---
 title: Seosed olemite ja olemiteede vahel
 description: Looge ja hallake mitmest andmeallikast pärit olemite vahelisi seoseid.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
-ms.translationtype: HT
+searchScope:
+- ci-semantic-mapping
+- ci-entities
+- ci-relationships
+- ci-activities
+- ci-activities-wizard
+- ci-measures
+- ci-segments
+- ci-segment-builder
+- ci-measure-builder
+- ci-measure-template
+- ci-permissions
+- customerInsights
+ms.openlocfilehash: db8822aa9e89afb9dc16428af6ca202de789ba1c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171159"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355700"
 ---
 # <a name="relationships-between-entities"></a>Olemitevaheline seos
 
@@ -68,6 +80,20 @@ Seos koosneb *lähteolemist*, mis sisaldab võõrvõtit ja *sihtolemit*, millele
 
 4. Kohandatud seose loomiseks valige **Salvesta**.
 
+## <a name="set-up-account-hierarchies"></a>Seadistage konto hierarhiad
+
+Keskkondades, mis on konfigureeritud kasutama ärikontosid peamise sihtrühmana, saavad konfigureerida seostuvate ärikontode hierarhiaid. Näiteks ettevõte, kus on eraldi äriüksused. 
+
+Asutused ja organisatsioonid loovad ettevõttehierarhiaid, et ettevõtteid ja nende suhteid üksteisega paremini hallata. Sihtrühma ülevaadete võimalus toetab peamise ja alluva konto hierarhiaid, mis on juba allaneetud kliendiandmetes olemas. Näiteks ettevõtted rakendusest Dynamics 365 Sales. Neid hierarhiaid saab konfigureerida sihtrühma ülevaadete lehel **Seosed** konto hierarhia vahekaardil.
+
+1. Minge **Andmed** > **Seosed**.
+1. Valige **Konto hierarhia** vahekaart.
+1. Valige **Uus konto hierarhia**. 
+1. Sisestage **Konto hierarhia** paanil hierarhiale nimi. Süsteem loob väljundolemile nime. Saate muuta väljundi nime olemit.
+1. Valige olem, mis sisaldab teie konto hierarhiat. Tavaliselt on see samas olemis, mis sisaldab kontosid.
+1. Valige valitud olemist **Konto ID** ja **Konto peamine ID** 
+1. Sätete rakendamiseks ja kontohierarhia lõplikuks muutmiseks valige käsk **Salvesta**.
+
 ## <a name="view-relationships"></a>Kuva seosed
 
 Lehel Seosed kuvatakse kõik loodud seosed. Iga rida tähistab suhet, mis sisaldab ka üksikasju lähte-, sihtüksuse ja kardinaalsuse kohta. 
@@ -82,7 +108,7 @@ Sellel lehel on olemasolevate ja uute seoste suvandid.
 
 ### <a name="explore-the-relationship-visualizer"></a>Tutvuge seose visualiseerijaga
 
-Seose visualiseerija näitab ühendatud üksuste vaheliste olemasolevate suhete ja nende kardinaalsuse skeemi.
+Seose visualiseerija näitab ühendatud üksuste vaheliste olemasolevate suhete ja nende kardinaalsuse skeemi. Selles visualiseeritakse ka seoseteed.
 
 Vaate kohandamiseks saate muuta kastide asukohta, lohistades neid lõuendil.
 
@@ -92,6 +118,56 @@ Saadaolevad suvandid:
 - **Ekspordi pildina**: praeguse vaate salvestamine pildifailina.
 - **Muuda horisontaal-/vertikaalseks paigutuseks**: muutke olemite ja seoste joondust.
 - **Redigeeri**: redigeerige kohandatud seoste atribuute redigeerimispaanil ja salvestage muudatused.
+
+## <a name="relationship-paths"></a>Seose teed
+
+Seose tee kirjeldab olemeid, mis on seotud lähteolemi ja sihtolemi vaheliste seostega. Seda kasutatakse segmendi või meetme loomisel, mis hõlmab muid üksusi peale ühendatud profiili olemi ja ühendatud profiili olemini jõudmiseks on mitu võimalust. 
+
+Seosetee annab süsteemile teada, millistele seostele ühendatud profiiliolemis juurde pääseda. Erinevad seoseteed võivad anda erinevaid tulemusi.
+
+Olemil *eCommerce_eCommercePurchases* on olemiga *Klient* järgmised seosed.
+
+- eCommerce_eCommercePurchases > Klient
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klient
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klient 
+
+Seosetee määratleb, milliseid olemeid saate kasutada mõõtmise reeglite loomiseks või segmentidena. Pikima seoseteega valiku tegemine annab tõenäoliselt vähem tulemusi, kuna vastavad kirjed peavad olema osa kõigist olemitest. Selles näites peab klient ostma kaupu e-poe kaudu (eCommerce_eCommercePurchases), müügikohas (POS_posPurchases) ja osalema meie lojaalsusprogrammis (loyaltyScheme_loyCustomers). Kui valite esimese võimaluse, saate tõenäoliselt rohkem tulemusi, sest kliendid peavad eksisteerima vaid ühes lisaolemis.
+
+### <a name="direct-relationship"></a>Otsene seos
+
+Seos liigitatakse **otsese seosena** kui allika olem suhestub sihtolemiga vaid ühe seosega.
+
+Näiteks kui tegevuseost nimega *eCommerce_eCommercePurchases* loob ühenduse sihtolemiga *eeCommerce_eCommerceContacts*  *Contactld* kaudu, on see otsene seos.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Lähteolem loob ühenduse otse sihtolemiga.":::
+
+#### <a name="multi-path-relationship"></a>Mitme teega seos
+
+**Mitme teega seos** on eri tüüpi otsene seos, mis ühendab lähteolemi mitme sihtolemiga.
+
+Näiteks kui tegevusolem nimega *eCommerce_eCommercePurchases* on seotud kahe sihtolemiga mõlemad nii *eCommerce_eCommerceContacts* kui ka *loyaltyScheme_loyCustomers* on see mitme tee seos.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Lähteolem loob mitme hüppega seose kaudu otse ühenduse rohkem kui ühe sihtolemiga.":::
+
+### <a name="indirect-relationship"></a>Kaudne seos
+
+Seos liigitatakse **kaudse seosena** kui allika olem suhestub ühe või rohkema lisaolemiga enne sihtolemiga seostumist.
+
+#### <a name="multi-hop-relationship"></a>Mitme hüppega seos
+
+*Mitme hüppega seos* on *kaudne seos* , mis lubab sul ühenduda allikaolemi sihtolemiga ühe või rohkema vahendava olemi kaudu.
+
+Näiteks kui tegevusolem nimega *eCommerce_eCommercePurchasesWest* loob ühenduse vahendava olemiga nimega *eCommerce_eCommercePurchasesEast* ja siis ühendub sihtolemiga nimega *eCommerce_eCommerceContacts*, on see mitme hüppega seos.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Lähteolem loob ühenduse otse sihtolemiga koos vahendava olemiga.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Mitme hüppe ja teega seos
+
+Mitmehüppega ja mitme teega seoseid saab kasutada koos mitme **mitme hüppega mitme teega seoste** loomiseks. See eritüüp koondab **mitme hüppega** ja **mitme teega** seoste funktsioonid. See võimaldab luua ühenduse rohkem kui ühe sihtolemiga, kasutades subjektiksolemeid.
+
+Näiteks kui tegevusolem nimega *eCommerce_eCommercePurchasesWest* loob ühenduse vahendava olemiga nimega *eCommerce_eCommercePurchasesEast* ja siis ühendub kahe sihtolemiga nimega *eCommerce_eCommerceContacts* ja *loyaltyScheme_loyCustomers* on see mitme hüppega seos.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Lähteolem loob ühenduse otse ühe sihtolemiga ja loob ühenduse mõne muu sihtolemiga vahendava olemi kaudu.":::
 
 ## <a name="manage-existing-relationships"></a>Olemasolevate seoste haldamine 
 
@@ -105,6 +181,6 @@ Valige seos ja üks järgmistest suvanditest:
 
 ## <a name="next-step"></a>Järgmine etapp
 
-Süsteemi ja kohandatud seoseid kasutatakse [segmentide loomiseks](segments.md) vastavalt mitte enam eraldatud mitmele andmeallikale.
+Süsteemi- ja kohandatud seoseid kasutatakse mitme andmeallika põhjal [segmentide](segments.md) ja [mõõdikute](measures.md) loomiseks, mida enam ei kasutata.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,17 +4,16 @@ metadata:
   author: m-hartmann
   description: Otsige asjakohaseid artikleid, et alustada spikri kasutamist.
   ms.author: mhart
-  ms.date: 10/29/2020
-  ms.service: customer-insights
+  ms.date: 03/02/2022
   ms.topic: landing-page
-  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
-  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-  ms.translationtype: HT
+  ms.openlocfilehash: 5efa266dfe8d70812f4c668b04cee2f93f206f7b
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+  ms.translationtype: MT
   ms.contentlocale: et-EE
-  ms.lasthandoff: 03/15/2021
-  ms.locfileid: "5598453"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350450"
 title: Dynamics 365 Customer Insightsi dokumentatsioon
-summary: Otsige kasulikke ressursse, et alustada ja tutvuda Customer Insightsi funktsioonide ning võimalustega.
+summary: Saate leida kasulikke ressursse, et alustada ning saada teavet Customer Insightsi funktsioonide ja võimaluste kohta.
 landingContent:
 - title: Customer Insightsi tutvustus
   linkLists:
@@ -23,19 +22,41 @@ landingContent:
     - text: Customer Insightsi ülevaade
       url: overview.md
     - text: Väljalaskeplaanid
-      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
-    - text: Avage oma keskkond
-      url: https://home.ci.ai.dynamics.com/
-- title: Sihtrühmaülevaadete kasutamise alustamine
+      url: /dynamics365/release-plans/
+    - text: Avastage CDP
+      url: https://dynamics.microsoft.com/ai/customer-insights/
+  - linkListType: learn
+    links:
+    - text: Customer Insights õppetee
+      url: /learn/paths/build-customer-insights/
+- title: Customer Insightsiga alustamine
   linkLists:
   - linkListType: get-started
     links:
     - text: Prooviversiooni kasutajaks registreerumine
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Mis on uut
+    - text: Mis on uut sihtrühma ülevaadetes
       url: audience-insights/whats-new-audience-insights.md
-    - text: Sihtrühmaülevaadete dokumentatsioon
-      url: audience-insights/index.yml
+    - text: Lühijuhend
+      url: audience-insights/get-started.md
+  - linkListType: learn
+    links:
+    - text: Hakkame pihta
+      url: /learn/modules/get-started-customer-data-platform/
+- title: Customer Insightsi haldamine
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Süsteemi konfigureerimine
+      url: audience-insights/system.md
+    - text: Kasutajaõiguste määratlemine
+      url: audience-insights/permissions.md
+    - text: Mitme keskkonna haldamine
+      url: audience-insights/manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Customer Insightsi haldamine
+      url: /learn/modules/administer-customer-data-platform/
 - title: Võtke ühendust
   linkLists:
   - linkListType: overview
@@ -46,63 +67,3 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Teata probleemist
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Sihtrühmaülevaadete õpetused
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: Loo uus keskkond
-      url: audience-insights/home.md
-    - text: Kliendi koondprofiili loomine
-      url: /learn/modules/unified-customer-profile/
-    - text: Rakendusega töötamine
-      url: /learn/modules/working-with-customer-insights/
-- title: Sihtrühmaülevaadete andmete eksportimine
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Eekspordisihtkohtade seadistamine
-      url: audience-insights/export-destinations.md
-    - text: Dynamics 365 rakenduste kliendikaardi
-      url: audience-insights/customer-card-add-in.md
-    - text: Power BI konnektor
-      url: audience-insights/export-power-bi.md
-- title: Sihtrühmaülevaadete haldamine
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Süsteemi konfigureerimine
-      url: audience-insights/system.md
-    - text: Kasutajaõiguste määratlemine
-      url: audience-insights/permissions.md
-    - text: Mitme keskkonna haldamine
-      url: audience-insights/manage-environments.md
-- title: Kaasamisülevaadete teave (eelversioon)
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Võimaluste ülevaade
-      url: engagement-insights/overview.md
-    - text: Terminid ja mõisted
-      url: engagement-insights/glossary.md
-    - text: Alustamine
-      url: engagement-insights/get-started.md
-- title: Kaasamisülevaadete aruanded (eelversioon)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Kuva aruanded
-      url: engagement-insights/view-reports.md
-    - text: Kohandatud aruannete loomine
-      url: engagement-insights/custom-reports.md
-    - text: Koondatud profiiliaruande vaatamine
-      url: engagement-insights/profile-reports.md
-- title: Kaasamisülevaadete sündmused (eelversioon)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Täpsustatud sündmuste loomine
-      url: engagement-insights/refined-events.md
-    - text: Sündmuste eksportimine
-      url: engagement-insights/export-events.md
-    - text: Isikuandmete kustutamine ja eksportimine
-      url: engagement-insights/delete-export-personal-data.md

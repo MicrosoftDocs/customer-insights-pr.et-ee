@@ -1,21 +1,23 @@
 ---
 title: Looge Customer Insights keskkondi
 description: Sammud litsentsitud kordustellimusega keskkondade loomiseks Dynamics 365 Customer Insights jaoks.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088097"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354090"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Looge sihtrühma ülevaates keskkond
 
@@ -76,12 +78,14 @@ Kui loote Customer Insights'i mitu keskkonda ja salvestate nendest keskkondadest
    
 **Microsoft Dataverse** etapp lubab teil Customer Insights'i oma Dataverse keskkonnaga ühendada.
 
-Kui soovite kasutada [karbist välja ennustamise mudeleid](predictions-overview.md#out-of-box-models), siis konfigureerige andmete ühiskasutus rakendusega Dataverse. Võite ka lubada asutusesisestest allikatest pärinevad andmed, pakkudes teie Microsoft Dataverse organisatsiooni hallatava keskkonna URL-i. Valige suvand **Luba andmete ühiskasutus**, et jagada Customer Insights väljundandmeid Dataverse hallatava Data Lake'iga.
+Pakkuda oma Microsoft Dataverse keskkonda andmete (profiilide ja ülevaadete) jagamiseks ärirakendustega, mis põhinevad rakendusel Dataverse( nt Dynamics 365 Marketing või mudelipõhised rakendused rakenduses )Power Apps. Jätke see väli tühjaks, kui teil pole oma Dataverse keskkonda ja me pakume teile ühte.
+
+Dataverse Keskkonnaga ühenduse loomine võimaldab teil [andmevoogude ja lüüside abil Power Platform ka asutusesisene andmeallikast](data-sources.md#add-data-from-on-premises-data-sources) andmeid sisse võtta. Keskkonnaga [ühenduse loomisega saate kasutada](predictions-overview.md?tabs=b2c#out-of-box-models) ka kastist väljas põhiseid prognoos mudeleid Dataverse.
 
 > [!IMPORTANT]
 > Customer Insights ja Dataverse peab andmete jagamise lubamiseks olema samas piirkonnas.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigureerimissuvandid andmete jagamise lubamiseks Microsoft Dataverse abil.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="andmete jagamine Microsoft Dataverse automaatse uute eksemplaride jaoks.":::
 
 > [!NOTE]
 > Customer Insights ei toeta järgmisi andmete jagamise stsenaariume:

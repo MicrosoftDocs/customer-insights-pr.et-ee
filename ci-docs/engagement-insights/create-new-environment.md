@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648112"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225418"
 ---
 # <a name="create-a-new-environment"></a>Uue keskkonna loomine 
 
@@ -40,13 +39,13 @@ Keskkond on koht, kus te oma tööruume ja ühendusi haldate. Keskkondade kasuta
 
 1. Valige **Piirkond** ja seejärel **Edasi**. 
 
-1. Tippige **Tööruumi nimi**, mis võimaldab teil koguda andmeid konkreetse veebisaidi või rakenduste kohta. Lisateavet vaadake teemast [Tööruumi loomine](create-workspace.md) .
+1. Tippige **tööruumi nimi**, mis võimaldab teil koguda andmeid konkreetsete veebisaitide või rakenduste jaoks. Lisateavet vaadake teemast [Tööruumi loomine](create-workspace.md) .
 
-1. Valige **Tööruumi tüüp** (Veeb või mobiil), mida soovite luua. 
+1. Valige tööruumi **tüüp** (veeb või mobiil), mida soovite luua. 
 
 1. Valikuliste sätete lubamiseks või keelamiseks tehke valik **Kuva täpsemad sätted**.
 
-   - Lülitage **Tundmatu teada** „lubatud” peale, et siduda veebisündmused varem autentinud kasutajatega. Lisateavet leiate teemast [Varem autenditud külastajate veebisündmuste äratundmine](unknown-to-known.md)
+   - Lülitage **Tundmatu teada** „lubatud” peale, et siduda veebisündmused varem autentinud kasutajatega. Lisateavet leiate teemast [Varem autenditud külastajate veebisündmuste tuvastamine](unknown-to-known.md).
    - Lülitage **Filtreerige robotiliiklus** olekusse „lubatud”, et eemaldada selle tööruumi veebiliiklus robotite kaupa. 
 
 1. Kui olete lõpetanud, valige **Lõpeta**. 

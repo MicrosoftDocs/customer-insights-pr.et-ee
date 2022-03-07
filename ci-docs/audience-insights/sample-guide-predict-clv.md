@@ -3,18 +3,17 @@ title: Kliendi eluea väärtuse prognoosi näidisjuhend
 description: Selle näidisjuhendi abil saate proovida kliendi eluaja väärtuse prognoosi mudelit.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306344"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354826"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Kliendi eluea väärtuse (CLV) prognoosi näidisjuhend
 
@@ -22,7 +21,7 @@ Selles juhendis selgitatakse teile lõppnäidet kliendi eluea väärtuse (CLV) p
 
 ## <a name="scenario"></a>Stsenaarium
 
-Contoso on ettevõte, mis toodab kvaliteetseid kohvi- ja kohvimasinaid. Nad müüvad tooteid oma Contoso Coffee veebisaidil. Ettevõte soovib mõista väärtust (tulu), mida nende kliendid saavad järgmise 12 kuu jooksul teenida. Teades oma klientide eeldatavat väärtust järgmise 12 kuu jooksul, aitab see neil juhtida oma turundustegevust kõrge väärtusega klientidele.
+Contoso on ettevõte, mis toodab kvaliteetseid kohvi- ja kohvimasinaid. Nad müüvad tooteid oma Contoso Coffee veebisaidi kaudu. Ettevõte soovib mõista väärtust (tulu), mida nende kliendid saavad järgmise 12 kuu jooksul teenida. Teades oma klientide eeldatavat väärtust järgmise 12 kuu jooksul, aitab see neil juhtida oma turundustegevust kõrge väärtusega klientidele.
 
 ## <a name="prerequisites"></a>Eeltingimused
 
@@ -31,7 +30,7 @@ Contoso on ettevõte, mis toodab kvaliteetseid kohvi- ja kohvimasinaid. Nad mü�
 
 ## <a name="task-1---ingest-data"></a>Ülesanne 1 – andmete valmendamine
 
-Vaadake üle artiklid [andmete rakendamise](data-sources.md) ja [andmeallikate importimise kohta Power Query konnektorite](connect-power-query.md) abil. Järgmises teabes eeldatakse, et olete andmete valmendamisega üldiselt tuttav.
+Vaadake üle artiklid [andmete allaneelamise](data-sources.md) ja [andmeallikate importimise kohta konnektorite abil Power Query](connect-power-query.md). Järgmises teabes eeldatakse, et olete andmete valmendamisega üldiselt tuttav.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>E-kaubanduse platvormist pärit kliendiandmete valmendamine
 
@@ -164,7 +163,7 @@ Pärast andmete sisestamist alustame andmete ühendamise protsessi, et luua üht
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>3. ülesanne – kliendi eluea prognoosi konfigureerimine
 
-Kui ühendatud kliendiprofiilid on paigas, saame nüüd käivitada kliendi eluea väärtuse prognoosi. Üksikasjalikud juhised leiate teemast [Kliendi eluea väärtuse prognoos (eelvaade)](predict-customer-lifetime-value.md).
+Kui ühendatud kliendiprofiilid on paigas, saame nüüd käivitada kliendi eluea väärtuse prognoosi. Üksikasjalikud juhised leiate teemast [Kliendi eluea väärtuse prognoos](predict-customer-lifetime-value.md).
 
 1. Minge loendisse **Intelligents**  > **Prognoosid** ja valige **Kliendi eluea väärtuse mudel**.
 

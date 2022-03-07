@@ -1,22 +1,21 @@
 ---
 title: Tootesoovituse ennustamine
 description: Prognoosige tooteid, mida klient tõenäoliselt ostab või millega suhtleb.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494534"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355746"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Tootesoovituse ennustamine (eelvaade)
+# <a name="product-recommendation-prediction"></a>Tootesoovituse ennustamine
 
 Tootesoovituste mudel loob ennustavate tootesoovituste komplekti. Soovitused põhinevad varasemal ostukäitumisel ja sarnase ostumustriga klientidel. Uue tootesoovituse ennetava teabe saate luua lehel **Intelligents** > **Prognoosid**. Muude loodud prognooside kuvamiseks valige **Minu prognoosid**.
 
@@ -54,7 +53,7 @@ Kui olete huvitatud selle funktsiooni proovimisest, kuid teil pole andmeid allpo
 
 > [!NOTE]
 > - Mudeli jaoks on vaja teie klientide tehingute ajalugu. Tehingu määratlus on üsna paindlik. Sisendina võivad töötada kõik andmed, mis kirjeldavad kasutaja ja toote koostoimet. Näiteks toote ostmine, tunnis käimine või sündmusest osa võtmine.
-> - Praegu saab konfigureerida ainult ühe kannete ajaloo olemi. Kui ostuolemeid on mitu, tuleb need liita Power Query'ga enne andmete sisestamist.
+> - Praegu saab konfigureerida ainult ühe kannete ajaloo olemi. Kui ostuolemit on mitu, ühendage need Power Query enne andmete allaneelamist.
 > - Kui tellimus ja tellimuse üksikasjad on erinevad olemid, liitke need enne mudelis kasutamist. Mudel ei tööta ainult tellimuse ID-ga või kviitungi ID-ga olemis.
 
 
@@ -62,7 +61,7 @@ Kui olete huvitatud selle funktsiooni proovimisest, kuid teil pole andmeid allpo
 
 1. Avage teenuses Customer Insights jaotised **Ärianalüüs** > **Prognoosid**.
 
-1. Valige paan **Tootesoovituste mudel (eelversioon)** ja seejärel suvand **Kasuta seda mudelit**.
+1. **Valige mudelipaan** Tootesoovitused ja valige **Kasuta seda mudelit**.
    > [!div class="mx-imgBorder"]
    > ![Toote soovitusmudeli paan nupuga Kasuta seda mudelit.](media/product-recommendation-usethismodel.PNG "Toote soovitusmudeli paan nupuga Kasuta seda mudelit")
 
@@ -79,11 +78,11 @@ Kui olete huvitatud selle funktsiooni proovimisest, kuid teil pole andmeid allpo
 1. Määrake kliendile soovitatavate **toodete arv**. See väärtus sõltub sellest, kuidas teie tarneviis andmeid täidab. Kui oskate soovitada kolme toodet, määrake see väärtus vastavalt.
    
    >[!TIP]
-   > Saate igal hetkel valida **Salvesta ja sule**, et salvestada prognoos mustandina. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid**.
+   > Prognoos mustandina salvestamiseks saate igal ajal valida **Salvesta mustand**. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid**.
 
-1. Valige, kas soovite **soovitada tooteid, mida kliendid on hiljuti ostnud**.
+1. Valige, kas soovite kaasata tooteid, mille kliendid on hiljuti ostnud väljale **Eeldatav** ostude kordamine.
 
-1. Kui olete valinud hiljuti ostetud toodete *soovitamata* jätmise, seadistage **Tagasiminemise aken**. Antud säte määrab ajavahemiku, mida mudel kaalub enne toote kasutajale uuesti soovitamist. Näiteks saate määrata, et klient ostab iga kahe aasta järel sülearvuti. See aken näitab viimase kahe aasta ostuajalugu ja kui nad leitakse üksus, filtreeritakse üksus soovituste põhjal.
+1. Seadke **aken Vaata tagasi**. Antud säte määrab ajavahemiku, mida mudel kaalub enne toote kasutajale uuesti soovitamist. Näiteks saate määrata, et klient ostab iga kahe aasta järel sülearvuti. See aken näitab viimase kahe aasta ostuajalugu ja kui nad leitakse üksus, filtreeritakse üksus soovituste põhjal.
 
 1. Vali **Järgmine**
 

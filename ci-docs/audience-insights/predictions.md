@@ -1,24 +1,28 @@
 ---
 title: Osaliste andmete täiendamine prognooside abil
 description: Kasutage prognoose, et täiendada mittetäielikke kliendiandmeid.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645029"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353998"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Osaliste andmete lõpetamine prognooside abil
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Täitke oma osalised andmed ennustustega (aegunud)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> See funktsioon on **aegunud** alates 5. novembrist **2021**. Praegused rakendused töötavad seni, kuni funktsioon on eemaldatud, kuid te ei saa alltoodud juhiste abil uusi integratsioone luua.
 
 Prognooside abil saate hõlpsalt luua ennustatud väärtusi, mis aitavad suurendada teie arusaamist kliendist. Saate valida lehel **Ärianalüüs** > **Prognoosid** suvandi **Minu prognoosid**, et näha prognoose, mille olete konfigureerinud sihtrühmaülevaadetes muudes kohtades, ning neid veelgi kohandada.
 
@@ -60,6 +64,8 @@ Lisateavet leiate teemast [Uue keskkonna loomine](create-environment.md).
    > ![Kategooriatega vastendatud väljade väärtuste näide.](media/intelligence-categorymapping.png "Kategooriatega vastendatud väljade väärtuste näide")
 
 8. Valige **Valmis** ja prognoosi hakatakse töötlema. Andmete töötlemise mahust ja keerukusest olenevalt võib töötlemine aega võtta. Tulemused on saadaval uues olemis, mis põhineb teie loodud prognoosi suvandil **Väljundi olemi nimi**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Prognoosi loomine segmendi loomisel
 
@@ -110,7 +116,7 @@ Selle voo osana saate valida kindla atribuudi, mis põhineb teie segmendil (nt k
 
 ## <a name="edit-a-prediction"></a>Prognoosi redigeerimine
 
-Kui olete prognoosi loonud, saate oma mudeli efektiivsuse tõstmiseks kohandada ka AI Builderi mudelit.  
+Pärast prognoos loomist saate mudelit AI Builder kohandada, et suurendada oma mudeli tõhusust.  
 
 1. Avage sihtrühmaülevaadetes jaotis **Ärianalüüs** > **Prognoosid** > **Minu prognoosid**.
 
@@ -118,14 +124,14 @@ Kui olete prognoosi loonud, saate oma mudeli efektiivsuse tõstmiseks kohandada 
 
 3. Valige kolmikpunkt veerus **Toimingud** ja seejärel **Vaade**.
 
-4. Valige käsk **Kohanda AI Builderis**.
+4. Valige **Kohanda AI Builder**.
 
-5. Värskendage oma mudelit AI Builderis. [Lisateave AI Builderis mudelite haldamise kohta](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Värskendage oma mudelit väljal AI Builder. [Lisateave AI Builderis mudelite haldamise kohta](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Teie prognoosi järgmiseks käivitamiseks kasutatakse teie loodud värskendatud mudelit.
 
 > [!NOTE]
-> AI Builderis loodud uusi mudeleid ei kuvata sihtrühmaülevaadetes, välja arvatud juhul, kui mudel on loodud eespool loetletud kogemuste põhjal.
+> Uusi mudeleid, mis on loodud AI Builder vaatajaskonna ülevaates, ei kuvata, välja arvatud juhul, kui mudel on loodud ülaltoodud kogemustest.
 
 ## <a name="remove-a-prediction"></a>Prognoosi eemaldamine
 

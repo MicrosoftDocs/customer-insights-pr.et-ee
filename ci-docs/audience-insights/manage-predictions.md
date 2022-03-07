@@ -3,18 +3,17 @@ title: Jagatud ülesanded prognoosistsenaariumide jaoks
 description: Vaadake, kuidas ennustusi hallata, tõrkeotsingut teha ja prognoose määratleda.
 ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7731983"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230787"
 ---
 # <a name="manage-predictions"></a>Prognooside haldamine
 
@@ -50,9 +49,9 @@ Aruande järgmised veerud sisaldavad kasulikku teavet mudeli andmete täiustamis
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Sisendandmete kasutatavuse aruande näide, milles on kuvatud tõrgete, hoiatuste ja soovitustega tabel.":::
 
-- **Nimi:** tõrke, hoiatuse või soovituse kirjeldav nimi.
-- **Etapp:** näidisfaas, rong või skoor, millele teave viitab.
-- **·** Olek: teabe raskusaste (viga, hoiatus, soovitus).
+- **Nimi:** Tõrke, hoiatuse või soovituse kirjeldav nimi.
+- **Samm:** Mudeli faas, rong või skoor, teave viitab.
+- **Olek:** teabe raskusaste (tõrge, hoiatus, soovitus).
 - **Veeru nimi:** olemi veerg, mida tuleb mudeli jõudluse parandamiseks muuta.
 - **Olemi nimi:** olemi nimi, mida tuleb mudeli jõudluse parandamiseks muuta.
 - **Üksikasjad:** tõrke, hoiatuse või soovituse üksikasjad.

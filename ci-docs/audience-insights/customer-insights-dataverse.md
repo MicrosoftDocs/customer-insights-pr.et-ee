@@ -1,43 +1,45 @@
 ---
-title: Customer Insightsi andmed Microsoft Dataverse
-description: Customer Insightsi olemite kasutamine tabelitena Microsoft Dataverse.
+title: Customer Insightsi andmed teenuses Microsoft Dataverse
+description: Customer Insights olemite kasutamine Microsoft Dataverse tabelitena.
 ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
-ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
-ms.translationtype: HT
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "7866929"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355424"
 ---
-# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Customer Insightsi andmetega töötamine Microsoft Dataverse
+# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
 
-Customer Insights pakub võimalust teha väljundolemid [Microsoft Dataverse kättesaadavaks](/powerapps/maker/data-platform/data-platform-intro.md). See integratsioon võimaldab lihtsat andmete jagamist ja kohandatud arendamist vähese koodiga/koodita. Väljundolemid on saadaval tabelitena Dataverse. Need tabelid võimaldavad Power Apps kaudu stsenaariume, nagu [automatiseeritud töövood](/power-automate/getting-started)[Power Automate, mudelipõhiste rakenduste](/powerapps/maker/model-driven-apps/) ja [lõuendirakenduste](/powerapps/maker/canvas-apps/) kaudu. Andmeid saate kasutada mis tahes muu rakenduse jaoks, mis põhineb Dataverse tabelitel. Praegune juurutus toetab peamiselt otsinguid, kus konkreetse kliendi ID jaoks saab hankida andmeid olemasolevate vaatajaskonna statistiliste üksuste kohta.
+Customer Insights pakub võimalust muuta väljundi olemid kättesaadavaks teenuses [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). See integratsioon võimaldab lihtsat andmete jagamist ja kohandatud arendamist vähese koodiga/koodita. Väljundi olemid on saadaval tabelitena teenuses Dataverse. Need tabelid võimaldavad stsenaariumeid, nagu [automaatsed töövood Power Automate](/power-automate/getting-started), [mudelipõhised rakendused](/powerapps/maker/model-driven-apps/) ja [lõuendirakendused](/powerapps/maker/canvas-apps/) Power Apps kaudu. Saate kasutada andmeid mis tahes muu Dataverse tabelitel põhineva rakenduse jaoks. Praegune juurutus toetab peamiselt otsinguid, kus konkreetse kliendi ID jaoks saab hankida andmeid olemasolevate vaatajaskonna statistiliste üksuste kohta.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Dataverse keskkonna lisamine Customer Insightsile
+## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Dataverse Customer Insignts keskkonna lisamiseks
 
-**Organisatsioonid, millel on olemasolevad Dataverse keskkonnad**
+**Asutused, kus on olemasolevad Dataverse keskkonnad**
 
-Organisatsioonid, kes juba kasutavad Dataverse saavad [kasutada mõnda oma olemasolevat Dataverse](create-environment.md) keskkonda, kui administraator häälestab vaatajaskonna ülevaateid. Pakkudes URL-i Dataverse keskkonnale, lisab see nende uue vaatajaskonna ülevaatekeskkonna. Parima võimaliku jõudluse tagamiseks tuleb samas piirkonnas majutada Customer Insightsi ja Dataverse keskkondi.
+Asutused, mis Dataverse juba kasutavad, saavad [kasutada ühte olemasolevat Dataversekeskkonda](create-environment.md), kui administraator seadistab sihtrühma ülevaated. Andes Dataverse keskkonna URL-i, lisab see uutele publiku ülevaadete keskkonnale. Parima võimaliku toimivuse tagamiseks peavad Customer Insightsi ja Dataverse keskkonnad olema majutatud samas piirkonnas.
 
 **Uus organisatsioon**
 
 Kui loote Customer Insightsi seadistamisel uue organisatsiooni, saate automaatselt uue Dataverse keskkonna.
 
 > [!NOTE]
-> Kui teie organisatsioonid juba kasutavad oma rentnikus Dataverse, on oluline meeles pidada, et [Dataverse keskkonna loomist kontrollib administraator](/power-platform/admin/control-environment-creation.md) . Näiteks kui häälestate oma organisatsioonikontoga uut vaatajaskonna ülevaatekeskkonda ja administraator on keelanud Dataverse proovikeskkondade loomise kõigile peale administraatorite, ei saa te uut proovikeskkonda luua.
+> Kui teie organisatsioonid kasutavad juba rentnikus teenust Dataverse, on oluline meeles pidada, et [Dataverse keskkonna loomist kontrollib administraator](/power-platform/admin/control-environment-creation.md). Näiteks kui seadistate uut sihtrühma ülevaatekeskkonda oma ettevõttega ja administraator on keelanud proovikeskkondade loomise kõigile peale administraatorite, ei saa te luua uut Dataverse proovikeskkonda.
 > 
-> Customer Insightsis loodud Dataverse proovikeskkondadel on 3 GB salvestusruumi, mida ei arvestata rentnikule õigusega üldise võimsuse hulka. Tasulised tellimused saavad Dataverse andmebaasi jaoks 15 GB ja failisalvestuse jaoks 20 GB.
+> Customer Insightsi kaudu loodud Dataverse proovikeskkondades on 3 GB mäluruumi, mida ei arvestata rentniku kogu mäluruumi sisse. Tasulised Dataverse kordustellimused annavad 15 GB andmebaasi mäluruumi ja 20 GB faili mäluruumi.
 
 ## <a name="output-entities"></a>Väljundolemid
 
-Mõned vaatajaskonna ülevaate väljundolemid on saadaval tabelitena Dataverse. Allolevates jaotistes kirjeldatakse nende tabelite eeldatavat skeemi.
+Mõned sihtrühma ülevaadete väljundolemid on saadaval Dataverse tabelitena. Allolevates jaotistes kirjeldatakse nende tabelite eeldatavat skeemi.
 
 - [Kliendi profiil](#customerprofile)
 - [AlternateKey](#alternatekey)
@@ -61,7 +63,7 @@ Tabel AlternateKey sisaldab olemite võtmeid, mis osalevad ühildamisprotsessis.
 |DataSourceName    |String         | Andmeallika nimi. Näiteks: `datasource5`.”        |
 |EntityName        | String        | Olemi nimi sihtrühma ülevaadetes. Näiteks: `contact1`.”        |
 |AlternateValue (Alternatiivne väärtus)    |String         |Alternatiivne ID, mis on vastendatud kliendi ID-ga. Näide: `cntid_1078`         |
-|KeyRing           | Mitmerealine tekstiväli        | JSON-väärtus  </br> Näidis: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"võtmed":[" cntid_1078"]}]       |
+|KeyRing           | Mitmerealine tekstiväli        | JSON-väärtus  </br> Näide: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
 |CustomerId         | String        | Ühildatud kliendiprofiili ID.         |
 |AlternateKeyId     | GUID         |  AlternateKeyl deterministlik GUID, mis põhineb msdynci_identifier       |
 |msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Näidis: `testdatasource|contact1|cntid_1078`    |

@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 76b3466afd84aa439ea55afe90ae037825884f2d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673438"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229072"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Uue tööruumi loomine ja liikmete lisamine
 
@@ -26,11 +25,11 @@ Tööruumi loomisel valite andmetüübi, millele soovite keskenduda. Teisi kasut
 
 ## <a name="create-a-new-workspace"></a>Looge uus tööruum
 
-Tööruumi loomise protsess hõlmab *keskkonna* seadistamist tööruumi korraldamiseks. Keskkond on tühik, mis võib sisaldada ühte või enamat tööruumi. Saate kasutada keskkonda, et hallata oma tööruume ja ühendusi vaatajaskonna ülevaatevõimalusega.
+Tööruumi loomise protsess hõlmab *keskkonna* seadistamist tööruumi korraldamiseks. Keskkond on tühik, mis võib sisaldada ühte või enamat tööruumi. Keskkonna abil saate hallata oma tööruume ja ühendusi vaatajaskonna ülevaatete võimalusega.
 
-1. Valige **·** tööruumivahetajast +Uus.
+1. Valige **tööruumi vahetajast suvand +Uus**.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Kliendiülevaate leht viiktekstiga navigeerimispaanil ja kirjeldus.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Customer Insightsi leht koos navigeerimispaanil ja kirjeldusega.":::
 
 1. Sisestage **Tööruumi** paanile **Tööruumi nimi**.
 

@@ -3,18 +3,21 @@ title: Andmete sissemaksmine konnektori Power Query kaudu (sisaldab videot)
 description: Andmeallikate konnektorid, mis põhinevad Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
-ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
-ms.translationtype: HT
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- customerInsights
+ms.openlocfilehash: 4c12933a0684094702843be309525dd6d5d9b6f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "8092067"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355516"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Andmeallikas-ga Power Query ühenduse loomine
 
@@ -52,7 +55,7 @@ Konnektoritel Power Query põhinevate andmeallikate lisamine järgib tavaliselt 
    - Kui valmendate andmeid CSV-failist, siis esimene rida sisaldab sageli päiseid. **Valige Teisendamine** ja valige **Kasuta esimest rida päistena**.
    - Veenduge, et andmetüüp oleks õigesti seadistatud. Näiteks kuupäevaväljade puhul valige kuupäeva tüüp.
 
-1. Dialoogiboksis Päringute redigeerimine andmeallikas **täiendavate olemite** lisamiseks **minge avalehte** ja valige **Too andmed**.
+1. Dialoogiboksis Päringute redigeerimine andmeallikas **täiendavate olemite** lisamiseks **minge avalehte** ja valige **Hankige andmed**.
 
 1. Teisenduste salvestamiseks valige **akna allservas** Salvesta Power Query. Pärast salvestamist leiate oma andmeallika jaotises **Andmed** > **Andmeallikad**.
 
@@ -80,7 +83,7 @@ Veerus **Customer Insights (Dataflows)** märgitud konnektorid on saadaval uute 
 
    [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
    
-3. Rakendage muudatusi ja teisendusi dialoogiboksis **Power Query – Päringute** redigeerimine, nagu on kirjeldatud [jaotises Uue andmeallikas](#create-a-new-data-source) loomine.
+3. Rakendage muudatused ja teisendused dialoogiboksis **Power Query – Päringute** redigeerimine, nagu on kirjeldatud [jaotises Uue andmeallikas](#create-a-new-data-source) loomine.
 
 4. Muudatuste salvestamiseks valige **Salvesta** Power Query pärast muudatuste lõpuleviimist.
 

@@ -1,37 +1,44 @@
 ---
 title: Kliendiprofiilide rikastamine Microsofti andmetega
-description: Kasutage Microsofti omandiandmeid kliendiandmete rikastamiseks kaubamärgi ja omandiõigusega seotud andmetega.
-ms.date: 06/14/2021
+description: Kasutage Microsofti varalisi andmeid, et rikastada oma kliendiandmeid afiinsuste ja hääleosaga.
+ms.date: 03/02/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 12704ec46832e9463e6115db6c4df64e72bf4f97
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305151"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372668"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Kliendiprofiilide rikastamine brändi ja huvide ligitõmbavusega (eelvaade)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Kliendiprofiilide rikastamine afiinsuste ja hääleosaga (eelvaade)
 
-Kasutage Microsofti omandiandmeid kliendiandmete rikastamiseks kaubamärgi ja omandiõigusega seotud andmetega. Need sarnasused põhinevad teie klientidele sarnase demograafilise demograafiaga inimeste andmetel. See teave aitab teil paremini mõista ja segmentida oma kliente, lähtudes nende ligitõmbavusest konkreetsetele tootemarkidele ja huvidele.
+Microsofti varaliste andmete abil saate rikastada oma kliendiandmeid brändi sarnasuste, huviga seotud sarnasuste ja hääleosaga (SoV). Need afiinsused ja soV põhinevad teie klientidega sarnase demograafiaga inimeste andmetel. See teave aitab teil oma kliente paremini mõista ja segmenteerida nende sarnasuste või soV alusel konkreetsete kaubamärkide ja huvidega.
 
 Liikuge sihtrühmaülevaadetes jaotisse **Andmed** > **Rikastamine**, et [seadistada ja vaadata rikastamisi](enrichment-hub.md).
 
-Tootemargi külgetõmbe rikastamise konfigureerimiseks minge vahekaardile **Avastamine** ja valige paanil **Tootemargid** suvand **Rikasta minu andmed**.
+Brändi afiinsuse ja SoV rikastamise konfigureerimiseks minge vahekaardile **Avasta** ja valige paanil **Kaubamärgid** suvand **Rikasta minu andmeid**.
 
-Huvide külgetõmbe rikastamise konfigureerimiseks minge vahekaardile **Avastamine** ja valige paanil **Huvid** suvand **Rikasta minu andmed**.
+Huvide sarnasuste ja soV rikastamise konfigureerimiseks minge vahekaardile Avasta ja valige paanil **Huvid** suvand **Rikasta minu andmeid**.**·**
 
    > [!div class="mx-imgBorder"]
-   > ![Tootemarkide ja huvide paanid](media/BrandsInterest-tile-Hub.png "Tootemarkide ja huvide paanid")
+   > ![Tootemarkide ja huvide paanid.](media/BrandsInterest-tile-Hub.png "Tootemarkide ja huvide paanid")
 
-## <a name="how-we-determine-affinities"></a>Kuidas määratleme ärisuhteid
+## <a name="how-we-determine-affinities-and-sov"></a>Kuidas me määrame sugulused ja SoV
 
-Microsoft kasutab veebipõhised otsinguandmed, et leida kaubamärkide ja omandiõiguste vahelisi sidemeid erinevates demograafilistes segmentides (määratletud vanuse, soo või asukoha järgi). Brändi või huvi veebiotsingu maht määratleb, kui palju ligitõmbavust on demograafilisel segmendil selle brändi või huvi suhtes võrreldes teiste segmentidega.
+Kasutame Microsofti veebiotsingu andmeid, et leida brändide ja huvidega seotud afiinsusi ja soV-d erinevates demograafilistes segmentides (määratletud vanuse, soo või asukoha järgi). Brändi või huvi veebipõhine otsingumaht on aluseks afiinsuse või SoV määramisele. Kuid igaüks pakub oma klientide mõistmiseks erinevat perspektiivi.
+
+- Afiinsus on demograafiliste segmentide võrdlus. Selle teabe abil saate tuvastada demograafilisi segmente, millel on antud brändi või huvi suhtes teiste segmentidega võrreldes suurim afiinsus.
+
+- Hääle jagamine on teie valitud kaubamärkide või huvide võrdlus. Selle teabe abil saate teha kindlaks, millisel brändil või huvil on antud demograafilise segmendi jaoks suurim hääl, võrreldes teiste valitud kaubamärkide või huvidega.
 
 ## <a name="affinity-level-and-score"></a>Ühtivuse tase ja skoor
 
@@ -48,6 +55,10 @@ Igal rikastatud kliendiprofiilil pakume kahte seotud väärtust: afiinsuse tase 
 |Väike     | 1–34        |
 
 Sõltuvalt granulaarsusest, mida soovite ühtivuse mõõtmisel, saate kasutada ühtivuse taset või skoori. Ühtivuse skoor annab teile täpsema kontrolli.
+
+## <a name="share-of-voice-sov"></a>Hääle jagamine (SoV)
+
+Arvutame SoV 100-punktilisel skaalal. SoV kogumaht kõigi kaubamärkide või huvide kohta iga rikastatud kliendiprofiili kohta lisab kuni 100. Erinevalt afiinsustest on SoV teie valitud kaubamärkide ja huvide suhtes. Näiteks võivad Microsofti soV-väärtused olla erinevad, kui valitud kaubamärgid on (Microsoft, GitHub) versus ('Microsoft', 'LinkedIn').
 
 ## <a name="supported-countriesregions"></a>Toetatud riigid/piirkonnad
 
@@ -82,7 +93,7 @@ Vaadake üle oma rikastamise vaike-eelistused ja värskendage neid vastavalt vaj
 
 ### <a name="select-entity-to-enrich"></a>Valige rikastamiseks olem
 
-Valige **Rikastatud olem** ja valige andmekomplekt, mida soovite rikastada ettevõtte andmetega Microsoftilt. Saate valida olemi Klient, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
+Valige **Rikastatud olem** ja valige andmekogum, mida soovite Microsofti andmetega rikastada. Saate valida olemi Klient, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
 
 ### <a name="map-your-fields"></a>Väljade vastendamine
 
@@ -116,26 +127,25 @@ Pärast brändide, huvide ja demograafilise väljavastenduse konfigureerimist k�
 
 Sõltuvalt kliendiandmete mahust võib rikastamise käitamise lõpuleviimiseks kuluda mitu minutit.
 
-> [!TIP]
-> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud **Vaata detaile** ühe tööülesande kohta, leiate lisateavet: töötlemise aeg, viimane töötlemise kuupäev ning kõik ülesandega seotud vead ja hoiatused.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="enrichment-results"></a>Rikastamise tulemused
 
 Pärast rikastamise protsessi käitamist, avage jaotis **Minu rikastamised**, et vaadata üle rikastatud klientide koguarv ja kaubamärkide või huvide jagunemine rikastatud kliendiprofiilides.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Tulemuste eelvaade pärast rikastamise protsessi käitamist":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Tulemuste eelvaade pärast rikastamise protsessi käitamist.":::
 
-Rikastatud andmete ülevaatamiseks valige diagrammilt **Rikastatud andmete vaatamine**. Brändide rikastatud andmed lähevad olemisse **BrandAffinityFromMicrosoft**. Huvide andmed on olemis **InterestAffinityFromMicrosoft**. Samuti leiate need olemis loetletuna rühmas **Rikastamine** suvandis **Andmed** > **Olemid**.
+Leiate diagrammi, kus on aja jooksul rikastatud kliendiprofiilide arv ja rikastatud olemite eelvaated. Vaadake rikastatud andmed üle, valides suvandi **Vaata täpsemalt** **afiinsuse tasemel** või **Hääldiagrammidel** Jaga. Brändide rikastatud andmed lähevad BrandAffinityFromMicrosofti **ja BrandShareOfVoiceFromMicrosofti** üksustele **·**. Huvide andmed on äriüksustes **InterestAffinityFromMicrosoft** ja **InterestShareOfVoiceFromMicrosoft**. Samuti leiate need olemis loetletuna rühmas **Rikastamine** suvandis **Andmed** > **Olemid**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Kliendi kaardi rikastamise andmete vaatamine
 
-Kaubamärgi ja huvide ühtivust saate vaadata ka eraldi kliendi kaartidel. Avage **Kliendid** ja valige kliendiprofiil. Kliendi kaardilt leiate diagrammid tootemarkide või huvide kohta, mille suhtes on külgetõmme selle kliendi demograafilise profiili inimestel.
+Brändi ja huvi SoV saab vaadata ka üksikute kliendikaartidega. Avage **Kliendid** ja valige kliendiprofiil. Kliendikaardilt leiate brändi või huvi soV graafikud, mis põhinevad selle kliendi demograafilise profiiliga inimestel.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kliendi kaart rikastatud andmetega":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kliendi kaart rikastatud andmetega.":::
 
-## <a name="next-steps"></a>Järgmised etapid
+## <a name="next-steps"></a>Järgmised toimingud
 
-Rikastatud kliendiandmetele toetumine. Looge [Segmendid](segments.md) ja [Näitajaid](measures.md) ning isegi [eksportige andmed](export-destinations.md), et pakkuda oma klientidele isikupärastatud kogemust.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
