@@ -1,19 +1,20 @@
 ---
 title: Customer Insightsi andmete eksportimine SendGridi
 description: Lugege, kuidas konfigureerida ühendust ja eksportida SendGrid.
-ms.date: 10/08/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 65d60e7e70e3444b0695b905431bab9a0269ceef
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 5d3d61d2b5b68079c7717e41dee5a2f698f2b62c
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231567"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5976911"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Segmentide eksportimine SendGrid (eelversioon)
 
@@ -28,10 +29,10 @@ Saate eksportida ühendatud kliendiprofiilide segmente SendGridi kontaktiloendit
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni 100 000 kliendiprofiili kokku SendGrid'i.
+- Kokku kuni 100 000 profiili SendGridi.
 - SendGridi saab eksportida ainult segmente.
-- Kuni 100 000 kliendiprofiili eksportimine SendGrid'i võib võtta paar tundi. 
-- Kliendiprofiilide arv, mida saate SendGrid'i eksportida, sõltub ja on piiratud vastavalt teie SendGrid lepingule.
+- Kuni 100 000 profiili eksportimiseks SendGridi võib kuluda paar tundi. 
+- SendGridi eksporditavate profiilide arv sõltub SendGridiga sõlmitud lepingust.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Ühenduse loomine SendGrid
 
@@ -65,7 +66,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage oma **[SendGridi loendi ID](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
 
-1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Korrake samu juhiseid muude valikuliste väljade puhul, nagu **Eesnimi**, **Perekonnanimi**, **Riik/piirkond**, **Maakond**, **Linn** ja **Sihtnumber**.
+1. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Korrake samu juhiseid muude valikuliste väljade puhul, nagu **Eesnimi**, **Perekonnanimi**, **Riik/piirkond**, **Maakond**, **Linn** ja **Sihtnumber**.
 
 1. Valige segmendid, mille soovite eksportida. Soovitame **tungivalt mitte eksportida kokku üle 100 000 kliendiprofiili** SendGridi. 
 

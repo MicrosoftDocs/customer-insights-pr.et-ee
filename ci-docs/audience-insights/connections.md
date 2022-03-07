@@ -3,20 +3,18 @@ title: Ühendused muude teenustega Customer Insights kaudu.
 description: Andmete jagamine muude teenustega.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-connections
-- customerInsights
-ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354378"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304967"
 ---
 # <a name="connections-preview-overview"></a>Ühenduste (eelversioon) ülevaade
 
@@ -49,7 +47,6 @@ Uusi ühendusi saavad konfigureerida ainult administraatorid, kuid loodud ühend
 1. Sisestage **Loo ühendus** seadistuse paanil nõutavad üksikasjad. 
    1. **Kuva nimi** ja ühenduse tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
    1. Täpsed väljad sõltuvad teenusest, millega loote ühenduse. Saate teavet konkreetse ühendusetüübi kohta sihtteenuse artklis.
-   1. Kui [kasutate oma võtmehoidlat](use-azure-key-vault.md) saladuste salvestamiseks, aktiveerige **Kasutage võtmehoidlat** ja valige loendist saladus.
 
 1. Uue ühenduse loomiseks valige **Salvesta**.
 
@@ -96,6 +93,3 @@ Eraldatud rikastamine ja eksport muutuvad passiivseks. Aktiveerite need uuesti, 
 
 1. Valige käsk **Eemalda**, et kinnitada kustutamine.
 
-## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Saate seadistada ühendusi saladustega, mida haldab teie oma võtmehoidla.
-
-Mõne ühenduse puhul on vaja saladusi, nagu API-võtmed või paroolid. Mõned ühendused toetavad saladusi, mis on talletatud teie enda võtmehoidlasse. Lisateave toetatud ühenduste kohta ja kuidas seadistada [oma võtmehoidlas publiku ülevaadete jaoks](use-azure-key-vault.md).

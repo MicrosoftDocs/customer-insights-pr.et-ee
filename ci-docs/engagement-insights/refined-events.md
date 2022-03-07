@@ -1,96 +1,72 @@
 ---
-title: Sündmuste loomine ja muutmine
-description: Kuidas sündmusi luua ja muuta.
+title: Täpsemate sündmuste loomine ja muutmine
+description: Täpsemate sündmuste loomine ja muutmine.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 10/01/2021
+ms.date: 04/30/2021
+ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: dbafa2231daa82c34ee2ec8292111575e95af675
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 0344bac5f4d43df853309f43c94d95f962937f77c936ed7305c5de4a08835f04
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228198"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034769"
 ---
-# <a name="create-and-modify-events"></a>Sündmuste loomine ja muutmine
+# <a name="create-and-modify-refined-events"></a>Täpsemate sündmuste loomine ja muutmine
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
+
 
 Sündmus on andmed, mis tähistab kasutaja käitumist, nt tegevusi veebisaidil.
 
 - *Põhi* sündmuse kirjed, kui kasutaja vaatab lehte (vaata sündmust) või suhtleb sisuga (toimingusündmus).
 - *Täpsustatud* sündmus on baassündmuse virtuaalvaade. Sündmuste määratlemiseks eemaldage ja lisage atribuudid või filtreerige sündmused atribuudiväärtuste põhjal.
 
-## <a name="prerequisites"></a>eeltingimused
-
-Sündmuste hankimiseks peavad teie veebisaidi andmed olema koodilõigendi abil esmalt seotud kaasavuse ülevaadetega. Lisateavet leiate teemast [Veebi-SDK installimine veebisaidile](instrument-website.md).
-
- :::image type="content" source="media/new-events-connect-data.png" alt-text="Esmalt ühendage oma andmed.":::
-
-## <a name="create-refined-events"></a>Täpsemate sündmuste loomine
-
 Kasutage nende sündmuste funktsiooni, et vähendada [eksporti](export-events.md) või eemaldada atribuute, mis pole eksportimiseks vajalikud.
 
-> [!NOTE]
-> Kui olete veebi-SDK oma veebisaidile salvestatud, saate vaadata oma baassündmusi ja luua täpsustatud sündmused. 
+## <a name="create-refined-events"></a>Täpsustatud sündmuste loomine
 
-Baassündmuste vaatamiseks:
+Baassündmusest täpsustatud sündmuse loomiseks on kolm võimalust. 
 
-1. Valige vasakpoolsel navigeerimispaanil suvand **Andmed**.
+1. Minge **Andmed**> **Sündmused** ja valige üks järgmistest suvanditest:
+    - Valige **Uued sündmused** ja seejärel valige **Täpsustatud sündmuste loomine**.
+    - Valige baassündmus, et avada üksikasjalik vaade ja valida **Täpsustatud sündmuse loomine** ülemisest menüüst.
+    - Valige **Veel [...]** kiirmenüü avamiseks baassündmuse jaoks. Seejärel valige **Täpsustatud sündmuste loomine**.
+    
+    :::image type="content" source="media/create-refined-events-options.png" alt-text="Suvandid loomaks rafineeritud sündmuseid.":::
 
-1. Valige **Sündmused**, et näha tööruumis kõigi sündmuste loendit.
+1. Sisestage dialoogis **Täpsustatud sündmuse loomine** järgmine teave:
 
-    :::image type="content" source="media/data-events.png" alt-text="Vaadake sündmusi.":::
+- Uue sündmuse loomisel **Baassünddmuste** ripploendist soovitud sündmus.
+- Sisestage **Täpsustatud sünmuse kuvatav nimi** väljale.
+- Soovi korral värskendage **Tegelikku nime** tühikuid kasutamata.
 
-Põhisündmusest täpsustatud sündmuse loomiseks toimige järgmiselt: 
+3. Valige **Loo** sätete kuvamiseks.
 
-1. Minge **Andmed** > **Sündmused** ja valige ekraani ülaosast **+ Uued sündmused**.
+1. Täpsustatud sündmuste üksikasjalikuks vaates valige **Lisa ja eemalda atribuudid**, et avada paanil **Redigeeri seadeid**. 
 
-1. Tehke dialoogis **Uued sündmused** valik **Täpsustatud sündmuste loomine** ja seejärel klõpsake nuppu **Edasi**.
-   
-     :::image type="content" source="media/new-events-wizard.png" alt-text="Uute sündmuste viisard.":::
-     
-1. Sisestage dialoogi **Uued sündmused** järgnev teave:
+1. Märkige ruudud, mida soovite kuvada, ja atribuudid, mida soovite peita. 
+   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Täpsustatud sündmuste atribuutide redigeerimine.":::
 
-   - Valige sündmus **Baassündmuste** ripploendist.
-   - Sisestage **Täpsustatud sünmuse kuvatav nimi** väljale.
-   - Soovi korral värskendage **Tegelikku nime** tühikuid kasutamata.
+1. Valige **Kinnita** valiku kuvamiseks.
 
-1. Valige **Loo** sätete kuvamiseks.
+1. Valige **Salvesta** konfiguratsiooni salvestamiseks.
 
-Täpsustatud sündmus kuvatakse nüüd teie loendis **Sündmused**.
+## <a name="edit-refined-events"></a>Täpsustatud sündmuste redigeerimine
+
+Saate muuta täpsustatud sündmuse nime ja atribuute.
 
 ### <a name="edit-event-name"></a>Redigeeri sündmuse nime
 
-Saate muuta baas- või täpsustatud sündmuse nime ja atribuute.
-
 1. Mine **Andmed** > **Sündmused**. 
-
 1. Valige **Veel [...]** sündmuse jaoks ja valige **Redigeeri nime**.
-    
-     :::image type="content" source="media/create-refined-events-options.png" alt-text="Suvandid loomaks rafineeritud sündmuseid.":::
+1. Värskendage sündmuse nime ja valige **Muuda nime**.
 
-3. Värskendage sündmuse nime ja valige **Muuda nime**.
-
-### <a name="view-the-details-of-a-refined-event"></a>Vaadake täpsustatud sündmuse üksikasju:
-
-1. Valige loendis **Sündmus** oma baas- või täpsustatud sündmus. 
-
-1. Paani **Redigeeri atribuute** avamiseks valige kuva ülaosast **Lisa ja eemalda atribuute**. 
-
-     :::image type="content" source="media/add-remove-properties.png" alt-text="Atribuutide lisamine ja eemaldamine.":::
-
-1. Märkige ruudud, mida soovite kuvada, ja atribuudid, mida soovite peita. 
-
-   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Täpsustatud sündmuste atribuutide redigeerimine.":::
-
-1. Valiku rakendamiseks valige **Kinnita** ja seejärel klõpsake nuppu **Salvesta**.
-
-
-### <a name="edit-selected-properties-for-a-refined-event"></a>Täpsustatud sündmuse valitud atribuutide redigeerimine
+### <a name="edit-selected-properties"></a>Valitud atribuutide redigeerimine
 
 1. Minge **Andmed** > **Sündmused** ja valige täpsustatud sündmused et avada üksikasjalikum vaade.
 1. Valige **Lisa ja eemalda atribuudid**. 

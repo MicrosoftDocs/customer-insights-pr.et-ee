@@ -1,22 +1,20 @@
 ---
 title: Customer Insightsi andmed teenuses Microsoft Dataverse
 description: Customer Insights olemite kasutamine Microsoft Dataverse tabelitena.
-ms.date: 11/25/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-searchScope:
-- ci-system-diagnostic
-- customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355424"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645213"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
 
@@ -47,7 +45,6 @@ Mõned sihtrühma ülevaadete väljundolemid on saadaval Dataverse tabelitena. A
 - [CustomerMeasure](#customermeasure)
 - [Rikastamine](#enrichment)
 - [Prognoos](#prediction)
-- [Segmendi liikmelisus](#segment-membership)
 
 
 ### <a name="customerprofile"></a>Kliendi profiil
@@ -124,16 +121,3 @@ See tabel sisaldab mudeliprognooside väljundit.
 | Väärtused               | JSON-sõne | Mudeliga seotud atribuutide loend |
 | msdynci_predictionid | GUID        | Deterministlik GUID, mis on loodud msdynci_identifierilt | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
-
-### <a name="segment-membership"></a>Segmendi liikmelisus
-
-See tabel sisaldab kliendiprofiilide segmendi liikmelisuse teavet.
-
-| Column        | Tüüp | Kirjeldus                        |
-|--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Kliendiprofiili ID        |
-| SegmentProvider      | String       | Rakendus, mis avaldab segmente. Vaikeülevaated: vaatajaskonna ülevaated         |
-| SegmentMembershipType | String       | Selle segmendi liikmesuse kirje kliendi tüüp. Toetab mitut tüüpi, näiteks klient, kontakt või konto. Vaikeväärtus: klient  |
-| Segmendid       | JSON-sõne  | Kordumatute segmentide loend, mille liige kliendiprofiil on      |
-| msdynci_identifier  | String   | Segmendi liikmesuse kirje ainuidentifikaator. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministlik GUID, mis on loodud`msdynci_identifier`          |

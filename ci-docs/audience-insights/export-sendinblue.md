@@ -1,19 +1,20 @@
 ---
 title: Customer Insights andmete eksportimine Sendinblue'sse
 description: Vaadake, kuidas konfigureerida ühendust ja eksportida Sendinblue.
-ms.date: 10/08/2021
+ms.date: 06/29/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8d870ff31ce2d441e619ac18899c4d1b6c69ca41
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 58ca0ae5ad4a3a291f4336984d14fefb23a58ab3
+ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231414"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6314601"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Segmentide eksportimine Sendinblue (eelversioon)
 
@@ -28,10 +29,10 @@ Kampaaniate loomiseks, e-posti teel turundamiseks ja konkreetsete klientide rüh
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni miljoni kliendiprofiili Sendinblue ekspordi kohta.
+- Kuni 1 miljon profiili Sendinblue'sse eksportimise kohta.
 - Sendinblue eksportimine on piiratud segmentidega.
-- Miljoni kliendiprofiiliga segmentide eksportimine võib aega võtta 90 minutit. 
-- Kliendiprofiilide arv, mida saate Sendinblue'sse eksportida, sõltub ja on piiratud vastavalt teie Sendinblue lepingule.
+- Kokku 1 miljoni profiiliga segmentide eksportimiseks võib kuluda kuni 90 minutit. 
+- Sendinblue'sse eksporditavate profiilide arv sõltub Sendinblue lepingust ja on piiratud.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Sendinblue ühenduse häälestamine
 
@@ -63,7 +64,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage oma **Sendinblue loendi ID** 
 
-1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. 
+1. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. 
 
 1. Soovi korral saate eksportida **Eesnimi**, **Perekonnanimi** ja **Telefon**, et luua rohkem isikupärastatud e-kirju. Nende väljade vastendamiseks valige **Lisa atribuut**.
 

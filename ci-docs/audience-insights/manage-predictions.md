@@ -1,19 +1,20 @@
 ---
 title: Jagatud ülesanded prognoosistsenaariumide jaoks
 description: Vaadake, kuidas ennustusi hallata, tõrkeotsingut teha ja prognoose määratleda.
-ms.date: 11/01/2021
+ms.date: 05/17/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230787"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315873"
 ---
 # <a name="manage-predictions"></a>Prognooside haldamine
 
@@ -49,12 +50,12 @@ Aruande järgmised veerud sisaldavad kasulikku teavet mudeli andmete täiustamis
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Sisendandmete kasutatavuse aruande näide, milles on kuvatud tõrgete, hoiatuste ja soovitustega tabel.":::
 
-- **Nimi:** Tõrke, hoiatuse või soovituse kirjeldav nimi.
-- **Samm:** Mudeli faas, rong või skoor, teave viitab.
-- **Olek:** teabe raskusaste (tõrge, hoiatus, soovitus).
-- **Veeru nimi:** olemi veerg, mida tuleb mudeli jõudluse parandamiseks muuta.
-- **Olemi nimi:** olemi nimi, mida tuleb mudeli jõudluse parandamiseks muuta.
-- **Üksikasjad:** tõrke, hoiatuse või soovituse üksikasjad.
+- Nimi: tõrke, hoiatuse või soovituse kirjeldav nimi.
+- Etapp: mudeli faas, treening või skoor, millele teave viitab.
+- Olek: teabe raskusaste (viga, hoiatus, soovitus).
+- Veeru nimi: olemi veerg, mida tuleb mudeli jõudluse parandamiseks muuta.
+- Oleku nimi: olemi nimi, mida tuleb mudeli jõudluse parandamiseks muuta.
+- Üksikasjad: tõrke, hoiatuse või soovituse üksikasjad.
 
 ## <a name="refresh-a-prediction"></a>Prognoosi värskendamine
 
@@ -65,8 +66,6 @@ Prognoose värskendatakse automaatselt [teie andmete värskendamiste ajakava](sy
 1. Valige vertikaalne kolmikpunkt selle prognoosi kõrval, mida soovite värskendada.
 
 1. Valige **Värskenda**.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Prognoosi kustutamine
 

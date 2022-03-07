@@ -1,19 +1,20 @@
 ---
 title: Customer Insights andmete eksportimine Constant Contacti
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Constant Contacti.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8841945814397ffa70c56638a8bed25499c1a06f
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: b54659f028a141fe8f351645d96e933d47568a39
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226398"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362413"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Segmentide eksportimine Constant Contacti (eelversioon)
 
@@ -27,10 +28,10 @@ Saate eksportida ühendatud kliendiprofiilide segmente Constant Contacti ja kasu
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Pidevasse Kontakti saate eksportida kuni miljoni kliendiprofiili ekspordi kohta.
+- Constant Contacti saate eksportida kuni 1 miljoni profiili ekspordi kohta.
 - Eksportimine Constant Contacti on piiratud segmentidega.
-- Kuni miljoni kliendiprofiili eksportimine Pidevasse Kontakti võib võtta kuni üks tund. 
-- Kliendiprofiilide arv, mida saate Pidevasse Kontakti eksportida, sõltub ja on piiratud vastavalt teie Pideva Kontakti lepingule.
+- Kuni 1 miljoni profiili eksportimine Constant Contacti võib võtta kuni 1 tunni lõpuleviimiseks. 
+- Constant Contacti eksporditavate profiilide arv sõltub ja on piiratud teie lepinguga Constant Contactiga.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Ühenduse loomine Constant Contactiga
 
@@ -64,7 +65,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage oma [**Constant Contact List ID**](https://app.constantcontact.com/pages/contacts/ui#lists). Et leida URL-ist loendi ID, avage loend Constant Contactis.
 
-1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Segmentide eksportimine Constant Contacti on vajalik.
+1. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. Segmentide eksportimine Constant Contacti on vajalik.
 
 1. Soovi korral saate isikupärastatud meilide loomiseks täiendavalt eksportida väljad Eesnimi ja Perekonnanimi. Nende väljade vastendamiseks valige **Lisa atribuut**.
 

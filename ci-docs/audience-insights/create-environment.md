@@ -1,23 +1,21 @@
 ---
 title: Looge Customer Insights keskkondi
 description: Sammud litsentsitud kordustellimusega keskkondade loomiseks Dynamics 365 Customer Insights jaoks.
-ms.date: 02/24/2022
+ms.date: 10/14/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-searchScope:
-- ci-home
-- customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354090"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673386"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Looge sihtrühma ülevaates keskkond
 
@@ -30,7 +28,7 @@ Organisatsioonid saavad iga Customer Insights litsentsi jaoks luua *kaks* keskko
 
 ## <a name="create-a-new-environment"></a>Uue keskkonna loomine
 
-Pärast Customer Insightsi tellimislitsentsi ostmist saab rentniku Microsoft 365 üldadministraator meilisõnumi, mis kutsub neid üles keskkonda looma. Alustamiseks minge [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
+Pärast Customer Insights -i tellimuse litsentsi ostmist saab Microsoft 365 rentniku globaaladministraator meili, mis kutsub neid keskkonda looma. Alustamiseks minge [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
 
 Juhendav kogemus aitab teil koguda uue keskkonna jaoks vajalikku teavet. Keskkondade loomiseks ja haldamiseks on vaja [administraatori õigusi](permissions.md) sihtrühma ülevaadetes.
 
@@ -66,7 +64,7 @@ Salvestades andmed Azure Data Lake Storage-sse, nõustute, et andmed kantakse ü
 > Customer Insights toetab praegu järgmist:
 > - Allaneelatud olemid Power BI andmevoogudest, mis on talletatud Microsoft Dataverse hallatavasse Data Lake'i.  
 > - Azure Data Lake Storage kontod samast Azure'i piirkonnast, mille valisite keskkonna loomisel.
-> - Azure Data Lake Storage kontod, mis on Gen2 ja millel on *lubatud hierarhiline nimeruum*. Azure Data Lake Gen1 salvestusruumikontosid ei toetata.
+> - Azure Data Lake Storage kontod, millel on *hierarhiline nimeruum* lubatud.
 
 Selle Azure Data Lake Storage suvandi puhul saate valida ressursipõhise ja kordustellimusel põhineva autentimise suvandi. Lisateavet leiate teemast [Azure Data Lake Storage kontoga ühenduse loomine Azure'i teenuse subjekti](connect-service-principal.md) abil. **Konteineri** nimi on `customerinsights` ja seda ei saa muuta.
 
@@ -78,14 +76,9 @@ Kui loote Customer Insights'i mitu keskkonda ja salvestate nendest keskkondadest
    
 **Microsoft Dataverse** etapp lubab teil Customer Insights'i oma Dataverse keskkonnaga ühendada.
 
-Pakkuda oma Microsoft Dataverse keskkonda andmete (profiilide ja ülevaadete) jagamiseks ärirakendustega, mis põhinevad rakendusel Dataverse( nt Dynamics 365 Marketing või mudelipõhised rakendused rakenduses )Power Apps. Jätke see väli tühjaks, kui teil pole oma Dataverse keskkonda ja me pakume teile ühte.
+Kui soovite kasutada [karbist välja ennustamise mudeleid](predictions-overview.md#out-of-box-models), siis konfigureerige andmete ühiskasutus rakendusega Dataverse. Võite ka lubada asutusesisestest allikatest pärinevad andmed, pakkudes teie Microsoft Dataverse organisatsiooni hallatava keskkonna URL-i. Valige suvand **Luba andmete ühiskasutus**, et jagada Customer Insights väljundandmeid Dataverse hallatava Data Lake'iga.
 
-Dataverse Keskkonnaga ühenduse loomine võimaldab teil [andmevoogude ja lüüside abil Power Platform ka asutusesisene andmeallikast](data-sources.md#add-data-from-on-premises-data-sources) andmeid sisse võtta. Keskkonnaga [ühenduse loomisega saate kasutada](predictions-overview.md?tabs=b2c#out-of-box-models) ka kastist väljas põhiseid prognoos mudeleid Dataverse.
-
-> [!IMPORTANT]
-> Customer Insights ja Dataverse peab andmete jagamise lubamiseks olema samas piirkonnas.
-
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="andmete jagamine Microsoft Dataverse automaatse uute eksemplaride jaoks.":::
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Konfigureerimissuvandid andmete jagamise lubamiseks Microsoft Dataverse abil.":::
 
 > [!NOTE]
 > Customer Insights ei toeta järgmisi andmete jagamise stsenaariume:

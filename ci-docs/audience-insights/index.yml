@@ -4,17 +4,18 @@ summary: Kliendiandmete mitmest allikast hankimine, ühendamine ja korrastamine.
 metadata:
   title: Sihtrühmaülevaadete dokumentatsioon
   description: Spikrikeskus, milles on sihtrühmaülevaadete olulised lingid.
+  ms.service: customer-insights
   ms.subservice: audience-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
-  ms.date: 03/02/2022
-  ms.openlocfilehash: 44fac5d82313c491cf838404d9641e2d14261366
-  ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-  ms.translationtype: MT
+  ms.date: 07/30/2021
+  ms.openlocfilehash: 3764ed7c7fc4bd0dfa89e8a574617a1eb6273c2e36f6e5daa5aeca2c919ba7b8
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.translationtype: HT
   ms.contentlocale: et-EE
-  ms.lasthandoff: 02/16/2022
-  ms.locfileid: "8231832"
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7031376"
 landingContent:
 - title: Teave sihtrühmaülevaadete kohta
   linkLists:
@@ -26,10 +27,6 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Sihtrühma ülevaadete avastamine
       url: https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/
-  - linkListType: learn
-    links:
-    - text: Customer Insights õppetee
-      url: /learn/paths/build-customer-insights/
 - title: Andmete ühtlustamine
   linkLists:
   - linkListType: how-to-guide
@@ -40,11 +37,7 @@ landingContent:
       url: data-unification.md
     - text: Olemitest arusaamine
       url: entities.md
-  - linkListType: learn
-    links:
-    - text: Ühtse profiili loomine
-      url: /learn/modules/unified-customer-profile/
-- title: Hangi ülevaateid
+- title: Andmete rikastamine ja täpsustamine
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -52,13 +45,9 @@ landingContent:
       url: enrichment-hub.md
     - text: Suhtluse konfigureerimine
       url: relationships.md
-    - text: Andmete täiendamine prognoosidega
-      url: predictions.md
-  - linkListType: learn
-    links:
-    - text: Andmete rikastamine ja prognoosimine
-      url: /learn/modules/enrich-data/
-- title: Andmete põhjaleada
+    - text: Kliendi tegevuste loendamine
+      url: activities.md
+- title: Hangi ülevaateid
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -66,12 +55,8 @@ landingContent:
       url: segments.md
     - text: Näitajate loomine
       url: measures.md
-    - text: Kliendi tegevuste loendamine
-      url: activities.md
-  - linkListType: learn
-    links:
-    - text: Rakendusega töötamine
-      url: /learn/modules/working-with-customer-insights/
+    - text: Andmete täiendamine prognoosidega
+      url: predictions.md
 - title: Ekspordi kliendiandmed
   linkLists:
   - linkListType: how-to-guide
@@ -82,10 +67,6 @@ landingContent:
       url: customer-card-add-in.md
     - text: Power BI konnektor
       url: export-power-bi.md
-  - linkListType: learn
-    links:
-    - text: Väliste ühenduste haldamine
-      url: /learn/modules/configure-third-party-connections/
 - title: Rakenduse haldamine
   linkLists:
   - linkListType: how-to-guide
@@ -96,7 +77,3 @@ landingContent:
       url: permissions.md
     - text: Mitme keskkonna haldamine
       url: manage-environments.md
-  - linkListType: learn
-    links:
-    - text: Customer Insightsi haldamine
-      url: /learn/modules/administer-customer-data-platform/

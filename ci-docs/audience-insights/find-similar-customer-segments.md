@@ -2,22 +2,19 @@
 title: Sarnaste klientide leidmine tehisintellektiga (sisaldab videot)
 description: Leidke tehisintellekti abil sarnaseid kliendi segmente.
 ms.date: 06/25/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-segment-builder
-- ci-segment-insights
-- customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: de337ae989558c81fff25a6ff7cca01890ed306b
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355240"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934835"
 ---
 # <a name="similar-customers-preview"></a>Sarnased kliendid (eelversioon)
 

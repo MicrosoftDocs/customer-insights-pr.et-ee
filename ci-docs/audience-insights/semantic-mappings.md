@@ -1,24 +1,22 @@
 ---
 title: Semantilised vastendused (Eelversioon)
 description: Ülevaade semantilisest vastendusest ja kuidas neid kasutada.
-ms.date: 12/01/2021
+ms.date: 09/28/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-searchScope:
-- ci-semantic-mapping
-- customerInsights
-ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353952"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622930"
 ---
-# <a name="semantic-mappings-preview"></a>Semantilised vastendused (Eelversioon)
+# <a name="semantic-mappings"></a>Semantilised vastendused
 
 Semantilised vastendused lasevad teil vastendada oma mittetegevuseandmed eelmääratletud skeemidega. Need skeemid aitavad sihtrühma ülevaadetel oma andmeatribuute paremini mõista. Semantiline vastendamine ja esitatud andmed võimaldavad publiku ülevaadetes uusi ülevaateid ja funktsioone. Tegevuseandmete vastendamiseks skeemidega vaadake [tegevuste](activities.md) dokumentatsioon üle.
 
@@ -77,7 +75,8 @@ Semantilised vastendused lasevad teil vastendada oma mittetegevuseandmed eelmä�
 
 1. Semantilise vastenduse hilisemaks käivitamiseks valige semantiline vastendus ja valige **Värskenda**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Ülesannete/protsesside jaoks on [kuus tüüpi olekuid](system.md#status-types). Lisaks sõltuvad enamikud protsessid [muudest järgnevatest protsessidest](system.md#refresh-policies). Kogu töö edenemise üksikasjade nägemiseks saate valida protsessi oleku. Kui olete valinud ühe tööülesande jaoks suvandi **Kuva üksikasjad**, näete järgmist lisateavet: töötlemise aeg, viimane töötlemise kuupäev ja kõik ülesandega seotud tõrked ja hoiatused.
 
 ## <a name="manage-existing-semantic-mappings"></a>Olemasolevate semantilise vastenduste haldamine
 
@@ -92,41 +91,5 @@ Väljal **Andmed** > **Semantilised vastendusel (eelversioon)** saate vaadata k�
 - **Nimeta ümber**: Avab dialoogi, kuhu saate valitud semantilise vastenduse jaoks sisestada teistsuguse nime. Vajutage nuppu **Salvesta**, et muudatused rakendada.
 
 - **Kustuta**: Avab dialoogi, mis kinnitab valitud semantilise vastenduse kustutamist. Korraga saate kustutada ka mitu semantilist vastendust, valides semantilised vastendused ja kustutamise ikooni. Valige käsk **Kustuta**, et kinnitada kustutamine.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Kontaktitaseme tegevuste loomiseks kasutage ContactProfile semantilist olemi vastendust
-
-Pärast ContactProfile *semantilise olemi vastenduse loomist* saate jäädvustada kontaktide tegevusi. See võimaldab teil näha tegevuse ajaskaalal ettevõtte, mille kontakt vastutas iga tegevuse eest. Enamik juhiseid järgib tüüpilist tegevuste vastendamise konfiguratsiooni.
-
-   > [!NOTE]
-   > Kontaktitaseme tegevuste toimimiseks peavad teil olema nii AccountID **kui** ka **ContactID** atribuudid iga tegevuseandmete kirje kohta.
-
-1. [Määratlege *ContactProfile* semantilise olemi vastendamine.](#define-a-contactprofile-semantic-entity-mapping) Ja käivitage semantiline kaardistamine.
-
-1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Tegevused**.
-
-1. Uue tegevuse loomiseks valige **Lisa tegevus**.
-
-1. Nimetage tegevus, valige lähtetegevuse olem ja valige tegevuse olemi primaarvõti.
-
-1. **Looge jaotises Seosed** kaudne seos oma tegevuse lähteandmete ja kontode vahel, kasutades oma kontaktandmeid vahendajana. Lisateavet leiate otsestest [ja kaudsetest seoseteedest](relationships.md#relationship-paths).
-   - Ostud nimelise *tegevuse* näidissuhe:
-      - **Ostud Lähtetegevuse andmedKontakt** > **Andmed** atribuudil **ContactID**
-      - **KontaktAndmedAku** > **andmed** atribuudi **konto ID kohta**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Näidissuhte häälestus.":::
-
-1. Pärast seoste seadistamist valige **Edasi** ja viige tegevuse vastendamise konfiguratsioon lõpule. Tegevuse loomise üksikasjalikke samme leiate teemast [tegevuse](activities.md) määratlemine.
-
-1. Käivitage oma tegevuste vastended.
-
-1. Teie kontaktitaseme tegevused on nüüd nähtavad teie kliendi ajaskaalal.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Lõpptulemus pärast kontaktitegevuste konfigureerimist":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Kontaktitaseme tegevuse ajaskaala filtreerimine
-
-Pärast kontaktitaseme tegevuste vastendamise konfigureerimist ja selle käivitamist värskendatakse teie klientide tegevuse ajaskaalat. See sisaldab nende ID-sid või nimesid, olenevalt teie *ContactProfile* konfiguratsioonist, tegevuste jaoks, mida nad tegutsesid. Saate filtreerida tegevusi ajaskaalal olevate kontaktide kaupa, et näha konkreetseid teid huvitatud kontakte. Lisaks näete kõiki tegevusi, mis pole konkreetsele kontaktile määratud, valides **Kontaktiga vastendusse mitte vastetuna tegevused**.
-
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Kontaktitaseme tegevuste jaoks saadaolevad filtreerimissuvandid.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

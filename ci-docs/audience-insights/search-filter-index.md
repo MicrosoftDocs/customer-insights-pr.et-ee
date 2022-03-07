@@ -1,36 +1,41 @@
 ---
 title: Kliendiprofiilide otsimine ja filtreerimine
 description: Leidke kiiresti teavet ühtsete klientide profiilide kohta ja filtreerige määratud atribuute.
-ms.date: 11/01/2021
-ms.reviewer: mhart
+ms.date: 04/16/2020
+ms.reviewer: nimagen
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-search-filter
-- customerInsights
-ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354504"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405569"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Kliendiprofiilid: otsing ja filtri register
 
 Kliendiandmete ühtlustamise tulemusena tekib kliendiprofiili olem, mis pakub kogu kliendibaasi ühtset vaadet. [Kindla kliendi või klientide rühma teabe](customer-profiles.md) kiireks leidmiseks saate seadistada lehe **Kliendid** võimalused **Otsi** ja **Filtreeri**. Lugege edasi, et õppida, kuidas administraatorid saavad muuta lehe **Otsing ja filtri register** atribuute, millega kasutajad saavad otsida ja filtreerida.
 
-   :::image type="content" source="media/search-filter.png" alt-text="Otsingufilter":::
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!div class="mx-imgBorder"]
+> ![Otsingufilter](media/search-filter.png "Otsingufilter")
 
 ## <a name="add-fields-and-specify-attributes"></a>Lisage välju ja määrake atribuute
 
 Kui määratlete otsitavaid atribuute administraatorina esimest korda, peate esmalt määratlema indekseeritud välju. Soovitame valida kõik atribuudid, millega kasutajad saavad kliente otsida ja filtreerida lehel **Kliendid**. Saate määrata vaid kliendiprofiili olemi atribuute, mida lõite andmete ühendamisel.
 
 1. Avage leht **Kliendid** ja valige **Otsingu ja filtri register**.
+
+> [!NOTE]
+> Loome järgmistest semantilistest tüüpidest vaikimisi otsinguregistri konfiguratsiooni kliendi olemi saadaolevate atribuutide kohta, nagu on määratletud lehel Kaart.
+> - Isiku Eesnimi, Perekonnanimi, Teine nimi, Täisnimi
+> - Asutuse nimi
+> - Meiliaadress
+> - Telefoninumber
+> - Asukoha teave
 
 2. Valige **+ Lisa** indekseeritud väljade määramiseks.
 
@@ -59,11 +64,4 @@ Lehel **Kliendid** asuva **Filter** menüü võib sisaldada erinevas koguses atr
 
 2. Vajutage nuppu **Salvesta**, et muudatused rakendada.
 
-3. Valige **Käivita**, kui olete valmis seadete rakendamiseks. Pärast muudatuste töötlemist leiate need [kliendikaartidelt lehel Klient](customer-profiles.md). 
-
-## <a name="next-steps"></a>Järgmised etapid
-
-Vaadake profiilide otsimiseks läbi [ühendatud profiilide leht](customer-profiles.md) või kasutage indekseeritud välju kõigi ühendatud profiilide alamhulga vaatamiseks.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+3. Valige **Käivita**, kui olete valmis seadete rakendamiseks.

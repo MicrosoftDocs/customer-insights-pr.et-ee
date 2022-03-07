@@ -1,29 +1,24 @@
 ---
-title: Andmete sissemaksmine konnektori Power Query kaudu (sisaldab videot)
-description: Andmeallikate konnektorid, mis põhinevad Power Query.
-ms.date: 12/06/2021
+title: Andmete valmendamine Power Query konnektori kaudu
+description: Power Query-l põhinevate andmeallikate konnektorid.
+ms.date: 09/29/2020
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-searchScope:
-- ci-data-sources
-- ci-create-data-source
-- customerInsights
-ms.openlocfilehash: 4c12933a0684094702843be309525dd6d5d9b6f4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355516"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643489"
 ---
-# <a name="connect-to-a-power-query-data-source"></a>Andmeallikas-ga Power Query ühenduse loomine
+# <a name="connect-to-a-power-query-data-source"></a>Power Query andmeallikaga ühendamine
 
-Power Query pakub andmete neelamiseks laia konnektorite komplekti. Enamikku nendest konnektoritest toetab Dynamics 365 Customer Insights. 
-
-Konnektoritel Power Query põhinevate andmeallikate lisamine järgib tavaliselt selles jaotises kirjeldatud juhiseid. Olenevalt kasutatavast konnektorist on siiski vaja erinevat teavet. Lisateavet leiate konnektori viite üksikute konnektorite dokumentatsioonist [Power Query](/power-query/connectors/).
+Power Query pakub andmete valmendamiseks laia komplekti konnektoreid. Enamikku nendest konnektoritest toetab Dynamics 365 Customer Insights. Power Query konnektorite põhjal andmeallikate lisamine järgib üldjoontes järgmises jaotises kirjeldatud juhiseid. Olenevalt kasutatavast konnektorist on siiski vaja erinevat teavet. Lisateavet üksikute konnektorite kohta leiate dokumentatsioonist [Power Query konnektorite viide](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -33,46 +28,49 @@ Konnektoritel Power Query põhinevate andmeallikate lisamine järgib tavaliselt 
 
 1. Valige **Lisa andmeallikas**.
 
-1. Valige suvand **Microsofti Power Query**.
+1. Valige meetod **Andmete importimine** ja valige **Edasi**.
 
-1. Sisestage andmeallikale **Nimi** ja valige andmeallika loomiseks nupp **Edasi**.
+1. Sisestage andmeallikale **Nimi** ja valige andmeallika loomiseks nupp **Edasi**. Nime juhised: 
+   - peab algama tähega;
+   - kasutage ainult tähti ja numbreid; erimärkide ja tühikute sisestamine pole lubatud;
+   - kasutage 3–64 tähemärki.
 
-1. Valige üks [saadaolevatest konnektoritest](#available-power-query-data-sources). Selles näites **valime teksti/CSV** konnektori.
+1. Valige üks [saadaolevatest konnektoritest](#available-power-query-data-sources). Selles näites valime **Teksti/CSV** konnektori.
 
 1. Sisestage valitud konnektorile jaotises **Konnektori sätted** nõutavad üksikasjad ja valige andmete üle vaatamiseks nupp **Edasi**.
 
 1. Valige suvand **Andmete teisendamine**. Selles etapis lisate oma andmeallikale olemid. Olemid on andmekogud. Kui teil on andmebaas, mis sisaldab mitut andmekogumit, on iga andmekomplekt omaette olem.
 
-1. Dialoogiboks **Power Query – päringute** redigeerimine võimaldab andmeid üle vaadata ja täpsustada. Olemid, mida süsteemid teie valitud andmeallikas tuvastasid, kuvatakse vasakpoolsel paanil.
+1. Dialoogiaken **Power Query – päringute redigeerimine** võimaldab andmeid üle vaadata ja täiustada. Olemid, mida süsteemid teie valitud andmeallikas tuvastasid, kuvatakse vasakpoolsel paanil.
 
    > [!div class="mx-imgBorder"]
    > ![Päringute redigeerimise dialoog.](media/data-manager-configure-edit-queries.png "Päringute redigeerimise dialoog")
 
-1. Samuti saate oma andmeid teisendada. Valige redigeeritav või teisendatav olem. Kasutage aknas Power Query suvandeid teisenduste rakendamiseks. Kõik teisendused loetletakse jaotises **Rakendatud etapid**. Power Query pakub mitmeid eelnevalt ehitatud transformatsioonivõimalusi. Lisateavet vt [Power Query teemast Transformations](/power-query/power-query-what-is-power-query#transformations).
+1. Samuti saate oma andmeid teisendada. Valige redigeeritav või teisendatav olem. Teisenduste rakendamiseks kasutage suvandeid aknas Power Query. Kõik teisendused loetletakse jaotises **Rakendatud etapid**. Power Query pakub arvukalt eelvalmistatud teisendamise võimalusi. Lisateavet leiate teemast [Power Query teisendused](/power-query/power-query-what-is-power-query#transformations).
 
-   Soovitame kasutada järgmisi teisendusi.
+1. Saate lisada oma andmeallikas täiendavaid olemeid, valides **Hangi andmed** dialoogis **Päringute redigeerimise**.
 
-   - Kui valmendate andmeid CSV-failist, siis esimene rida sisaldab sageli päiseid. **Valige Teisendamine** ja valige **Kasuta esimest rida päistena**.
-   - Veenduge, et andmetüüp oleks õigesti seadistatud. Näiteks kuupäevaväljade puhul valige kuupäeva tüüp.
+   Need teisendused on väga soovitatavad.
 
-1. Dialoogiboksis Päringute redigeerimine andmeallikas **täiendavate olemite** lisamiseks **minge avalehte** ja valige **Hankige andmed**.
+   - Kui valmendate andmeid CSV-failist, siis esimene rida sisaldab sageli päiseid. Avage **Tabeli teisendamine** ja valige suvand **Kasuta päiseid esimese reana**.
+   - Veenduge, et andmetüüp oleks õigesti seadistatud.
 
-1. Teisenduste salvestamiseks valige **akna allservas** Salvesta Power Query. Pärast salvestamist leiate oma andmeallika jaotises **Andmed** > **Andmeallikad**.
+1. Teisenduste salvestamiseks valige Power Query akna allosast **Salvesta**. Pärast salvestamist leiate oma andmeallika jaotises **Andmed** > **Andmeallikad**.
 
 1. Lehel **Andmeallikad** märkate, et uus andmeallikas on olekus **Värskendamine**.
 
 ## <a name="available-power-query-data-sources"></a>Saadaolevad Power Query andmeallikad
 
-[Power Query Vaadake konnektorite loendit](/power-query/connectors/), mida saate kasutada andmete importimiseks Customer Insightsi. 
+Ajakohase Customer Insightsi imporditavate konnektorite loendi leiate jaotisest [Power Query konnektorite viide](/power-query/connectors/). 
 
-Veerus **Customer Insights (Dataflows)** märgitud konnektorid on saadaval uute andmeallikate Power Query loomiseks. Vaadake üle kindla konnektori dokumendid, et saada lisateavet selle eeltingimuste, piirangute ja muude üksikasjade kohta.
+Konnektorid, millel on märgitud veerg **Customer Insights (andmevood)**, on saadaval Power Query põhjal uute andmeallikate loomiseks. Vaadake üle kindla konnektori dokumendid, et saada lisateavet selle eeltingimuste, piirangute ja muude üksikasjade kohta.
 
-## <a name="edit-power-query-data-sources"></a>Andmeallikate redigeerimine Power Query
+## <a name="edit-power-query-data-sources"></a>Power Query andmeallikate redigeerimine
 
 > [!NOTE]
 > Ei pruugi olla võimalik muuta andmeallikaid, mis on samaaegselt kasutusel mõnes rakenduse protsessis (nt *segmentimine*, *vaste* või *ühinemine*). 
 >
-> **Lehel Sätted** saate jälgida iga aktiivse protsessi edenemist. Protsessi lõpuleviimisel saate naasta **Andmeallikate** lehele ja teha soovitud muudatused.
+> Lehe **Sätted** abil saate jälgida iga aktiivse protsessi kulgu. Protsessi lõpuleviimisel saate naasta **Andmeallikate** lehele ja teha soovitud muudatused.
 
 1. Avage sihtrühmaülevaadetes jaotis **Andmed** > **Andmeallikad**.
 
@@ -81,11 +79,9 @@ Veerus **Customer Insights (Dataflows)** märgitud konnektorid on saadaval uute 
    > [!div class="mx-imgBorder"]
    > ![Redigeerimise suvand.](media/edit-option-data-sources.png "Redigeerimise suvand")
 
-   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
-   
-3. Rakendage muudatused ja teisendused dialoogiboksis **Power Query – Päringute** redigeerimine, nagu on kirjeldatud [jaotises Uue andmeallikas](#create-a-new-data-source) loomine.
+3. Rakendage muudatused ja teisendused dialoogiaknas **Power Query – päringute redigeerimine**, nii nagu on kirjeldatud jaotises [Uue andmeallika loomine](#create-a-new-data-source).
 
-4. Muudatuste salvestamiseks valige **Salvesta** Power Query pärast muudatuste lõpuleviimist.
+4. Valige pärast redigeerimist muudatuste salvestamiseks Power Querys **Salvesta**.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -2,20 +2,21 @@
 title: Tehinguvoolavuse prognoosi näidisjuhend
 description: Kasutage seda näidisjuhendit, et proovida kasutamiseks valmis tehinguvoolavuse prognoosi mudelit.
 ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.reviewer: digranad
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354596"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269785"
 ---
-# <a name="transactional-churn-prediction-sample-guide"></a>Tehinguvoolavuse prognoosi näidisjuhend
+# <a name="transactional-churn-prediction-preview-sample-guide"></a>Tehinguvoolavuse prognoosi (eelversioon) näidisjuhend
 
 Selles juhendis näidatakse teile otsast lõpuni, kuidas kasutada Customer Insightsis tehinguvoolavuse prognoosi funktsiooni koos alltoodud andmetega. Kõik selles juhendis kasutatud andmed ei ole tegelikud kliendiandmed ja need kuuluvad Contoso andmekogumi hulka, mis asub teie Customer Insightsi tellimuse keskkonnas *Demo*.
 
@@ -30,7 +31,7 @@ Contoso on ettevõte, mis toodab kvaliteetset kohvi ja kohvimasinaid, mida müü
 
 ## <a name="task-1---ingest-data"></a>Ülesanne 1 – andmete valmendamine
 
-Vaadake üle artiklid [andmete allaneelamise](data-sources.md) ja [andmeallikate importimise kohta, kasutades Power Query konkreetselt konnektoreid](connect-power-query.md). Järgmises teabes eeldatakse, et olete andmete valmendamisega üldiselt tuttav. 
+Vaadake üle artiklid [andmete valmendamise](data-sources.md) ja [Power Query konnektorite abil andmete importimise](connect-power-query.md) kohta. Järgmises teabes eeldatakse, et olete andmete valmendamisega üldiselt tuttav. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>E-kaubanduse platvormist pärit kliendiandmete valmendamine
 
@@ -45,7 +46,8 @@ Vaadake üle artiklid [andmete allaneelamise](data-sources.md) ja [andmeallikate
    - **DateOfBirth**: kuupäev
    - **CreatedOn**: kuupäev/kellaaeg/ajatsoon
 
-   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Teisenda DoB kuupäevaks.":::
+   [!div class="mx-imgBorder"]
+   ![Sünniaja teisendamine kuupäevaks](media/ecommerce-dob-date.PNG "sünniaja teisendamine kuupäevaks")
 
 1. Muutke parempoolsel paanil väljal **Nimi** oma andmeallika praegune nimi **Päring** nimeks **eCommerceContacts**
 
@@ -107,9 +109,9 @@ Pärast andmete valmendamist alustame protsessi **Vastenda, vii vastavusse, ühe
 
 1. Liikuge vahekaardile **Vastavusseviimine** ja valige **Määra järjekord**.
 
-1. Valige **Esmane** ripploendist **eCommerceContacts: eCommerce** kui esmane allikas ja kaasake kõik kirjed.
+1. Valige ripploendis **Peamine** peamiseks andmeallikaks **eCommerceContacts: eCommerce** ja kaasake kõik kirjed.
 
-1. Valige **Olem 2** ripploendist väärtus **loyCustomers: LoyaltyScheme** ja kaasake kõik kirjed.
+1. Valige ripploendist **Olem 2** **loyCustomers: LoyaltyScheme** ja kaasake kõik kirjed.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="E-kaubanduse ja lojaalsuse vastavusseviimine vahekaardil „Koondamine“.":::
 
@@ -117,16 +119,16 @@ Pärast andmete valmendamist alustame protsessi **Vastenda, vii vastavusse, ühe
 
 1. Lisage esimene tingimus suvandi FullName abil.
 
-   * eCommerceContacts jaoks valige **Täisnimi** rippmenüüst.
-   * loyCustomers jaoks valige **Täisnimi** rippmenüüst.
+   * Valige andmeallika eCommerceContacts jaoks ripploendist **FullName**.
+   * Valige andmeallika loyCustomers jaoks ripploendist **FullName**.
    * Valige ripploend **Normaliseerimine** ja valige **Tüüp (telefon, nimi, aadress, ...)**.
    * Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.
 
 1. Sisestage uuele reeglile nimi **FullName, Email**.
 
    * Lisage meiliaadressi jaoks teine tingimus, valides suvandi **Lisa tingimus**
-   * Olemi eCommerceContacts jaoks valige **EKiri** rippmenüüst.
-   * Olemi loyCustomers jaoks valige **EKiri** rippmenüüst. 
+   * Valige olemi eCommerceContacts jaoks ripploendist **Meil**.
+   * Valige olemi loyCustomers jaoks ripploendist **Meil**. 
    * Jätke suvand „Normaliseerimine“ tühjaks. 
    * Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.
 
@@ -148,7 +150,7 @@ Pärast andmete valmendamist alustame protsessi **Vastenda, vii vastavusse, ühe
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Ülesanne 3 – tehinguvoolavuse prognoosi konfigureerimine
 
-Kui kliendiprofiilid on koondatud, saame käivitada tellimusevoolavuse prognoosi. Üksikasjalike juhiste leiate artiklist [Tellimuse prognoos](predict-subscription-churn.md). 
+Kui kliendiprofiilid on koondatud, saame käivitada tellimusevoolavuse prognoosi. Üksikasjalikud juhised leiate artiklist [Tellimusevoolavuse prognoos (eelversioon)](predict-subscription-churn.md). 
 
 1. Minge jaotisse **Ärianalüüs** > **Avastamine** ja valige kasutamiseks **Kliendivoolavuse mudel**.
 
