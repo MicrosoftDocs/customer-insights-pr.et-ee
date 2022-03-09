@@ -1,20 +1,25 @@
 ---
-title: Aadressi täiustamise rikastamine
+title: Aadressi täiustamise rikastamine (sisaldab videot)
 description: Rikastage ja normaliseerige kliendiprofiilide aadressiteavet Microsofti mudelitega.
-ms.date: 07/25/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692248"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353631"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Kliendiprofiilide rikastamine täiustatud aadressidega
 
@@ -23,6 +28,8 @@ Teie andmetes kuvatud aadressid võivad olla struktureerimata, mittetäielikud v
 ## <a name="how-we-enhance-addresses"></a>Kuidas me aadresse täiustame
 
 Meie mudel läbib aadressi täiustamiseks kaheastmelise protsessi. Esiteks sõelub see aadressi oma komponentide tuvastamiseks ja paneb need struktureeritud vormingusse. Seejärel kasutame AI-d aadressi väärtuste parandamiseks, lõpuleviimiseks ja standardismiseks.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Näide
 
@@ -98,10 +105,20 @@ Rikastamistoimingu käivitamiseks valige käsuribalt suvand **Käivita**. Samuti
 
 Kui rikastamistoiming on tehtud, saate värskelt rikastatud klientide profiile üle vaadata suvandi **Minu rikastamised** alt. Peale selle näete ka viimase värskenduse aega ja rikastatud profiilide arvu.
 
-Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **Kuva rikastatud andmed**.
+Rikastatud andmete näidist näete paanil **Rikastatud kliendid** eelvaates. Valige **Vaata lisaks** ja vali **vahekaart Andmed**, et pääseda juurde iga rikastatud profiili üksikasjalikule vaatele.
 
-## <a name="next-steps"></a>Järgmised etapid
+### <a name="overview-card"></a>Ülevaate kaart
 
-Rikastatud kliendiandmetele toetumine. Looge [segmente](segments.md) ja [näitajaid](measures.md) ning isegi [eksportige andmed](export-destinations.md), et pakkuda oma klientidele isikupärastatud kogemust.
+Ülevaatekaardil kuvatakse üksikasjad rikastamise katvuse kohta. 
+
+* **Töödeldud ja muudetud** aadressid: edukalt rikastatud aadressidega kliendiprofiilide arv.
+
+* **Töödeldud ja muutmata** aadressid: kliendiprofiilide arv aadressidega, mis tuvastati, kuid mida ei muudetud. Tavaliselt juhtub see siis, kui sisendandmed on kehtivad ja rikastamine ei saa neid parandada.
+
+* **Aadresse ei töödeldud ega muudetud**: profiilide arv aadressidega, mida ei tuvastatud. Tavaliselt sisendandmete puhul, mis on kehtetud või mida rikastamine ei toeta.
+
+## <a name="next-steps"></a>Järgmised toimingud
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

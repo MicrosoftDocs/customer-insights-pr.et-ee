@@ -1,39 +1,33 @@
 ---
-title: Luba out-of-box profiiliaruanded
-description: Saate teada, kuidas luua out-of-box profiiliaruandeid, mis on rühmitatud soo, vanuse ja riigi või piirkonna järgi.
+title: Luba kastist välja (OOB) profiiliaruanded
+description: Saate teada, kuidas luua kastist välja (OOB) profiiliaruandeid, mis on rühmitatud soo, vanuse ja riigi või piirkonna järgi.
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 05/03/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 3aa9599fc780098a2f7f31f0210d76ed2ef27ece774dd6212b5cb2a599ad537e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 4c165c4278a4870e6872d460e20cf7cb1eb8df83
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033947"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233949"
 ---
-# <a name="out-of-box-profile-reports"></a>Luba out-of-box profiiliaruanded
+# <a name="out-of-box-oob-unified-profile-reports"></a>Kastist välja (OOB) profiiliaruanded
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Aruanne on andmete visualiseerimise kogum, mis aitab teil mõista, kuidas kasutajad käituvad. Ühenduse loomisel Customer Insights audience ülevaadetega, saavad kaasamisülevaated kuvada aruande teabega, mis sisaldab teavet ühendatud kliendiprofiilide kohta. See aruanne sisaldab teie profiile, mis on rühmitatud soo, vanuse ja geograafilise asukoha järgi.
+Ühendatud profiili aruanne on andmete visualiseerimise kogum, mis aitab teil mõista, kuidas kasutajad käituvad. Ühenduse loomisel Customer Insights'i publiku ülevaadete võimalustega saavad kaasamisülevaated kuvada OOB aruandeid teabega ühendatud kliendiprofiilide kohta. See aruanne sisaldab teie profiile, mis on rühmitatud soo, vanuse ja geograafilise asukoha järgi. Kliendiprofiilide kohta leiate teavet jaotisest [Kliendiprofiilid](../audience-insights/customer-profiles.md).
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites"></a>eeltingimused
 
-Sihtrühma ülevaadete keskkond peab talletama andmeid kliendi hallatavas Azure Data Lake Storage kontos.
-
-Kui kasutate rakenduse Customer Insights hallatavates andmetes publiku ülevaadete data lake võimalusi, pöörduge abi saamiseks [meie](https://go.microsoft.com/fwlink/?linkid=2145734) poole.  
-
+Keskkonnaadministraator peab [looma lingi kaasamisülevaadete ja sihtrühma ülevaadete vahel](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="enable-the-customer-profile-report"></a>Kliendiprofiili aruande lubamine
 
-Keskkonnaadministraator peab looma [ühenduse sihtrühma ülevaadetega](configure-connections.md).
-
-Pärast ühenduse üksikasjade määratlemist saab administraator anda aruande nägemiseks juurdepääsu teistele ettevõtte inimestele. Ühenduse seadistanud keskkonnaadministraatoril on aruandele automaatselt juurdepääs. 
+Pärast kaasamisülevaadete ja publiku ülevaadete vahelise lingi määratlemist saab administraator anda seejärel aruande juurdepääsu ka teistele inimestele organisatsioonis. Ühenduse seadistanud keskkonnaadministraatoril on aruandele automaatselt juurdepääs. 
 
 Pärast ühenduse lõpetamist on **Profiilid** funktsioon saadaval vasakpoolsel navigeerimispaanil. 
 

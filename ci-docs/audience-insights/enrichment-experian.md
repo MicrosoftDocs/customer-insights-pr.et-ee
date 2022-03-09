@@ -3,18 +3,17 @@ title: Rikastamine kolmanda osapoole rikastamisega Experian
 description: Üldine teave Experian kolmanda osapoole rikastamise kohta.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309815"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229959"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Kliendiprofiilide rikastamine demograafiaga Experian (eelversioon)
 
@@ -39,7 +38,7 @@ Praegu toetame kliendiprofiilide rikastamist ainult Ameerika Ühendriikides.
 1. Valige **Rikasta minu andmed** Experian paanil.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian paan](media/experian-tile.png "Experian tile")
+   > ![Experian paan.](media/experian-tile.png "Experian tile")
    > 
 
 1. Valige [ühendus](connections.md) ripploendist. Kui ühendusi pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate ühenduse luua, valides **Lisa ühendus** käsu ja valides ripploendist Experian. 
@@ -91,7 +90,7 @@ Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **
 
 ## <a name="next-steps"></a>Järgmised etapid
 
-Rikastatud kliendiandmetele toetumine. Looge [segmente](segments.md) ja [näitajaid](measures.md) ning isegi [eksportige andmed](export-destinations.md), et pakkuda oma klientidele isikupärastatud kogemust.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 

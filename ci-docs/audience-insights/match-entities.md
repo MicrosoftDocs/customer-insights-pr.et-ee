@@ -2,7 +2,6 @@
 title: Olemite vastavusseviimine andmete koondamiseks
 description: Viige olemid vastavusse, et luua koondatud kliendiprofiile.
 ms.date: 02/07/2022
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
@@ -11,12 +10,15 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+- ci-merge
+- ci-map
+- customerInsights
+ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098830"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372622"
 ---
 # <a name="match-entities"></a>Olemite vastavusseviimine
 
@@ -178,7 +180,17 @@ Pöördduplitseeritava väljundi olem sisaldab järgmist teavet:
   - Deduplication_WinnerId: see väli sisaldab tuvastatud rühma või klastri võitja ID-d. Kui Deduplication_WinnerId on sama, mis kirje primaarvõtme väärtus, tähendab see, et kirje on võitja kirje.
 - Väljad, mida kasutatakse pöördduplitseerimise reeglite määratlemiseks.
 - Reeglid ja punktisumma väljad, mis tähistavad rakendatavaid pöördduplitseerimise reegleid ja millist punktisummat tagastas sobitusalgoritm.
-   
+ 
+## <a name="include-enriched-entities-preview"></a>Kaasa rikastatud olemid (eelvaade)
+
+Kui rikastasite andmeallikas tasemel olemeid, valige need enne mänguprotsessi käivitamist. Rikastatud üksused võivad parandada teie ühendamise tulemusi. Lisateavet vt teemast [Enrichment for Data sources](data-sources-enrichment.md). 
+
+1. **Avage dataUnifyMatch** > **·** > **ja** valige lehe ülaosas suvand **Kasuta rikastatud olemeid.**
+
+1. Valige paanil **Kasuta rikastatud olemeid** üks või mitme rikastatud olemit.
+
+1. Valige nupp **Valmis**. Kui kasutatakse lähteolemit (nt vastejärjestus või reeglid), muudetakse see automaatselt rikastatud olemiks.
+  
 ## <a name="run-the-match-process"></a>Vastenduse käivitamine
 
 Konfigureeritud vastendusreeglitega (sh olemitevahelise vastavusseviimise ja duplikaadieemalduse reeglite) saate käivitada vastavusseviimise. 
@@ -235,7 +247,7 @@ Enamuse vasteparameetritest saate ümber konfigureerida ja peenhäälestada.
 
 Enamikul juhtudel toob olemi sobitamine kaasa unikaalsed kasutajaprofiilid konsolideeritud andmetega. Harvaesinevate valepositiivsete ja valenegatiivsete juhtumite dünaamiliseks käsitlemiseks saate määratleda vastereegli erandid. Erandeid rakendatakse pärast mängureeglite töötlemist ja vältige kõigi erandikriteeriumidele täitvate kirjete sobitamist.
 
-Näiteks kui teie mängureegel ühendab perekonnanimi, linna ja sünnikuupäeva, tuvastaks süsteem kaksikud, kellel on sama perekonnanimi, kes elavad samas linnas kui sama profiil. Saate määrata erandi, mis ei vasta profiilidele, kui teie ühendatud olemite eesnimi pole samad.
+Näiteks kui teie mängureegel ühendab perekonnanimi, linna ja sünnikuupäeva, tuvastaks süsteem sama perekonnanimi kaksikud, kes elavad samas linnas kui sama profiil. Saate määrata erandi, mis ei vasta profiilidele, kui teie ühendatud olemite eesnimi pole samad.
 
 1. Avage **Andmed** > **Koondamine** > **Vastendamine** ja valige **Redigeeri** reegli jaoks millele soovite tingimusi lisada.
 

@@ -5,16 +5,15 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 09/30/2021
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: dc1ea94ad55886c605d27caea031e00964f6f7c8
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645486"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350218"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Rakenduse Dynamics 365 Customer Insights tasuta prooviversiooni jaoks registreerumine
 
@@ -32,23 +31,12 @@ Prooviversiooni laadimiseks kulub mõni hetk ja siis saate alustada rakenduse ka
 
 Teie proovikeskkond sisaldab samu funktsioone nagu tasuline versioon. Alljärgnevate linkide abil saate vaadata, kuidas kasutada mõningaid põhifunktsioone.
 
-### <a name="audience-insights"></a>Sihtrühmaülevaated
-
 - [Sihtrühma ülevaadete lühijuhend.](audience-insights/get-started.md)
 - [Lisage veel kasutajaid ja määrake õiguseid.](audience-insights/permissions.md)
 - [Tooge sisse oma andmeallikaid](audience-insights/data-sources.md) ja käivitage need [andmete ühendamise protsessis](audience-insights/data-unification.md) , et [saada ühtseid kliendiprofiile](audience-insights/customer-profiles.md).
 - [Rikastage ühendatud kliendiprofiile](audience-insights/enrichment-hub.md) või [käivitage ennetavad mudeleid](audience-insights/predictions-overview.md).
 - Looge [segmente](audience-insights/segments.md) klientide rühmitamiseks ja [mõõdikuid](audience-insights/measures.md) KPI-de arvustamiseks.
 - Seadistage [ühendused](audience-insights/connections.md) ja [eksport](audience-insights/export-destinations.md) andmete alamhulkade töötlemiseks muudes rakendustes.
-
-### <a name="engagement-insights"></a>Kaasamisülevaated
-
-- [Kaasavuse ülevaadete lühijuhend.](engagement-insights/get-started.md)
-- [Looge tööruum](engagement-insights/create-workspace.md) ja lisage liikmeid.
-- [Lisage kood oma veebisaidile](engagement-insights/instrument-website.md) või [mobiilirakendusele](engagement-insights/developer-resources.md#capture-events-from-mobile-apps).
-- Vaadake [reaalaja aruannet](engagement-insights/view-reports.md) või looge [kohandatud aruanded](engagement-insights/custom-reports.md).
-- [Luua täpsustatud sündmused](engagement-insights/refined-events.md) ekspordiks.
-- [Andmete eksportimine](engagement-insights/export-events.md) Azure Data Lake Storage-sse.
 
 ## <a name="additional-resources"></a>Lisaressursid
 

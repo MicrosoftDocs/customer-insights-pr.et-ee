@@ -3,19 +3,17 @@ title: Sihtrühma ülevaated Dynamics 365 Customer Insights ülevaatest
 description: Sihtrühma ülevaated rakendusest Dynamics 365 Customer Insights.
 ms.date: 08/04/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: b0fd10ca6f79bfec35c8a238179ba7e26e4dad98
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034355"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230731"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Sihtrühma ülevaated Dynamics 365 Customer Insights ülevaatest
 
@@ -57,11 +55,5 @@ ms.locfileid: "7034355"
 
   - Saate luua kohandatavaid profiile, määratleda näitajaid, luua segmente ja kasu ennustavast analüüsist, et koostada oma kliendi kohta teie organisatsioonile sobiv 360-kraadine ülevaade.  
   - Kasutage ülevaadete töötlemiseks mitme Microsofti ja muude tootjate rakenduste või API-de kasutusvalmis konnektoreid.
-
-## <a name="pricing-and-licensing"></a>Hinnad ja litsentsid
-
-Customer Insights on litsentsitud rentniku kohta ja sisaldab mitut võimalust. Õigustatud võimsused hõlmavad profiilide komplekti, igapäevaseid süsteemi värskendusi, Power Platformi päringuid ja kahte keskkonda. Vaikekvoodi suurendamiseks saate osta veel võimsust ja litsentsi. 
-- Üksikasjalik teave võimsusest ja õigustest: [Dynamics 365 litsentsimisjuhend](https://go.microsoft.com/fwlink/?LinkId=866544)
-- Hinna ülevaade: [Dynamics 365 hinnakujundus](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

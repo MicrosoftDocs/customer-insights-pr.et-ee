@@ -1,27 +1,26 @@
 ---
 title: Microsoft Teamsi robot
 description: Otsige roboti abil Microsoft Teamsis koondatud kliendiprofiile.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 03299610fd41a7e142e3c9723fad56ce7f90e083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267947"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232097"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Teamsi robot Dynamics 365 Customer Insightsi jaoks (eelversioon)
 
 Ühenduge Microsoft Teamsiga, et lasta robotil otsida koondatud kliendiprofiile Teamsi kanalites.
 
 > [!div class="mx-imgBorder"]
-> ![Kliendi kirjet kuvav Teamsi robot](media/teams-bot.png "Kliendi kirjet kuvav Teamsi robot")
+> ![Kliendi kirjet kuvav Teamsi robot.](media/teams-bot.png "Kliendi kirjet kuvav Teamsi robot")
 
 ## <a name="prerequisites"></a>Eeltingimused
 
@@ -31,7 +30,10 @@ Boti seadistamiseks ja konfigureerimiseks peavad olema täidetud järgmised eelt
 - [Ühendamisprotsess](data-unification.md) on lõpule viidud.
 - [Otsingu ja filtri indeksisse](search-filter-index.md) on lisatud väljad.
 - Customer Insights ja Teams on samas organisatsioonis.
+- Teie keskkonnas on peamiseks sihtrühmaks seatud üksikkliendid. Ettevõtte kontosid ei toetata.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Boti konfigureerimine
 
 1. Avage sihtrühmaülevaadetes jaotis **Haldus** > **Eksportimise sihtkohad**.

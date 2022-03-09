@@ -1,20 +1,19 @@
 ---
 title: Customer Insightsi andmete eksportimine Mailchimpi
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Mailchimpi.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
-ms.translationtype: HT
+ms.openlocfilehash: f7a33f2eddb6b625ddb8663b97103de75beab44c
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124222"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226841"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmentide eksportimine Mailchimpi (eelversioon)
 
@@ -29,16 +28,16 @@ Eksportige koondatud kliendiprofiilide segmendid MailChimpi, et luua teabelehti 
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Mailchimpi saab eksportida korraga kuni miljon profiili.
+- Kuni miljoni kliendiprofiili Mailchimp ekspordi kohta.
 - Mailchimpi saab eksportida ainult segmente.
-- 1 miljoni profiiliga segmentide eksportimiseks võib aega minna kuni kolm tundi. 
-- Mailchimpi eksporditavate profiilide arv sõltub Mailchimpiga sõlmitud lepingust.
+- Miljoni kliendiprofiiliga segmentide eksportimiseks võib aega võtta kuni kolm tundi. 
+- Kliendiprofiilide arv, mida saate Mailchimp'i eksportida, sõltub ja on piiratud vastavalt teie Mailchimp lepingule.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Ühenduse loomine Mailchimpiga
 
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **Autopilot** ühenduse konfigureerimiseks.
+1. Valige **Lisa ühendus** ja valige **Mailchimp** ühenduse konfigureerimiseks.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
@@ -66,7 +65,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage oma **[Mailchimp audience ID](https://mailchimp.com/help/find-audience-id/)**
 
-3. Valige jaotise **Andmete vastavusseviimine** väljal **Meil** oma koondatud kliendiprofiili väli, mis tähistab kliendi meiliaadressi. 
+1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. 
 
 1. Soovi korral saate eksportida **Eesnimi** ja **Perekonnanimi** isikupärastatud meilide loomiseks. Nende väljade vastendamiseks valige **Lisa atribuut**.
 
