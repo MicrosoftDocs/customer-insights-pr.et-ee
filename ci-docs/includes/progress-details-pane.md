@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4e7271356319bf3653801085477ac98876644bbf
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: f41298417842d664006ba2018ecb75b2d426ad89
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732963"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376981"
 ---
 > [!TIP] 
-> Ülesannete ja protsesside jaoks on [...](../audience-insights/system.md#status-definitions) olekud. Enamik protsesse sõltub muudest eelneva etapi protsessidest, nagu andmeallikad ja andmete profileerimise [värskendamine](../audience-insights/system.md#refresh-processes). Valige olek, et avada **·** üksikasjapaan Edenemine ja vaadata ülesande või protsessi edenemist. Seejärel valige **·** edenemisteabe (nt töötlemisaeg, viimane töötlemiskuupäev ning kõik ülesande või protsessiga seotud kohaldatavad tõrked ja hoiatused) jaoks link Kuva üksikasjad.
+> Ülesannete ja protsesside jaoks on [olekud](../audience-insights/system.md#status-definitions). Enamik protsesse sõltub muudest eelnevatest protsessidest, näiteks andmeallikatest ja andmete profileerimise [värskendamisest](../audience-insights/system.md#refresh-processes). Valige olek, et avada **paan Edene üksikasjad** ja vaadata ülesannete edenemist. Iga ülesande all saate valida Täpsema edenemisteabe (nt töötlemisaeg, viimane töötlemiskuupäev ning ülesande või protsessiga seotud kohaldatavad tõrked ja hoiatused) kuvamiseks **Kuva üksikasjad**. Saate kasutada **paneeli allservas tumblernuppu Kogu töövoog**, et näha süsteemis muid protsesse.

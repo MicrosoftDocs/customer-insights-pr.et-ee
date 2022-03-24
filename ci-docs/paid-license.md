@@ -7,18 +7,18 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
-ms.translationtype: HT
+ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350126"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455993"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Alustage pärast Customer Insights'i ostmist
 
 Selles artiklis kirjeldatakse, kuidas teha esimesi toiminguid Dynamics 365 Customer Insights-ga pärast seda, kui organisatsioon on tellimuse ostnud. Kui soovite osta Customer Insights -i, on meie kontaktisuvandid loetletud [Dynamics 365 Customer Insights veebisaidil](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Pärast Customer Insightsi tellimislitsentsi ostmist saab rentniku Microsoft 365 üldadministraator meilisõnumi, mis kutsub neid üles keskkonda looma. 
+Pärast Customer Insightsi tellimuslitsentsi ostmist saab rentniku üldadministraator Microsoft 365 meilisõnumi, mis kutsub neid keskkonda looma. 
 
 Customer Insights on litsentsitud rentniku kohta ja sisaldab mitut võimalust. Vaikekvoodi suurendamiseks saate rohkem võimsust ja litsentse osta. 
 - [Hinnastamise ülevaade](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -39,7 +39,4 @@ Esimese kasutuskogemuse abil saate valida oma algse fookuse Customer Insights'i 
 
 ## <a name="create-your-own-environment"></a>Oma keskkonna loomine
 
-Pärast esmast sisselogimist näete näidisandmetega keskkonda. Nende andmete abil saate uurida funktsioone ja rakendusega tuttavaks saada. Oma andmete kasutamiseks peate looma [keskkonna](audience-insights/get-started-paid.md).
-
-
-
+Pärast esmast sisselogimist näete näidisandmetega keskkonda. Nende andmete abil saate uurida funktsioone ja rakendusega tuttavaks saada. Oma andmete kasutamiseks peate looma [keskkonna](/dynamics365/customer-insights/audience-insights/create-environment).

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 0db0c984f6bf9f7ded0704b6fa0caf39c7dace3a
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230629"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376779"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Ettevõtte profiilide rikastamine Leadspace'iga (eelvaade)
 
@@ -25,7 +25,7 @@ Leadspace'i seadistamiseks peavad olema täidetud järgmised eeltingimused.
 
 - Teil on aktiivne Leadspace litsents.
 - Teil on [ühendatud kliendiprofiilid](customer-profiles.md) kontode põhjal.
-- Administraator on juba konfigureerinud Leadspace'i ühenduse või teil on [administraatoriõigused](permissions.md#administrator) ja "alaline võti (nimetatakse **Leadspace tokeniks**). Võtke [Leadspaceiga](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) otse ühendust toodete üksikasjade teabe saamiseks.
+- Administraator on juba konfigureerinud Leadspace'i ühenduse või teil on [administraatoriõigused](permissions.md#admin) ja "alaline võti (nimetatakse **Leadspace tokeniks**). Võtke [Leadspaceiga](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) otse ühendust toodete üksikasjade teabe saamiseks.
 
 ## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 

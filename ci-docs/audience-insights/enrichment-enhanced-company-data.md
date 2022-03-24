@@ -8,25 +8,27 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: e9cf93f28ba6918c72039670e42d26c8aaa7f922
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229398"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376317"
 ---
-# <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Ettevõtte profiilide rikastamine täiustatud ettevõtte andmetega
+# <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Ettevõtte profiilide rikastamine ettevõtte täiustatud andmetega
 
-Ettevõtte profiilide parandamiseks, täiendamiseks ja standardimiseks kasutage Microsofti mudeleid ja ettevõtte andmeid. Parema täpsuse ja ülevaate saamiseks kasutame [common data model vormingut](/common-data-model/schema/core/applicationcommon/account).
+Ettevõtte profiilide parandamiseks, täiendamiseks ja standardimiseks kasutage Microsofti mudeleid ja kogutud ettevõtte andmeid. Parema täpsuse ja ülevaate saamiseks kasutame [common data model'i vormingut](/common-data-model/schema/core/applicationcommon/account).
+
+Samuti [saate täiustada ettevõtte andmeid andmeallikate](data-sources-enrichment.md) kohta, et parandada andmete ühendamise protsessi vaste täpsust. 
 
 ## <a name="how-we-enhance-company-data"></a>Kuidas me ettevõtte andmeid täiustame?
 
-Meie mudel läbib kaheastmelise protsessi ettevõtte profiili suurendamiseks. Esiteks normaliseerib see ettevõtte nime. Näiteks *Microsoft Corp* parandatakse ja standardiseeritakse Microsoft *Corporationiks*. See püüab leida vastet Microsofti koostatud ettevõtte andmetest. Kui leitakse vaste, rikastame ettevõtte profiili meie koostatud ettevõtte andmetest saadud teabega, sealhulgas ettevõtte nimest.
+Meie mudel läbib kaheastmelise protsessi ettevõtte profiili parandamiseks. Esiteks normaliseerib see ettevõtte nime. Näiteks *Microsoft Corp* parandatakse ja standardiseeritakse Microsoft *Corporationile*. See püüab leida vastet Microsofti koostatud ettevõtte andmetest. Kui leitakse vaste, rikastame ettevõtte profiili teabega, mis on saadud meie ettevõtte kogutud andmetest, sealhulgas ettevõtte nimest.
 
 
 ### <a name="example"></a>Näide
 
-Teie ettevõtte teave ei pruugi järgida standardvormingut ja sisaldada õigekirjavigu. Mudel proovib neid probleeme lahendada ja luua järjepidevat teavet.
+Teie ettevõtte teave ei pruugi järgida standardiseeritud vormingut ja sisaldada õigekirjavigu. Mudel proovib neid probleeme lahendada ja luua järjepidevat teavet.
 
 ```Input
 Microsft
@@ -46,28 +48,28 @@ Microsft
 
 ## <a name="limitations"></a>Piirangud
 
-Täiustatud andmetega on mõned piirangud. Mudel ei toeta allolevas loendis olevaid üksusi.
+Täiustatud andmetel on mõned piirangud. Allolevas loendis olevaid üksusi mudel ei toeta.
 
-1.  Kinnitage ettevõtte identiteet. Me ei kontrolli, kas sisend on olemasolev organisatsioon või kas ettevõte kasutab väljundit oma standardnimena.
-2.  See hõlmab ettevõtteid kogu maailmas. Microsofti kogutud ettevõtte andmed on globaalsed, kuid pakuvad kõige rohkem katvust Austraalias, Kanadas, Ühendkuningriigis ja Ameerika Ühendriikides.
-3.  Ettevõtte aadresside standardimine globaalselt. Praegu toetame aadresside standardimist nendes riikides või piirkondades: Austraalias, Kanadas, Prantsusmaal, Saksamaal, Itaalias, Jaapanis, Ühendkuningriigis ja Ameerika Ühendriikides.
+1.  Kinnitage ettevõtte isik. Me ei kontrolli, kas sisend on olemasolev organisatsioon või et ettevõte kasutab väljundit oma standardnimena.
+2.  Hõlmab põhjalikult ettevõtteid kogu maailmas. Microsofti kogutud ettevõtte andmed on ülemaailmse katvusega, kuid pakuvad kõige rohkem katvust Austraalias, Kanadas, Ühendkuningriigis ja Ameerika Ühendriikides.
+3.  Standardige ettevõtte aadressid kogu maailmas. Praegu toetame aadresside standardimist nendes riikides või piirkondades: Austraalias, Kanadas, Prantsusmaal, Saksamaal, Itaalias, Jaapanis, Ühendkuningriigis ja Ameerika Ühendriikides.
 4.  Tagada andmete täpsus või värskus. Kuna äriteave muutub sageli, ei saa me tagada, et esitatud täiustatud ettevõtte andmed on alati täpsed või ajakohased.
 
 ## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 
 1. Avage **Andmed** > **Rikastamine**.
 
-1. Valige Paanil **Täiustatud** ettevõtte andmepaan **suvand Rikasta minu andmeid**.
+1. Valige **Täiustatud ettevõtte andmepaanil** Täiustatud ettevõtte andmete **suvand Rikasta minu andmeid**.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Rikastamisplaat ettevõtte andmete rikastamiskeskuses.":::
 
 1. Valige **Kliendi andmekogum** ja klõpsake olemit, mis sisaldab aadresse, mida soovite rikastada. Saate valida olemi *Klient*, et rikastada aadresse kõigis oma kliendiprofiilides, või valida segmendi olemi aadresside rikastamiseks ainult selles segmendis sisalduvates kliendiprofiilides.
 
-1. Valige, millist tüüpi välju teie ettevõtte profiilidest tuleks kasutada Microsofti koostatud ettevõtte andmetega vastavusse miseks. See valik mõjutab kaardistamisvälju, millele teil on järgmises etapis juurdepääs.
+1. Valige, millist tüüpi välju tuleks ettevõtte profiilidest kasutada Microsofti koostatud ettevõtte andmetega vastavusse viimiseks. See valik mõjutab kaardistamisvälju, millele teil on järgmises etapis juurdepääs.
 
-1.  Vastendage ettevõtte väljad oma ühendatud kliendiolemist. Mida rohkem põhiidentifikaatoreid ja välju vastendate, seda suurem on tõenäosus, et mängumäär on suurem.
+1.  Vastendage ettevõtte väljad oma ühtse kliendiolemi kaudu. Mida rohkem võtmeidentifikaatoreid ja välju vastendate, seda suurem on tõenäosus, et mängumäär on suurem.
 
-    :::image type="content" source="media/enhanced-company-data-mapping.png" alt-text="Andmete kaardistamise etapp ettevõtte rikastamise konfigureerimisel.":::
+    :::image type="content" source="media/enhanced-company-data-mapping.png" alt-text="Andmete vastendamise etapp ettevõtte rikastamise konfigureerimisel.":::
 
 1. Valige **Edasi**, et lõpetada väljade kaardistamine.
 
@@ -81,17 +83,17 @@ Rikastamistoimingu käivitamiseks valige käsuribalt suvand **Käivita**. Samuti
 
 Kui rikastamistoiming on tehtud, saate värskelt rikastatud klientide profiile üle vaadata suvandi **Minu rikastamised** alt. Peale selle näete ka viimase värskenduse aega ja rikastatud profiilide arvu.
 
-Rikastatud andmete näidist näete paanil **Rikastatud kliendid** eelvaates. Valige **Vaata lisaks** ja vali **vahekaart Andmed**, et pääseda juurde iga rikastatud profiili üksikasjalikule vaatele.
+Rikastatud andmete näidist näete paanil **Rikastatud kliendid** eelvaatepaanil. Valige **Kuva rohkem** ja valige **vahekaart Andmed**, et pääseda juurde iga rikastatud profiili üksikasjalikule vaatele.
 
-### <a name="overview-card"></a>Ülevaate kaart
+### <a name="overview-card"></a>Ülevaatekaart
 
-Ülevaatekaardil kuvatakse üksikasjad rikastamise katvuse kohta. 
+Ülevaatekaardil kuvatakse andmed rikastamise katvuse kohta. 
 
-* **Töödeldud ja muudetud** ettevõtted: edukalt rikastatud kliendiettevõtete profiilide arv.
+* **Ettevõtted, mida töödeldi ja muudeti**: edukalt rikastatud kliendiettevõtte profiilide arv.
 
-* **Töödeldud ja muutmata** ettevõtted: kliendiettevõtte profiilide arv, mis tuvastati, kuid mida ei muudetud. See juhtub tavaliselt siis, kui sisendandmed on kehtivad ja rikastamine ei saa neid parandada.
+* **Töödeldud ja muutmata** ettevõtted: kliendiettevõtte profiilide arv, mida on tuvastatud, kuid mida ei muudetud. See juhtub tavaliselt siis, kui sisendandmed on kehtivad ja rikastamine ei saa neid parandada.
 
-* **Ettevõtted, mida ei töödeldud ega muudetud**: kliendiettevõtte profiilide arv, mida ei tuvastatud. See juhtub tavaliselt sisendandmete puhul, mis on kehtetud või mida rikastamine ei toeta.
+* **Ettevõtted, mida pole töödeldud ja mida pole muudetud**: kliendiettevõtte profiilide arv, mida ei tuvastatud. See juhtub tavaliselt sisendandmete puhul, mis on kehtetud või rikastamine seda ei toeta.
 
 ## <a name="next-steps"></a>Järgmised toimingud
 

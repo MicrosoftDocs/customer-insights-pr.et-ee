@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 1cbbad9bfe559bcb15b23894fc7475507aae8add
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230377"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376275"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Kliendiprofiilide rikastamine ettevõtte HERE Technologies teenuste abil (eelversioon)
 
@@ -25,7 +25,7 @@ Ettevõtte HERE Technologies rikastamisteenuse konfigureerimiseks peavad olema t
 
 - Teil peab olema aktiivne ettevõtte HERE Technologies tellimus. Tellimuseks saate [registreeruda siin](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) või [kontakteeruda ettevõttega HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) otse. [Lisateave ettevõtte HERE Technologies asukohapõhise rikastamise kohta.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- HERE [ühendus](connections.md) on saadaval *või* teil on [administraatori](permissions.md#administrator) õigused ja HERE Technologies API võti.
+- HERE [ühendus](connections.md) on saadaval *või* teil on [administraatori](permissions.md#admin) õigused ja HERE Technologies API võti.
 
 ## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 

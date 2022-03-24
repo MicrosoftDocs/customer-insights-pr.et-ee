@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355012"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455833"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Kasutage segmente rakendusega Dynamics 365 Sales (eelversioon)
 
@@ -26,12 +26,12 @@ Kasutage kliendiandmeid turundusloendite loomiseks, töövoogude järeltegevuste
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Eksport Dynamics 365 Salesi on piiratud 100 000 liikmega segmendi kohta.
-- Segmendi eksport Dynamics 365 müügile võib võtta kuni 3 tundi. 
+- Eksport Dynamics 365 Salesisse on piiratud 100 000 liikmega segmendi kohta.
+- Segmendi eksport Rakendusse Dynamics 365 Sales võib võtta kuni 3 tundi. 
 
 ## <a name="prerequisite-for-connection"></a>Ühenduse eeltingimus
 
-1. Enne segmendi eksportimist Customer Insightsist Salesi, peavad kontaktikirjed olema olemas rakenduses Dynamics 365 Sales. Lugege lisateavet selle kohta, kuidas valmendada kontakte [Dynamics 365 Salesis Microsoft Dataversei abil](connect-power-query.md).
+1. Enne segmendi eksportimist Customer Insightsist Salesi, peavad kontaktikirjed olema olemas rakenduses Dynamics 365 Sales. Lugege lisateavet selle kohta, kuidas dynamics 365 Salesi [kontakte rakenduses alla neelata Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > Segmentide eksportimine sihtrühmaülevaadetest Salesi ei loo uusi kontaktikirjeid Salesi eksemplaris. Salesi kontaktikirjed peavad olema valmendatud sihtrühmaülevaadetes ja neid tuleb kasutada andmeallikana. Need tuleb lisada ka ühendatud kliendi olemisse, et vastendada kliendi ID-d ja kontakti ID-deks, enne kui segmente saab eksportida.

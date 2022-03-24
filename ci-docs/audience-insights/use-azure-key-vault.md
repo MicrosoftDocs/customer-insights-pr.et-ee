@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355886"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376503"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Tooge oma Azure võtmehoidla (eelversioon)
 
@@ -31,7 +31,7 @@ Sihtrühma ülevaadete võtmehoidla konfigureerimiseks peavad olema täidetud j�
 
 - Teil peab olema aktiivne Azure tellimus.
 
-- Teil on [Administraatori](permissions.md#administrator) roll publiku ülevaadetes. Lisateave [kasutajaõiguste kohta sihtrühma ülevaadetes](permissions.md#assign-roles-and-permissions).
+- Teil on [Administraatori](permissions.md#admin) roll publiku ülevaadetes. Lisateave [kasutajaõiguste kohta sihtrühma ülevaadetes](permissions.md#assign-roles-and-permissions).
 
 - Teil on võtmehoidlas või ressursirühmas, kuhu võtmehoidla kuulub, [Kaastöötaja](/azure/role-based-access-control/built-in-roles#contributor) ja [Kasutaja juurdepääsu administraatori](/azure/role-based-access-control/built-in-roles#user-access-administrator) rollid. Lisateabe jaoks minge [Azure'i rollimäärangute lisamine või eemaldamine Azure portaalist](/azure/role-based-access-control/role-assignments-portal). Kui teil pole võtmehoidlas kasutajajuurdepääsu administraatori rolli, peate Azure'i teenuse subjekti jaoks eraldi seadistama rollipõhised Dynamics 365 Customer Insights juurdepääsu õigused. Järgige samme, et [kasutada Azure'i teenuse printsipaali](connect-service-principal.md) lingitava võtmehoidla jaoks.
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 18cc32a169e79794d2d3203d462620ab41efaafe
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229026"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455947"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps’i konnektor (eelvaade)
 
@@ -38,6 +38,8 @@ Pärast Customer Insightsi andmeühendusena lisamist saate Power Appsis valida j
 ### <a name="retrievable-entities"></a>Toodavad olemid
 
 Power Apps konnektori kaudu saate tuua olemid **Klient**, **UnifiedActivity**, **Segmendid** ja **ContactProfile**. ContactProfile on saadaval ainult ärikontode sihtrühma ülevaadete eksemplarides. Teised olemid on näidatud, kuna aluseks olevad konnektorid toetavad neid läbi Power Automate’i päästikute.
+
+Saate teha maksimaalselt 100 kõnet 60 sekundi jooksul. API lõpp-punkti saate helistada mitu korda, kasutades parameetrit $skip. [Lugege lisateavet parameetri $skip kohta](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Delegeerimine
 

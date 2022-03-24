@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229959"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376687"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Kliendiprofiilide rikastamine demograafiaga Experian (eelversioon)
 
@@ -25,7 +25,7 @@ Experian konfigureerimiseks peavad olema täidetud järgmised eeltingimused:
 
 - Teil peab olema aktiivne rakenduse Experian kordustellimus. Kordustellimuse saamiseks [võtke Experian](https://www.experian.com/marketing-services/contact) otse ühendust. [Lugege lisateavet Experian andmerikastamine](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Administraator on Experian ühenduse juba konfigureerinud *või* teil on [administraatori](permissions.md#administrator) õigused. Teil on vaja ka kasutaja ID-d, osapoole ID-d ja mudelinumbrit SSH-toega turvalise transpordi (ST) konto jaoks, mille lõi teile Experian.
+- Administraator on Experian ühenduse juba konfigureerinud *või* teil on [administraatori](permissions.md#admin) õigused. Teil on vaja ka kasutaja ID-d, osapoole ID-d ja mudelinumbrit SSH-toega turvalise transpordi (ST) konto jaoks, mille lõi teile Experian.
 
 ## <a name="supported-countriesregions"></a>Toetatud riigid/piirkonnad
 

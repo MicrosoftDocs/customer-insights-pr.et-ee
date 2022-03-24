@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232653"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376457"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Mis on uut Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioonis?
-
-
 
 Meil on hea meel teatada uusimatest värskendustest. Selles artiklis võetakse kokku avaliku eelversiooni funktsioonid, üldise kättesaadavuse täiustused ja funktsiooni värskendused. Pikaajaliste funktsiooni plaane vaadake teemast [Dynamics 365 ja Power Platformi väljaandeplaanid](/dynamics365/release-plans/).
 
@@ -27,105 +25,161 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
 
+## <a name="february-2022-updates"></a>2022. aasta veebruari värskendused
+
+2022. aasta veebruari värskendused sisaldavad uusi funktsioone, jõudluse uuendamist ja veaparandusi.
+
+### <a name="general-availability-for-prediction-models"></a>Prognoos mudelite üldine kättesaadavus
+
+Out-of-the-box prognoos mudelid, sealhulgas **tellimuse churn**, **tehingu churn** ja **kliendi eluaegne väärtus (CLV),** muutuvad customer Insightsi osana üldiselt kättesaadavaks. 
+
+Lisateavet vt teemast [Predictions overview](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Uus andmeallikas: integratsioon Azure Synapse Analytics (eelvaade)
+
+Azure Synapse Analytics on ettevõtte analüüsiteenus, mis kiirendab aega andmeladude ja suurandmete süsteemide ülevaateks.
+
+Kui teie asutus juba kasutab andmejärvede andmebaasides saadaolevate Azure Synapse Analytics analüüsivõimaluste täiustatud analüüsivõimalusi ja salvestab selle talletamiseks, saate need andmed hõlpsalt Customer Insightsi alla neelata. Lisateavet leiate teemast [Andmeallikas ühendamine Azure Synapse (eelvaade)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>LiveRampi rikastamine (eelvaade)
+
+LiveRamp pakub deterministlikku võrguühenduseta identiteedilahendust ja kliendiandmete konsolideerimist. Saate vastendada kliendiandmetes olevad isikuidentifikaatorid AbiliTeci identiteedigraafikuga ja saada AbiliTeci ID-d. Seejärel saate neid ID-sid kasutada oma kliendiandmete paremaks ühendamiseks.
+
+Lisateavet leiate teemast [Kliendiprofiilide rikastamine LiveRampi identiteediandmetega (Eelvaade)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Andmeallikate rikastamine (Eelvaade)
+
+Kasutage andmeid sellistest allikatest nagu Microsoft ja teised partnerid, et rikastada oma kliendiandmeid enne andmete ühendamist. Andmeallikas rikastamine aitab luua suuremat andmete täielikkust ja kvaliteeti, mis aitab pärast andmete ühendamist saavutada paremaid tulemusi.
+
+Lisateavet vt teemast [Enrichment for Data sources (Preview)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Keskkonna omaniku muutmine
+
+Kuigi customer Insightsis võivad administraatoriõigused olla mitmel kasutajal, on keskkonna omanik ainult üks kasutaja. Täiustatud kogemus võimaldab teil muuta keskkonna omanikke ja nõuda omandiõigust, kui endine omanik organisatsioonist lahkub. 
+
+Lisateavet leiate teemast [Keskkonna](manage-environments.md#change-the-owner-of-an-environment) omaniku muutmine.
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Andmete ettevalmistamise protsess loetleb rikutud kirjete korruptsioonipõhjuse
+
+Andmete ettevalmistamise protsess näitab nüüd korruptsiooni põhjust kõigi väljade puhul, mille puhul on rikutud andmed individuaalsel kirjetasemel, et neid oleks lihtne tuvastada. 
+
+Lisateavet vt teemast [Corrupted andmeallikad](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Kaasamisülevaadete võimaluse aruandlusfunktsioonide eelvaate lõpp
+
+Kaasamise Dynamics 365 Customer Insights ülevaatevõime eelvaade lõppes 15. veebruaril 2022.  
+See muudatus tähendab, et Customer Insightsi prooviversioon ei sisalda enam võimalust luua lehtreid ega muid aruandlusfunktsioone.
+
+Kutsume teid üles uurima ja hindama Paljusid teisi Customer [Insightsi](https://dynamics.microsoft.com/ai/customer-insights/), Microsofti kliendiandmete platvormi (CDP) funktsioone.    
+ 
+Üleminekuperioodil on olemasolevatel eelvaates osalejatel endiselt juurdepääs mõnele eelvaatefunktsioonile ja funktsioonile.
+
+- Hankige kood veebisaidi või mobiilirakenduse jaoks vahendite tagamiseks 
+- Sündmuste ja sündmuse atribuutide kuvamine 
+- Täiustage allaneelatud ja rafineeritud sündmustega ühtseid profiile, et saada kasu nende kliendiandmete täielikust väärtusest
+  
+Üleminekuperioodil voogesitatakse jäädvustatud sündmused endiselt ühendatud Andmejärve. Kui see funktsioon on välja lülitatud, lõpetatakse andmete jagamine kaasamise ülevaadete ja vaatajaskonna ülevaadete vahel ning ühendatud salvestusruumile ei saadeta uusi sündmusi.
+Kui teil on küsimusi võimaluste eelvaate lõppemise kohta, võtke otse ühendust oma Microsofti konto meeskonnaga. Teie konto meeskond hoiab teid kursis tulevaste käivitamistega. 
+
 ## <a name="january-2022-updates"></a>2022. a jaanuari värskendus
 
 2022. aasta jaanuari värskendused sisaldavad uusi funktsioone, jõudluse uuendamist ja veaparandusi.
 
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Kliendi tagasiside tundeanalüüs
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Teie kliendi tagasiside sentimentaalne analüüs
 
-Customer Insights pakub uut tehisintellektil põhinevat funktsiooni, et sünteesida klientide tundeid ja tuvastada konkreetsed äriaspektid sihipäraste täiustuste võimalustena. Analüüsides oma klientide kirjalikku tagasisidet, saate täpseid teadmisi madalate kuludega. Sentimenti analüüs, mis põhineb loomuliku keele töötlemise (NLP) mudelitel, mis genereerivad iga kliendi ID kohta kaks tuletatud ülevaadet. Sentiment skoor (-5 kuni 5) ja nimekiri kohaldatavatest äriaspektidest. 
+Customer Insights pakub uut tehisintellektil põhinevat funktsiooni, et sünteesida klientide tundeid ja tuvastada konkreetseid äriaspekte kui sihipärase täiustamise võimalusi. Analüüsides oma klientide kirjalikku tagasisidet, saate täpse ülevaate odavalt. Sentimenti analüüs, mis põhineb loomuliku keele töötlemise (NLP) mudelitel, mis genereerivad iga kliendi ID jaoks kaks tuletatud ülevaadet. Sentiment skoor (–5 kuni 5) ja nimekiri kohaldatavatest äriaspektidest. 
 
-Lisateavet vt teemast [Analyze sentiment in customer feedback (Preview)](sentiment-analysis.md).
+Lisateavet leiate teemast [Tunnete analüüsimine klientide tagasisides (Eelvaade)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>2021. aasta detsembrikuu värskendused
 
 2021. aasta detsembri värskendused sisaldavad uusi funktsioone, jõudluse uuendamist ja veaparandusi.
 
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Customer Insightsi logide edastamine Azure Monitori
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Customer Insightsi logide edasisaatmine Azure Monitori
 
-Customer Insights pakub otsest integreerimist Azure Monitoriga. See funktsioon hõlmab auditiüritusi ja tegevusüritusi. Azure Monitori ressursilogid võimaldavad teil jälgida ja saata logisid Azure Storage'i, Azure Log Analyticsisse või voogesitada neid Azure Event Hubsisse.
+Customer Insights pakub otsest integratsiooni Azure Monitoriga. See funktsioon hõlmab auditiüritusi ja tegevusüritusi. Azure Monitori ressursilogid võimaldavad teil jälgida ja saata logisid Azure Storageisse, Azure Log Analyticsisse või voogesitada neid Azure Event Hubsi.
 
-Lisateavet vt teemast [Log forwarding with Dynamics 365 Customer Insights Azure Monitor (Preview)](diagnostics.md).
+Lisateavet leiate teemast [Azure Monitoriga (Preview)Dynamics 365 Customer Insights sisselogimine](diagnostics.md).
 
 ### <a name="enrich-customer-profiles-with-engagement-data"></a>Kliendiprofiilide rikastamine kaasamisandmetega
 
-Kasutage andmeid Microsoft Office 365, et rikastada oma kliendikonto profiile rakenduste kaudu Office 365 seotud töövõttude kohta. Töövõtuandmed koosnevad e-posti ja koosolekutegevusest, mis koondatakse konto tasandile. Näiteks ettevõttekontolt saadetud e-kirjade arv või kontoga kohtumiste arv. Üksikute kasutajate kohta andmeid ei jagata. See rikastamine on saadaval järgmistes piirkondades: Ühendkuningriik, Euroopa, Põhja-Ameerika.
+Kasutage andmeid alates Microsoft Office 365, et rikastada oma kliendikonto profiile rakenduste kaudu Office 365 seotud töövõttude kohta. Kaasamisandmed koosnevad e-posti ja koosolekutegevusest, mis koondatakse konto tasemele. Näiteks ärikontolt saadetud e-kirjade arv või kontoga seotud kohtumiste arv. Andmeid üksikute kasutajate kohta ei jagata. See rikastamine on saadaval järgmistes piirkondades: Ühendkuningriigis, Euroopas, Põhja-Ameerikas.
 
-Lisateavet vt teemast [Rikasta kliendiprofiile kaasamisandmetega (eelvaade)](enrichment-office.md).
+Lisateavet leiate teemast [Kliendiprofiilide rikastamine kaasamisandmetega (eelvaade)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Täpsemad andmete ühendamise funktsioonid
 
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Konflikti lahendamise poliitikate lubamine üksikul atribuuditasemel
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Konfliktilahenduspoliitikate lubamine üksikul atribuuditasemel
 
-Kliendikirjete lahutamisel olemis ei pruugi te soovida võitjana täielikku kirjet valida. Nüüd lubame teil ühendada parimad väljad erinevatest kirjetest, mis põhinevad iga atribuudi reeglitel. Näiteks saate säilitada kõige uuema e-kirja JA kõige täielikuma aadressi erinevatest kirjetest. 
+Kui pühendate olemis kliendikirjeid, ei pruugi te soovida valida võitjana täielikku kirjet. Nüüd lubame teil ühendada erinevate kirjete parimad väljad, mis põhinevad iga atribuudi reeglitel. Näiteks saate valida, kas jätta kõige värskem e-kiri JA kõige täielikum aadress erinevatest kirjetest. 
 
-Nüüd saate määratleda üksikute atribuutide eraldi koostereeglid, eraldades ja ühendades kirjeid ühes olemis. Varem lubame teil valida ainult ühe koostereegli (säilitades kirjeid recency andmete täielikkuse alusel) ja see reegel rakendati kirje tasemel kõigile atribuutidele. See pole ideaalne, kui mõned andmed, mida soovite säilitada, on leitud kirjest A ja muudest B-kirjest leitud headest andmetest.
+Nüüd saate määratleda üksikute atribuutide jaoks eraldi koostereeglid, pühendades ja ühendades kirjeid ühes olemis. Varem lubasime teil valida ainult ühe koostereegli (arvestuse pidamine müügivõlgade andmete täielikkuse põhjal) ja see reegel rakendati kirje tasemel kõigile atribuutidele. See ei ole ideaalne, kui mõned andmed, mida soovite säilitada, on kirjes A ja muud head andmed, mis on leitud kirjest B.
 
 Lisateavet leiate teemast [Duplikaatide eemaldamise määratlemine vastendamise olemis](match-entities.md#define-deduplication-on-a-match-entity).
 
-#### <a name="custom-rules-for-matching"></a>Kohandatud reeglid sobitamiseks
+#### <a name="custom-rules-for-matching"></a>Sobitamise kohandatud reeglid
 
-On aegu, mil peate määrama erandi üldistest reeglitest, et kirjeid mitte sobitada. See võib juhtuda, kui mitu inimest jagavad piisavalt teavet, et süsteem sobiks neile ühe isikuna. Näiteks sama perekonnanimi kaksikud, kes elavad samas linnas ja jagavad sünnikuupäeva.
+On aegu, mil peate määrama erandi üldreeglitest, et kirjeid mitte sobitada. See võib juhtuda, kui mitu inimest jagavad piisavalt teavet, et süsteem vastaks neile kui ühele isikule. Näiteks sama perekonnanimi kaksikud, kes elavad samas linnas ja jagavad sünnikuupäeva.
 
-Erandid tagavad, et andmete ebaõiget ühendamist saab käsitleda ühtlustamiseeskirjades. Reeglile saate lisada mitu erandit.
+Erandid tagavad, et andmete ühendamise eeskirjades saab käsitleda ebaõiget andmete ühendamist. Reeglile saate lisada mitu erandit.
 
-Lisateavet leiate teemast [Reegli](match-entities.md#add-exceptions-to-a-rule) erandite lisamine.
+Lisateavet leiate teemast [Reegli erandite lisamine](match-entities.md#add-exceptions-to-a-rule).
 
 #### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Täiendavate konfliktide lahendamise poliitikate pakkumine ja atribuutide rühmitamise lubamine
 
-See funktsioon võimaldab teil käsitleda väljade rühma ühe ühikuna. Näiteks kui meie kirjetes on väljad Aadressid1, Aadress2, Linn, Osariik ja Zip. Tõenäoliselt ei soovi me ühineda teise kirje aadressiga2, arvates, et see muudaks meie andmed täielikumaks.
+See funktsioon võimaldab teil käsitleda väljade rühma ühe üksusena. Näiteks kui meie kirjed sisaldavad välju Address1, Address2, City, State ja Zip. Tõenäoliselt ei soovi me ühineda teise kirje aadressiga2, arvates, et see muudaks meie andmed täielikumaks.
 
-Nüüd saate ühendada seostuvate väljade rühma ja rakendada rühmale ühe koostepoliitika. 
+Nüüd saate kombineerida seostuvate väljade rühma ja rakendada rühmale ühe koostepoliitika. 
 
-Lisateavet leiate teemast [Väljade](merge-entities.md#combine-a-group-of-fields) rühma ühendamine.
+Lisateavet leiate teemast [Väljarühma ühendamine](merge-entities.md#combine-a-group-of-fields).
 
 
 ## <a name="november-2021-updates"></a>2021. aasta novembri värskendused
 
 2021. aasta novembri värskendused sisaldavad uusi funktsioone, jõudluse uuendamist ja veaparandusi.
 
-### <a name="segment-membership-now-available-in-dataverse"></a>Segmendi liikmelisus on nüüd saadaval Dataverse
+### <a name="segment-membership-now-available-in-dataverse"></a>Segmendi liikmelisus on nüüd saadaval rakenduses Dataverse
 
-Kliendiprofiilide segmendi liikmelisuse teave on nüüd saadaval Dataverse koos kliendiprofiilide ja ülevaadetega. Dynamics 365 tegevusrakendused ja mudelipõhised rakendused saavad neid andmeid kasutada, et otsida konkreetse kliendi segmendi liikmelisuse üksikasju.
+Segmendi liikmelisuse teave kliendiprofiilide kohta on nüüd saadaval Dataverse koos kliendiprofiilide ja ülevaadetega. Dynamics 365 tegevusrakendused ja mudelipõhised rakendused saavad neid andmeid kasutada konkreetse kliendi segmendi liikmelisuse üksikasjade otsimiseks.
 
 ### <a name="activities-support-contact-level-details-for-business-accounts"></a>Tegevused toetavad ärikontode kontakttaseme üksikasju
 
-Nüüd saate konfigureerida, kuvada ja filtreerida oma ettevõtte ettevõtte tegevuse ajaskaalal kontaktide tegevusi, et paremini mõista, millised kontokontaktid konkreetsetes tegevustes osalesid.
+Nüüd saate konfigureerida, kuvada ja filtreerida kontaktide tegevusi oma ärikonto tegevuse ajaskaaladel, et paremini mõista, millised kontokontaktid konkreetsetes tegevustes osalesid.
 
 ## <a name="october-2021-updates"></a>2021. aasta oktoobri värskendused
 
-2021. aasta oktoobris sisaldavad värskendused uusi funktsioone, jõudluse uuendamist ja veaparandusi.
+2021. aasta oktoobri värskendused sisaldavad uusi funktsioone, jõudluse uuendamist ja veaparandusi.
 
-### <a name="b-to-b"></a>B-B-le
+### <a name="b-to-b"></a>B-B
 
-Alates 2021. aasta oktoobrist saate customer Insightsis töötada ärikontode ja nendega seotud kontaktidega. Varem oli rakendus enamasti kohandatud üksiktarbijatele. B-B-stsenaariumide toetamiseks värskendati mitmeid funktsioonialasid, et toetada uut keskkonnatüüpi B-B-stsenaariume. Toetatud B-to-B funktsioonide kohta leiate ülevaate teemast [Ärikontodega töötamine vaatajaskonna ülevaates](work-with-business-accounts.md).
+Alates 2021. aasta oktoobrist saate Customer Insightsis töötada ärikontode ja nendega seotud kontaktidega. Varem oli rakendus enamasti kohandatud üksikutele tarbijatele. Uuendati mitmeid funktsioonivaldkondi, et toetada B-B stsenaariume lisaks uuele keskkonnatüübile. Toetatud B-B funktsioonide kohta leiate ülevaate teemast [Ärikontodega töötamine vaatajaskonna ülevaates](work-with-business-accounts.md).
 
-Järgmistes jaotistes tuuakse välja mõned peamised valdkonnad, mida kohandati ettevõtete kontode ja üksiktarbijate toetamiseks.
+Järgmistes jaotistes tuuakse esile mõned peamised valdkonnad, mida kohandati ettevõtluskontode ja üksiktarbijate toetamiseks.
 
 #### <a name="export-segments-based-on-business-accounts"></a>Ärikontodel põhinevate segmentide eksportimine
 
-Kogu segmendi eksport vaatajaskonna ülevaates on saadaval ärikontode kontekstis. Enamik segmendieksporti nõuab, et aluseks olevates segmentides prognoositud [täiendav konfiguratsioon ja](segment-builder.md#create-a-new-segment) kontaktteave kehtiksid ärikontode jaoks. Lisateavet vt teemast [Export segments](export-destinations.md#export-segments).
+Kogu segmendi eksport vaatajaskonna ülevaates on saadaval ärikontode kontekstis. Enamik segmendiekspordist nõuab täiendavat konfigureerimist ja [aluseks olevates segmentides prognoositud](segment-builder.md#create-a-new-segment) kontaktandmeid ärikontode puhul kehtivaks. Lisateavet vt [teemast Export segments](export-destinations.md#export-segments).
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>LinkedIn Adsi ekspordi kasutamine ärikontodega
 
-LinkedIn Adsi eksport on nüüd saadaval kontaktide ja ettevõtte sihtimiseks ärikontode kontekstis. Kui valite LinkedIni ekspordi põhifookuseks ettevõtte sihtimise, saate eksportida ärikontodele rajatud segmente ilma kontaktandmeid projitseerida. Lisateabe saamiseks minge LinkedIn Adsi ekspordi [ning kontaktide sihtimise](export-linkedin-ads.md) ja [ettevõtte sihtimise erinevuse kohta](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) käivate [dokumentide juurde](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+LinkedIn Adsi eksport on nüüd saadaval kontaktide ja ettevõtete sihtimiseks ärikontode kontekstis. Kui valite LinkedIni ekspordi põhifookuseks ettevõtte sihtimise, saate eksportida ärikontodele rajatud segmente, ilma et oleks vaja kontaktandmeid projitseerida. Lisateavet leiate dokumentidest LinkedIn Adsi ekspordi [ning kontaktide sihtimise](export-linkedin-ads.md) ja [ettevõtte sihtimise](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) erinevuse [kohta](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Ärikontodel ja nende hierarhial põhinevate meetmete loomine
 
-Mõõdu koostaja võimaldab teil luua ettevõttekontode ümber meetmeid ja kasutada valikuliselt hierarhiateavet. Hierarhiateavet kasutatakse mõõdu arvutamise arvestuse võtmiseks kontol ja kõigil selle seotud alamkontodel. Näiteks saate luua mõõdud, näiteks kogutulu iga nende hierarhia järgi tuvastatud ärikontode rühma jaoks. Lisateavet leiate teemast [Näitajate määratlemine ja haldamine](measures.md).
+Mõõtkoostur võimaldab teil luua ärikontode ümber meetmeid ja kasutada valikuliselt hierarhiateavet. Hierarhiateavet kasutatakse mõõtarvutuse ümberarvestamiseks konto ja kõigi sellega seotud alamkontode lõikes. Näiteks saate luua selliseid meetmeid nagu kogutulu iga ärikontode rühma jaoks, mis on nende hierarhia järgi tuvastatud. Lisateavet leiate teemast [Näitajate määratlemine ja haldamine](measures.md).
 
 #### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Segmentide loomine ärikontode ja nende hierarhia põhjal
 
-Segmendikoosturil on võimalik luua ärikontode segmente, mis valikuliselt sisaldavad segmendi iga ettevõtte kontaktandmeid. Kui teil on kontohierarhia seadistatud, saate segmendi loomisel kasutada kontohierarhia teavet. Lisateavet leiate teemast [Uue segmendi](segment-builder.md#create-a-new-segment) loomine.
+Segmendikoosturi võimaldab teil luua ärikontode segmente, mis sisaldavad soovi korral segmendi iga ettevõtte kontaktteavet. Kui teil on kontohierarhia häälestatud, saate segmendi loomisel kasutada kontohierarhia teavet. Lisateavet leiate teemast [Uue segmendi](segment-builder.md#create-a-new-segment) loomine.
 
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Säilitage oma ärikontod sügavate ülevaadete kohta nende churn-tendentsist
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Säilitage oma ettevõtte kontod sügavate ülevaadetega nende churn-tendentsist
 
-Kliendi churn prognoos mudel toetab nüüd ka ärikontosid. Saate hinnata mitte ainult konto, vaid ka konto ja toote või teenuse kategooria kombinatsiooni, mida nad teilt ostavad. See täiendus aitab teil mõista, kas konto lõpetab tõenäolisemalt teilt üldiselt ostmise või ainult teatud kaupade või teenuste kategooria jaoks. Selle AI-mudeli täiendavaks abistamiseks loetletakse ka põhjused, miks konto tõenäoliselt hakkab. Lisateavet vt teemast [Transaction churn prognoos (preview)](predict-transactional-churn.md).
+Kliendi churn prognoos mudel toetab nüüd ka ärikontosid. Saate hinnata churn'i riski mitte ainult konto, vaid ka konto ja toote või teenuse kategooria kombinatsiooni puhul, mida nad teilt ostavad. See täiendus aitab teil mõista, kas konto lõpetab tõenäolisemalt teilt ostmise üldiselt või ainult teatud kaupade või teenuste kategooria jaoks. Selle AI-mudeli täiendavaks kasutamiseks loetletakse selles ka põhjused, miks konto tõenäoliselt paisub. Lisateavet vt teemast [Transaction churn prognoos (preview)](predict-transactional-churn.md).
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Ärikonto kontaktide kuvamine kliendivaates
 
-Kui ärikontod on vastetatud seotud kontodega, kuvab rakendus Customer Insights need seotud kontaktid kliendi üksikasjade vaate osana. Lisateavet leiate teemast [Kliendiprofiilid](customer-profiles.md).
+Kui ärikontod vastendatakse seotud kontodega, kuvatakse rakenduses Customer Insights need seostuvad kontaktid kliendi üksikasjade vaate osana. Lisateavet leiate teemast [Kliendiprofiilid](customer-profiles.md).
 
 
 ## <a name="september-2021-updates"></a>2021. aasta septembri uuendused

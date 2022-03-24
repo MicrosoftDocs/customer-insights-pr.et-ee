@@ -1,7 +1,7 @@
 ---
 title: Kasutajaõiguste haldamine
 description: Lisateave õiguste ja kasutajarollide kohta.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355932"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376733"
 ---
 # <a name="user-permissions"></a>Kasutajaõigused
 
@@ -48,7 +48,7 @@ Rolle on kolme tüüpi.
 - Hallake konfiguratsiooni ja rikastage kliendiprofiile lehel **Rikastamine** (ainult esimese osapoole rikastamine).
 - Hallake ja looge ekspordid kaastöötajatega jagatud ühenduste põhjal. [Lisateave selle kohta, kuidas administraatorid lubavad kaastöötajatel kasutada ekspordi jaoks ühendust](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administraator
+## <a name="admin"></a>Haldus
 
 - Kõik kaasautorile saadaval õigused.
 - Muutke lehel **Süsteem** sätteid, sealhulgas süsteemiprotsesside töökeel ja värskendamise ajakavad.
@@ -60,6 +60,12 @@ Rolle on kolme tüüpi.
 - **Kliendikaardi lisandmooduli** paigaldamine ja kasutamine.
 - Lisage ja kasutage **Power Appsi konnektorit**.
 - Lubage [Customer Insightsi API-de](apis.md) kasutamine.
+- [Keskkonna omandiõiguse](manage-environments.md#change-the-owner-of-an-environment) määramine teisele administraatorile.
+
+## <a name="admin-owner"></a>Administraator (omanik)
+
+- Kõik administraatorile saadaolevad õigused.
+- [Keskkonna lähtestamine ja kustutamine](manage-environments.md#reset-an-existing-environment).
 
 ## <a name="assign-roles-and-permissions"></a>Rollide ja õiguste määramine
 
