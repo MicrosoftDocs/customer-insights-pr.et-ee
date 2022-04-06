@@ -1,7 +1,7 @@
 ---
 title: Segmendid publiku ülevaates
 description: Ülevaade segmentidest ning kuidas neid luua ja hallata.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355978"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508561"
 ---
 # <a name="segments-overview"></a>Segmentide ülevaade
 
@@ -68,7 +68,9 @@ Segmendi valimisel on saadaval järgmised tegevused.
 
 ## <a name="refresh-segments"></a>Segmentide värskendamine
 
-Saate kõiki segmente korraga värskendada, valides lehel **Segmendid** suvandi **Värskenda kõik** või saate ühte või mitut segmenti värskendada, kui valite need ja valite suvandite hulgast **Värskenda**. Teise võimalusena saate konfigureerida korduva värskendamise, valides **Administraator** > **Süsteem** > **Ajasta**.
+Saate kõiki segmente korraga värskendada, valides lehel **Segmendid** suvandi **Värskenda kõik** või saate ühte või mitut segmenti värskendada, kui valite need ja valite suvandite hulgast **Värskenda**. Teise võimalusena saate konfigureerida korduva värskendamise, valides **Administraator** > **Süsteem** > **Ajasta**. Korduva värskendamise konfigureerimisel kehtivad järgmised reeglid.
+- Kõik segmendid, mille tüüp **on Dünaamiline** või **Laienemine**, värskendatakse automaatselt määratud kadentsil. Kui värskendamine on lõppenud, näitab olek **,** kas segmendi värskendamisel oli probleeme. Viimati **värskendatud** kuvatakse viimase eduka värskendamise ajatempel. Kui ilmneb tõrge, valige tõrge, et näha üksikasju selle kohta, mis juhtus.
+- Segmente, mille tüüp **on Staatiline** *, ei* värskendata automaatselt. Viimati **värskendatud** kuvatakse ajatempel viimasest ajast, mil staatilisi segmente käsitsi käitati või värskendati.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

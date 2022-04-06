@@ -1,23 +1,23 @@
 ---
 title: Looge Customer Insights keskkondi
 description: Sammud litsentsitud kordustellimusega keskkondade loomiseks Dynamics 365 Customer Insights jaoks.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354090"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491908"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Looge sihtrühma ülevaates keskkond
 
@@ -30,7 +30,7 @@ Organisatsioonid saavad iga Customer Insights litsentsi jaoks luua *kaks* keskko
 
 ## <a name="create-a-new-environment"></a>Uue keskkonna loomine
 
-Pärast Customer Insightsi tellimislitsentsi ostmist saab rentniku Microsoft 365 üldadministraator meilisõnumi, mis kutsub neid üles keskkonda looma. Alustamiseks minge [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
+Pärast Customer Insightsi tellimuslitsentsi ostmist saab rentniku üldadministraator Microsoft 365 meilisõnumi, mis kutsub neid keskkonda looma. Alustamiseks minge [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
 
 Juhendav kogemus aitab teil koguda uue keskkonna jaoks vajalikku teavet. Keskkondade loomiseks ja haldamiseks on vaja [administraatori õigusi](permissions.md) sihtrühma ülevaadetes.
 
@@ -66,7 +66,7 @@ Salvestades andmed Azure Data Lake Storage-sse, nõustute, et andmed kantakse ü
 > Customer Insights toetab praegu järgmist:
 > - Allaneelatud olemid Power BI andmevoogudest, mis on talletatud Microsoft Dataverse hallatavasse Data Lake'i.  
 > - Azure Data Lake Storage kontod samast Azure'i piirkonnast, mille valisite keskkonna loomisel.
-> - Azure Data Lake Storage kontod, mis on Gen2 ja millel on *lubatud hierarhiline nimeruum*. Azure Data Lake Gen1 salvestusruumikontosid ei toetata.
+> - Azure Data Lake Storage kontod, mis on Gen2 ja mille hierarhiline nimeruum *on* lubatud. Azure Data Lake Gen1 salvestuskontosid ei toetata.
 
 Selle Azure Data Lake Storage suvandi puhul saate valida ressursipõhise ja kordustellimusel põhineva autentimise suvandi. Lisateavet leiate teemast [Azure Data Lake Storage kontoga ühenduse loomine Azure'i teenuse subjekti](connect-service-principal.md) abil. **Konteineri** nimi on `customerinsights` ja seda ei saa muuta.
 
@@ -78,19 +78,21 @@ Kui loote Customer Insights'i mitu keskkonda ja salvestate nendest keskkondadest
    
 **Microsoft Dataverse** etapp lubab teil Customer Insights'i oma Dataverse keskkonnaga ühendada.
 
-Pakkuda oma Microsoft Dataverse keskkonda andmete (profiilide ja ülevaadete) jagamiseks ärirakendustega, mis põhinevad rakendusel Dataverse( nt Dynamics 365 Marketing või mudelipõhised rakendused rakenduses )Power Apps. Jätke see väli tühjaks, kui teil pole oma Dataverse keskkonda ja me pakume teile ühte.
+Pakkuge oma Microsoft Dataverse keskkonda, et jagada andmeid (profiile ja ülevaateid) ärirakendustega, mis põhinevad rakendusel Dataverse(nt Dynamics 365 Marketing või mudelipõhised rakendused rakenduses )Power Apps. Jätke see väli tühjaks, kui teil pole oma Dataverse keskkonda ja me eraldame selle teile.
 
-Dataverse Keskkonnaga ühenduse loomine võimaldab teil [andmevoogude ja lüüside abil Power Platform ka asutusesisene andmeallikast](data-sources.md#add-data-from-on-premises-data-sources) andmeid sisse võtta. Keskkonnaga [ühenduse loomisega saate kasutada](predictions-overview.md?tabs=b2c#out-of-box-models) ka kastist väljas põhiseid prognoos mudeleid Dataverse.
+Dataverse Keskkonnaga ühenduse loomine võimaldab teil andmevoogude ja lüüside abil [alla neelata Power Platform andmeid ka asutusesisene andmeallikatest](data-sources.md#add-data-from-on-premises-data-sources). Keskkonnaga [ühenduse loomisega saate kasutada](predictions-overview.md?tabs=b2c#out-of-box-models) ka prognoos mudeleid Dataverse.
 
 > [!IMPORTANT]
-> Customer Insights ja Dataverse peab andmete jagamise lubamiseks olema samas piirkonnas.
+> 1. Customer Insights ja Dataverse andmete jagamise lubamiseks peab see olema samas piirkonnas.
+> 1. Teil peab olema keskkonnas üldadministraatori Dataverse roll. Kontrollige, kas see [Dataverse keskkond on seotud](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) teatud turberühmadega, ja veenduge, et teid lisatakse nendesse turberühmadesse.
+> 1. Ükski olemasolev Customer Insightsi keskkond pole selle Dataverse keskkonnaga juba seotud. Siit saate teada, [kuidas olemasolevat ühendust keskkonnaga Dataverse](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment) eemaldada.
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="andmete jagamine Microsoft Dataverse automaatse uute eksemplaride jaoks.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="andmete jagamine Microsoft Dataverse automaatselt lubatud uute netoeksemplari puhul.":::
 
-> [!NOTE]
-> Customer Insights ei toeta järgmisi andmete jagamise stsenaariume:
-> - Kui salvestate kõik andmed enda Azure Data Lake Storage abil, siis ei saa te lubada andmete jagamist Dataverse hallatava Data Lake-iga.
-> - Kui lubate andmete ühiskasutuse Dataverse-ga, ei saa te [olemis luua ennustatud ega puuduvad väärtused](predictions.md).
+Lisateavet andmete ühiskasutuse lubamise kohta leiate teemast Ühenduse loomine rakendusega Microsoft Dataverse Azure Data Lake Storage[.Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse)
+
+Customer Insights ei toeta järgmisi andmete jagamise stsenaariume:
+- Kui lubate andmete ühiskasutuse Dataverse-ga, ei saa te [olemis luua ennustatud ega puuduvad väärtused](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Neljas etapp: Viige sätted lõpule
 

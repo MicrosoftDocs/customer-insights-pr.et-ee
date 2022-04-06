@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376411"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523663"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Edasisaatmine Dynamics 365 Customer Insights Azure Monitoriga (Preview)
 
@@ -230,7 +230,7 @@ Töövoosündmustel on järgmised atribuudid.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Ja      | Ja  | Alati `WorkflowEvent`, märkides sündmuse töövoosündmuseks.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Ja      | Ja  | Töövoo käivitamise ID. Kõigil töövoo käivitamise töövoo- ja tööülesandesündmustel on sama `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Ja      | Ja  | Toimingu ID, vt [toimingu tüübid].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Ja      | Ja  | Toimingu ID vt teemat [Toimingutüübid](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Ja      | No   | Ainult töövoog. Töövoo käivitatavate ülesannete arv.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Ja      | No   | Valikuline. Ainult töövoo sündmused. Töövoo Azure Active Directory [käivitanud kasutaja](/azure/marketplace/find-tenant-object-id#find-user-object-id) objectId vt ka `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Ja      | No   | `full` või `incremental` värskendada.                                                                                                                                                                                                                            |

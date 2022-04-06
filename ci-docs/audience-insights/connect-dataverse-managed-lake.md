@@ -1,7 +1,7 @@
 ---
 title: Tabelitega ühenduse loomine Microsoft Dataverse -is
 description: Andmete importimine Microsoft Dataverse'i hallatavast andmejärvest.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,25 +11,24 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354136"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464061"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Andmetega ühendamine Microsoft Dataverse’i hallatavas andmejärves
 
-
-
-See artikkel annab teavet selle kohta, kuidas Dataverse kasutajad saavad hallatava järve analüütiliste üksustega Microsoft Dataverse kiiresti ühendust võtta. 
+Selles artiklis antakse teavet selle kohta, kuidas Dataverse kasutajad saavad hallatava järve analüütiliste üksustega Microsoft Dataverse kiiresti ühenduse luua. 
 
 > [!NOTE]
-> Hallatavas järves Dataverse saadaolevate olemite loendi vaatamiseks peate olema organisatsiooni administraator.
+> Hallatavas järves saadaolevate olemite loendi jätkamiseks ja vaatamiseks peate olema organisatsiooni administraator Dataverse.
 
 ## <a name="important-considerations"></a>Olulised kaalutlused
 
-Võrguteenustes nagu Azure Data Lake Storage talletatavaid andmeid saab talletada muus asukohas kui see, kus andmeid rakenduses Dynamics 365 Customer Insights töödeldakse või talletatakse.Veebiteenustes talletatud andmete importimisel või nendega ühenduse loomisel nõustute, et andmeid saab edastada ja talletada.Dynamics 365 Customer Insights  [Lisateavet leiate Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
+1. Võrguteenustes nagu Azure Data Lake Storage talletatavaid andmeid saab talletada muus asukohas kui see, kus andmeid rakenduses Dynamics 365 Customer Insights töödeldakse või talletatakse.Veebiteenustes talletatavate andmete importimisel või nendega ühenduse loomisel nõustute, et andmeid saab edastada ja salvestada rakendusega Dynamics 365 Customer Insights. [Lisateavet leiate Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
+2. Nähtavad on ainult Dataverse olemid, mille [muudatuste jälgimine](/power-platform/admin/enable-change-tracking-control-data-synchronization) on lubatud. Neid olemeid saab eksportida hallatavasse Dataverse andmejärve ja kasutada Customer Insightsis. Kastivälistel Dataverse tabelitel on vaikimisi lubatud muudatuste jälgimine. Kohandatud tabelite muudatuste jälgimine peate sisse lülitama. Kui soovite kontrollida, kas tabel on Dataverse muudatuste jälgimiseks lubatud, avage [Power Apps](https://make.powerapps.com) > **andmetabelid** > **·**. Leidke oma huvipakkuv tabel ja valige see. **Avage sättedLisatavad** > **suvandid** ja vaadake üle **säte Muudatuste** jälitamine.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Teenuse Dataverse hallatava järvega ühenduse loomine
 

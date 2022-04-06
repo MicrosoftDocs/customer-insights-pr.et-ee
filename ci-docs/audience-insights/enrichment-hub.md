@@ -1,7 +1,7 @@
 ---
 title: Koondatud kliendiprofiilide rikastamine
 description: Kasutage võimalusi kliendiandmete rikastamiseks.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372697"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491953"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Kliendiprofiilide rikastamine (eelvaade)
 
@@ -42,13 +42,13 @@ Vahekaardil **Avastage** leiate kõik toetatud rikastussuvandid.
 - [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu 
 - Microsofti [Azure Maps](enrichment-azure-maps.md)
 - [Asukohaandmeid](enrichment-here.md) esitab HERE Technologies 
-- [LiveRamp AbiliTeci identiteet](enrichment-liveramp.md)
+- [LiveRamp AbiliTeci pakutav identiteet](enrichment-liveramp.md)
 
 # <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
 
 - [Ettevõtte andmeid](enrichment-leadspace.md) esitab Leadspace
 - [Microsofti pakutavad täiustatud](enrichment-enhanced-addresses.md) aadressid 
-- [Microsofti esitatud täiustatud ettevõtte andmed](enrichment-enhanced-company-data.md)
+- [Microsofti täiustatud ettevõtte andmed](enrichment-enhanced-company-data.md)
 - [Asukohaandmeid](enrichment-here.md) esitab HERE Technologies 
 - [Kohandatud andmed](enrichment-SFTP-custom-import.md) turvalise failiedastuse protokolli (SFTP) kaudu 
 - Microsofti [Azure Maps](enrichment-azure-maps.md)
@@ -84,7 +84,7 @@ Rikastatav olem määratakse rikastamise konfiguratsiooni käigus, mis võimalda
 
 ## <a name="enrich-data-sources-before-unification"></a>Andmeallikate rikastamine enne ühendamist
 
-Saate rikastada oma kliendiandmeid enne andmete ühendamist, et aidata parandada andmete vaste kvaliteeti. Lisateavet vt [andmeallikas rikastamine](data-sources-enrichment.md).
+Saate rikastada oma kliendiandmeid enne andmete ühendamist, et aidata parandada andmete vaste kvaliteeti. Lisateavet vt [teemast andmeallikas enrichment](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Rikastamisprotsessi edenemise kuvamine
 
@@ -97,5 +97,19 @@ Rikastamise oleku kuvamine
 1. Paanil **Edenemise üksikasjad** laiendage jaotist **Rikastused**. 
 1. Valige rikastamise jaotises, kus soovite edenemist näha, suvand **Kuva üksikasjad**. 
 1. Klõpsake paanil **Toimingu üksikasjad** käsku **Kuva üksikasjad**, et näha protsesse, mis on seotud rikastamise ja nende oleku värskendamisega. 
+
+## <a name="enrichment-results"></a>Rikastamise tulemused
+
+Pärast lõpetatud rikastamisjooksu saate rikastamise tulemused üle vaadata.
+
+1. Avage **Andmed** > **Rikastamine**. 
+1. Valige rikastamine, mille kohta soovite teavet.
+
+Kõik rikastamised näitavad põhiteavet, näiteks rikastatud profiilide arvu, loodud rikastamisolemi eelvaadet ja rikastatud profiilide arvu aja jooksul. Kui see on **saadaval, annab põlluga** rikastatud klientide arv süvitsimise iga rikastatud välja katvusse.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Rikastamise tulemuste leht.":::
+
+Mõned rikastamised näitavad ka rikastamise tüübile vastavat teavet. Lisateabe saamiseks vaadake asjakohase rikastamise dokumentatsiooni.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

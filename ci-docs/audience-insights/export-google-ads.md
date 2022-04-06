@@ -1,42 +1,37 @@
 ---
 title: Customer Insightsi andmete eksportimine Google Adsi
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Google Adsi.
-ms.date: 09/27/2021
+ms.date: 03/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 7a85237f7aff564d6b540b2c11553a52f875fac4
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8227005"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523789"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Segmentide eksportimine Google Adsi (eelvaade)
 
 Eksportige ühtsete kliendiprofiilide segmendid Google Ads vaatajaskonna loendisse ja kasutage neid Google'i otsingus, Gmailis, YouTube ja Google Display Network'is reklaamimiseks. 
 
-> [!IMPORTANT]
-> Praegu saate luua uue ühenduse ja eksportida andmeid Google Ads -i ainult juhul, kui teil on juba kinnitatud Google Ads -i arendaja tõend. Poliitika muudatuste tõttu värskendame varsti Google Ads -i eksporti ning pakume ekspordivõimalust, mis ei nõua arendajalt luba, et teie kogemuse jätkumine oleks tagatud ning lihtsustaks eksportimist Google Ads -idesse. Me soovitame mitte seadistada rohkem ühendusi Google Ads -iga, et uus ekspordivõimalust oleks lihtsam võimaldada.
 
 ## <a name="prerequisites-for-connection"></a>Ühenduse eeltingimus
 
 -   Teil on [Google Adsi konto](https://ads.google.com/) ja asjakohane administraatori identimisteave.
--   Teil on [kinnitatud Google Ads arendaja token](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
 -   Te täidate [Customer Match Policy](https://support.google.com/adspolicy/answer/6299717) nõuded.
 -   Te täidate [uuesti turundamise loendi suurused](https://support.google.com/google-ads/answer/7558048) nõudeid.
--   Google Adsis on olemas vaatajaskonnad ja asjakohased ID-d. Lisateavet leiate teemast [Google Adsi vaatajaskonnad](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
 -   Te olete [konfigureerinud segmendid](segments.md).
--   Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välju, mis tähistavad meiliaadressi, eesnime ja perekonnanime.
+-   Eksporditud segmentide ühtsed kliendiprofiilid sisaldavad välju, mis tähistavad meiliaadressi, telefoni, mobiilireklaami ID-d, kolmanda osapoole kasutaja ID-d või aadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni miljoni kliendiprofiili Google Ads ekspordi kohta.
 - Google Adsi saab eksportida ainult segmente.
-- Miljoni kliendiprofiiliga segmentide eksportimiseks võib teenusepakkujapoolsete piirangute tõttu kuluda kuni 5 minutit. 
+- Segmentide eksportimine kokku 1 miljoni kliendiprofiiliga võib teenusepakkujapoolsete piirangute tõttu võtta kuni 30 minutit. 
 - Google Adsis võib vastavusseviimine võtta kuni 48 tundi.
 
 ## <a name="set-up-connection-to-google-ads"></a>Ühenduse Google Ads loomine
@@ -50,8 +45,6 @@ Eksportige ühtsete kliendiprofiilide segmendid Google Ads vaatajaskonna loendis
 1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Sisestage oma **[Google Adsi kliendi-ID](https://support.google.com/google-ads/answer/1704344)**.
-
-1. Sisestage oma **[Google Adsi kinnitatud arendajatunnus](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
 
 1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
 
@@ -71,11 +64,11 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Valige **Ekspordiühendus** väljal ühendus Google Ads jaotisest. Kui te seda jaotise nime ei näe, pole seda tüüpi ühendused teile saadaval.
 
-1. Sisestage oma **[Google Adsi vaatajaskonna ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** ja valige **Ühenda**, et käivitada ühendus Google Adsiga.
+1. Kui soovite luua uue vaatajaskonna, jätke Google'i vaatajaskonna ID tühjaks. Loome teie Google Adsi kontol automaatselt uue vaatajaskonna ja kasutame eksporditud segmendi nime. Kui soovite värskendada olemasolevat Google Adsi vaatajaskonda, sisestage oma [Google Adsi vaatajaskonna ID](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
 
-1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi.
+1. **Valige jaotises Andmete sobitamine** eksportimiseks üks või mitu andmevälja ja valige väli, mis esindab Customer Insightsi vastavaid andmevälju.
 
-1. Valige segmendid, mille soovite eksportida. Google Adsi saate eksportida kuni miljon kliendiprofiili.
+1. Valige segmendid, mille soovite eksportida. 
 
 Ekspordi salvestamine ei käivita eksporti kohe.
 

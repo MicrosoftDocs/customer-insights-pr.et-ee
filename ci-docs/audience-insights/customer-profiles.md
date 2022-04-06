@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354876"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523717"
 ---
 # <a name="customer-profiles"></a>Kliendi profiilid
 
 Lehel **Kliendid** kuvatakse teie ühendatud kliendiprofiilide ühendatud vaade. Kliendiprofiilid on saadaval pärast [olemi Unified Customer loomist](data-unification.md). Lehel saate otsida kliente ja määratleda selle otsingu registri.
 
-Kliendid võivad olla üksikisikud või organisatsioonid. Iga kliendiprofiili tähistab paan. Kasutage lehekülgedena kasutamise juhtelemente, et saada rohkem kirjeid. Kaardil kuvatakse *Kliendi* olemi väljad, nagu see on määratletud **Otsingu- ja filtriregistris**. Valige paan, mille kaudu soovite valitud kliendi andmeid vaadata sihtotstarbelisel lehel nimega [Kliendi üksikasjad](customer-profiles.md#customer-details-page).
+Kliendid võivad olla üksikisikud või organisatsioonid. Iga kliendiprofiili tähistab paan. Kasutage lehekülgedena kasutamise juhtelemente, et saada rohkem kirjeid. Kaardil kuvatakse *Kliendi* olemi väljad, nagu see on määratletud **Otsingu- ja filtriregistris**. Iga kaardi väljade järjestuse valib süsteem.
+
+Valige paan, mille kaudu soovite valitud kliendi andmeid vaadata sihtotstarbelisel lehel nimega [Kliendi üksikasjad](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Klientide leht, kus kuvatakse tulemipaanid](media/customers-page-result-tiles-B2C.png "Klientide leht, kus kuvatakse tulemipaanid")

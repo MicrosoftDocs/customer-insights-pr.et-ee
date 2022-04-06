@@ -12,7 +12,7 @@
       href: /learn/modules/unified-customer-profile/
     - name: Vaatajaskonna ülevaadetega töötamine
       href: /learn/modules/working-with-customer-insights/
-    - name: Andmete rikastamine ja ennustuste idemine
+    - name: Andmete rikastamine ja ennustuste tegemine
       href: /learn/modules/enrich-data/
     - name: Väliste ühenduste haldamine
       href: /learn/modules/configure-third-party-connections/
@@ -24,8 +24,6 @@
       href: trial-signup.md
     - name: Prooviversiooni KKK
       href: trial-FAQ.md
-- name: Alustage tasulise litsentsiga
-  href: paid-license.md
 - name: Avage oma keskkond
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Sihtrühmaülevaated
@@ -36,16 +34,18 @@
       href: audience-insights/overview.md
     - name: Uued ja värskendatud funktsioonid
       href: audience-insights/whats-new-audience-insights.md
-    - name: Alustamine
+    - name: Hakkame pihta
       items:
         - name: Lühijuhend
           href: audience-insights/get-started.md
+        - name: Alustage tasulise litsentsiga
+          href: paid-license.md
         - name: Uue keskkonna loomine
           href: audience-insights/create-environment.md
         - name: Sihtrühma ülevaadete vaatamine
           href: audience-insights/home.md
-    - name: Ärikontodega töötamine
-      href: audience-insights/work-with-business-accounts.md
+        - name: Ärikontodega töötamine
+          href: audience-insights/work-with-business-accounts.md
     - name: Andmeallikad
       items:
         - name: Andmeallikate ülevaade
@@ -64,8 +64,6 @@
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Reaalajas andmete valmendamine
           href: audience-insights/real-time-data-ingestion.md
-        - name: Olemite ja andmekogumite mõistmine
-          href: audience-insights/entities.md
     - name: Andmete koondamine
       items:
         - name: Andmete koondamise ülevaade
@@ -76,16 +74,6 @@
           href: audience-insights/match-entities.md
         - name: Olemite liitmine
           href: audience-insights/merge-entities.md
-        - name: Kliendi koondprofiilide ülevaatamine
-          href: audience-insights/customer-profiles.md
-        - name: Kliendi koondprofiilide filtreerimine
-          href: audience-insights/search-filter-index.md
-        - name: Seoste ja ühendatud olemite loomine
-          href: audience-insights/relationships.md
-        - name: Kliendi tegevuste loendamine
-          href: audience-insights/activities.md
-        - name: Semantiliste vastenduste määratlemine
-          href: audience-insights/semantic-mappings.md
     - name: Andmete rikastamine
       items:
         - name: Kliendiprofiilide rikastamine
@@ -110,6 +98,14 @@
           href: audience-insights/enrichment-office.md
         - name: Rikastamine SFTP-põhise kohandatud importimise kaudu
           href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Ühendamata profiilid
+      items:
+        - name: Kliendi koondprofiilide ülevaatamine
+          href: audience-insights/customer-profiles.md
+        - name: Kliendi koondprofiilide filtreerimine
+          href: audience-insights/search-filter-index.md
+        - name: Klienditegevuste määratlemine
+          href: audience-insights/activities.md
     - name: Segmendid
       items:
         - name: Segmentide ülevaade
@@ -126,11 +122,11 @@
           href: audience-insights/find-similar-customer-segments.md
     - name: Näitajad
       items:
-        - name: Mõõdude ülevaade
+        - name: Meetmete ülevaade
           href: audience-insights/measures.md
-        - name: Uue mõõdu loomine
+        - name: Uue mõõdupuu loomine
           href: audience-insights/measure-builder.md
-        - name: Mõõdumalli kasutamine
+        - name: Mõõtmalli kasutamine
           href: audience-insights/measure-templates.md
     - name: Prognoosid
       items:
@@ -146,7 +142,7 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Tehinguvoolavuse prognoos
               href: audience-insights/predict-transactional-churn.md
-            - name: Kliendi tagasiside tunnete analüüsimine
+            - name: Analüüsige klientide tagasisides sisalduvaid tundeid
               href: audience-insights/sentiment-analysis.md
             - name: Azure'i masinõppe kohandatud mudelite kasutamine
               href: audience-insights/custom-models.md
@@ -190,6 +186,8 @@
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
+            - name: Braze
+              href: audience-insights/export-braze.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
             - name: Constant Contact
@@ -204,6 +202,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Iterable
+              href: audience-insights/export-iterable.md
             - name: Klaviyo
               href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
@@ -242,7 +242,19 @@
               href: audience-insights/export-power-automate.md
             - name: Power BI
               href: audience-insights/export-power-bi.md
-    - name: Haldus
+    - name: Olemid
+      items:
+        - name: Olemitest arusaamine
+          href: audience-insights/entities.md
+        - name: Common Data Modeli olemi skeemide ülevaatamine
+          href: audience-insights/entity-schemas.md
+        - name: Customer Insightsi andmed teenuses Dataverse
+          href: audience-insights/customer-insights-dataverse.md
+        - name: Seoste ja ühendatud olemite loomine
+          href: audience-insights/relationships.md
+        - name: Semantiliste vastenduste määratlemine
+          href: audience-insights/semantic-mappings.md
+    - name: Administreerimine
       items:
         - name: Süsteemikonfiguratsiooni seadistamine
           href: audience-insights/system.md
@@ -252,15 +264,17 @@
           href: audience-insights/connections.md
         - name: Mitme keskkonna haldamine
           href: audience-insights/manage-environments.md
-        - name: Turve
-          items:
-            - name: Tooge oma Key Vault
-              href: audience-insights/use-azure-key-vault.md
-            - name: ADLS-i salvestuskontoga ühenduse loomine teenusesubjekti kaudu
-              href: audience-insights/connect-service-principal.md
-            - name: Diagnostikalogide eksportimine
-              href: audience-insights/diagnostics.md
-    - name: Laiendatavus
+        - name: Tooge oma Key Vault
+          href: audience-insights/use-azure-key-vault.md
+        - name: Teenindusdirektori abil salvestusruumikontoga ühenduse loomine
+          href: audience-insights/connect-service-principal.md
+        - name: Diagnostikalogide eksportimine
+          href: audience-insights/diagnostics.md
+        - name: Teenusepiirangud
+          href: service-limits.md
+        - name: DSR-õigused ja taotlused
+          href: dsr-rights-requests.md
+    - name: APId
       items:
         - name: Common Data Modeli olemi skeemide ülevaatamine
           href: audience-insights/entity-schemas.md
@@ -270,7 +284,7 @@
           href: audience-insights/apis.md
         - name: API ülevaade
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Nõusolekuhaldus (eelvaade)
+- name: Nõusoleku haldamine (eelvaade)
   items:
     - name: Spikrikeskus
       href: consent-management/index.yml
@@ -286,13 +300,13 @@
       items:
         - name: Nõusoleku andmete importimine
           href: consent-management/import-consent-data.md
-        - name: Nõusolekuandmete seadmine ja nõusolekueelistuste rakendamine
+        - name: Nõusolekuandmete määramine ja nõusolekueelistuste rakendamine
           href: consent-management/set-consent-rules.md
     - name: Nõusolekuandmete haldamine
       items:
-        - name: Nõusolekureeglite lubamine vaatajaskonna ülevaates
+        - name: Nõusolekureeglite lubamine vaatajaskonna statistikas
           href: audience-insights/activate-consent.md
-        - name: Vaatajaskonna statistikasegmentides nõusoleku vaikereeglite haldamine
+        - name: Vaikimisi nõusolekureeglite haldamine vaatajaskonna ülevaatesegmentides
           href: audience-insights/change-default-consent-rules.md
     - name: Sätete ja kasutajate haldamine
       items:
@@ -306,9 +320,5 @@
           href: consent-management/predictions-consent-data.md
 - name: Kaasamisülevaated (eelversioon)
   href: engagement-insights/overview.md
-- name: Teenusepiirangud
-  href: service-limits.md
-- name: DSR-õigused ja taotlused
-  href: dsr-rights-requests.md
 - name: Hangi tuge
   href: /power-platform/admin/get-help-support

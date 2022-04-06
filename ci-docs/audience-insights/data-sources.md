@@ -1,7 +1,7 @@
 ---
 title: Andmeallikate kasutamine andmete valmendamiseks
 description: Vaadake, kuidas eri allikatest andmeid importida.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354044"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464044"
 ---
 # <a name="data-sources-overview"></a>Andmeallikate ülevaade
 
@@ -27,27 +27,38 @@ Dynamics 365 Customer Insightsi sihtrühmaülevaadete funktsioon ühendub andmet
 
 ## <a name="add-a-data-source"></a>Lisa andmeallikas
 
-Vaadake üksikasjalikke artikleid andmeallikas lisamiseks sõltuvalt valitud valikust.
+Sõltuvalt valitud valikust vaadake üksikasjalikke artikleid andmeallikas lisamise kohta.
 
-Saate lisada järgmisi andmeallikaid.
+Saate lisada järgmised andmeallikad.
 
-- [Läbi kümnete Power Query konnektorite](connect-power-query.md)
+- [Läbi kümnete Power Query pistikute](connect-power-query.md)
 - [Common Data Modeli kaustast](connect-common-data-model.md)
 - [Enda Microsoft Dataverse’i andmejärvest](connect-dataverse-managed-lake.md)
 - [Andmebaasist Azure Synapse Analytics](connect-synapse.md)
 
 > [!NOTE]
-> Kui kasutate prooviversiooni, sisaldab **impordimeetodite jaotis Customer Insightsi andmeteegi** suvandit. Valige see suvand, et valida näidisandmestik, mis on saadaval erinevatele tööstusharudele. Lisateavet leiate teemast [Dynamics 365 Customer Insights Kohtuprotsess](../trial-signup.md).
+> Kui kasutate prooviversiooni, sisaldab **jaotis Impordimeetodid suvandit Customer Insights andmeteegi**. Valige see suvand, et valida näidisandmestik, mis on saadaval erinevate tööstusharude jaoks. Lisateavet leiate teemast [Dynamics 365 Customer Insights Kohtuprotsess](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Andmete lisamine asutusesisene andmeallikatest
 
-Kohalike andmeallikate andmete sisestamine vaatajaskonna statistikas toetub Microsoft Power Platform andmevoogudele. Saate lubada Andmevood Customer Insightsis, [pakkudes Microsoft Dataverse keskkonna seadistamisel keskkonna URL-i](create-environment.md).
+Kohalike andmeallikate andmete sisestamine vaatajaskonna statistikas toetub Microsoft Power Platform andmevoogudele. Andmevooge saate lubada Customer Insightsis [, Microsoft Dataverse pakkudes keskkonna häälestamisel keskkonna URL-i](create-environment.md).
 
-Andmeallikad, mis luuakse pärast keskkonna seostamist Customer Insightsiga, Dataverse kasutavad [Power Platform vaikimisi andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Saate eemaldada ja taasluua andmeallikad, mis eksisteerisid enne Dataverse keskkonna seostamist [asutusesisene andmelüüside](/data-integration/gateway/service-gateway-app) abil.
+Andmeallikad, mis luuakse pärast keskkonna seostamist Dataverse Customer Insightsiga, kasutavad [Power Platform vaikimisi andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Andmeallikaid, mis eksisteerisid enne keskkonna seostamist Dataverse [, saate asutusesisene andmelüüside abil eemaldada ja uuesti luua andmeallikad](/data-integration/gateway/service-gateway-app).
 
 Andmevõrgud olemasolevast Power BI või Power Apps keskkonnast on nähtavad ja saate neid uuesti kasutada jaotises Customer Insights. Andmeallikate lehel kuvatakse lingid, et minna Microsoft Power Platform keskkonda, kus saate vaadata ja konfigureerida asutusesiseseid andmevõrke.
 
+> [!IMPORTANT]
+> Veenduge, et teie lüüsid värskendatakse uusimale versioonile. Värskenduse saate installida ja lüüsi ümber konfigureerida lüüsi ekraanil kuvatavast viipast otse või [alla laadida uusima versiooni](https://powerapps.microsoft.com/downloads/). Kui te ei kasuta uusima lüüsi versiooni, nurjub andmevoo värskendamine tõrketeadetega, nagu **märksõna ei toetata: konfiguratsiooniatribuute. Parameetri nimi: märksõna**.
+
 ## <a name="review-ingested-data"></a>Sisestatud andmete läbivaatus
+Kui teie keskkond sisaldab Power Platform andmevooge, loetletakse **lehel Andmeallikad** kolm jaotist. 
+- **Ühiskasutuses**: andmeallikad, mida saavad hallata kõik Customer Insightsi administraatorid. Power BI andmevood, teie enda salvestuskonto ja hallatava andmejärve Dataverse külge kinnitamine on näited jagatud andmeallikatest.
+- **Minu hallatav**: Power Platform andmevood on loodud ja neid saab hallata ainult teie. Teised Customer Insightsi administraatorid saavad vaadata ainult neid andmevooge, kuid mitte neid redigeerida, värskendada ega kustutada.
+- **Teiste hallatavad**: Power Platform teiste administraatorite loodud andmevood. Neid saab ainult vaadata. See loetleb andmevoo omaniku, kellega abi saamiseks ühendust võtta.
+> [!NOTE]
+> Kõiki olemeid saavad vaadata ja kasutada teised kasutajad. Kasutaja kontekstuaalsus kehtib ainult andmeallikatele, mitte nendest andmevoogudest tulenevatele olemitele.
+
+Kui andmevooge ei Power Platform kasutata, ei näe te ühtegi rühma ega jaotist. Leht **Andmeallikad** sisaldab ainult kõigi andmeallikate loendit.
 
 Näete iga sisestatud andmeallika nime, selle olekut ja viimast korda, kui neid andmeid selle allika jaoks värskendati. Saate andmeallikate loendit iga veeru järgi sortida.
 

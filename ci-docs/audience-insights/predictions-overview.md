@@ -1,19 +1,19 @@
 ---
 title: Ülevaade toetatud prognoosi stsenaariumidest
 description: Prognoosistsenaariumid ja -valikud, mida rakendus Dynamics 365 Customer Insights hõlmab.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228239"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487494"
 ---
 # <a name="predictions-overview"></a>Prognooside ülevaade
 
@@ -29,13 +29,18 @@ Lihtsaim viis andmete prognoosimisega alustamiseks on eelnevalt määratletud mu
 - [Tootesoovitus](predict-product-recommendation.md): soovitab prognoositava tootesoovituste komplekte, mis põhinevad ostukäitumisel ja sarnaste ostuharjumustega klientidel.
 - [Kordustellimuste valim](predict-subscription-churn.md): prognoosib, kas kliendi puhul valitseb oht, et ta ei kasuta enam teie ettevõtte kordustellimuse tooteid või teenuseid.
 - [Tehingute valim](predict-transactional-churn.md): prognoosib, kas klient ei osta enam teie tooteid või teenuseid teatud aja jooksul.
-- [Sentiment analüüs](sentiment-analysis.md): Analüüsige klientide tagasiside tundeid ja tuvastage sageli mainitud äriaspektid.
+- [Sentimenti analüüs](sentiment-analysis.md): analüüsige klientide tagasiside tundeid ja tuvastage sageli mainitud äriaspektid.
 
 # <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
 
 - [Tehingute valim](predict-transactional-churn.md): prognoosib, kas klient ei osta enam teie tooteid või teenuseid teatud aja jooksul.
 
 ---
+
+> [!TIP]
+> Soovitame teil regulaarselt värskendada kastiväliseid mudeleid värskendatud andmetega, et tagada nende täpne teavitamine teie ettevõtte kasutusjuhtumist. Andmeid värskendatakse ad hoc kujul, kui süsteem neelab uusi või värskendatud andmeallikaid. Kuid mudelid muutuvad sel juhul ainult uuesti ja jätkavad olemasolevate koolitusandmete kasutamist.
+> 
+> Värskendamisgraafiku **saate** konfigureerida, määrates konfiguratsioonikogemuses mudeli ümberõppe ajakava. Mudel treenib ja korrigeerib seda ajakava, mida saate igal ajal muuta.
 
 
 ## <a name="azure-machine-learning-integration"></a>Azure’i masinõppe integratsioon

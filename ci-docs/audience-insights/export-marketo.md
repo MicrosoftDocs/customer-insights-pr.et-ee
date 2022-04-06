@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231974"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487510"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Segmentide eksportimine platvormile Marketo (eelversioon)
 
@@ -63,7 +63,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Sisestage oma **[Marketo loendi ID](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. Loendi ID on lihtsalt arvväärtus. Kui teie Marketo loendi ID on näiteks ST12345A7, eemaldage märk enne ja pärast numbreid ning sisestage `12345`. 
 
-1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. 
+1. **Valige jaotises Andmete sobitamine** vähemalt üks väli, mis tähistab kliendi meiliaadressi või kliendi Marketo ID-d. 
 
 1. Soovi korral saate eksportida **Eesnimi**, **Perekonnanimi**, **Linn**, **Osariik** ja **Riik/regioon**  isikupärastatud meilide loomiseks. Nende väljade vastendamiseks valige **Lisa atribuut**.
 
