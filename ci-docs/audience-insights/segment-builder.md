@@ -1,37 +1,36 @@
 ---
 title: Looge segmente segmendikoosturiga
 description: Looge klientide segmente, et rühmitada neid vastavalt eri atribuutidele.
-ms.date: 10/18/2021
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segments
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 6fa6f0738bf7fba94b2fb84a70ea17483aae8dac
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 1a28289ecb740ab6cdfa603b2cd66376e7e8b576
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354550"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529580"
 ---
 # <a name="create-segments"></a>Segmentide loomine
 
-Määratlege keerukad filtrid ühendatud kliendiolemi ümber ja sellega seotud olemid. Pärast töötlemist loob iga segment hulga kliendi kirjeid, mille saate eksportida ja nendega toiminguid teha. Segmente saab hallata lehel **Segmendid**. Saate luua [uusi segmente](#create-a-new-segment) kasutades segmendikoosturit või [luua kiirsegmente](#quick-segments) rakenduse muudelt aladelt. 
+Määratlege keerukad filtrid ühendatud kliendiolemi ümber ja sellega seotud olemid. Pärast töötlemist loob iga segment hulga kliendi kirjeid, mille saate eksportida ja nendega toiminguid teha. Segmente saab hallata lehel **Segmendid**. Saate luua [uusi segmente](#create-a-new-segment) kasutades segmendikoosturit või [luua kiirsegmente](#quick-segments) rakenduse muudelt aladelt.
 
 > [!TIP]
-> - Kiirsegmente toetatakse ainult **üksikklientide** keskkondades.    
-> - **Üksikklientidel** põhinevad segmendid sisaldavad automaatselt segmendi liikmete jaoks saadaolevat kontaktteavet. **Ärikontode** keskkondades põhinevad segmendid kontodel (ettevõtetel või tütarettevõtetel). Kontaktteabe kaasamiseks segmenti kasutage segmendi meisterdamisfunktsiooni **Projekti atribuudid**.
->    - Veenduge, et kontakti andmeallikad oleks [semantselt vastendatud olemiga ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> - Kiirsegmente toetatakse ainult **üksikklientide** keskkondades.
+> - **Üksikklientidel** põhinevad segmendid sisaldavad automaatselt segmendi liikmete jaoks saadaolevat kontaktteavet. **Ärikontode** keskkondades põhinevad segmendid kontodel (ettevõtetel või tütarettevõtetel). Kontaktteabe kaasamiseks segmenti kasutage segmendi meisterdamisfunktsiooni **Projekti atribuudid**. Veenduge, et kontakti andmeallikad oleks [semantselt vastendatud olemiga ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Segmentide koostamine
 
-Järgmine pilt illustreerib segmendikoosturi erinevaid aspekte. Sellel kuvatakse segment, mille tulemuseks on klientide rühm. Kliendid tellisid kaupa kindla aja jooksul ja kogusid punkte või kulutasid teatud rahasumma. 
+Järgmine pilt illustreerib segmendikoosturi erinevaid aspekte. Sellel kuvatakse segment, mille tulemuseks on klientide rühm. Kliendid tellisid kaupa kindla aja jooksul ja kogusid punkte või kulutasid teatud rahasumma.
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="Segmendi ehitaja elemendid." lightbox="media/segment-builder-overview.png":::
 
@@ -57,7 +56,7 @@ Järgmine pilt illustreerib segmendikoosturi erinevaid aspekte. Sellel kuvatakse
 
 Uue segmendi loomiseks on mitu võimalust. Selles jaotises kirjeldatakse, kuidas luua oma segmenti tühjalt lehelt. Samuti saate luua olemasolevatel olemitel põhineva *kiirsegmendi* või kasutada Masinõpe mudeleid et saada *soovitatud segmente*. Lisateabe saamiseks minge [Segmentide ülevaade](segments.md).
 
-Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment passiivse segmendina. Kui olete segmendi konfiguratsiooni lõpule viinud, käivitage see segmenti aktiveerimiseks. Võite segmendi ka ***Aktiveerida** lehelt **Kõik segmendid***.
+Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment passiivse segmendina. Kui olete segmendi konfiguratsiooni lõpule viinud, käivitage see segmenti aktiveerimiseks. Võite segmendi ka **Aktiveerida** lehelt **Kõik segmendid**.
 
 1. Minge lehele **Segmendid**.
 
@@ -65,11 +64,11 @@ Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment pa
 
 1. Segmendi osade lehel saate määratleda või koostada reegleid. Reegel koosneb ühest või mitmest tingimusest mis määratleb klientide komplekti.
 
-1. Valige jaotisest **Rule1** selle olemi atribuut, mille alusel soovite kliente filtreerida. Atribuutide valimiseks on kaks viisi. 
+1. **Valige jaotises Reegel1** selle olemi atribuut, mille järgi soovite kliente filtreerida. Atribuutide valimiseks on kaks viisi.
    - Vaadake paanil **Lisa reeglile** saadaolevad olemid ja atribuudid läbi ja valige lisamisatribuudi kõrval soovitud **+** ikoon. Valige, kas soovite lisada atribuudi olemasolevale reeglile või kasutada seda uue reegli loomiseks.
    - Kui soovite näha kattuvate soovituste kuvamist, tippige atribuudi nimi reegli jaotisesse.
 
-1. Valige tingimuse kattuvate väärtuste määramiseks tehtemärgid. Atribuudil võib olla üks neljast andmetüübist: arv, string, kuupäev või tõeväärtus. Sõltuvalt atribuudi andmetüübist on tingimuse määramiseks saadaval erinevad tehtemärgid. Ärikontodega segmentide puhul on saadaval kaks eritehtet, et kaasata allaneetud ettevõtete potentsiaalsed hierarhiad. Kasutage seotud kontode kaasamiseks tehteid *laps* ja *vanem*. 
+1. Valige tingimuse kattuvate väärtuste määramiseks tehtemärgid. Atribuudil võib olla üks neljast andmetüübist: arv, string, kuupäev või tõeväärtus. Sõltuvalt atribuudi andmetüübist on tingimuse määramiseks saadaval erinevad tehtemärgid. Ärikontodega segmentide puhul on saadaval kaks eritehtet, et kaasata allaneetud ettevõtete potentsiaalsed hierarhiad. Kasutage seotud kontode kaasamiseks tehteid *laps* ja *vanem*.
 
 1. Kui soovite reeglile lisada veel tingimusi, valige **Lisa tingimus**. Praeguse reegli alla reegli loomiseks valige käsk **Lisa alamreegel**.
 
@@ -77,7 +76,7 @@ Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment pa
 
    :::image type="content" source="media/relationship-path.png" alt-text="Potentsiaalne seosetee ühtse kliendiolemiga vastendatud olemil põhineva reegli loomisel.":::
 
-   Näiteks on kuvatõmmisel oleval olemil *eCommerce_eCommercePurchases* olemiga *Klient* neli võimalust vastendamiseks. 
+   Näiteks on kuvatõmmisel oleval olemil *eCommerce_eCommercePurchases* olemiga *Klient* neli võimalust vastendamiseks.
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Klient
    - eCommerce_eCommercePurchases > Klient
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klient
@@ -101,11 +100,11 @@ Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment pa
       - **Ühisosa** kattub kahe rühmaga. Ühtsesse rühma jäävad ainult need andmed, mis on mõlema rühma jaoks *ühised*.
       - **Välja arvatud** kombineerib kaks rühma. Säilitatakse ainult rühma A andmed, mis *ei ole ühised* rühma B andmetele.
 
-1. Vaikimisi genereerivad segmendid väljundolemi, mis sisaldab kõiki määratletud filtritele vastavaid kliendiprofiilide atribuute. Kui segment põhineb muudel olemitel kui olem *Klient*, saate väljundolendisse lisada rohkem atribuute nendest olemitest. Valige **Projekti tribuudid**, et valida väljundolemile lisatavad atribuudid. 
+1. Vaikimisi genereerivad segmendid väljundolemi, mis sisaldab kõiki määratletud filtritele vastavaid kliendiprofiilide atribuute. Kui segment põhineb muudel olemitel kui olem *Klient*, saate väljundolendisse lisada rohkem atribuute nendest olemitest. Valige **Projekti tribuudid**, et valida väljundolemile lisatavad atribuudid.
 
    > [!IMPORTANT]
    > Ärikontodel põhinevate segmentide puhul tuleb iga ettevõtte ühe või mitme kontakti üksikasjad *ContactProfile* olemist kaasata segmenti, et see segment oleks aktiveeritud või eksporditud kaasamiskohaks, mis nõuab kontaktteavet. Olemi *ContactProfile* kohta leiate lisateavet teemast [Semantilised vastendused](semantic-mappings.md).
-   > Kontaktide prognoositud atribuutidega ärikontodel põhineva segmendi näidisväljund võiks välja näha järgmine: 
+   > Kontaktide prognoositud atribuutidega ärikontodel põhineva segmendi näidisväljund võiks välja näha järgmine:
    >
    > |ID  |Konto nimi  |Tulu  |Kontaktisiku nimi  | Kontakti roll|
    > |---------|---------|---------|---------|---|
@@ -117,14 +116,16 @@ Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment pa
 
    > [!NOTE]
    > - **Projektiatribuudid** töötavad ainult olemitele, mille seos kliendiolemiga on üks-mitmele. Näiteks võib ühel kliendil olla mitu tellimust.
-   > - Kui atribuut, mida soovite projekti jaoks kasutada, on *Kliendi* olemist rohkem kui ühe hüppe kaugusel, nagu see on seoses määratletud, tuleks seda atribuuti kasutada igas teie ettevõttes kasutatava segmendipäringu reeglis. 
-   > - Kui atribuut, mida soovite projekti jaoks kasutada, on *Kliendi* olemist ühe hüppe kaugusel, siis seda atribuuti ei pea kasutama igas teie ettevõttes kasutatava segmendipäringu reeglis. 
+   > - Kui atribuut, mida soovite projekti jaoks kasutada, on *Kliendi* olemist rohkem kui ühe hüppe kaugusel, nagu see on seoses määratletud, tuleks seda atribuuti kasutada igas teie ettevõttes kasutatava segmendipäringu reeglis.
+   > - Kui atribuut, mida soovite projekti jaoks kasutada, on *Kliendi* olemist ühe hüppe kaugusel, siis seda atribuuti ei pea kasutama igas teie ettevõttes kasutatava segmendipäringu reeglis.
    > - **Prognoositud atribuudid** on seatud teguriks kasutades tehete kogumeid.
 
-1. Enne segmendi salvestamist ja käivitamist valige segmendi nime kõrval käsk **Redigeeri üksikasju**. Andke oma segmendile nimi ja värskendage segmendile soovitatud **Väljundolemi nime**. Segmendile saate lisada ka kirjelduse.
+1. Valige **Redigeeri üksikasju** välja Pealkirjata segment kõrval. Andke oma segmendile nimi ja värskendage segmendile soovitatud **Väljundolemi nime**. Soovi korral lisage segmendile kirjeldus ja [sildid](work-with-tags-columns.md#manage-tags).
+
+   :::image type="content" source="media/segments_edit_details.png" alt-text="Dialoogiboksi Üksikasjade redigeerimine.":::
 
 1. Valige käsk **Käivita**, et salvestada segment, see aktiveerida ja alustada segmendi töötlemist kõigi reeglite ja tingimuste alusel. Vastasel juhul salvestatakse see passiivse segmendina.
-   
+
 1. Valige **Tagasi segmentidesse**, et naasta lehele **Segmendid**.
 
 1. Vaikimisi luuakse segment dünaamilise segmendina. See tähendab, et segmenti värskendatakse süsteemivärskenduste käigus. [Automaatse värskendamise peatamiseks](segments.md#manage-existing-segments) valige segment ja suvand **Muuda staatiliseks**. Staatilisi segmente saab igal ajal [värskendada ainult käsitsi](segments.md#refresh-segments).
@@ -132,7 +133,7 @@ Segmenti luues saate mustandi salvestada. Mustandetapis salvestatakse segment pa
 > [!TIP]
 > - Segmendi tehtemärgid ei soovita tingimuste jaoks tehtemärkide seadmisel olemite kehtivaid väärtusi. Minge **Andmed** > **Olemid** ja laadige alla olemi andmed, et näha, millised väärtused on saadaval.
 > - Kuupäevadel põhinevad tingimused võimaldavad teil vahetada fikseeritud kuupäevade ja ujuva kuupäevavahemiku vahel.
-> - Kui teil on oma segmendi jaoks mitu reeglit, on redigeeritud reegli kõrval vertikaalne sinine joon. 
+> - Kui teil on oma segmendi jaoks mitu reeglit, on redigeeritud reegli kõrval vertikaalne sinine joon.
 > - Reegleid ja tingimusi saate segmendi määratluses teisaldada ka muudesse kohtadesse. Valige reegli või tingimuse kõrval väärtus [...] ja valige, kuidas ja kuhu seda teisaldada.
 > - Käsuribal juhtelementide **Võta tagasi** ja **Tee uuesti** abil saate muudatusi tagasi võtta.
 
@@ -153,10 +154,9 @@ Kiirsegmendid lasevad teil luua lihtsaid segmente ühe tehtega kiiresti, et saad
 
 4. Süsteem esitab **hinnangulise segmendi mahu**. Saate valida, kas luua määratletud segment või esmalt vaadata seda uuesti, et hankida muus mahus segment.
 
-    > [!div class="mx-imgBorder"]
-    > ![Kiirsegmendi nimi ja hinnang.](media/quick-segment-name.png "Kiirsegmendi nimi ja hinnang")
+   :::image type="content" source="media/quick-segment-name.png" alt-text="Kiirsegmendi nimi ja hinnang.":::
 
-5. Sisestage segmendi **nimi**. Soovi korral sisestage **Kuvatav nimi**.
+5. **Esitage oma segmendile nimi** ja **väljundolemi nimi**. Soovi korral lisage [sildid](work-with-tags-columns.md#manage-tags).
 
 6. Segmendi loomiseks valige käsk **Salvesta**.
 

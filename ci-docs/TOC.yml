@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Sihtrühma ülevaadete vaatamine
           href: audience-insights/home.md
+        - name: Siltide ja veergudega töötamine
+          href: audience-insights/work-with-tags-columns.md
         - name: Ärikontodega töötamine
           href: audience-insights/work-with-business-accounts.md
     - name: Andmeallikad

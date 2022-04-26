@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225510"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552051"
 ---
 # <a name="connector-for-power-bi-preview"></a>Power BI’i konnektor (eelvaade)
 
@@ -72,6 +72,6 @@ Pärast topeltseoste eemaldamist proovige Power BI konnektor uuesti konfigureeri
 
 Kuupäevavorminguga nagu KUU/PÄEV/AASTA, välju sisaldavate olemite laadimisel võivad lokaadivormingute mitteühildumisel ilmneda tõrked. See tõrge ilmneb juhul, kui teie Power BI Desktop -i failis on valitud inglise keeles (USA) asemel mõni muukohavorming, kuna publiku ülevaadete kuupäevaväljad salvestatakse USA vormingus.
 
-Failil Power BI Desktop -il on ükskohasäte, mis rakendatakse andmete toomisel. Kui soovite, et need kuupäevaväljad sadetakse õigesti, määrake selle kohaks . BPI-fail inglise keelde (USA). [Siit saate teada, kuidas muuta Power BI desktop fail](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop) kohta.
+Failil Power BI Desktop -il on ükskohasäte, mis rakendatakse andmete toomisel. Kui soovite, et need kuupäevaväljad sadetakse õigesti, määrake selle kohaks . BPI-fail inglise keelde (USA). [Siit saate teada, kuidas muuta Power BI desktop fail](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop) kohta.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

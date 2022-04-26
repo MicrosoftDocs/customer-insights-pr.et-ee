@@ -1,28 +1,28 @@
 ---
-title: Mallidest mõõdu loomine
-description: Määratlege meetmed, kasutades mallid tavakasutuseks mõeldud teenindusjuhtumite jaoks.
-ms.date: 02/28/2022
+title: Mõõtude loomine mallidest
+description: Määratlege meetmed mallide abil levinud kasutusjuhtumite puhul.
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359949"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529396"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Malli abil mõõdu loomine
 
-Nende loomiseks saate kasutada tavaliselt kasutatavate [meetmete](measures.md) eelmääratletud malle. Mallide üksikasjalik kirjeldus ja juhendatud kogemused aitavad teil luua tõhusa mõõtmissüsteemi. Mallid põhinevad olemi *Ühendatud tegevus* kaardistatud andmetele. Seega veenduge, et olete konfigureerinud [klienditegevused](activities.md) enne malli põhjal mõõtühiku loomist.
+Nende loomiseks saate kasutada sagedamini kasutatavate [meetmete](measures.md) eelmääratletud malle. Mallide üksikasjalik kirjeldus ja juhendatud kogemused aitavad teil luua tõhusa mõõtmissüsteemi. Mallid põhinevad olemi *Ühendatud tegevus* kaardistatud andmetele. Seega veenduge, et olete konfigureerinud [klienditegevused](activities.md) enne malli põhjal mõõtühiku loomist.
 
-Kohandatud mõõdud loomiseks lugege teemat [Mõõdukoosturi kasutamine meetmete loomiseks nullist](measure-builder.md).
+Kohandatud mõõtude loomiseks lugege teemat [Mõõte koostaja kasutamine nullist loomiseks](measure-builder.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
 
@@ -51,7 +51,9 @@ Saadaval mõõdumallid:
 
 1. Vaadake nõutavad andmed läbi ja valige **Alustamine**, kui kõik andmed on olemas.
 
-1. Määrake **Nime muutmine** paanil oma mõõtühiku ja väljundi olemi nimi. 
+1. Valige **Käsu Mõõda nime kõrval käsk Redigeeri üksikasju**. Esitage meetmele nimi. Soovi korral lisage [mõõdule sildid](work-with-tags-columns.md#manage-tags).
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Dialoogiboksi Üksikasjade redigeerimine.":::
 
 1. Valige nupp **Valmis**.
 

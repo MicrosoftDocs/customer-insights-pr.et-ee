@@ -1,21 +1,21 @@
 ---
 title: Customer Insights andmete eksportimine rakendusse Azure Synapse Analytics
-description: Vaadake, kuidas konfigureerida ühendus rakendusega Azure Synapse Analytics.
-ms.date: 01/05/2022
+description: Siit saate teada, kuidas konfigureerida ühendus rakendusega Azure Synapse Analytics.
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231307"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560382"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Andmete eksportimine Azure Synapse Analytics (eelvaade)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Andmete eksportimine rakendusse Azure Synapse Analytics (Eelvaade)
 
 Azure Synapse on analüüsiteenus, mis kiirendab andmeladude ja suurandmesüsteemide läbivaatava ülevaatamise aega. Customer Insights -i andmeid saate sisse tuua ja kasutada jaotises [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -28,27 +28,27 @@ Azure Synapse on analüüsiteenus, mis kiirendab andmeladude ja suurandmesüstee
 
 ## <a name="prerequisites-in-customer-insights"></a>Eeltingimused Customer Insights -is
 
-* Teil on **Administraatori** roll publiku ülevaadetes. Lisateave [kasutajaõiguste seadmise kohta vaatajaskonna ülevaates](permissions.md#assign-roles-and-permissions)
+* Teie Azure Active Directory (AD) kasutajakontol **on Customer Insightsis administraatori** roll. Lisateave [kasutajaõiguste seadmise kohta vaatajaskonna ülevaates](permissions.md#assign-roles-and-permissions)
 
 Azure -is: 
 
 - Töötav Azure -i tellimus.
 
-- Kui kasutate uut Azure Data Lake Storage Gen2 kontot, *vajab publiku ülevaadete teenusejuht* **salvestusruumi bloobiandmete kaasautori** õigusi. Lisateavet vaata [Azure Data Lake Storage -i Gen2 konto ühendamine Azure service -i esindatavaga publiku ülevaadetes](connect-service-principal.md). Data Lake Storage Gen2 **peab olema** [hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace) lubatud.
+- Kui kasutate uut Azure Data Lake Storage Gen2 kontot, *vajab* Customer Insightsi **teenusedirektor storage blob data contributori** õigusi. Lisateavet vaata [Azure Data Lake Storage -i Gen2 konto ühendamine Azure service -i esindatavaga publiku ülevaadetes](connect-service-principal.md). Data Lake Storage Gen2 **peab olema** [hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace) lubatud.
 
-- Ressursirühmas, Azure Synapse kus tööruum asub, *teenise esindatavas* ja *publiku ülevaate kasutaja* peab olema määratud vähemalt **Lugeja** õigused. Lisateavet leiate teemast [Azure'i rollide määramine Azure'i portaali abil](/azure/role-based-access-control/role-assignments-portal).
+- Ressursirühmas, kus Azure Synapse tööruum asub, *tuleb hooldusdirektorile* *Azure AD ja customer Insightsi* administraatoriõigustega kasutajale määrata vähemalt **Readeri** õigused. Lisateavet leiate teemast [Azure'i rollide määramine Azure'i portaali abil](/azure/role-based-access-control/role-assignments-portal).
 
-- *Kasutaja* vajab **Mälubloobiandmete Kaasautori** õigusi Azure Data Lake Storage Gen2 kontol, kus andmed asuvad ja on lingitud tööruumiga Azure Synapse . Lugege lisateavet [Azure'i portaali kasutamise kohta Azure'i rolli määramiseks juurdepääsuks bloobi- ja järjekorraandmetele](/azure/storage/common/storage-auth-aad-rbac-portal) ning [Salvestusruumi Bloobiandmete Kaasautori õigustele](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- Customer *Azure AD Insightsi* administraatoriõigustega kasutaja vajab **salvestusruumi bloobi andmete kaasautori** õigusi Gen2 kontol Azure Data Lake Storage, kus andmed asuvad ja on tööruumiga lingitud Azure Synapse. Lugege lisateavet [Azure'i portaali kasutamise kohta Azure'i rolli määramiseks juurdepääsuks bloobi- ja järjekorraandmetele](/azure/storage/common/storage-auth-aad-rbac-portal) ning [Salvestusruumi Bloobiandmete Kaasautori õigustele](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Azure Synapse identiteeti haldav tööruum](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* vajab **Mälubloobiandmete Kaasautori** õigusi Azure Data Lake Storage Gen2 kontol kus asuvad andmed, mis on lingitud Azure Synapse tööruumiga. Lugege lisateavet [Azure'i portaali kasutamise kohta Azure'i rolli määramiseks juurdepääsuks bloobi- ja järjekorraandmetele](/azure/storage/common/storage-auth-aad-rbac-portal) ning [Salvestusruumi Bloobiandmete Kaasautori õigustele](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Azure Synapse tööruumis *vaatajaskonna ülevaate teenusejuht* vajab **sünapsiadministraatori** rolli määramist. Lisateavet leiate teemast [Sünapsi tööruumi juurdepääsujuhtelemendiüles seadmine](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Tööruumis Azure Synapse vajab *Customer Insightsi* teenusedirektor Määratud Synapse'i administraatori **rolli.** Lisateavet leiate teemast [Sünapsi tööruumi juurdepääsujuhtelemendiüles seadmine](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Loo ühendusja eksport Azure Synapse -ile
 
 ### <a name="configure-a-connection"></a>Ühenduse konfigureerimine
 
-Ühenduse loomiseks vajavad **teenuse põhi- ja kasutajakonto Customer Insightsis selle ressursirühma** readeri *õigusi*, kus asub Sünapsi analüüsi tööruum. Lisaks vajavad **Synapse Analyticsi tööruumi teenuse juht ja kasutaja Synapse'i administraatori** õigusi. 
+Ühenduse loomiseks vajavad **customer Insightsi teenusedirektor ja kasutajakonto Readeri** õigusi *ressursirühmas*, kus asub Synapse Analyticsi tööruum. Lisaks vajavad **Synapse Analyticsi tööruumi teenusehaldur ja kasutaja Synapse'i administraatori** õigusi. 
 
 1. Minge **Administraator** > **Ühendused**.
 
@@ -64,17 +64,17 @@ Azure -is:
 
 ### <a name="configure-an-export"></a>Ekspordi konfigureerimine
 
-Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Ekspordi konfigureerimiseks ühisühendusega on vaja customer Insightsis vähemalt **kaasautori** õigusi. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Ühisühendusega eksportimise konfigureerimiseks on customer Insightsis vaja vähemalt **kaasautoriõigusi**. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
 
 1. Minge **Andmed** > **Ekspordid**.
 
 1. Valige uue ekspordi loomiseks **Lisa eksport**.
 
-1. Valige väljal **Ekspordiühendus** jaotisest **Azure Synapse Analytics** ühendus. Kui te seda jaotisenime ei näe, pole seda tüüpi [ühendusi](connections.md) teie jaoks saadaval.
+1. Valige väljal **Ekspordiühendus** jaotisest ühendus **Azure Synapse Analytics**. Kui te seda jaotisenime ei näe, pole seda tüüpi [ühendusi](connections.md) teie jaoks saadaval.
 
 1. Sisestage ekspordile äratuntav **Kuvatav nimi** ja **Andmebaasi nimi**.
 
-1. Valige, millisesse olemisse soovite eksportida Azure Synapse Analytics.
+1. Valige, millistesse olemitesse soovite eksportida Azure Synapse Analytics.
    > [!NOTE]
    > Andmeallikad, mis põhinevad [kaustal Common Data Model](connect-common-data-model.md) ei toetata.
 
@@ -84,7 +84,7 @@ Ekspordi salvestamine ei käivita eksporti kohe.
 
 Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand).
 
-Synapse Analyticsisse eksporditud andmete päringute tegemiseks on vaja **salvestusruumi blob data reader** juurdepääsu ekspordi tööruumi sihtkoha salvestusruumile. 
+Synapse Analyticsisse eksporditud andmete päringute tegemiseks on vaja **salvestusruumi bloobi andmelugeja** juurdepääsu ekspordi tööruumi sihtkoha salvestusruumile. 
 
 ### <a name="update-an-export"></a>Ekspordi värskendamine
 

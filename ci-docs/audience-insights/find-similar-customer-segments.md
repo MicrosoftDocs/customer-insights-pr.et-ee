@@ -1,23 +1,23 @@
 ---
-title: Sarnaste klientide leidmine tehisintellektiga (sisaldab videot)
+title: Sarnaste klientide leidmine tehisintellekti abil (sisaldab videot)
 description: Leidke tehisintellekti abil sarnaseid kliendi segmente.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355240"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561565"
 ---
 # <a name="similar-customers-preview"></a>Sarnased kliendid (eelversioon)
 
@@ -36,6 +36,8 @@ See funktsioon võimaldab tehisintellekti kasutades leida teie kliendibaasist sa
 
 1. Vaadake uue segmendi jaoks soovitatud nimi üle ja muutke vajaduse korral seda.
 
+1. Soovi korral lisage [uuele segmendile sildid](work-with-tags-columns.md#manage-tags).
+
 1. Vaadake üle väljad, mis teie uue segmendi määratlevad. Need väljad määratlevad aluse, mille põhjal süsteem proovib leida teie lähtesegmendile sarnaseid kliente. Süsteem valib vaikimisi soovitatavad väljad.
   Väljad, mis võivad mudeli jõudlust oluliselt vähendada, jäetakse automaatselt kõrvale.
   
@@ -44,9 +46,9 @@ See funktsioon võimaldab tehisintellekti kasutades leida teie kliendibaasist sa
 
 1. Valige, kas soovite kaasata uude segmenti **kõik kliendid** või ainult **kindlas olemasolevas segmendis** olevad kliendid.
 
-1. Välistage lähtesegmendis olevad kliendid, valides märkeruudu **Välista kõik lähtesegmendis olijad**.
-
 1. Vaikimisi soovitab süsteem väljundisse kaasata vaid 20% sihtrühma suurusest. Redigeerige seda lävendit vastavalt vajadusele. Lävendi suurendamine vähendab täpsust.
+
+1. Kaasake kliendid oma lähtesegmendisse, märkides **lisaks sarnaste atribuutidega** klientidele märkeruudu Kaasa liikmed lähtesegmendist.
 
 1. Valige lehe allosas käsk **Käivita**, et käivitada kahendliigituse ülesanne (masinõppe meetod), mis analüüsib andmekomplekti.
 
@@ -67,7 +69,7 @@ Saate [sarnase segmendi väljundiga töötada](segments.md) samamoodi kui teiste
 
 Sarnase segmendi värskendamiseks valige see lehel **Segmendid** ja valige tegevusribal nupp **Värskenda**.
 
-Sarnase segmendi redigeerimine töötleb teie andmeid uuesti. Varem loodud segmenti värskendatakse uuendatud andmetega.    
+Sarnase segmendi redigeerimine töötleb teie andmeid uuesti. Varem loodud segmenti värskendatakse uuendatud andmetega.
 Sarnase segmendi redigeerimiseks valige see lehel **Segmendid** ja valige tegevusribal nupp **Redigeeri**. Rakendage muudatused ja valige töötlemise käivitamiseks käsk **Käivita**.
 
 ## <a name="delete-a-similar-segment"></a>Sarnase segmendi kustutamine
@@ -84,6 +86,5 @@ Kahendliigituse masinõppemudel määrav sarnases segmendis olevatele klientidel
 - Sarnasuse skoorid vahemikus 0,85–1 on kliendid, kelle süsteem liigitas kui *väga sarnased*
 
 Kliente sarnasuse skooriga alla 0,4 ei kaasata mudeli väljundisse. Süsteem ei pea neid lähtesegmendiga piisavalt sarnaseks.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

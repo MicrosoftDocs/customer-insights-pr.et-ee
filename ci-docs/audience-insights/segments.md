@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508561"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529534"
 ---
 # <a name="segments-overview"></a>Segmentide ülevaade
 
@@ -47,24 +47,30 @@ Uue segmendi loomiseks on mitu võimalust.
 
 ## <a name="manage-existing-segments"></a>Olemasolevate segmentide haldamine
 
-Minge lehele **Segmendid** et vaadata ja hallata kõiki oma salvestatud segmente.
+**Avage leht Segmendid**, et vaadata kõiki salvestatud segmente ja neid hallata.
 
 Igat segmenti esindab rida, mis sisaldab segmendi kohta täiendavat teavet.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Valitud segment suvandite ripploendi ja saadaolevate suvanditega.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Valitud segment suvandite ripploendi ja saadaolevate suvanditega." lightbox="media/segments-selected-segment.png":::
 
-Segmendi valimisel on saadaval järgmised tegevused.
+Segmendi valimisel on saadaval järgmised toimingud.
 
 - Segmendi üksikasjade **Vaatamine**, sealhulgas liikmete arvu suundumist, segmendi liikmete ülevaadet.
+- Liikmete loendi **Allalaadimine** CSV-failina.
 - Segmendi **Redigeerimine** atribuutide muutmiseks.
 - Segmendi **Duplikaadi loomine**. Saate selle atribuute kohe redigeerida või lihtsalt duplikaadi salvestada.
 - Segmendi **Värskendamine** viimaste andmete kaasamiseks.
-- Segmendi **Aktiveerimine** või **Desaktiveerimine**. Segmentidel on kaks võimalikku olekut – aktiivne või passiivne. Nendest olekutest on kasu segmendi redigeerimise ajal. Passiivsete segmentide puhul segmendi määratlus on olemus, kuid see ei sisalda ühtegi klienti. Kui aktiveerite segmendi, siis selle olekuks muutub valikult passiivne valikule aktiivne ja see hakkab otsima kliente, mis vastavad segmendi määratlusele. Kui [plaanitud värskendus](system.md#schedule-tab) on konfigureeritud, on passiivsete segmentide **olekuks** **Vahele jäetud**, mis näitab, et värskendamist isegi ei proovitud. Kui passiivne segment aktiveeritakse, värskendatakse seda ja lisatakse plaanitud värskendustesse.
+- Segmendi **Aktiveerimine** või **Desaktiveerimine**. Passiivsete segmentide puhul segmendi määratlus on olemus, kuid see ei sisalda ühtegi klienti. Aktiivne segment otsib kliente, kes vastavad segmendi määratlusele. Kui [plaanitud värskendus](system.md#schedule-tab) on konfigureeritud, on passiivsete segmentide **olekuks** **Vahele jäetud**, mis näitab, et värskendamist isegi ei proovitud. Kui passiivne segment aktiveeritakse, värskendatakse seda ja lisatakse plaanitud värskendustesse.
   Teise võimalusena saate kasutada ripploendi **Aktiveeri/desaktiveeri** funktsiooni **Ajasta hiljem**, et määrata kindla segmendi aktiveerimise ja desaktiveerimise tulevane kuupäev ja kellaaeg.
+- **[Leidke segmendist sarnaseid kliente](find-similar-customer-segments.md)**.
 - Segmendi **Ümbernimetamine**.
+- **Silt** [segmendi siltide](work-with-tags-columns.md#manage-tags) haldamiseks.
 - Liikmete loendi **Allalaadimine** CSV-failina.
 - **Eksportide haldamine** suvand ekspordiga seotud segmendi kuvamiseks ja haldamiseks. [Lisateave eksportide kohta.](export-destinations.md)
 - Segmendi **Kustutamine**.
+- **Veerud** kuvatavate veergude [kohandamiseks](work-with-tags-columns.md#customize-columns).
+- **Filtreerige** siltidel [filtreerimiseks](work-with-tags-columns.md#filter-on-tags).
+- **Otsige nime** segmendi nime järgi otsimiseks.
 
 ## <a name="refresh-segments"></a>Segmentide värskendamine
 
