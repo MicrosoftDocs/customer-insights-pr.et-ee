@@ -1,39 +1,41 @@
 ---
-title: Toote ülevaade
+title: Dynamics 365 Customer Insights toote ülevaade
 author: m-hartmann
-description: Ülevaade Dynamics 365 Customer Insightsi ja selle funktsioonide kohta.
+description: Hankige ülevaade Dynamics 365 Customer Insights ja selle põhifunktsioonid.
 ms.author: mhart
-ms.date: 07/30/2021
+ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
-ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
+ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "8560428"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641895"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insightsi toote ülevaade
 
-[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) on osa Microsofti kliendiandmete platvormist (CDP), mis aitab pakkuda isikupärastatud kliendikogemusi. Platvormi võimalused annavad ülevaateid sellest, kes teie kliendid on ja kuidas nad teie platvormiga suhtlevad. Klientide kohta ülevaate saamiseks koondage kliendiandmed mitmetest andmeallikatest.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) on Microsofti kliendiandmete platvorm (CDP), mis aitab pakkuda isikupärastatud kliendikogemusi. Rakendus pakub terviklikku ülevaadet klientidest, kellel on tasakaalustamata aeg ülevaate saamiseks. Saate oma klientidest kõige põhjalikuma ülevaate, ühendades kliendiandmed reaalajas operatiivsete ja asjade interneti andmetega. Rikastage kliendiprofiile esimese ja kolmanda osapoole andmeallikatega. 
 
-[Sihtrühma ülevaated](audience-insights/overview.md) aitavad teil muuta oma äri klientide keskseks organisatsiooniks. Turundus-, müügi- ja teenindusspetsialistidel on ülevaated, mida nad vajavad kogemuste isikupärastamiseks. 360-kraadise kliendivaate loomiseks ühendage andmed tehingu-, käitumis- ja vaatlusallikatest. Nautige tulemusi kiiremini CDP-ga, mis on mõeldud ülevaadete pakkumiseks, mille põhjal saab tegutseda. 
-
-[Kaasamise ülevaated](engagement-insights/overview.md) olid Customer Insightsi eelvaate võimalus, mis keskendub veebi- ja mobiilisündmuste kogumisele täiendavate ülevaadete saamiseks. Eelvaade lõppes 15. veebruaril 2022.
+Customer Insights aitab teil muuta oma ettevõtte kliendikeskseks organisatsiooniks, andes oma turundus-, müügi- ja teenindusspetsialistidele võimaluse kohandada 1:1 suhtlust skaalal. Käivitusvalmis integreerimist Microsofti ja muude tootjate rakendustega saab kasutada reaalajas ülevaadete aktiveerimiseks, et käivitada sisukaid toiminguid.
  
-## <a name="choose-a-capability"></a>Valige võimalus
+Ühendage andmed tehingu-, käitumis- ja demograafilistest andmeallikatest, et luua 360-kraadiseid kliendivaateid. Tuletage eelnevalt sisseehitatud AI-mudelitega kastivälised ülevaated või ehitage, katsetage ja juurutage kiiresti kohandatud AI/ML mudeleid, kasutades piiramatu ulatusega täiustatud analüüsilahendusi.
 
-:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Kliendiülevaadete leht, mis võimaldab teil navigeerida sihtrühma ülevaadete või kaasamisülevaadeteni.":::
-
-Võimalus valimiseks
-
-1. Valige navigeerimispaanilt **Kõik rakendused**, et avada aken **Vali fookus**.
-1. Kui soovite navigeerida oma valitud võimalustele, valige **Mine kohe**.
+Säilitage täielik kontroll oma kliendiandmete üle, et tagada andmehalduse kõrgeim tase ja vastavus iseteenindusele, ettevõtte tasemel CDP-le, mis on ehitatud rakendusele Microsoft Azure. Toetage isikuandmete kaitse üldmäärust (GDPR) ja muid seadusandlikke nõudeid ja tööstusharu standardeid sisseehitatud privaatsuse, turvalisuse ja juhtimise ning nõusoleku haldamise tööriistade kaudu.
 
 ## <a name="pricing-and-licensing"></a>Hinnad ja litsentsid
+Customer Insights on litsentsitud rentniku kohta ja see hõlmab nii ettevõtjatelt tarbijale (B2C) kui ka ettevõtetevahelistele (B2B) võimalustele. Profiilide ja kontode arvu suurendamiseks saate osta lisavõimsust lisandmooduli litsentsidega.
 
-Customer Insights on litsentsitud rentniku kohta ja sisaldab mitut võimalust. Vaikekvoodi suurendamiseks saate osta veel võimsust ja litsentsi. 
 - [Hinnastamise ülevaade](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
 - Teave võimsusest ja õigustest: [Dynamics 365 litsentsimisjuhend](https://go.microsoft.com/fwlink/?LinkId=866544)
+- [Microsofti hulgilitsentsimise veebisait](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)
+
+## <a name="try-customer-insights-and-get-started"></a>Proovige Customer Insightsi ja alustage
+
+[Alustage täna tasuta Customer Insightsi prooviversiooni](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d), et testida rakendust oma kliendiandmetega. [Vaadake, kuidas saate kiiresti juurde pääseda ja uurida paljusid rakenduse põhifunktsioone](trial-signup.md). 
+
+Sirvige [esiletõstetud õppematerjale](https://dynamics.microsoft.com/ai/customer-insights/resources/), sealhulgas analüütikute aruandeid, tellitavaid veebiseminare ja kliendilugusid.
+
+Siit saate teada, kuidas saate oma klientidest sügavamalt aru saada meie [alustamisjuhendi](get-started.md) abil.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

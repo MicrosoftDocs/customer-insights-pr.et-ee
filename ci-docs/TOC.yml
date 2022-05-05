@@ -2,6 +2,8 @@
   href: index.yml
 - name: Toote ülevaade
   href: overview.md
+- name: Uued ja värskendatud funktsioonid
+  href: whats-new-customer-insights.md
 - name: Õppekataloog
   items:
     - name: Hakkame pihta
@@ -10,7 +12,7 @@
       href: /learn/modules/ingest-data-customer-insights/
     - name: Kliendi koondprofiili loomine
       href: /learn/modules/unified-customer-profile/
-    - name: Vaatajaskonna ülevaadetega töötamine
+    - name: Customer Insightsiga töötamine
       href: /learn/modules/working-with-customer-insights/
     - name: Andmete rikastamine ja ennustuste tegemine
       href: /learn/modules/enrich-data/
@@ -26,266 +28,260 @@
       href: trial-FAQ.md
 - name: Avage oma keskkond
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Sihtrühmaülevaated
+- name: Hakkame pihta
   items:
-    - name: Spikrikeskus
-      href: audience-insights/index.yml
-    - name: Võimaluste ülevaade
-      href: audience-insights/overview.md
-    - name: Uued ja värskendatud funktsioonid
-      href: audience-insights/whats-new-audience-insights.md
-    - name: Hakkame pihta
+    - name: Lühijuhend
+      href: get-started.md
+    - name: Alustage tasulise litsentsiga
+      href: paid-license.md
+    - name: Uue keskkonna loomine
+      href: create-environment.md
+    - name: Kliendiülevaadete uurimine
+      href: home.md
+    - name: Siltide ja veergudega töötamine
+      href: work-with-tags-columns.md
+    - name: Ärikontodega töötamine
+      href: work-with-business-accounts.md
+    - name: Integreerimine Dynamics 365 Marketingiga
+      href: marketing-get-started.md
+- name: Andmeallikad
+  items:
+    - name: Andmeallikate ülevaade
+      href: data-sources.md
+    - name: Andmeallikate lisamine konnektorite kaudu Power Query
+      href: connect-power-query.md
+    - name: Common Data Modeli kausta andmeallikana lisamine
+      href: connect-common-data-model.md
+    - name: Dataverse'i hallatava andmejärve lisamine
+      href: connect-dataverse-managed-lake.md
+    - name: Azure Synapse Analytics lisamine
+      href: connect-synapse.md
+    - name: Andmeallikate rikastamine
+      href: data-sources-enrichment.md
+    - name: Andmeallikate astmeline värskendamine
+      href: incremental-refresh-data-sources.md
+    - name: Reaalajas andmete valmendamine
+      href: real-time-data-ingestion.md
+- name: Andmete koondamine
+  items:
+    - name: Andmete koondamise ülevaade
+      href: data-unification.md
+    - name: Olemite ja atribuutide kaardistamine
+      href: map-entities.md
+    - name: Olemite vastavusseviimine
+      href: match-entities.md
+    - name: Olemite liitmine
+      href: merge-entities.md
+- name: Andmete rikastamine
+  items:
+    - name: Kliendiprofiilide rikastamine
+      href: enrichment-hub.md
+    - name: Kaubamärgid ja huvid
+      href: enrichment-microsoft.md
+    - name: Täiustatud aadressid
+      href: enrichment-enhanced-addresses.md
+    - name: Täiustatud ettevõtte andmed
+      href: enrichment-enhanced-company-data.md
+    - name: Rikasta Azure Maps abil
+      href: enrichment-azure-maps.md
+    - name: Rikasta Dun & Bradstreet'iga
+      href: enrichment-dnb.md
+    - name: Rikastamine ettevõtte HERE Technologies teenusega
+      href: enrichment-here.md
+    - name: Leadspace'iga rikastamine
+      href: enrichment-leadspace.md
+    - name: Rikasta LiveRampiga
+      href: enrichment-liveramp.md
+    - name: Rikastage koos Experian-iga
+      href: enrichment-experian.md
+    - name: Andmetega rikastamine Office 365
+      href: enrichment-office.md
+    - name: Rikastamine SFTP-põhise kohandatud importimise kaudu
+      href: enrichment-SFTP-custom-import.md
+- name: Ühendamata profiilid
+  items:
+    - name: Kliendi koondprofiilide ülevaatamine
+      href: customer-profiles.md
+    - name: Kliendi koondprofiilide filtreerimine
+      href: search-filter-index.md
+    - name: Klienditegevuste määratlemine
+      href: activities.md
+- name: Segmendid
+  items:
+    - name: Segmentide ülevaade
+      href: segments.md
+    - name: Segmentide loomine
+      href: segment-builder.md
+    - name: Mõõtmisepõhised segmendisoovitused
+      href: suggested-segments.md
+    - name: Tegevusepõhised segmendisoovitused
+      href: suggested-segments-activity.md
+    - name: Segmendi ülevaadete hankimine
+      href: segment-insights.md
+    - name: Leia sarnased kliendid
+      href: find-similar-customer-segments.md
+- name: Näitajad
+  items:
+    - name: Meetmete ülevaade
+      href: measures.md
+    - name: Uue mõõdupuu loomine
+      href: measure-builder.md
+    - name: Mõõtmalli kasutamine
+      href: measure-templates.md
+- name: Prognoosid
+  items:
+    - name: Andmete ennustamine tehisintellekti abil
       items:
-        - name: Lühijuhend
-          href: audience-insights/get-started.md
-        - name: Alustage tasulise litsentsiga
-          href: paid-license.md
-        - name: Uue keskkonna loomine
-          href: audience-insights/create-environment.md
-        - name: Sihtrühma ülevaadete vaatamine
-          href: audience-insights/home.md
-        - name: Siltide ja veergudega töötamine
-          href: audience-insights/work-with-tags-columns.md
-        - name: Ärikontodega töötamine
-          href: audience-insights/work-with-business-accounts.md
-    - name: Andmeallikad
+        - name: Prognoosimudelite ülevaade
+          href: predictions-overview.md
+        - name: Kliendi eluea väärtuse (CLV) prognoosimine
+          href: predict-customer-lifetime-value.md
+        - name: Tootesoovituse prognoosimine
+          href: predict-product-recommendation.md
+        - name: Kordustellimuste voolavuse prognoosimine
+          href: predict-subscription-churn.md
+        - name: Tehinguvoolavuse prognoos
+          href: predict-transactional-churn.md
+        - name: Analüüsige klientide tagasisides sisalduvaid tundeid
+          href: sentiment-analysis.md
+        - name: Azure'i masinõppe kohandatud mudelite kasutamine
+          href: custom-models.md
+        - name: Osaliselt puuduvate andmete täiustamine
+          href: predictions.md
+    - name: Näidisjuhendid
       items:
-        - name: Andmeallikate ülevaade
-          href: audience-insights/data-sources.md
-        - name: Andmeallikate lisamine konnektorite kaudu Power Query
-          href: audience-insights/connect-power-query.md
-        - name: Common Data Modeli kausta andmeallikana lisamine
-          href: audience-insights/connect-common-data-model.md
-        - name: Dataverse'i hallatava andmejärve lisamine
-          href: audience-insights/connect-dataverse-managed-lake.md
-        - name: Azure Synapse Analytics lisamine
-          href: audience-insights/connect-synapse.md
-        - name: Andmeallikate rikastamine
-          href: audience-insights/data-sources-enrichment.md
-        - name: Andmeallikate astmeline värskendamine
-          href: audience-insights/incremental-refresh-data-sources.md
-        - name: Reaalajas andmete valmendamine
-          href: audience-insights/real-time-data-ingestion.md
-    - name: Andmete koondamine
+        - name: CLV prognoosi näidisjuhend
+          href: sample-guide-predict-clv.md
+        - name: Tellimusevoolavuse prognoosi näidisjuhend
+          href: sample-guide-predict-subscription-churn.md
+        - name: Tehinguvoolavuse prognoosi näidisjuhend
+          href: sample-guide-predict-transactional-churn.md
+        - name: Tootesoovituse prognoosi näidisjuhend
+          href: sample-guide-predict-product-recommendation.md
+        - name: Eksperimendid Azure’i masinõppega
+          href: azure-machine-learning-experiments.md
+    - name: Prognooside haldamine
+      href: manage-predictions.md
+    - name: Prognoosidel põhinevate segmentide loomine
+      href: prediction-based-segment.md
+- name: Ekspordisuvandid
+  items:
+    - name: Eksportimised
       items:
-        - name: Andmete koondamise ülevaade
-          href: audience-insights/data-unification.md
-        - name: Olemite ja atribuutide kaardistamine
-          href: audience-insights/map-entities.md
-        - name: Olemite vastavusseviimine
-          href: audience-insights/match-entities.md
-        - name: Olemite liitmine
-          href: audience-insights/merge-entities.md
-    - name: Andmete rikastamine
+        - name: Eekspordi ülevaade
+          href: export-destinations.md
+        - name: Aktiivsed kampaaniad
+          href: export-active-campaign.md
+        - name: AdRoll
+          href: export-adroll.md
+        - name: Autopiloot
+          href: export-autopilot.md
+        - name: Azure Blob Storage
+          href: export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: export-azure-data-lake-storage-gen2.md
+        - name: Azure Synapse Analytics
+          href: export-azure-synapse-analytics.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
+        - name: Braze
+          href: export-braze.md
+        - name: Campaign Monitor
+          href: export-campaign-monitor.md
+        - name: Constant Contact
+          href: export-constant-contact.md
+        - name: DotDigital
+          href: export-dotdigital.md
+        - name: Dynamics 365 Marketing
+          href: export-dynamics365-marketing.md
+        - name: Dynamics 365 Sales
+          href: export-dynamics365-sales.md
+        - name: Facebooki reklaamihaldur
+          href: export-facebook.md
+        - name: Google Ads
+          href: export-google-ads.md
+        - name: Iterable
+          href: export-iterable.md
+        - name: Klaviyo
+          href: export-klaviyo.md
+        - name: LinkedIn Ads
+          href: export-linkedin-ads.md
+        - name: LiveRamp
+          href: export-liveramp.md
+        - name: Mailchimp
+          href: export-mailchimp.md
+        - name: Marketo
+          href: export-marketo.md
+        - name: Microsoft Advertising
+          href: export-microsoft-advertising.md
+        - name: Omnisend
+          href: export-omnisend.md
+        - name: RollWorks
+          href: export-rollworks.md
+        - name: Salesforce Marketing Cloud
+          href: export-salesforce.md
+        - name: SendGrid (Saada välja)
+          href: export-sendgrid.md
+        - name: SendInBlue
+          href: export-sendinblue.md
+        - name: Snapchat
+          href: export-snapchat.md
+        - name: SFTP
+          href: export-sftp.md
+    - name: Muud kasutusviisid
       items:
-        - name: Kliendiprofiilide rikastamine
-          href: audience-insights/enrichment-hub.md
-        - name: Kaubamärgid ja huvid
-          href: audience-insights/enrichment-microsoft.md
-        - name: Täiustatud aadressid
-          href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Täiustatud ettevõtte andmed
-          href: audience-insights/enrichment-enhanced-company-data.md
-        - name: Rikasta Azure Maps abil
-          href: audience-insights/enrichment-azure-maps.md
-        - name: Rikastamine ettevõtte HERE Technologies teenusega
-          href: audience-insights/enrichment-here.md
-        - name: Leadspace'iga rikastamine
-          href: audience-insights/enrichment-leadspace.md
-        - name: Rikasta LiveRampiga
-          href: audience-insights/enrichment-liveramp.md
-        - name: Rikastage koos Experian-iga
-          href: audience-insights/enrichment-experian.md
-        - name: Andmetega rikastamine Office 365
-          href: audience-insights/enrichment-office.md
-        - name: Rikastamine SFTP-põhise kohandatud importimise kaudu
-          href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Ühendamata profiilid
-      items:
-        - name: Kliendi koondprofiilide ülevaatamine
-          href: audience-insights/customer-profiles.md
-        - name: Kliendi koondprofiilide filtreerimine
-          href: audience-insights/search-filter-index.md
-        - name: Klienditegevuste määratlemine
-          href: audience-insights/activities.md
-    - name: Segmendid
-      items:
-        - name: Segmentide ülevaade
-          href: audience-insights/segments.md
-        - name: Segmentide loomine
-          href: audience-insights/segment-builder.md
-        - name: Mõõtmisepõhised segmendisoovitused
-          href: audience-insights/suggested-segments.md
-        - name: Tegevusepõhised segmendisoovitused
-          href: audience-insights/suggested-segments-activity.md
-        - name: Segmendi ülevaadete hankimine
-          href: audience-insights/segment-insights.md
-        - name: Leia sarnased kliendid
-          href: audience-insights/find-similar-customer-segments.md
-    - name: Näitajad
-      items:
-        - name: Meetmete ülevaade
-          href: audience-insights/measures.md
-        - name: Uue mõõdupuu loomine
-          href: audience-insights/measure-builder.md
-        - name: Mõõtmalli kasutamine
-          href: audience-insights/measure-templates.md
-    - name: Prognoosid
-      items:
-        - name: Andmete ennustamine tehisintellekti abil
-          items:
-            - name: Prognoosimudelite ülevaade
-              href: audience-insights/predictions-overview.md
-            - name: Kliendi eluea väärtuse (CLV) prognoosimine
-              href: audience-insights/predict-customer-lifetime-value.md
-            - name: Tootesoovituse prognoosimine
-              href: audience-insights/predict-product-recommendation.md
-            - name: Kordustellimuste voolavuse prognoosimine
-              href: audience-insights/predict-subscription-churn.md
-            - name: Tehinguvoolavuse prognoos
-              href: audience-insights/predict-transactional-churn.md
-            - name: Analüüsige klientide tagasisides sisalduvaid tundeid
-              href: audience-insights/sentiment-analysis.md
-            - name: Azure'i masinõppe kohandatud mudelite kasutamine
-              href: audience-insights/custom-models.md
-            - name: Osaliselt puuduvate andmete täiustamine
-              href: audience-insights/predictions.md
-        - name: Näidisjuhendid
-          items:
-            - name: CLV prognoosi näidisjuhend
-              href: audience-insights/sample-guide-predict-clv.md
-            - name: Tellimusevoolavuse prognoosi näidisjuhend
-              href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Tehinguvoolavuse prognoosi näidisjuhend
-              href: audience-insights/sample-guide-predict-transactional-churn.md
-            - name: Tootesoovituse prognoosi näidisjuhend
-              href: audience-insights/sample-guide-predict-product-recommendation.md
-            - name: Eksperimendid Azure’i masinõppega
-              href: audience-insights/azure-machine-learning-experiments.md
-        - name: Prognooside haldamine
-          href: audience-insights/manage-predictions.md
-        - name: Prognoosidel põhinevate segmentide loomine
-          href: audience-insights/prediction-based-segment.md
-    - name: Ekspordisuvandid
-      items:
-        - name: Eksportimised
-          items:
-            - name: Eekspordi ülevaade
-              href: audience-insights/export-destinations.md
-            - name: Aktiivsed kampaaniad
-              href: audience-insights/export-active-campaign.md
-            - name: AdRoll
-              href: audience-insights/export-adroll.md
-            - name: Autopiloot
-              href: audience-insights/export-autopilot.md
-            - name: Azure Blob Storage
-              href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage Gen2
-              href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
-              href: audience-insights/export-azure-synapse-analytics.md
-            - name: Adobe Campaign Standard
-              href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
-              href: audience-insights/export-adobe-experience-platform.md
-            - name: Braze
-              href: audience-insights/export-braze.md
-            - name: Campaign Monitor
-              href: audience-insights/export-campaign-monitor.md
-            - name: Constant Contact
-              href: audience-insights/export-constant-contact.md
-            - name: DotDigital
-              href: audience-insights/export-dotdigital.md
-            - name: Dynamics 365 Marketing
-              href: audience-insights/export-dynamics365-marketing.md
-            - name: Dynamics 365 Sales
-              href: audience-insights/export-dynamics365-sales.md
-            - name: Facebooki reklaamihaldur
-              href: audience-insights/export-facebook.md
-            - name: Google Ads
-              href: audience-insights/export-google-ads.md
-            - name: Iterable
-              href: audience-insights/export-iterable.md
-            - name: Klaviyo
-              href: audience-insights/export-klaviyo.md
-            - name: LinkedIn Ads
-              href: audience-insights/export-linkedin-ads.md
-            - name: LiveRamp
-              href: audience-insights/export-liveramp.md
-            - name: Mailchimp
-              href: audience-insights/export-mailchimp.md
-            - name: Marketo
-              href: audience-insights/export-marketo.md
-            - name: Microsoft Advertising
-              href: audience-insights/export-microsoft-advertising.md
-            - name: Omnisend
-              href: audience-insights/export-omnisend.md
-            - name: RollWorks
-              href: audience-insights/export-rollworks.md
-            - name: Salesforce Marketing Cloud
-              href: audience-insights/export-salesforce.md
-            - name: SendGrid (Saada välja)
-              href: audience-insights/export-sendgrid.md
-            - name: SendInBlue
-              href: audience-insights/export-sendinblue.md
-            - name: Snapchat
-              href: audience-insights/export-snapchat.md
-            - name: SFTP
-              href: audience-insights/export-sftp.md
-        - name: Muud kasutusviisid
-          items:
-            - name: Rakenduse Dynamics 365 kliendikaardi lisandmoodul
-              href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (bot)
-              href: audience-insights/export-teams-bot.md
-            - name: Power Apps
-              href: audience-insights/export-power-apps.md
-            - name: Power Automate
-              href: audience-insights/export-power-automate.md
-            - name: Power BI
-              href: audience-insights/export-power-bi.md
-    - name: Olemid
-      items:
-        - name: Olemitest arusaamine
-          href: audience-insights/entities.md
-        - name: Common Data Modeli olemi skeemide ülevaatamine
-          href: audience-insights/entity-schemas.md
-        - name: Customer Insightsi andmed teenuses Dataverse
-          href: audience-insights/customer-insights-dataverse.md
-        - name: Seoste ja ühendatud olemite loomine
-          href: audience-insights/relationships.md
-        - name: Semantiliste vastenduste määratlemine
-          href: audience-insights/semantic-mappings.md
-    - name: Administreerimine
-      items:
-        - name: Süsteemikonfiguratsiooni seadistamine
-          href: audience-insights/system.md
-        - name: Kasutaja õiguste määramine
-          href: audience-insights/permissions.md
-        - name: Ühenduste ülevaade
-          href: audience-insights/connections.md
-        - name: Mitme keskkonna haldamine
-          href: audience-insights/manage-environments.md
-        - name: Tooge oma Key Vault
-          href: audience-insights/use-azure-key-vault.md
-        - name: Teenindusdirektori abil salvestusruumikontoga ühenduse loomine
-          href: audience-insights/connect-service-principal.md
-        - name: Diagnostikalogide eksportimine
-          href: audience-insights/diagnostics.md
-        - name: Teenusepiirangud
-          href: service-limits.md
-        - name: DSR-õigused ja taotlused
-          href: dsr-rights-requests.md
-    - name: APId
-      items:
-        - name: Common Data Modeli olemi skeemide ülevaatamine
-          href: audience-insights/entity-schemas.md
-        - name: Customer Insightsi andmed teenuses Dataverse
-          href: audience-insights/customer-insights-dataverse.md
-        - name: API-dega töötamine
-          href: audience-insights/apis.md
-        - name: API ülevaade
-          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+        - name: Rakenduse Dynamics 365 kliendikaardi lisandmoodul
+          href: customer-card-add-in.md
+        - name: Microsoft Teams (bot)
+          href: export-teams-bot.md
+        - name: Power Apps
+          href: export-power-apps.md
+        - name: Power Automate
+          href: export-power-automate.md
+        - name: Power BI
+          href: export-power-bi.md
+- name: Olemid
+  items:
+    - name: Olemitest arusaamine
+      href: entities.md
+    - name: Common Data Modeli olemi skeemide ülevaatamine
+      href: entity-schemas.md
+    - name: Customer Insightsi andmed teenuses Dataverse
+      href: customer-insights-dataverse.md
+    - name: Seoste ja ühendatud olemite loomine
+      href: relationships.md
+    - name: Semantiliste vastenduste määratlemine
+      href: semantic-mappings.md
+- name: Administreerimine
+  items:
+    - name: Süsteemikonfiguratsiooni seadistamine
+      href: system.md
+    - name: Turbesätete konfigureerimine
+      href: security-overview.md
+    - name: Kasutaja õiguste määramine
+      href: permissions.md
+    - name: Ühenduste ülevaade
+      href: connections.md
+    - name: Mitme keskkonna haldamine
+      href: manage-environments.md
+    - name: Tooge oma Key Vault
+      href: use-azure-key-vault.md
+    - name: Teenindusdirektori abil salvestusruumikontoga ühenduse loomine
+      href: connect-service-principal.md
+    - name: Diagnostikalogide eksportimine
+      href: diagnostics.md
+    - name: Teenusepiirangud
+      href: service-limits.md
+    - name: DSR-õigused ja taotlused
+      href: dsr-rights-requests.md
+- name: APId
+  items:
+    - name: API-dega töötamine
+      href: apis.md
+    - name: API ülevaade
+      href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
 - name: Nõusoleku haldamine (eelvaade)
   items:
     - name: Spikrikeskus
@@ -306,10 +302,10 @@
           href: consent-management/set-consent-rules.md
     - name: Nõusolekuandmete haldamine
       items:
-        - name: Nõusolekureeglite lubamine vaatajaskonna statistikas
-          href: audience-insights/activate-consent.md
-        - name: Vaikimisi nõusolekureeglite haldamine vaatajaskonna ülevaatesegmentides
-          href: audience-insights/change-default-consent-rules.md
+        - name: Nõusolekureeglite lubamine Customer Insightsis
+          href: activate-consent.md
+        - name: Nõusoleku vaikereeglite haldamine Customer Insightsi segmentides
+          href: change-default-consent-rules.md
     - name: Sätete ja kasutajate haldamine
       items:
         - name: Süsteemisätete konfigureerimine
@@ -320,7 +316,5 @@
       items:
         - name: Nõusolekuandmetega ennustuste loomine
           href: consent-management/predictions-consent-data.md
-- name: Kaasamisülevaated (eelversioon)
-  href: engagement-insights/overview.md
 - name: Hangi tuge
   href: /power-platform/admin/get-help-support

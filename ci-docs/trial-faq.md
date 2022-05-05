@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229490"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641803"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights’i prooviversiooni KKK
 
@@ -23,7 +23,7 @@ ms.locfileid: "8229490"
 
 See rakendus on pilvepõhine teenus, mis ei nõua spetsiaalset tarkvara peale ajakohase veebibrauseri, kuigi mõned piirangud siiski rakenduvad. Parima prooviversiooni kogemuse jaoks vältige sisenemist proovisaidile inkognito režiimis ja valige teile kõige lähima prooviversiooni asukoht. [Lisateave veebirakenduse nõuete kohta.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kuidas registreeruda prooviversioonile ilma üürnikuta Microsoft 365?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kuidas registreeruda prooviversiooni kasutajaks ilma Microsoft 365 rentnikuta?
 
 Saate sisestada muu kui tööga seotud meiliaadressi ning me loome teile konto ja rentniku.
 
@@ -42,7 +42,7 @@ Kui registreerute prooviversiooni kasutajaks, saadetakse teile e-kiri proovivers
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Kuidas saan prooviversiooni rohkem kasutajaid lisada?
 
-Kasutajate lisamiseks minge [Microsoft 365 halduskeskusesse](https://admin.microsoft.com), kasutades prooviversiooni administraatori kontot. Kasutajate lisamiseks (maksimaalselt prooviversiooni litsentsile kehtestatud piirarvu järgi) järgige [halduskeskuse juhiseid](/microsoft-365/admin/add-users/add-users). Kui lisamisel oleval kasutajal Microsoft 365 on juba konto, määrake talle proovimis asjakohane turberoll. Lisateavet vt teemast [Turberoll määramine kasutajale](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Kasutajate lisamiseks minge [Microsoft 365 halduskeskusesse](https://admin.microsoft.com), kasutades prooviversiooni administraatori kontot. Kasutajate lisamiseks (maksimaalselt prooviversiooni litsentsile kehtestatud piirarvu järgi) järgige [halduskeskuse juhiseid](/microsoft-365/admin/add-users/add-users). Kui lisataval kasutajal Microsoft 365 on juba konto, määrake talle prooviorganisatsioonis sobiv turberoll. Lisateavet leiate teemast [Kasutajale turberoll määramine](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Mitu kasutajat saab proovikeskkonda lisada?
 
@@ -62,13 +62,13 @@ Prooviversiooni saate rakenduse sees laiendada. Saate prooviversiooni ühe korra
 
 Üldiselt soovitame Customer Insights tasulisele versioonile üleminekul alustada värskelt oma andmetega. 
 
-Kui kasutate vaid sihtrühma ülevaateid, saate Customer Insights ostmise korral kopeerida andmed proovikeskkonnast. Sätete proovikeskkonnast tasulisesse keskkonda migreerimiseks peate olema Customer Insightsi prooviversiooni administraator ja rentniku üldadministraator Microsoft 365 või oma asutuse Dynamics 365 administraator. 
+Soovi korral, kui kasutate ainult Customer Insightsi, saate kopeerida oma andmed proovikeskkonnast, kui ostate Customer Insightsi. Sätete migreerimiseks proovikeskkonnast tasulisesse keskkonda peate olema Customer Insightsi prooviversiooni administraator ja rentniku Microsoft 365 üldadministraator või dynamics 365 administraator teie asutuses. 
 
-Pärast esmakordset Customer Insights -i tasulisesse eksemplari sisselogimist palutakse teil luua uus keskkond. Selle protsessi käigus saate kopeerida konfiguratsiooni olemasolevast keskkonnast ja migreerida enamiku sätetest. Kui teil on ülal nimetatud õigused, kuvatakse selles loendis proovikeskkond. Lisateavet leiate teemast [Keskkonna konfiguratsiooni kopeerimine](audience-insights/manage-environments.md#copy-the-environment-configuration).
+Pärast esmakordset Customer Insights -i tasulisesse eksemplari sisselogimist palutakse teil luua uus keskkond. Selle protsessi käigus saate kopeerida konfiguratsiooni olemasolevast keskkonnast ja migreerida enamiku sätetest. Kui teil on ülal nimetatud õigused, kuvatakse selles loendis proovikeskkond. Lisateavet leiate teemast [Keskkonna konfiguratsiooni kopeerimine](manage-environments.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Millised on prooviversiooni piirangud ja kvoodid?
 
-- Oma Azure Data Lake'i salvestuskontot ei saa kasutada väljundandmete talletuse salvestamiseks sihtrühma ülevaadete prooviversiooni ajal. Siiski saate andmeid tuua Data Lake Storage -i kontolt.
+- Customer Insightsi prooviversiooni ajal väljundandmete talletamiseks ei saa kasutada oma Azure Data Lake'i salvestuskontot. Siiski saate andmeid tuua Data Lake Storage -i kontolt.
 - Saate talletada kuni 3 GB andmeid Dataverse-i keskkonnas, mis luuakse automaatselt Customer Insights'i prooviversiooni käivitamisel.
 
 ## <a name="customer-insights-specific-questions"></a>Konkreetsed küsimused Customer Insights’i kohta
@@ -81,7 +81,7 @@ Pärast prooviversiooni kasutajaks registreerimist jõuate rakenduse põhikuvale
 
 Enamik Customer Insights'i võimaluste funktsioone on saadaval prooviversioonis.
 
-Järgmised funktsioonid pole **saadaval**. 
+Järgmised funktsioonid **pole saadaval**. 
 - Te ei saa luua uusi keskkondi, mis kasutavad teie enda Azure Data Lake salvestuskontot.
 - Proovikeskkonda ei saa kustutada. 
 
