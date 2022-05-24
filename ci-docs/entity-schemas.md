@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642665"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757427"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Olemi skeemid ühises andmemudelis
 
@@ -23,7 +23,7 @@ ms.locfileid: "8642665"
 
 Jagatud andmemudel muudab rakenduste ja andmete lõimijate koostöö lihtsamaks, tagades ühtse andmemääratluse. Ühine andmemudel sisaldab rikkalikku metaandmete süsteemi standardsete olemite, seoste, hierarhiate, tunnuste ja muuga. See pärineb Dynamics 365 rakendustest ning on GitHubis avaliku allikana, kus on üle 260 standardolemi. Üldise andmemudeli tööstuspõhiseid kontseptsioone täiendab suur sise- ja välispartnerite süsteem.
 
-Tänapäeval rakendavad Common Data Modelit mitmesugused süsteemid ja platvormid, sh Power BI andmevood ja Azure Data Services. See on juba toetatud rakenduses Microsoft Dataverse, Dynamics 365, Power Apps -is, Power BI -is ja eelseisvates Azure'i andmeteenustes, mis lisavad väärtust [Avatud Andmeinitsatiivile](https://www.microsoft.com/open-data-initiative).
+Tänapäeval rakendavad Common Data Modelit mitmesugused süsteemid ja platvormid, sh Power BI andmevood ja Azure Data Services. See on juba toetatud rakenduses Microsoft Dataverse, Dynamics 365, Power Apps -is, Power BI -is ja eelseisvates Azure'i andmeteenustes, mis lisavad väärtust [Avatud Andmeinitsatiivile](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Customer Insightsi olemi skeemid
 

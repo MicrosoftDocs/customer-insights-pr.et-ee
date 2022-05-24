@@ -12,18 +12,18 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653563"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740898"
 ---
 # <a name="user-permissions"></a>Kasutajaõigused
 
 Lehel **Õigused** saate seadistada rollid ja õigused Customer Insightsi kasutamiseks.
 
-Lehe nägemiseks peavad teil olema administraatori õigused. Õiguste lehele juurdepääsemiseks avage **veebisait AdminSecurityUsers** > **·** > **·**.
+Lehe nägemiseks peavad teil olema administraatori õigused. Õiguste lehele juurdepääsemiseks avage **administraatori** > **turbekasutajad** > **·**.
 
 Rolle on kolme tüüpi.
 
@@ -41,7 +41,7 @@ Rolle on kolme tüüpi.
 
 - Kõik vaatajatele saadaval õigused.
 - Laadige ja teisendage andmeid lehel **Andmeallikad**.
-- Viige lõpule *andmete koondamise* jaotised (**vastendamine**, **vastavusseviimine** ja **ühendamine**), mis loovad koondatud kliendiprofiili olemi.
+- Täielik ***andmete ühendamine**, mille tulemuseks on ühtne kliendiprofiili olem.
 - Määratlege **Suhted** ja **Tegevused**.
 - Looge segmente lehel **Segmendid**.
 - Mõõtude loomine lehe **Mõõdud** abil.
@@ -69,7 +69,7 @@ Rolle on kolme tüüpi.
 
 ## <a name="assign-roles-and-permissions"></a>Rollide ja õiguste määramine
 
-1. **Avage adminSecurity** > **·** > **Users***.
+1. **Avage administraatori** > **turbe** > **Kasutajad***.
 
 1. Valige **Lisa kasutajad**, et avada paan **Õiguste lisamine/redigeerimine**.
 
@@ -79,7 +79,7 @@ Rolle on kolme tüüpi.
 
 ## <a name="view-current-permissions"></a>Vaadake praeguseid õigusi
 
-**Avage veebisait AdminSecurityUsers** > **·** > **·**, et näha, millised rollimääramised on praegu aktiivsed.
+**Avage administraatori** > **turbekasutajad** > **·**, et näha, millised rollimääramised on praegu aktiivsed.
 
 - Veerg **Tüüp** määrab ühe kasutaja, rühma või rakenduse. Süsteem toetab üksikuid kasutajaid ja rühmi.
 - Rollid on määratletud veerus **Roll**.

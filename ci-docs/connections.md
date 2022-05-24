@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642645"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755304"
 ---
 # <a name="connections-preview-overview"></a>Ühenduste (eelversioon) ülevaade
 
@@ -24,15 +24,15 @@ ms.locfileid: "8642645"
 
 Minge **Administraator** > **Ühendused**, et luua ja vaadata ühendusi.
 
-Vahekaardil **Ühendused** kuvatakse kõik aktiivsed ühendused. Loendis kuvatakse rida iga ühenduse jaoks. 
+Vahekaardil **Ühendused** kuvatakse kõik aktiivsed ühendused. Loendis kuvatakse rida iga ühenduse jaoks.
 
 Vaadake vahekaardil **Avastamine** kiirülevaadet, kirjeldust ja saate teada, mida iga laiendatavuse suvandiga teha.
 
-### <a name="exports"></a>Eksportimised
+## <a name="exports"></a>Eksportimised
 
 Uusi ühendusi saavad konfigureerida ainult administraatorid, kuid nad saavad anda kaastöötajatele juurdepääsu olemasolevate ühenduste kasutamiseks. Administraatorid määravad, kuhu andmed võivad minna, kaastöötajad määratlevad koormuse ja sageduse, mis nende vajadustele vastab. Lisateavet leiate teemast [Luba toetajatel kasutada ühendust ekspordi jaoks](#allow-contributors-to-use-a-connection-for-exports).
 
-### <a name="enrichments"></a>Rikastamised
+## <a name="enrichments"></a>Rikastamised
 
 Uusi ühendusi saavad konfigureerida ainult administraatorid, kuid loodud ühendused on alati saadaval nii administraatoritele kui ka kaastöötajatele. Administraatorid haldavad volitusi ja nõustuvad andmete edastamisega. Ühendusi saavad seejärel kasutada rikastamiseks nii administraatorid kui ka kaastöötajad.
 
@@ -46,9 +46,9 @@ Uusi ühendusi saavad konfigureerida ainult administraatorid, kuid loodud ühend
 
 1. Valige uue ühenduse loomiseks **Lisa ühendus**. Valige ripploendist, millist tüüpi ühendust soovite luua.
 
-1. Sisestage **Loo ühendus** seadistuse paanil nõutavad üksikasjad. 
+1. Sisestage **Loo ühendus** seadistuse paanil nõutavad üksikasjad.
    1. **Kuva nimi** ja ühenduse tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
-   1. Täpsed väljad sõltuvad teenusest, millega loote ühenduse. Saate teavet konkreetse ühendusetüübi kohta sihtteenuse artklis.
+   1. Täpsed väljad sõltuvad sellest, millise teenusega ühenduse loote. Saate teavet konkreetse ühendusetüübi kohta sihtteenuse artklis.
    1. Kui [kasutate oma võtmehoidlat](use-azure-key-vault.md) saladuste salvestamiseks, aktiveerige **Kasutage võtmehoidlat** ja valige loendist saladus.
 
 1. Uue ühenduse loomiseks valige **Salvesta**.
@@ -59,7 +59,7 @@ Samuti saate valida vahekaardi **Tuvastamine** paanil suvandi **Häälestamine**
 
 Ekspordiühenduse seadistamisel või redigeerimisel saate valida, millistel kasutajatel on lubatud kasutada seda kindlat ühendust [ekspordi](export-destinations.md)määratlemiseks. Vaikimisi on ühendus saadaval administraatorirollis kasutajatele. Saate seda sätet muuta jaotises **Valige, kes saab seda ühendust kasutada** ja lubada kaastöötaja rollis kasutajatel seda ühendust kasutada.
 
-- Kaastöötajad ei saa ühendust vaadata ega redigeerida. Nad näevad ekspordi loomisel ainult kuvatavat nime ja selle tüüpi.
+- Kaastöötajad ei saa ühendust vaadata ega redigeerida. Ekspordi loomisel näevad nad ainult kuvatavat nime ja selle tüüpi.
 - Ühenduse jagamisel lubate kaastöötajatel ühendust kasutada. Kaastöötajad näevad ekspordi seadistamisel ühisühendusi. Nad saavad hallata igat eksporti, mis kasutab seda kindlat ühendust.
 - Saate seda sätet muuta, hoides ekspordi alles, mille kaastöötajad on juba määratlenud.
 
@@ -77,7 +77,7 @@ Ekspordiühenduse seadistamisel või redigeerimisel saate valida, millistel kasu
 
 ## <a name="remove-a-connection"></a>Eemaldage ühendus
 
-Kui eemaldatav ühendus on kasutusel rikastamise või ekspordi puhul, peate need esmalt lahti võtma või eemaldama. Eemaldamise dialoog juhendab teid vastavalt rikastamise või eksportimise osas. 
+Kui eemaldatavat ühendust kasutab rikastamine või eksport, peate need kõigepealt eemaldama või eemaldama. Eemaldamise dialoog juhendab teid vastavalt rikastamise või eksportimise osas.
 
 Eraldatud rikastamine ja eksport muutuvad passiivseks. Aktiveerite need uuesti, lisades neile teise ühenduse [Rikastamised](enrichment-hub.md) või [Ekspordid](export-destinations.md) lehel.
 
@@ -91,7 +91,7 @@ Eraldatud rikastamine ja eksport muutuvad passiivseks. Aktiveerite need uuesti, 
 
    1. Kui seda ühendust kasutatakse rikastamiseks või eksportimiseks, valige nupp, et näha, mis seda ühendust kasutab.
       - **Eksport:** Ühenduse eemaldamiseks saate ekspordi eemaldada või katkestada. Ekspordi katkestamiseks saavad administraatorid kasutada **Katkesta** toimingut. See toiming on saadaval nii üksik- kui ka mitme ekspordi jaoks. Ühenduse katkestamisel säilitate ekspordikonfiguratsiooni, kuid seda ei käitata enne, kui failile on lisatud mõni muu ühendus.
-      - **Rikastamine:** Ühenduse eemaldamiseks saate rikastamise deaktiveerida või eemaldada. 
+      - **Rikastamine:** Ühenduse eemaldamiseks saate rikastamise deaktiveerida või eemaldada.
    1. Kui ühendusel pole rohkem sõltuvusi, minge tagasi **Administraator** > **Ühendused** ja proovige ühendus uuesti eemaldada.
 
 1. Valige käsk **Eemalda**, et kinnitada kustutamine.

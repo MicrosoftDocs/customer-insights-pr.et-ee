@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 1dd99edc327bd41b0442b390f2e4f8664269f553
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642655"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739157"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Ühendu Azure Data Lake Storage kontoga Azure teenuse subjekti abil
 
@@ -40,7 +40,7 @@ Enne Customer Insightsi jaoks uue hooldusdirektori loomist kontrollige, kas see 
 
 3. Valige jaotises **Halda** suvand **Ettevõtterakendused**.
 
-4. Otsige Microsofti rakenduse ID-d `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` nimega `Dynamics 365 AI for Customer Insights`.
+4. Lisage filter rakenduse ID **alustamiseks**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` või nime `Dynamics 365 AI for Customer Insights` otsimiseks.
 
 5. Kui leiate vastava kirje, tähendab see, et teenuse subjekt on juba olemas. 
    

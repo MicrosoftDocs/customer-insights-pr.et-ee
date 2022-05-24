@@ -1,23 +1,22 @@
 ---
 title: Segmentide nõusolekureeglite aktiveerimine
 description: Järgige neid juhiseid nõusolekuandmete linkimiseks ja nõusolekukontrollide aktiveerimiseks rakenduses Dynamics 365 Customer Insights. Administraator saab keelata ka nõusolekukontrollid.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642525"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755165"
 ---
 # <a name="activate-consent-rules"></a>Nõusolekureeglite aktiveerimine
 
-Nõusolekukeskus [(eelvaade)](consent-management/overview.md) aitab teil ühtlustada erinevatest allikatest pärinevaid nõusolekuandmeid. Nõusoleku vaikekontrollide rakendamiseks kasutage ühtset *nõusolekuolemit*. Pärast nõusolekuandmete importimist nõusolekukeskusesse ja andmete *reeglite konfigureerimist sünkroonitakse olem Nõusolek* automaatselt rakendusega Dynamics 365 Customer Insights.
+Nõusolekukeskus [(eelvaade)](consent-management/overview.md) aitab teil ühtlustada erinevatest allikatest pärinevaid nõusolekuandmeid. Nõusoleku vaikekontrollide rakendamiseks kasutage ühtset *nõusolekuolemit*. Pärast nõusolekuandmete importimist ja kaardireeglite *konfigureerimist sünkroonitakse olem Nõusolek* automaatselt rakendusega Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Nõusolekukontrollide lubamine
 

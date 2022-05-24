@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642784"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741036"
 ---
 # <a name="manage-environments"></a>Keskkondade haldamine
 
@@ -44,7 +44,7 @@ Keskkonna sätete kohta leiate lisateavet teemast [Uue keskkonna loomine](create
    
 **Microsoft Dataverse** etapp lubab teil Customer Insights'i oma Dataverse keskkonnaga ühendada. 
 
-Pakkuge oma Microsoft Dataverse keskkonda, et jagada andmeid (profiile ja ülevaateid) ärirakendustega, mis põhinevad rakendusel Dataverse(nt Dynamics 365 Marketing või mudelipõhised rakendused Power Apps rakenduses ).
+Pakkuge oma Microsoft Dataverse keskkonda, et jagada andmeid (profiile ja ülevaateid) ärirakendustega, mis põhinevad rakendusel Dataverse(nt Dynamics 365 Marketing või mudelipõhised rakendused rakenduses )Power Apps.
 
 Kui soovite kasutada [karbist välja ennustamise mudeleid](predictions-overview.md#out-of-box-models), siis konfigureerige andmete ühiskasutus rakendusega Dataverse. Võite ka lubada asutusesisestest allikatest pärinevad andmed, pakkudes teie Microsoft Dataverse organisatsiooni hallatava keskkonna URL-i.
 
@@ -53,7 +53,7 @@ Andmejagamise lubamine andmejagamisruudu valimisega Microsoft Dataverse käivita
 > [!IMPORTANT]
 > 1. Customer Insights ja Dataverse andmete jagamise lubamiseks peab see olema samas piirkonnas.
 > 1. Teil peab olema keskkonnas üldadministraatori Dataverse roll. Kontrollige, kas see [Dataverse keskkond on seotud](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) teatud turberühmadega, ja veenduge, et teid lisatakse nendesse turberühmadesse.
-> 1. Ükski olemasolev Customer Insightsi keskkond pole selle Dataverse keskkonnaga juba seotud. Siit saate teada, [kuidas olemasolevat ühendust keskkonnaga Dataverse eemaldada](#remove-an-existing-connection-to-a-dataverse-environment).
+> 1. Ükski olemasolev Customer Insightsi keskkond pole selle Dataverse keskkonnaga juba seotud. Siit saate teada, [kuidas olemasolevat ühendust keskkonnaga Dataverse](#remove-an-existing-connection-to-a-dataverse-environment) eemaldada.
 
 :::image type="content" source="media/dataverse-enable-datasharing.png" alt-text="Konfigureerimissuvandid andmete jagamise lubamiseks Microsoft Dataverse abil.":::
 
@@ -113,7 +113,7 @@ Keskkonnaga Dataverse ühenduse loomisel tähendab tõrketeade **See CDS-organis
 VÕI 
 
 1. Avage oma Dataverse keskkond.
-1. Avage täpsemad **sättedSolutions** > **·**.
+1. Avage täpsemate **sätete** > **lahendused**.
 1. Desinstallige **CustomerInsightsCustomerCard** lahendus.
 
 ## <a name="copy-the-environment-configuration"></a>Kopeerige keskkonna konfiguratsioon
@@ -127,10 +127,10 @@ Näete teie ettevõtte kõigi saadaolevate keskkondade loendit, kust saate andme
 Kopeeritakse järgmised konfiguratsioonisätted.
 
 - Valmendatud/imporditud andmeallikad
-- Andmete ühtlustamiskonfiguratsioon (kaardistamine, vastendamine, ühendamine)
+- Andmete ühendamise konfiguratsioon
 - Segmendid
-- Meetmed
-- Seosed
+- Näitajad
+- Suhtlused
 - Tegevused 
 - Otsingu ja filtri register
 - Ekspordisihtkohad
@@ -158,7 +158,7 @@ Pärast andmeallikate värskendamist avage jaotis **Andme** > **Ühendamine**. S
 
 Kui andmete ühendamine on lõpetatud, avage **Meetmed** ja **Segmendid**, et neid samuti värskendada.
 
-Enne ekspordi ja rikastamise taasaktiveerimist minge **adminconnections'i** > **·**, et taastada ühendused uues keskkonnas.
+Enne ekspordi ja rikastamise taasaktiveerimist avage **administraatoriühendused** > **·**, et taastada ühendused uues keskkonnas.
 
 ## <a name="change-the-owner-of-an-environment"></a>Keskkonna omaniku muutmine
 

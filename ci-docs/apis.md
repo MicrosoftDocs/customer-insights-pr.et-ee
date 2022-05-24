@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642614"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755445"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insightsi API-dega töötamine
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights pakub API-sid oma rakenduste ehitamiseks, lähtud
 > [!IMPORTANT]
 > Nende API-de üksikasjad on toodud [Customer Insights API-de ülevaade](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Need sisaldavad lisateavet toimingute, parameetrite ja vastuste kohta.
 
-Selles artiklis kirjeldatakse, kuidas pääseda juurde Customer Insights API-dele, luua Azure'i rakenduse registreerimine ja alustada saadavalolevate klienditeekidega.
+Selles artiklis kirjeldatakse, kuidas pääseda juurde Customer Insightsi API-dele, luua Azure'i rakenduse registreerimine ja alustada klienditeekidega.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Customer Insightsi API-de proovimise alustamine
 
@@ -83,13 +83,13 @@ Saate kasutada selle rakenduse registreeringu rakenduse/kliendi ID-d Microsofti 
 
 Lisateavet MSAL kohta leiate teemast [Microsofti autentimisteegi (MSAL) ülevaade](/azure/active-directory/develop/msal-overview).
 
-Azure'is rakenduse registreerimise kohta leiate lisateavet teemast [Rakenduse registreerimine](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Azure'is rakenduse registreerimise kohta leiate lisateavet teemast [Rakenduse registreerimine](/graph/auth-register-app-v2).
 
 Lisateavet API-de kasutamise kohta meie klienditeekides leiate teemast [Customer Insights klienditeegid](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Serverist serverisse rakenduse õigused
 
-[Rakenduse registreerimise jaotises](#create-a-new-app-registration-in-the-azure-portal) kirjeldatakse, kuidas registreerida rakendus, mis nõuab kasutajalt autentimiseks sisselogimist. Siit leiate teavet selle kohta, kuidas luua rakenduse registreering, mis ei vaja kasutaja sekkumist ja mida saab serveris käitada.
+[Rakenduse registreerimise jaotises](#create-a-new-app-registration-in-the-azure-portal) kirjeldatakse, kuidas registreerida rakendus, mis nõuab kasutajalt autentimiseks sisselogimist. Siit saate teada, kuidas luua rakenduse registreerimine, mis ei vaja kasutajate suhtlemist ja mida saab serveris käitada.
 
 1. Minge Azure'i portaalis oma rakenduse registreeringus jaotisse **API õigused**.
 
@@ -112,6 +112,10 @@ Lisateavet API-de kasutamise kohta meie klienditeekides leiate teemast [Customer
    Avage Customer Insights, minge jaotisse **Haldus** > **Õigused** ja valige **Lisa kasutaja**.
 
 1. Otsige oma rakenduse registreeringu nime, valige see otsingutulemustest ja valige **Salvesta**.
+
+## <a name="sample-queries"></a>Näidispäringud
+
+Oleme koostanud lühikese loendi OData näidispäringutest, et töötada API-dega: [OData päringu näited](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insightsi klienditeegid
 
@@ -137,7 +141,7 @@ Teave selle kohta, kuidas alustada C# klienditeekide kasutamist, leiate aadressi
 
 1. Kasutage [Microsofti autentimisteeki (MSAL)](/azure/active-directory/develop/msal-overview), et saada `AccessToken`, kasutades oma olemasolevat [Azure'i rakenduse registreeringut](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Pärast loa edukat autentimist ja omandamist ehitage uus või kasutage olemasolevat koos täiendava DefaultRequestHeaders "Authorization"`HttpClient` komplektiga **Bearer "access token"** ja **Ocp-Apim-Subscription-Key**, mis on seatud teie Customer Insightsi keskkonna **tellimisvõtmele**[**.**](#get-started-trying-the-customer-insights-apis)   
+1. Pärast loa edukat autentimist ja omandamist ehitage uus või kasutage olemasolevat, mille `HttpClient` vaikerequestHeadersi "Autoriseerimine"**on seatud Bearerile**"juurdepääsuluba"**ja** Ocp-Apim-Subscription-Key **komplektile tellimuse võtmele**[**teie Customer Insightsi keskkonnast**.](#get-started-trying-the-customer-insights-apis)   
  
    Vajadusel lähtestage päis **Autoriseerimine**. Näiteks kui luba on aegunud.
 
@@ -147,7 +151,7 @@ Teave selle kohta, kuidas alustada C# klienditeekide kasutamist, leiate aadressi
 
 1. Helistage kliendiga "laiendusmeetoditele" - näiteks `GetAllInstancesAsync`. Kui eelistate juurdepääsu aluseks olevale üksusele `Microsoft.Rest.HttpOperationResponse`, kasutage „http message methods“, näiteks meetodit `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Vastus tüüp on tõenäoliselt `object`, kuna meetod võib tagastada mitut tüüpi (nt `IList<InstanceInfo>` ja `ApiErrorResult`). Vastusetüübi kontrollimiseks saate objektid ohutult teisendada toimingu vastusetüüpideks, mida kirjeldatakse [API üksikasjade lehel](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights).    
+1. Vastus tüüp on tõenäoliselt `object`, kuna meetod võib tagastada mitut tüüpi (nt `IList<InstanceInfo>` ja `ApiErrorResult`). Tagastustüübi kontrollimiseks kasutate selle toimingu api üksikasjade lehel [määratud](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) vastusetüüpides olevaid objekte.    
    
    Kui päringu kohta on vaja rohkem teavet, kasutage **http-sõnumi meetodeid**, et pääseda juurde töötlemata vastuseobjektile.
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642783"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740714"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Täitke oma osalised andmed ennustustega (aegunud)
 
@@ -37,13 +37,13 @@ Enne kui teie organisatsioon saab prognooside funktsiooni kasutada, peavad olema
 
 1. Sinu organisatsioonil on näide [seadista Microsoft Dataverse-is](/ai-builder/build-model#prerequisites) ja see on Customer Insights -iga samas organisatsioonis.
 
-2. Teie publiku ülevaate keskkond on lisatud teie Dataverse eksemplarile.
+2. Teenuse Customer Insights keskkond on lisatud teie teenuse Dataverse eksemplarile.
 
 Lisateavet leiate teemast [Uue keskkonna loomine](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Prognoosi loomine kliendiolemis
 
-1. Minge jaotisse **DataEntities** > **·**.
+1. **Avage andmeolemid** > **·**.
 
 2. Valige olem **Klient**.
 
@@ -91,7 +91,7 @@ Selle voo osana saate valida kindla atribuudi, mis põhineb teie segmendil (nt k
 
 ## <a name="view-a-prediction"></a>Prognoosi kuvamine
 
-1. **Minge IntelligencePredictionsMi** > **·** > **ennustuste juurde**.
+1. Mine luure **ennustuste** > **juurde** > **Minu ennustused**.
 
 2. Valige prognoos, mille soovite üle vaadata.
 
@@ -108,7 +108,7 @@ Selle voo osana saate valida kindla atribuudi, mis põhineb teie segmendil (nt k
 
 ## <a name="update-a-prediction"></a>Prognoosi värskendamine
 
-1. **Minge IntelligencePredictionsMi** > **·** > **ennustuste juurde**.
+1. Mine luure **ennustuste** > **juurde** > **Minu ennustused**.
 
 2. Valige prognoos, mida soovite värskendada, ja seejärel ikoon **Värskenda**.
 
@@ -118,7 +118,7 @@ Selle voo osana saate valida kindla atribuudi, mis põhineb teie segmendil (nt k
 
 Pärast prognoos loomist saate mudeli AI Builder kohandada, et suurendada oma mudeli tõhusust.  
 
-1. **Minge IntelligencePredictionsMi** > **·** > **ennustuste juurde**.
+1. Mine luure **ennustuste** > **juurde** > **Minu ennustused**.
 
 2. Valige prognoos, mida soovite redigeerida.
 
@@ -135,7 +135,7 @@ Teie prognoosi järgmiseks käivitamiseks kasutatakse teie loodud värskendatud 
 
 ## <a name="remove-a-prediction"></a>Prognoosi eemaldamine
 
-1. **Minge IntelligencePredictionsMi** > **·** > **ennustuste juurde**.
+1. Mine luure **ennustuste** > **juurde** > **Minu ennustused**.
 
 2. Valige prognoos, mille soovite kustutada.
 

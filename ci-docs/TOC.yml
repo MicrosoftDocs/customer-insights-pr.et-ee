@@ -66,12 +66,18 @@
   items:
     - name: Andmete koondamise ülevaade
       href: data-unification.md
-    - name: Olemite ja atribuutide kaardistamine
+    - name: Lähteväljade valimine
       href: map-entities.md
-    - name: Olemite vastavusseviimine
+    - name: Duplikaatkirjete eemaldamine
+      href: remove-duplicates.md
+    - name: Sobitamise tingimused
       href: match-entities.md
-    - name: Olemite liitmine
+    - name: Kliendiväljade ühendamine
       href: merge-entities.md
+    - name: Andmete ühendamise ülevaatamine
+      href: review-unification.md
+    - name: Ühendamissätete värskendamine
+      href: data-unification-update.md
 - name: Andmete rikastamine
   items:
     - name: Kliendiprofiilide rikastamine
@@ -282,6 +288,8 @@
       href: apis.md
     - name: API ülevaade
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: OData näidispäringud
+      href: odata-examples.md
 - name: Nõusoleku haldamine (eelvaade)
   items:
     - name: Spikrikeskus

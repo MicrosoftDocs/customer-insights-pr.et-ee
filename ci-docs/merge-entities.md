@@ -1,188 +1,168 @@
 ---
-title: Olemite ühendamine andmete koondamise ajal
+title: Kliendi- või kontoväljade ühendamine
 description: Ühendage olemid, et luua koondatud kliendiprofiile.
-ms.date: 01/28/2022
+recommendations: false
+ms.date: 05/04/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
-- ci-match
 - ci-merge
+- ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 978a7c9bc440398fa39e9fa1d366d74e5c7aaea0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642892"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740852"
 ---
-# <a name="merge-entities"></a>Olemite liitmine
+# <a name="unify-customer-fields"></a>Kliendiväljade ühendamine
 
-Liitmine on andmete ühendamise viimane etapp. Selle eesmärk on vastavusse viia vastuolus andmed. Vastuolulisteks andmeteks võivad olla kahes andmebaasis olev kliendi nimi, mida näidatakse veidi erinevalt (võrrelge: „Grant Marshall“ ja „Grant Marshal“) või erinevas vormingus telefoninumber (võrrelge: 617-803-091X ja 617803091X). Nende vastuoluliste andmepunktide liitmine toimub järgmisel alusel: atribuut atribuudi järel.
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-:::image type="content" source="media/merge-fields-page.png" alt-text="Ühenda leht andmete ühtsustamise protsessiga näidates tabelit koos ühendatud väljadega, mis defineerivad ühendatud kliendiprofiili.":::
+Selles ühendamisprotsessi etapis valige ja välistage atribuudid, mis ühinevad teie ühtse profiili olemiga. Näiteks kui kolmel olemil olid meiliandmed, võiksite säilitada kõik kolm eraldi meilivälja või ühendada need ühtse profiili jaoks üheks meiliväljaks. Süsteem ühendab mõned atribuudid automaatselt. Saate luua stabiilseid ja kordumatuid kliendi ID-sid ning rühmitada seotud profiile klastrisse.
 
-Pärast [vastendamisetappi](match-entities.md) algab liitmisetapp, valides lehel **Ühendamine** paani **Liitmine**.
+:::image type="content" source="media/m3_unify.png" alt-text="Ühenda leht andmete ühtsustamise protsessiga näidates tabelit koos ühendatud väljadega, mis defineerivad ühendatud kliendiprofiili.":::
 
-## <a name="review-system-recommendations"></a>Vaadake üle süsteemi soovitused
+## <a name="review-and-update-the-customer-fields"></a>Kliendiväljade ülevaatamine ja värskendamine
 
-Funktsioonis **Andmed** > **Unify** > **Sulata** saate valida ja välistada atribuudid, mida soovite oma unified customer profile'i profiili sees sulatada. Ühendatud kliendiprofiil on andmete ühendamise protsessi tulemus. Osa atribuute liidab süsteem ise.
+1. Vaadake üle tabeli vahekaardi Kliendi **väljade** all ühendatavate väljade loend. Vajadusel tehke muudatusi.
 
-Kui soovite vaadata atribuute, mis on kaasatud ühte teie automaatselt ühendatud atribuudisse, valige see ühendatud atribuut tabeli **Kliendi väljad** vahekaardil. Atribuudid, mis koostavad ühendatud atribuuti kuvatakse kahes uues rollis ühendatud atribuudi all.
+   1. Mis tahes kombineeritud väljade puhul saate teha järgmist.
+      - [Muuda](#edit-a-merged-field)
+      - [Nimeta ümber](#rename-fields)
+      - [Eralda](#separate-merged-fields)
+      - [Välista](#exclude-fields)
+      - [Liikumine üles või alla](#change-the-order-of-fields)
 
-## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Eralda, nimeta ümber, välista ja redigeeri ühendatud väljad
+   1. Mis tahes väljade puhul saate teha järgmist.
+      - [Ühenda väljad](#combine-fields-manually)
+      - [Väljade rühma ühendamine](#combine-a-group-of-fields)
+      - [Nimeta ümber](#rename-fields)
+      - [Välista](#exclude-fields)
+      - [Liikumine üles või alla](#change-the-order-of-fields)
 
-Saate muuta, kuidas süsteem töötleb ühendatud atribuute ühtse kliendiprofiili loomiseks. Valige **Kuva veel** ja valige, mida soovite muuta.
+1. Soovi korral [looge kliendi ID konfiguratsioon](#configure-customer-id-generation).
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Ühendatud atribuutide haldamiseks rippmenüü Kuva veel valikud.":::
+1. Soovi korral rühmitage [profiilid kodumajapidamistesse või klastritesse](#group-profiles-into-households-or-clusters).
 
-Järgmisest jaotisest leiate lisateavet.
+> [!div class="nextstepaction"]
+> [Järgmine samm: Ühinemise läbivaatamine](review-unification.md)
 
-## <a name="separate-merged-fields"></a>Eraldaga ühendatud väljad
+### <a name="edit-a-merged-field"></a>Redigeeri ühendatud välja
 
-Ühendatud väljade eraldamiseks leidke atribuut tabelist. Eraldatud väljad kuvatakse üksikute andmepunktidena ühendatud kliendi profiilil. 
+1. Valige ühendatud väli ja valige **Redigeeri**. Kuvatakse paani Kombineeri väljad.
 
-1. Valige ühendatud väli.
-  
-1. Valige **Kuva veel** ja valige **Eraldi väljad**.
- 
-1. eralduse kinnitamine.
-
-1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** .
-
-## <a name="rename-merged-fields"></a>Ühendatud väljade ümbernimetamine
-
-Muutke ühendatud atribuutide kuvatavat nime. Toodanguolemi nime ei saa muuta.
-
-1. Valige ühendatud väli.
-  
-1. Valige **Kuva veel** ja valige **Nimeta ümber**.
-
-1. Kinnitage muudetud kuvatav nimi. 
-
-1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** .
-
-## <a name="exclude-merged-fields"></a>Jäta ühendatud väljad välja
-
-Atribuudi välistamine ühtsest kliendiprofiilist. Kui seda välja kasutatakse muudes protsessides (nt segmendis), eemaldage see nendest protsessidest, enne selle kliendiprofiililt eemaldamist. 
-
-1. Valige ühendatud väli.
-  
-1. Valige **Kuva veel** ja valige **Välista**.
-
-1. Kinnitage välistamine.
-
-1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** . 
-
-Lehel **Ühenda** valige **Välistatud väljad** et näha välistatud väljade loendit. Selle paani abil saate väljad tagasi lisada.
-
-## <a name="edit-a-merged-field"></a>Redigeeri ühendatud välja
-
-1.  Valige ühendatud väli.
-
-1.  Valige **Kuva veel** ja valige **Redigeeri**.
-
-1.  Määrake väljade ühendamise või ühendamise viis ühest kolmest valikust.
+1. Määrake väljade ühendamise või ühendamise viis ühest kolmest valikust.
     - **Olulisus**: tuvastab võitja väärtuse osalevatele valdkondadele määratud tähtsusastme alusel. See on vaikeühendamissuvand. Valige järjekoha prioritiseerimiseks **Nihuta üles/alla**.
-    :::image type="content" source="media/importance-merge-option.png" alt-text="Tähtsuse valik ühendamisväljade dialoogis."::: 
+
+      :::image type="content" source="media/importance-merge-option.png" alt-text="Tähtsuse valik ühendamisväljade dialoogis.":::
+
     - **Viimased**: tuvastab võitja väärtuse kõige hiljutisema aja järgi. Nõuab kuupäeva või arvvälja iga koosteväljade osalemisolemi jaoks, et määrata olemi aega.
-    :::image type="content" source="media/recency-merge-option.png" alt-text="Hiljutisuse valik ühendamisväljade dialoogis.":::
+
+      :::image type="content" source="media/recency-merge-option.png" alt-text="Hiljutisuse valik ühendamisväljade dialoogis.":::
+
     - **Hiljutine**: tuvastab võitja väärtuse kõige kaugema aja järgi. Nõuab kuupäeva või arvvälja iga koosteväljade osalemisolemi jaoks, et määrata olemi aega.
 
-1.  Saate ühendamise protsessi lisada veel välju.
+1. Saate ühendamise protsessi lisada veel välju.
 
-1.  Ühendatud välja saate ümber nimetada.
+1. Ühendatud välja saate ümber nimetada.
 
 1. Muudatuse rakendamiseks valige **Tehtud**.
 
-1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** . 
+### <a name="rename-fields"></a>Väljade ümbernimetamine
 
-## <a name="combine-fields-manually"></a>Väljade käsitsi kombineerimine
+Saate muuta ühendatud või eraldi väljade kuvatavat nime. Toodanguolemi nime ei saa muuta.
 
-Määrake ühendatud atribuut käsitsi.
+1. Valige väli ja valige **Nimeta ümber**.
 
-1. **Valige lehel** Ühenda **käsk Kombineeri**.
+1. Sisestage uus kuvatav nimi.
 
-1. **Valige suvand Väljad**.
+1. Valige nupp **Valmis**.
+
+### <a name="separate-merged-fields"></a>Eraldaga ühendatud väljad
+
+Ühendatud väljade eraldamiseks leidke atribuut tabelist. Eraldatud väljad kuvatakse üksikute andmepunktidena ühendatud kliendi profiilil.
+
+1. Valige ühendatud väli ja valige **Eralda väljad**.
+
+1. eralduse kinnitamine.
+
+### <a name="exclude-fields"></a>Välista väljad
+
+Välistage ühendatud või eraldi väli ühtsest kliendiprofiilist. Kui seda välja kasutatakse muudes protsessides (nt segmendis), eemaldage see nendest protsessidest, enne selle kliendiprofiililt eemaldamist.
+
+1. Valige väli ja valige **Välista**.
+
+1. Kinnitage välistamine.
+
+Kõigi välistatud väljade loendi vaatamiseks valige **Väljad** Välistatud. Vajadusel saate lugeda välistatud välja.
+
+### <a name="change-the-order-of-fields"></a>Väljade järjekorra muutmine
+
+Mõned olemid sisaldavad rohkem üksikasju kui teised. Kui olem sisaldab välja kohta värskeid andmeid, saate väärtusi ühendades prioriseerida selle teiste olemite suhtes.
+
+1. Valige väli.
+  
+1. Tellimuse seadmiseks valige **Nihuta üles/alla** või lohistage neid soovitud asendisse.
+
+### <a name="combine-fields-manually"></a>Väljade käsitsi kombineerimine
+
+Ühendatud atribuudi loomiseks ühendage eraldatud väljad.
+
+1. Valige **Kombineeri** > **väljad**. Kuvatakse paani Kombineeri väljad.
 
 1. Määrake ripploendis **Väljade ühendamine** koostevõitja poliitika.
 
-1. Valige väli lisamiseks. Valige **Lisa välju** et ühendada rohkem välju.
+1. Rohkemate väljade ühendamiseks valige **Lisa väli**.
 
 1. Sisestage **Nimi** ja **Väljundvälja nimi**.
 
 1. Muudatuse rakendamiseks valige **Tehtud**.
 
-1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** . 
+### <a name="combine-a-group-of-fields"></a>Väljade rühma ühendamine
 
-## <a name="combine-a-group-of-fields"></a>Väljade rühma ühendamine
+Käsitlege väljade rühma ühe ühikuna. Näiteks kui meie kirjed sisaldavad välju Address1, Address2, City, State ja Zip, ei soovi me mõne muu kirje aadressiga2 liituda, arvates, et see muudaks meie andmed täielikumaks.
 
-Käsitlege väljade rühma ühe ühikuna. Näiteks kui meie kirjed sisaldavad välju Address1, Address2, City, State ja Zip. Tõenäoliselt ei soovi me ühineda teise kirje aadressiga2, arvates, et see muudaks meie andmed täielikumaks
-
-1. **Valige lehel** Ühenda **käsk Kombineeri**.
-
-1. **Valige suvand Väljade** rühm.
+1. Valige **Kombineeri** > **väljade** rühm.
 
 1. Määrake koostevõitja poliitika **jaotises Auaste ripploendi alusel**.
 
-1. Valige **Lisa** ja valige, kas soovite väljadele lisada veel välju või täiendavaid rühmi.
+1. Valige **Lisa** ja valige, kas soovite väljadele lisada veel välju või rühmi.
 
 1. **Esitage igale kombineeritud väljale nimi** ja **väljundnimi**.
 
-1. Määrake **väljade rühmale nimi**. 
+1. Määrake **väljade rühmale nimi**.
 
 1. Muudatuse rakendamiseks valige **Tehtud**.
 
-1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** .
+## <a name="configure-customer-id-generation"></a>Kliendi ID loomise konfigureerimine
 
-## <a name="change-the-order-of-fields"></a>Väljade järjekorra muutmine
+Määratlege, kuidas luua kliendi ID väärtusi, kliendi profiili kordumatuid identifikaatoreid. Andmete ühendamise protsessi ühendamisväljade etapp loob kliendiprofiili kordumatu identifikaatori. ID on *olemi CustomerId* *·*, mis tuleneb andmete ühendamise protsessist.
 
-Mõned olemid sisaldavad rohkem üksikasju kui teised. Kui olem sisaldab välja kohta värskeid andmeid, saate väärtusi ühendades prioriseerida selle teiste olemite suhtes.
-
-1. Valige ühendatud väli.
-  
-1. Valige **Kuva veel** ja valige **Redigeeri**.
-
-1. Valige paanil **Väljade ühendamine** suvand **Nihutage üles/alla** et paika panna järjekord või nihutada ja asetada need soovitud kohale.
-
-1. Kinnitage muudatus.
-
-1. Muudatuste töötlemiseks valige **Salvesta** ja **Käivita** .
-
-## <a name="configure-customer-id-generation"></a>Kliendi ID loomise konfigureerimine 
-
-Pärast väljade ühendamist saate määratleda, kuidas luua CustomerId väärtusi ja kordumatuid kliendiprofiili identifikaatoreid. Andmete ühendamise protsessi ühendamissamm loob kordumatu kliendiprofiili identifikaatori. Identifikaator on *kliendi* olemi CustomerId, mis on saadud andmete ühendamise protsessist. 
-
-Kliendi olemi CustomerId põhineb mittetühiväärtusega võitja primaarvõtmete esimese väärtuse räsil. Need klahvid on pärit vastetes ja ühendamises kasutatavatest olemitest ning neid mõjutab sobitamisjärjestus.Seega saab genereeritud CustomerID muutuda, kui vastetellimuse esmases olemis muudetakse primaarvõtme väärtust. Seega ei pruugi esmase võtme väärtus alati sama klienti tähistada.
+*CustomerId* põhineb mitte-null võitja esmavõtmete esimese väärtuse räsil. Need võtmed pärinevad andmete ühendamisel kasutatavatest olemitest ja neid mõjutab vastejärjestus.Nii võib loodud kliendi ID muutuda, kui vastetellimuse esmases olemis muutub primaarne võtmeväärtus. Esmane põhiväärtus ei pruugi alati esindada sama klienti.
 
 Stabiilse kliendi ID konfigureerimine võimaldab teil seda käitumist vältida.
 
-**Kliendi kordumatu ID konfigureerimine**
+1. Valige vahekaart **Võtmed**.
 
-1. Minge **Ühenda** > **Liitmine**.
-
-1. Valige vahekaart **Võtmed**. 
-
-1. Liikuge kursoriga real **CustomerId** ja valige suvand **Konfigureeri**.
+1. Liikuge kursoriga **real CustomerId** ja valige **Konfigureeri**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Juhtelement ID loomise kohandamiseks.":::
 
 1. Valige kuni viis välja, mille ID on kordumatu ja stabiilsem. Kirjed, mis ei vasta teie konfiguratsioonile, kasutavad selle asemel süsteemi konfigureeritud ID-d.  
 
-1. Muudatuste rakendamiseks tehke valik **Tehtud** ja käivitage koosteprotsess.
+1. Valige nupp **Valmis**.
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Rühmitage profiilid leibkondadesse või klastritesse
 
-Kliendiprofiili loomise konfiguratsiooniprotsessi osana saate määratleda reeglid seotud profiilide rühmitamiseks klastrisse. Praegu on saadaval kahte tüüpi klastrid – Leibkonna ja kohandatud klastrid. Kui *Kliendi* olem sisaldab semantilisi välju *Person.LastName* ja *Location.Address*, valib süsteem eelmääratletud reeglitega subjekti automaatselt. Saate luua klastri ka oma reeglite ja tingimustega, mis sarnanevad [reeglitele](match-entities.md#define-rules-for-match-pairs).
+Saate määratleda reeglid seotud profiilide rühmitamiseks klastrisse. Praegu on saadaval kahte tüüpi klastrid – Leibkonna ja kohandatud klastrid. Kui *Kliendi* olem sisaldab semantilisi välju *Person.LastName* ja *Location.Address*, valib süsteem eelmääratletud reeglitega subjekti automaatselt. Saate luua klastri ka oma reeglite ja tingimustega, mis sarnanevad [reeglitele](match-entities.md#define-rules-for-match-pairs).
 
-**Määratlege ressurss või klaster**
-
-1. Minge **Ühenda** > **Liitmine**.
-
-1. Vahekaardil **Ühendamine** valige **Täpsem** > **Klastri loomine**.
+1. Valige **Täpsem** > **loo klaster**.
 
    :::image type="content" source="media/create-cluster.png" alt-text="Juhtelement uue klastri loomiseks.":::
 
@@ -194,31 +174,9 @@ Kliendiprofiili loomise konfiguratsiooniprotsessi osana saate määratleda reegl
 
 1. Määrake klastri määratlemiseks reeglid ja tingimused.
 
-1. Valige **Käivita**, et käivitada kirjakoosteprotsess ja luua klaster.
+1. Valige nupp **Valmis**. Klaster luuakse siis, kui ühendamisprotsess on lõpule viidud. Klastri identifikaatorid lisatakse olemile *Klient* uute väljadena.
 
-Pärast ühendamisprotsessi käivitamist lisatakse klastri identifikaatorid *Kliendi* olemile uute väljadena.
-
-## <a name="run-your-merge"></a>Käivitage kooste
-
-Olenemata sellest, kas liidate atribuute ise või lasete seda teha süsteemil, saate alati käivitada kooste. Toimingu käivitamiseks valige lehel **Liitmine** valik **Käivita**.
-
-> [!div class="mx-imgBorder"]
-> ![Andmete liitmine „Salvesta ja Käivita“.](media/configure-data-merge-save-run.png "Andmete liitmine „Salvesta ja Käivita“")
-
-Valige **Käivita ainult ühendamine** juhul, kui soovite näha ainult väljundit ühtses kliendiolemis kajastatuna. Järgnevad protsessid värskendatakse [vastavalt värskendusplaanile](system.md#schedule-tab).
-
-Vaige **Käivita Ühenda ja järgnevad protsessid** et värskendada süsteemi sinu muudatustega. Kõik protsessid, sh rikastamine, segmendid ja mõõtkavad, käivituvad automaatselt. Kui kõik järgnevad protsessid on lõpule jõudnud, kajastavad kliendiprofiilid teie tehtud muudatusi.
-
-Kui soovite teha rohkem muudatusi ja etapi uuesti käivitada, saate tühistada poolelioleva ühendamise. Valige **Värskendamine ...** ja valige nähtavale ilmuva külgpaani suvand **Tühista töö**.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-:::image type="content" source="media/process-detail-path.png" alt-text="Süvitsimineku tee et saada protsessi üksikasjad ülesande oleku lingilt.":::
-
-## <a name="next-step"></a>Järgmine etapp
-
-Klientide kohta täiendavate ülevaadete saamiseks seadistage [toiminguid](activities.md), [rikastamist](enrichment-hub.md) või [seosed](relationships.md).
-
-Kui olete tegevused, rikastamine või segmendid juba konfigureerinud, töödeldakse neid automaatselt, et kasutada uusimaid kliendiandmeid.
+> [!div class="nextstepaction"]
+> [Järgmine samm: Ühinemise läbivaatamine](review-unification.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

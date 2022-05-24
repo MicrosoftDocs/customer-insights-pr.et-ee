@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642474"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755349"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Kliendiprofiilide rikastamine Azure Mapsi abil (eelvaade)
 
@@ -51,7 +51,7 @@ Azure Mapsi andmete rikastamise konfigureerimiseks peavad olema täidetud järgm
 
 1. Valige **Edasi**, et lõpetada väljade kaardistamine.
 
-1. Hinnata, kas soovite muuta suvandit **Täpsemad sätted**. Need on ette nähtud maksimaalse paindlikkuse tagamiseks täiustatud kasutusjuhtumite käsitlemiseks, kuid enamikul juhtudel on vaikeväärtused piisavad.
+1. Hinnata, kas soovite muuta suvandit **Täpsemad sätted**. Need sätted on ette nähtud selleks, et pakkuda maksimaalset paindlikkust täpsemate kasutusjuhtumite käsitlemiseks, kuid enamikul juhtudel on vaikeväärtused piisavad:
    - **Aadresside tüüp**: vaikekäitumine on see, et rikastamine tagastab parima aadressi vaste, isegi kui see on lõpetamata. Ainult täielike aadresside (nt aadresside, mis sisaldavad majanumbrit) toomine tühjendage kõik märkeruudud peale **punktiaadresside**. 
    - **Keel**: vaikimisi tagastatakse aadressid selle piirkonna keeles, kuhu aadress on määratletud. Standardiseeritud aadressikeele rakendamiseks valige ripploendist soovitud keel. Kui näiteks valite **inglise keele**, tagastatakse **Kopenhaagen, Taani**, selle asemel, et **København, Taani**.
 
@@ -89,7 +89,7 @@ Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **
 
 ## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 
-Kui lubate Dynamics 365 Customer Insights edastada andmeid Azure Mapsi, lubate andmete edastamist väljapoole vastavuse piiri Dynamics 365 Customer Insights jaoks, sealhulgas potentsiaalselt tundlikke andmeid, näiteks isikuandmeid. Microsoft edastab sellised andmed teie juhiste alusel, kuid teie vastutate selle eest, et Azure Maps täidaks kõiki privaatsus- või turvakohustusi, mis teil võivad olla. Lisateavet leiate jaotisest [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
+Kui lubate Dynamics 365 Customer Insights edastada andmeid Azure Mapsi, lubate andmete edastamist väljapoole vastavuse piiri Dynamics 365 Customer Insights jaoks, sealhulgas potentsiaalselt tundlikke andmeid, näiteks isikuandmeid. Microsoft edastab need andmed teie juhiste kohaselt, kuid vastutate selle eest, et Azure Maps täidaks kõik teie privaatsus- või turbekohustused. Lisateavet leiate jaotisest [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
 Teie Dynamics 365 Customer Insightsi administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

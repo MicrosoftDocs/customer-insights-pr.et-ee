@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642514"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755631"
 ---
 # <a name="customer-card-add-in-preview"></a>Kliendikaardi lisandmoodul (eelvaade)
-
-
 
 Saate oma klientide kohta täieliku ülevaate otse Dynamics 365 rakendustes. Kui kliendikaardi lisandmoodul on installitud toetatud Dynamics 365 rakendusse, saate valida kliendiprofiili väljade, ülevaadete ja tegevuse ajaskaala kuvamise. Lisandmoodul toob andmed Customer Insights -i kaudu, mõjutamata ühendatud Dynamics 365 rakenduse andmeid.
 
@@ -31,10 +29,10 @@ Saate oma klientide kohta täieliku ülevaate otse Dynamics 365 rakendustes. Kui
 ## <a name="prerequisites"></a>Eeltingimused
 
 - Lisandmoodul töötab ainult Dynamics 365 mudelipõhiste rakendustega (nt Müük või Klienditeenindus, versioon 9.0 ja uuemad).
-- Selleks et teie Dynamics 365 andmed vastendataks Customer Insightsi [kliendiprofiilidega, soovitame need konnektori abil Microsoft Dataverse Dynamics 365 rakendusest alla neelata](connect-power-query.md). Kui kasutate Dynamics 365 kontaktide (või ettevõtete) allaneelamiseks mõnda muud meetodit, peate veenduma, et `contactid` väli (või`accountid`) on määratud [selle andmeallikas esmaseks võtmeks andmete ühendamise protsessi vastendamise etapis](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Selleks et teie Dynamics 365 andmed vastendataks Customer Insightsi [kliendiprofiilidega, soovitame need konnektori abil Microsoft Dataverse Dynamics 365 rakendusest alla neelata](connect-power-query.md). Kui kasutate Dynamics 365 kontaktide (või ettevõtete) allaneelamiseks mõnda muud meetodit, peate veenduma, et `contactid` väli (või`accountid`) on määratud [selle andmeallikas esmaseks võtmeks andmete ühendamise protsessi vastendamise etapis](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Kõik kliendikaardi lisandmooduli Dynamics 365 kasutajad tuleb [andmete nägemiseks lisada Customer Insightsi kasutajatena](permissions.md).
 - [Andmete otsimiseks on vaja konfigureeritud otsingu- ja filtreerimisvõimalusi](search-filter-index.md) Customer Insightsis.
-- Iga lisandmooduli juhtelement tugineb Customer Insightsis kindlatele andmetele. Teatud andmed ja juhtelemendid on saadaval ainult mingit kindlat tüüpi keskkondades. Lisandmooduli konfiguratsioon annab teile teada, kui juhtelement pole valitud keskkonnatüübi tõttu saadaval. Lisateave [keskkondade kasutamise kohta](work-with-business-accounts.md).
+- Iga lisandmooduli juhtelement tugineb Customer Insightsis kindlatele andmetele. Teatud andmed ja juhtelemendid on saadaval ainult mingit kindlat tüüpi keskkondades. Lisandmooduli konfiguratsioon teavitab teid, kui juhtelement pole valitud keskkonnatüübi tõttu saadaval. Lisateave [keskkondade kasutamise kohta](work-with-business-accounts.md).
   - **Mõõtühiku juhtelement**: Nõuab [konfigureeritud mõõtmetega](measures.md) kliendi atribuutide tüüpe.
   - **Luurekontroll**: nõuab ennustuste või kohandatud mudelite [abil](predictions-overview.md) loodud andmeid.
   - **Kliendi üksikasjade juhtelement**: Kõik profiili väljad on saadaval ühendatud kliendiprofiilis.
@@ -132,16 +130,16 @@ Isegi õigesti konfigureeritud ID-väljade puhul ei leia juhtelemendid ühegi kl
 
 **Lahendus.**
 
-1. Veenduge, et konfigureerisite kaardi lisandmooduli vastavalt juhistele: [Kliendikaardi lisandmooduli konfigureerimine](#configure-the-customer-card-add-in) 
+1. Veenduge, et konfigureerisite kaardi lisandmooduli vastavalt juhistele: [Kliendikaardi lisandmooduli konfigureerimine](#configure-the-customer-card-add-in)
 
-1. Vaadake üle andmete allaneelamise konfiguratsioon. Saate redigeerida dynamics 365 süsteemi andmeallikas, mis sisaldab kontakti ID GUID-d. Kui kontakti ID GUID kuvatakse redaktoris Power Query suurtähtedega, proovige järgmist. 
+1. Vaadake üle andmete allaneelamise konfiguratsioon. Redigeerige kontakti ID GUID-d sisaldava Dynamics 365 süsteemi andmeallikas. Kui kontakti ID GUID kuvatakse redaktoris Power Query suurtähtedega, proovige järgmisi juhiseid.
     1. Redigeerige andmeallikas andmeallikas avamiseks redaktoris Power Query.
     1. Valige kontakti ID veerg.
     1. Saadaolevate toimingute vaatamiseks valige **päiseribal Teisenda**.
     1. Valige **väiketäht**. Kinnitage, kas tabelis olevad GUID-id on nüüd väiketähtsad.
     1. Salvestage andmeallikas.
-    1. Käivitage GUID-i muudatuste levitamiseks andmete allaneelamine, ühendamine ja järgmise etapi protsessid. 
+    1. Käivitage GUID-i muudatuste levitamiseks andmete allaneelamine, ühendamine ja järgmise etapi protsessid.
 
-Pärast täieliku värskendamise lõpetamist peaksid kliendikaardi lisandmooduli juhtelemendid näitama eeldatavaid andmeid. 
+Pärast seda, kui süsteem on täieliku värskendamise lõpetanud, peaksid kliendikaardi lisandmooduli juhtelemendid kuvama eeldatavad andmed.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

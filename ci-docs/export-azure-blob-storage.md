@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 42095f369c47553e5ddf5fada54e559202c943a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642704"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757381"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Segmendiloendi ja muude andmete eksportimine Azure'i Blob Storage'isse (eelversioon)
 
@@ -44,7 +44,7 @@ Saate salvestada oma Customer Insights andmed bloobimällu või kasutada seda om
 Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
 
 > [!IMPORTANT]
-> Kui lülitasite sisse Azure'i bloobimälu konto ajutise kustutamise sätte, ekspordid nurjuvad. Andmete bloobidele eksportimiseks lülitage ajutine kustutamine välja. Lisateavet leiate teemast [Bloobi ajutise kustutamise lubamine](/azure/storage/blobs/soft-delete-blob-enable.md)
+> Kui lülitasite sisse Azure'i bloobimälu konto ajutise kustutamise sätte, ekspordid nurjuvad. Andmete bloobidele eksportimiseks lülitage ajutine kustutamine välja. Lisateavet leiate teemast [Bloobi ajutise kustutamise lubamine](/azure/storage/blobs/soft-delete-blob-enable)
 
 1. Minge **Andmed** > **Ekspordid**.
 

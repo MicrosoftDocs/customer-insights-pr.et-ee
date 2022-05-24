@@ -1,110 +1,83 @@
 ---
-title: Andmete ühendamise olemite ja atribuutide vastendamine
-description: Valige olemid, atribuudid, peamised võtmed ja semantilised tüübid andmete vastendamiseks ühendatud kliendiprofiiliga.
-ms.date: 10/18/2020
+title: Valige andmete ühendamiseks lähteväljad.
+description: Ühendamise protsessi esimene samm on olemite, atribuutide, primaarvõtmete ja semantiliste tüüpide valimine andmete vastendamiseks ühtse kliendiprofiiliga.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642555"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740990"
 ---
-# <a name="map-entities-and-attributes"></a>Olemite ja atribuutide kaardistamine
+# <a name="select-source-fields-for-data-unification"></a>Valige andmete ühendamiseks lähteväljad.
 
-**Kaart** on andmete ühendamise protsessi esimene etapp. Vastendamine koosneb kolmest etapist.
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Olemi valik*: tuvastage ühendatavad olemid, mis suunavad andmekogumile, mis sisaldab teie klientide kohta täpsemat teavet.
-- *Atribuudi valimine*: määrake iga olemi puhul veerud, mida soovite kombineerida ja sobitada etappides *vastendamine* ja *liitmine*. Neid veerge nimetatakse *atribuutideks*.
-- *Primaarvõtme ja semantilise tüübi valik*: tuvastage iga olemi jaoks atribuut, mille soovite määrata selle olemi jaoks primaarvõtmena, ja iga atribuudi jaoks määratlege semantiline tüüp, mis kirjeldab seda atribuuti kõige paremini.
+Esimene samm ühendamisel on nende andmekogumite olemite ja väljade valimine, mida soovite ühendada. Valige olemid, mis sisaldavad kliendiga seotud üksikasju (nt nime, aadressi, telefoninumbrit ja meili). Saate valida ühe või mitu olemi.
 
-Lisateavet andmete ühendamise üldvoo kohta vt [Ühenda](data-unification.md).
+## <a name="select-entities-and-fields"></a>Olemite ja väljade valimine
 
-## <a name="select-the-first-entities"></a>Valige esimesed olemid
+1. **Avage jaotisSe Andmete** > **ühendamine**.
 
-1. Liikuge **Andmed** > **Koondamine** > **Vastendamine**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Kuvatõmmis ühendatava sihtlehest, et näha esimest käivitamiskogemust, kus esiletõstetud on käivitatud algus.":::
 
-2. Kaardistamise etapi käivitamiseks valige **Vali olemid**.
+1. Seejärel valige suvand **Alustamine**.
 
-3. Valige olemid ja atribuudid, mida soovite etappides *vastendamine* ja *ühendamine* kasutada. Saate valida vajalikud atribuudid olemis individuaalselt või lisada olemist kõik atribuudid, valides olemi tasandil märkeruudu **Kaasa kõik väljas**. Andmete ühendamisest kasu saamiseks soovitame valida vähemalt kaks olemit.
+1. **Valige lehel Allikas väärtus** **Vali olemid ja väljad**. Kuvatakse **paan Vali olemid ja väljad**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Lisa olemite näide.](media/data-manager-configure-map-add-entities-example.png "Lisa olemite näide")
+1. Valige vähemalt üks olem.
 
-   Selles näites lisame olemid **eCommerceContacts** ja **loyCustomers**. Nende olemite valimisel saate tuletada ülevaateid, kus veebikliendid on püsikliendiprogrammi liikmed.
-   
-   Saate otsida atribuutide ja olemite üleselt märksõnu, et valida vajalikud atribuudid, mida soovite vastendada.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Otsinguväljade näide.](media/data-manager-configure-map-search-fields-example.png "Otsinguväljade näide")
+1. Tuvastage iga valitud olemi puhul väljad, mida soovite kasutada kliendikirjete ja väljade sobitamiseks ühtsesse profiili kaasamiseks. Neid välju nimetatakse *atribuutideks*. Saate valida nõutavad atribuudid olemist eraldi või kaasata kõik olemi atribuudid, valides olemitasemel märkeruudu. Saate otsida atribuutide ja olemite üleselt märksõnu, et valida vajalikud atribuudid, mida soovite vastendada.
 
-4. Oma valikute kinnitamiseks valige suvand **Rakenda**.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Valitud olemite ja atribuutide kuvatõmmis.":::
+
+   Selles näites lisame **olemid Kontaktid** ja **Kliendilojaalsus**. Nende olemite valimisel saate tuletada ülevaateid, kus veebikliendid on püsikliendiprogrammi liikmed.
+
+1. Oma valikute kinnitamiseks valige suvand **Rakenda**. Kuvatakse valitud olemid ja atribuudid.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Atribuutide primaarvõtme ja semantilise tüübi valimine
 
-Pärast oma olemite valimist loetleb leht **Kaardistamine** läbivaatamiseks valitud olemid. Määratlege olemi primaarvõti ja määratlege olemi atribuudi semantiline tüüp.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Kuvatõmmis valitud olemitest, mille primaarvõti pole valitud." lightbox="media/m3_select_primary.png":::
 
-- **Primaarvõti**: valige iga olemi primaarvõtmeks üks atribuut. Et atribuut saaks olla sobiv primaarvõti, ei tohi see sisaldada topeltväärtusi, puuduvaid väärtusi ega null-väärtusi. Stringi, täisarvu ja GUID-i andmetüübi atribuute toetatakse primaarvõtmetena ja need kuvatakse väljal, kust saate need valida.
+Tehke iga olemi puhul järgmised juhised.
 
-- **Atribuudi semantiline tüüp**: atribuutide kategooriad (nt e-posti aadress või nimi). Selleks et kasutada AI mudeleid semantika nutikaks prognoosiks, säästa aega ja parandada täpsust, määrake suvandi **Intelligentne vastendamine** olekuks **SEES**. Intelligentne vastendamine tõstab esile AI-põhise semantika soovituse väljal **Tüüp**. Kui määrate selle olekuks **VÄLJAS**, näete meie tavalisi vastendamise soovitusi. Saate valida saadaolevate suvandite loendist mis tahes semantilise tüübi ja tühistada soovitatud valiku.
+1. **Valige primaarvõti**. Primaarvõti on olemile ainuomane atribuut. Et atribuut saaks olla sobiv primaarvõti, ei tohi see sisaldada topeltväärtusi, puuduvaid väärtusi ega null-väärtusi. Põhivõtmetena toetatakse stringi-, täisarvu- ja GUID-andmetüübi atribuute.
 
-> [!div class="mx-imgBorder"]
-> ![Atribuudi tüüp ja semantiline prognoos.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Atribuudi tüüp ja semantiline prognoos")
+1. Tehisintellekti mudelite kasutamiseks nutikaks semantika prognoos, aja säästmiseks ja täpsuse parandamiseks veenduge, et **intelligentne kaardistamine** on sisse lülitatud. Intelligentne vastendamine tõstab esile AI-põhise semantika soovituse väljal **Tüüp**. Soovitatud valiku alistamiseks valige saadaolevast suvandite loendist mis tahes semantiline tüüp.
 
-Samuti on võimalik lisada enda loodud semantiline tüüp. Valige atribuudi tüübi väärtus ja sisestage enda muudetud semantilise tüübi nimi. Nii saate muuta ka süsteemi tuvastatud atribuudi tüüpe.
+1. Valige iga atribuudi puhul semantiline **tüüp**, mis kirjeldab seda atribuuti kõige paremini (nt nime, linna või meiliaadressi).
 
-Kõik atribuudid, mille semantiline tüüp tuvastatakse automaatselt, on rühmitatud jaotises **Vastendatud väljade läbivaatamine**. Vaadake need atribuudid ja nende semantilised tüübid läbi, kuna neid kasutatakse teie olemite kombineerimiseks andmete ühendamise ühendamise etapis.
+   > [!NOTE]
+   > Üks väli peaks vastendama semantilise tüübiga *Isik.FullName*, et kliendinimi kliendikaardil asustada. Vastasel juhul kuvatakse kliendikaardid ilma nimeta.
 
-Atribuudid, mida semantilise tüübiga automaatselt ei vastendata, on rühmitatud jaotises **Vastendamata väljade andmete määratlemine**. Valige vastendamata atribuutide jaoks välja semantiline tüüp või sisestage kohandatud atribuudi tüübi nimi.
+   1. Süsteemi poolt tuvastatud atribuuditüübi muutmiseks valige mõni muu tüüp. Kui tüüpi pole olemas, looge kohandatud semantiline tüüp, valides **atribuudi välja Tüüp** ja sisestades oma kohandatud semantilise tüübi nime.
 
-> [!div class="mx-imgBorder"]
-> ![Primaarvõti ja atribuudi tüüp.](media/data-manager-configure-map-add-attributes.png "Primaarvõti ja atribuudi tüüp")
+   1. URL-i sisaldava atribuudi lisamiseks avalikult saadaolevatele profiilipiltidele või logodele valige URL-i sisaldav olem ja väli. Sisestage väljale **Liik** järgmine tekst.
+      - Isiku korral: Person.ProfileImage
+      - Organisatsiooni korral: Organization.LogoImage
 
-> [!NOTE]
-> Üks väli peaks olema vastendatud semantilise tüübiga Person.FullName, et lisada kliendi kaardile kliendi nimi. Vastasel juhul kuvatakse kliendikaardid ilma nimeta. 
+   1. Konto nime atribuudi puhul sisestage väljale **Liik** "Organization.Name".
 
-## <a name="add-and-remove-attributes-and-entities"></a>Atribuutide ja olemite lisamine ja eemaldamine
+1. Vaadake üle atribuudid, kus semantiline tüüp automaatselt tuvastatakse. Need atribuudid on loetletud jaotises **Vastendatud väljad** Läbivaatus. Ühendatud kliendiväljade **etapis saab kombineerida** ainult sama tüüpi atribuute. Statistika automaatseks soovitamiseks kasutatakse semantilisi tüüpe. Veenduge, et valitud tüübid oleksid kõigis valitud olemites ühtsed.
 
-1. Suvandis **Ühendamine** > **Kaardistamine** valige **Redigeeri välju**.
+1. Atribuutide puhul, mis pole automaatselt vastendatud semantilise tüübiga, valige semantiline tüübiväli, sisestage kohandatud atribuudi tüüpi nimi või jätke need vastendamata. Need atribuudid on loetletud jaotises **Vastendamata väljade** andmete määratlemine.
 
-2. Lisage või eemaldage atribuute ja olemeid paanil **Redigeeri välju**. Kasutage otsingut või kerige, et leida ja valida teile huvi pakkuvad atribuudid ja olemid. Atribuuti või olemit ei saa eemaldada, kui need on juba vastendatud.
+1. Pärast iga olemi juhiste täitmist valige **Salvesta lähteväljad**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Atribuutide lisamine või eemaldamine.](media/configure-data-map-edit.png "Atribuutide lisamine või eemaldamine")
+1. Tehke valik **Edasi**.
 
-3. Valige suvand **Rakenda**.
-
-## <a name="add-images-to-profiles"></a>Profiilidele pildi lisamine
-
-Kui olem sisaldab avalikult saadaolevate profiilipiltidele või logode URL-e, saate need ühendatud kliendiprofiilile lisada.
-
-Valige olem ja otsige üles väli, mis sisaldab profiilipildi URL-i. Sisestage sisendiväljale **Tüüp** käsitsi järgmine väärtus. 
-- Isiku korral: Person.ProfileImage
-- Organisatsiooni korral: Organization.LogoImage
-
-Jätkake ühendamise sammudega ja veenduge, et pildi URL-i sisaldav atribuut lisatakse samuti etapis [Ühendamine](merge-entities.md).
-
-## <a name="set-attributes-for-organizations"></a>Atribuutide määramine ettevõtetele
-
-Organisatsiooni (eelversioon) atribuudi tüüp tuleks vastendada järgmiselt: „organisatsioon.nimi“
-> [!div class="mx-imgBorder"]
-> ![Primaarvõti ja atribuuditüüp B2B.](media/configure-data-map-edit-b2b.png "Primaarvõti ja atribuuditüüp B2B")
-
-## <a name="next-step"></a>Järgmine etapp
-
-Andmete ühendamisel minge lehele **Vastenda**. Külastage lehte [**Vastendamine**](match-entities.md), et saada rohkem teavet selle etapi kohta.
-
-> [!TIP]
-> Vaadake seda videot: [Alustamine: kliendi koondprofiili loomine](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Järgmine samm: Duplikaatide eemaldamine](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

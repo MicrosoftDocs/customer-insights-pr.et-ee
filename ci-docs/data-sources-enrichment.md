@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642494"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755681"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Andmeallikate rikastamine (eelvaade)
 
@@ -23,10 +23,10 @@ Kasutage andmeid sellistest allikatest nagu Microsoft ja teised partnerid, et ri
 
 Rikastamiste loomiseks või redigeerimiseks peavad teil olema kaasautori või administraatori õigused. Lisateavet vt teemast [Õigused](permissions.md).  
 
-1. Avage veebisait **DataUniify** > **·**. Valige olem, mida soovite rikastada, ja valige olemi esmaseks võtmeks üks atribuut. Lisateavet leiate teemast [Primaarvõtme valimine](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. **Avage jaotisSe Andmete** > **ühendamine**. Valige olem, mida soovite rikastada, ja valige olemi esmaseks võtmeks üks atribuut. Lisateavet leiate teemast [Primaarvõtme valimine](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
- 
+
 1. Valige andmeallikas kõrval vertikaalne kolmikpunkt, mida soovite rikastada, ja valige **Rikasta**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Andmeallikate rikastamise leht.":::

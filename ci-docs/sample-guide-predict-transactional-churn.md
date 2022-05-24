@@ -1,19 +1,19 @@
 ---
 title: Tehinguvoolavuse prognoosi näidisjuhend
 description: Kasutage seda näidisjuhendit, et proovida kasutamiseks valmis tehinguvoolavuse prognoosi mudelit.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642841"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741314"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Tehinguvoolavuse prognoosi näidisjuhend
 
@@ -86,69 +86,13 @@ Vaadake üle artiklid [andmete allaneelamise](data-sources.md) ja [andmeallikate
 
 1. Salvestage andmeallikas.
 
-
 ## <a name="task-2---data-unification"></a>Ülesanne 2 – andmete koondamine
 
-Pärast andmete valmendamist alustame protsessi **Vastenda, vii vastavusse, ühenda**, et luua koondatud kliendiprofiil. Lisateavet leiate teemast [Andmete koondamine](data-unification.md).
-
-### <a name="map"></a>Vastendus
-
-1. Pärast andmete valmendamist vastendage e-kaubanduse ja lojaalsusandmete kontaktid harilike andmetüüpidega. Liikuge **Andmed** > **Koondamine** > **Vastendamine**.
-
-1. Valige olemid, mis esindavad kliendiprofiili: **eCommerceContacts** ja **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="E-kaubanduse ja lojaalsuse andmeallikad vahekaardil „Koondamine“.":::
-
-1. Valige andmeallika **eCommerceContacts** peamiseks võtmeks **ContactId** ja andmeallika **loyCustomers** peamiseks võtmeks **LoyaltyID**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="LoyaltyId peamise võtmena vahekaardil „Koondamine“.":::
-
-### <a name="match"></a>Vastenda
-
-1. Liikuge vahekaardile **Vastavusseviimine** ja valige **Määra järjekord**.
-
-1. Valige **Esmane** ripploendist **eCommerceContacts: eCommerce** kui esmane allikas ja kaasake kõik kirjed.
-
-1. Valige **Olem 2** ripploendist väärtus **loyCustomers: LoyaltyScheme** ja kaasake kõik kirjed.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="E-kaubanduse ja lojaalsuse vastavusseviimine vahekaardil „Koondamine“.":::
-
-1. Valige **Loo uus reegel**
-
-1. Lisage esimene tingimus suvandi FullName abil.
-
-   * eCommerceContacts jaoks valige **Täisnimi** rippmenüüst.
-   * loyCustomers jaoks valige **Täisnimi** rippmenüüst.
-   * Valige ripploend **Normaliseerimine** ja valige **Tüüp (telefon, nimi, aadress, ...)**.
-   * Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.
-
-1. Sisestage uuele reeglile nimi **FullName, Email**.
-
-   * Lisage meiliaadressi jaoks teine tingimus, valides suvandi **Lisa tingimus**
-   * Olemi eCommerceContacts jaoks valige **EKiri** rippmenüüst.
-   * Olemi loyCustomers jaoks valige **EKiri** rippmenüüst. 
-   * Jätke suvand „Normaliseerimine“ tühjaks. 
-   * Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Reegli vastavusseviimine nime ja meili korral vahekaardil „Koondamine“.":::
-
-7. Valige **Salvesta** ja **Käivita**.
-
-### <a name="merge"></a>Ühendamine
-
-1. Avage vahekaart **Ühendamine**.
-
-1. Määrake olemi **loyCustomers** üksuse **ContactId** kuvatavaks nimeks **ContactIdLOYALTY**, et eristada seda muudest valmendatud ID-dest.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="contactid nime vahetamine lojaalsuse ID-s.":::
-
-1. Valige **Salvesta** ja **Käivita**, et käivitada ühendamisprotsess.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Ülesanne 3 – tehinguvoolavuse prognoosi konfigureerimine
 
-Kui kliendiprofiilid on koondatud, saame käivitada tellimusevoolavuse prognoosi. Üksikasjalikke juhiseid leiate artiklist [Tellimuse prognoos](predict-subscription-churn.md). 
+Kui ühtsed kliendiprofiilid on paigas, saame nüüd käivitada tehingulõigu prognoos. Üksikasjalikke juhiseid leiate artiklist [Kanne prognoos](predict-transactional-churn.md). 
 
 1. Minge jaotisse **Ärianalüüs** > **Avastamine** ja valige kasutamiseks **Kliendivoolavuse mudel**.
 
@@ -180,7 +124,7 @@ Kui kliendiprofiilid on koondatud, saame käivitada tellimusevoolavuse prognoosi
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Ülesanne 4 – mudeli tulemuste ja selgituste läbivaatamine
 
-Laske mudelil treenimine ja andmete hindamine lõpule viia. Nüüd saate üle vaadata tellimusevoolavuse mudeli selgitused. Lisateavet leiate teemast [Prognoos oleku ja tulemuste läbivaatamine](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Laske mudelil treenimine ja andmete hindamine lõpule viia. Nüüd saate vaadata churn mudeli selgitusi. Lisateavet leiate teemast [Prognoos oleku ja tulemuste läbivaatamine](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Ülesanne 5 – suure voolavusriskiga klientide segmendi loomine
 
@@ -192,14 +136,12 @@ Saate luua mudeli loodud olemi põhjal uue segmendi.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Segmendi loomine mudeli väljundiga.":::
 
-1. Valige lõpp-punkt **OOBSubscriptionChurnPrediction** ja määratlege segment. 
+1. **Valige lõpp-punkt OOBeCommerceChurnPrediction** ja määratlege segment. 
    - Väli: ChurnScore
    - Tehtemärk: suurem kui
    - Väärtus: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Tellimusevoolavuse segmendi seadistamine.":::
 
-Teil on nüüd segment, mida värskendatakse dünaamiliselt ja mis tuvastab selle tellimusäri jaoks suure voolavusriskiga kliente.
+Nüüd on teil dünaamiliselt värskendatud segment, mis tuvastab kõrge suurusega riskiga kliendid.
 
 Lisateavet vt teemast [Segmentide loomine ja haldamine](segments.md).
 

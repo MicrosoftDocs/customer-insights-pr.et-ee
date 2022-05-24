@@ -1,19 +1,19 @@
 ---
 title: Kliendi eluea väärtuse prognoosi näidisjuhend
 description: Selle näidisjuhendi abil saate proovida kliendi eluaja väärtuse prognoosi mudelit.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642776"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740806"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Kliendi eluea väärtuse (CLV) prognoosi näidisjuhend
 
@@ -102,64 +102,7 @@ Vaadake üle artiklid [andmete allaneelamise](data-sources.md) ja [andmeallikate
 
 ## <a name="task-2---data-unification"></a>Ülesanne 2 – andmete koondamine
 
-Pärast andmete sisestamist alustame andmete ühendamise protsessi, et luua ühtne kliendiprofiil. Lisateavet leiate teemast [Andmete koondamine](data-unification.md).
-
-### <a name="map"></a>Vastendus
-
-1. Pärast andmete valmendamist vastendage e-kaubanduse ja lojaalsusandmete kontaktid harilike andmetüüpidega. Liikuge **Andmed** > **Koondamine** > **Vastendamine**.
-
-1. Valige olemid, mis esindavad kliendiprofiili: **eCommerceContacts** ja **loyCustomers**. Seejärel valige **Rakenda**.
-
-   ![E-kaubanduse ja lojaalsuse andmeallikad vahekaardil „Koondamine“.](media/unify-ecommerce-loyalty.png)
-
-1. Valige andmeallika **eCommerceContacts** peamiseks võtmeks **ContactId** ja andmeallika **loyCustomers** peamiseks võtmeks **LoyaltyID**.
-
-   ![LoyaltyId peamise võtmena vahekaardil „Koondamine“.](media/unify-loyaltyid.png)
-
-1. Valige **Salvesta**.
-
-### <a name="match"></a>Vastenda
-
-1. Liikuge vahekaardile **Vastavusseviimine** ja valige **Määra järjekord**.
-
-1. Valige **Esmane** ripploendist **eCommerceContacts: eCommerce** kui esmane allikas ja kaasake kõik kirjed.
-
-1. Valige **Olem 2** ripploendist väärtus **loyCustomers: LoyaltyScheme** ja kaasake kõik kirjed.
-
-   ![E-kaubanduse ja lojaalsuse vastavusseviimine vahekaardil „Koondamine“.](media/unify-match-order.png)
-
-1. Valige **Lisa reegel**
-
-1. Lisage esimene tingimus suvandi FullName abil.
-
-   - eCommerceContacts jaoks valige **Täisnimi** rippmenüüst.
-   - loyCustomers jaoks valige **Täisnimi** rippmenüüst.
-   - Valige ripploendist **Normaliseeri** ja valige **Tüüp (Telefon, Nimi, Aadress, ...)**.
-   - Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.
-
-1. Sisestage uuele reeglile nimi **FullName, Email**.
-
-   - Lisage meiliaadressi jaoks teine tingimus, valides suvandi **Lisa tingimus**
-   - Olemi eCommerceContacts jaoks valige **EKiri** rippmenüüst.
-   - Olemi loyCustomers jaoks valige **EKiri** rippmenüüst.
-   - Jätke suvand „Normaliseerimine“ tühjaks.
-   - Määrake **täpsustasemeks** **põhiline** ja **väärtuseks** **suur**.
-
-   ![Reegli vastavusseviimine nime ja meili korral vahekaardil „Koondamine“.](media/unify-match-rule.png)
-
-1. Valige nupp **Valmis**.
-
-1. Valige **Salvesta** ja **Käivita**.
-
-### <a name="merge"></a>Ühendamine
-
-1. Avage vahekaart **Ühendamine**.
-
-1. Määrake olemi **loyCustomers** üksuse **ContactId** kuvatavaks nimeks **ContactIdLOYALTY**, et eristada seda muudest valmendatud ID-dest.
-
-   ![contactid nime vahetamine lojaalsuse ID-s.](media/unify-merge-contactid.png)
-
-1. Valige **Salvesta** ja **Käivita liitmine ja allavooluprotsessid**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>3. ülesanne – kliendi eluea prognoosi konfigureerimine
 

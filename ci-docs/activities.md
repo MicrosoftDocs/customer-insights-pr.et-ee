@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642615"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755493"
 ---
-# <a name="customer-activities"></a>Kliendi tegevused
+# <a name="customer-activities"></a>Klienditegevused
 
-Erinevatest andmeallikatest [pärinevaid klienditegevusi](data-sources.md) saate ühendada Dynamics 365 Customer Insights ajaskaala loomiseks, mis sisaldab tegevuste kronoloogilist loendit. Lisage ajajoon Dynamics 365 rakendustesse [kliendikaardi lisandmooduli](customer-card-add-in.md) lahendusega või Power BI juhtpaneelile.
+Kliendi tegevuste kombineerimine [erinevatest andmeallikatest](data-sources.md) rakenduses Dynamics 365 Customer Insights. Looge ajaskaala, mis loetleb tegevused kronoloogiliselt. Lisage ajaskaala Dynamics 365 rakendustesse kliendikaardi lisandmooduli [lahendusega](customer-card-add-in.md).
 
 ## <a name="define-an-activity"></a>Määratle tegevus
 
@@ -34,7 +34,7 @@ Teie andmeallikad võivad hõlmata mitmesugustest andmeallikatest pärinevaid te
 
 Olemil peab olema vähemalt üks **Kuupäeva** tüüpi atribuut, mis lisatakse kliendi ajajoonele ning ilma **Kuupäeva** väljata olemeid ei saa lisada. Kui sellist olemit ei leita, siis **Lisa tegevus** funktsioon keelatakse.
 
-1. **Avage jaotis DataActivities** > **·**.
+1. **Avage jaotis Andmetegevused** > **·**.
 
 1. Valige **Tegevuse lisamise** protsess, et käivitada tegevuse seadistamise juhendamine.
 
@@ -78,7 +78,7 @@ Olemil peab olema vähemalt üks **Kuupäeva** tüüpi atribuut, mis lisatakse k
 
 1. Järgmise etapi juurde liikumiseks klõpsake nuppu **Edasi**. Vvõite valida suvandi **Valmis ja ülevaade**, et salvestada tegevus tüüpiga **Muud**. 
 
-1. Valige etapis **Tegevuse tüüp** tegevuse tüüp ja soovi korral valige, kas soovite mõnda tegevusetüüpi semantiliselt kaardistada, et neid oleks võimalik kasutada Customer Insights muudes alades. Praegu, *Tagasiside*, *Lojaalsus*, *SalesOrder*, *SalesOrderLine* ja *Kordustellimus* tegevuse tüüpe, saab semantiliselt vastendada pärast väljade vastendamisega nõustumist. Kui tegevustüüp pole uue tegevuse jaoks oluline, võite kohandatud tegevustüübi jaoks valida valiku *Muu* või *Loo uus*.
+1. Valige etapis **Tegevuse tüüp** tegevuse tüüp ja soovi korral valige, kas soovite mõnda tegevusetüüpi semantiliselt kaardistada, et neid oleks võimalik kasutada Customer Insights muudes alades. Praegu toetavad tagasiside *,* *lojaalsuse*, *SalesOrderi*, *SalesOrderLine'i* ja *Tellimuse* tegevuse tüübid semantikat pärast väljade vastendamisega nõustumist. Kui tegevustüüp pole uue tegevuse jaoks oluline, võite kohandatud tegevustüübi jaoks valida valiku *Muu* või *Loo uus*.
 
 1. Järgmise etapi juurde liikumiseks klõpsake nuppu **Edasi**. 
 
@@ -110,7 +110,7 @@ Pärast klienditegevuste konfigureerimist valige tegevuse konfiguratsioonis suva
 
 Kliendi jaoks ajaskaala avamiseks minge jaotisesse **Kliendid** ja valige kliendiprofiil, mida soovite vaadata.
 
-Kui klient on osalenud teie konfigureeritud tegevuses, leiate selle jaotisest **Tegevuse ajaskaala**.
+Kui klient on konfigureeritud tegevuses osalenud, leiate selle jaotisest **Tegevuse ajaskaala**.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Konfigureeritud tegevuste kuvamine kliendiprofiilides.":::
 

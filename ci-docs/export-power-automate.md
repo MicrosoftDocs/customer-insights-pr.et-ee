@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642816"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741174"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate’i konnektor (eelvaade)
 
@@ -25,14 +25,14 @@ Käivitage konkreetsed sündmused, mis ilmnevad automaatselt andmete muutmisel j
 
 ## <a name="power-automate-triggers"></a>Power Automate'i päästikud
 
-Saate kasutada päästikuid pilvevoogude loomiseks ja korduvate ülesannete (nt teatiste ja keerukamate toimingute) automatiseerimiseks. 
+Saate kasutada päästikuid pilvevoogude loomiseks ja korduvate ülesannete (nt teatiste ja keerukamate toimingute) automatiseerimiseks.
 
-- Käivitub, kui andmeallika värskendamine nurjub. 
+- Käivitub, kui andmeallika värskendamine nurjub.
 - Käivitub, kui andmeallika värskendamine õnnestub.
 - Käivitub, kui segmendi lävi ületatakse. Päästiku piiranguks on läve ületamine.
 - Käivitub, kui ärimeetme lävi ületatakse. Toetatakse ainult ilma dimensioonita ärinäitajad. Päästiku piiranguks on läve ületamine.
 - Käivitatakse, kui (andmeallikad, segmendid, mõõdud jne) täielik värskendamine on lõpule viidud.
-- Käivitub, kui ühendamisprotsess (kaardistamine, vastendamine, liitmine) on lõpule viidud.
+- Käivitage, kui ühendamisprotsessi värskendamine on lõpule viidud.
 
 [Päästikute konfigureerimine Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
