@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642524"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800165"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Andmetega ühendamine Microsoft Dataverse’i hallatavas andmejärves
 
@@ -28,7 +28,7 @@ Selles artiklis antakse teavet selle kohta, kuidas Dataverse kasutajad saavad ha
 ## <a name="important-considerations"></a>Olulised kaalutlused
 
 1. Võrguteenustes nagu Azure Data Lake Storage talletatavaid andmeid saab talletada muus asukohas kui see, kus andmeid rakenduses Dynamics 365 Customer Insights töödeldakse või talletatakse.Veebiteenustes talletatavate andmete importimisel või nendega ühenduse loomisel nõustute, et andmeid saab edastada ja salvestada rakendusega Dynamics 365 Customer Insights. [Lisateavet leiate Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
-2. Nähtavad on ainult Dataverse olemid, mille [muudatuste jälgimine](/power-platform/admin/enable-change-tracking-control-data-synchronization) on lubatud. Neid olemeid saab eksportida hallatavasse Dataverse andmejärve ja kasutada Customer Insightsis. Kastivälistel Dataverse tabelitel on vaikimisi lubatud muudatuste jälgimine. Kohandatud tabelite muudatuste jälgimine peate sisse lülitama. Kui soovite kontrollida, kas tabel on Dataverse muudatuste jälgimiseks lubatud, avage [Power Apps](https://make.powerapps.com) > **andmetabelid** > **·**. Leidke oma huvipakkuv tabel ja valige see. **Avage sättedLisatavad** > **suvandid** ja vaadake üle **säte Muudatuste** jälitamine.
+2. Nähtavad on ainult Dataverse olemid, mille [muudatuste jälgimine](/power-platform/admin/enable-change-tracking-control-data-synchronization) on lubatud. Neid olemeid saab eksportida hallatavasse Dataverse andmejärve ja kasutada Customer Insightsis. Kastivälistel Dataverse tabelitel on vaikimisi lubatud muudatuste jälgimine. Kohandatud tabelite muudatuste jälgimine peate sisse lülitama. Kui soovite kontrollida, kas tabel on Dataverse muudatuste jälgimiseks lubatud, avage [Power Apps](https://make.powerapps.com) > **andmetabelid** > **·**. Leidke oma huvipakkuv tabel ja valige see. **Avage suvandId** > **Sätted** Täpsemad ja vaadake üle **säte Muudatuste jälgimine**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Teenuse Dataverse hallatava järvega ühenduse loomine
 
@@ -62,7 +62,7 @@ Erinevate Dataverse -i data lake -idega ühendamiseks [looge uus andmeallikas](#
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
 
-2. Valige uuendatava andmeallika kõrval suvand kolm punkti.
+2. Valige värskendatava andmeallikas kõrval vertikaalne kolmikpunkt (&vellip;).
 
 3. Valige loetelust valik **Redigeeri**.
 

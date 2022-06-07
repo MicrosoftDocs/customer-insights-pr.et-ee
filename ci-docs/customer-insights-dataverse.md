@@ -1,43 +1,113 @@
 ---
-title: Customer Insightsi andmed teenuses Microsoft Dataverse
-description: Customer Insights olemite kasutamine Microsoft Dataverse tabelitena.
-ms.date: 04/05/2022
+title: Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
+description: Siit saate teada, kuidas ühendada Customer Insightsi ja Microsoft Dataverse mõista väljundolemeid, mis eksporditakse rakendusse Dataverse.
+ms.date: 05/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: wimohabb
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 1e629cd218b104b115f74f59a53a14e9d60fcc8a
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741360"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833671"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
 
-Customer Insights pakub võimalust muuta väljundi olemid kättesaadavaks teenuses [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). See integratsioon võimaldab hõlpsat andmete jagamist ja kohandatud arendamist madala koodi / koodita lähenemisviisi kaudu. Väljundolemid [on](#output-entities) keskkonnas tabelitena Dataverse saadaval. Andmeid saate kasutada mis tahes muu rakenduse kohta tabelite põhjal Dataverse. Need tabelid lubavad stsenaariume, nagu automatiseeritud töövood rakenduse kaudu Power Automate või rakenduste loomine rakenduses Power Apps. Praegune juurutus toetab peamiselt otsinguid, kust saadaolevate Customer Insightsi olemite andmeid saab konkreetse kliendi ID jaoks hankida.
+Customer Insights pakub võimalust teha väljundolemid kättesaadavaks rakendusena [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). See integratsioon võimaldab hõlpsat andmete jagamist ja kohandatud arendamist madala koodi / koodita lähenemisviisi kaudu. Väljundolemid [on](#output-entities) keskkonnas tabelitena Dataverse saadaval. Andmeid saate kasutada mis tahes muu rakenduse kohta tabelite põhjal Dataverse. Need tabelid lubavad stsenaariume, nagu automatiseeritud töövood rakenduse kaudu Power Automate või rakenduste loomine rakenduses Power Apps.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Dataverse Customer Insignts keskkonna lisamiseks
+Dataverse Keskkonnaga ühenduse loomine võimaldab teil andmevoogude ja lüüside abil [alla neelata Power Platform andmeid ka asutusesisene andmeallikatest](data-sources.md#add-data-from-on-premises-data-sources).
 
-**Olemasolev organisatsioon**
+## <a name="prerequisites"></a>eeltingimused
 
-Administraatorid saavad konfigureerida Customer Insightsi kasutama [olemasolevat Dataverse keskkonda](create-environment.md) Customer Insightsi keskkonna loomisel. Pakkudes URL-i Dataverse keskkonnale, on see seotud nende uue Customer Insightsi keskkonnaga. Customer Insightsi ja Dataverse keskkondi tuleb majutada samas piirkonnas. 
+- Customer Insightsi ja Dataverse keskkondi tuleb majutada samas piirkonnas.
+- Teil peab olema keskkonnas üldadministraatori Dataverse roll. Veenduge, kas see [Dataverse keskkond on seotud](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) teatud turberühmadega, ja veenduge, et teid lisatakse nendesse turberühmadesse.
+- Ükski teine Customer Insightsi keskkond pole juba seotud keskkonnaga, Dataverse mida soovite ühendada. Siit saate teada, [kuidas olemasolevat ühendust keskkonnaga Dataverse](#remove-an-existing-connection-to-a-dataverse-environment) eemaldada.
+- Keskkond Microsoft Dataverse saab ühenduse luua ainult ühe salvestusruumikontoga. See kehtib ainult siis, kui konfigureerite keskkonna [oma Azure Data Lake Storage](own-data-lake-storage.md) rakenduse kasutamiseks.
 
-Kui te ei soovi olemasolevat Dataverse keskkonda kasutada, loob süsteem rentniku Customer Insightsi andmete jaoks uue keskkonna. 
+## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Dataverse Keskkonna ühendamine Customer Insightsiga
 
-> [!NOTE]
-> Kui teie organisatsioonid juba kasutavad Dataverse oma rentnikus, on oluline meeles pidada, et [Dataverse keskkonna loomist kontrollib administraator](/power-platform/admin/control-environment-creation). Näiteks kui häälestate oma organisatsioonikontoga uut Customer Insightsi keskkonda ja administraator on keelanud proovikeskkondade Dataverse loomise kõigile peale administraatorite, ei saa te uut proovikeskkonda luua.
-> 
-> Customer Insightsi kaudu loodud Dataverse proovikeskkondades on 3 GB mäluruumi, mida ei arvestata rentniku kogu mäluruumi sisse. Tasulised Dataverse kordustellimused annavad 15 GB andmebaasi mäluruumi ja 20 GB faili mäluruumi.
+See **Microsoft Dataverse** samm võimaldab teil customer insightsi keskkonnaga ühendada, Dataverse luues samal ajal [Customer Insightsi keskkonna](create-environment.md).
 
-**Uus organisatsioon**
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="andmete jagamine Microsoft Dataverse automaatselt lubatud uute netokeskkondade jaoks.":::
 
-Kui loote Customer Insightsi häälestamisel uue organisatsiooni, loob süsteem teie asutuses teie jaoks automaatselt uue Dataverse keskkonna.
+Administraatorid saavad konfigureerida Customer Insightsi olemasoleva Dataverse keskkonna ühendamiseks. Pakkudes URL-i Dataverse keskkonnale, on see seotud nende uue Customer Insightsi keskkonnaga.
+
+Kui te ei soovi olemasolevat Dataverse keskkonda kasutada, loob süsteem rentniku Customer Insightsi andmete jaoks uue keskkonna. [Power Platform administraatorid saavad määrata, kes saab keskkondi](/power-platform/admin/control-environment-creation) luua. Kui häälestate uut Customer Insightsi keskkonda ja administraator on keelanud keskkondade Dataverse loomise kõigile peale administraatorite, ei pruugi teil olla võimalik uut keskkonda luua.
+
+**Andmete ühiskasutuse** lubamine, Dataverse märkides ruut Andmejagamine.
+
+Kui kasutate oma data lake storage kontot, vajate **ka õiguste identifikaatorit**. Lisateavet õiguse identifikaatori hankimise kohta leiate järgmisest jaotisest.
+
+## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Andmete ühiskasutuse lubamine enda oma Dataverse kaudu Azure Data Lake Storage (Eelvaade)
+
+Andmete jagamise lubamine, Microsoft Dataverse kui teie keskkond [kasutab teie enda Azure Data Lake Storage kontot](own-data-lake-storage.md), vajab täiendavat konfiguratsiooni. Customer Insightsi keskkonda seadistaval kasutajal **peavad kontol olema vähemalt** salvestusriba andmelugeja *õigused customerInsightsi* ümbrises Azure Data Lake Storage.
+
+1. Looge Azure'i tellimusel kaks turberühma – üks **Readeri** turberühm ja üks **kaasautori** turberühm ning Microsoft Dataverse määrake teenus mõlema turberühma omanikuks.
+2. Hallake nende turberühmade kaudu oma salvestusruumikonto konteineri CustomerInsights pääsukontrolli loendit (ACL). Microsoft Dataverse Lisage teenus ja kõik Dataverse põhinevad ärirakendused (nt Dynamics 365 Marketing) **kirjutuskaitstud** õigustega **turberühma Reader**. Lisage *kaasautori* turberühma ainult **rakendus** Customer Insights, et anda profiilide ja ülevaadete kirjutamiseks nii lugemis- kui ka **kirjutamisõigused**.
+
+### <a name="limitations"></a>Piirangud
+
+Oma Dataverse kontoga kasutamisel Azure Data Lake Storage on kaks piirangut:
+
+- Organisatsiooni ja Dataverse konto vahel Azure Data Lake Storage on üks-ühele vastendus. Dataverse Kui organisatsioon on ühendatud salvestusruumikontoga, ei saa ta mõne muu salvestuskontoga ühendust luua. See piirang takistab, et a Dataverse ei asustada mitut salvestusruumikontot.
+- Andmete jagamine ei toimi, kui Azure Data Lake'i salvestusruumikontole juurdepääsuks on vaja Azure'i privaatlingi häälestust, kuna see on tulemüüri taga. Dataverse praegu ei toeta eralingi kaudu ühendust privaatsete lõpp-punktidega.
+
+### <a name="set-up-powershell"></a>PowerShelli häälestamine
+
+PowerShelli skriptide käivitamiseks peate kõigepealt seadistama PowerShelli vastavalt.
+
+1. Installige PowerShell for Graph [Azure Active Directory uusim](/powershell/azure/active-directory/install-adv2) versioon.
+   1. Valige arvutis klaviatuuril Windowsi klahv ja otsige **Windows PowerShell** ning valige **Käivita administraatorina**.
+   1. Sisestage avanevasse PowerShelli aknasse `Install-Module AzureAD`.
+2. Importige kolm moodulit.
+    1. Sisestage `Install-Module -Name Az.Accounts` PowerShelli aknas juhised ja järgige neid.
+    1. Korda ja `Install-Module -Name Az.Resources``Install-Module -Name Az.Storage`.
+
+### <a name="configuration-steps"></a>Konfigureerimise sammud
+
+1. Laadige alla kaks PowerShelli skripti, mida peate meie inseneri GitHubi repo-st [käivitama](https://github.com/trin-msft/byol).
+    1. `CreateSecurityGroups.ps1`
+       - Selle PowerShelli skripti käitamiseks on vaja *rentnikuadministraatori* õigusi.
+       - See PowerShelli skript loob teie Azure'i tellimusel kaks turberühma. Üks reader rühmale ja teine kaasautorite rühmale ning teenus muutub Microsoft Dataverse mõlema turberühma omanikuks.
+       - Käivitage see PowerShelli skript Windows PowerShellis, pakkudes Azure'i tellimuse ID-d, mis sisaldab teie Azure Data Lake Storage. Lisateabe ja rakendatud loogika ülevaatamiseks avage redaktoris PowerShelli skript.
+       - Salvestage mõlemad selle skripti loodud turberühma ID väärtused, kuna kasutame neid skriptis `ByolSetup.ps1`.
+
+        > [!NOTE]
+        > Turberühma loomise saab rentnikus keelata. Sellisel juhul oleks vaja käsitsi seadistamist ja teie Azure AD administraator peaks lubama [turberühma loomise](/azure/active-directory/enterprise-users/groups-self-service-management).
+
+    2. `ByolSetup.ps1`
+        - Selle skripti käitamiseks on vaja *salvestusruumi bloobi andmeomaniku* õigusi salvestusruumi konto/konteineri tasemel või see skript loob selle teie jaoks. Pärast skripti edukat käivitamist saab rollimäärangu käsitsi eemaldada.
+        - See PowerShelli skript lisab teenuse ja mis tahes Microsoft Dataverse ärirakenduste jaoks Dataverse vajaliku tole-põhise juurdepääsukontrolli (RBAC). Samuti värskendab see skriptiga `CreateSecurityGroups.ps1` loodud turberühmade access control listi (ACL) CustomerInsightsi konteineris. Kaasautorite rühmal on *RWX-i* luba ja lugejate rühmal on *ainult R-x-luba*.
+        - Käivitage see PowerShelli skript Windows PowerShellis, pakkudes Azure'i tellimuse ID-d, mis sisaldab teie Azure Data Lake Storage, salvestusruumikonto nime, ressursirühma nime ning readeri ja kaasautori turberühma ID väärtusi. Lisateabe ja rakendatud loogika ülevaatamiseks avage redaktoris PowerShelli skript.
+        - Kopeerige väljundstring pärast skripti edukat käivitamist. Väljundstring näeb välja selline: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+
+2. Sisestage ülalt **kopeeritud väljundstring rakenduse keskkonnakonfiguratsioonietapi väljale Õiguste identifikaator** Microsoft Dataverse.
+
+:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Konfigureerimissuvandid andmete ühiskasutuse lubamiseks rakendusega Azure Data Lake Storage Microsoft Dataverse.":::
+
+### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Olemasoleva ühenduse eemaldamine keskkonnaga Dataverse
+
+Keskkonnaga Dataverse ühenduse loomisel tähendab tõrketeade **See CDS-organisatsioon on juba seotud mõne muu Customer Insightsi eksemplariga**, et Dataverse keskkonda kasutatakse juba Customer Insightsi keskkonnas. Olemasoleva ühenduse saate eemaldada keskkonna üldadministraatorina Dataverse. Muudatuste elluviimiseks võib kuluda paar tundi.
+
+1. Avage [Power Apps](https://make.powerapps.com).
+1. Valige keskkond keskkonnavalijast.
+1. Avage **lahendused**
+1. Desinstallige või kustutage lahendus nimega **Dynamics 365 Customer Insights Kliendikaardi lisandmoodul (eelvaade)**.
+
+VÕI
+
+1. Avage oma Dataverse keskkond.
+1. Avage täpsemate **sätete** > **lahendused**.
+1. Desinstallige **CustomerInsightsCustomerCard** lahendus.
+
+Kui ühenduse eemaldamine sõltuvuste tõttu ebaõnnestub, peate eemaldama ka sõltuvused. Lisateavet leiate teemast [Sõltuvuste](/power-platform/alm/removing-dependencies) eemaldamine.
 
 ## <a name="output-entities"></a>Väljundolemid
 
@@ -50,7 +120,6 @@ Mõned Customer Insightsi väljundolemid on rakenduses tabelitena Dataverse saad
 - [Rikastamine](#enrichment)
 - [Prognoos](#prediction)
 - [Segmendi liikmelisus](#segment-membership)
-
 
 ### <a name="customerprofile"></a>Kliendi profiil
 
@@ -139,3 +208,34 @@ See tabel sisaldab kliendiprofiilide segmendi liikmelisuse teavet.
 | Segmendid       | JSON-sõne  | Kordumatute segmentide loend, mille liige kliendiprofiil on      |
 | msdynci_identifier  | String   | Segmendi liikmelisuse kirje ainuidentifikaator. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | Deterministlik GUID, mis on loodud`msdynci_identifier`          |
+
+<!--
+## FAQ: Update existing environments to use Microsoft Dataverse
+
+Between mid-May 2022 and June 13, 2022, administrators can update the environment settings with a Dataverse environment that Customer Insights can use. On June 13, 2022, your environment will be updated automatically and we'll create a Dataverse environment on your tenant for you.
+
+1. My environment uses my own Azure Data Lake Storage account. Do I still need to update?
+
+   If there's already a Dataverse environment configured in your environment, the update isn't required. If no Dataverse is environment configured, the **Update now** button will create a Dataverse environment and update from the Customer Insights database to a Dataverse database.
+
+1. Will we get extra Dataverse capacity, or will the update use my existing Dataverse capacity?
+
+   - If there's already a Dataverse environment configured in your Customer Insights environment, or connected with other Dynamics 365 or Power Apps applications, the capacity remains unchanged.
+   - If the Dataverse environment is new, it will add new storage and database capacity. The capacity added varies per environment and entitlements. You'll get 3 GB for trial and sandbox environment. Production environments get 15 GB.
+
+1. I proceeded with the update and it seems like nothing happened. Is the update complete?
+
+   If the notification in Customer Insights doesn't show anymore, the update is complete. You can check the status of the update by reviewing your environment settings.
+
+1. Why do I still see the banner after completing the update steps?
+
+   It can happen due to an upgrade or refresh failure. Contact support.
+
+1. I received a "Failed to provision Dataverse environment" error after starting the update. What happened?
+
+   It can happen due to an upgrade or refresh failure. Contact support.
+   Common causes:
+    - Insufficient capacity. There's no more capacity to create more environments. For more information, see [Manage capacity action](/power-platform/admin/capacity-storage#actions-to-take-for-a-storage-capacity-deficit).
+    - Region mismatch between tenant region and Customer Insights environment region in the Australia and India regions.
+    - Insufficient privileges to provision Dataverse. The users starting the update needs a Dynamics 365 admin role.
+    - -->

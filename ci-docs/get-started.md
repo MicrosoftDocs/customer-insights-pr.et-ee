@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: HT
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741128"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833534"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights-iga alustamine
 
@@ -25,21 +25,21 @@ Customer Insights aitab teil oma klientidest sügavamalt aru saada. 360-kraadise
 
 ## <a name="step-1-create-an-environment"></a>1. samm: keskkonna loomine
 
-Alustamiseks tuleb esmalt luua keskkond, kus töötada. Kui teie organisatsioon on juba litsentsi ostnud, lugege teemat [Keskkonna loomine](create-environment.md). Customer Insightsi prooviversiooni alustamiseks lugege teemat [Proovikeskkonna häälestamine](trial-signup.md).
+Kõigepealt looge keskkond, kus töötada. Kui teie organisatsioon on juba litsentsi ostnud, lugege teemat [Keskkonna loomine](create-environment.md). Customer Insightsi prooviversiooni alustamiseks lugege teemat [Proovikeskkonna häälestamine](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>2. samm: tutvuge klientide ülevaadetega
 
-Customer Insightsi esmakordsel sisselogimisel saate sätteid konfigureerida ja toodet uurida.
+Esimest korda Customer Insightsi sisselogimisel konfigureerige sätted ja uurige toodet.
 
 1. [logige Customer Insightsi](https://home.ci.ai.dynamics.com) sisse oma Microsofti Azure Active Directory (AAD) kasutajakonto abil.
 
-1. [Muutke keskkonda](manage-environments.md#switch-environments) demoandmete vaatamiseks ja [Customer Insightsi uurimiseks](home.md).
+1. Muutke keskkonda demoandmete vaatamiseks ja [Customer Insightsi uurimiseks](home.md).
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>3. samm: andmetega seoste kuvamine, idutamine ja seadistamine
 
-Ühtsed profiilid on aluseks statistika saamiseks ja andmetega tegelemiseks. Saate tuua andmeid erinevatest allikatest ja käivitada andmete ühendamise protsessi ühendatud profiilide ühendamiseks. Saate määrata seosed allaneetud olemite vahel, et lisada profiilidele teavet rikastusfunktsiooni abil.
+Ühtsed profiilid on aluseks statistika saamiseks ja andmetega tegelemiseks. Saate tuua andmeid erinevatest allikatest ja käivitada andmete ühendamise protsessi ühendatud profiilide ühendamiseks. Määrake allaneelatud olemite vahelised seosed ja kasutage profiilidele teabe lisamiseks rikastamisfunktsioone.
 
-1. Andmete hankimine, luues andmeallikaid mitmest valikust. [Power Query Valige konnektorite](connect-power-query.md), [ühise andmemudeli kausta](connect-common-data-model.md) või [Microsoft Dataverse](connect-dataverse-managed-lake.md). 
+1. Andmete hankimine, luues andmeallikaid mitmest valikust. [Power Query Valige konnektorite](connect-power-query.md), [ühise andmemudeli kausta](connect-common-data-model.md) või [Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
 1. Käivitage [andmete ühendamise protsess](data-unification.md), tuvastades [lähteväljad](map-entities.md), eemaldades [duplikaadid](remove-duplicates.md), [sobitades tingimused](match-entities.md) ja [ühendades väljad](merge-entities.md).
 
@@ -47,7 +47,7 @@ Customer Insightsi esmakordsel sisselogimisel saate sätteid konfigureerida ja t
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>4. samm: ühtse profiilide laiendamine ennustamise, tegevuste ja mõõdikutega
 
-Ühendatud profiilide häälestamise korral saate oma andmeid laiendada ja pakutavat teavet veelgi suurendada.
+Kui ühtsed profiilid on seadistatud, täiustage oma andmeid ja suurendage nende esitatud teavet veelgi.
 
 1. [Kliendiandmete rikastamiseks](enrichment-hub.md) valige rikastamise pakkujate laiendatud teegist.
 
@@ -59,7 +59,7 @@ Customer Insightsi esmakordsel sisselogimisel saate sätteid konfigureerida ja t
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>5. samm: segmentide loomine ja andmete aktiveerimine erinevate ekspordisuvandite kaudu
 
-Nüüd, kui teie andmed on täielikud ja sisaldavad laia valikut teavet teie klientide kohta, on aeg otsida võimalusi nende andmetega tegelemiseks.
+Nüüd, kui teie andmed on täielikud ja sisaldavad laias valikus teavet teie klientide kohta, otsige võimalusi nende andmetega tegelemiseks.
 
 1. [Looge segmente](segments.md), kliendibaasi alamsegmente, et tagada tegevuste asjakohane jaotus sihtklientide jaoks.
 

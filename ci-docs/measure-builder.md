@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642851"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800321"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Kasutage mõõtude koostajat, et luua meetmeid nullist
 
@@ -88,7 +88,7 @@ Saate luua meetmeid üksikute klientide tasandil (kliendi atribuut, kliendimõõ
 
 1. Kui soovite näitajat veel arvutada, valige **Uus arvutus**. Uute arvutuste jaoks saate kasutada ainult samal olemiteel olevaid üksusi. Täiendavad arvutused kuvatakse näitaja väljundolemis uute veergudena.
 
-1. Valige näitajast arvutuse **Duplitseerimiseks**, **Ümber nimetamiseks** või **Eemaldamiseks** **...**.
+1. Valige arvutuses vertikaalne kolmikpunkt (&vellip;) väärtuseks **Duplikaat**, **Ümbernimetamine** või **Arvutuse eemaldamine** mõõdust.
 
 1. **Eelvaatealal** näete näitaja väljundolemi andmeskeemi (sh filtreid ja dimensioone). Eelvaade reageerib dünaamiliselt konfiguratsiooni muudatustele.
 
@@ -158,7 +158,7 @@ Saate luua meetmeid üksikute kontode tasemel (kliendimõõt) või kõigi kontod
    1. Valige **Seosetee** ja valige olemitee, mida tuleks kasutada teie mõõtmete tuvastamiseks. Kui olemi *Klient* juurde on ainult üks tee, siis seda juhtelementi ei näidata.
    1. Valiku rakendamiseks valige suvand **Valmis**.
 
-1. Valige näitajast arvutuse **Duplitseerimiseks**, **Ümber nimetamiseks** või **Eemaldamiseks** **...**.
+1. Valige arvutuses vertikaalne kolmikpunkt (&vellip;) väärtuseks **Duplikaat**, **Ümbernimetamine** või **Arvutuse eemaldamine** mõõdust.
 
 1. **Eelvaatealal** näete näitaja väljundolemi andmeskeemi (sh filtreid ja dimensioone). Eelvaade reageerib dünaamiliselt konfiguratsiooni muudatustele.
 

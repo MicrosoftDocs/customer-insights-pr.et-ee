@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642664"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800139"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Andmeallikas ühenduse loomine Power Query
 
@@ -76,7 +76,7 @@ Veerus **Customer Insights (Dataflows)** märkega konnektorid on saadaval uute a
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
 
-2. Valige muudetava andmeallika kõrval vertikaalne ellips ja valige rippmenüüst **Muuda**.
+2. Valige muudetava andmeallikas kõrval vertikaalne kolmikpunkt (&vellip;) ja valige rippmenüüst Käsk **Redigeeri**.
 
    > [!div class="mx-imgBorder"]
    > ![Redigeerimise suvand.](media/edit-option-data-sources.png "Redigeerimise suvand")

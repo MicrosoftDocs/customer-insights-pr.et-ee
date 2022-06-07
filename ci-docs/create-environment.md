@@ -1,110 +1,137 @@
 ---
-title: Looge Customer Insights keskkondi
-description: Sammud litsentsitud kordustellimusega keskkondade loomiseks Dynamics 365 Customer Insights jaoks.
-ms.date: 04/25/2022
+title: Kuidas – uue keskkonna loomine
+description: Juhised keskkondade loomiseks rakenduses Dynamics 365 Customer Insights.
+ms.date: 05/31/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
-ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
-ms.translationtype: HT
+ms.openlocfilehash: 795eaa3598257f5188070f6ea02d04e4423b66eb
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "8712897"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833553"
 ---
-# <a name="create-an-environment-in-customer-insights"></a>Keskkonna loomine Customer Insightsis
+# <a name="how-to-create-a-new-environment"></a>Kuidas: Uue keskkonna loomine
 
-Selles artiklis kirjeldatakse, kuidas luua uus keskkond pärast seda, kui su organisatsioon on ostnud Dynamics 365 Customer Insights -itellimuse. 
+Pärast [tellimuse litsentsi Dynamics 365 Customer Insights](paid-license.md) ostmist saab rentniku üldadministraator Microsoft 365 meilisõnumi, mis kutsub neid keskkonda looma. Alustamiseks minge [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). Selle stsenaariumi korral võite minna otse 1. sammu juurde [: esitage põhiteave](#step-1-provide-basic-information).
 
-Organisatsioonid saavad iga Customer Insightsi litsentsi jaoks luua mitu keskkonda. Kui teie organisatsioon ostab rohkem kui ühe litsentsi, siis [pöörduge meie tugimeeskonna poole](https://go.microsoft.com/fwlink/?linkid=2079641), et suurendada vabade keskkondade arvu. Võimsuse ja lisandmooduli võimsuse kohta lisateabe saamiseks vaadake Dynamics 365 [litsentsimisjuhendit](https://go.microsoft.com/fwlink/?LinkId=866544).
+Pärast esimese keskkonna loomist saab Microsoft 365 rentniku [üldadministraator lisada kasutajad, kes moodustavad oma organisatsiooni administraatoritena](permissions.md). Edasi liikudes saavad need administraatorid hallata kasutajaid ja keskkondi. Kui teie organisatsioon ostab Customer Insightsi jaoks rohkem kui ühe litsentsi, [võtke saadaolevate keskkondade arvu suurendamiseks ühendust meie tugimeeskonnaga](https://go.microsoft.com/fwlink/?linkid=2079641). Võimsuse ja lisandmooduli võimsuse kohta lisateabe saamiseks vaadake Dynamics 365 [litsentsimisjuhendit](https://go.microsoft.com/fwlink/?LinkId=866544).
 
-> [!NOTE]
+> [!TIP]
 > Kui soovite teenust proovida, lugege teemat [Proovikeskkonna seadistamine](trial-signup.md).
 
-## <a name="create-a-new-environment"></a>Uue keskkonna loomine
+## <a name="prerequisites"></a>eeltingimused
 
-Pärast Customer Insightsi tellimuslitsentsi ostmist saab rentniku üldadministraator Microsoft 365 meilisõnumi, mis kutsub neid keskkonda looma. Alustamiseks minge [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
+Keskkondade [loomiseks või haldamiseks on Customer Insightsis vaja](permissions.md) administraatoriõigusi.
 
-Juhendav kogemus aitab teil koguda uue keskkonna jaoks vajalikku teavet. Keskkondade [loomiseks või haldamiseks on Customer Insightsis vaja](permissions.md) administraatoriõigusi.
+## <a name="start-the-environment-creation-process"></a>Keskkonna loomise protsessi alustamine
 
 1. Avage keskkonnavalija ja valige **+ Uus**.
   
    :::image type="content" source="media/environment-picker.png" alt-text="Valige keskkonnavalija.":::
 
-1. Järgige järgmistes jaotistes kirjeldatud juhendatud kogemust.
+1. Järgige järgmistes jaotistes kirjeldatud juhendatud kogemust, et anda kogu vajalik teave uue keskkonna jaoks. Kui konfigureerisite keskkonna varem, saate konfiguratsiooni [ka](#copy-the-environment-configuration) kopeerida.
 
-### <a name="step-1-provide-environment-information"></a>Esimene etapp: Keskkonnateabe esitamine
+## <a name="step-1-provide-basic-information"></a>1. samm: põhiteabe esitamine
 
-Valige **Põhiteabe** etapis, kas soovite luua soovitud keskkonda kopeerimiskeskkonnast või [kopeerida andmed muust keskkonnast](manage-environments.md#copy-the-environment-configuration).
+Valige **Põhiteabe** etapis, kas soovite luua soovitud keskkonda kopeerimiskeskkonnast või [kopeerida andmed muust keskkonnast](#copy-the-environment-configuration).
 
    :::image type="content" source="media/environment-settings-dialog.png" alt-text="Uue ühenduse loomine rakenduses Customer Insights.":::
 
 Esitage järgmised andmed.
-   - **Nimi**: selle keskkonna nimi. Olemasolevast keskkonnast kopeerides on see väli juba täidetud, kuid saate seda muuta.
-   - **Valige oma ettevõte**: Valige uue keskkonna jaoks peamine sihtrühm. Võite töötada eraklientidega (B2C) või [ ettevõtetega](work-with-business-accounts.md) (B2B).
-   - **Tüüp**: Valige, kas soovite luua töö- või liivakastikeskkonna. Liivakastikeskkonnad ei luba ajastatud andmeid värskendada ja on mõeldud eelinstallimiseks ja testimiseks. Liivakastikeskkonnad kasutavad põhilist sihtrühma, kes on praegu valitud töökeskkonnas.
-   - **Piirkond**: piirkond, kus teenus juurutatakse ja majutatakse.
 
-### <a name="step-2-configure-data-storage"></a>Teine etapp: Andmemälu konfigureerimine
+- **Nimi**: selle keskkonna nimi. Olemasolevast keskkonnast kopeerides on see väli juba täidetud, kuid saate seda muuta.
+- **Valige oma ettevõte**: Valige uue keskkonna jaoks peamine sihtrühm. Võite töötada eraklientidega (B2C) või [ ettevõtetega](work-with-business-accounts.md) (B2B). Kui teie organisatsioon teeb äri peamiselt üksikisikutega, näiteks jaemüüja või kohvikuga, valige üksiktarbijad. Kui teie peamine vaatajaskond on teised ettevõtted, näiteks autotootja või paberifirma, valige ärikontod.
+- **Tüüp**: Valige, kas soovite luua töö- või liivakastikeskkonna. Liivakastikeskkonnad ei luba ajastatud andmeid värskendada ja on mõeldud eelinstallimiseks ja testimiseks. Liivakastikeskkonnad kasutavad põhilist sihtrühma, kes on praegu valitud töökeskkonnas.
+- **Piirkond**: piirkond, kus teenus juurutatakse ja majutatakse. [Oma Azure Data Lake Storage konto](own-data-lake-storage.md) kasutamiseks või [olemasoleva Microsoft Dataverse organisatsiooniga](customer-insights-dataverse.md) ühenduse loomiseks peab Customer Insightsi keskkond olema samas piirkonnas.
+
+## <a name="step-2-configure-data-storage"></a>Teine etapp: Andmemälu konfigureerimine
 
 **Valige jaotises Andmete talletamise** etapp, kuhu Customer Insightsi andmed salvestada.
 
-Teil on kaks võimalust: **Customer Insightsi salvestusruum** (Azure Data Lake, mida haldab Customer Insights meeskond) ja **Azure Data Lake Storage** (teie enda Azure Data Lake Storage). Vaikimisi on valitud Customer Insightsi salvestusruumi suvand.
+Valikus on kaks võimalust.
 
-:::image type="content" source="media/data-storage-environment.png" alt-text="Azure Data Lake Storage Valige andmete talletamiseks soovitud.":::
+- **Customer Insightsi salvestusruum**: andmete salvestamist haldab Customer Insightsi meeskond. See on vaikevalik ja kui andmete salvestamiseks oma salvestuskontole pole konkreetseid nõudeid, soovitame seda suvandit kasutada.
+- **Azure Data Lake Storage**: Määrake andmete salvestamiseks oma Azure Data Lake Storage konto, et saaksite täielikult kontrollida, kuhu andmed salvestatakse. Lisateavet leiate teemast [Oma konto Azure Data Lake Storage kasutamine](own-data-lake-storage.md).
 
-Salvestades andmed Azure Data Lake Storage-sse, nõustute, et andmed kantakse üle ja salvestatakse selle Azure'i salvestuskonto jaoks sobivasse geograafilisse asukohta. See asukoht võib erineda andmete talletamiskohtadest rakenduses Dynamics 365 Customer Insights. Lisateavet leiate [Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
+:::image type="content" source="media/data-storage-environment.png" alt-text="Valige oma andmete salvestamiseks eelistatud valik.":::
 
-> [!NOTE]
-> Customer Insights toetab praegu järgmist:  
-> - Azure Data Lake Storage kontod samast Azure'i piirkonnast, mille valisite keskkonna loomisel.
-> - Azure Data Lake Storage kontod, mis on Gen2 ja mille hierarhiline nimeruum *on* lubatud. Azure Data Lake Gen1 salvestuskontosid ei toetata.
+## <a name="step-3-connect-to-microsoft-dataverse"></a>Kolmas etapp: Microsoft Dataverse-ga ühenduse loomine
 
-Selle Azure Data Lake Storage suvandi puhul saate valida ressursipõhise ja kordustellimusel põhineva autentimise suvandi. Lisateavet leiate teemast [Azure Data Lake Storage kontoga ühenduse loomine Azure'i teenuse subjekti](connect-service-principal.md) abil. Nimega konteiner `customerinsights` peab olema salvestuskontol.
+**Microsoft Dataverse** etapp lubab teil Customer Insights'i oma Dataverse keskkonnaga ühendada. Dataverse Andmete ühiskasutusse andmine, et neid kasutada ärirakendustega, mis põhinevad rakenduse Dynamics Dataverse 365 Marketing või mudelipõhistel rakendustel Power Apps rakenduses.
 
-Kui süsteemiprotsessid, nagu andmete allaneelamine, on lõpule jõudnud, loob süsteem teie määratud salvestusruumikontole vastavad kaustad. Andmefailid ja *model.json* failid luuakse ning lisatakse kaustadesse protsessi nime põhjal.
+Jätke see väli tühjaks, kui teil pole oma Dataverse keskkonda ja me loome selle teie jaoks.
 
-Kui loote Customer Insights'i mitu keskkonda ja salvestate nendest keskkondadest väljundolemid oma salvestuskontole, loob Customer Insights iga keskkonna jaoks eraldi kaustad, mille konteineris on `ci_environmentID`.
+Lisateavet leiate teemast [Customer Insightsi andmetega töötamine rakenduses Microsoft Dataverse](customer-insights-dataverse.md).
 
-### <a name="step-3-connect-to-microsoft-dataverse"></a>Kolmas etapp: Microsoft Dataverse-ga ühenduse loomine
-   
-**Microsoft Dataverse** etapp lubab teil Customer Insights'i oma Dataverse keskkonnaga ühendada.
-
-Pakkuge oma Microsoft Dataverse keskkonda, et jagada andmeid (profiile ja ülevaateid) ärirakendustega, mis põhinevad rakendusel Dataverse(nt Dynamics 365 Marketing või mudelipõhised rakendused rakenduses )Power Apps. Jätke see väli tühjaks, kui teil pole oma Dataverse keskkonda ja me eraldame selle teile.
-
-Dataverse Keskkonnaga ühenduse loomine võimaldab teil andmevoogude ja lüüside abil [alla neelata Power Platform andmeid ka asutusesisene andmeallikatest](data-sources.md#add-data-from-on-premises-data-sources).
-
-> [!IMPORTANT]
-> 1. Customer Insights ja Dataverse andmete jagamise lubamiseks peab see olema samas piirkonnas.
-> 1. Teil peab olema keskkonnas üldadministraatori Dataverse roll. Kontrollige, kas see [Dataverse keskkond on seotud](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) teatud turberühmadega, ja veenduge, et teid lisatakse nendesse turberühmadesse.
-> 1. Ükski olemasolev Customer Insightsi keskkond pole selle Dataverse keskkonnaga juba seotud. Siit saate teada, [kuidas olemasolevat ühendust keskkonnaga Dataverse](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment) eemaldada.
-
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="andmete jagamine Microsoft Dataverse automaatselt lubatud uute netoeksemplari puhul.":::
-
-Lisateavet andmete ühiskasutuse lubamise kohta leiate teemast Ühenduse loomine rakendusega Microsoft Dataverse Azure Data Lake Storage [.Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse)
-
-Customer Insights ei toeta järgmisi andmete jagamise stsenaariume:
-- Kui lubate andmete ühiskasutuse Dataverse-ga, ei saa te [olemis luua ennustatud ega puuduvad väärtused](predictions.md).
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="andmete jagamine Microsoft Dataverse automaatselt lubatud uute netokeskkondade jaoks.":::
 
 ### <a name="step-4-finalize-the-settings"></a>Neljas etapp: Viige sätted lõpule
 
-Vaadake **Arvustuse** sammus kõiki määratud sätteid. Kui kõik paistab valmis, valige keskkonna häälestamiseks käsk **Loo**. 
+Vaadake juhises **Läbivaatus** läbi kõik määratud sätted. Kui kõik paistab valmis, valige keskkonna häälestamiseks käsk **Loo**.
 
-Enamikku sätetest saate hiljem ka muuta. Lisateavet leiate teemast [Keskkondade haldamine](manage-environments.md).
+Mõnda sätet saate hiljem muuta. Lisateavet leiate teemast [Keskkondade haldamine](manage-environments.md).
 
 ## <a name="work-with-your-new-environment"></a>Uue keskkonnaga töötamine
 
-Kliendiülevaadete konfigureerimise alustamiseks vaadake üle järgmised artiklid. 
+Kliendiülevaadete konfigureerimise alustamiseks vaadake üle järgmised artiklid.
 
 - [Lisage veel kasutajaid ja määrake õiguseid](permissions.md)i.
 - [Tooge sisse oma andmeallikaid](data-sources.md) ja käivitage need [andmete ühendamise protsessis](data-unification.md) , et [saada ühtseid kliendiprofiile](customer-profiles.md).
 - [Rikastage ühendatud kliendiprofiile](enrichment-hub.md) või [käivitage ennetavad mudeleid](predictions-overview.md).
 - [Looge segmente](segments.md) klientide rühmitamiseks ja [mõõdikuid](measures.md) KPI-de arvustamiseks.
 - [Seadistage ühendused](connections.md) ja [eksporte](export-destinations.md) andmete alamhulkade töötlemiseks muudes rakendustes.
+
+## <a name="copy-the-environment-configuration"></a>Kopeerige keskkonna konfiguratsioon
+
+Administraatorina saate uue keskkonna loomisel valida konfiguratsiooni kopeerimise olemasolevast keskkonnast.
+
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="Kuvatõmmis suvandisätetest keskkonnasätetes.":::
+
+Näete teie ettevõtte kõigi saadaolevate keskkondade loendit, kust saate andmeid kopeerida.
+
+Kopeeritakse järgmised konfiguratsioonisätted.
+
+- Andmeallikad, mis on imporditud Power Query
+- Andmete ühendamise konfiguratsioon
+- Segmendid
+- Näitajad
+- Suhtlused
+- Tegevused 
+- Otsing ja filtri register
+- Eksportimised
+- Värskendamise ajakava
+- Rikastamised
+- Prognoos mudelid
+- Rolli määramised
+
+## <a name="set-up-a-copied-environment"></a>Kopeeritud keskkonna häälestamine
+
+Keskkonnakonfiguratsiooni kopeerimisel peate mandaadi kinnitamiseks läbima mõned lisatoimingud.
+
+- Kliendiprofiilid. Esmalt autentige ja neelake alla oma andmeallikad ning käivitage andmete ühendamine kliendiprofiilide taasloomiseks.
+- Andmeallika identimisteave. Andmeallikate käsitsi autentimiseks ja värskendamiseks peate esitama iga andmeallikas identimisteabe.
+- Andmeallikad kaustast Common Data Model ja Dataverse. Need andmeallikad tuleb luua käsitsi sama nimega kui lähtekeskkonnas.
+- Ühenduse saladused, mida kasutatakse ekspordiks ja rikastamiseks. Te peate ühendused uuesti kinnitama ja seejärel taasaktiveerima rikastamised ja ekspordi.
+
+Kopeeritud keskkonna loomisel kuvatakse kinnitusteade. Andmeallikate loendi nägemiseks valige suvand **Ava andmeallikad**.
+
+Kõik andmeallikad kuvavad olekut **Mandaat nõutav**. Redigeerige andmeallikaid ja sisestage nende värskendamiseks identimisteave.
+
+:::image type="content" source="media/data-sources-copied.png" alt-text="Kopeeritud ja autentimist vajav andmeallikate loend.":::
+
+Pärast andmeallikate värskendamist avage jaotis **Andme** > **Ühendamine**. Siit leiate lähtekeskkonna sätted. Redigeerige neid vastavalt vajadusele või valige **Käivita**, et käivitada andmete ühendamise protsess ja luua ühtne kliendi olem.
+
+Kui andmete ühendamine on lõpetatud, avage **Meetmed** ja **Segmendid**, et neid samuti värskendada.
+
+Enne ekspordi ja rikastamise taasaktiveerimist avage **administraatoriühendused** > **·**, et taastada ühendused uues keskkonnas.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

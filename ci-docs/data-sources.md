@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739203"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800461"
 ---
 # <a name="data-sources-overview"></a>Andmeallikate ülevaade
 
@@ -76,7 +76,7 @@ Andmeallika värskendamiseks mis tahes ajal toimige järgmiselt.
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
 
-2. Valige värskendatava andmeallika kõrval vertikaalne ellips ja valige **Värskenda** ripploendist.
+2. Valige värskendatava andmeallikas kõrval vertikaalne kolmikpunkt (&vellip;) ja valige ripploendist **Värskenda**.
 
 3. Andmeallika jaoks käivitatakse nüüd käsitsivärskendamine. Andmeallika värskendamine uuendab nii olemiskeemi kui ka kõigi andmeallikas määratud olemite andmeid.
 
@@ -86,7 +86,7 @@ Andmeallika värskendamiseks mis tahes ajal toimige järgmiselt.
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
 
-2. Valige eemaldatava andmeallika kõrval vertikaalne ellips ja valige **Kustuta** ripploendist.
+2. Valige eemaldatava andmeallikas kõrval vertikaalne kolmikpunkt (&vellip;) ja valige rippmenüüst Käsk **Kustuta**.
 
 3. Kinnitage, et soovite kustutada.
 

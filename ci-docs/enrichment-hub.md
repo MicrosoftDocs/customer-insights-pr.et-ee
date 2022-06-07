@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c14e6c96d2f907ba161331b6f92277191cbdbef
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653518"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800600"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Kliendiprofiilide rikastamine (eelvaade)
 
@@ -27,7 +27,7 @@ Kliendiandmete rikastamiseks saate kasutada andmeid allikatest, nagu Microsoft j
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Rikastamisekeskuse leht.":::
 
-Rikastamisvõimalustega töötamiseks minge aadressile **DataEnrichment** > **·**.  
+Rikastamisvalikutega töötamiseks minge jaotisse **Andmete** > **rikastamine**.  
 
 Rikastamiste loomiseks või redigeerimiseks peavad teil olema kaasautori või administraatori õigused. Lisateavet vt teemast [Õigused](permissions.md).
 
@@ -63,7 +63,7 @@ Saate kuvada oma konfigureeritud rikastamisi ja redigeerida nende atribuute vahe
 
 Minge vahekaardile **Minu rikastused**, et näha kõiki konfigureeritud rikastusi. Iga rikastamine on esindatud reana, mis sisaldab täiendavat teavet rikastamise kohta.
 
-Valige rikastus, et näha saadaolevaid suvandeid. Valikute nägemiseks võite loendikirjel valida ka ellipsi (...). Kui konfigureerite mitu rikastustegurit, saate selle kiiresti leidmiseks kasutada otsinguvälja.
+Valige rikastus, et näha saadaolevaid suvandeid. Suvandite nägemiseks saate loendiüksusel valida ka vertikaalse kolmikpunkti (&vellip;). Kui konfigureerite mitu rikastustegurit, saate selle kiiresti leidmiseks kasutada otsinguvälja.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Rikastamiste haldamise suvandid rikastamiste loendis.":::
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653472"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763574"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Tooge oma Azure võtmehoidla (eelversioon)
 
@@ -37,11 +37,11 @@ Customer Insightsi võtmehoidla konfigureerimiseks peavad olema täidetud järgm
 
 - Võtmehoidlal peab olema võtmehoidla tulemüür **keelatud**.
 
-- Võtmehoidla asub Customer Insightsi keskkonnaga samas [Azure'i asukohas](https://azure.microsoft.com/global-infrastructure/geographies/#overview). Customer Insightsi keskkonnapiirkond on loetletud jaotises **AdminSystemAboutRegion** > **·** > **·** > **·**.
+- Võtmehoidla asub Customer Insightsi keskkonnaga samas [Azure'i asukohas](https://azure.microsoft.com/global-infrastructure/geographies/#overview). Customer Insightsi keskkonnapiirkond on loetletud jaotises **Administraatorisüsteem** > **·** > **regiooni** > **kohta**.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Võtmehoidla linkimine keskkonnaga
 
-1. **Avage adminSecurity** > **ja** seejärel vahekaart **Võtmevõlv**.
+1. **Avage administraatori** > **turbesüsteem** ja seejärel valige **vahekaart Võtmehoidla**.
 1. Tehke paanil **Võtmehoidla** valik **Seadistus**.
 1. Valige **Kordustellimus**.
 1. Valige võtmehoidla ripploendist **Võtmeloend**. Kui kuvatakse liiga palju võtmehoidlaid, valige otsingutulemite piiramiseks ressursirühm.
@@ -89,9 +89,9 @@ Kui key vault'i juurdepääsupoliitika või [Azure'i rollipõhine juurdepääsuk
 
 | Tüüp        | Õigused          |
 | ----------- | -------------------- |
-| Klahv         | [Too võtmed](/rest/api/keyvault/get-keys), [Too võti](/rest/api/keyvault/get-key)                                 |
-| Saladus      | [Hankige saladused](/rest/api/keyvault/get-secrets), [Hankige saladus](/rest/api/keyvault/get-secret)                     |
-| Sert | [Hankige sertifikaadid](/rest/api/keyvault/get-certificates), [Hankige sertifikaat](/rest/api/keyvault/get-certificate) |
+| Klahv         | [Too võtmed](/rest/api/keyvault/keys/get-keys/get-keys), [Too võti](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Saladus      | [Hankige saladused](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Hankige saladus](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Sert | [Hankige sertifikaadid](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Hankige sertifikaat](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Eelnevad väärtused on miinimum, mida soovite käivitamise ajal loetleda ja lugeda.
 

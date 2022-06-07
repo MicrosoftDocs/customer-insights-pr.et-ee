@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755445"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808501"
 ---
 # <a name="work-with-customer-insights-apis"></a>Customer Insightsi API-dega töötamine
 
@@ -31,11 +31,11 @@ Selles artiklis kirjeldatakse, kuidas pääseda juurde Customer Insightsi API-de
 
 1. [Logige sisse](https://home.ci.ai.dynamics.com) Customer Insightsi. Kui teil pole veel tellimust, [registreeruge Customer Insightsi prooviversiooni kasutamiseks](https://aka.ms/tryci).
 
-1. Customer Insightsi keskkonnas API-de lubamiseks minge jaotisse **Haldus** > **Õigused**. Selleks on teil vaja administraatoriõigusi.
+1. Api-de lubamiseks Customer Insightsi keskkonnas avage **administraatori turbeteenus** > **·**. Selleks on teil vaja administraatoriõigusi.
 
 1. Minge vahekaardile **API-d** ja valige nupp **Luba**.    
  
-   API-de lubamine loob teie eksemplari jaoks esmase ja teisese tellimuse võtme, mida kasutatakse API-de päringutes. Saate võtmed uuesti luua, kui valite **Loo esmane uuesti** või **Loo teisene uuesti** jaotises **Haldus** > **Õigused** > **API-d**.
+   API-de lubamine loob teie eksemplari jaoks esmase ja teisese tellimuse võtme, mida kasutatakse API-de päringutes. Võtmete taastamiseks valige administraatori turbe **API-des** suvand **Regenere primaarne** või **Taasta sekundaarne** > **·** > **regenereerimine.**
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Need etapid aitavad teil kasutada Azure'i rakenduses Customer Insights API-sid, 
 1. Valige vasakul **Rakenduse registreeringud**.
 
 1. Valige **Uus registreering**, sisestage rakenduse nimi ja valige kontotüüp.
- 
+
    Võite lisada ka ümbersuunamise URL-i. http://localhost on piisav rakenduse arendamiseks teie kohalikus arvutis.
 
 1. Minge uues rakenduse registreeringus jaotisse **API õigused**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Valige **Lisa õigus** ja valige külgpaanil **Customer Insights**.
+1. Valige **Lisa luba** ja valige **külgpaanil Dynamics 365 AI for Customer Insights**.
 
 1. **Õigusetüüp** valimiseks valige **delegeeritud õigused** ja seejärel valige **kasutaja kehastumine** õigused.
 
@@ -109,7 +107,7 @@ Lisateavet API-de kasutamise kohta meie klienditeekides leiate teemast [Customer
 
 1. Lõpetamiseks peame lisama rakenduse registreeringu nime Customer Insightsis kasutajana.  
    
-   Avage Customer Insights, minge jaotisse **Haldus** > **Õigused** ja valige **Lisa kasutaja**.
+   Avage Customer Insights, avage **administraatori** > **turvalisus** ja valige **Lisa kasutaja**.
 
 1. Otsige oma rakenduse registreeringu nime, valige see otsingutulemustest ja valige **Salvesta**.
 

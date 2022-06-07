@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642574"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800415"
 ---
 # <a name="custom-machine-learning-models"></a>Kohandatud masinõppe mudelid
 
@@ -92,7 +92,7 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 
 ## <a name="edit-a-workflow"></a>Töövoo redigeerimine
 
-1. Valige lehel **Kohandatud mudelid** eelnevalt loodud töövoo kõrval kolm vertikaalset punkti veerus **Toimingud** ja valige suvand **Redigeeri**.
+1. **Valige lehel Kohandatud mudelid** varem loodud töövoo kõrval veerus &vellip; Toimingud **vertikaalne kolmikpunkt (**) ja valige **Redigeeri**.
 
 1. Saate värskendada oma töövoo nime väljal **Kuvatav nimi**, kuid te ei saa muuta konfigureeritud veebiteenust või konveierit. Tehke valik **Edasi**.
 
@@ -108,7 +108,7 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 
 ## <a name="run-a-workflow"></a>Töövoo käitamine
 
-1. Valige lehel **Kohandatud mudelid** eelnevalt loodud töövoo kõrval kolm vertikaalset punkti veerus **Toimingud**.
+1. **Valige lehel Kohandatud mudelid** varem loodud töövoo kõrval veerus &vellip; Toimingud **vertikaalne kolmikpunkt () vertikaalne kolmikpunkt (**).
 
 1. Valige **Käivita**.
 
@@ -116,7 +116,7 @@ Teie töövoog käivitub automaatselt ka iga ajastatud värskendamise korral. Li
 
 ## <a name="delete-a-workflow"></a>Töövoo kustutamine
 
-1. Valige lehel **Kohandatud mudelid** eelnevalt loodud töövoo kõrval kolm vertikaalset punkti veerus **Toimingud**.
+1. **Valige lehel Kohandatud mudelid** varem loodud töövoo kõrval veerus &vellip; Toimingud **vertikaalne kolmikpunkt () vertikaalne kolmikpunkt (**).
 
 1. Valige käsk **Kustuta** ja kinnitage kustutamine.
 

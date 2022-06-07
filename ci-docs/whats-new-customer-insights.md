@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
-ms.translationtype: MT
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700932"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833625"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Mida on uut rakenduses Dynamics 365 Customer Insights
 
@@ -58,6 +58,7 @@ LiveRamp pakub identiteedilahendust ja kliendiandmete konsolideerimist. Saate va
 Lisateavet leiate teemast [Kliendiprofiilide rikastamine LiveRampi identiteediandmetega (Eelvaade)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Segmentide ja mõõtude korraldamine siltide ja filtritega
+
 Kui teie organisatsioonil on palju segmente või meetmeid, võib õige leidmine mõnikord tunduda keeruline. See uus funktsioon võimaldab korraldada loendeid siltide ja veergude abil. See aitab leida andmeid kiiresti ja lihtsalt ning kohandada vaateid.
 
 Lisateavet leiate teemast [Siltide ja veergudega](work-with-tags-columns.md) töötamine.
@@ -65,9 +66,9 @@ Lisateavet leiate teemast [Siltide ja veergudega](work-with-tags-columns.md) tö
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Andmete jagamise Dataverse lubamine oma salvestuskonto kasutamisel
 
 Kui teie keskkond kasutab Azure Data Lake Storage Customer Insightsi andmete talletamiseks, vajab andmete jagamine Microsoft Dataverse mõne lisakonfiguratsiooni.
-Varem saite andmete jagamise lubada ainult siis Dataverse, kui teie andmed salvestati meie hallatavasse andmejärve. 
+Varem saite andmete jagamise lubada ainult siis Dataverse, kui teie andmed salvestati meie hallatavasse andmejärve.
 
-Lisateavet leiate teemast [Andmete ühiskasutuse lubamine iseendaga Dataverse Azure Data Lake Storage (eelvaade)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Lisateavet leiate teemast [Andmete ühiskasutuse lubamine iseendaga Dataverse Azure Data Lake Storage (eelvaade)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Uued ekspordi sihtkohad: Iterable ja Braze
 
@@ -81,7 +82,6 @@ Lisateavet vt teemadest [Segmentide eksportimine Iterable'i (eelvaade)](export-i
 
 - Google Ads: Google Adsi ekspordikonnektori uus versioon lihtsustab autentimiskogemust ja võimaldab nüüd automaatselt luua uusi Google Adsi vaatajaskondi. 
 - Marketo: Marketo ekspordikonnektori uus versioon toetab Marketo ID-d, mis võimaldab teil vältida andmete dubleerimist, värskendada olemasolevaid kirjeid ja luua Marketos uusi kirjeid. 
-
 
 ## <a name="february-2022-updates"></a>2022. aasta veebruari värskendused
 

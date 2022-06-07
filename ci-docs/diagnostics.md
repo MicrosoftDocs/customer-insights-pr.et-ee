@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755257"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807576"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Edasisaatmine Dynamics 365 Customer Insights Azure Monitoriga (Preview)
 
@@ -38,7 +38,7 @@ Diagnostika konfigureerimiseks Customer Insightsis peavad olema täidetud järgm
 
 - Teil on aktiivne [Azure'i tellimus](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Teil on [Customer Insightsis administraatoriõigused](permissions.md#admin).
-- Teil on **Azure'i sihtressursis kaasautori** ja **kasutajajuurdepääsu administraatori** roll. Ressursiks võivad olla Azure Storage'i konto, Azure Event Hub või Azure Log Analyticsi tööruum. Lisateavet leiate teemast [Azure'i rollimäärangute lisamine või eemaldamine Azure'i portaali](/azure/role-based-access-control/role-assignments-portal) abil.
+- Teil on **Azure'i sihtressursis kaasautori** ja **kasutajajuurdepääsu administraatori** roll. Ressurss võib olla Azure Data Lake Storage konto, Azure Event Hub või Azure Log Analyticsi tööruum. Lisateavet leiate teemast [Azure'i rollimäärangute lisamine või eemaldamine Azure'i portaali](/azure/role-based-access-control/role-assignments-portal) abil. See õigus on vajalik diagnostikasätete konfigureerimisel Customer Insightsis, seda saab pärast edukat seadistamist muuta.
 - [Azure Storage'i, Azure Event Hubi või Azure Log Analyticsi sihtkoha nõuded](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) said täidetud.
 - Teil on vähemalt **lugeja** roll ressursirühmas, kuhu ressurss kuulub.
 
@@ -240,7 +240,7 @@ Töövoosündmustel on järgmised atribuudid.
 | `properties.endTimestamp`                    | Ja      | Ja  | UTC ajatempel`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Ja      | Ja  | UTC ajatempel`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.instanceId`                      | Ja      | Ja  | Customer Insights`instanceId`                                                                                                                                                                                                                              |  
-| `properties.identifier`                      | No       | Ja  | - OperationType = `Export` puhul on identifikaator ekspordikonfiguratsiooni guid. <br> - OperationType = `Enrichment` jaoks on see rikastamise varjund <br> - – OperationType'i `Measures` ja `Segmentation` rakenduse puhul on identifikaator olemi nimi. |
+| `properties.identifier`                      | No       | Ja  | - OperationType = `Export` puhul on identifikaator ekspordikonfiguratsiooni guid. <br> - OperationType = `Enrichment` jaoks on see rikastamise varjund <br> – OperationType'i `Measures` ja `Segmentation` rakenduse puhul on identifikaator olemi nimi. |
 | `properties.friendlyName`                    | No       | Ja  | Ekspordi või töödeldava olemi kasutajasõbralik nimi.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Ja  | Valikuline. Tõrketeade koos üksikasjadega.                                                                                                                                                                                                                  |
 | `properties.additionalInfo.Kind`             | No       | Ja  | Valikuline. Ainult Operatsioonitüübi `Export` puhul. Tuvastab ekspordi tüübi. Lisateavet leiate [ekspordisihtkohtade](export-destinations.md) ülevaatest.                                                                                          |

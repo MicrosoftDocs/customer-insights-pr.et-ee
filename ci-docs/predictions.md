@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740714"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800645"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Täitke oma osalised andmed ennustustega (aegunud)
 
@@ -95,7 +95,7 @@ Selle voo osana saate valida kindla atribuudi, mis põhineb teie segmendil (nt k
 
 2. Valige prognoos, mille soovite üle vaadata.
 
-3. Valige kolmikpunkt veerus **Toimingud** ja seejärel **Vaade**.
+3. Valige veerus &vellip; Toimingud **vertikaalne kolmikpunkt (**) ja valige **Vaade**.
 
 4. Näete prognoosi vaates andmepunktide arvu.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Pärast prognoos loomist saate mudeli AI Builder kohandada, et suurendada oma mu
 
 2. Valige prognoos, mida soovite redigeerida.
 
-3. Valige kolmikpunkt veerus **Toimingud** ja seejärel **Vaade**.
+3. Valige veerus &vellip; Toimingud **vertikaalne kolmikpunkt (**) ja valige **Vaade**.
 
 4. Valige **Kohanda rakenduses AI Builder**.
 
@@ -139,7 +139,7 @@ Teie prognoosi järgmiseks käivitamiseks kasutatakse teie loodud värskendatud 
 
 2. Valige prognoos, mille soovite kustutada.
 
-3. Valige veerus **Toimingud** kolmikpunkt ja seejärel käsk **Kustuta**.
+3. Valige veerus &vellip; Toimingud **vertikaalne kolmikpunkt (**) ja valige **Kustuta**.
 
 4. Kinnitage kustutamine.
 
@@ -153,7 +153,7 @@ Kui te ei saa tõrke tõttu Dataverse'i manustamise protsessi lõpule viia, või
 - Rakenduse õiguseid pole antud.
     1. Avage [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Seejärel valige **Keskkonnad**.
-    1. Valige kolmikpunkt selle keskkonna kõrval, millele soovite õigused lisada, ja valige **Sätted**.
+    1. Valige selle keskkonna kõrval vertikaalne kolmikpunkt (&vellip;), kuhu soovite õiguse lisada, ja valige **Sätted**.
     1. Laiendage jaotis **Kasutajad + õigused** ja valige **Kasutajad**.
     1. Valige **+ Uus** ja valige **Kasutaja**.
     1. Valige **Rakenduse kasutaja**, kui see pole juba valitud, ja sisestage järgmised andmed.

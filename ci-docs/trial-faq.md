@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641803"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833763"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights’i prooviversiooni KKK
 
@@ -62,9 +62,9 @@ Prooviversiooni saate rakenduse sees laiendada. Saate prooviversiooni ühe korra
 
 Üldiselt soovitame Customer Insights tasulisele versioonile üleminekul alustada värskelt oma andmetega. 
 
-Soovi korral, kui kasutate ainult Customer Insightsi, saate kopeerida oma andmed proovikeskkonnast, kui ostate Customer Insightsi. Sätete migreerimiseks proovikeskkonnast tasulisesse keskkonda peate olema Customer Insightsi prooviversiooni administraator ja rentniku Microsoft 365 üldadministraator või dynamics 365 administraator teie asutuses. 
+Soovi korral, kui kasutate ainult Customer Insightsi, saate kopeerida oma andmed proovikeskkonnast, kui ostate Customer Insightsi. Sätete migreerimiseks proovikeskkonnast tasulisesse keskkonda peate olema Customer Insightsi prooviversiooni administraator ja rentniku Microsoft 365 üldadministraator või dynamics 365 administraator teie asutuses.
 
-Pärast esmakordset Customer Insights -i tasulisesse eksemplari sisselogimist palutakse teil luua uus keskkond. Selle protsessi käigus saate kopeerida konfiguratsiooni olemasolevast keskkonnast ja migreerida enamiku sätetest. Kui teil on ülal nimetatud õigused, kuvatakse selles loendis proovikeskkond. Lisateavet leiate teemast [Keskkonna konfiguratsiooni kopeerimine](manage-environments.md#copy-the-environment-configuration).
+Pärast esmakordset Customer Insights -i tasulisesse eksemplari sisselogimist palutakse teil luua uus keskkond. Selle protsessi käigus saate kopeerida konfiguratsiooni olemasolevast keskkonnast ja migreerida enamiku sätetest. Kui teil on ülal nimetatud õigused, kuvatakse selles loendis proovikeskkond. Lisateavet leiate teemast [Keskkonna konfiguratsiooni kopeerimine](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Millised on prooviversiooni piirangud ja kvoodid?
 
@@ -81,9 +81,10 @@ Pärast prooviversiooni kasutajaks registreerimist jõuate rakenduse põhikuvale
 
 Enamik Customer Insights'i võimaluste funktsioone on saadaval prooviversioonis.
 
-Järgmised funktsioonid **pole saadaval**. 
+Järgmised funktsioonid **pole saadaval**.
+
 - Te ei saa luua uusi keskkondi, mis kasutavad teie enda Azure Data Lake salvestuskontot.
-- Proovikeskkonda ei saa kustutada. 
+- Proovikeskkonda ei saa kustutada.
 
 ### <a name="how-long-does-the-trial-last"></a>Kui kaua prooviversioon kestab?
 

@@ -11,34 +11,34 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
-ms.translationtype: HT
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743408"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768345"
 ---
 # <a name="explore-customer-insights"></a>Kliendiülevaadete uurimine
 
 Pääsete juurde [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) järgmisele URL-ile: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-Avalehel **kuvatakse** põhifunktsioonide konfigureerimisprotsess ning antakse ülevaade segmentidest, mõõtudest ja rikastamisandmetest.
+Avaleht **juhendab** teid põhifunktsioonide konfiguratsiooniprotsessis ning annab ülevaate segmentidest, mõõtudest ja rikastamisandmetest.
 
 :::image type="content" source="media/home-page.png" alt-text="Avalehe kuvatõmmis näitab näidis üleevaateid.":::
 
 ## <a name="left-side-pane"></a>Vasakpoolne paan
 
-Vasakpoolse paani abil saate liikuda erinevate alade vahel Customer Insights. 
+Vasakpoolse paani abil saate liikuda Customer Insightsi eri alade vahel.
 
-Kui töötate ärikontode ja üksiktarbijatega, saate valida oma peamise vaatajaskonna, et oma fookus vastavalt määrata. 
+Kui töötate ärikontode ja üksiktarbijatega, saate valida oma peamise vaatajaskonna, et oma fookus vastavalt määrata.
 
 ## <a name="application-header"></a>Rakenduse päis
 
-Keskkonnavalija **kuvab** keskkonna, kus töötate, ja võimaldab teil luua või hallata keskkondi administraatorina.
+Keskkonnavalija **kuvab** keskkonna, kus töötate, ja võimaldab teil administraatorina keskkondi luua või hallata.
 
 Naerunäo ikoon on **tagasiside** juhtelement. Valige see, et rääkida meile oma kogemustest Customer Insightsiga. Kuulame aktiivselt teie tagasisidet ja täname teid ette, et andsite meile teada, mis teile meeldib ja kuidas saaksime parandada.
 
-Juhtelement **Sätted**, mida esindab hammasrattaikoon, võimaldab teil koguda Customer Insightsi seansi üksikasju ja konfigureerida oma Microsoft 365 profiili globaalseid sätteid. 
+Juhtelement **Sätted**, mida esindab hammasrattaikoon, võimaldab teil koguda Customer Insightsi seansi üksikasju ja konfigureerida oma Microsoft 365 profiili globaalseid sätteid.
 
 **Küsimärgiikooniga visualiseeritud spikrisuvandid** pakuvad kontekstuaalseid spikrilinke ja muid kasulikke ressursse.
 
@@ -46,7 +46,7 @@ Teie profiilipilt avab **teie** profiili kontohalduri Microsoft 365. Isiklike s�
 
 ## <a name="getting-started-with-customer-insights-section"></a>Jaotise Customer Insights kasutamise alustamine
 
-See jaotis sisaldab kaarte, mis aitavad teil läbida Customer Insightsi keskkonna häälestamise protsessi. 
+See jaotis sisaldab kaarte, mis aitavad teil läbida Customer Insightsi keskkonna häälestamise protsessi.
 
 1. Andmekaart **Lisa** aitab teil andmeid importida. Customer Insights toetab [mitmeid võimalusi klientide](data-sources.md) kohta andmete toomiseks. Alustamiseks valige **Lisa andmeallikad**.
 1. Kui esialgne andmeimport on edukalt lõpule viidud, saate andmete ühtlustamiseks ja **erinevatest allikatest ühtsete kliendiprofiilide** loomiseks kasutada [andmekaarti](data-unification.md) Unify. 

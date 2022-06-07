@@ -1,7 +1,7 @@
 ---
 title: Segmendid Customer Insightsis
 description: Ülevaade segmentidest ning kuidas neid luua ja hallata.
-ms.date: 03/30/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 9791e971387eb7db91ed7c4e4fe76552656013ba
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d616ec8273115203dddb59334a348c66e72fa678
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642759"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800737"
 ---
 # <a name="segments-overview"></a>Segmentide ülevaade
 
@@ -58,7 +58,7 @@ Segmendi valimisel on saadaval järgmised toimingud.
 - Segmendi üksikasjade **Vaatamine**, sealhulgas liikmete arvu suundumist, segmendi liikmete ülevaadet.
 - Liikmete loendi **Allalaadimine** CSV-failina.
 - Segmendi **Redigeerimine** atribuutide muutmiseks.
-- Segmendi **Duplikaadi loomine**. Saate selle atribuute kohe redigeerida või lihtsalt duplikaadi salvestada.
+- Segmendi **Duplikaadi loomine**. Saate valida selle atribuutide kohese redigeerimise või duplikaadi salvestamise.
 - Segmendi **Värskendamine** viimaste andmete kaasamiseks.
 - Segmendi **Aktiveerimine** või **Desaktiveerimine**. Passiivsete segmentide puhul segmendi määratlus on olemus, kuid see ei sisalda ühtegi klienti. Aktiivne segment otsib kliente, kes vastavad segmendi määratlusele. Kui [plaanitud värskendus](system.md#schedule-tab) on konfigureeritud, on passiivsete segmentide **olekuks** **Vahele jäetud**, mis näitab, et värskendamist isegi ei proovitud. Kui passiivne segment aktiveeritakse, värskendatakse seda ja lisatakse plaanitud värskendustesse.
   Teise võimalusena saate kasutada ripploendi **Aktiveeri/desaktiveeri** funktsiooni **Ajasta hiljem**, et määrata kindla segmendi aktiveerimise ja desaktiveerimise tulevane kuupäev ja kellaaeg.
@@ -75,7 +75,8 @@ Segmendi valimisel on saadaval järgmised toimingud.
 ## <a name="refresh-segments"></a>Segmentide värskendamine
 
 Saate kõiki segmente korraga värskendada, valides lehel **Segmendid** suvandi **Värskenda kõik** või saate ühte või mitut segmenti värskendada, kui valite need ja valite suvandite hulgast **Värskenda**. Teise võimalusena saate konfigureerida korduva värskendamise, valides **Administraator** > **Süsteem** > **Ajasta**. Korduva värskendamise konfigureerimisel kehtivad järgmised reeglid.
-- Kõik segmendid, mille tüüp **on Dünaamiline** või **Laienemine**, värskendatakse automaatselt määratud kadentsil. Kui värskendamine on lõppenud, näitab olek **,** kas segmendi värskendamisel oli probleeme. Viimati **värskendatud** kuvatakse viimase eduka värskendamise ajatempel. Kui ilmneb tõrge, valige tõrge, et näha üksikasju selle kohta, mis juhtus.
+
+- Kõik segmendid, mille tüüp **on Dünaamiline** või **Laienemine**, värskendatakse automaatselt määratud kadentsil. Kui värskendamine on lõppenud, näitab olek **,** kas segmendi värskendamisel ilmnes probleeme. Viimati **värskendatud** kuvatakse viimase eduka värskendamise ajatempel. Tõrke ilmnemisel valige tõrge, et näha üksikasju selle kohta, mis juhtus.
 - Segmente, mille tüüp **on Staatiline** *, ei* värskendata automaatselt. Viimati **värskendatud** kuvatakse ajatempel viimasest ajast, mil staatilisi segmente käsitsi käitati või värskendati.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
@@ -86,17 +87,37 @@ Segmenti saate eksportida segmentide lehelt või [ekspordilehelt](export-destina
 
 1. Minge lehele **Segmendid**.
 
-1. Valige **Kuva rohkem [....]** segmendile, mille soovite eksportida.
+1. Valige eksporditava segmendi vertikaalne kolmikpunkt (&vellip;).
 
 1. Valige **Ekspordi haldamine** tegevuste ripploendist.
 
 1. Avaneb **Segmendi ekspordid (eelvaade)** leht. Näete kõiki konfigureeritud eksporte rühmitatud selle järgi, kas need sisaldavad praegust segmenti või mitte.
 
-   1. Valitud segmendi lisamiseks eksporti **Redigeerige** vastavat eksporti, et valida vastav segment, seejärel salvestage. Üksikklientide keskkondades saate valida loendist ekspordi ja valida sama tulemuse saavutamiseks suvandi **Lisa segment**.
+   1. Valitud segmendi lisamiseks eksporti **Redigeerige** vastavat eksporti, et valida vastav segment, seejärel salvestage. Üksikute klientide keskkondades saate selle asemel valida loendist ekspordi ja valida sama tulemuse saavutamiseks suvandi **Lisa segment**.
 
    1. Valitud segmendiga uue ekspordi loomiseks valige **Lisa eksport**. Lisateavet ekspordi loomise kohta leiate teemast [Uue ekspordi häälestamine](export-destinations.md#set-up-a-new-export).
 
 1. Segmentide põhilehele naasmiseks klõpsake nuppu **Tagasi**.
+
+## <a name="track-usage-of-a-segment"></a>Segmendi kasutamise jälgimine
+
+Kui kasutate rakendustes segmente, mis põhinevad samal Microsoft Dataverse organisatsioonil, mis on seotud Customer Insightsiga, saate jälgida segmendi kasutamist. Dynamics 365 Marketingi [kliendireisidel kasutatavate Customer Insightsi segmentide puhul](/dynamics365/marketing/real-time-marketing-ci-profile) teavitab süsteem teid selle segmendi kasutamisest.
+
+Customer Insightsi keskkonnas kasutatava segmendi või turunduse klienditeekond redigeerimisel teavitab segmendikoosturi [bänner](segment-builder.md) teid sõltuvustest. Sõltuvuse üksikasju saate kontrollida otse bännerilt või valides **segmendikoosturis suvandi Kasutus**.
+
+Segmendi **kasutuspaanil** kuvatakse üksikasjad selle segmendi kasutamise kohta põhinevates rakendustes Dataverse. Kliendireisidel kasutatavate segmentide puhul leiate lingi teekonna kontrollimiseks turunduses, kus seda segmenti kasutatakse. Kui teil on õigused rakendusele Marketing juurdepääs, pääsete seal juurde rohkematele üksikasjadele.
+
+:::image type="content" source="media/segment-usage-pane.png" alt-text="Külgpaan koos segmendi kasutuse üksikasjadega segmendikoosturis.":::
+
+Süsteem teavitab teid jälgitava segmendi kasutamisest, kui proovite seda kustutada. Kui kustutatavat segmenti kasutatakse turunduse klienditeekond, peatub see teekond kõigi segmendi kasutajate jaoks. Kui teekond on osa turunduskampaaniast, mõjutab kustutamine seda kampaaniat ennast. Siiski saate segmendi hoiatustest hoolimata kustutada.
+
+:::image type="content" source="media/segment-usage-delete.png" alt-text="Dialoogiboks segmendi kustutamise kinnitamiseks, kui rakenduses kasutatakse segmenti Dataverse .":::
+
+### <a name="supported-apps"></a>Toetatud rakendused
+
+Kasutust jälgitakse praegu järgmistes Dataverse rakendustes.
+
+- [Klienditeekonnad rakenduses Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
 
 ## <a name="view-processing-history-and-segment-members"></a>Vaadake töötlemise ajalugu ja segmendi liikmeid
 
@@ -117,6 +138,5 @@ Alaosa sisaldab segmendi liikmete loendit.
 > Selle loendi väljad põhinevad segmendi olemite atribuutidel.
 >
 >Loend on eelvaade kattuvatest segmendi liikmetest ja näitab segmendi 100 esimest kirjet, et saaksite vajadusel kiiresti seda hinnata ja kontrollida selle määratlusi. Kõikide kattuvate kirjete nägemiseks peate [eksportima segmendi](export-destinations.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

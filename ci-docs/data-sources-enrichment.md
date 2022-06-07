@@ -1,19 +1,19 @@
 ---
 title: Andmeallikas rikastamine
 description: Rikastage andmeallikaid enne andmete ühendamise protsessi läbimist.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755681"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800276"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Andmeallikate rikastamine (eelvaade)
 
@@ -27,7 +27,7 @@ Rikastamiste loomiseks või redigeerimiseks peavad teil olema kaasautori või ad
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
 
-1. Valige andmeallikas kõrval vertikaalne kolmikpunkt, mida soovite rikastada, ja valige **Rikasta**.
+1. Valige selle andmeallikas kõrval vertikaalne kolmikpunkt (&vellip;), mida soovite rikastada, ja valige **Rikasta**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Andmeallikate rikastamise leht.":::
 
@@ -41,11 +41,12 @@ Andmeallikate jaoks on praegu saadaval järgmised rikastamised. Vaadake üle rik
 
 - [Täiustatud aadressid](enrichment-enhanced-addresses.md)
 - [Täiustatud ettevõtte andmed](enrichment-enhanced-company-data.md)
+- [LiveRampi identiteediandmed](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Olemasolevate andmeallikas rikastamiste haldamine
 
 Minge vahekaardile **Minu rikastused**, et näha kõiki konfigureeritud rikastusi.
 
-Valige rikastus, et näha saadaolevaid suvandeid. Valikute nägemiseks võite loendikirjel valida ka ellipsi (...). Kui konfigureerite mitu rikastustegurit, saate selle kiiresti leidmiseks kasutada otsinguvälja.
+Valige rikastus, et näha saadaolevaid suvandeid. Suvandite nägemiseks saate loendiüksusel valida ka vertikaalse kolmikpunkti (&vellip;). Kui konfigureerite mitu rikastustegurit, saate selle kiiresti leidmiseks kasutada otsinguvälja.
 
 Saate vaadata, redigeerida, käivitada või kustutada andmeallikas rikastamist. Lisateavet leiate teemast [Olemasolevate rikastamiste](enrichment-hub.md) haldamine.

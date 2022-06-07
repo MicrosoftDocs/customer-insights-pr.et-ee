@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: Õppekataloog
   items:
-    - name: Hakkame pihta
+    - name: Sertifitseeri Microsofti kliendiandmete platvormi spetsialistina
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Customer Insightsiga alustamine
       href: /learn/modules/get-started-customer-data-platform/
     - name: Andmete valmendamine
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: Alustage tasulise litsentsiga
       href: paid-license.md
-    - name: Uue keskkonna loomine
-      href: create-environment.md
     - name: Kliendiülevaadete uurimine
       href: home.md
     - name: Siltide ja veergudega töötamine
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Constant Contact
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: Dynamics 365 Marketing
@@ -254,12 +256,22 @@
       href: entities.md
     - name: Common Data Modeli olemi skeemide ülevaatamine
       href: entity-schemas.md
-    - name: Customer Insightsi andmed teenuses Dataverse
-      href: customer-insights-dataverse.md
     - name: Seoste ja ühendatud olemite loomine
       href: relationships.md
     - name: Semantiliste vastenduste määratlemine
       href: semantic-mappings.md
+- name: Keskkonnad
+  items:
+    - name: Uue keskkonna loomine
+      href: create-environment.md
+    - name: Microsoft Dataverse’iga ühenduse loomine
+      href: customer-insights-dataverse.md
+    - name: Kasuta enda oma Azure Data Lake Storage
+      href: own-data-lake-storage.md
+    - name: Halda keskkonna seadeid
+      href: manage-environments.md
+    - name: Teenindusdirektori abil salvestusruumikontoga ühenduse loomine
+      href: connect-service-principal.md
 - name: Administreerimine
   items:
     - name: Süsteemikonfiguratsiooni seadistamine
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: Kasutaja õiguste määramine
       href: permissions.md
-    - name: Ühenduste ülevaade
-      href: connections.md
-    - name: Mitme keskkonna haldamine
-      href: manage-environments.md
     - name: Tooge oma Key Vault
       href: use-azure-key-vault.md
-    - name: Teenindusdirektori abil salvestusruumikontoga ühenduse loomine
-      href: connect-service-principal.md
     - name: Diagnostikalogide eksportimine
       href: diagnostics.md
-    - name: Teenusepiirangud
-      href: service-limits.md
-    - name: DSR-õigused ja taotlused
-      href: dsr-rights-requests.md
+    - name: Ühenduste ülevaade
+      href: connections.md
 - name: APId
   items:
     - name: API-dega töötamine
@@ -324,5 +328,9 @@
       items:
         - name: Nõusolekuandmetega ennustuste loomine
           href: consent-management/predictions-consent-data.md
+- name: Teenusepiirangud
+  href: service-limits.md
+- name: DSR-õigused ja taotlused
+  href: dsr-rights-requests.md
 - name: Hangi tuge
   href: /power-platform/admin/get-help-support

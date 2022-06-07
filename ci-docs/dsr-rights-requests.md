@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641511"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808541"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Andmesubjekti õigused (DSR) vastavalt GDPR-ile
 
@@ -39,9 +39,9 @@ Customer Insights pakub konkreetse kliendi või kasutaja isikuandmete kustutamis
 Customer Insightsi administraator saab nende etappide abil eemaldada kliendiandmeid, mis kustutati andmeallikas.
 
 1. Logige sisse rakendusse Dynamics 365 Customer Insights.
-2. DataData **allikate avamine** > **·**
+2. Andmeallikate **·** > **avamine**
 3. Tehke iga loendis oleva andmeallikaga, mis sisaldab kustutatud kliendiandmeid, järgmist.
-   1. Valige (...) ja seejärel valige nupp **Värskenda**.
+   1. Valige vertikaalne kolmikpunkt (&vellip;) ja seejärel valige **Värskenda**.
    2. Kontrollige andmeallikas olekut **Oleku** all. Märge tähendab, et värskendamine õnnestus. Ohukolmnurk tähendab, et midagi läks valesti. Kui kuvatakse ohukolmnurk, võtke ühendust aadressil D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Customer Insightsi administraator saab nende etappide abil eemaldada kliendiandm
 Customer Insightsi administraator saab Customer Insightsi kasutaja andmete kustutamiseks toimida järgmiselt.
 
 1. Logige sisse rakendusse Dynamics 365 Customer Insights.
-2. **Avage adminPermissions** > **·**.
+2. **Avage administraatori** > **turbeõigused** > **·**.
 3. Valige märkeruutude abil kasutaja, kelle soovite kustutada.
 4. Valige **Eemalda**.
 

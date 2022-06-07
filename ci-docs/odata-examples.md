@@ -1,19 +1,19 @@
 ---
 title: OData näited API-de jaoks Dynamics 365 Customer Insights
 description: Tavaliselt kasutatakse avaandmete protokolli (OData) näiteid Customer Insightsi API-de päringute tegemiseks andmete ülevaatamiseks.
-ms.date: 05/10/2022
+ms.date: 05/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 007278e1330e1a8e64d524ded8496acaf83b874c
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740064"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808456"
 ---
 # <a name="odata-query-examples"></a>OData päringu näited
 
@@ -33,16 +33,15 @@ Peate päringunäidiseid muutma, et need sihtkeskkondades töötaksid.
 
 Järgmine tabel sisaldab kliendi *olemi näidispäringute* kogumit.
 
-
 |Päringu tüüp |Näide  | Märkus.  |
 |---------|---------|---------|
 |Üksikkliendi ID     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|alternatiivvõti    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}' `         |  Alternatiivsed võtmed püsivad ühtses kliendiolemis       |
+|alternatiivvõti    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Alternatiivsed võtmed püsivad ühtses kliendiolemis       |
 |Valige   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Selle ajaühiku järel:    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
 |Alternatiivvõti + Sisse   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Otsige  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Tagastab otsingustringi 10 parimat tulemust.      |
-|Segmendi liikmelisus  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10  `     | Tagastab segmenteerimisolemi eelseadistatud arvu ridu.      |
+|Segmendi liikmelisus  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Tagastab segmenteerimisolemi eelseadistatud arvu ridu.      |
 
 ## <a name="unified-activity"></a>Ühtne tegevus
 
@@ -53,7 +52,7 @@ Järgmine tabel sisaldab olemi UnifiedActivity *näidispäringute* kogumit.
 |CID tegevus     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | Loetleb kindla kliendiprofiili tegevused |
 |Tegevuse ajaline raamistik    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  Kliendiprofiili tegevused aja jooksul       |
 |Tegevuse tüüp    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
-|Tegevus kuvatava nime järgi     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’ `        | |
+|Tegevus kuvatava nime järgi     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’`        | |
 |Tegevuse sortimine    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq ‘{CID}’ & $orderby=ActivityTime asc`     |  Tõusvate või kahanevate tegevuste sortimine       |
 |Tegevus laienes segmendi liikmelisuselt  |   `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId eq '{CID}'`     |         |
 
@@ -67,3 +66,13 @@ Järgmine tabel sisaldab näidispäringute kogumit teiste olemite kohta.
 |Rikastatud kaubamärgid CID    | `{serviceRoot}/BrandShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`  |       |
 |CID rikastatud huvid    |   `{serviceRoot}/InterestShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`       |         |
 |Klauslisisene + laiendamine     | `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId in ('{CID}', '{CID}')`         | |
+
+## <a name="not-supported-odata-queries"></a>OData päringuid ei toetata
+
+Customer Insights ei toeta järgmisi päringuid.
+
+- `$filter` allaneelatud lähteolemites. $filter päringuid saate käitada ainult Customer Insightsi loodud süsteemiolemites.
+- `$expand` Päringust`$search`. Näide: `Customer?$expand=UnifiedActivity$top=10&$skip=0&$search="corey"`
+- `$expand` alates sellest `$select`, kui valitakse ainult atribuutide alamhulk. Näide: `Customer?$select=CustomerId,FullName&$expand=UnifiedActivity&$filter=CustomerId eq '{CID}'`
+- `$expand` rikastatud brändi või huvi sarnasused konkreetse kliendi jaoks. Näide: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
+- Päring prognoos mudeliväljundiolemeid alternatiivvõti kaudu. Näide: `OOBModelOutputEntity?$filter=HotelCustomerID eq '{AK}'`

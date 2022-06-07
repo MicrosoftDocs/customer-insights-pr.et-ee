@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653790"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833303"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Ühtsete kliendiprofiilidega töötamine rakenduses Dynamics 365 Marketing
 
@@ -23,7 +23,6 @@ ms.locfileid: "8653790"
 - Põhidünaamiline sisu (nt isikupärastatud märgid) meilisõnumites, SMS-is ja tõuketeatistes selliste meetmete kohta nagu püsikliendi olek, tellimuse uuendamise kuupäev, peamine konto või mis tahes muu meede, mille olete jäädvustanud ühtses Customer Insightsi profiilis.
 - Laadige turunduse andmed Customer Insightsi ja kombineerige need muudest allikatest pärinevate kliendiandmetega.
 - Rakendage Customer Insightsi andmete puhastamise, rikastamise ja häguseid sobitamisvahendeid.
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Rikkalike kliendiprofiilide kasutamine reaalajas turunduses
 
@@ -41,4 +40,4 @@ Lisateave: [Dynamics 365 Marketingi segmentide Dynamics 365 Customer Insights ka
 
 Kui soovite kasutada Customer Insightsi andmeid turundusega, ei piirdu te pilvsalvestusruumiga. Kui teil on juba oma Azure Data Lake Storage häälestamine olemas, saate luua ühenduse Customer Insightsiga ja seejärel jagada andmeid rakendusega Marketing samamoodi nagu pilvepõhise häälestuse korral.
 
-Lisateave: [Andmete jagamise Dataverse lubamine omaga Azure Data Lake Storage](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+Lisateave: [Andmete jagamise Dataverse lubamine omaga Azure Data Lake Storage](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
