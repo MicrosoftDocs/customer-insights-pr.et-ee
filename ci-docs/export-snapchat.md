@@ -1,19 +1,19 @@
 ---
 title: Customer Insights andmete eksportimine Snapchati
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Snapchati.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642791"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947271"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Segmentide eksportimine Snapchati (eelversioon)
 
@@ -21,7 +21,8 @@ Saate eksportida ühendatud kliendiprofiilide segmente Snapchati ja kasutada nei
 
 ## <a name="prerequisites-for-a-connection"></a>Ühenduse eeltingimus
 
--   Teil on [Snapchat Business account](https://business.snapchat.com/), [Snapchat Ads account](https://ads.snapchat.com/) ja vastavad administraatori mandaadid.
+-   Teil on [Snapchat Business account](https://business.snapchat.com/), [Snapchat Ads account](https://ads.snapchat.com/) ja vastavad administraatori mandaadid. YOu peab olema vähemalt organisatsioonikonto liige ja konkreetse reklaamikonto andmehaldur. 
+-   Teil on snapchati vaatajaskonna halduris vähemalt üks vaatajaskond, kelle tüüp on SAM (Snap Audience Match). 
 -   Olete [konfigureerinud segmendid](segments.md) Customer Insightsis.
 -   Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
@@ -60,7 +61,7 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Valige **Ekspordiühendus** väljal ühendus Snapchat jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
 
-1. Sisestage [**Snapchat Audience ID**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. Sisestage [**Snapchati segmendi/vaatajaskonna ID**](https://businesshelp.snapchat.com/s/article/custom-audiences). Vaatajaskonna ID-d leiate URL-ist pärast publiku valimist Snapchati vaatajaskonna halduris. 
 
 1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Segmentide eksportimine Snapchati on vajalik.
 

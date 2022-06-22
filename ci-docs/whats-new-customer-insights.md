@@ -1,19 +1,19 @@
 ---
-title: Uued ja tulevased funktsioonid
+title: Uued ja värskendatud funktsioonid
 description: Teave uute funktsioonide, täiustuste ja veaparanduste kohta.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
-ms.translationtype: HT
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833625"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843342"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Mida on uut rakenduses Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 > [!TIP]
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Mai 2022 värskendused
+
+2022. aasta mai värskendused sisaldavad uusi funktsioone, jõudluse uuendamist ja veaparandusi.
+
+### <a name="updated-data-unification-experience"></a>Värskendatud andmete ühendamise kogemus
+
+ Andmete ühendamine võimaldab teil ühendada kord erinevad andmeallikad üheks põhiandmestikuks, mis pakub nendest andmetest ühtset ülevaadet. Andmeid saab ühendada ühes olemis või mitmes olemis. Esmalt valite olemid ja lähteväljad [,](map-entities.md) eemaldate [duplikaatkirjed](remove-duplicates.md), määrate reeglid sobivate tingimuste jaoks [ja määratlete](match-entities.md), milliseid [välju ühtsetesse kliendiprofiilidesse kaasata](merge-entities.md).
+
+Lisateavet leiate teemast [Andmete ühendamise ülevaade](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Värskendatud avaleht Customer Insightsis
+
+**Home** juhendab teid põhifunktsioonide konfiguratsiooniprotsessis ning annab ülevaate segmentidest, mõõtudest ja rikastamisandmetest. Oleme värskendanud kogemust, et pakkuda lühidalt asjakohasemat teavet.
+
+Lisateavet leiate teemast [Customer Insightsi](home.md) uurimine.
+
+### <a name="track-usage-of-a-segment"></a>Segmendi kasutamise jälgimine
+
+Nüüd [saate jälgida segmendi](segments.md#track-usage-of-a-segment) kasutamist rakendustes, mis põhinevad Customer Insightsiga ühendatud organisatsioonil Dataverse. Dynamics 365 Marketingi [kliendireisidel kasutatavate Customer Insightsi segmentide puhul](/dynamics365/marketing/real-time-marketing-ci-profile) teavitab süsteem teid selle segmendi kasutamisest.
+
+### <a name="export-to-criteo"></a>Eksport Criteosse
+
+Criteo on veebiplatvorm, mis aitab kasutajatel digitaalset reklaami hallata. Nüüd saate eksportida ühtsete kliendiprofiilide segmente kampaaniate loomiseks, e-posti turunduse pakkumiseks ja Criteoga konkreetsete kliendirühmade kasutamiseks.
+
+Lisateavet vt teemast [Export segments to Criteo (preview)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Täiustatud dokumentatsiooni struktuur keskkonna loomiseks
+
+Oleme uuesti üle vaadanud Customer Insightsis keskkondade loomise ja haldamisega seotud spikridokumendid. Artiklid on nüüd rühmitatud sisukorra sõlme Environments alla. Ümberkorraldatud artiklid annavad rohkem juhiseid erinevate keskkondade loomise viiside kohta ja selgema struktuuriga. Kui teil on tagasisidet jagada, andke meile sellest juhtelementide kaudu teada abiartiklite lõpus.
+
+Lisateavet leiate teemast [Kuidas: Luua uus keskkond](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Aprill 2022 värskendused
 
@@ -33,7 +64,7 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 
 Dun & Bradstreet pakub ettevõtetele äriandmeid, analüütikat ja teadmisi. See võimaldab ettevõtetel kliendi koondprofiilidega klientide andmeid rikastada. Rikastamine hõlmab selliseid atribuute nagu DUNS-i number, ettevõtte suurus, asukoht, tööstus ja palju muud.
 
-Lisateavet vt teemast [Enrichment of Company profiles with Dun & Bradstreet (Preview)](enrichment-dnb.md).
+Lisateavet vt teemast [Ettevõtte profiilide rikastamine Dun & Bradstreet'iga (Preview)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Mõõtude tüübi määratlemine uue mõõdu loomisel
 
@@ -45,7 +76,7 @@ Lisateavet vt teemast [Use measure builder, et luua meetmeid nullist](measure-bu
 
 Oleme oma dokumentatsiooniartiklid uuesti üle vaadanud ja eemaldanud kaasamise ülevaated ja vaatajaskonna ülevaated. Edasi liikudes viitame rakenduse põhifunktsioonidest kirjutades järjekindlalt tootenimele Customer Insights. See muudatus toob kaasa ka sisukorra, URL-i struktuuri ja aluseks oleva dokumentatsioonihoidla failiteede olulise ümberkorraldamise. Kõik teie järjehoidjad või olemasolevad lingid jätkavad tööd ja suunavad need värskendatud URL-idele.
 
-Kui soovite meile teada anda, kuidas te seda muutust tajute või märkate midagi, mis ei tööta ootuspäraselt, andke meile [selle lehe kohta tagasisidet](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
+Kui soovite meile teada anda, kuidas te seda muutust tajute või märkate midagi, mis ei tööta ootuspäraselt, andke meile [selle lehe](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**) kohta tagasisidet.
 
 ## <a name="march-2022-updates"></a>Märts 2022 värskendused
 
@@ -74,7 +105,7 @@ Lisateavet leiate teemast [Andmete ühiskasutuse lubamine iseendaga Dataverse Az
 
 Jätkame ekspordisihtkohtade ökosüsteemi laiendamist uute ühendustega. Nüüd saate eksportida segmente Iterable'i ja Braze'i, et kasutada nende aktiveerimisteenuseid.
 
-Lisateavet vt teemadest [Segmentide eksportimine Iterable'i (eelvaade)](export-iterable.md) ja [Segmentide eksportimine Braze'i (eelvaade)](export-braze.md).
+Lisateavet vt teemadest [Segmentide eksportimine iterable'i (eelvaade)](export-iterable.md) ja [segmentide eksportimine braze'i (eelvaade)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Marketo ja Google Adsi ekspordi täiustused
 

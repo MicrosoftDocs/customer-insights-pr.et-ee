@@ -1,105 +1,186 @@
 ---
 title: Common Data Modeli andmete ühendamine Azure Data Lake'i kontoga
 description: Töötage Common Data Modeli andmete kallal Azure Data Lake Storage'i abil.
-ms.date: 05/24/2022
-ms.subservice: audience-insights
+ms.date: 05/30/2022
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: mukeshpo
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833351"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011552"
 ---
-# <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Common Data Modeli kausta ühendamine Azure Data Lake’i kontot kasutades
+# <a name="connect-to-data-in-azure-data-lake-storage"></a>Andmetega ühenduse loomine Azure Data Lake Storageis
 
-Selles artiklis antakse teavet selle kohta, kuidas oma Gen2 konto abil Dynamics 365 Customer Insights ühisandmete mudeli kaustast andmeid Azure Data Lake Storage alla neelata.
+Andmete sisestamine Gen2 konto kasutamisse Dynamics 365 Customer Insights Azure Data Lake Storage. Andmete allaneelamine võib olla täielik või järkjärguline.
 
-## <a name="important-considerations"></a>Olulised kaalutlused
+## <a name="prerequisites"></a>eeltingimused
 
-- Andmed Azure Data Lake'is peavad vastama Common Data Modeli standardile. Hetkel muid vorminguid ei toetata.
+- Andmete allaneelamine toetab Azure Data Lake Storage *ainult Gen2* kontosid. Data Lake Storage Gen1 kontosid ei saa andmete allaneelamiseks kasutada.
 
-- Andmete valmendamise korral toetatakse ainult Azure Data Lake *Gen2* salvestuskontosid. Andmete valmendamiseks ei saa kasutada Azure Data Lake Gen1 salvestuskontosid.
+- Kontol Azure Data Lake Storage peab [olema lubatud hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace). Andmed tuleb talletada hierarhilises kaustavormingus, mis määratleb juurkausta ja millel on iga olemi jaoks alamkaustad. Alamkaustadel võivad olla täielikud andmed või täiendavad andmekaustad.
 
-- Azure Data Lake'i salvestuskontol [peab olema lubatud hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace).
+- Azure'i teenusesubjektiga autentimiseks veenduge, et see oleks teie rentnikus konfigureeritud. Lisateavet vt teemast [Connect to a Azure Data Lake Storage Gen2 kontoga Azure'i teenuse käsundiandja](connect-service-principal.md) abil.
 
-- Azure'i teenusesubjektiga autentimiseks veenduge, et see oleks teie rentnikus konfigureeritud. Lisateavet vt teemast [Connect to a Azure Data Lake Storage Gen2 kontoga Azure'i teenuse käsundiandja abil](connect-service-principal.md).
-
-- Azure Data Lake, millega soovite ühenduda ja millest andmeid valmendada, peab olema samas Azure'i regioonis nagu Dynamics 365 Customer Insightsi keskkond. Ühendused Common Data Modeli kausta ja muus Azure'i regioonis oleva andmejärve vahel pole toetatud. Keskkonna Azure'i piirkonna tundmaõppimiseks avage **customer insights'is administraatorisüsteemi** > **·** > **teave**.
+- Andmed Azure Data Lake Storage, millest soovite andmeid ühendada ja alla neelata, peavad olema keskkonnaga samas Azure'i Dynamics 365 Customer Insights piirkonnas. Ühendused Common Data Modeli kausta ja muus Azure'i regioonis oleva andmejärve vahel pole toetatud. Keskkonna Azure'i piirkonna tundmaõppimiseks avage **customer insights'is administraatorisüsteemi** > **·** > **teave**.
 
 - Võrguteenustes talletatavaid andmeid võidakse talletada mõnes muus asukohas Dynamics 365 Customer Insights kui siis, kui andmeid töödeldakse või talletatakse.Veebiteenustes talletatavate andmete importimisel või nendega ühenduse loomisel nõustute, et andmeid saab edastada ja salvestada rakendusega Dynamics 365 Customer Insights. [Lisateavet leiate Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
 
-## <a name="connect-to-a-common-data-model-folder"></a>Loo ühendus Common Data Modeli kaustaga
+- Customer Insightsi teenuse põhiosa peab salvestuskontole pääsemiseks olema ühes järgmistest rollidest. Lisateavet leiate teemast [Hooldusdirektori õiguste andmine salvestuskontole](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account) juurdepääsuks.
+  - Salvestusruumi bloobiandmete luger
+  - Salvestusruumi bloobiandmete omanik
+  - Salvestusruumi bloobiandmete kaasautor
+
+- Teie Data Lake Storage'is olevad andmed peaksid teie andmete salvestamiseks järgima ühist andmemudeli standardit ja neil peab olema ühine andmemudeli manifest, mis esindab andmefailide skeemi (*.csv või *.parkett). Manifest peab sisaldama olemite üksikasju ( nt olemiveerud ja andmetüübid) ning andmefaili asukohta ja failitüüpi. Lisateavet leiate teemast [Levinud andmemudeli manifest](/common-data-model/sdk/manifest). Kui manifesti pole olemas, saavad salvestusruumi bloobiandmete omaniku või salvestusruumi bloobi andmete kaasautori juurdepääsuga administraatori kasutajad andmete allaneelamisel skeemi määratleda.
+
+## <a name="connect-to-azure-data-lake-storage"></a>Azure Data Lake Storageiga ühenduse loomine
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
 
 1. Valige **Lisa andmeallikas**.
 
-1. Valige **Azure'i andmejärve salvestusruum**, sisestage **andmeallikas nimi** ja seejärel valige **Edasi**.
+1. Valige **Azure data lake storage**.
 
-   - Kui küsitakse, valige üks näidisandmehulkadest, mis on seotud teie valdkonnaga, ja seejärel valige **Edasi**.
+   :::image type="content" source="media/data_sources_ADLS.png" alt-text="Dialoogiboks Azure Data Lake'i ühenduse üksikasjade sisestamiseks." lightbox="media/data_sources_ADLS.png":::
 
-1. Saate autentimiseks valida ressursipõhise ja tellimusepõhise valiku vahel. Lisateavet vt teemast [Connect to a Azure Data Lake Storage Gen2 kontoga Azure'i teenuse käsundiandja abil](connect-service-principal.md). Sisestage **serveri aadress**, valige **logi sisse** ja seejärel valige **Edasi**.
-   > [!div class="mx-imgBorder"]
-   > ![Azure Data Lake'i uute ühenduse üksikasjade sisestamise dialoogiboks.](media/enter-new-storage-details.png)
+1. **Sisestage andmeallikas nimi** ja valikuline **kirjeldus**. Nimi tuvastab kordumatult andmeallikas ja sellele viidatakse järgmise etapi protsessides ning seda ei saa muuta.
+
+1. Valige üks järgmistest suvanditest, et **ühendada oma salvestusruum.** Lisateavet leiate teemast [Customer Insightsi Azure Data Lake Storage ühendamine Gen2 kontoga Azure'i teenuse põhiosaga](connect-service-principal.md).
+
+   - **Azure'i ressurss**: sisestage **resource ID**. Soovi korral, kui soovite salvestusruumikontolt andmeid Azure'i privaatlingi kaudu alla neelata, valige **Luba privaatlink**. Lisateavet vt teemast [Private Links](security-overview.md#private-links-tab).
+   - **Azure'i tellimus**: valige tellimus **ja seejärel** ressursirühm **ja** salvestusruumikonto **·**. Soovi korral, kui soovite salvestusruumikontolt andmeid Azure'i privaatlingi kaudu alla neelata, valige **Luba privaatlink**. Lisateavet vt teemast [Private Links](security-overview.md#private-links-tab).
+  
    > [!NOTE]
-   > Salvestusruumikontol olevale konteinerile on vaja ühte järgmistest rollidest, et luua andmeallikas.
+   > Andmeallikas loomiseks on vaja ühte järgmistest rollidest kas konteinerisse või salvestuskontole.
    >
    >  - Storage Blob Data Reader on piisav, et lugeda salvestuskontolt ja neelata andmed Customer Insightsi. 
-   >  - Kui soovite manifestifaile redigeerida otse Customer Insightsis, on vaja salvestusruumi bloobi andmete kaasautorit või omanikku.
-
-1. Valige dialoogis **Common Data Modeli kausta valimine** fail model.json või manifest.json, kuhu andmeid importida, ja valige **Edasi**.
+   >  - Kui soovite manifestifaile redigeerida otse Customer Insightsis, on vaja salvestusruumi bloobi andmete kaasautorit või omanikku.  
+  
+1. Valige andmete importimiseks **andmeid ja skeemi sisaldava konteineri** (model.json või manifest.json fail) nimi ja valige **Edasi**.
    > [!NOTE]
-   > Keskkonnas muu andmeallikaga seotud faile model.json või manifest.json ei kuvata loendis.
+   > Keskkonnas muu andmeallikaga seotud faile model.json või manifest.json ei kuvata loendis. Kuid sama faili model.json või manifest.json saab kasutada mitmes keskkonnas andmeallikate jaoks.
 
-1. Valitud failis model.json või manifest.json kuvatakse saadaolevate olemite loend. Vaadake üle ja valige saadaolevate olemite loendist, seejärel valige **Salvesta**. Kõik valitud olemid valmendatakse uuest andmeallikast.
-   > [!div class="mx-imgBorder"]
-   > ![Dialoogiboks, kus on esitatud model.json failist saadud olemite loetelu.](media/review-entities.png)
+1. Uue skeemi loomiseks avage [uue skeemifaili](#create-a-new-schema-file) loomine.
 
-1. Saate märkida, milliseid andmeolemeid soovite andmete profileerimist lubada, seejärel valige **Salvesta**. Andmete profiilimine teeb võimalikuks analüüsi ja palju muud. Saate valida kogu olemi, mis valib olemi kõik atribuudid, või valida oma soovi järgi kindlad atribuudid. Vaikimisi pole olemeid andmete profiilimiseks lubatud.
-   > [!div class="mx-imgBorder"]
-   > ![Andmete profiilimist kuvav dialoogiboks.](media/dataprofiling-entities.png)
+1. Olemasoleva skeemi kasutamiseks liikuge kausta, mis sisaldab faili model.json või manifest.cdm.json. Faili leidmiseks saate otsida kataloogist.
 
-1. Pärast valikute salvestamist avaneb leht **Andmeallikad**. Nüüd peaksite nägema Common Data Modeli kausta ühendust andmeallikana.
+1. Valige json-fail ja valige **Edasi**. Kuvatakse saadaolevate olemite loend.
 
-> [!NOTE]
-> Faili model.json või manifest.json saab seostada samas keskkonnas ühe andmeallikaga. Kuid sama faili model.json või manifest.json saab kasutada mitmes keskkonnas andmeallikate jaoks.
+   :::image type="content" source="media/review-entities.png" alt-text="Valitavate olemite loendi dialoogiboks":::
 
-## <a name="edit-a-common-data-model-folder-data-source"></a>Common Data Modeli kausta andmeallika redigeerimine
+1. Valige olemid, mida soovite kaasata.
 
-Saate värskendada pääsuvõtit, mis kuulub salvestuskontole, mis sisaldab Common Data Modeli kausta. Võite ka faili model.json või manifest.json muuta. Kui soovite luua ühenduse muu konteineriga teie salvestuskontol või muuta konto nime, siis peate looma [uue andmeallika ühenduse](#connect-to-a-common-data-model-folder).
+   :::image type="content" source="media/ADLS_required.png" alt-text="Dialoogiboks, kus on kuvatud Primaarvõtme jaoks nõutav":::
+
+   > [!TIP]
+   > JSON redigeerimisliidese olemite redigeerimiseks valige **Kuva veel** > **Redigeeri skeemifaili**. Tehke muudatusi ja valige **Salvesta**.
+
+1. Valitud olemite puhul, mis vajavad järkjärgulist allaneelamist, **kuvatakse jaotises Nõutav** jaotises **Astmeline värskendamine** nõutav. Kõigi nende olemite kohta leiate teavet teemast [Azure Data Lake'i andmeallikate](incremental-refresh-data-sources.md) täiendava värskenduse konfigureerimine.
+
+1. Valitud olemite puhul, kus primaarvõtit pole määratletud, **kuvatakse jaotises** Primaarvõti **nõutav**. Kõigi nende üksuste puhul tehke järgmist.
+   1. Valige **Nõutav**. Kuvatakse **paneel Redigeeri olemit**.
+   1. **Valige primaarvõti**. Primaarvõti on olemile ainuomane atribuut. Et atribuut saaks olla sobiv primaarvõti, ei tohi see sisaldada topeltväärtusi, puuduvaid väärtusi ega null-väärtusi. Põhivõtmetena toetatakse stringi-, täisarvu- ja GUID-andmetüübi atribuute.
+   1. Soovi korral muutke partitsioonimustrit.
+   1. Paneeli salvestamiseks ja sulgemiseks valige **Sule**.
+
+1. Valige iga kaasatud olemi jaoks atribuutide **arv**. Kuvatakse **leht Atribuutide** haldamine.
+
+   :::image type="content" source="media/dataprofiling-entities.png" alt-text="Dialoogiboks andmete profileerimise valimiseks.":::
+
+   1. Looge uusi atribuute, redigeerige või kustutage olemasolevaid atribuute. Saate muuta nime, andmevormingut või lisada semantilist tüüpi.
+   1. Analüüsi ja muude võimaluste lubamiseks valige **Andmete profileerimine** kogu olemi või kindlate atribuutide jaoks. Vaikimisi pole olemeid andmete profiilimiseks lubatud.
+   1. Valige nupp **Valmis**.
+
+1. Valige **Salvesta**. Avaneb **andmeallikate** leht, kus kuvatakse uus andmeallikas olekus **Värskendamine**.
+
+### <a name="create-a-new-schema-file"></a>Uue skeemifaili loomine
+
+1. Valige **Uus skeemifail**.
+
+1. Sisestage faili nimi ja valige **Salvesta**.
+
+1. Valige **Uus olem**. Kuvatakse **paneel Uus olem**.
+
+1. Sisestage olemi nimi ja valige **andmefailide asukoht**.
+   - **Mitu .csv- või .parkettfaili**: sirvige juurkausta, valige mustritüüp ja sisestage avaldis.
+   - **Üksikud .csv- või .parkettfailid**: sirvige .csv- või parkettfailini ja valige see.
+
+   :::image type="content" source="media/ADLS_new_entity_location.png" alt-text="Dialoogiboks uue olemi loomiseks, kus on esile tõstetud andmefailide asukoht.":::
+
+1. Valige **Salvesta**.
+
+   :::image type="content" source="media/ADLS_new_entity_define_attributes.png" alt-text="Dialoogiboks atribuutide määratlemiseks või automaatseks loomiseks.":::
+
+1. Valige **atribuutide** käsitsi lisamiseks atribuutide määratlemine või valige **automaatne loomine**. Atribuutide määratlemiseks sisestage nimi, valige andmevorming ja valikuline semantiline tüüp. Automaatselt genereeritud atribuutide puhul tehke järgmist.
+
+   1. Pärast atribuutide automaatset loomist valige **Atribuutide ülevaatamine**. Kuvatakse **leht Atribuutide** haldamine.
+
+   1. Veenduge, et andmevorming oleks iga atribuudi jaoks õige.
+
+   1. Analüüsi ja muude võimaluste lubamiseks valige **Andmete profileerimine** kogu olemi või kindlate atribuutide jaoks. Vaikimisi pole olemeid andmete profiilimiseks lubatud.
+
+      :::image type="content" source="media/dataprofiling-entities.png" alt-text="Dialoogiboks andmete profileerimise valimiseks.":::
+
+   1. Valige nupp **Valmis**. Kuvatakse **leht Vali olemid**.
+
+1. Vajadusel jätkake olemite ja atribuutide lisamist.
+
+1. Kui kõik olemid on lisatud, valige **Kaasa**, et kaasata olemid andmeallikas allaneelamisse.
+
+   :::image type="content" source="media/ADLS_required.png" alt-text="Dialoogiboks, kus on kuvatud Primaarvõtme jaoks nõutav":::
+
+1. Valitud olemite puhul, mis vajavad järkjärgulist allaneelamist, **kuvatakse jaotises Nõutav** jaotises **Astmeline värskendamine** nõutav. Kõigi nende olemite kohta leiate teavet teemast [Azure Data Lake'i andmeallikate](incremental-refresh-data-sources.md) täiendava värskenduse konfigureerimine.
+
+1. Valitud olemite puhul, kus primaarvõtit pole määratletud, **kuvatakse jaotises** Primaarvõti **nõutav**. Kõigi nende üksuste puhul tehke järgmist.
+   1. Valige **Nõutav**. Kuvatakse **paneel Redigeeri olemit**.
+   1. **Valige primaarvõti**. Primaarvõti on olemile ainuomane atribuut. Et atribuut saaks olla sobiv primaarvõti, ei tohi see sisaldada topeltväärtusi, puuduvaid väärtusi ega null-väärtusi. Põhivõtmetena toetatakse stringi-, täisarvu- ja GUID-andmetüübi atribuute.
+   1. Soovi korral muutke partitsioonimustrit.
+   1. Paneeli salvestamiseks ja sulgemiseks valige **Sule**.
+
+1. Valige **Salvesta**. Avaneb **andmeallikate** leht, kus kuvatakse uus andmeallikas olekus **Värskendamine**.
+
+
+## <a name="edit-an-azure-data-lake-storage-data-source"></a>Andmeallikas redigeerimine Azure Data Lake Storage
+
+Suvandi Ühenda salvestusruumiga saate värskendada *suvandi abil*. Lisateavet leiate teemast [Customer Insightsi Azure Data Lake Storage ühendamine Gen2 kontoga Azure'i teenuse põhiosaga](connect-service-principal.md). Kui soovite luua ühenduse muu konteineriga teie salvestuskontol või muuta konto nime, siis peate looma [uue andmeallika ühenduse](#connect-to-azure-data-lake-storage).
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
 
-2. Valige värskendatava andmeallikas kõrval vertikaalne kolmikpunkt (&vellip;).
+1. Valige värskendatava andmeallikas kõrval Käsk **Redigeeri**.
 
-3. Valige loetelust valik **Redigeeri**.
+   :::image type="content" source="media/data_sources_edit_ADLS.png" alt-text="Dialoogiboks Azure Data Lake andmeallikas redigeerimiseks.":::
 
-4. Soovi korral saate uuendada **Pääsuvõtit** ja valida seejärel **Järgmine**.
+1. Muutke mõnda järgmistest andmetest.
 
-   ![Olemasoleva andmeallika pääsuvõtme redigeerimise ja uuendamise dialoog.](media/edit-access-key.png)
+   - **Kirjeldus**
+   - **Ühendage oma salvestusruum ühenduse teabe ja ühendusteabe abil**. Ühenduse värskendamisel ei saa te muuta **konteineri** teavet.
+      > [!NOTE]
+      > Salvestuskontole või konteinerile tuleb määrata üks järgmistest rollidest.
+        > - Salvestusruumi bloobiandmete luger
+        > - Salvestusruumi bloobiandmete omanik
+        > - Salvestusruumi bloobiandmete kaasautor
 
-5. Soovi korral saate kasutada kontovõtmepõhise ühenduse asemel ressursi- või tellimusepõhist ühendust. Lisateavet vt teemast [Connect to a Azure Data Lake Storage Gen2 kontoga Azure'i teenuse käsundiandja abil](connect-service-principal.md). Ühenduse värskendamisel ei saa te muuta **konteineri** teavet.
-   > [!div class="mx-imgBorder"]
+   - **Lubage privaatlink,** kui soovite azure'i privaatlingi kaudu salvestusruumikontolt andmeid alla neelata. Lisateavet vt teemast [Private Links](security-overview.md#private-links-tab).
 
-   > ![Ühenduse andmete sisestamise dialoogiboks Azure Data Lake'i ühendamiseks olemasoleva salvestusruumi kontoga.](media/enter-existing-storage-details.png)
+1. Tehke valik **Edasi**.
+1. Muutke ühte järgmistest.
+   - Navigeerige mõnele muule model.json või manifest.json failile, millel on konteinerist erinev olemite kogum.
+   - Täiendavate olemite lisamiseks allaneelamisse valige **Uus olem**.
+   - Juba valitud olemite eemaldamiseks, kui sõltuvusi pole, valige olem ja **Kustuta**.
+      > [!IMPORTANT]
+      > Kui olemasoleval failil model.json või manifest.json ja olemikomplektil on sõltuvusi, kuvatakse tõrketeade ja te ei saa valida muud faili model.json või manifest.json. Eemaldage need sõltuvused enne faili model.json või manifest.json muutmist või looge uus andmeallikas failiga model.json või manifest.json, mida soovite kasutada, et vältida sõltuvuste eemaldamist.
+   - Andmefaili asukoha või primaarvõtme muutmiseks valige **Redigeeri**.
+   - Täiendavate allaneelamisandmete muutmiseks lugege teemat [Azure Data Lake'i andmeallikate täiendusvärskenduse konfigureerimine](incremental-refresh-data-sources.md)
 
-6. Soovi korral saate valida konteinerist erineva olemikomplektiga faili model.json või manifest.json.
+1. Atribuutide **lisamiseks või muutmiseks või andmete profileerimise lubamiseks valige** Atribuudid. Seejärel valige **Valmis**.
 
-7. Soovi korral saate valmendamiseks valida täiendavaid olemeid. Samuti saate sõltuvuste puudumise korral eemaldada kõiki juba valitud olemeid.
-
-   > [!IMPORTANT]
-   > Kui olemasoleval failil model.json või manifest.json ja olemikomplektil on sõltuvusi, kuvatakse tõrketeade ja te ei saa valida muud faili model.json või manifest.json. Eemaldage need sõltuvused enne faili model.json või manifest.json muutmist või looge uus andmeallikas failiga model.json või manifest.json, mida soovite kasutada, et vältida sõltuvuste eemaldamist.
-
-8. Soovi korral saate valida täiendavaid atribuute või olemeid, mille korral lubada andmete profiilimine, või keelata juba valitud üksused.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Muudatuste rakendamiseks ja andmeallikate **lehele naasmiseks** klõpsake nuppu **Salvesta**.

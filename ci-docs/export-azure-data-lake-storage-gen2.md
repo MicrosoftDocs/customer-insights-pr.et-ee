@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642604"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947225"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Segmendiloendi ja muude andmete eksportimine Azure Data Lake Storage Gen2-te (eelversioon)
 
@@ -21,11 +21,9 @@ Salvestage oma Customer Insightsi andmed Azure Data Lake Storage Gen2 kontole v�
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-1. Azure Data Lake Storage Gen2 jaoks saate andmete jaoks salvestusruumi konto loomisel valida nii [Standardjõudluse kui ka Premium jõudluse järgu](/azure/storage/blobs/create-data-lake-storage-account). Kui valite Premium jõudluse järgu, valige konto tüübiks premium ploki bloobid. 
+1. Azure Data Lake Storage Gen2 jaoks saate andmete jaoks salvestusruumi konto loomisel valida nii [Standardjõudluse kui ka Premium jõudluse järgu](/azure/storage/blobs/create-data-lake-storage-account). Kui valite Premium jõudluse järgu, valige konto tüübiks premium ploki bloobid.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Ühenduse häälestamine Azure Data Lake Storage Gen2-ga 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Ühenduse häälestamine Azure Data Lake Storage Gen2-ga
 
 1. Minge **Administraator** > **Ühendused**.
 
@@ -39,7 +37,7 @@ Salvestage oma Customer Insightsi andmed Azure Data Lake Storage Gen2 kontole v�
     - Lisateavet selle kohta, kuidas luua salvestusruumi kontot koos Azure Data Lake Storage Gen2-ga kasutamiseks, leiate teemast [Salvestusruumi konto loomine](/azure/storage/blobs/create-data-lake-storage-account). 
     - Lisateavet Azure Data Lake Gen2 storage konto nime ja konto võtme otsimise kohta leiate [Azure portaalis salvestusruumi konto sätete haldamine](/azure/storage/common/storage-account-manage).
 
-1. Ühenduse loomiseks valige **Salvesta**. 
+1. Ühenduse loomiseks valige **Salvesta**.
 
 ## <a name="configure-an-export"></a>Ekspordi konfigureerimine
 
@@ -57,8 +55,12 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 Ekspordi salvestamine ei käivita eksporti kohe.
 
-Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
+Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab).
+Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand).
 
-Eksporditud andmed salvestatakse konfigureeritud Azure Data Lake Gen 2 storage konteinerisse. 
+Eksporditud andmed salvestatakse konfigureeritud Azure Data Lake Gen 2 storage konteinerisse.
+
+> [!TIP]
+> Suure andmehulgaga olemite eksportimine võib iga ekspordi puhul viia samasse kausta mitme CSV-failini. Ekspordi tükeldamine toimub tulemuslikkuse huvides, et minimeerida ekspordi lõpuleviimiseks kuluvat aega.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

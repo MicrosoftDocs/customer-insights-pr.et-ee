@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833763"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011882"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Dynamics 365 Customer Insights’i prooviversiooni KKK
 
@@ -68,7 +68,7 @@ Pärast esmakordset Customer Insights -i tasulisesse eksemplari sisselogimist pa
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Millised on prooviversiooni piirangud ja kvoodid?
 
-- Customer Insightsi prooviversiooni ajal väljundandmete talletamiseks ei saa kasutada oma Azure Data Lake'i salvestuskontot. Siiski saate andmeid tuua Data Lake Storage -i kontolt.
+- Customer Insightsi prooviversiooni ajal ei saa väljundandmete talletamiseks kasutada oma Azure Data Lake Storage kontot. Andmeid saate siiski alla neelata Data Lake Storage'i kontolt.
 - Saate talletada kuni 3 GB andmeid Dataverse-i keskkonnas, mis luuakse automaatselt Customer Insights'i prooviversiooni käivitamisel.
 
 ## <a name="customer-insights-specific-questions"></a>Konkreetsed küsimused Customer Insights’i kohta
@@ -83,7 +83,7 @@ Enamik Customer Insights'i võimaluste funktsioone on saadaval prooviversioonis.
 
 Järgmised funktsioonid **pole saadaval**.
 
-- Te ei saa luua uusi keskkondi, mis kasutavad teie enda Azure Data Lake salvestuskontot.
+- Te ei saa luua uusi keskkondi, mis kasutavad teie enda Azure Data Lake Storage kontot.
 - Proovikeskkonda ei saa kustutada.
 
 ### <a name="how-long-does-the-trial-last"></a>Kui kaua prooviversioon kestab?

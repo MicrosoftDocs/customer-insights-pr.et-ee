@@ -7,20 +7,20 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800165"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011698"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Andmetega ühendamine Microsoft Dataverse’i hallatavas andmejärves
 
-Selles artiklis antakse teavet selle kohta, kuidas Dataverse kasutajad saavad hallatava järve analüütiliste üksustega Microsoft Dataverse kiiresti ühenduse luua. 
+Microsoft Dataverse kasutajad saavad hallatava järve analüütiliste üksustega Microsoft Dataverse kiiresti ühenduse luua.
 
 > [!NOTE]
 > Hallatavas järves saadaolevate olemite loendi jätkamiseks ja vaatamiseks peate olema organisatsiooni administraator Dataverse.
@@ -32,40 +32,34 @@ Selles artiklis antakse teavet selle kohta, kuidas Dataverse kasutajad saavad ha
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Teenuse Dataverse hallatava järvega ühenduse loomine
 
-1. Avage teenuses Customer Insights **Andmed** > **Andmeallikad**.
+1. Avage suvandid **Andmed** > **Andmeallikad**.
 
-2. Valige **Lisa andmeallikas**.
+1. Valige **Lisa andmeallikas**.
 
-3. Valige **Microsoft Dataverse** ja valige **Edasi**.
+1. Valige **Microsoft Dataverse**.
 
-4. Sisestage andmeallika **Nimi** ja valige **Järgmine**. 
+1. **Sisestage andmeallikas nimi** ja valikuline **kirjeldus**.
 
-5. Sisestage **Serveri aadress** Dataverse organisatsiooni jaoks ja seejärel valige **Sisselogimine**.
+1. Sisestage **Serveri aadress** Dataverse organisatsiooni jaoks ja seejärel valige **Sisselogimine**.
 
-   :::image type="content" source="media/ingest-dataverse-server-address.png" alt-text="Kuva andmeafikstsiooni etapp, kus kasutaja saab sisestada Dataverse keskkonna URL-i.":::
-
-6. Valige saadaolevast loendist tabelid, mida soovite olemitena Customer Insightsi alla neelata.    
+1. Valige saadaolevast loendist tabelid, mida soovite Customer Insightsi olemitena alla neelata.
 
    > [!NOTE]
    > Kui mõni tabel on juba valitud, võivad neid kasutada ka teised Dynamics 365 rakendused (nt Dynamics 365 sales Insights või Customer Service Insights). Valikut ei saa muuta. Need tabelid on olemina saadaval pärast andmeallika loomist.
 
-   :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dialoogiboks, kus kuvatakse keskkonna Dataverse olemite loend.":::
+    :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dialoogiboks, kus kuvatakse keskkonna Dataverse olemite loend.":::
 
-7. Salvestage oma valik, et alustada valitud tabelite sünkroonimist Dataverse rakendusest. Äsja lisatud ühenduse leiate lehelt **Andmeallikad**. See lisatakse järjekorda olemite arvu värskendamiseks ja 0-na kuvamiseks, kuni kõik valitud tabelid on sünkroonitud.
+1. Salvestage oma valik, et alustada valitud tabelite sünkroonimist Dataverse rakendusest. Äsja lisatud ühenduse leiate lehelt **Andmeallikad**. See lisatakse järjekorda olemite arvu värskendamiseks ja 0-na kuvamiseks, kuni kõik valitud tabelid on sünkroonitud.
 
 Sama Dataverse'i hallatavat andmejärve saab ühel ajal kasutada ainult üks keskkonna andmeallikas.
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Dataverse’i hallatava järve andmeallika muutmine
 
-Olemi valikut redigeerite alles pärast andmeallika loomist. Näiteks, kui Dataverse'ile lisati täiendavaid olemeid ja soovite ka need importida.    
+Olemi valikut redigeerite alles pärast andmeallika loomist. Näiteks, kui Dataverse'ile lisati täiendavaid olemeid ja soovite ka need importida.
 Erinevate Dataverse -i data lake -idega ühendamiseks [looge uus andmeallikas](#connect-to-a-dataverse-managed-lake).
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
 
-2. Valige värskendatava andmeallikas kõrval vertikaalne kolmikpunkt (&vellip;).
+1. Valige värskendatava andmeallikas kõrval Käsk **Redigeeri**.
 
-3. Valige loetelust valik **Redigeeri**.
-
-4. Valige saadaolevate olemite loendist täiendavad olemid ja valige suvand **Salvesta**.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Valige saadaolevate olemite loendist täiendavad olemid ja valige suvand **Salvesta**.

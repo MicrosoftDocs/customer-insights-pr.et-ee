@@ -1,19 +1,19 @@
 ---
 title: Andmesubjekti õigused (DSR) vastavalt GDPR-ile | Microsoft Docs
 description: Dynamics 365 Customer Insightsi andmesubjekti taotlustele vastamine.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808541"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947363"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Andmesubjekti õigused (DSR) vastavalt GDPR-ile
 
@@ -77,11 +77,5 @@ Rentniku administraator võib järgida andmete eksportimisel järgmisi etappe.
 1. Saatke meil aadressile D365CI@microsoft.com, et määrata taotluses kasutaja meiliaadress. Customer Insightsi meeskond saadab registreeritud rentniku administraatori meiliaadressile meili, paludes kinnitust andmete eksportimiseks.
 2. Kinnitage taotletud kasutajale andmete eksportimise luba.
 3. Saage eksporditud andmed rentniku administraatori meiliaadressi kaudu.
-
-## <a name="consent-management-preview"></a>Nõusoleku haldamine (eelvaade)
-
-Nõusolekuhalduse võimalus ei kogu otseselt kasutajaandmeid. See impordib ja töötleb nõusolekuandmeid, mida kasutajad esitavad teistes rakendustes.
-
-Nõusolekuandmete eemaldamiseks konkreetsete kasutajate kohta eemaldage need nõusoleku haldamise võimele allaneelatud andmeallikatest. Pärast andmeallikas värskendamist kustutatakse eemaldatud andmed ka nõusolekukeskuses. Nõusolekuolemit kasutavad rakendused kustutavad ka andmed, mis eemaldati allikast pärast [värskendamist](system.md#refresh-processes). Soovitame värskendada andmeallikaid kiiresti pärast andmesubjekti päringule vastamist, et eemaldada kasutaja andmed kõigist muudest protsessidest ja rakendustest.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

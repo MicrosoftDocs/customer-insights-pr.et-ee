@@ -48,14 +48,14 @@
   items:
     - name: Andmeallikate ülevaade
       href: data-sources.md
+    - name: Andmetega ühenduse loomine Azure Data Lake Storageis
+      href: connect-common-data-model.md
+    - name: Azure Synapse Analyticsiga ühenduse loomine
+      href: connect-synapse.md
+    - name: Andmetega ühendamine Microsoft Dataverse’i hallatavas andmejärves
+      href: connect-dataverse-managed-lake.md
     - name: Andmeallikate lisamine konnektorite kaudu Power Query
       href: connect-power-query.md
-    - name: Common Data Modeli kausta andmeallikana lisamine
-      href: connect-common-data-model.md
-    - name: Dataverse'i hallatava andmejärve lisamine
-      href: connect-dataverse-managed-lake.md
-    - name: Azure Synapse Analytics lisamine
-      href: connect-synapse.md
     - name: Andmeallikate rikastamine
       href: data-sources-enrichment.md
     - name: Andmeallikate astmeline värskendamine
@@ -82,27 +82,27 @@
   items:
     - name: Kliendiprofiilide rikastamine
       href: enrichment-hub.md
+    - name: Kontod andmetest Office 365
+      href: enrichment-office.md
     - name: Kaubamärgid ja huvid
       href: enrichment-microsoft.md
+    - name: Ettevõtte andmed Dun & Bradstreet'ist
+      href: enrichment-dnb.md
+    - name: Ettevõtte andmed Leadspace'ist
+      href: enrichment-leadspace.md
+    - name: Demograafia koos Experian
+      href: enrichment-experian.md
     - name: Täiustatud aadressid
       href: enrichment-enhanced-addresses.md
     - name: Täiustatud ettevõtte andmed
       href: enrichment-enhanced-company-data.md
-    - name: Rikasta Azure Maps abil
-      href: enrichment-azure-maps.md
-    - name: Rikasta Dun & Bradstreet'iga
-      href: enrichment-dnb.md
-    - name: Rikastamine ettevõtte HERE Technologies teenusega
-      href: enrichment-here.md
-    - name: Leadspace'iga rikastamine
-      href: enrichment-leadspace.md
-    - name: Rikasta LiveRampiga
+    - name: Identiteet LiveRampiga
       href: enrichment-liveramp.md
-    - name: Rikastage koos Experian-iga
-      href: enrichment-experian.md
-    - name: Andmetega rikastamine Office 365
-      href: enrichment-office.md
-    - name: Rikastamine SFTP-põhise kohandatud importimise kaudu
+    - name: Asukoht Azure Mapsist
+      href: enrichment-azure-maps.md
+    - name: Asukoht ettevõttelt HERE Technologies
+      href: enrichment-here.md
+    - name: SFTP kohandatud import
       href: enrichment-SFTP-custom-import.md
 - name: Ühendamata profiilid
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: Klienditegevuste määratlemine
       href: activities.md
+    - name: Kliendiülevaadete nõusolekuhaldus
+      href: consent-management.md
 - name: Segmendid
   items:
     - name: Segmentide ülevaade
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: OData näidispäringud
       href: odata-examples.md
-- name: Nõusoleku haldamine (eelvaade)
-  items:
-    - name: Spikrikeskus
-      href: consent-management/index.yml
-    - name: Võimaluste ülevaade
-      href: consent-management/overview.md
-    - name: Hakkame pihta
-      items:
-        - name: Hakkame pihta
-          href: consent-management/get-started.md
-        - name: Mõisted ja terminid
-          href: consent-management/glossary.md
-    - name: Nõusoleku andmete importimine
-      items:
-        - name: Nõusoleku andmete importimine
-          href: consent-management/import-consent-data.md
-        - name: Nõusolekuandmete määramine ja nõusolekueelistuste rakendamine
-          href: consent-management/set-consent-rules.md
-    - name: Nõusolekuandmete haldamine
-      items:
-        - name: Nõusolekureeglite lubamine Customer Insightsis
-          href: activate-consent.md
-        - name: Nõusoleku vaikereeglite haldamine Customer Insightsi segmentides
-          href: change-default-consent-rules.md
-    - name: Sätete ja kasutajate haldamine
-      items:
-        - name: Süsteemisätete konfigureerimine
-          href: consent-management/system-settings.md
-        - name: Kasutajate ja õiguste haldamine
-          href: consent-management/manage-users.md
-    - name: Nõusolekuandmete kasutamine
-      items:
-        - name: Nõusolekuandmetega ennustuste loomine
-          href: consent-management/predictions-consent-data.md
 - name: Teenusepiirangud
   href: service-limits.md
 - name: DSR-õigused ja taotlused

@@ -1,7 +1,7 @@
 ---
 title: Andmete ühendamise ülevaatamine
 description: Vaadake üle andmete ühendamise etapid, looge ühtsed kliendiprofiilid ja vaadake tulemused üle
-ms.date: 05/04/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4c709dfb55bf079dd2fe99e41adb4c77c2bece4b
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8742973"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844081"
 ---
 # <a name="review-data-unification"></a>Andmete ühendamise ülevaatamine
 
@@ -32,11 +32,13 @@ See viimane samm ühendamisprotsessis näitab protsessi etappide kokkuvõtet ja 
 
 1. **Läbivaatuseks ja muudatuste tegemiseks valige** redigeeri mis tahes andmete ühendamise etapis.
 
-1. Kui olete oma valikutega rahul, valige **Loo kliendiprofiilid**. Leht **Ühenda kuvatakse** ühtse kliendiprofiili loomise ajal. Ühendamise algoritm võtab aega ja te ei saa konfiguratsiooni muuta enne, kui see on lõpule viidud.
+1. Kui olete oma valikutega rahul, valige **Loo kliendiprofiilid**. Leht **Ühenda kuvatakse** ühtse kliendiprofiili loomise ajal. Kõigil paanidel peale **allika kuvatakse** **oleku järjekord või** **värskendamine**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Kuvatõmmis lehest Ühendamine, mille paanid näitavad järjekorda või värskendamist.":::
 
-Kui ühendamisprotsess on lõpule viidud, kuvatakse *ühtne kliendiprofiili olem nimega* Klient **jaotises Profiilid** lehel **Olemid**. Esimene edukas ühendamise käivita loob ühtse *kliendiolemi*. Kõik järgnevad jooksud laiendavad seda olemit.
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Ühendamise algoritm võtab aega ja te ei saa konfiguratsiooni muuta enne, kui see on lõpule viidud. Kui ühendamisprotsess on lõpule viidud, kuvatakse *ühtne kliendiprofiili olem nimega* Klient **jaotises Profiilid** lehel **Olemid**. Esimene edukas ühendamise käivita loob ühtse *kliendiolemi*. Kõik järgnevad jooksud laiendavad seda olemit.
 
 ## <a name="review-the-results-of-data-unification"></a>Andmete ühendamise tulemuste ülevaatamine
 

@@ -1,7 +1,7 @@
 ---
 title: Ühendamissätete värskendamine
 description: Saate värskendada ühendamissätete duplikaatreegleid, vastereegleid või ühtseid välju.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755585"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844035"
 ---
 # <a name="update-the-unification-settings"></a>Ühendamissätete värskendamine
 
@@ -43,8 +43,9 @@ Mis tahes ühendamissätete ülevaatamiseks või muutmiseks pärast ühtse profi
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Kuvatõmmis lehest Andmete ühendamine, kus on esile tõstetud suvandid Ühendamine.":::
 
-   - Ühtse kliendiprofiili värskendamiseks (sõltuvustega või ilma) lugege teemat [Kliendiprofiili](#run-updates-to-the-unified-customer-profile) värskenduste käivitamine.
-   - Sobivate tingimuste kvaliteedi hindamiseks ilma ühtset profiili värskendamata lugege teemat [Käivita sobivad tingimused](#run-matching-conditions). Suvand Käivita **ainult** vastavad tingimused ei kuvata ühe olemi puhul.
+   - [Käivitage sobivad tingimused](#run-matching-conditions), et kiiresti hinnata sobivate tingimuste (ammendumis- ja sobitamisreeglid) kvaliteeti ilma ühtset profiili uuendamata. Suvand Käivita **ainult** vastavad tingimused ei kuvata ühe olemi puhul.
+   - [Kliendiprofiilide](#run-updates-to-the-unified-customer-profile) ühendamine sobivate tingimuste käitamiseks ja ühtse kliendiprofiili olemi värskendamiseks ilma sõltuvusi mõjutamata (nt rikastamine, segmendid või mõõdud). Sõltuvaid protsesse ei käitata, kuid neid värskendatakse värskendamisgraafikus [määratletud viisil](system.md#schedule-tab).
+   - [Ühendage kliendiprofiilid ja sõltuvused](#run-updates-to-the-unified-customer-profile) sobivate tingimuste käitamiseks ning värskendage ühtset kliendiprofiili olemit ja kõiki sõltuvusi (nt rikastamine, segmendid või mõõdud). Kõik protsessid käivitatakse automaatselt.
 
 ## <a name="edit-source-fields"></a>Lähteväljade redigeerimine
 
@@ -70,7 +71,7 @@ Atribuuti või olemit ei saa eemaldada, kui need on juba ühendatud.
 
    Duplikaatide alt **leitud duplikaatkirjete** arv kuvatakse jaotises Duplikaadid. Veerus **Kirjed on näidatud, millistel** olemitel olid duplikaatkirjed ja duplikaatkirjete protsent.
 
-1. Kui lisasite rikastatud olemi, valige **Kasuta rikastatud olemeid**. Lisateavet leiate teemast [Andmeallikate rikastamine](data-sources-enrichment.md).
+1. Kui lisasite rikastatud olemi, valige **Kasuta rikastatud olemeid**. Lisateavet leiate teemast [Andmeallikate](data-sources-enrichment.md) rikastamine.
 
 1. Deduplatsioonireeglite haldamiseks valige mõni järgmistest suvanditest.
    - **Uue reegli** loomine: valige **sobiva olemi all Lisa reegel**. Lisateavet leiate teemast [Deduplatsioonireeglite](remove-duplicates.md#define-deduplication-rules) määratlemine.
@@ -88,7 +89,7 @@ Atribuuti või olemit ei saa eemaldada, kui need on juba ühendatud.
 
    1. Valige nupp **Valmis**.
 
-1. Sobivates tingimustes muudatuste tegemiseks valige Edasi või valige **Salvesta ja sule** ning naaske valikusse **Värskenda ühendamise sätteid**.[...](#update-the-unification-settings)
+1. Sobivates tingimustes muudatuste tegemiseks valige **Edasi või valige** Salvesta ja sule **ning naaske valikusse**[Värskenda ühendamise sätteid](#update-the-unification-settings).
 
 ## <a name="manage-match-rules"></a>Vastendusreeglite haldamine
 
@@ -111,7 +112,7 @@ Enamuse vasteparameetritest saate ümber konfigureerida ja peenhäälestada. Ole
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Tasakaalustamata ja sobitatud kirjete graafiline esitus koos andmete loendiga.":::
 
-1. Kui lisasite rikastatud olemi, valige **Kasuta rikastatud olemeid**. Lisateavet leiate teemast [Andmeallikate rikastamine](data-sources-enrichment.md).
+1. Kui lisasite rikastatud olemi, valige **Kasuta rikastatud olemeid**. Lisateavet leiate teemast [Andmeallikate](data-sources-enrichment.md) rikastamine.
 
 1. Reeglite haldamiseks valige mõni järgmistest suvanditest.
    - **Uue reegli** loomine: valige **sobiva olemi all Lisa reegel**. Lisateavet leiate teemast [Vastepaaride](match-entities.md#define-rules-for-match-pairs) reeglite määratlemine.
@@ -135,11 +136,13 @@ Enamuse vasteparameetritest saate ümber konfigureerida ja peenhäälestada. Ole
 
 ## <a name="run-matching-conditions"></a>Käivita sobivad tingimused
 
+Käivitage vastavad tingimused käivitab ainult lahutamise ja sobitamise reeglid ning värskendab olemeid *Deduplication_** ja *ConflationMatchPair*.
+
 1. **Valige lehel** > **Andmete** ühendamine **käsk Käivita ainult** vastavad tingimused.
 
-   Paanidel **Duplikaatkirjed** ja **kattuvad tingimused** kuvatakse **järjekorras** või **värskendav**.
+   Paanidel Duplikaatkirjed ja kattuvad tingimused **kuvatakse** olekus Järjekord või **Värskendav** **.** **·**
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Kui sobitamisprotsess on lõpule jõudnud, valige **paanil** Sobitamistingimused **käsk Redigeeri**.
 
@@ -153,10 +156,12 @@ Enamuse vasteparameetritest saate ümber konfigureerida ja peenhäälestada. Ole
 
 1. **Valige lehel Andmete** > **ühendamine**.
 
-   - **Kliendiprofiilide** ühendamine: värskendab ühtset kliendiprofiili olemit, mõjutamata sõltuvusi (nt rikastamine, segmendid või meetmed). Sõltuvaid protsesse ei käitata, kuid neid värskendatakse värskendamisgraafikus [määratletud viisil](system.md#schedule-tab).
+   - **Kliendiprofiilide** ühendamine: käivitab vastavad tingimused ja värskendab ühtset kliendiprofiili olemit, mõjutamata sõltuvusi (nt rikastamisi, segmente või mõõte). Sõltuvaid protsesse ei käitata, kuid neid värskendatakse värskendamisgraafikus [määratletud viisil](system.md#schedule-tab).
 
-   - **Kliendiprofiilide ja sõltuvuste** ühendamine: värskendab ühtset profiili ja kõiki sõltuvusi. Kõik protsessid käivitatakse automaatselt. Pärast seda, kui kõik tootmisahela järgmise etapi protsessid on lõpule viidud, kajastab kliendi profiil värskendatud andmeid.
+   - **Kliendiprofiilide ja sõltuvuste** ühendamine: käivitab sobivad tingimused ning värskendab ühtset profiili ja kõiki sõltuvusi. Kõik protsessid käivitatakse automaatselt. Pärast seda, kui kõik tootmisahela järgmise etapi protsessid on lõpule viidud, kajastab kliendi profiil värskendatud andmeid.
 
-   Paanidel **Duplikaatkirjed**, **vastavad tingimused** ja **Ühtsed kliendiväljad** kuvatakse **järjekorras** või **värskendav**.
+   Paanidel **Duplikaatkirjed**, **kattuvad tingimused** ja **Ühtsed kliendiväljad** kuvatakse **olekus** Järjekorras või **Värskendav**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Eduka käituskuva **tulemused lehel Ühendamine**, kus on näidatud ühtsete kliendiprofiilide arv.

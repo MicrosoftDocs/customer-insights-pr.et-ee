@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833671"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011515"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
 
 Customer Insights pakub võimalust teha väljundolemid kättesaadavaks rakendusena [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). See integratsioon võimaldab hõlpsat andmete jagamist ja kohandatud arendamist madala koodi / koodita lähenemisviisi kaudu. Väljundolemid [on](#output-entities) keskkonnas tabelitena Dataverse saadaval. Andmeid saate kasutada mis tahes muu rakenduse kohta tabelite põhjal Dataverse. Need tabelid lubavad stsenaariume, nagu automatiseeritud töövood rakenduse kaudu Power Automate või rakenduste loomine rakenduses Power Apps.
 
-Dataverse Keskkonnaga ühenduse loomine võimaldab teil andmevoogude ja lüüside abil [alla neelata Power Platform andmeid ka asutusesisene andmeallikatest](data-sources.md#add-data-from-on-premises-data-sources).
+Dataverse Keskkonnaga ühenduse loomine võimaldab teil andmevoogude ja lüüside abil [alla neelata Power Platform andmeid ka asutusesisene andmeallikatest](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>eeltingimused
 
@@ -57,7 +57,7 @@ Andmete jagamise lubamine, Microsoft Dataverse kui teie keskkond [kasutab teie e
 Oma Dataverse kontoga kasutamisel Azure Data Lake Storage on kaks piirangut:
 
 - Organisatsiooni ja Dataverse konto vahel Azure Data Lake Storage on üks-ühele vastendus. Dataverse Kui organisatsioon on ühendatud salvestusruumikontoga, ei saa ta mõne muu salvestuskontoga ühendust luua. See piirang takistab, et a Dataverse ei asustada mitut salvestusruumikontot.
-- Andmete jagamine ei toimi, kui Azure Data Lake'i salvestusruumikontole juurdepääsuks on vaja Azure'i privaatlingi häälestust, kuna see on tulemüüri taga. Dataverse praegu ei toeta eralingi kaudu ühendust privaatsete lõpp-punktidega.
+- Andmete jagamine ei toimi, kui teie Azure Data Lake Storage kontole juurdepääsuks on vaja Azure Private Linki häälestust, kuna see on tulemüüri taga. Dataverse praegu ei toeta eralingi kaudu ühendust privaatsete lõpp-punktidega.
 
 ### <a name="set-up-powershell"></a>PowerShelli häälestamine
 

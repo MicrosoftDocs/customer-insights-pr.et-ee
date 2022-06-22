@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833380"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011836"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Ühendu Azure Data Lake Storage kontoga Azure teenuse subjekti abil
 
@@ -51,7 +51,13 @@ Enne Customer Insightsi jaoks uue hooldusdirektori loomist kontrollige, kas see 
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Teenusesubjektile õiguste andmine salvestuskontole juurdepääsemiseks
 
-Minge Azure'i portaali, et anda õigused selle salvestusruumikonto hooldusdirektorile, mida soovite Customer Insightsis kasutada.
+Minge Azure'i portaali, et anda õigused selle salvestusruumikonto hooldusdirektorile, mida soovite Customer Insightsis kasutada. Salvestuskontole või konteinerile tuleb määrata üks järgmistest rollidest.
+
+|Mandaadi|Nõuded|
+|----------|------------|
+|Praegu kasutajasse sisse logitud|**Roll**: salvestusriba andmelugeja, salvestusruumi bloobi kaasautor või salvestusruumi bloobi omanik.<br>**Tase**: õigusi saab anda salvestuskontol või konteineris.</br>|
+|Customer Insightsi teenuse direktor –<br>Kasutamine Azure Data Lake Storage andmeallikas</br>|Suvand 1<ul><li>**Roll**: Storage Blob Data Reader, Storage Blob Data Contributor või Storage Blob Data Owner.</li><li>**Tase**: salvestusruumikontol tuleks anda õigused.</li></ul>2 *. valik (ilma teenuse põhiosa juurdepääsuta salvestusruumikontole)*<ul><li>**1**. roll: salvestusruumi bloobi andmelugeja, salvestusruumi bloobi andmete kaasautor või salvestusruumi bloobi andmete omanik.</li><li>**Tase**: konteineris tuleks anda õigused.</li><li>**2**. roll: Storage Blob Data Delegator.</li><li>**Tase**: salvestusruumikontol tuleks anda õigused.</li></ul>|
+|Customer Insightsi teenuse direktor – <br>Kasutamine Azure Data Lake Storage väljundina või sihtkohana</br>|Suvand 1<ul><li>**Roll**: Storage Blob Data Contributor või Storage Blob Omanik.</li><li>**Tase**: salvestusruumikontol tuleks anda õigused.</li></ul>2 *. valik (ilma teenuse põhiosa juurdepääsuta salvestusruumikontole)*<ul><li>**Roll**: Storage Blob Data Contributor või Storage Blob Omanik.</li><li>**Tase**: konteineris tuleks anda õigused.</li><li>**Roll 2**: Storage Blob Delegator.</li><li>**Tase**: salvestusruumikontol tuleks anda õigused.</li></ul>|
 
 1. Minge [Azure'i haldusportaali](https://portal.azure.com) ja logige sisse oma organisatsiooni.
 
@@ -62,7 +68,7 @@ Minge Azure'i portaali, et anda õigused selle salvestusruumikonto hooldusdirekt
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Kuvatõmmis, kus kuvatakse Azure'i portaal rolli määramise lisamise ajal.":::
 
 1. Määrake paanil **Lisa rolli määratlus** järgmised atribuudid.
-   - Roll: **salvestusruumi bloobiandmete kaasautor**
+   - Roll: Storage Blob Data Reader, Storage Blob contributor või Storage Blob Owner, mis põhineb ülalkirjeldatud identimisteabel.
    - Juurdepääsu määramine: **kasutaja, rühm või teenusesubjekt**
    - Valige liikmed: **Dynamics 365 AI for Customer Insights** ([hooldusdirektor](#create-a-new-service-principal), mille otsisite varem selles protseduuris)
 

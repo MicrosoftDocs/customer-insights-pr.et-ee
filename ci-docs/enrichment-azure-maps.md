@@ -1,95 +1,95 @@
 ---
 title: Kliendiprofiilide rikastamine Azure Mapsi asukohaandmetega
 description: Üldine teave Azure Maps esimese osapoole rikastamise kohta.
-ms.date: 08/31/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755349"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953623"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Kliendiprofiilide rikastamine Azure Mapsi abil (eelvaade)
 
-Azure Maps pakub asukohakeskseid andmeid ja teenuseid, et pakkuda georuumilistel andmetel põhinevaid kogemusi sisseehitatud asukohaanalüüsiga. Azure Mapsi andmete rikastamise teenused täiustavad teie klientide asukohateabe täpsust. See toob võimalusi, nagu näiteks normaliseerimine ning laius- ja pikkuskraadide eraldamise rakendusele Dynamics 365 Customer Insights.
+Azure Maps pakub asukohakeskseid andmeid ja teenuseid georuumilistel andmetel põhinevate kogemuste pakkumiseks sisseehitatud asukohateabe abil. Azure Mapsi andmete rikastamise teenused täiustavad teie klientide asukohateabe täpsust. See toob võimalusi, nagu näiteks normaliseerimine ning laius- ja pikkuskraadide eraldamise rakendusele Dynamics 365 Customer Insights.
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites"></a>eeltingimused
 
-Azure Mapsi andmete rikastamise konfigureerimiseks peavad olema täidetud järgmised eeltingimused.
+- Aktiivne Azure Mapsi tellimus. Tellimuse [saamiseks registreeruge või saate tasuta prooviversiooni](https://azure.microsoft.com/services/azure-maps/).
 
-- Teil peab olema aktiivne Azure Maps kordustellimus. Kordustellimuse saamiseks võite [registreeruda või saada tasuta prooviversiooni](https://azure.microsoft.com/services/azure-maps/).
-
-- Azure Mapsi kaartide [ühendus](connections.md) on saadaval *või* teil on [administraatori](permissions.md#admin) õigused ja aktiivne Azure Mapsi API-võti.
-
-## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
-
-1. Avage **Andmed** > **Rikastamine**. 
-
-1. Valige paanil **Asukoht** suvand **Rikasta minu andmed**.
-
-   :::image type="content" source="media/azure-maps-tile.png" alt-text="Azure Mapsi paan.":::
-
-1. Valige [ühendus](connections.md) ripploendist. Kui Azure Mapsi ühendus pole saadaval, pöörduge administraatori poole. Kui olete administraator, saate [konfigureerida Azure Mapsi ühenduse](#configure-the-connection-for-azure-maps). 
-
-1. Valiku kinnitamiseks klõpsake nuppu **Edasi**.
-
-1. Valige **Kliendi andmekomplekt**, mida soovite Azure Mapsi asukohaandmetega rikastada. Saate valida olemi **Klient**, et rikastada kõiki oma ühendatud kliendiprofiile, või valida segmendiolemi, et rikastada ainult selles segmendis sisalduvaid kliendiprofiile.
-
-    :::image type="content" source="media/enrichment-azure-maps-configuration-customer-data-set.png" alt-text="Kuvatõmmis kliendi andmekomplekti valimisel.":::
-
-1. Valige, kas soovite vastendada väljad esmase ja/või teise aadressiga. Saate määrata väljavastenduse nii aadresside jaoks kui ka rikastada mõlema aadressi profiile eraldi (nt koduaadressi ja äriaadressi puhul). Tehke valik **Edasi**.
-
-1. Määratlege, milliseid väljad teie ühendatud profiilidest kasutada sobivate asukohtade otsimiseks rakenduses Azure Maps. Valitud esmase või teisese aadressi jaoks on nõutavad väljad **Street1** ja **Sihtnumber**. Suurema vaste täpsuse saamiseks saate lisada rohkem välju.
-
-   :::image type="content" source="media/enrichment-azure-maps-configuration.png" alt-text="Azure Mapsi rikastamise konfigureerimise leht.":::
-
-1. Valige **Edasi**, et lõpetada väljade kaardistamine.
-
-1. Hinnata, kas soovite muuta suvandit **Täpsemad sätted**. Need sätted on ette nähtud selleks, et pakkuda maksimaalset paindlikkust täpsemate kasutusjuhtumite käsitlemiseks, kuid enamikul juhtudel on vaikeväärtused piisavad:
-   - **Aadresside tüüp**: vaikekäitumine on see, et rikastamine tagastab parima aadressi vaste, isegi kui see on lõpetamata. Ainult täielike aadresside (nt aadresside, mis sisaldavad majanumbrit) toomine tühjendage kõik märkeruudud peale **punktiaadresside**. 
-   - **Keel**: vaikimisi tagastatakse aadressid selle piirkonna keeles, kuhu aadress on määratletud. Standardiseeritud aadressikeele rakendamiseks valige ripploendist soovitud keel. Kui näiteks valite **inglise keele**, tagastatakse **Kopenhaagen, Taani**, selle asemel, et **København, Taani**.
-
-1. Peate rikastamise jaoks sisestama nime.
-
-1. Vaadake valikud üle ja valige nupp **Salvesta rikastus**.
+- Azure Mapsi [ühenduse](connections.md) konfigureerib [administraator](#configure-the-connection-for-azure-maps).
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Konfigureerige ühendus Azure Mapsi jaoks
 
-Ühenduste konfigureerimiseks peate olema Customer Insightsi administraator. Valige rikastamise konfigureerimisel **Lisa ühendus** või minge **Administraator** > **Ühendused** ja valige **Seadista** Azure Mapsi paanil.
+Peate olema Customer Insightsi administraator [ja teil peab olema](permissions.md#admin) aktiivne Azure Mapsi API-võti.
 
-1. Sisestage väljale **Kuvatav nimi** ühenduse nimi.
+1. Valige rikastamise konfigureerimisel **Lisa ühendus** või minge **Administraator** > **Ühendused** ja valige **Seadista** Azure Mapsi paanil.
 
-1. Sisestage sobiv Azure Mapsi API võti.
+   :::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Azure Mapsi ühenduse konfigureerimise leht.":::
 
-1. Vaadake üle ja andke oma nõusolek **Andmete privaatsuse ja nõuetele vastavuse** jaoks, valides **Nõustun** märkeruudu
+1. Sisestage ühenduse nimi ja kehtiv Azure Mapsi API-võti.
 
-1. Valige **Kontrolli** konfiguratsiooni valideerimiseks.
+1. Vaadake üle ja esitage oma nõusolek [Andmete privaatsuse ja nõuetele vastavus](#data-privacy-and-compliance) kohta, valides suvandi **Nõustun**.
 
-1. Pärast kontrollimise lõpuleviimist valige **Salvesta**.
+1. Konfiguratsiooni kinnitamiseks valige **Kinnita** ja seejärel valige **Salvesta**.
 
-:::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Azure Mapsi ühenduse konfigureerimise leht.":::
-
-## <a name="enrichment-results"></a>Rikastamise tulemused
-
-Rikastamistoimingu käivitamiseks valige käsuribalt suvand **Käivita**. Samuti saate lasta süsteemil rikastamise automaatselt käivitada [ajastatud värskenduse osana](system.md#schedule-tab). Töötlemisaeg sõltub teie kliendiandmete suurusest ja API reageerimisajast.
-
-Kui rikastusprotsess on lõpetatud, saate vaadata äsja rikastatud kliendiprofiilide andmeid jaotises **Minu rikastused**. Peale selle näete ka viimase värskenduse aega ja rikastatud profiilide arvu.
-
-Saate tutvuda iga rikastatud profiili üksikasjaliku vaatega, valides suvandi **Kuva rikastatud andmed**.
-
-## <a name="next-steps"></a>Järgmised etapid
-
-[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
+### <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 
 Kui lubate Dynamics 365 Customer Insights edastada andmeid Azure Mapsi, lubate andmete edastamist väljapoole vastavuse piiri Dynamics 365 Customer Insights jaoks, sealhulgas potentsiaalselt tundlikke andmeid, näiteks isikuandmeid. Microsoft edastab need andmed teie juhiste kohaselt, kuid vastutate selle eest, et Azure Maps täidaks kõik teie privaatsus- või turbekohustused. Lisateavet leiate jaotisest [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
 Teie Dynamics 365 Customer Insightsi administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+
+## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
+
+1. Avage suvandid **Andmed** > **Rikastamine** ja valige vahekaart **Avasta**.
+
+1. Valige **Suvand Rikasta minu andmeid** paanil Asukoht **paanil** Microsoft Azure Maps.
+
+   :::image type="content" source="media/azure-maps-tile.png" alt-text="Azure Mapsi paan.":::
+
+1. Vaadake ülevaade üle ja seejärel valige **Edasi**.
+
+1. Valige ühendus. Kui ühendusi pole saadaval, pöörduge administraatori poole.
+
+1. Tehke valik **Edasi**.
+
+1. **Valige kliendi andmestik** ja valige profiil või segment, mida soovite Microsofti andmetega rikastada. Olem *Klient* rikastab kõiki teie kliendiprofiile, samas kui segment rikastab ainult selles segmendis sisalduvaid kliendiprofiile.
+
+1. Määratlege, millist tüüpi välju ühtsetest profiilidest sobitamiseks kasutada: esmane ja/või sekundaarne aadress. Mõlemale aadressile saate määrata välja kaardistamise ja mõlema aadressi profiilid eraldi rikastada. Näiteks kodune aadress ja ettevõtte aadress. Tehke valik **Edasi**.
+
+1. Vastendage väljad Azure Mapsi asukohaandmetega. Valitud esmase ja/või teisese aadressi jaoks on vajalikud väljad **Tänav 1** ja **Sihtnumber**. Suurema vaste täpsuse tagamiseks lisage rohkem välju.
+
+   :::image type="content" source="media/enrichment-azure-maps-attributes.png" alt-text="Azure Mapsi atribuudi vastendamine.":::
+
+1. Valige **Edasi**, et lõpetada väljade kaardistamine.
+
+1. Vaadake üle **täpsemad sätted**, mis pakuvad täpsemate kasutusjuhtumite käsitlemisel maksimaalset paindlikkust. Järgmisi vaikeväärtusi ei ole tavaliselt vaja muuta.
+
+   - **Aadressitüüp**: parim aadressivaste tagastab isegi siis, kui see pole täielik. Ainult täielike aadresside (nt aadresside, mis sisaldavad majanumbrit) toomine tühjendage kõik märkeruudud peale **punktiaadresside**.
+   - **Keel**: aadressid naasevad aadressipiirkonnal põhinevas keeles. Standardiseeritud aadressikeele rakendamiseks valige ripploendist soovitud keel. Näiteks valides inglise **tagastab** **Kopenhaagen, Taani** asemel **København, Danmark**.
+   - **Maksimaalne tulemuste** arv: tulemuste arv aadressi kohta.
+
+1. Tehke valik **Edasi**.
+
+1. Sisestage **rikastamise nimi** ja väljundolemi **nimi**.
+
+1. Valige **Salvesta rikastamine** pärast valikute läbivaatamist.
+
+1. Rikastamisprotsessi alustamiseks või lehele Rikastamine naasmise **lähedal** valige **Käivita**.
+
+## <a name="enrichment-results"></a>Rikastamise tulemused
+
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
+
+Põlluga **rikastatud** klientide arv tagab iga rikastatud välja katvuse süvitsimise.
+
+## <a name="next-steps"></a>Järgmised toimingud
+
+[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

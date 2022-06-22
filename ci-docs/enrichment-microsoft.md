@@ -1,5 +1,5 @@
 ---
-title: Kliendiprofiilide rikastamine Microsofti andmetega
+title: Kliendiprofiilide rikastamine Microsofti kaubamärkide ja huvide andmetega
 description: Microsofti varaliste andmete abil saate rikastada oma kliendiandmeid sarnasuste ja häälkäsklusega.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,25 +12,16 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c016a394fdf485057a190d03bfed9ce5481f435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642624"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953760"
 ---
 # <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Kliendiprofiilide rikastamine sarnasuste ja hääljagamisega (eelvaade)
 
 Microsofti varaliste andmete abil saate rikastada oma kliendiandmeid brändide sarnasuste, huvide sarnasuste ja hääleosaga (SoV). Need sarnasused ja SoV põhinevad teie klientidega sarnase demograafiaga inimeste andmetel. See teave aitab teil paremini mõista ja segmenteerida oma kliente, lähtudes nende afiinsusest või SoV-st konkreetsete kaubamärkide ja huvidega.
-
-Rikastamiste konfigureerimiseks ja vaatamiseks avage **veebisait DataEnrichment** > **·**.[...](enrichment-hub.md)
-
-Brändide afiinsuste ja SoV-rikastamise konfigureerimiseks minge vahekaardile **Avasta** ja valige paanil **Kaubamärgid** suvand **Rikasta minu andmeid**.
-
-Huvide sarnasuste ja SoV-rikastamise konfigureerimiseks **avage vahekaart Avasta** ja valige paanil **Huvid** käsk **Rikasta minu andmeid**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Tootemarkide ja huvide paanid.](media/BrandsInterest-tile-Hub.png "Tootemarkide ja huvide paanid")
 
 ## <a name="how-we-determine-affinities-and-sov"></a>Kuidas me määrame afiinsused ja SoV
 
@@ -45,7 +36,6 @@ Kasutame Microsofti veebipõhiseid otsinguandmeid, et leida sarnasusi ja SoV-d k
 Igal rikastatud kliendiprofiilil pakume kahte seotud väärtust: afiinsuse tase ja afiinsuse skoor. Need väärtused aitavad teil määratleda, kui suur ühtivus on selle profiili demograafilisel segmendil teatud tootemargi või huvi jaoks, võrreldes muude demograafiliste segmentidega.
 
 *Ühtivustase* koosneb neljast tasemest ja *ühtivuse skoor* arvutatakse 100 punkti skaalal, mis vastendatakse ühtivustasemetega.
-
 
 |Ühtivustase |Ühtivuse skoor  |
 |---------|---------|
@@ -64,78 +54,65 @@ Me arvutame SoV 100 punkti skaalal. SoV kõigi kaubamärkide või huvide kogusum
 
 Toetame praegu järgmisi riigi/regiooni suvandeid: Austraalia, Kanada (inglise), Prantsusmaa, Saksamaa, Ühendkuningriik või Ameerika Ühendriigid (inglise).
 
-Et valida riik või piirkond, avage **Tootemarkide rikastamine** või **Huvide rikastamine** ja valige **Muuda** **Riik/regioon** kõrval. Paanil **Riigi/piirkonna sätted** valige suvand ja valige **Rakenda**.
+## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 
-### <a name="implications-related-to-country-selection"></a>Riigi valikuga seotud mõjud
+1. Avage suvandid **Andmed** > **Rikastamine** ja valige vahekaart **Avasta**.
 
-- Kui [valite oma tootemarke](#define-your-brands-or-interests), pakub süsteem valitud riigil või piirkonnal põhinevaid soovitusi.
+   - Brändi afiinsuste ja SoV-rikastumise konfigureerimiseks valige paanil **Kaubamärgid** suvand **Rikasta minu andmeid**.
 
-- Kui [valite valdkonna](#define-your-brands-or-interests), saate olulisemaid tootemarke või huvisid valitud riigi või piirkonna põhjal.
+   - Intresside afiinsuste ja SoV-rikastumise konfigureerimiseks valige paanil **Huvid** suvand **Rikasta minu andmeid**.
 
-- Kui [rikastame profiile](#refresh-enrichment), rikastame kõiki kliendiprofiile, mille jaoks me saame andmeid valitud tootemarkide ja huvide jaoks, kaasaarvatud profiilid, mis ei ole valitud riigis või piirkonnas. Näiteks kui valisite Saksamaa, rikastame Ameerika Ühendriikides asuvad profiilid, kui meil on Ameerika Ühendriikides valitud kaubamärkide ja omandiõiguse andmeid.
+   > [!div class="mx-imgBorder"]
+   > ![Tootemarkide ja huvide paanid.](media/BrandsInterest-tile-Hub.png "Tootemarkide ja huvide paanid")
 
-## <a name="configure-enrichment"></a>Rikastamise konfigureerimine
+1. Vaadake ülevaade üle ja seejärel valige **Edasi**.
 
-Juhendatud kogemus aitab teid läbi rikastamise konfiguratsiooni. 
+1. Riigi või regiooni muutmiseks valige valiku Riik/regioon kõrval **muuda** **.** Valige paanil **Riigi**/regiooni sätted [toetatud riik/regioon](#supported-countriesregions) ja valige **Rakenda**.
 
-### <a name="define-your-brands-or-interests"></a>Määratlege oma tootemargid või huvid
+   > [!NOTE]
+   > Kui valite oma tootemarke, pakub süsteem valitud riigil või piirkonnal põhinevaid soovitusi. Kui valite valdkonna, saate olulisemaid tootemarke või huvisid valitud riigi või piirkonna põhjal.
 
-Valige kuni viis kaubamärki või huvi, kasutades ühte või mõlemat järgmist valikut.
+1. Valige kuni viis kaubamärki või huvi, kasutades ühte või mõlemat järgmist valikut.
 
-- **Tööstus**: Valige ripploendist oma valdkond ja valige siis selle valdkonna jaoks kõige populaarsem kaubamärk või huvid.
-- **Valige oma nimi**. Sisestage oma ettevõtte jaoks oluline kaubamärk või huvi ja valige siis valite vastavate soovituste vahel. Kui me ei loetle otsitavaid brände või huvisid, saatke meile tagasisidet, kasutades linki **Soovita**.
+   - **Tööstus**: Valige ripploendist oma valdkond ja valige siis selle valdkonna jaoks kõige populaarsem kaubamärk või huvid.
+   - **Valige oma nimi**. Sisestage oma ettevõtte jaoks oluline kaubamärk või huvi ja valige siis valite vastavate soovituste vahel. Kui me ei loetle otsitavaid brände või huvisid, saatke meile tagasisidet, kasutades linki **Soovita**.
 
-### <a name="review-enrichment-preferences"></a>Rikastamise eelistuste ülevaatamine
+1. Valige **Edasi** ja vaadake üle oma rikastamise vaikeeelistused ning värskendage neid vastavalt vajadusele.
 
-Vaadake üle oma rikastamise vaike-eelistused ja värskendage neid vastavalt vajadusele.
+   :::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Rikastamise eelistuste akna kuvatõmmis.":::
 
-:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Rikastamise eelistuste akna kuvatõmmis.":::
+1. Tehke valik **Edasi**.
 
-### <a name="select-entity-to-enrich"></a>Valige rikastamiseks olem
+1. **Valige kliendi andmestik** ja valige profiil või segment, mida soovite Microsofti andmetega rikastada. Olem *Klient* rikastab kõiki teie kliendiprofiile, samas kui segment rikastab ainult selles segmendis sisalduvaid kliendiprofiile.
 
-Valige **Rikastatud olem** ja valige andmekogum, mida soovite Microsofti andmetega rikastada. Saate valida olemi Klient, et rikastada kõik oma kliendiprofiilid või valida segmendi olemi, et rikastada ainult selles segmendis sisalduvad kliendiprofiilid.
+1. Tehke valik **Edasi**.
 
-### <a name="map-your-fields"></a>Väljade vastendamine
+1. Vastendage oma väljad ühtsest kliendiolemist Microsofti andmetega.
 
-Vastendage oma ühendatud kliendiolemi väljad demograafilise segmendi määratlemiseks, mida süsteem kasutab teie kliendiandmete rikastamiseks. Vastendage riigi/piirkonna ja vähemalt sünniaja või soo atribuudid. Lisaks peate näitama kaardil vähemalt ühte linna (ja osariiki/maakonda) või sihtnumbrit. Valige suvand **Redigeeri**, et määratleda väljade vastendamine, ja valige suvand **Rakenda**, kui olete lõpetanud. Väljavastenduse lõpule viimiseks valige **Salvesta**.
+   > [!NOTE]
+   > Nõutav on vähemalt sünnikuupäev või soo atribuut. Riik/regioon ja vähemalt linn (ja osariik/provints) või postiindeks on kohustuslikud. Soovitame andmete allaneelamise ajal teisendada sünnikuupäev DateTime'i tüübiks. Teise võimalusena võib see olla string [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formaadis "yyyy-MM-dd" or "yyyy-MM-ddTHH:mm:ss".
 
-Toetatakse järgmisi vorminguid ja väärtusi (väärtused pole tõstutundlikud):
+1. Valige **Edasi**, et lõpetada väljade kaardistamine.
 
-- **Sünniaeg**: soovitame, et sünniaeg oleks andmete valmendamisel teisendatud DateTime tüüpi. Teise võimalusena võib see olla string [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formaadis "yyyy-MM-dd" or "yyyy-MM-ddTHH:mm:ss".
-- **Sugu**: mees, naine, teadmata.
-- **Sihtnumber**: Ameerika Ühendriikide viiekohaline sihtnumber, standardne sihtnumber mujal.
-- **Linn**: linna nimi inglise keeles.
-- **Osariik/maakond**: kahetäheline lühend USA ja Kanada jaoks. Kahe- või kolmetäheline lühend Austraalia jaoks. Ei kohaldata Prantsusmaa, Saksamaa ega Ühendkuningriigi korral.
-- **Riik/piirkond**:
+1. Peate rikastamise jaoks sisestama nime. Väljundi **olemi nimi** valitakse automaatselt.
 
-  - US: Ameerika Ühendriigid, Ühendriigid, USA, US, Ameerika
-  - CA: Kanada, CA
-  - GB: Ühendkuningriik, UK, Suurbritannia, GB, Suurbritannia ja Põhja-Iiri Ühendkuningriik, Suurbritannia Ühendkuningriik
-  - AU: Austraalia, AU, Austraalia Liit
-  - FR: Prantsusmaa, FR, Prantsuse Vabariik
-  - DE: Saksamaa, Saksa, Deutschland, Allemagne, DE, Saksamaa Liitvabariik, Saksamaa Vabariik
+   :::image type="content" source="media/enrichment-interests-summary.png" alt-text="Omandiõiguste eelversioon ja nime leht.":::
 
-## <a name="review-and-name-the-enrichment"></a>Rikastamise läbivaatamine ja rikastamisele nime andmine
+1. Valige **Salvesta rikastamine** pärast valikute läbivaatamist.
 
-Lõpuks saate eelvaadata teavet ja anda rikastamisele nimi.
+1. Rikastamisprotsessi alustamiseks või lehele Rikastamine naasmise **lähedal** valige **Käivita**.
 
-:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Omandiõiguste eelversioon ja nime leht.":::
-
-## <a name="refresh-enrichment"></a>Rikastamise värskendamine
-
-Pärast brändide, huvide ja demograafilise väljavastenduse konfigureerimist käivitage rikastamine. Protsessi käivitamiseks valige tootemargi või huvide lehel käsk **Käivita**. Lisaks saate lasta süsteemil käitada rikastamist automaatselt ajastatud värskendamise osana.
-
-Sõltuvalt kliendiandmete mahust võib rikastamise käitamise lõpuleviimiseks kuluda mitu minutit.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+   Kui rikastame profiile, rikastame kõiki kliendiprofiile, mille jaoks me saame andmeid valitud tootemarkide ja huvide jaoks, kaasaarvatud profiilid, mis ei ole valitud riigis või piirkonnas. Näiteks kui valisite Saksamaa, rikastame Ameerika Ühendriikides asuvad profiilid, kui meil on Ameerika Ühendriikides valitud kaubamärkide ja omandiõiguse andmeid.
 
 ## <a name="enrichment-results"></a>Rikastamise tulemused
 
-Pärast rikastamise protsessi käitamist, avage jaotis **Minu rikastamised**, et vaadata üle rikastatud klientide koguarv ja kaubamärkide või huvide jagunemine rikastatud kliendiprofiilides.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Tulemuste eelvaade pärast rikastamise protsessi käitamist.":::
 
-Leiate diagrammi rikastatud kliendiprofiilide arvuga aja jooksul ja rikastatud olemite eelvaated. Vaadake rikastatud andmed üle, valides lisateavet **diagrammide** **Afiinsustase** või **Häälandmete** ühiskasutuse kohta. Brändide rikastatud andmed lähevad BrandAffinityFromMicrosoft **ja BrandShareOfVoiceFromMicrosoft** üksustele **·**. Huvide andmed on üksustes **InterestAffinityFromMicrosoft** ja **InterestShareOfVoiceFromMicrosoft**. Samuti leiate need olemis loetletuna rühmas **Rikastamine** suvandis **Andmed** > **Olemid**.
+Tulemuseks **on Afiinsustase** või **Hääldiagrammide** ühiskasutus.
+
+Rikastamisest loodud olemid on loetletud **andmeolemite** **rikastamisrühma** > **all**. Brändide rikastatud andmed lähevad BrandAffinityFromMicrosoft **ja BrandShareOfVoiceFromMicrosoft** üksustele **·**. Huvide andmed on üksustes **InterestAffinityFromMicrosoft** ja **InterestShareOfVoiceFromMicrosoft**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Kliendi kaardi rikastamise andmete vaatamine
 

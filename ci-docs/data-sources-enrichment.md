@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800276"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011468"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Andmeallikate rikastamine (eelvaade)
 
@@ -29,9 +29,11 @@ Rikastamiste loomiseks või redigeerimiseks peavad teil olema kaasautori või ad
 
 1. Valige selle andmeallikas kõrval vertikaalne kolmikpunkt (&vellip;), mida soovite rikastada, ja valige **Rikasta**.
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Andmeallikate rikastamise leht.":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Andmeallikate leht, kus on esile tõstetud rikastamine":::
 
    Vahekaardil **Avasta** kuvatakse [toetatud andmeallikas rikastamise suvandid](#supported-data-source-enrichments).
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Andmeallikate rikastamise leht.":::
 
 1. Andmeallikas rikastamise konfigureerimiseks valige **Rikasta minu andmeid**. Väljundolemi nimi täidetakse automaatselt.
 

@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833534"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011974"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Dynamics 365 Customer Insights-iga alustamine
 
@@ -39,7 +39,7 @@ Esimest korda Customer Insightsi sisselogimisel konfigureerige sätted ja uurige
 
 Ühtsed profiilid on aluseks statistika saamiseks ja andmetega tegelemiseks. Saate tuua andmeid erinevatest allikatest ja käivitada andmete ühendamise protsessi ühendatud profiilide ühendamiseks. Määrake allaneelatud olemite vahelised seosed ja kasutage profiilidele teabe lisamiseks rikastamisfunktsioone.
 
-1. Andmete hankimine, luues andmeallikaid mitmest valikust. [Power Query Valige konnektorite](connect-power-query.md), [ühise andmemudeli kausta](connect-common-data-model.md) või [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Andmete hankimine, luues andmeallikaid mitmest valikust. Valige rakenduse (sh Common Data Model [Azure Data Lake Storage,](connect-common-data-model.md),, või [Azure Synapse Analytics](connect-synapse.md)[Microsoft Dataverse](connect-dataverse-managed-lake.md) konnektorite [Power Query) vahel](connect-power-query.md).
 
 1. Käivitage [andmete ühendamise protsess](data-unification.md), tuvastades [lähteväljad](map-entities.md), eemaldades [duplikaadid](remove-duplicates.md), [sobitades tingimused](match-entities.md) ja [ühendades väljad](merge-entities.md).
 

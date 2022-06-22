@@ -1,7 +1,7 @@
 ---
 title: Kliendiprofiilide vaatamine
 description: Saate ühendatud ülevaate oma koondatud kliendiandmetest.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755777"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947041"
 ---
 # <a name="customer-profiles"></a>Kliendi profiilid
 
@@ -55,9 +55,9 @@ Kliente saate filtreerida *Kliendiolemi* väljade alusel. Sarnaselt otsingule pe
 
 Valige mis tahes kliendipaan, et avada **Kliendi üksikasjade leht**. See vaade sisaldab valitud kliendi koondatud teavet. Kliendi üksikasjad sisaldavad järgmist sisu:
 
-**Kliendiprofiili paan**: sellel paanil kuvatakse ühtse *Kliendiolemi* erinevad väärtused. Kui väljal pole valitud kliendiprofiili väärtust, siis seda ei näidata. Paan on struktureeritud jaotisteks:
+**Kliendiprofiili paan**: sellel paanil kuvatakse ühtse *Kliendiolemi* erinevad väärtused. Kui väljal pole valitud kliendiprofiili jaoks väärtust, ei kuvata seda, välja arvatud aadressiväli. Paan on struktureeritud jaotisteks:
 
-- Esimeses jaotises kuvatakse eelmääratletud väljakomplekt, millele järgneb kõik otsingu ja filtriregistrisse kuuluvad väljad. Kui profiil sisaldab neid välju, ühendatakse kõik aadressiga seotud väljad ühele reale.
+- Esimeses jaotises kuvatakse eelmääratletud väljakomplekt, millele järgneb kõik otsingu ja filtriregistrisse kuuluvad väljad. Kõik aadressiga seotud väljad ühendatakse üheks reaks, mis näitab isegi siis, kui profiil ei sisalda aadressiteavet.
 - **Selle kliendi kontaktid**: Äriettevõtete keskkondades näete teise jaotisena kõiki selle kliendiga seotud kontakte. Iga kontakti kuvatakse koos nende väljadega. Tühjad väljad on peidetud.
 - **Lisaväljad**: Kuvatakse valitud kliendi ülejäänud väljad, välja arvatud ID-d.
 - **ID-d**: Loetletakse kõik ID-d nende vastava olemi nime all. Väljad on identifitseeritud ID-de järgi nende semantika poolt, mis kategoriseerib need sellistena.

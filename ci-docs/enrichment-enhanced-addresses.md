@@ -1,7 +1,7 @@
 ---
 title: Aadressi täiustamise rikastamine (sisaldab videot)
 description: Rikastage ja normaliseerige kliendiprofiilide aadressiteavet Microsofti mudelitega.
-ms.date: 01/19/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b4fef3b5e30e1cac4e5cb4401498f2f0981a409e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642465"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953806"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Kliendiprofiilide rikastamine täiustatud aadressidega
 
@@ -53,17 +53,17 @@ Aadressiteave võib olla ebastandartses vormingus ja sisaldada õigekirjavigu. M
 
 ### <a name="limitations"></a>Piirangud
 
-Täiustatud aadressid töötavad ainult väärtustega, mis on teie sissetoodud aadressiandmetes juba olemas. Mudel ei ole: 
+Täiustatud aadressid töötavad ainult väärtustega, mis on teie allaneelatud aadressiandmetes juba olemas. Mudel ei ole:
 
 1. Kontrollige, kas aadress on kehtiv aadress.
 2. Kontrollige, kas mõni väärtustest (nt sihtnumbrid või tänavanimed) on kehtiv.
 3. Muutke väärtusi, mida ta ei tunne.
 
-Mudel kasutab aadresside täiustamiseks masinõppel põhinevaid tehnikaid. Kuigi mudeli sisendväärtuse muutmisel rakendame kõrget usalduskünnist, nagu iga masinõppepõhise mudeli puhul, pole 100-protsendiline täpsus tagatud.
+Mudel kasutab aadresside täiustamiseks masinõppel põhinevaid tehnikaid. Nagu iga masinõppel põhineva mudeli puhul, ei ole 100-protsendiline täpsus tagatud.
 
 ## <a name="supported-countries-or-regions"></a>Toetatud riikides või regioonides
 
-Praegu toetame aadresside rikastamist nendes riikides või piirkondades: 
+Praegu toetame aadresside rikastamist nendes riikides või piirkondades:
 
 - Austraalia
 - Kanada
@@ -74,50 +74,46 @@ Praegu toetame aadresside rikastamist nendes riikides või piirkondades:
 - Suurbritannia
 - Ameerika Ühendriigid
 
-Aadressid peavad sisaldama riigi/regiooni väärtust. Me ei töötle nende riikide või piirkondade aadresse, mida ei toetata, ja aadresse, millel pole riiki ega regiooni.
-
 ## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 
-1. Avage **Andmed** > **Rikastamine**.
+1. Avage suvandid **Andmed** > **Rikastamine** ja valige vahekaart **Avasta**.
 
 1. Valige **Rikasta minu andmeid** paanil **Täiustatud aadressid** .
 
    :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Paani Täiustatud aadressid kuvatõmmis.":::
 
-1. Valige **Kliendi andmekogum** ja klõpsake olemit, mis sisaldab aadresse, mida soovite rikastada. Saate valida olemi *Klient*, et rikastada aadresse kõigis oma kliendiprofiilides, või valida segmendi olemi aadresside rikastamiseks ainult selles segmendis sisalduvates kliendiprofiilides.
+1. Vaadake ülevaade üle ja seejärel valige **Edasi**.
+
+1. **Valige kliendi andmestik** ja valige profiil või segment, mida soovite rikastada. Olem *Klient* rikastab kõiki teie kliendiprofiile, samas kui segment rikastab ainult selles segmendis sisalduvaid kliendiprofiile.
 
 1. Valige, kuidas aadresse teie andmekogumis vormindatakse. Valige **Ühe atribuudi aadress** kui teie andmetes kasutatavad aadressid kasutavad ühte välja. Valige **Mitme atribuudi aadress** kui teie andmetes kasutatavad aadressid rohkem kui ühte andmevälja.
+
+1. Valige **Edasi** ja vastendage oma ühtse kliendiolemi aadressiväljad.
+
+    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Täiustatud aadressivälja vastendamise leht.":::
 
    > [!NOTE]
    > Riik/piirkond on kohustuslik nii ühe atribuudi kui ka mitme atribuudiga aadressidel. Aadresse, mis ei sisalda kehtivaid või toetatud riigi/regiooni väärtusi, ei rikastata.
 
-1.  Kaardistage ühendatud kliendiolemi aadressiväljad.
-
-    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Täiustatud aadressivälja vastendamise leht.":::
-
 1. Valige **Edasi**, et lõpetada väljade kaardistamine.
 
-1. Sisestage rikastamise nimi ja väljundolemi nimi.
+1. **Sisestage rikastamise ja** olemi **Väljund nimi**.
 
 1. Valige **Salvesta rikastamine** pärast valikute läbivaatamist.
 
 ## <a name="enrichment-results"></a>Rikastamise tulemused
 
-Rikastamistoimingu käivitamiseks valige käsuribalt suvand **Käivita**. Samuti saate lasta süsteemil rikastamise automaatselt käivitada [ajastatud värskenduse osana](system.md#schedule-tab). Töötlemisaeg sõltub teie kliendiandmete mahust.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Kui rikastamistoiming on tehtud, saate värskelt rikastatud klientide profiile üle vaadata suvandi **Minu rikastamised** alt. Peale selle näete ka viimase värskenduse aega ja rikastatud profiilide arvu.
-
-Rikastatud andmete näidist näete paanil **Rikastatud kliendid** eelvaatepaanil. Valige **Kuva rohkem** ja valige **vahekaart Andmed**, et pääseda juurde iga rikastatud profiili üksikasjalikule vaatele.
+Põlluga **rikastatud** klientide arv tagab iga rikastatud välja katvuse süvitsimise.
 
 ### <a name="overview-card"></a>Ülevaatekaart
 
-Ülevaatekaardil kuvatakse andmed rikastamise katvuse kohta. 
+Kliendimuudatuste **ülevaatekaardil** kuvatakse üksikasjad rikastamise katvuse kohta:
 
-* **Töödeldud ja muudetud** aadressid: kliendiprofiilide arv, mille aadressid on edukalt rikastatud.
-
-* **Töödeldud ja muutmata** aadressid: kliendiprofiilide arv aadressidega, mis tuvastati, kuid mida ei muudetud. Tavaliselt juhtub see siis, kui sisendandmed on kehtivad ja rikastamine ei saa neid parandada.
-
-* **Aadressid, mida ei ole töödeldud ja mida pole muudetud**: profiilide arv aadressidega, mida ei tuvastatud. Tavaliselt sisendandmete puhul, mis on kehtetud või rikastamine seda ei toeta.
+- **Töödeldud ja muudetud** aadressid: kliendiprofiilide arv, mille aadressid on edukalt rikastatud.
+- **Töödeldud ja muutmata** aadressid: kliendiprofiilide arv aadressidega, mis tuvastati, kuid mida ei muudetud. Tavaliselt juhtub see siis, kui sisendandmed on kehtivad ja rikastamine ei saa neid parandada.
+- **Aadressid, mida pole töödeldud ja mida pole muudetud**: profiilide arv aadressidega, mida ei tuvastatud. Tavaliselt sisendandmete puhul, mis on kehtetud või rikastamine seda ei toeta.
 
 ## <a name="next-steps"></a>Järgmised toimingud
 
