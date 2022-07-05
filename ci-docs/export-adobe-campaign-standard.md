@@ -1,5 +1,5 @@
 ---
-title: Customer Insights andmete eksportimine Adobe Campaign Standardisse
+title: Customer Insightsi segmentide eksportimine kampaania standardisse Adobe (eelvaade)
 description: Siit saate teada, kuidas kasutada Customer Insightsi segmente kampaaniastandardis Adobe.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,24 +8,24 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642714"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082341"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Customer Insightsi segmentide kasutamine rakenduses Adobe Campaign Standard (eelvaade)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Customer Insightsi segmentide eksportimine kampaania standardisse Adobe (eelvaade)
 
-Kasutajana Dynamics 365 Customer Insights olete võib-olla loonud segmente, et muuta oma turunduskampaaniad tõhusamaks, sihtides asjakohaseid vaatajaskondi. Customer Insightsi Adobe Experience Platform ja selliste rakenduste (nt Adobe Campaign Standard) segmendi kasutamiseks peate järgima mõnda selles artiklis kirjeldatud toimingut.
+Rakenduse kasutajana Dynamics 365 Customer Insights olete võib-olla loonud segmente, et muuta oma turunduskampaaniad tõhusamaks, sihtides asjakohaseid vaatajaskondi. Customer Insightsi Adobe Experience Platform ja selliste rakenduste (nt Adobe Campaign Standard) segmendi kasutamiseks peate järgima mõnda selles artiklis kirjeldatud toimingut.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Selles artiklis kirjeldatud juhiste protsessiskeem.":::
 
 ## <a name="prerequisites"></a>Eeltingimused
 
--   Dynamics 365 Customer Insightsi litsents
--   Adobe Campaign Standard litsents
--   Azure’i bloobimälu konto
+- Dynamics 365 Customer Insightsi litsents
+- Adobe Campaign Standard litsents
+- Azure’i bloobimälu konto
 
 ## <a name="campaign-overview"></a>Kampaania ülevaade
 
@@ -51,7 +51,7 @@ Väljasaatmiseks mõeldud pakkumismeilis on eesnimi, perekonnanimi ja kliendi ko
 
 Kui meie sihtrühm on tuvastatud, saame konfigureerida ekspordi Azure Blob Storage kontole.
 
-1. Avage Customer Insightsis **adminconnections** > **·**.
+1. Avage Customer Insightsis **administraatoriühendused** > **·**.
 
 1. Valige **Lisa ühendus** ja valige **Adobe Campaign** ühenduse konfigureerimiseks või klõpsake **Seadista** paanil **Adobe Campaign**.
 

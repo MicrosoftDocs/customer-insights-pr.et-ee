@@ -1,5 +1,5 @@
 ---
-title: Kliendi- või kontoväljade ühendamine
+title: Kliendiväljade ühendamine andmete ühendamiseks
 description: Ühendage olemid, et luua koondatud kliendiprofiile.
 recommendations: false
 ms.date: 05/04/2022
@@ -14,14 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740852"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082950"
 ---
-# <a name="unify-customer-fields"></a>Kliendiväljade ühendamine
+# <a name="unify-customer-fields-for-data-unification"></a>Kliendiväljade ühendamine andmete ühendamiseks
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 

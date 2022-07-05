@@ -1,5 +1,5 @@
 ---
-title: OData näited API-de jaoks Dynamics 365 Customer Insights
+title: OData päringu näited Customer Insightsi API-de jaoks
 description: Tavaliselt kasutatakse avaandmete protokolli (OData) näiteid Customer Insightsi API-de päringute tegemiseks andmete ülevaatamiseks.
 ms.date: 05/25/2022
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808456"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083160"
 ---
-# <a name="odata-query-examples"></a>OData päringu näited
+# <a name="odata-query-examples-for-customer-insights-apis"></a>OData päringu näited Customer Insightsi API-de jaoks
 
 Avaandmete protokoll (OData) on andmetele juurdepääsu protokoll, mis põhineb põhiprotokollidel nagu HTTP. See kasutab üldtunnustatud meetodeid, nagu REST veebi jaoks. On erinevaid raamatukogusid ja tööriistu, mida saab kasutada OData teenuste tarbimiseks.
 

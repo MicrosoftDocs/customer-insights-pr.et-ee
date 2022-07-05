@@ -1,5 +1,5 @@
 ---
-title: Microsoft Teamsi robot
+title: Teamsi robot Dynamics 365 Customer Insightsi jaoks (eelversioon)
 description: Otsige roboti abil Microsoft Teamsis koondatud kliendiprofiile.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 89a293d5b6f9f5452b2ccba495d2475002806019
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 62a0216de848b5a3a81fdd6ac078feb551fcfec6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642921"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082593"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Teamsi robot Dynamics 365 Customer Insightsi jaoks (eelversioon)
 
@@ -37,7 +37,7 @@ Boti seadistamiseks ja konfigureerimiseks peavad olema täidetud järgmised eelt
 
 ## <a name="configure-the-bot"></a>Boti konfigureerimine
 
-1. **Avage veebisait AdminExport** > **Destinations**.
+1. **Avage administraatori** > **ekspordi sihtkohad**.
 1. Valige Microsoft Teamsi paanil suvand **Seadista**.
 1. Teid suunatakse ümber Teamsi alale **Rakendused**. Võite avada Teamsi ja valida alumises vasakus nurgas suvandi **Rakendused** või [hankida selle AppSource’ist](https://go.microsoft.com/fwlink/?linkid=2124104) otse.
 1. Otsige mõistet **Customer Insights** ja valige rakendus.

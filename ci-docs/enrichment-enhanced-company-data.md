@@ -1,5 +1,5 @@
 ---
-title: Ettevõtte andmete täiustamine
+title: Ettevõtte profiilide rikastamine ettevõtte täiustatud andmetega
 description: Rikastage ja normaliseerige ettevõtte andmeid Microsofti mudelitega.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4247d59806468907d93fc7848231ec5a2985580e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 131ef3d1e123628779609ddec368cfef8f4d607e
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953944"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054243"
 ---
-# <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Ettevõtte profiilide rikastamine ettevõtte täiustatud andmetega
+# <a name="enrich-company-profiles-with-enhanced-company-data"></a>Ettevõtte profiilide rikastamine ettevõtte täiustatud andmetega
 
 Ettevõtte profiilide parandamiseks, täiendamiseks ja standardimiseks kasutage Microsofti mudeleid ja kogutud ettevõtte andmeid. Parema täpsuse ja ülevaate saamiseks kasutame [common data model'i vormingut](/common-data-model/schema/core/applicationcommon/account).
 
@@ -84,7 +84,7 @@ Mudel ei ole:
 
 1. Rikastamisprotsessi alustamiseks või lehele Rikastamine naasmise **lähedal** valige **Käivita**.
 
-## <a name="enrichment-results"></a>Rikastamise tulemused
+## <a name="view-enrichment-results"></a>Rikastamise tulemuste kuvamine
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

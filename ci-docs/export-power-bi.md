@@ -1,5 +1,5 @@
 ---
-title: Power BI konnektor
+title: Power BI’i konnektor (eelvaade)
 description: Õppige kasutama konnektorit Dynamics 365 Customer Insights Power BI-s.
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642792"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051264"
 ---
-# <a name="connector-for-power-bi-preview"></a>Power BI’i konnektor (eelvaade)
+# <a name="power-bi-connector-preview"></a>Power BI’i konnektor (eelvaade)
 
-Visualiseerige oma andmeid rakendusega Power BI Desktop. Oma ühendatud kliendiandmetega täiendavate ülevaadete ja aruannete loomine.
+Looge töölaua abil oma andmete visualiseeringuid Microsoft Power BI. Oma ühendatud kliendiandmetega täiendavate ülevaadete ja aruannete loomine.
 
 ## <a name="prerequisites"></a>Eeltingimused
 
@@ -60,7 +60,7 @@ Keskkonnad, millel on Customer Insightsis kahe identse olemi vahel määratletud
 
 Saate topeltseoseid tuvastada ja eemaldada.
 
-1. Avage **jaotis Andmeseosed** > **keskkonna** kohta, kus te puudute Power BI.
+1. **Avage jaotis Andmeseosed** > **keskkonna** kohta, kus te rakenduses puudub Power BI.
 2. Topeltseoste tuvastamiseks tehke järgmist.
    - Kontrollige, kas kahe sama olemi vahel on määratletud mitu seost.
    - Kontrollige, kas kahe koondamisprotsessi kaasatud olemi vahel on loodud seos. Kõigi koondamisprotsessi kaasatud olemite vahel on määratletud varjatud seos.

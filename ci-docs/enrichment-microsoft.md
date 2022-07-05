@@ -1,5 +1,5 @@
 ---
-title: Kliendiprofiilide rikastamine Microsofti kaubamärkide ja huvide andmetega
+title: Kliendiprofiilide rikastamine Microsofti kaubamärkide ja huvide andmetega (eelvaade)
 description: Microsofti varaliste andmete abil saate rikastada oma kliendiandmeid sarnasuste ja häälkäsklusega.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953760"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082698"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Kliendiprofiilide rikastamine sarnasuste ja hääljagamisega (eelvaade)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Kliendiprofiilide rikastamine Microsofti kaubamärkide ja huvide andmetega (eelvaade)
 
 Microsofti varaliste andmete abil saate rikastada oma kliendiandmeid brändide sarnasuste, huvide sarnasuste ja hääleosaga (SoV). Need sarnasused ja SoV põhinevad teie klientidega sarnase demograafiaga inimeste andmetel. See teave aitab teil paremini mõista ja segmenteerida oma kliente, lähtudes nende afiinsusest või SoV-st konkreetsete kaubamärkide ja huvidega.
 
@@ -104,7 +104,7 @@ Toetame praegu järgmisi riigi/regiooni suvandeid: Austraalia, Kanada (inglise),
 
    Kui rikastame profiile, rikastame kõiki kliendiprofiile, mille jaoks me saame andmeid valitud tootemarkide ja huvide jaoks, kaasaarvatud profiilid, mis ei ole valitud riigis või piirkonnas. Näiteks kui valisite Saksamaa, rikastame Ameerika Ühendriikides asuvad profiilid, kui meil on Ameerika Ühendriikides valitud kaubamärkide ja omandiõiguse andmeid.
 
-## <a name="enrichment-results"></a>Rikastamise tulemused
+## <a name="view-enrichment-results"></a>Rikastamise tulemuste kuvamine
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Osaliste andmete täiendamine prognooside abil
+title: Osaliste andmete lõpetamine prognooside abil
 description: Kasutage prognoose, et täiendada mittetäielikke kliendiandmeid.
 ms.date: 11/01/2021
 ms.subservice: audience-insights
@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 7e93670007db27d13b84d7516f56830988da083e
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800645"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082509"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Täitke oma osalised andmed ennustustega (aegunud)
 

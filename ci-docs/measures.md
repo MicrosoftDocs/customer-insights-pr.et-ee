@@ -1,5 +1,5 @@
 ---
-title: Meetmete mõistmine ja haldamine
+title: Meetmete ülevaade
 description: Vaadake, kuidas meetmed aitavad analüüsida ja kajastada teie ettevõtte tulemuslikkust.
 ms.date: 03/24/2022
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 84a3a10a2517258c1f895800882b9c67391ec3de
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642634"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083118"
 ---
 # <a name="measures-overview"></a>Meetmete ülevaade
 

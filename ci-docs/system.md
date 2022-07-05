@@ -1,5 +1,5 @@
 ---
-title: Süsteemi konfiguratsioon Customer Insightsis
+title: Süsteemikonfiguratsioon
 description: Lisateave Dynamics 365 Customer Insightsi süsteemi seadete kohta.
 ms.date: 04/21/2022
 ms.subservice: audience-insights
@@ -15,16 +15,16 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 3aa4c6529d705698e612adad86587e3c3a4db35b
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653611"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050666"
 ---
 # <a name="system-configuration"></a>Süsteemikonfiguratsioon
 
-Süsteemi konfiguratsioonidele juurdepääsemiseks minge süsteemiülesannete ja -protsesside loendi kuvamiseks aadressile **AdminSystem** > **·**.
+Süsteemi konfiguratsioonidele juurdepääsemiseks **minge süsteemiülesannete ja -protsesside loendi kuvamiseks administraatorisüsteemi** > **·**.
 
 Leht **Süsteem** sisaldab järgmisi vahekaarte.
 - [Olek](#status-tab)
@@ -95,7 +95,7 @@ Kasutage vahekaarti **Ajastamine**, et ajastada kõigi [valmendatud andmeallikat
 > Teie hallatavad andmeallikad värskendatakse nende enda ajakava järgi. Teie hallatavate andmeallikate värskendamise ajastamiseks konfigureerige selle konkreetse andmeallikas värskendamissätted **lehel Andmeallikad**.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Andmevoo värskendamise sätted.":::
 
-1. **Avage Haldussüsteem** > **ja** valige **vahekaart Ajakava**.
+1. **Avage haldussüsteem** > **ja** valige **vahekaart Ajakava**.
 
 2. Ajastatud värskendamise vaike-olek on **Väljas**. Ajastatud värskenduste luvamiseks lülitage ekraani ülaosas sisse valik **Sees**.
 

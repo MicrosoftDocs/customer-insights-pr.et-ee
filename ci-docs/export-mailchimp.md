@@ -1,5 +1,5 @@
 ---
-title: Customer Insightsi andmete eksportimine Mailchimpi
+title: Segmentide eksportimine Mailchimpi (eelversioon)
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Mailchimpi.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 394287f861df69a88209aae9d857e795d3528cd7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3a19c517eeca71a19649e3d07cf47e5d25df6a68
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642951"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082467"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Segmentide eksportimine Mailchimpi (eelversioon)
 

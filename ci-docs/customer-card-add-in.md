@@ -1,5 +1,5 @@
 ---
-title: Kliendikaardi lisandmoodul Dynamics 365 rakendustele (sisaldab videot)
+title: Kliendikaardi lisandmoodul Dynamics 365 rakendustele (eelvaade) (sisaldab videot)
 description: Saate selle lisandmooduli abil kuvada Kliendiprofiili andmed Customer Insightsist Dynamics 365 rakendustes.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755631"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082131"
 ---
-# <a name="customer-card-add-in-preview"></a>Kliendikaardi lisandmoodul (eelvaade)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dynamics 365 rakenduste kliendikaardi lisandmoodul (eelvaade)
 
 Saate oma klientide kohta täieliku ülevaate otse Dynamics 365 rakendustes. Kui kliendikaardi lisandmoodul on installitud toetatud Dynamics 365 rakendusse, saate valida kliendiprofiili väljade, ülevaadete ja tegevuse ajaskaala kuvamise. Lisandmoodul toob andmed Customer Insights -i kaudu, mõjutamata ühendatud Dynamics 365 rakenduse andmeid.
 

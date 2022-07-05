@@ -1,5 +1,5 @@
 ---
-title: Andmeallikas rikastamine
+title: Andmeallikate rikastamine (eelvaade)
 description: Rikastage andmeallikaid enne andmete ühendamise protsessi läbimist.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -8,16 +8,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011468"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082110"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Andmeallikate rikastamine (eelvaade)
 
-Kasutage andmeid sellistest allikatest nagu Microsoft ja teised partnerid, et rikastada oma kliendiandmeid enne andmete ühendamist. Andmeallikas rikastamine aitab saavutada suuremat andmete täielikkust ja kvaliteeti, mis aitab saavutada paremaid tulemusi pärast andmete ühendamist. Näiteks normaliseeritud ja standardiseeritud vormingu kasutamine aadresside jaoks suurendab mängu tulemuste kvaliteeti. Toetatud rikastamiste loendi leiate teemast [Toetatud andmeallikas rikastamissuvandid](#supported-data-source-enrichments).
+Kasutage andmeid sellistest allikatest nagu Microsoft ja teised partnerid, et rikastada oma kliendiandmeid enne andmete ühendamist. Andmeallikas rikastamine aitab luua suuremat andmete täielikkust ja kvaliteeti, mis aitab pärast andmete ühendamist saavutada paremaid tulemusi. Näiteks normaliseeritud ja standardiseeritud vormingu kasutamine aadresside jaoks suurendab mängu tulemuste kvaliteeti. Toetatud rikastamiste loendi leiate teemast [Toetatud andmeallikas rikastamise suvandid](#supported-data-source-enrichments).
 
 ## <a name="enrich-a-data-source"></a>Rikastage andmeallikas
 
@@ -27,7 +27,7 @@ Rikastamiste loomiseks või redigeerimiseks peavad teil olema kaasautori või ad
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
 
-1. Valige selle andmeallikas kõrval vertikaalne kolmikpunkt (&vellip;), mida soovite rikastada, ja valige **Rikasta**.
+1. Valige rikastatava andmeallikas kõrval vertikaalne kolmikpunkt (&vellip;) ja valige **Rikasta**.
 
    :::image type="content" source="media/data_sources_enrich.png" alt-text="Andmeallikate leht, kus on esile tõstetud rikastamine":::
 

@@ -1,5 +1,5 @@
 ---
-title: Neelavad andmed alates Azure Synapse Analytics
+title: Azure Synapse andmeallikas ühendamine (eelvaade)
 description: Azure Synapse Andmebaasi kasutamine rakenduses andmeallikas rakenduses andmeallikas Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011422"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052694"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics andmeallikas ühendamine (eelvaade)
 
@@ -59,7 +59,7 @@ Lisateavet leiate teemast [Azure Synapse Ülevaade](/azure/synapse-analytics/ove
 
 1. Valige saadavalolev [ühendus](connections.md)Azure Synapse Analytics või looge uus ühendus.
 
-1. **Valige valitud** ühenduses ühendatud tööruumist andmebaas Azure Synapse Analytics ja valige **Edasi**.
+1. **Valige valitud** ühenduses ühendatud tööruumist andmebaas Azure Synapse Analytics ja valige **Edasi**. Praegu toetame ainult andmebaasi tüüpi *Lake andmebaasi*.
 
 1. Valige ühendatud andmebaasist allaneelatavad olemid ja valige **Edasi**.
 

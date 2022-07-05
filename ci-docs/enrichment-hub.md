@@ -1,6 +1,6 @@
 ---
-title: Koondatud kliendiprofiilide rikastamine
-description: Kasutage võimalusi kliendiandmete rikastamiseks.
+title: Andmete rikastamise (eelvaade) ülevaade
+description: Kliendiandmete rikastamiseks saate kasutada Microsofti ja muude muude tootjate teenuste võimalusi.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,24 +14,32 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954036"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053859"
 ---
-# <a name="enrichment-for-customer-profiles-preview"></a>Kliendiprofiilide rikastamine (eelvaade)
+# <a name="data-enrichment-preview-overview"></a>Andmete rikastamise (eelvaade) ülevaade
 
-Kliendiandmete rikastamiseks saate kasutada andmeid allikatest, nagu Microsoft ja teised partnerid.
+Kliendiandmete rikastamiseks saate kasutada andmeid allikatest, nagu Microsoft ja teised partnerid. Muude tootjate rikastamised konfigureeritakse kasutades [ühendusi](connections.md), mille administraator koostab volikirjadega ja annab nõusoleku andmete edastamiseks. Administraatorid ja kaasautorid saavad ühendusi kasutada rikastamise konfigureerimiseks.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Mitu sama tüüpi rikastust
+
+Rikastatav olem määratakse rikastamise konfiguratsiooni käigus, mis võimaldab teil rikastada ainult osa oma profiilidest. Näiteks saate rikastada andmeid ainult kindla segmendi kohta. Saate konfigureerida mitut sama tüüpi rikastamist ja sama ühendust uuesti kasutada. Mõnel rikastamisel on piiritletud sama tüüpi rikastuste arv, mida saab luua. Piiranguid ja praegust kasutust saab vaadata lehe Rikastamine **vahekaardi** Avasta **igal paanil**.
+
+## <a name="enrich-data-sources-before-unification"></a>Andmeallikate rikastamine enne ühendamist
+
+Saate rikastada oma kliendiandmeid enne andmete ühendamist, et aidata parandada andmete vaste kvaliteeti. Lisateavet vt [teemast andmeallikas enrichment](data-sources-enrichment.md).
+
+## <a name="create-an-enrichment"></a>Rikastamise loomine
+
+Rikastamise loomiseks või redigeerimiseks peavad teil olema kaasautori [või administraatori](permissions.md) õigused.
+
+Avage **Andmed** > **Rikastamine**. Vahekaardil **Avasta** kuvatakse kõik toetatud rikastamissuvandid.
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Rikastamisekeskuse leht.":::
-
-Rikastamisvalikutega töötamiseks minge jaotisse **Andmete** > **rikastamine**.  
-
-Rikastamiste loomiseks või redigeerimiseks peavad teil olema kaasautori või administraatori õigused. Lisateavet vt teemast [Õigused](permissions.md).
-
-Vahekaardil **Avastage** leiate kõik toetatud rikastussuvandid.
 
 # <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
 
@@ -57,45 +65,33 @@ Vahekaardil **Avastage** leiate kõik toetatud rikastussuvandid.
 
 ---
 
-Saate kuvada oma konfigureeritud rikastamisi ja redigeerida nende atribuute vahekaardil **Minu rikastamised**. Samuti saate rikastamisest luua [segmente](segments.md) või [mõõte](measures.md).
-
 ## <a name="manage-existing-enrichments"></a>Olemasolevate rikastamiste haldamine
 
-Minge vahekaardile **Minu rikastused**, et näha kõiki konfigureeritud rikastusi. Iga rikastamine on esindatud reana, mis sisaldab täiendavat teavet rikastamise kohta.
+Avage **Andmed** > **Rikastamine**. **Vaadake vahekaardil Minu rikastamised** konfigureeritud rikastamist, nende olekut, rikastatud klientide arvu ja viimast kord, kui andmeid värskendati. Rikastamiste loendi saate sortida mis tahes veeru järgi või kasutada otsinguvälja, et leida rikastamine, mida soovite hallata.
 
-Valige rikastus, et näha saadaolevaid suvandeid. Suvandite nägemiseks saate loendiüksusel valida ka vertikaalse kolmikpunkti (&vellip;). Kui konfigureerite mitu rikastustegurit, saate selle kiiresti leidmiseks kasutada otsinguvälja.
+Valige rikastamine saadaolevate toimingute vaatamiseks.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Rikastamiste haldamise suvandid rikastamiste loendis.":::
 
 - Rikastamise üksikasjade **Vaade** koos rikastatud kliendiprofiilide arvuga.
 - Rikastamise konfiguratsiooni **Redigeerimine**.
-- Rikastamise **käivitamine**, et värskendada kliendiprofiile uusimate andmetega.
-- Olemasoleva rikastamise **Desaktiveerimine**, et peatada selle automaatne värskendamine iga ajastatud värskendamisega. Viimasest edukast värskendamisest pärinevad andmed jäävad jätkuvalt kättesaadavaks. Passiivse rikastamise **Aktiveerimine**, et taaskäivitada automaatne värskendamine iga ajastatud värskendamisega.
+- [**Käivitage**](#run-or-refresh-enrichments) rikastamine, et värskendada kliendiprofiile uusimate andmetega. Käivitage mitu rikastamist korraga, valides need loendist.
+- **Rikastamise aktiveerimine** või **desaktiveerimine**. Mitteaktiivseid rikastamisi ei värskendata plaanitud värskendamise [ajal](system.md#schedule-tab).
 - **Kustuta** rikastamine.
 
-Käivitage või desaktiveerige mitu rikastumist korraga, valides need loendist. Kuvamis- ja redigeerimissuvandid pole hulgi toiminguna saadaval. Need töötavad korraga ainult ühes rikastuses.
-
-## <a name="enrichments-and-connections"></a>Rikastamine ja Ühendused
-
-Muude tootjate rikastamised konfigureeritakse kasutades [ühendusi](connections.md), mille administraator koostab volikirjadega ja annab nõusoleku andmete edastamiseks. Administraatorid ja kaasautorid saavad ühendusi kasutada rikastamise konfigureerimiseks.  
-
-## <a name="multiple-enrichments-of-the-same-type"></a>Mitu sama tüüpi rikastust
-
-Rikastatav olem määratakse rikastamise konfiguratsiooni käigus, mis võimaldab teil rikastada ainult osa oma profiilidest. Näiteks saate rikastada andmeid ainult kindla segmendi kohta. Saate konfigureerida mitut sama tüüpi rikastamist ja sama ühendust uuesti kasutada. Mõnel rikastamisel on piiritletud sama tüüpi rikastuste arv, mida saab luua. Piiranguid ja praegust kasutust saab vaadata lehe Rikastamine **vahekaardi** Avasta **igal paanil**.
-
-## <a name="enrich-data-sources-before-unification"></a>Andmeallikate rikastamine enne ühendamist
-
-Saate rikastada oma kliendiandmeid enne andmete ühendamist, et aidata parandada andmete vaste kvaliteeti. Lisateavet vt [teemast andmeallikas enrichment](data-sources-enrichment.md).
+Samuti saate rikastamisest luua [segmente](segments.md) või [mõõte](measures.md).
 
 ## <a name="run-or-refresh-enrichments"></a>Rikastamiste käivitamine või värskendamine
 
-1. Rikastamisprotsessi alustamiseks valige **Käivita**. Või laske süsteemil plaanitud värskenduse osana [rikastamist automaatselt käivitada](system.md#schedule-tab). Töötlemisaeg sõltub teie kliendiandmete mahust.
+Pärast käivitamist saab rikastamist värskendada automaatse ajakava alusel või värskendada käsitsi nõudmisel.
+
+1. Ühe või mitme rikastamise käsitsi värskendamiseks valige need ja valige **Käivita**. [Automaatse värskendamise ajastamiseks](system.md#schedule-tab) minge jaotisse **Administraatorisüsteemi** > **·** > **ajakava**. Töötlemisaeg sõltub teie kliendiandmete mahust.
 
 1. Soovi korral [vaadake rikastamisprotsessi edenemist](#see-the-progress-of-the-enrichment-process).
 
 1. Pärast rikastamisprotsessi lõppu minge jaotisse **Minu rikastamised**, et vaadata üle äsja rikastatud kliendiprofiilide andmed, viimase värskenduse aeg ja rikastatud profiilide arv.
 
-1. Valige rikastamine, et näha [rikastamise tulemusi](#enrichment-results).
+1. Valige rikastamine, et näha [rikastamise tulemusi](#view-enrichment-results).
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Rikastamisprotsessi edenemise kuvamine
 
@@ -107,12 +103,12 @@ Saate otsida rikastamise töötlemise üksikasju (sh olekut ja võimalikke probl
 1. Valige rikastamise jaotises, kus soovite edenemist näha, suvand **Kuva üksikasjad**.
 1. Klõpsake paanil **Toimingu üksikasjad** käsku **Kuva üksikasjad**, et näha protsesse, mis on seotud rikastamise ja nende oleku värskendamisega.
 
-## <a name="enrichment-results"></a>Rikastamise tulemused
+## <a name="view-enrichment-results"></a>Rikastamise tulemuste kuvamine
 
 Pärast lõpetatud rikastamisjooksu vaadake üle rikastamise tulemused.
 
 1. Avage **Andmed** > **Rikastamine**.
-1. Valige vahekaardil **Minu rikastamine** rikastamine rikastamine, mille kohta soovite teavet saada.
+1. Valige vahekaardil **Minu rikastamine** soovitud rikastamine.
 
 Kõik rikastamised näitavad põhiteavet, nagu rikastatud profiilide arv ja rikastatud profiilide arv aja jooksul. Paanil **Rikastatud kliendid kuvatakse** loodud rikastamise olemi näidis. Üksikasjaliku vaate vaatamiseks valige **Kuva rohkem** ja valige **vahekaart Andmed**.
 

@@ -1,5 +1,5 @@
 ---
-title: Customer Insightsi andmete eksportimine AdRolli
+title: Segmentide eksportimine AdRoll-i (eelversioon)
 description: Lugege, kuidas konfigureerida ühendust ja eksportida AdRoll-i.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec7d2d4d137f2f0e3e1ff2ec0d09bff8ac4f28ea
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 13c7dd3b8556ad807fba6c537525b463480e860b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642564"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082824"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Segmentide eksportimine AdRoll-i (eelversioon)
 
@@ -21,9 +21,9 @@ Eksportige kliendi koondprofiili segmendid AdRolli ja kasutage neid reklaamimise
 
 ## <a name="prerequisites-for-a-connection"></a>Ühenduse eeltingimus
 
--   Teil on [AdRolli konto](https://www.adroll.com/) ja asjakohane administraatori identimisteave.
--   Olete [konfigureerinud segmendid](segments.md) Customer Insightsis.
--   Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
+- Teil on [AdRolli konto](https://www.adroll.com/) ja asjakohane administraatori identimisteave.
+- Olete [konfigureerinud segmendid](segments.md) Customer Insightsis.
+- Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 

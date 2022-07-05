@@ -1,5 +1,5 @@
 ---
-title: Rikastamine kolmanda osapoole rikastamisega Experian
+title: Kliendiprofiilide rikastamine demograafiaga Experian (eelversioon)
 description: Üldine teave Experian kolmanda osapoole rikastamise kohta.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954082"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053016"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Kliendiprofiilide rikastamine demograafiaga Experian (eelversioon)
 
@@ -79,7 +79,7 @@ Kui lubate Dynamics 365 Customer Insights edastada andmeid Experian-ile, lubate 
 
 1. Rikastamisprotsessi alustamiseks või lehele Rikastamine naasmise **lähedal** valige **Käivita**.
 
-## <a name="enrichment-results"></a>Rikastamise tulemused
+## <a name="view-enrichment-results"></a>Rikastamise tulemuste kuvamine
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

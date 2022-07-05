@@ -1,5 +1,5 @@
 ---
-title: Rikastamine SFTP-põhist kohandatud importimist kasutades
+title: Kliendiprofiilide rikastamine SFTP kohandatud impordiga (eelvaade)
 description: Üldine teave SFTP-põhise kohandatud importimise kaudu rikastamise kohta.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953714"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082320"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Kliendiprofiilide rikastamine kohandatud andmetega (eelversioon)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Kliendiprofiilide rikastamine SFTP kohandatud impordiga (eelvaade)
 
 Turvalise failiedastuse protokolli (SFTP) põhine kohandatud importimine võimaldab importida andmeid, mida ei pea koondama. See on paindlik, turvaline ja lihtne viis andmete sissetoomiseks. SFTP-põhist kohandatud importimist saab kasutada koos [SFTP-põhise ekspordiga](export-sftp.md), mis võimaldab teil eksportida kliendiprofiili andmeid, mida on vaja rikastamiseks. Seejärel saab andmeid töödelda ja rikastada ning SFTP kohandatud importi saab kasutada rikastatud andmete taastamiseks Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ Teie Dynamics 365 Customer Insights administraator saab selle rikastamise igal a
 
 1. Rikastamisprotsessi alustamiseks või lehele Rikastamine naasmise **lähedal** valige **Käivita**.
 
-## <a name="enrichment-results"></a>Rikastamise tulemused
+## <a name="view-enrichment-results"></a>Rikastamise tulemuste kuvamine
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

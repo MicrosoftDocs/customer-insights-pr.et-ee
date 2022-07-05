@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642881"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055209"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Kliendi eluea väärtuse (CLV) prognoos
 
-Prognoosige potentsiaalset väärtust (tulu), mille üksikud aktiivsed kliendid teie ettevõttesse toovad, määratletud tulevase ajavahemiku jooksul. Antud funktsioon aitab teil saavutada mitmesuguseid eesmärke. 
+Prognoosige potentsiaalset väärtust (tulu), mille üksikud aktiivsed kliendid teie ettevõttesse toovad, määratletud tulevase ajavahemiku jooksul. Antud funktsioon aitab teil saavutada mitmesuguseid eesmärke.
 - Tehke kindlaks kõrge väärtusega kliendid ja töötlege seda ülevaadet
 - Luua strateegilisi kliendisegmente, mis põhinevad nende potentsiaalsel väärtusel käitada isikupärastatud kampaaniaid sihipärase müügi, turunduse ja tugiteenuste abil
 - Tootearenduse juhendamine, keskendudes funktsioonidele, mis suurendaksid kliendi väärtust
@@ -74,7 +74,7 @@ Järgmised andmed on vajalikud ja kui need on märgitud valikulised, soovituslik
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kliendi eluea väärtuse (CLV) loomine
 
-1. Minge aadressile **IntelligencePredictions** > **·**.
+1. Minge luure **ennustuste juurde** > **·**.
 
 1. Valige paan **Kliendi eluea väärtus** ja seejärel **Kasuta mudelit**. 
 

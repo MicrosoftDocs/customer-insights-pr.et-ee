@@ -1,5 +1,5 @@
 ---
-title: Semantilised vastendused (Eelversioon)
+title: Semantilised vastendused (eelversioon)
 description: Ülevaade semantilisest vastendusest ja kuidas neid kasutada.
 ms.date: 12/01/2021
 ms.subservice: audience-insights
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642752"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083139"
 ---
-# <a name="semantic-mappings-preview"></a>Semantilised vastendused (Eelversioon)
+# <a name="semantic-mappings-preview"></a>Semantilised vastendused (eelversioon)
 
 Semantilised vastendused lasevad teil vastendada oma mittetegevuseandmed eelmääratletud skeemidega. Need skeemid aitavad Customer Insightsil teie andmeatribuute paremini mõista. Semantiline vastendamine ja esitatud andmed võimaldavad Customer Insightsis uusi ülevaateid ja funktsioone. Tegevuseandmete vastendamiseks skeemidega vaadake [tegevuste](activities.md) dokumentatsioon üle.
 
@@ -26,7 +26,7 @@ Semantilised vastendused lasevad teil vastendada oma mittetegevuseandmed eelmä�
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>ContactProfile'i semantilise olemi vastenduse määratlemine
 
-1. **Avage DataSemantic** > **mappings (eelvaade)**.
+1. **Avage jaotis Andme** > **Semantilised vastendused (eelvaade)**.
 
 1. Juhendava kogemus käivitamiseks valige **Lisa semantiline vastendus**.
 
@@ -102,7 +102,7 @@ Pärast ContactProfile *semantilise olemi vastenduse loomist* saate jäädvustad
 
 1. [Määratlege *ContactProfile* semantiline olemi vastendus.](#define-a-contactprofile-semantic-entity-mapping) Ja käivitage semantiline kaardistamine.
 
-1. **Avage jaotis DataActivities** > **·**.
+1. **Avage jaotis Andmetegevused** > **·**.
 
 1. Uue tegevuse loomiseks valige **Lisa tegevus**.
 
@@ -110,8 +110,8 @@ Pärast ContactProfile *semantilise olemi vastenduse loomist* saate jäädvustad
 
 1. **Looge etapis Seosed** kaudne seos oma tegevuste lähteandmete ja kontode vahel, kasutades oma kontaktandmeid vahendaja olemina. Lisateabe saamiseks vaadake [otseseid ja kaudseid seoseteid](relationships.md#relationship-paths).
    - Näite seos tegevuse *kohta nimega Ostud*:
-      - **Ostude lähtetegevuse andmedKontakt** > **Atribuudi** ContactID **andmed**
-      - **Kontakt DataKonto** > **andmed** atribuudil **AccountID**
+      - **Ostude lähtetegevuse andmed atribuudil** > **·** **ContactID**
+      - **Kontaktandmete** > **konto andmed** atribuudil **AccountID**
 
    :::image type="content" source="media/Contact_Activities1.png" alt-text="Näidissuhte häälestus.":::
 

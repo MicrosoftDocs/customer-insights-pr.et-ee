@@ -1,5 +1,5 @@
 ---
-title: Rikastamine kolmanda osapoole rikastamisega HERE Technologies
+title: Kliendiprofiilide rikastamine HERE Technologiesiga (eelvaade)
 description: Üldine teave ettevõtte HERE Technologies kolmanda osapoole rikastamise kohta.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953668"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052046"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Kliendiprofiilide rikastamine ettevõtte HERE Technologies teenuste abil (eelversioon)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Kliendiprofiilide rikastamine HERE Technologiesiga (eelvaade)
 
 HERE Technologies on asukohaplatvormi ettevõte, mis pakub asukohapõhist teavet ja teenuseid. HERE Technologies'i andmete rikastamise teenused parandavad teie klientide asukohateabe täpsust. See pakub aadressi normaliseerimist, laiuskraadide ja pikkuskraadide ekstraheerimist ning palju muud.
 
@@ -72,7 +72,7 @@ Teie Dynamics 365 Customer Insights administraator saab selle rikastamise igal a
 
 1. Rikastamisprotsessi alustamiseks või lehele Rikastamine naasmise **lähedal** valige **Käivita**.
 
-## <a name="enrichment-results"></a>Rikastamise tulemused
+## <a name="view-enrichment-results"></a>Rikastamise tulemuste kuvamine
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

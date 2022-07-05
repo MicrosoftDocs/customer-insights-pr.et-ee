@@ -1,21 +1,21 @@
 ---
-title: Customer Insights andmete eksportimine rakendusse Azure Synapse Analytics
+title: Andmete eksportimine rakendusse Azure Synapse Analytics (eelvaade)
 description: Siit saate teada, kuidas konfigureerida ühendus rakendusega Azure Synapse Analytics.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741498"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082866"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Andmete eksportimine rakendusse Azure Synapse Analytics (Eelvaade)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Andmete eksportimine rakendusse Azure Synapse Analytics (eelvaade)
 
 Azure Synapse on analüüsiteenus, mis kiirendab andmeladude ja suurandmesüsteemide läbivaatava ülevaatamise aega. Customer Insights -i andmeid saate sisse tuua ja kasutada jaotises [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -48,7 +48,7 @@ Azure -is:
 
 ### <a name="configure-a-connection"></a>Ühenduse konfigureerimine
 
-Ühenduse loomiseks vajavad **customer Insightsi teenusedirektor ja kasutajakonto Readeri** õigusi *ressursirühmas*, kus asub Synapse Analyticsi tööruum. Lisaks vajavad **Synapse Analyticsi tööruumi teenusehaldur ja kasutaja Synapse'i administraatori** õigusi. 
+Ühenduse loomiseks vajavad **customer Insightsi teenusedirektor ja kasutajakonto Readeri** õigusi *ressursirühmas*, kus asub Synapse Analyticsi tööruum. Lisaks vajavad **teenuse direktor ja Synapse Analyticsi tööruumi kasutaja Synapse'i administraatori** õigusi. 
 
 1. Minge **Administraator** > **Ühendused**.
 
@@ -72,13 +72,13 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
 
 1. Valige väljal **Ekspordiühendus** jaotisest ühendus **Azure Synapse Analytics**. Kui te seda jaotisenime ei näe, pole seda tüüpi [ühendusi](connections.md) teie jaoks saadaval.
 
-1. Sisestage ekspordile äratuntav **Kuvatav nimi** ja **Andmebaasi nimi**.
+1. Sisestage ekspordile äratuntav **Kuvatav nimi** ja **Andmebaasi nimi**. Eksport loob ühenduses määratletud tööruumis uue [Azure Synapse järveandmebaasi](/azure/synapse-analytics/database-designer/concepts-lake-database).
 
 1. Valige, millistesse olemitesse soovite eksportida Azure Synapse Analytics.
    > [!NOTE]
    > Andmeallikad, mis põhinevad [kaustal Common Data Model](connect-common-data-model.md) ei toetata.
 
-2. Valige **Salvesta**.
+1. Valige **Salvesta**.
 
 Ekspordi salvestamine ei käivita eksporti kohe.
 

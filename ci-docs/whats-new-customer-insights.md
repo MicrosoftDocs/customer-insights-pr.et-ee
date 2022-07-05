@@ -1,5 +1,5 @@
 ---
-title: Uued ja värskendatud funktsioonid
+title: Mida on uut rakenduses Dynamics 365 Customer Insights
 description: Teave uute funktsioonide, täiustuste ja veaparanduste kohta.
 ms.date: 06/02/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
-ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8843342"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054013"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Mida on uut rakenduses Dynamics 365 Customer Insights
 
@@ -140,7 +140,7 @@ Lisateavet leiate teemast [Kliendiprofiilide rikastamine LiveRampi identiteedian
 
 ### <a name="enrichment-for-data-sources-preview"></a>Andmeallikate rikastamine (Eelvaade)
 
-Kasutage andmeid sellistest allikatest nagu Microsoft ja teised partnerid, et rikastada oma kliendiandmeid enne andmete ühendamist. Andmeallikas rikastamine aitab saavutada suuremat andmete täielikkust ja kvaliteeti, mis aitab saavutada paremaid tulemusi pärast andmete ühendamist.
+Kasutage andmeid sellistest allikatest nagu Microsoft ja teised partnerid, et rikastada oma kliendiandmeid enne andmete ühendamist. Andmeallikas rikastamine aitab luua suuremat andmete täielikkust ja kvaliteeti, mis aitab pärast andmete ühendamist saavutada paremaid tulemusi.
 
 Lisateavet vt teemast [Enrichment for Data sources (Preview)](data-sources-enrichment.md).
 

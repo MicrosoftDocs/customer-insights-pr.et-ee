@@ -80,7 +80,7 @@
       href: data-unification-update.md
 - name: Andmete rikastamine
   items:
-    - name: Kliendiprofiilide rikastamine
+    - name: Andmete rikastamise ülevaade
       href: enrichment-hub.md
     - name: Kontod andmetest Office 365
       href: enrichment-office.md
@@ -112,7 +112,7 @@
       href: search-filter-index.md
     - name: Klienditegevuste määratlemine
       href: activities.md
-    - name: Kliendiülevaadete nõusolekuhaldus
+    - name: Nõusolekuhalduse kasutamine
       href: consent-management.md
 - name: Segmendid
   items:
@@ -212,6 +212,8 @@
           href: export-facebook.md
         - name: Google Ads
           href: export-google-ads.md
+        - name: Inmobi
+          href: export-inmobi.md
         - name: Iterable
           href: export-iterable.md
         - name: Klaviyo

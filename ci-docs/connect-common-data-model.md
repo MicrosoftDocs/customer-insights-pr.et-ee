@@ -1,5 +1,5 @@
 ---
-title: Common Data Modeli andmete ühendamine Azure Data Lake'i kontoga
+title: Common Data Modeli kausta ühendamine Azure Data Lake’i kontot kasutades
 description: Töötage Common Data Modeli andmete kallal Azure Data Lake Storage'i abil.
 ms.date: 05/30/2022
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011552"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082257"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Andmetega ühenduse loomine Azure Data Lake Storageis
 
@@ -84,7 +84,7 @@ Andmete sisestamine Gen2 konto kasutamisse Dynamics 365 Customer Insights Azure 
    > [!TIP]
    > JSON redigeerimisliidese olemite redigeerimiseks valige **Kuva veel** > **Redigeeri skeemifaili**. Tehke muudatusi ja valige **Salvesta**.
 
-1. Valitud olemite puhul, mis vajavad järkjärgulist allaneelamist, **kuvatakse jaotises Nõutav** jaotises **Astmeline värskendamine** nõutav. Kõigi nende olemite kohta leiate teavet teemast [Azure Data Lake'i andmeallikate](incremental-refresh-data-sources.md) täiendava värskenduse konfigureerimine.
+1. Valitud olemite puhul, mis vajavad järkjärgulist allaneelamist, **kuvatakse jaotises Nõutav** jaotises **Astmeline värskendamine nõutav**. Kõigi nende olemite kohta leiate teavet teemast [Azure Data Lake'i andmeallikate täiendava värskenduse konfigureerimine](incremental-refresh-data-sources.md).
 
 1. Valitud olemite puhul, kus primaarvõtit pole määratletud, **kuvatakse jaotises** Primaarvõti **nõutav**. Kõigi nende üksuste puhul tehke järgmist.
    1. Valige **Nõutav**. Kuvatakse **paneel Redigeeri olemit**.
@@ -138,7 +138,7 @@ Andmete sisestamine Gen2 konto kasutamisse Dynamics 365 Customer Insights Azure 
 
    :::image type="content" source="media/ADLS_required.png" alt-text="Dialoogiboks, kus on kuvatud Primaarvõtme jaoks nõutav":::
 
-1. Valitud olemite puhul, mis vajavad järkjärgulist allaneelamist, **kuvatakse jaotises Nõutav** jaotises **Astmeline värskendamine** nõutav. Kõigi nende olemite kohta leiate teavet teemast [Azure Data Lake'i andmeallikate](incremental-refresh-data-sources.md) täiendava värskenduse konfigureerimine.
+1. Valitud olemite puhul, mis vajavad järkjärgulist allaneelamist, **kuvatakse jaotises Nõutav** jaotises **Astmeline värskendamine nõutav**. Kõigi nende olemite kohta leiate teavet teemast [Azure Data Lake'i andmeallikate täiendava värskenduse konfigureerimine](incremental-refresh-data-sources.md).
 
 1. Valitud olemite puhul, kus primaarvõtit pole määratletud, **kuvatakse jaotises** Primaarvõti **nõutav**. Kõigi nende üksuste puhul tehke järgmist.
    1. Valige **Nõutav**. Kuvatakse **paneel Redigeeri olemit**.

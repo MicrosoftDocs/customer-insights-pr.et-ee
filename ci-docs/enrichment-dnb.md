@@ -1,5 +1,5 @@
 ---
-title: Ettevõtte profiilide rikastamine Dun & Bradstreet'iga
+title: Rikastage ettevõtte profiile Dun & Bradstreet'iga (eelvaade)
 description: Üldine teave Dun & Bradstreet kolmanda osapoole rikastamise kohta.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953886"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082551"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Ettevõtte profiilide rikastamine Dun & Bradstreet'iga (Eelvaade)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Rikastage ettevõtte profiile Dun & Bradstreet'iga (eelvaade)
 
 Dun & Bradstreet pakub ettevõtetele äriandmeid, analüütikat ja teadmisi. See võimaldab ettevõtetel kliendi koondprofiilidega klientide andmeid rikastada. Rikastamine hõlmab selliseid atribuute nagu DUNS-i number, ettevõtte suurus, asukoht, tööstus ja palju muud.
 
@@ -102,7 +102,7 @@ Praegu toetame järgmisi riigi/regiooni võimalusi: Kanada (inglise) või Ameeri
 
 1. Rikastamisprotsessi alustamiseks või lehele Rikastamine naasmise **lähedal** valige **Käivita**.
 
-## <a name="enrichment-results"></a>Rikastamise tulemused
+## <a name="view-enrichment-results"></a>Rikastamise tulemuste kuvamine
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
