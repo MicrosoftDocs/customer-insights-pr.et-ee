@@ -1,6 +1,6 @@
 ---
 title: Kliendi nõusoleku kasutamine
-description: Austage oma klientide nõusolekueelistusi Customer Insightsis nõusolekuandmete importimise teel.
+description: Austage klientide nõusolekueelistusi Customer Insightsis, importides nõusolekuandmeid.
 ms.date: 06/07/2022
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,39 +9,39 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947519"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188042"
 ---
 # <a name="use-customer-consent"></a>Kliendi nõusoleku kasutamine
 
-Andmekaitse- ja privaatsuseeskirjad annavad üksikisikutele õiguse reguleerida, kuidas organisatsioon oma isikuandmeid kasutab. Selliste määruste näideteks on isikuandmete kaitse üldmäärus Euroopa Liidus või California tarbijate privaatsuse seadus Ameerika Ühendriikides. Need eeskirjad võimaldavad inimestel loobuda oma isikuandmete kogumisest, töötlemisest või jagamisest kolmandate osapoolte poolt.  
+Andmekaitse- ja privaatsuseeskirjad annavad üksikisikutele õiguse reguleerida, kuidas organisatsioon nende isikuandmeid kasutab. Sellised eeskirjad on näiteks Euroopa Liidu isikuandmete kaitse üldmäärus või Ameerika Ühendriikides California tarbija privaatsusseadus. Need eeskirjad võimaldavad inimestel loobuda oma isikuandmete kogumisest, töötlemisest või jagamisest kolmandate osapooltega.  
 
-Kliendid võivad valida, kas võtta tagasi või keelduda oma nõusolekust konkreetsete kontaktivormide jaoks. Samuti võivad nad nõuda, et te loobuksite nende isikuandmete kogumisest, säilitamisest, kasutamisest või müügist. On oluline, et teie organisatsioon austaks kõigi klientide nõusolekut ja privaatsuseelistusi.  
+Kliendid võivad valida, kas võtta tagasi või keelduda oma nõusolekust konkreetsete kontaktivormide jaoks. Samuti võivad nad taotleda, et loobuksite nende isikuandmete kogumisest, säilitamisest, kasutamisest või müügist. On oluline, et teie organisatsioon austaks kõigi klientide nõusolekut ja privaatsuseelistusi.  
 
-Dynamics 365 Customer Insights aitab teil austada oma klientide taotlusi, importides ja säilitades nende eelistused ühtsete kliendiprofiilide osana.
+Dynamics 365 Customer Insights aitab teil austada oma klientide soove, importides ja salvestades nende eelistused ühtse kliendiprofiili osana.
 
-Kui nõusolekuandmeid säilitatakse kliendiprofiilidest eraldi, [lisage nõusolekuandmed uue andmeallikas](#import-and-unify-consent-data). Nõusolekuandmeid sisaldavad andmeallikas lisatakse andmete ühendamise protsessi. Nõusolekuandmete ja kliendiprofiilide edukas ühendamine viib seejärel ühtsete kliendiprofiilideni, mis sisaldavad nõusolekuteavet. Kliendiprofiilide puhul, mis juba sisaldavad nõusolekuteavet, minge otse nõusolekuandmete [jaotisse](#use-consent-data) Kasuta.
+Kui nõusolekuandmeid säilitatakse teie kliendiprofiilidest eraldi, [lisage oma nõusolekuandmed uue andmeallikas](#import-and-unify-consent-data). Nõusolekuandmeid sisaldav andmeallikas lisatakse andmete ühendamise protsessi. Nõusolekuandmete ja kliendiprofiilide edukas ühendamine viib seejärel ühtsete kliendiprofiilideni, mis sisaldavad nõusolekuteavet. Kliendiprofiilide puhul, mis juba sisaldavad nõusolekuteavet, minge otse jaotisse [Kasutusloa andmed](#use-consent-data).
 
 ## <a name="prerequisites"></a>eeltingimused
 
-Nõusolekuandmete ühendamiseks teiste kliendiprofiilidega peab lähteandmetes olema saadaval järgmine teave.
+Nõusolekuandmete ühendamiseks teiste kliendiprofiilidega peab teie lähteandmetes olema saadaval järgmine teave.
 
-- Alternatiivvõti nõusolekuteabe vastendamiseks Customer Insightsi kasutajaprofiilidega. Näiteks e-posti aadress või telefoninumber.
+- Alternatiivvõti, et viia nõusolekuteave Customer Insightsis vastavusse kasutajaprofiilidega. Näiteks e-posti aadress või telefoninumber.
 - Nõusoleku väärtus kliendi nõusoleku oleku määramiseks.
 
 Kaaluge järgmise *valikulise* teabe lisamist.
 
-- Peamine võti nõusoleku oleku värskendamiseks, kui klient taotleb muudatust.
+- Esmane võti nõusoleku oleku värskendamiseks, kui klient taotleb muudatust.
 - Nõusoleku tüüp, kui klienditeabe töötlemiseks on mitu võimalust.
-- Nõusoleku kuupäev või muud teie nõusolekustsenaariumidega seotud andmed.
+- Nõusoleku kuupäev või muud tüüpi andmed, mis on seotud teie nõusoleku stsenaariumidega.
 
-Näidistabel lihtsast nõusolekuandmebaasist, millel on mitu nõusolekuvõimalust:
+Näidistabel lihtsast nõusolekuandmebaasist, millel on mitu nõusolekusuvandit:
 
-|Nõusoleku ID (primaarvõti)   |E-post (alternatiivvõti)  |Nõusoleku suvand  |Nõusoleku väärtus  |
+|Nõusoleku ID (primaarvõti)   |E-post (alternatiivvõti)  |Nõusoleku võimalus  |Nõusoleku väärtus  |
 |---------|---------|---------|---------|
 |1    |  holly@contoso.com       |  Infoleht       |  Väär       |
 |2    |  holly@contoso.com       |  Tootevärskendused       |  Tõene       |
@@ -50,24 +50,26 @@ Näidistabel lihtsast nõusolekuandmebaasist, millel on mitu nõusolekuvõimalus
 
 ## <a name="import-and-unify-consent-data"></a>Nõusolekuandmete importimine ja ühendamine
 
-Nõusolekuandmeid saate importida samamoodi nagu muid andmeallikaid Customer Insightsi. Lisateavet toetatud andmeallikate ja nende importimise kohta leiate andmeallikate [ülevaatest](data-sources.md).
+Importige nõusolekuandmed samamoodi nagu muud andmeallikad Customer Insightsi. Lisateavet toetatud andmeallikate ja nende importimise kohta leiate teemast [Andmeallikate ülevaade](data-sources.md).
 
-Andmeallikate ühendamise kohta leiate lisateavet teemast [Andmete ühendamise ülevaade](data-unification.md).
+Lisateavet andmeallikate ühendamise kohta leiate teemast [Andmete ühendamise ülevaade](data-unification.md).
 
 ## <a name="use-consent-data"></a>Nõusolekuandmete kasutamine
 
-Kui teie nõusolekuandmed on osa teie ühtsetest kliendiprofiilidest, saate neid kasutada Customer Insightsis. Näiteks looge segment reegliga, mis tagab, et austate oma klientide privaatsuse ja andmekaitse eelistusi. Nõusolekueelistusi toetavaid reegleid kasutatakse kasutajate väljajätmiseks profiiliatribuutidel põhinevast segmendist. Reegli lisamine segmendile, mis välistab kliendiprofiilid, mis ei andnud nõusolekut kontakteerumiseks.
+Kui teie nõusolekuandmed on osa teie ühtsest kliendiprofiilist, saate neid kasutada Customer Insightsis. Näiteks looge reegliga segment, mis tagab, et austate oma klientide privaatsus- ja andmekaitseeelistusi. Nõusolekueelistusi toetavaid reegleid kasutatakse kasutajate välistamiseks segmendist profiiliatribuutide alusel. Lisage segmendile reegel, mis välistab kliendiprofiilid, mis ei andnud kontaktiks nõusolekut.
 
-Viidates ülaltoodud näidistabelile, võib segment sisaldada järgmist reeglit:`Consent option=Newsletter & Consent value=True`. Selle konfiguratsiooni tulemuseks on segment, mis austab kontaktide eelistusi uudiskirja saatmiseks.
+Viidates ülaltoodud näidistabelile, võib segment sisaldada seda reeglit:`Consent option=Newsletter & Consent value=True`. Selle konfiguratsiooni tulemuseks on segment, mis austab kontakteelistusi uudiskirja saatmiseks.
 
 Lisateavet ehitussegmentide kohta leiate teemast [Segmentide](segment-builder.md) loomine.
 
-Kui segment on loodud, saate segmendi kasutamiseks teistes rakendustes kasutada ühte paljudest [ekspordisuvanditest](export-destinations.md).
+Kui segment on loodud, saate kasutada ühte paljudest [ekspordivõimalustest](export-destinations.md), et kasutada segmenti teistes rakendustes.
 
 ## <a name="ensure-updated-consent-status"></a>Värskendatud nõusoleku oleku tagamine
 
-Oluline on hoida oma klientide nõusoleku olek ajakohasena. Customer Insightsi ajastatud värskendamine impordib alati teie andmeallikate uusima oleku. Seejärel töödeldakse seda teavet andmete ühendamise kaudu ja tulemuseks on värskendatud kliendiprofiilid. Neid värskendatud profiile kasutatakse seejärel segmentide värskendamiseks, veendumaks, et töötate kõige ajakohasema teabega.
+Oluline on hoida klientide nõusoleku olek ajakohasena. Customer Insightsi ajastatud värskendamine impordib alati teie andmeallikate uusima oleku. Seejärel töödeldakse seda teavet andmete ühendamise kaudu ja tulemuseks on värskendatud kliendiprofiilid. Neid värskendatud profiile kasutatakse seejärel segmentide värskendamiseks, et veenduda, et töötate kõige ajakohasema teabega.
 
 Teisisõnu veenduge, et Customer Insightsi imporditavatel lähteandmetel oleks alati uusim teave.
 
-Lisateavet leiate teemast [Segmentide käsitsi](segments.md#refresh-segments) värskendamine või [ajastatud värskenduse](system.md#schedule-tab) konfigureerimine.
+Lisateavet leiate teemast [Segmentide](segments.md#refresh-segments) käsitsi värskendamine või [ajastatud värskendamise konfigureerimine](system.md#schedule-tab).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

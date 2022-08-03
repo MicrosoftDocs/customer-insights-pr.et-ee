@@ -1,84 +1,89 @@
 ---
 title: Andmete eksportimine SFTP hostidesse (eelvaade) (sisaldab videot)
 description: Lugege, kuidas konfigureerida ühendust ja eksportida SFTP asukohta.
-ms.date: 06/09/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b12d25ecbd2e5fb31d7d5a6bb775dc3e7c1bf007
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082761"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207224"
 ---
-# <a name="export-data-to-sftp-preview"></a>Andmete eksportimine SFTP-sse (eelvaade)
+# <a name="export-data-to-sftp-hosts-preview"></a>Andmete eksportimine SFTP hostidesse (eelvaade)
 
 Kliendiandmete kasutamiseks muude tootjate rakendustes eksportige need turvalise failiedastuse protokolli (SFTP) asukohta.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
-## <a name="prerequisites-for-connection"></a>Ühenduse eeltingimus
+## <a name="prerequisites"></a>eeltingimused
 
 - SFTP-hosti saadavus ja vastav identimisteave.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Tulemüüride taga asuvaid SFTP sihtkohti praegu ei toetata. 
+- Tulemüüride taga olevaid SFTP sihtkohti praegu ei toetata.
 - Ekspordi käitusaeg sõltub teie süsteemi jõudlusest. Soovitame teie serveri minimaalseks konfiguratsiooniks kahte protsessori tuuma ja 1 GB mälu.
-- Kuni 100 miljoni kliendiprofiiliga olemite eksportimiseks võib kuluda 90 minutit, kui kasutate soovitatud minimaalset kahe protsessori tuuma ja 1 GB mäluga konfiguratsiooni.
+- Kuni 100 miljonit kliendiprofiili, mis võib võtta 90 minutit, kui kasutate kahe CPU südamiku ja 1 Gb mälu soovitatavat minimaalset konfiguratsiooni.
+- Kui kasutate autentimiseks SSH-võtit, veenduge, et [loote privaatvõtme](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) PEM- või SSH.COM vormingus. Kui kasutate Puttyt, teisendage oma privaatvõti eksportimise teel kui Open SSH. Toetatakse järgmisi privaatvõtme vorminguid.
+  - RSA OpenSSL PEM- ja ssh.com-vormingus
+  - DSA OpenSSL PEM- ja ssh.com-vormingus
+  - ECDSA 256/384/521 OpenSSL PEM-vormingus
+  - ED25519 ja RSA OpenSSH võtmevormingus
 
 ## <a name="set-up-connection-to-sftp"></a>SFTP ühenduse loomine
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **SFTP** ühenduse konfigureerimiseks.
+1. Valige **Lisa ühendus** ja valige **SFTP**.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
-1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Valige, kes saavad seda ühendust kasutada. Vaikimisi on see ainult Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Sisestage oma SFTP konto jaoks **Kasutajanimi**, **Parool**, **Hostinimi** ja **Ekspordikaust**.
+1. Valige, kas soovite autentida oma ühenduse SSH või kasutajanime /parooli kaudu, ja esitage vajalikud üksikasjad. Kui kasutate autentimiseks SSH-võtit, veenduge, et [loote privaatvõtme](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) PEM- või SSH.COM vormingus. Kui kasutate Puttyt, teisendage oma privaatvõti eksportimise teel kui Open SSH. Toetatakse järgmisi privaatvõtme vorminguid.
+   - RSA OpenSSL PEM- ja ssh.com-vormingus
+   - DSA OpenSSL PEM- ja ssh.com-vormingus
+   - ECDSA 256/384/521 OpenSSL PEM-vormingus
+   - ED25519 ja RSA OpenSSH võtmevormingus
 
 1. Valige ühenduse testimiseks **Kinnita**.
 
-1. Valige, kas soovite eksportida oma andmed **Gzipped** või **Unzipped** ja **väljaeraldaja** eksporditavate failide jaoks.
-
-1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse loomiseks valige **Salvesta**.
 
 ## <a name="configure-an-export"></a>Ekspordi konfigureerimine
 
-Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+1. Valige **Lisa eksport**.
 
-1. Valige **Ekspordiühendus** väljal ühendus SFTP jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+1. Valige **Ekspordiühendus** väljal ühendus SFTP jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
-1. Valige olemid, nt segmendid, mida soovite eksportida.
+1. Sisestage ekspordi nimi.
+
+1. Valige, kas soovite eksportida oma andmed **Gzipped** või **Unzipped** ja **väljaeraldaja** eksporditavate failide jaoks.
+
+1. Valige olemid (nt segmendid), mida soovite eksportida.
 
    > [!NOTE]
-   > Iga valitud olem tükeldatakse eksportimisel kuni viieks väljundfailiks.
+   > Iga valitud olem jagatakse eksportimisel maksimaalselt viieks väljundfailiks.
 
 1. Valige **Salvesta**.
 
-Ekspordi salvestamine ei käivita eksporti kohe.
-
-Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab).
-Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand).
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 > [!TIP]
-> Suure andmehulgaga olemite eksportimine võib iga ekspordi puhul viia samasse kausta mitme CSV-failini. Ekspordi tükeldamine toimub tulemuslikkuse huvides, et minimeerida ekspordi lõpuleviimiseks kuluvat aega.
-
-## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
-
-Kui lubate Dynamics 365 Customer Insightsil SFTP kaudu andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed). Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et ekspordisihtkohad täidavad kõik teie privaatsus- või turbenõuded. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
-Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+> Suurt hulka andmeid sisaldavate olemite eksportimine võib viia iga ekspordi puhul mitme CSV-failini samas kaustas. Ekspordi tükeldamine toimub jõudlusega seotud põhjustel, et minimeerida ekspordi lõpuleviimiseks kuluvat aega.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

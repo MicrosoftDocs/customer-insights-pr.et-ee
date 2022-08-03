@@ -21,21 +21,21 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e622e5fa0b5738e31db1c668d95312adbc4f7d36
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082572"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183549"
 ---
 # <a name="relationships-between-entities-and-entity-paths"></a>Seosed olemite ja olemiteede vahel
 
 Seosed ühendavad olemid ja määratlevad teie andmete graafiku, kui olemitel on ühine identifikaator (võõrvõti). Seda võtit saab viidata ühest olemist teise. Ühendatud olemid võimaldavad määratleda segmente ja mõõte mitmete andmeallikate alusel.
 
 Seoseid on kolme tüüpi: 
-- Mitteredigeeritavad süsteemiseosed, mille süsteem on loonud andmete ühendamise protsessi osana
-- Mitteredigeeritavad päritud seosed, mis luuakse andmeallikatest automaatselt 
-- Redigeeritavad kohandatud seosed, mille on loonud ja konfigureerinud kasutajad
+- Mitteredigeeritavad süsteemiseosed loob süsteem andmete ühendamise protsessi osana
+- Mitteredigeeritavad päritud seosed luuakse andmeallikate allaneelamisest automaatselt
+- Redigeeritavaid kohandatud seoseid loovad ja konfigureerivad kasutajad
 
 ## <a name="non-editable-system-relationships"></a>Mitteredigeeritavad süsteemiseosed
 
@@ -67,69 +67,66 @@ Seos koosneb *lähteolemist*, mis sisaldab võõrvõtit ja *sihtolemit*, millele
    - **Kirjeldus**: seose kirjeldus.
    - **Lähteolem**: olem, mida kasutatakse seoses lähteolemina. Näide: SupportCase.
    - **Sihtolem**: olem, mida kasutatakse seoses sihtolemina. Näide: klient.
-   - **Allika kardinaalsus**: lähteallika kardinaalsuse määratlemiseks. Kardiaalsus kirjeldab määratud elemendi võimalike elementide arvu. See on alati seotud sihtkardiaalsusega. Saate valida **ühe** ja **mitme**. Toetatakse vaid mitu-ühele ja üks-ühele seoseid.  
+   - **Allika kardinaalsus**: lähteolemi kardinaalsus. Kardiaalsus kirjeldab määratud elemendi võimalike elementide arvu. See on alati seotud sihtkardiaalsusega. Saate valida **ühe** ja **mitme**. Toetatakse vaid mitu-ühele ja üks-ühele seoseid.  
      - Mitu-ühele: mitu lähtekirjet võivad olla seotud ühe sihtkirjega. Näide: üksiku kliendi mitu tugiteenusejuhtumeid.
      - Üks-ühele: üks lähtekirje on seotud ühe sihtkirjega. Näide: üks püsikliendi ID ühele kliendile.
 
      > [!NOTE]
      > Mitu-mitmele seoseid saab luua kahe mitu-ühele seose ning linkiva olemi abil, mis seob lähte- ja sihtolemi.
 
-   - **Sihtkardinaalsus**: valige sihtolemi kirjete kardinaalsus. 
-   - **Lähtevõtme väli**: lähteolemi võõrvõtme väli. Näide: SupportCase võib kasutada CaseID-d võõrvõtme väljana.
-   - **Sihtvõtme väli**: sihtolemi võtme väli. Näiteks võib klient kasutada võtmevälja **CustomerID**.
+   - **Siht-kardinaalsus**: sihtüksuse kirjete kardinaalsus.
+   - **Lähtevõtme väli**: võõrvõtme väli lähteolemis. Näide: SupportCase kasutab **võõrvõtmeväljana CaseID-d**.
+   - **Sihtvõtmeväli**: sihtüksuse võtmeväli. Näide: klient kasutab **võtmeväljana CustomerID-d**.
 
 4. Kohandatud seose loomiseks valige **Salvesta**.
 
 ## <a name="set-up-account-hierarchies"></a>Seadistage konto hierarhiad
 
-Keskkondades, mis on konfigureeritud kasutama ärikontosid peamise sihtrühmana, saavad konfigureerida seostuvate ärikontode hierarhiaid. Näiteks ettevõte, kus on eraldi äriüksused. 
+Keskkonnad, mis on konfigureeritud kasutama ärikontosid peamise sihtrühmana, saavad konfigureerida seotud ärikontode kontohierarhiaid. Näiteks ettevõte, kus on eraldi äriüksused.
 
-Asutused ja organisatsioonid loovad ettevõttehierarhiaid, et ettevõtteid ja nende suhteid üksteisega paremini hallata. Customer Insights toetab ema-tütarkonto hierarhiaid, mis on allaneelatud kliendiandmetes juba olemas. Näiteks ettevõtted rakendusest Dynamics 365 Sales. Neid hierarhiaid saab konfigureerida lehel **Seosed**.
+Asutused ja organisatsioonid loovad ettevõttehierarhiaid, et ettevõtteid ja nende suhteid üksteisega paremini hallata. Customer Insights toetab ema-lapse konto hierarhiaid, mis on allaneelatud kliendiandmetes juba olemas. Näiteks ettevõtted rakendusest Dynamics 365 Sales. Neid hierarhiaid saab konfigureerida **lehel Seosed**.
 
 1. Minge **Andmed** > **Seosed**.
 1. Valige **Konto hierarhia** vahekaart.
-1. Valige **Uus konto hierarhia**. 
-1. Sisestage **Konto hierarhia** paanil hierarhiale nimi. Süsteem loob väljundolemile nime. Saate muuta väljundi nime olemit.
+1. Valige **Uus konto hierarhia**.
+1. Sisestage **Konto hierarhia** paanil hierarhiale nimi. Süsteem loob väljundolemile nime, kuid saate seda muuta.
 1. Valige olem, mis sisaldab teie konto hierarhiat. Tavaliselt on see samas olemis, mis sisaldab kontosid.
-1. Valige valitud olemist **Konto ID** ja **Konto peamine ID** 
-1. Sätete rakendamiseks ja kontohierarhia lõplikuks muutmiseks valige käsk **Salvesta**.
+1. Valige valitud olemitest **konto UID** ja **emaettevõtte UID**.
+1. Kontohierarhia lõpuleviimiseks valige **Salvesta**.
 
-## <a name="view-relationships"></a>Kuva seosed
+## <a name="manage-existing-relationships"></a>Olemasolevate seoste haldamine
 
-Lehel Seosed kuvatakse kõik loodud seosed. Iga rida tähistab suhet, mis sisaldab ka üksikasju lähte-, sihtüksuse ja kardinaalsuse kohta. 
+Minge **lehele Seosed**, et vaadata kõiki loodud seoseid, nende lähteolemit, sihtolemit ja kardinaalsust.
 
 :::image type="content" source="media/relationships-list.png" alt-text="Seoste ja suvandite loend lehe Seosed toiminguribal.":::
 
-Sellel lehel on olemasolevate ja uute seoste suvandid. 
-- **Uus seos**: [kohandatud seose loomine](#create-a-custom-relationship).
-- **Visualiseerija**: [tutvuge seose visualiseerijaga](#explore-the-relationship-visualizer), et näha olemasolevate seoste võrgudiagrammi ja nende kardiaalsust.
-- **Filtreerimisalus**: valige loendis kuvamisseoste tüüp.
-- **Otsinguseosed**: kasutage tekstipõhist otsingut seoste atribuutide põhjal.
+**Kasutage konkreetse seose leidmiseks suvandeid** Filtreerimisalus **või** Otsi seoseid. Olemasolevate seoste ja nende kardinaalsuse võrguskeemi nägemiseks valige [**Visualizer**](#explore-the-relationship-visualizer).
+
+Valige seos saadaolevate toimingute vaatamiseks.
+- **Redigeeri**: redigeerige kohandatud seoste atribuute redigeerimispaanil ja salvestage muudatused.
+- **Kustutamine**: kohandatud seoste kustutamine.
+- **Kuvamine**: saate vaadata süsteemi loodud ja päritud seoseid.
 
 ### <a name="explore-the-relationship-visualizer"></a>Tutvuge seose visualiseerijaga
 
 Seose visualiseerija näitab ühendatud üksuste vaheliste olemasolevate suhete ja nende kardinaalsuse skeemi. Selles visualiseeritakse ka seoseteed.
 
-Vaate kohandamiseks saate muuta kastide asukohta, lohistades neid lõuendil.
-
 :::image type="content" source="media/relationship-visualizer.png" alt-text="Kuvatõmmis seose visualiseerija võrgudiagrammist, mis on seotud olemite vaheliste ühendustega.":::
 
-Saadaolevad suvandid: 
+Vaate kohandamiseks saate muuta kastide asukohta, lohistades neid lõuendil. Muud valikud hõlmavad järgmist: 
 - **Ekspordi pildina**: praeguse vaate salvestamine pildifailina.
 - **Muuda horisontaal-/vertikaalseks paigutuseks**: muutke olemite ja seoste joondust.
 - **Redigeeri**: redigeerige kohandatud seoste atribuute redigeerimispaanil ja salvestage muudatused.
 
 ## <a name="relationship-paths"></a>Seose teed
 
-Seose tee kirjeldab olemeid, mis on seotud lähteolemi ja sihtolemi vaheliste seostega. Seda kasutatakse segmendi või meetme loomisel, mis hõlmab muid üksusi peale ühendatud profiili olemi ja ühendatud profiili olemini jõudmiseks on mitu võimalust. 
-
-Seosetee annab süsteemile teada, millistele seostele ühendatud profiiliolemis juurde pääseda. Erinevad seoseteed võivad anda erinevaid tulemusi.
+Seose tee kirjeldab olemeid, mis on seotud lähteolemi ja sihtolemi vaheliste seostega. Seda kasutatakse segmendi või mõõdu loomisel, mis sisaldab muid olemeid kui ühtse profiili olem, ja ühtse profiili olemini jõudmiseks on mitu võimalust. Erinevad seoseteed võivad anda erinevaid tulemusi.
 
 Olemil *eCommerce_eCommercePurchases* on olemiga *Klient* järgmised seosed.
 
 - eCommerce_eCommercePurchases > Klient
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klient
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klient 
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klient
 
 Seosetee määratleb, milliseid olemeid saate kasutada mõõtmise reeglite loomiseks või segmentidena. Pikima seoseteega valiku tegemine annab tõenäoliselt vähem tulemusi, kuna vastavad kirjed peavad olema osa kõigist olemitest. Selles näites peab klient ostma kaupu e-poe kaudu (eCommerce_eCommercePurchases), müügikohas (POS_posPurchases) ja osalema meie lojaalsusprogrammis (loyaltyScheme_loyCustomers). Kui valite esimese võimaluse, saate tõenäoliselt rohkem tulemusi, sest kliendid peavad eksisteerima vaid ühes lisaolemis.
 
@@ -155,7 +152,7 @@ Seos liigitatakse **kaudse seosena** kui allika olem suhestub ühe või rohkema 
 
 #### <a name="multi-hop-relationship"></a>Mitme hüppega seos
 
-*Mitme hüppega seos* on *kaudne seos* , mis lubab sul ühenduda allikaolemi sihtolemiga ühe või rohkema vahendava olemi kaudu.
+**Mitme hüppega seos** on *kaudne seos* , mis lubab sul ühenduda allikaolemi sihtolemiga ühe või rohkema vahendava olemi kaudu.
 
 Näiteks kui tegevusolem nimega *eCommerce_eCommercePurchasesWest* loob ühenduse vahendava olemiga nimega *eCommerce_eCommercePurchasesEast* ja siis ühendub sihtolemiga nimega *eCommerce_eCommerceContacts*, on see mitme hüppega seos.
 
@@ -168,16 +165,6 @@ Mitmehüppega ja mitme teega seoseid saab kasutada koos mitme **mitme hüppega m
 Näiteks kui tegevusolem nimega *eCommerce_eCommercePurchasesWest* loob ühenduse vahendava olemiga nimega *eCommerce_eCommercePurchasesEast* ja siis ühendub kahe sihtolemiga nimega *eCommerce_eCommerceContacts* ja *loyaltyScheme_loyCustomers* on see mitme hüppega seos.
 
 :::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Lähteolem loob ühenduse otse ühe sihtolemiga ja loob ühenduse mõne muu sihtolemiga vahendava olemi kaudu.":::
-
-## <a name="manage-existing-relationships"></a>Olemasolevate seoste haldamine 
-
-Lehel Seosed tähistab iga seost rida. 
-
-Valige seos ja üks järgmistest suvanditest: 
- 
-- **Redigeeri**: redigeerige kohandatud seoste atribuute redigeerimispaanil ja salvestage muudatused.
-- **Kustutamine**: kohandatud seoste kustutamine.
-- **Kuvamine**: saate vaadata süsteemi loodud ja päritud seoseid. 
 
 ## <a name="next-step"></a>Järgmine etapp
 

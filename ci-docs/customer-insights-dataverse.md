@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
-description: Siit saate teada, kuidas ühendada Customer Insightsi ja Microsoft Dataverse mõista väljundolemeid, mis eksporditakse rakendusse Dataverse.
-ms.date: 05/30/2022
+description: Siit saate teada, kuidas ühendada Customer Insights ja Microsoft Dataverse mõista väljundolemeid, mis eksporditakse Dataverse.
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,107 +11,119 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011515"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153399"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
 
-Customer Insights pakub võimalust teha väljundolemid kättesaadavaks rakendusena [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). See integratsioon võimaldab hõlpsat andmete jagamist ja kohandatud arendamist madala koodi / koodita lähenemisviisi kaudu. Väljundolemid [on](#output-entities) keskkonnas tabelitena Dataverse saadaval. Andmeid saate kasutada mis tahes muu rakenduse kohta tabelite põhjal Dataverse. Need tabelid lubavad stsenaariume, nagu automatiseeritud töövood rakenduse kaudu Power Automate või rakenduste loomine rakenduses Power Apps.
+Customer Insights pakub võimalust muuta väljundolemid kättesaadavaks kujul [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). See integratsioon võimaldab lihtsat andmete jagamist ja kohandatud arendamist madala koodiga / koodivaba lähenemisviisi kaudu. Väljundolemid [on](#output-entities) keskkonnas tabelitena Dataverse saadaval. Andmeid saate kasutada mis tahes muu tabelitel Dataverse põhineva rakenduse jaoks. Need tabelid võimaldavad selliseid stsenaariume nagu automatiseeritud töövood või Power Automate rakenduste loomine Power Apps.
 
-Dataverse Keskkonnaga ühenduse loomine võimaldab teil andmevoogude ja lüüside abil [alla neelata Power Platform andmeid ka asutusesisene andmeallikatest](connect-power-query.md#add-data-from-on-premises-data-sources).
+Keskkonnaga Dataverse ühenduse loomine võimaldab teil andmevoogude ja lüüside abil [alla neelata Power Platform ka andmeid asutusesisene andmeallikatest](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- Customer Insightsi ja Dataverse keskkondi tuleb majutada samas piirkonnas.
-- Teil peab olema keskkonnas üldadministraatori Dataverse roll. Veenduge, kas see [Dataverse keskkond on seotud](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) teatud turberühmadega, ja veenduge, et teid lisatakse nendesse turberühmadesse.
-- Ükski teine Customer Insightsi keskkond pole juba seotud keskkonnaga, Dataverse mida soovite ühendada. Siit saate teada, [kuidas olemasolevat ühendust keskkonnaga Dataverse](#remove-an-existing-connection-to-a-dataverse-environment) eemaldada.
-- Keskkond Microsoft Dataverse saab ühenduse luua ainult ühe salvestusruumikontoga. See kehtib ainult siis, kui konfigureerite keskkonna [oma Azure Data Lake Storage](own-data-lake-storage.md) rakenduse kasutamiseks.
+- Customer Insights ja Dataverse keskkonnad peavad olema majutatud samas piirkonnas.
+- Teil peab olema keskkonnas üldadministraatori Dataverse roll. Kontrollige, kas see [Dataverse keskkond on seotud](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) teatud turberühmadega, ja veenduge, et oleksite nendesse turberühmadesse lisatud.
+- Ükski teine Customer Insightsi keskkond pole veel seostatud keskkonnaga, Dataverse mida soovite ühendada. Vaadake, kuidas [eemaldada olemasolev ühendus keskkonnaga Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
+- Keskkond Microsoft Dataverse saab luua ühenduse ainult ühe salvestusruumikontoga. See kehtib ainult siis, kui konfigureerite keskkonna [oma Azure Data Lake Storage](own-data-lake-storage.md).
 
-## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Dataverse Keskkonna ühendamine Customer Insightsiga
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse Õigus ladustamisvõimsusele
 
-See **Microsoft Dataverse** samm võimaldab teil customer insightsi keskkonnaga ühendada, Dataverse luues samal ajal [Customer Insightsi keskkonna](create-environment.md).
+Customer Insightsi tellimus annab teile õiguse lisavõimsusele teie organisatsiooni olemasoleva [Dataverse salvestusruumi](/power-platform/admin/capacity-storage) jaoks. Lisatud maht sõltub teie tellimuse kasutatavate profiilide arvust.
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="andmete jagamine Microsoft Dataverse automaatselt lubatud uute netokeskkondade jaoks.":::
+**Näide:**
 
-Administraatorid saavad konfigureerida Customer Insightsi olemasoleva Dataverse keskkonna ühendamiseks. Pakkudes URL-i Dataverse keskkonnale, on see seotud nende uue Customer Insightsi keskkonnaga.
+Eeldades, et saate 15 GB andmebaasi salvestusruumi ja 20 GB failisalvestusruumi 100 000 kliendiprofiili kohta. Kui teie tellimus sisaldab 300 000 kliendiprofiili, on teie kogu salvestusmaht 45 GB (3 × 15 GB) andmebaasi salvestusruum ja 60 GB failisalvestusruum (3 × 20 GB). Samamoodi, kui teil on 30K kontoga B2B-tellimus, oleks teie kogu salvestusmaht 45 GB (3 x 15 GB) andmebaasi salvestusruum ja 60 GB failisalvestusruum (3 x 20 GB).
 
-Kui te ei soovi olemasolevat Dataverse keskkonda kasutada, loob süsteem rentniku Customer Insightsi andmete jaoks uue keskkonna. [Power Platform administraatorid saavad määrata, kes saab keskkondi](/power-platform/admin/control-environment-creation) luua. Kui häälestate uut Customer Insightsi keskkonda ja administraator on keelanud keskkondade Dataverse loomise kõigile peale administraatorite, ei pruugi teil olla võimalik uut keskkonda luua.
+Logi maht ei ole teie organisatsiooni jaoks astmeline ega fikseeritud.
 
-**Andmete ühiskasutuse** lubamine, Dataverse märkides ruut Andmejagamine.
+Lisateavet üksikasjalike võimsuse õiguste kohta leiate jaotisest [Dynamics 365 litsentsimisjuhend](https://go.microsoft.com/fwlink/?LinkId=866544).
 
-Kui kasutate oma data lake storage kontot, vajate **ka õiguste identifikaatorit**. Lisateavet õiguse identifikaatori hankimise kohta leiate järgmisest jaotisest.
+## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Keskkonna ühendamine Dataverse Customer Insightsiga
 
-## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Andmete ühiskasutuse lubamine enda oma Dataverse kaudu Azure Data Lake Storage (Eelvaade)
+See **Microsoft Dataverse** samm võimaldab teil ühendada Customer Insightsi oma Dataverse keskkonnaga, luues samal ajal [Customer Insightsi keskkonna](create-environment.md).
 
-Andmete jagamise lubamine, Microsoft Dataverse kui teie keskkond [kasutab teie enda Azure Data Lake Storage kontot](own-data-lake-storage.md), vajab täiendavat konfiguratsiooni. Customer Insightsi keskkonda seadistaval kasutajal **peavad kontol olema vähemalt** salvestusriba andmelugeja *õigused customerInsightsi* ümbrises Azure Data Lake Storage.
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="andmete jagamine Microsoft Dataverse automaatselt lubatud uutes netikeskkondades.":::
 
-1. Looge Azure'i tellimusel kaks turberühma – üks **Readeri** turberühm ja üks **kaasautori** turberühm ning Microsoft Dataverse määrake teenus mõlema turberühma omanikuks.
-2. Hallake nende turberühmade kaudu oma salvestusruumikonto konteineri CustomerInsights pääsukontrolli loendit (ACL). Microsoft Dataverse Lisage teenus ja kõik Dataverse põhinevad ärirakendused (nt Dynamics 365 Marketing) **kirjutuskaitstud** õigustega **turberühma Reader**. Lisage *kaasautori* turberühma ainult **rakendus** Customer Insights, et anda profiilide ja ülevaadete kirjutamiseks nii lugemis- kui ka **kirjutamisõigused**.
+Administraatorid saavad konfigureerida Customer Insightsi olemasoleva Dataverse keskkonna ühendamiseks. Andes keskkonnale URL-i Dataverse, loob see ühenduse nende uue Customer Insightsi keskkonnaga. Pärast Ühenduse loomist Customer Insightsi ja Dataverse, ärge muutke keskkonna organisatsiooni nime Dataverse. URL-is kasutatakse Dataverse organisatsiooni nime ja muudetud nimi katkestab ühenduse Customer Insightsiga.
+
+Kui te ei soovi olemasolevat Dataverse keskkonda kasutada, loob süsteem teie rentniku Customer Insightsi andmete jaoks uue keskkonna. [Power Platform administraatorid saavad määrata, kes saavad keskkondi luua](/power-platform/admin/control-environment-creation). Kui häälestate uut Customer Insightsi keskkonda ja administraator on keelanud keskkondade Dataverse loomise kõigile peale administraatorite, ei pruugi teil olla võimalik uut keskkonda luua.
+
+**Andmete jagamise lubamiseks** Dataverse märkige ruut Andmete jagamine.
+
+Kui kasutate oma Data Lake'i salvestusruumi kontot, on teil vaja **ka õiguste identifikaatorit**. Õiguse IDENTIFIKAATORI hankimise kohta lisateabe saamiseks vaadake järgmist jaotist.
+
+## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Andmete ühiskasutuse lubamine enda omaga Dataverse Azure Data Lake Storage (eelvaade)
+
+Andmete jagamise Microsoft Dataverse lubamine, kui teie keskkond [kasutab teie enda Azure Data Lake Storage kontot](own-data-lake-storage.md), vajab täiendavat konfigureerimist. Customer Insightsi keskkonda häälestaval kasutajal peavad kontol olevas **CustomerInsightsi konteineris olema vähemalt** salvestusruumi bloobi *andmelugeja* Azure Data Lake Storage õigused.
+
+1. Looge oma Azure'i tellimuses kaks turberühma - üks **Readeri** turberühm ja üks **kaasautorite** turberühm ning Microsoft Dataverse määrake teenus mõlema turberühma omanikuks.
+2. Hallake nende turberühmade kaudu oma salvestusruumikontol oleval CustomerInsightsi konteineril olevat juurdepääsukontrolli loendit (ACL). Microsoft Dataverse Lisage teenus ja kõik Dataverse põhised ärirakendused, nagu Dynamics 365 Marketing, **kirjutuskaitstud** õigustega **turberühma Reader**. Lisage *kaasautorite* turberühma ainult **rakendus** Customer Insights, et anda profiilide ja statistika kirjutamiseks nii lugemis- kui ka **kirjutamisõigused**.
 
 ### <a name="limitations"></a>Piirangud
 
 Oma Dataverse kontoga kasutamisel Azure Data Lake Storage on kaks piirangut:
 
-- Organisatsiooni ja Dataverse konto vahel Azure Data Lake Storage on üks-ühele vastendus. Dataverse Kui organisatsioon on ühendatud salvestusruumikontoga, ei saa ta mõne muu salvestuskontoga ühendust luua. See piirang takistab, et a Dataverse ei asustada mitut salvestusruumikontot.
-- Andmete jagamine ei toimi, kui teie Azure Data Lake Storage kontole juurdepääsuks on vaja Azure Private Linki häälestust, kuna see on tulemüüri taga. Dataverse praegu ei toeta eralingi kaudu ühendust privaatsete lõpp-punktidega.
+- Organisatsiooni ja konto vahel Dataverse toimub üks-ühele kaardistamine Azure Data Lake Storage. Kui organisatsioon Dataverse on ühendatud salvestusruumikontoga, ei saa ta mõne muu salvestusruumikontoga ühendust luua. See piirang takistab seda, et Dataverse a ei asuta mitut salvestusruumikontot.
+- Andmete ühiskasutus ei toimi, kui teie Azure Data Lake Storage kontole juurdepääsemiseks on vaja Azure Private Linki seadistust, kuna see asub tulemüüri taga. Dataverse praegu ei toeta privaatse lingi kaudu ühendust privaatsete lõpp-punktidega.
 
-### <a name="set-up-powershell"></a>PowerShelli häälestamine
+### <a name="set-up-powershell"></a>PowerShelli seadistamine
 
-PowerShelli skriptide käivitamiseks peate kõigepealt seadistama PowerShelli vastavalt.
+PowerShelli skriptide käivitamiseks peate kõigepealt vastavalt seadistama PowerShelli.
 
-1. Installige PowerShell for Graph [Azure Active Directory uusim](/powershell/azure/active-directory/install-adv2) versioon.
+1. Installige PowerShell for [Azure Active Directory Graphi](/powershell/azure/active-directory/install-adv2) uusim versioon.
    1. Valige arvutis klaviatuuril Windowsi klahv ja otsige **Windows PowerShell** ning valige **Käivita administraatorina**.
    1. Sisestage avanevasse PowerShelli aknasse `Install-Module AzureAD`.
 2. Importige kolm moodulit.
     1. Sisestage `Install-Module -Name Az.Accounts` PowerShelli aknas juhised ja järgige neid.
-    1. Korda ja `Install-Module -Name Az.Resources``Install-Module -Name Az.Storage`.
+    1. Korrake ja `Install-Module -Name Az.Resources``Install-Module -Name Az.Storage`.
 
 ### <a name="configuration-steps"></a>Konfigureerimise sammud
 
-1. Laadige alla kaks PowerShelli skripti, mida peate meie inseneri GitHubi repo-st [käivitama](https://github.com/trin-msft/byol).
+1. Laadige alla kaks PowerShelli skripti, mida peate käivitama meie inseneri GitHubi [repost](https://github.com/trin-msft/byol).
     1. `CreateSecurityGroups.ps1`
-       - Selle PowerShelli skripti käitamiseks on vaja *rentnikuadministraatori* õigusi.
-       - See PowerShelli skript loob teie Azure'i tellimusel kaks turberühma. Üks reader rühmale ja teine kaasautorite rühmale ning teenus muutub Microsoft Dataverse mõlema turberühma omanikuks.
-       - Käivitage see PowerShelli skript Windows PowerShellis, pakkudes Azure'i tellimuse ID-d, mis sisaldab teie Azure Data Lake Storage. Lisateabe ja rakendatud loogika ülevaatamiseks avage redaktoris PowerShelli skript.
+       - Selle PowerShelli skripti käitamiseks on teil vaja *rentniku* administraatori õigusi.
+       - See PowerShelli skript loob teie Azure'i tellimuses kaks turberühma. Üks lugejarühmale ja teine kaasautorite rühmale ning teenib Microsoft Dataverse mõlema turberühma omanikuna.
+       - Käivitage see PowerShelli skript Windows PowerShellis, esitades Azure'i tellimuse ID, mis sisaldab teie Azure Data Lake Storage. Avage redaktoris PowerShelli skript, et vaadata üle lisateave ja rakendatud loogika.
        - Salvestage mõlemad selle skripti loodud turberühma ID väärtused, kuna kasutame neid skriptis `ByolSetup.ps1`.
 
         > [!NOTE]
         > Turberühma loomise saab rentnikus keelata. Sellisel juhul oleks vaja käsitsi seadistamist ja teie Azure AD administraator peaks lubama [turberühma loomise](/azure/active-directory/enterprise-users/groups-self-service-management).
 
     2. `ByolSetup.ps1`
-        - Selle skripti käitamiseks on vaja *salvestusruumi bloobi andmeomaniku* õigusi salvestusruumi konto/konteineri tasemel või see skript loob selle teie jaoks. Pärast skripti edukat käivitamist saab rollimäärangu käsitsi eemaldada.
-        - See PowerShelli skript lisab teenuse ja mis tahes Microsoft Dataverse ärirakenduste jaoks Dataverse vajaliku tole-põhise juurdepääsukontrolli (RBAC). Samuti värskendab see skriptiga `CreateSecurityGroups.ps1` loodud turberühmade access control listi (ACL) CustomerInsightsi konteineris. Kaasautorite rühmal on *RWX-i* luba ja lugejate rühmal on *ainult R-x-luba*.
-        - Käivitage see PowerShelli skript Windows PowerShellis, pakkudes Azure'i tellimuse ID-d, mis sisaldab teie Azure Data Lake Storage, salvestusruumikonto nime, ressursirühma nime ning readeri ja kaasautori turberühma ID väärtusi. Lisateabe ja rakendatud loogika ülevaatamiseks avage redaktoris PowerShelli skript.
+        - Selle skripti käitamiseks vajate *salvestusruumi bloobi andmete omaniku* õigusi salvestusruumikonto/konteineri tasemel või see skript loob selle teie jaoks. Teie rollimäärangu saab pärast skripti edukat käivitamist käsitsi eemaldada.
+        - See PowerShelli skript lisab teenusele ja mis tahes Microsoft Dataverse põhistele ärirakendustele Dataverse vajaliku rollipõhise juurdepääsukontrolli. Samuti värskendab see skriptiga loodud turberühmade juurdepääsukontrolli loendit (ACL) CustomerInsightsi konteineris `CreateSecurityGroups.ps1`. Kaasautorite rühmal on *rwx* õigus ja lugejate rühmal ainult *r-x* õigus.
+        - Käivitage see PowerShelli skript Windows PowerShellis, sisestades Azure'i tellimuse ID, mis sisaldab teie Azure Data Lake Storage salvestusruumikonto nime, ressursirühma nime ning lugeja ja kaasautori turberühma ID väärtusi. Avage redaktoris PowerShelli skript, et vaadata üle lisateave ja rakendatud loogika.
         - Kopeerige väljundstring pärast skripti edukat käivitamist. Väljundstring näeb välja selline: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 
-2. Sisestage ülalt **kopeeritud väljundstring rakenduse keskkonnakonfiguratsioonietapi väljale Õiguste identifikaator** Microsoft Dataverse.
+2. Sisestage ülalt **kopeeritud väljundstring keskkonna konfigureerimise etapi õiguste identifikaatori** väljale Microsoft Dataverse.
 
-:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Konfigureerimissuvandid andmete ühiskasutuse lubamiseks rakendusega Azure Data Lake Storage Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Konfiguratsioonisuvandid andmete jagamise lubamiseks teie enda Azure Data Lake Storage Microsoft Dataverse saidil .":::
 
 ### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Olemasoleva ühenduse eemaldamine keskkonnaga Dataverse
 
-Keskkonnaga Dataverse ühenduse loomisel tähendab tõrketeade **See CDS-organisatsioon on juba seotud mõne muu Customer Insightsi eksemplariga**, et Dataverse keskkonda kasutatakse juba Customer Insightsi keskkonnas. Olemasoleva ühenduse saate eemaldada keskkonna üldadministraatorina Dataverse. Muudatuste elluviimiseks võib kuluda paar tundi.
+Keskkonnaga Dataverse ühenduse loomisel tähendab tõrketeade **See CDS-i organisatsioon on juba teise Customer Insightsi eksemplariga** seotud, et Dataverse keskkonda kasutatakse juba Customer Insightsi keskkonnas. Olemasoleva ühenduse saate eemaldada keskkonna üldadministraatorina Dataverse. Muudatuste asustamiseks võib kuluda paar tundi.
 
 1. Avage [Power Apps](https://make.powerapps.com).
-1. Valige keskkond keskkonnavalijast.
+1. Valige keskkonnavalijast keskkond.
 1. Avage **lahendused**
 1. Desinstallige või kustutage lahendus nimega **Dynamics 365 Customer Insights Kliendikaardi lisandmoodul (eelvaade)**.
 
 VÕI
 
 1. Avage oma Dataverse keskkond.
-1. Avage täpsemate **sätete** > **lahendused**.
-1. Desinstallige **CustomerInsightsCustomerCard** lahendus.
+1. Avage **täpsemad sätted** > **Lahendused**.
+1. Desinstallige **Lahendus CustomerInsightsCustomerCard**.
 
-Kui ühenduse eemaldamine sõltuvuste tõttu ebaõnnestub, peate eemaldama ka sõltuvused. Lisateavet leiate teemast [Sõltuvuste](/power-platform/alm/removing-dependencies) eemaldamine.
+Kui ühenduse eemaldamine ebaõnnestub sõltuvuste tõttu, peate ka sõltuvused eemaldama. Lisateavet vaadake jaotisest [Sõltuvuste](/power-platform/alm/removing-dependencies) eemaldamine.
 
 ## <a name="output-entities"></a>Väljundolemid
 
-Mõned Customer Insightsi väljundolemid on rakenduses tabelitena Dataverse saadaval. Allolevates jaotistes kirjeldatakse nende tabelite eeldatavat skeemi.
+Mõned Customer Insightsi väljundolemid on saadaval tabelitena.Dataverse Allolevates jaotistes kirjeldatakse nende tabelite eeldatavat skeemi.
 
 - [Kliendi profiil](#customerprofile)
 - [AlternateKey](#alternatekey)
@@ -132,7 +144,7 @@ Tabel AlternateKey sisaldab olemite võtmeid, mis osalevad ühildamisprotsessis.
 |Column  |Tüüp  |Kirjeldus  |
 |---------|---------|---------|
 |DataSourceName    |String         | Andmeallika nimi. Näiteks: `datasource5`.”        |
-|EntityName        | String        | Olemi nimi Customer Insightsis. Näiteks: `contact1`.”        |
+|EntityName        | String        | Üksuse nimi Customer Insightsis. Näiteks: `contact1`.”        |
 |AlternateValue (Alternatiivne väärtus)    |String         |Alternatiivne ID, mis on vastendatud kliendi ID-ga. Näide: `cntid_1078`         |
 |KeyRing           | Mitmerealine tekstiväli        | JSON-väärtus  </br> Näide: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
 |CustomerId         | String        | Ühildatud kliendiprofiili ID.         |
@@ -204,9 +216,9 @@ See tabel sisaldab kliendiprofiilide segmendi liikmelisuse teavet.
 |--------------------|--------------|-----------------------------|
 | CustomerId        | String       | Kliendiprofiili ID        |
 | SegmentProvider      | String       | Rakendus, mis avaldab segmendid.      |
-| SegmentMembershipType | String       | Selle segmendi liikmekirje kliendi tüüp. Toetab mitut tüüpi(nt klient, kontakt või konto). Vaikimisi: klient  |
-| Segmendid       | JSON-sõne  | Kordumatute segmentide loend, mille liige kliendiprofiil on      |
-| msdynci_identifier  | String   | Segmendi liikmelisuse kirje ainuidentifikaator. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentLiikmetüüp | String       | Kliendi tüüp see segmendi liikmelisuse kirje. Toetab mitut tüüpi, näiteks klienti, kontakti või kontot. Vaikimisi: Klient  |
+| Segmendid       | JSON-sõne  | Nimekiri unikaalsetest segmentidest, mille liige kliendiprofiil on      |
+| msdynci_identifier  | String   | Segmendi liikmekirje kordumatu identifikaator. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | Deterministlik GUID, mis on loodud`msdynci_identifier`          |
 
 <!--

@@ -1,6 +1,6 @@
 ---
-title: Valige andmete ühendamiseks lähteväljad.
-description: Ühendamise protsessi esimene samm on olemite, atribuutide, primaarvõtmete ja semantiliste tüüpide valimine andmete vastendamiseks ühtse kliendiprofiiliga.
+title: Lähteväljade valimine andmete ühendamiseks
+description: Ühendamisprotsessi esimene samm on olemite, atribuutide, primaarvõtmete ja semantiliste tüüpide valimine andmete vastendamiseks ühtse kliendiprofiiliga.
 recommendations: false
 ms.date: 04/22/2022
 ms.subservice: audience-insights
@@ -13,71 +13,69 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: a75218c996b277e00924f2b7b38ea686a1f4dc38
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740990"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139777"
 ---
-# <a name="select-source-fields-for-data-unification"></a>Valige andmete ühendamiseks lähteväljad.
+# <a name="select-source-fields-for-data-unification"></a>Lähteväljade valimine andmete ühendamiseks
 
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
-
-Esimene samm ühendamisel on nende andmekogumite olemite ja väljade valimine, mida soovite ühendada. Valige olemid, mis sisaldavad kliendiga seotud üksikasju (nt nime, aadressi, telefoninumbrit ja meili). Saate valida ühe või mitu olemi.
+Ühendamise esimene samm on nende andmekogumite olemite ja väljade valimine, mida soovite ühendada. Valige olemid, mis sisaldavad kliendiga seotud üksikasju, nagu nimi, aadress, telefoninumber ja meiliaadress. Saate valida ühe või mitu olemit.
 
 ## <a name="select-entities-and-fields"></a>Olemite ja väljade valimine
 
-1. **Avage jaotisSe Andmete** > **ühendamine**.
+1. Avage **Jaotis Andmete** > **ühendamine**.
 
-   :::image type="content" source="media/m3_unify_land.png" alt-text="Kuvatõmmis ühendatava sihtlehest, et näha esimest käivitamiskogemust, kus esiletõstetud on käivitatud algus.":::
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Kuvatõmmis ühendamise sihtlehest esmakäivituskogemuse jaoks, kus on esile tõstetud alustamine.":::
 
 1. Seejärel valige suvand **Alustamine**.
 
-1. **Valige lehel Allikas väärtus** **Vali olemid ja väljad**. Kuvatakse **paan Vali olemid ja väljad**.
+1. **Valige lehel Allikaväljad** suvand **Vali olemid ja väljad**. Kuvatakse **paan Olemite ja väljade** valimine.
 
 1. Valige vähemalt üks olem.
 
-1. Tuvastage iga valitud olemi puhul väljad, mida soovite kasutada kliendikirjete ja väljade sobitamiseks ühtsesse profiili kaasamiseks. Neid välju nimetatakse *atribuutideks*. Saate valida nõutavad atribuudid olemist eraldi või kaasata kõik olemi atribuudid, valides olemitasemel märkeruudu. Saate otsida atribuutide ja olemite üleselt märksõnu, et valida vajalikud atribuudid, mida soovite vastendada.
+1. Tuvastage iga valitud olemi puhul väljad, mida soovite kasutada kliendikirjete ja ühtsesse profiili kaasatavate väljade vastendamiseks. Neid välju nimetatakse *atribuutideks*. Saate valida nõutavad atribuudid olemilt eraldi või kaasata kõik olemi atribuudid, märkides olemi tasemel märkeruudu. Saate otsida atribuutide ja olemite üleselt märksõnu, et valida vajalikud atribuudid, mida soovite vastendada.
 
    :::image type="content" source="media/m3_select_entities.png" alt-text="Valitud olemite ja atribuutide kuvatõmmis.":::
 
-   Selles näites lisame **olemid Kontaktid** ja **Kliendilojaalsus**. Nende olemite valimisel saate tuletada ülevaateid, kus veebikliendid on püsikliendiprogrammi liikmed.
+   Selles näites lisame **olemid Kontaktid** ja **CustomerLoyalty**. Nende olemite valimisel saate tuletada ülevaateid, kus veebikliendid on püsikliendiprogrammi liikmed.
 
-1. Oma valikute kinnitamiseks valige suvand **Rakenda**. Kuvatakse valitud olemid ja atribuudid.
+1. Oma valikute kinnitamiseks valige suvand **Rakenda**. Valitud olemid ja atribuudid kuvatakse.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Atribuutide primaarvõtme ja semantilise tüübi valimine
 
-   :::image type="content" source="media/m3_select_primary.png" alt-text="Kuvatõmmis valitud olemitest, mille primaarvõti pole valitud." lightbox="media/m3_select_primary.png":::
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Valitud olemite kuvatõmmis, kus primaarvõtit pole valitud." lightbox="media/m3_select_primary.png":::
 
-Tehke iga olemi puhul järgmised juhised.
+Tehke iga olemi puhul järgmised toimingud.
 
-1. **Valige primaarvõti**. Primaarvõti on olemile ainuomane atribuut. Et atribuut saaks olla sobiv primaarvõti, ei tohi see sisaldada topeltväärtusi, puuduvaid väärtusi ega null-väärtusi. Põhivõtmetena toetatakse stringi-, täisarvu- ja GUID-andmetüübi atribuute.
+1. Valige **primaarvõti**. Primaarvõti on olemile ainuomane atribuut. Et atribuut saaks olla sobiv primaarvõti, ei tohi see sisaldada topeltväärtusi, puuduvaid väärtusi ega null-väärtusi. Stringi, täisarvu ja GUID andmetüübi atribuute toetatakse primaarvõtmetena.
 
-1. Tehisintellekti mudelite kasutamiseks nutikaks semantika prognoos, aja säästmiseks ja täpsuse parandamiseks veenduge, et **intelligentne kaardistamine** on sisse lülitatud. Intelligentne vastendamine tõstab esile AI-põhise semantika soovituse väljal **Tüüp**. Soovitatud valiku alistamiseks valige saadaolevast suvandite loendist mis tahes semantiline tüüp.
+1. Tehisintellekti mudelite kasutamiseks semantika nutikaks prognoos, aja säästmiseks ja täpsuse parandamiseks veenduge, et **intelligentne kaardistamine** oleks sisse lülitatud. Intelligentne vastendamine tõstab esile AI-põhise semantika soovituse väljal **Tüüp**. Soovitatud valiku saate alistada, valides saadaolevate suvandite loendist mis tahes semantilise tüübi.
 
-1. Valige iga atribuudi puhul semantiline **tüüp**, mis kirjeldab seda atribuuti kõige paremini (nt nime, linna või meiliaadressi).
+1. Valige iga atribuudi jaoks semantiline **tüüp**, mis seda atribuuti kõige paremini kirjeldab (nt nimi, linn või meiliaadress).
 
    > [!NOTE]
-   > Üks väli peaks vastendama semantilise tüübiga *Isik.FullName*, et kliendinimi kliendikaardil asustada. Vastasel juhul kuvatakse kliendikaardid ilma nimeta.
+   > Üks väli peaks vastendama semantilise tüübiga *Isik.FullName*, et asustada kliendikaardil olev kliendinimi. Vastasel juhul kuvatakse kliendikaardid ilma nimeta.
 
-   1. Süsteemi poolt tuvastatud atribuuditüübi muutmiseks valige mõni muu tüüp. Kui tüüpi pole olemas, looge kohandatud semantiline tüüp, valides **atribuudi välja Tüüp** ja sisestades oma kohandatud semantilise tüübi nime.
+   1. Süsteemi poolt tuvastatud atribuuditüübi muutmiseks valige mõni muu tüüp. Kui tüüpi pole olemas, looge kohandatud semantiline tüüp, valides **atribuudi jaoks välja Tüüp** ja sisestades kohandatud semantilise tüübi nime.
 
-   1. URL-i sisaldava atribuudi lisamiseks avalikult saadaolevatele profiilipiltidele või logodele valige URL-i sisaldav olem ja väli. Sisestage väljale **Liik** järgmine tekst.
+   1. URL-i sisaldava atribuudi lisamiseks avalikult kättesaadavatele profiilipiltidele või logodele valige URL-i sisaldav olem ja väli. Sisestage väljale **Tüüp** järgmine teave.
       - Isiku korral: Person.ProfileImage
       - Organisatsiooni korral: Organization.LogoImage
 
-   1. Konto nime atribuudi puhul sisestage väljale **Liik** "Organization.Name".
+   1. Kontonime atribuudi puhul sisestage väljale **Tüüp** "Organization.Name".
 
-1. Vaadake üle atribuudid, kus semantiline tüüp automaatselt tuvastatakse. Need atribuudid on loetletud jaotises **Vastendatud väljad** Läbivaatus. Ühendatud kliendiväljade **etapis saab kombineerida** ainult sama tüüpi atribuute. Statistika automaatseks soovitamiseks kasutatakse semantilisi tüüpe. Veenduge, et valitud tüübid oleksid kõigis valitud olemites ühtsed.
+1. Vaadake üle atribuudid, kus semantiline tüüp tuvastatakse automaatselt. Need atribuudid on loetletud jaotises **Vaadake vastendatud väljad üle**. Ainult sama tüüpi atribuute saab kombineerida **etapis Ühtne klient**. Semantilisi tüüpe kasutatakse ülevaadete automaatseks soovitamiseks. Veenduge, et valitud tüübid oleksid kõigis valitud olemites ühesugused.
 
-1. Atribuutide puhul, mis pole automaatselt vastendatud semantilise tüübiga, valige semantiline tüübiväli, sisestage kohandatud atribuudi tüüpi nimi või jätke need vastendamata. Need atribuudid on loetletud jaotises **Vastendamata väljade** andmete määratlemine.
+1. Atribuutide puhul, mida ei vasteta automaatselt semantilise tüübiga, valige semantiline tüübiväli, sisestage kohandatud atribuuditüübi nimi või jätke need kaardistamata. Need atribuudid on loetletud jaotises **Andmete määratlemine kaardistamata väljadel**.
 
 1. Pärast iga olemi juhiste täitmist valige **Salvesta lähteväljad**.
 
 1. Tehke valik **Edasi**.
 
 > [!div class="nextstepaction"]
-> [Järgmine samm: Duplikaatide eemaldamine](remove-duplicates.md)
+> [Järgmine samm: eemaldage duplikaadid](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

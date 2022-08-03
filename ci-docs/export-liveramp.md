@@ -1,61 +1,75 @@
 ---
 title: Segmentide eksportimine LiveRamp (eelversioon)
 description: Lugege, kuidas konfigureerida ühendust ja eksportida LiveRampi.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 3e30a16dcb276fa6c951ad0b42ed0a4792f87ce3
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 55eacea3af83f46583a3a43797d625479f56586b
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050758"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196711"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Segmentide eksportimine LiveRamp&reg; (eelversioon)
 
 Aktiveerige oma andmed LiveRampis, et luua ühendus üle 500 platvormiga nii digitaalmeedias, sotsiaalmeedias kui ka televisioonis. Töötage LiveRampis oma andmetega, et sihistada, tõkestada ja isikupärastada reklaamikampaaniaid.
 
-## <a name="prerequisites-for-a-connection"></a>Ühenduse eeltingimus
+## <a name="prerequisites"></a>eeltingimused
 
-- Selle konnektori kasutamiseks vajate LiveRampi tellimust.
-- Tellimuse hankimiseks võtke otse [LiveRampiga ühendust](https://liveramp.com/contact/). [Lisateave LiveRampi kasutuselevõtu kohta](https://liveramp.com/our-platform/data-onboarding/).
+- LiveRampi tellimus selle konnektori kasutamiseks. Tellimuse hankimiseks võtke otse [LiveRampiga ühendust](https://liveramp.com/contact/). [Lisateave LiveRampi kasutuselevõtu kohta](https://liveramp.com/our-platform/data-onboarding/).
+
+## <a name="known-limitations"></a>Teadaolevad piirangud
+
+- LiveRamp eksport kasutab SFTP eksporti. Tulemüüride taga olevaid SFTP sihtkohti praegu ei toetata.
+- Kui kasutate autentimiseks SSH-võtit, veenduge, et [loote privaatvõtme](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) PEM- või SSH.COM vormingus. Kui kasutate Puttyt, teisendage oma privaatvõti eksportimise teel kui Open SSH. Toetatakse järgmisi privaatvõtme vorminguid.
+  - RSA OpenSSL PEM- ja ssh.com-vormingus
+  - DSA OpenSSL PEM- ja ssh.com-vormingus
+  - ECDSA 256/384/521 OpenSSL PEM-vormingus
+  - ED25519 ja RSA OpenSSH võtmevormingus
+- Ekspordi käitusaeg sõltub teie süsteemi jõudlusest. Soovitame teie serveri minimaalseks konfiguratsiooniks kahte protsessori tuuma ja 1 GB mälu.
+- Kuni 100 miljoni kliendiprofiiliga olemite eksportimiseks võib kuluda 90 minutit, kui kasutate soovitatud minimaalset kahe protsessori tuuma ja 1 GB mäluga konfiguratsiooni.
+- Tegelik profiilide (või andmete) arv, mida saate LiveRampi eksportida, sõltub teie LiveRampi tellimusest.
 
 ## <a name="set-up-connection-to-liveramp"></a>Ühenduse loomine LiveRampiga
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **LiveRamp** ühenduse konfigureerimiseks.
+1. Valige **Lisa ühendus** ja valige **LiveRamp**.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
-1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Valige, kes saavad seda ühendust kasutada. Vaikimisi on see ainult Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Sisestage oma LiveRampi Secure FTP (SFTP) konto **kasutajanimi** ja **parool**.
-See identimisteave võib erineda teie LiveRampi kasutuselevõtu identimisteabest.
+1. Valige, kas soovite autentida oma ühenduse SSH või kasutajanime /parooli kaudu, ja esitage vajalikud üksikasjad.
 
 1. Valige suvand **Kinnita**, et testida LiveRampi ühendust.
 
-1. Pärast edukat kinnitamist andke oma nõusolek **Andmete privaatsus ja nõuetele vastavuse** jaoks, valides märkeruudu **Nõustun**.
+1. Pärast edukat kontrollimist vaadake üle [andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse loomiseks valige **Salvesta**.
 
 ## <a name="configure-an-export"></a>Ekspordi konfigureerimine
 
-Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+1. Valige **Lisa eksport**.
 
-1. Valige **Ekspordiühendus** väljal ühendus LiveRamp jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+1. Valige **Ekspordiühendus** väljal ühendus LiveRamp jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
-1. Valige väljal **Peamise identifikaatori valimine** kas **Meil**, **Nimi ja aadress** või **Telefon**, et saata LiveRampi identimise jaoks.
-   > [!div class="mx-imgBorder"]
-   > ![LiveRampi konnektor atribuutide kaardistamiseks.](media/export-liveramp-segments.png "LiveRampi konnektor atribuutide vastendamisega")
+1. Sisestage ekspordi nimi.
+
+1. Valige väljal **Andmete** ühendamine suvand **E-post**, **Nimi ja aadress** või **Telefon**, mille soovite saata Teenusesse LiveRamp identiteedi lahendamiseks.
+
+   :::image type="content" source="media/export-liveramp-segments.png" alt-text="LiveRampi konnektor atribuutide kaardistamiseks.":::
 
 1. Vastendage oma *Kliendi* olemi vastavad atribuudid valitud võtmeidentifikaatori jaoks.
 
@@ -64,18 +78,10 @@ Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfi
    > [!TIP]
    > Rohkemate põhiidentifikaatorite LiveRampi saatmisel on vastete määr tõenäoliselt suurem.
 
-1. Valige segmendid, mida soovite LiveRampi eksportida.
+1. Valige segmendid, mille soovite eksportida.
 
 1. Valige **Salvesta**.
 
-Ekspordi salvestamine ei käivita eksporti kohe.
-
-Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
-
-Kui lubate Dynamics 365 Customer Insightsil Liverampi andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed). Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et Liveramp täidab kõik teie privaatsus- või turbenõuded. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
-Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Kliendi eluea väärtuse (CLV) prognoos
 description: Prognoosige tulevikus aktiivsete klientide tulupotentsiaali.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055209"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186435"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Kliendi eluea väärtuse (CLV) prognoos
 
 Prognoosige potentsiaalset väärtust (tulu), mille üksikud aktiivsed kliendid teie ettevõttesse toovad, määratletud tulevase ajavahemiku jooksul. Antud funktsioon aitab teil saavutada mitmesuguseid eesmärke.
+
 - Tehke kindlaks kõrge väärtusega kliendid ja töötlege seda ülevaadet
 - Luua strateegilisi kliendisegmente, mis põhinevad nende potentsiaalsel väärtusel käitada isikupärastatud kampaaniaid sihipärase müügi, turunduse ja tugiteenuste abil
 - Tootearenduse juhendamine, keskendudes funktsioonidele, mis suurendaksid kliendi väärtust
 - Müügi- või turundusstrateegia optimeerimine ja eelarve täpsem sidutamine kliendi väljamüügi jaoks
-- Tunnustada ja premeerida väärtuslikke kliente lojaalsus- või preemiaprogrammide abil 
+- Tunnustada ja premeerida väärtuslikke kliente lojaalsus- või preemiaprogrammide abil
 
 ## <a name="prerequisites"></a>Eeltingimused
 
@@ -35,7 +36,7 @@ Enne alustamist meenutage, mida CLV teie ettevõtte jaoks tähendab. Praegu toet
 
 Kuna CLV mudeli konfigureerimine ja käitamine ei võta palju aega, kaaluge erinevate sisendi eelistustega mudeli loomist ja võrrelge mudelitulemusi, et näha, milline mudelistsenaarium sobib teie ärivajadustega kõige paremini.
 
-###  <a name="data-requirements"></a>Andmenõuded
+### <a name="data-requirements"></a>Andmenõuded
 
 Järgmised andmed on vajalikud ja kui need on märgitud valikulised, soovituslikult mudeli parema jõudluse saavutamiseks. Mida rohkem andmeid mudel saab töödelda, seda täpsem prognoos on. Seetõttu soovitame teil võimaluse korral kasutada rohkem kliendi tegevuse andmeid.
 
@@ -52,11 +53,12 @@ Järgmised andmed on vajalikud ja kui need on märgitud valikulised, soovituslik
     - Veebitegevused: veebisaidikülastuse ajalugu, meiliajalugu
     - Lojaalsustegevused: lojaalsuspunktide kogunemise ja kasutamise ajalugu
     - Klienditeenindus logi, teeninduskõnede, kaebuste või tagastamiste ajalugu
+    - Kliendiprofiili teave
 - Andmed klienditegevuste kohta (valikuline).
     - Tegevuse identifikaatorid, mis eristavad sama tüüpi tegevusi
     - Kliendi identifikaatorid, mis vastendavad teie klientide tegevusi
     - Tegevuse teave, mis sisaldab tegevuse nime ja kuupäeva
-    - Tegevuste semantilise andmeskeemi alla kuuluvad järgmised. 
+    - Tegevuste semantilise andmeskeemi alla kuuluvad järgmised.
         - **Primaarvõti:**: Tegevuse ainuidentifikaator
         - **Ajatempel**: Primaarvõtmega tuvastatud sündmuse kuupäev ja kellaaeg
         - **Sündmus (tegevuse nimi)**: Soovitud sündmuse nimi
@@ -66,19 +68,19 @@ Järgmised andmed on vajalikud ja kui need on märgitud valikulised, soovituslik
     - Piisavad varasemad andmed: Vähemalt ühe aasta tehinguandmeid. Eelistatavalt kahe kuni kolme aasta tehinguandmed, et ennustada CLV-d ühe aasta jooksul.
     - Mitu ostu kliendi kohta: Ideaaljuhul vähemalt kaks kuni kolm tehingut kliendi ID kohta, eelistatavalt mitme kuupäeva jooksul.
     - Klientide arv: Vähemalt 100 unikaalset klienti, eelistatuult rohkem kui 10 000 klienti. Mudel nurjub, kui kliente on vähem kui 100 ja puuduvad varasemad andmed
-    - Andmete täielikkus: Sisendandmete nõutavatel väljadel on vähem kui 20% puuduvaid väärtusi   
+    - Andmete täielikkus: Sisendandmete nõutavatel väljadel on vähem kui 20% puuduvaid väärtusi
 
 > [!NOTE]
-> - Mudeli jaoks on vaja teie klientide tehingute ajalugu. Praegu saab konfigureerida ainult ühe kannete ajaloo olemi. Kui ostu-/tehinguolemit on mitu, saate need Power Query enne andmete allaneelamist liita.
+> - Mudeli jaoks on vaja teie klientide tehingute ajalugu. Praegu saab konfigureerida ainult ühe kannete ajaloo olemi. Kui ostu-/tehinguolemeid on mitu, saate need Power Query enne andmete allaneelamist liita.
 > - Täiendavate klienditegevuse andmete jaoks (valikuline) saate siiski lisada nii palju kliendi tegevuse olemeid, kui soovite mudeliga kaaluda.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kliendi eluea väärtuse (CLV) loomine
 
-1. Minge luure **ennustuste juurde** > **·**.
+1. Minge **luureprognooside** > **juurde**.
 
 1. Valige paan **Kliendi eluea väärtus** ja seejärel **Kasuta mudelit**. 
 
-1. Valige paanil **Kliendi** eluaegne väärtus **Alustamine**.
+1. **Tehke paanil Kliendi eluaegne väärtus** valik **Alustamine**.
 
 1. **Nimeta see mudel** ja **Väljundi olemi nimi**, et neid muudest mudelitest või olemitest eristada.
 
@@ -122,11 +124,11 @@ Järgmised andmed on vajalikud ja kui need on märgitud valikulised, soovituslik
 
 1. Tehke valik **Edasi**.
 
-### <a name="add-optional-data"></a>Valikuliste andmete lisamine
+### <a name="add-optional-activity-data"></a>Valikuliste tegevuste andmete lisamine
 
-Andmed, mis kajastavad peamisi kliendisuhtlusi (nt veebi-, klienditeenindus- ja sündmuste logid), lisavad tehingute kirjetele konteksti. Täiendavad klienditegevuse andmetes leitud mustrid võib parendada prognoosi täpsust. 
+Andmed, mis kajastavad peamisi kliendisuhtlusi (nt veebi-, klienditeenindus- ja sündmuste logid), lisavad tehingute kirjetele konteksti. Täiendavad klienditegevuse andmetes leitud mustrid võib parendada prognoosi täpsust.
 
-1. Valige etapis **Lisaandmed (valikuline)** suvand **Lisa andmed**. Valige kliendi tegevuse olem, mis sisaldab klienditegevuse teavet, nagu on kirjeldatud [eeltingimustes](#prerequisites).
+1. **Valige etapis Lisaandmed (valikuline)** jaotises **Boosti** mudeliülevaated täiendavate tegevusandmetega käsk Lisa **andmeid**. Valige kliendi tegevuse olem, mis sisaldab klienditegevuse teavet, nagu on kirjeldatud [eeltingimustes](#prerequisites).
 
 1. Vastendage semantilised väljad oma klienditegevuse olemi atribuutidega ja valige **Järgmine**.
 
@@ -135,21 +137,40 @@ Andmed, mis kajastavad peamisi kliendisuhtlusi (nt veebi-, klienditeenindus- ja 
 1. Valige tegevuse tüüp, mis vastab teie lisatava kliendi tegevuse tüübile. Valige olemasolevate tegevuste tüüpide hulgast või lisage uus.
 
 1. Konfigureerige seos oma klienditegevuse olemist *Kliendi* olemiga.
-    
+
     1. Valige väli, mis tuvastab kliendi klienditegevuse tabelis. See võib olla otse *Kliendi* olemi peamise kliendi-ID-ga.
     1. Valige *Kliendi* olem, mis vastab teie peamisele *Kliendi* olemile.
     1. Tippige seost kirjeldav nimi.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Konfiguratsioonivoo sammu pilt täiendavate andmete lisamiseks ja tegevuse konfigureerimiseks koos täidetud näidetega.":::
 
-1. Valige **Salvesta**.    
+1. Valige **Salvesta**.
     Lisage rohkem andmeid, kui soovite lisada muid klienditegevusi.
+
+1. Lisage valikulised kliendiandmed või valige **Edasi**.
+
+### <a name="add-optional-customer-data"></a>Valikuliste kliendiandmete lisamine
+
+Valige 18 tavaliselt kasutatava kliendiprofiili atribuudi hulgast, mida mudeli sisendina lisada. Need atribuudid võivad viia teie ettevõtte kasutusjuhtumite puhul isikupärasemate, asjakohasemate ja teostatavamate mudelitulemusteni.
+
+Näiteks: Contoso Coffee soovib ennustada kliendi eluaegset väärtust, et sihtida kõrge väärtusega kliente isikupärastatud pakkumisega, mis on seotud nende uue espressomasina turuletoomisega. Contoso kasutab CLV mudelit ja lisab kõik 18 kliendiprofiili atribuuti, et näha, millised tegurid mõjutavad nende kõrgeima väärtusega kliente. Nad leiavad, et kliendi asukoht on nende klientide jaoks kõige mõjukam tegur.
+Selle teabe abil korraldavad nad espressomasina käivitamiseks kohaliku ürituse ja teevad koostööd kohalike müüjatega isikupärastatud pakkumiste ja ürituse erilise kogemuse saamiseks. Ilma selle teabeta oleksid Contoso võib-olla saatnud ainult üldisi turundusmeile ja jätnud kasutamata võimaluse isikupärastada seda kohalikku segmenti oma väärtuslikest klientidest.
+
+1. **Valige etapis Täiendavad andmed (valikuline)** jaotises **Lisa andmeid** jaotises **Boosti mudeliülevaated veelgi täiendavate kliendiandmetega**.
+
+1. Olemi **puhul** valige **Customer: CustomerInsights**, et valida ühtne kliendiprofiili tabel, mis vastendab kliendiatribuutide andmed. Kliendi ID **jaoks** valige **System.Customer.CustomerId**.
+
+1. Vastendage rohkem välju, kui andmed on teie ühendatud kliendiprofiilides saadaval.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Kliendiprofiili andmete vastendatud väljade näide.":::
+
+1. Valige **Salvesta** pärast atribuutide vastendamist, mida mudel peaks kliendi eluea väärtuse prognoosimiseks kasutama.
 
 1. Tehke valik **Edasi**.
 
 ### <a name="set-update-schedule"></a>Värskendusajakava määratlemine
 
-1. Valige **Andmete värskendamise ajakava** etapist mudeli ümberõppe sagedus võttes aluseks uusimad andmed. See säte on oluline ennustuste täpsuse värskendamiseks, kuna Customer Insightsis neelatakse uusi andmeid. Suur osa ettevõtteid saavad teha ümberõpet kord kuus ja saavutavad täpsed prognoosid.
+1. Valige **Andmete värskendamise ajakava** etapist mudeli ümberõppe sagedus võttes aluseks uusimad andmed. See säte on oluline prognooside täpsuse värskendamiseks, kuna Customer Insightsis kasutatakse uusi andmeid. Suur osa ettevõtteid saavad teha ümberõpet kord kuus ja saavutavad täpsed prognoosid.
 
 1. Tehke valik **Edasi**.
 

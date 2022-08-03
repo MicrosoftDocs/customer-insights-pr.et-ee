@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053016"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195931"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Kliendiprofiilide rikastamine demograafiaga Experian (eelversioon)
 
@@ -29,21 +29,21 @@ Praegu toetame kliendiprofiilide rikastamist ainult Ameerika Ühendriikides.
 
 - Ühenduse Experian [konfigureerib](connections.md) [administraator](#configure-the-connection-for-experian).
 
-- Experian Teie jaoks loodud SSH-toega turvalise transpordi (ST) konto Experian kasutaja ID, osapoole ID ja mudeli number.
+- Experian Teie jaoks loodud SSH-toega turvalise transpordi (ST) konto Experian kasutaja ID, osapoole ID ja mudelinumber.
 
 ## <a name="configure-the-connection-for-experian"></a>Konfigureerige Experian ühendus
 
-Peate olema Customer Insightsi administraator [ja teil peab](permissions.md#admin) olema Experian kasutaja ID, osapoole ID ja mudeli number.
+Peate olema Customer Insightsi administraator [ning](permissions.md#admin) teil peab Experian olema kasutaja ID, osapoole ID ja mudelinumber.
 
-1. Valige **rikastamise konfigureerimisel Lisa ühendus** või avage **administraatoriühendused** > **ja** valige paanil **Käsk** Häälesta Experian.
+1. Valige **Rikastamise konfigureerimisel Lisa ühendus** või minge jaotisse **Administraatori** > **ühendused** ja valige **paanil käsk Häälesta** Experian.
 
    :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Experian ühenduse konfiguratsiooni paan.":::
 
-1. Sisestage oma turvalise transpordi konto jaoks ühenduse nimi ning kehtiv kasutaja ID, osapoole ID ja mudelinumber Experian.
+1. Sisestage ühenduse nimi ning turvalise transpordi konto kehtiv kasutaja ID, osapoole ID ja mudelinumber Experian.
 
 1. Vaadake üle ja esitage oma nõusolek [Andmete privaatsuse ja nõuetele vastavus](#data-privacy-and-compliance) kohta, valides suvandi **Nõustun**.
 
-1. Konfiguratsiooni kinnitamiseks valige **Kinnita** ja seejärel valige **Salvesta**.
+1. Valige **konfiguratsiooni valideerimiseks Kinnita** ja seejärel valige **Salvesta**.
 
 ### <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
 
@@ -53,37 +53,37 @@ Kui lubate Dynamics 365 Customer Insights edastada andmeid Experian-ile, lubate 
 
 1. Avage suvandid **Andmed** > **Rikastamine** ja valige vahekaart **Avasta**.
 
-1. **Valige** **Paanilt** Demograafiliste andmete rikastamine Experian.
+1. Valige **Rikasta minu andmeid** paanilt **Demograafiline teave** Experian.
 
    :::image type="content" source="media/experian-tile.png" alt-text="Experian paani rikastamise ülevaate lehel.":::
 
 1. Vaadake ülevaade üle ja seejärel valige **Edasi**.
 
-1. Valige ühendus. Võtke ühendust administraatoriga, kui see pole saadaval.
+1. Valige ühendus. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
 1. Tehke valik **Edasi**.
 
-1. **Valige kliendi andmestik** ja valige profiil või segment, mida soovite rikastada rakenduse demograafiliste andmetega Experian. Olem *Klient* rikastab kõiki teie kliendiprofiile, samas kui segment rikastab ainult selles segmendis sisalduvaid kliendiprofiile.
+1. **Valige kliendiandmete kogum** ja valige profiil või segment, millelt Experian soovite demograafiliste andmetega rikastada. Kliendi *olem* rikastab kõiki teie kliendiprofiile, samas kui segment rikastab ainult selles segmendis sisalduvaid kliendiprofiile.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Kuvatõmmis kliendiandmete kogumi valimisel.":::
 
-1. Määratlege, millist tüüpi välju oma ühtsetest profiilidest kasutada demograafia andmete sobitamiseks rakendusest Experian. Vähemalt üks väljadest **Nimi ja aadress**, **Telefon** või **E-post** on nõutav. Suurema vaste täpsuse tagamiseks lisage teised väljad. Tehke valik **Edasi**.
+1. Määratlege, millist tüüpi välju oma ühtsetest profiilidest kasutada demograafiliste andmete vastendamiseks allikast Experian. Vähemalt üks väljadest **Nimi ja aadress**, **Telefon** või **E-post** on nõutav. Suurema vastetäpsuse tagamiseks lisage teisi välju. Tehke valik **Edasi**.
 
-1. Vastendage oma väljad rakenduse demograafiliste andmetega Experian.
+1. Vastendage oma väljad demograafiliste andmetega alates Experian.
 
 1. Valige **Edasi**, et lõpetada väljade kaardistamine.
 
-1. Sisestage **rikastamise nimi** ja väljundolemi **nimi**.
+1. Sisestage **rikastamise nimi** ja **väljundolemi nimi**.
 
 1. Valige **Salvesta rikastamine** pärast valikute läbivaatamist.
 
-1. Rikastamisprotsessi alustamiseks või lehele Rikastamine naasmise **lähedal** valige **Käivita**.
+1. Valige **Käivita**, et alustada rikastamisprotsessi või sulgeda, et naasta **lehele Rikastamised**.
 
-## <a name="view-enrichment-results"></a>Rikastamise tulemuste kuvamine
+## <a name="view-enrichment-results"></a>Rikastumistulemuste vaatamine
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Põlluga **rikastatud** klientide arv tagab iga rikastatud välja katvuse süvitsimise.
+Põldude **kaupa** rikastatud klientide arv annab iga rikastatud välja katvuse süvitsimineku.
 
 ## <a name="next-steps"></a>Järgmised toimingud
 

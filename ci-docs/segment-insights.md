@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: e90bdc523c3f8857c150ccba9d81f055d39f9feb
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ccb33594a3a92e87d307f3300c77772ef8b4a82f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051586"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170998"
 ---
 # <a name="segment-insights-preview"></a>Segmendi ülevaated (eelversioon)
 
@@ -43,26 +43,25 @@ Lisaks saate analüüsida, kuidas kattumine teatud atribuute muudab.
 
 ### <a name="view-and-optimize-an-overlap-analysis"></a>Kattumise analüüsi vaatamine ja optimeerimine
 
-Pärast analüüsi lõpetamist näete selle ülevaate kohta üksikasju suvandis **Segmendid** > **Ülevaated (eelversioon)**.
+1. Pärast analüüsi lõpetamist näete selle ülevaate kohta üksikasju suvandis **Segmendid** > **Ülevaated (eelversioon)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Segmendi kattumise ülevaate üksikasjad.":::
+   :::image type="content" source="media/segment-overlap.png" alt-text="Segmendi kattumise ülevaate üksikasjad.":::
 
-Analüüsi tulemuste nägemiseks valige ülevaade.
+1. Analüüsi tulemuste nägemiseks valige ülevaade.
 
-- Liikmete arv, kelle segmendid valitud analüüsis kattuvad.
-- Liikmete arv, mis sisaldub ühes segmendis, kuid mitte teistes segmentides.
-- Kui valisite kattuva analüüsi konfigureerimisel väljad, leiate need vastavatelt vahekaartidelt. Filtri ripploendi abil saate valida mis tahes atribuudi huvitaseme ja allservas olevas tabelis kuvatakse vastavad andmed.
+   - Liikmete arv, kelle segmendid valitud analüüsis kattuvad.
+   - Liikmete arv, mis sisaldub ühes segmendis, kuid mitte teistes segmentides.
+   - Kui valisite kattuva analüüsi konfigureerimisel väljad, leiate need vastavatelt vahekaartidelt. Filtri ripploendi abil saate valida mis tahes atribuudi huvitaseme ja allservas olevas tabelis kuvatakse vastavad andmed.
 
 ## <a name="segment-differentiators"></a>Segmendidiferentseerijad
 
-Segmentide eristajad aitavad teil selgitada välja, mis eristab segmenti teistest klientidest või teisest segmendist. Te peate valima segmendi ja süsteem tuvastab profiili atribuudid ja meetmed, mis valitud segmente eristab.
+Segmentide eristajad aitavad teil selgitada välja, mis eristab segmenti teistest klientidest või teisest segmendist. Valige segment ja süsteem tuvastab profiili atribuudid ja mõõdud, mis eristavad valitud segmenti.
 
 ### <a name="run-a-differentiator-analysis"></a>Eristajate analüüsi käitamine
 
 1. Avage **Segmendid** ja valige vahekaart **Ülevaated (eelversioon)**.
 
-1. Valige **Uus** ja valige suvand **Kattumine** paanil **Ülevaate tüübi valimine**.
+1. Valige **Uus** ja valige **paanil Valige ülevaate tüüp** suvand **Diferentsaatorid**.
 
 1. Valige segment, mida soovite analüüsida, kui **Primaarne segment** ja valige nupp **Edasi**.
 
@@ -70,29 +69,29 @@ Segmentide eristajad aitavad teil selgitada välja, mis eristab segmenti teistes
 
 1. Soovi korral võite valida ühe või mitu huvivälja, et keskenduda konkreetsete atribuutide analüüsile, ja valige **Edasi**.
 
-1. Sisestage kattumise analüüsi nimi, valikuline kuvatav nimi ja kirjeldus.
+1. Sisestage diferentseerimisanalüüsi nimi, valikuline kuvatav nimi ja kirjeldus.
 
-1. Analüüsi käivitamiseks valige **Salvesta**. Kattumise analüüs on valmis, kui olek muutub valikust Värskendab valikule Õnnestus.
+1. Analüüsi käivitamiseks valige **Salvesta**. Diferentseerimisanalüüs on valmis, kui olek muutub värskendamisest edukaks.
 
 ### <a name="view-and-optimize-a-differentiators-analysis"></a>Eristajate analüüsi vaatamine ja otimeerimine
 
-Pärast analüüsi lõpetamist näete selle ülevaate kohta üksikasju suvandis **Segmendid** > **Ülevaated (eelversioon)**.
+1. Pärast analüüsi lõpuleviimist minge jaotisse **Segmentide** > **ülevaated (eelvaade)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Segmendi eristaja ülevaate üksikasjad.":::
+   :::image type="content" source="media/segment-differentiators.png" alt-text="Segmendi eristaja ülevaate üksikasjad.":::
 
-Analüüsi tulemuste nägemiseks valige ülevaade. Eristaja analüüs hõlmab kahte vahekaarti. Vahekaart **Atribuudid** loetleb profiili atribuudid, mida loetakse eristajateks. Vahekaart **Meetmed** loetleb eristajad. Iga vahekaart sisaldab järgmisi üksikasju.
+1. Analüüsi tulemuste nägemiseks valige ülevaade. Eristaja analüüs hõlmab kahte vahekaarti. Vahekaart **Atribuudid** loetleb profiili atribuudid, mida loetakse eristajateks. Vahekaart **Meetmed** loetleb eristajad. Iga vahekaart sisaldab järgmisi üksikasju.
 
-- Eristajate järjestatud loendit, mis on erinevuse skoori alusel sorditud.
-- Iga eristaja **Erinevuse skoor**. Erinevuse skoor tähistab atribuudi erinevust kahe segmendi vahel. Mida suurem on erinevuse skoor, seda suurem on kahe segmendi vaheline atribuutide erinevus. Valige skoor, et avada paan **Erinevuse skoor** selle atribuudi eristaja väärtustega.
+   - Eristajate järjestatud loendit, mis on erinevuse skoori alusel sorditud.
+   - Iga eristaja **Erinevuse skoor**. Erinevuse skoor tähistab atribuudi erinevust kahe segmendi vahel. Mida suurem on erinevuse skoor, seda suurem on kahe segmendi vaheline atribuutide erinevus. Valige skoor, et avada paan **Erinevuse skoor** selle atribuudi eristaja väärtustega.
 
 ## <a name="manage-segment-insights"></a>Segmendi ülevaadete haldus
 
-Saate ülevaadetega kasutada kärusiba järgmisi valikuid.
+Minge jaotisse **Segmentide** > **statistika (eelvaade),** et vaadata oma segmentide statistikat ja seda hallata. Valige saadaolevate toimingute vaatamiseks segmendiülevaade.
 
-- **Tagasi** ülevaadete loendisse naasmiseks
-- **Värskenda** analüüsi uuesti käivitamiseks
-- **Kustuta** selle ülevaate eemaldamiseks
-
+- **Vaadake** ülevaateanalüüsi
+- **Ülevaate redigeerimine** selle atribuutide muutmiseks
+- **Ülevaate värskendamine** analüüsi uuesti käivitamiseks
+- **Ülevaate ümbernimetamine**
+- **Ülevaate kustutamine**
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

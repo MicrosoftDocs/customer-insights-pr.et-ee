@@ -1,52 +1,53 @@
 ---
 title: Segmentide eksportimine Constant Contacti (eelversioon)
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Constant Contacti.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: fe9706a7cd0755412ee18c4b974684bb9aa3f8d3
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082299"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196481"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Segmentide eksportimine Constant Contacti (eelversioon)
 
-Saate eksportida ühendatud kliendiprofiilide segmente Constant Contacti ja kasutada neid turundustegevuste jaoks. 
+Saate eksportida ühendatud kliendiprofiilide segmente Constant Contacti ja kasutada neid turundustegevuste jaoks.
 
-## <a name="prerequisites-for-a-connection"></a>Ühenduse eeltingimus
+## <a name="prerequisites"></a>eeltingimused
 
--   Teil on [Constant Contact konto](https://www.constantcontact.com/account-home) ja vastav administraatori mandaat.
--   Olete [konfigureerinud segmendid](segments.md) Customer Insightsis.
--   Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
+- Konstantse [kontakti konto](https://www.constantcontact.com/account-home) ja vastav administraatori identimisteave.
+- Konstantse [kontaktiloendi ID](https://app.constantcontact.com/pages/contacts/ui#lists). Et leida URL-ist loendi ID, avage loend Constant Contactis.
+- [Konfigureeritud segmendid](segments.md) Customer Insightsis.
+- Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Pidevasse Kontakti saate eksportida kuni miljoni kliendiprofiili ekspordi kohta.
-- Eksportimine Constant Contacti on piiratud segmentidega.
-- Kuni miljoni kliendiprofiili eksportimine Pidevasse Kontakti võib võtta kuni üks tund. 
-- Kliendiprofiilide arv, mida saate Pidevasse Kontakti eksportida, sõltub ja on piiratud vastavalt teie Pideva Kontakti lepingule.
+- Kuni 1 miljon kliendiprofiili ekspordi kohta Pidevasse kontakti, mille lõpuleviimiseks võib kuluda kuni üks tund. Kliendiprofiilide arv, mida saate Konstantsesse kontakti eksportida, sõltub teie lepingust Constant Contactiga.
+- Ainult segmendid.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Ühenduse loomine Constant Contactiga
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **Constant Contact** ühenduse konfigureerimiseks.
+1. Valige **Lisa ühendus** ja valige **Pidev kontakt**.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
-1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Valige, kes saavad seda ühendust kasutada. Vaikimisi on see ainult Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
-1. Valige **Ühenda** Constant Contactiga ühenduse lähtestamiseks.
+1. Ühenduse lähtestamiseks valige **Ühenda**.
 
-1. Valige **Autentimiseks Konstantse Kontaktiga** ja andke oma haldurile identimisteabe Konstantse Kontakti jaoks. 
+1. Valige **Autentimiseks Konstantse Kontaktiga** ja andke oma haldurile identimisteabe Konstantse Kontakti jaoks.
 
 1. Valige **Lisa mind ekspordikasutajana** ja sisestage oma Customer Insightsi identimisteave.
 
@@ -54,31 +55,26 @@ Saate eksportida ühendatud kliendiprofiilide segmente Constant Contacti ja kasu
 
 ## <a name="configure-an-export"></a>Ekspordi konfigureerimine
 
-Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+1. Valige **Lisa eksport**.
 
-1. Valige **Ekspordiühendus** väljal ühendus Constant Contacti jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+1. Valige **Ekspordiühendus** väljal ühendus Constant Contacti jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
-1. Sisestage oma [**Constant Contact List ID**](https://app.constantcontact.com/pages/contacts/ui#lists). Et leida URL-ist loendi ID, avage loend Constant Contactis.
+1. Sisestage ekspordi nimi.
 
-1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Segmentide eksportimine Constant Contacti on vajalik.
+1. Sisestage oma **konstantse kontaktiloendi ID**.
 
-1. Soovi korral saate isikupärastatud meilide loomiseks täiendavalt eksportida väljad Eesnimi ja Perekonnanimi. Nende väljade vastendamiseks valige **Lisa atribuut**.
+1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi.
+
+1. Soovi korral eksportige **eesnimi** ja **perekonnanimi** lisaväljadena, et luua isikupärasemaid e-kirju. Nende väljade vastendamiseks valige **Lisa atribuut**.
 
 1. Valige segmendid, mille soovite eksportida.
 
 1. Valige **Salvesta**.
 
-Ekspordi salvestamine ei käivita eksporti kohe.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
-
-Kui lubate, et Dynamics 365 Customer Insights edastab andmeid Constant Contactile, lubate, et andmed edastatakse väljaspoole vastavuse piiri Dynamics 365 Customer Insights, sealhulgas võimalikud tundliku iseloomuga andmed nagu isikuandmed. Microsoft kannab sellised andmed üle teie juhiste järgi, kuid teie vastutate selle eest, et Constant Contact vastaks teie võimalikele privaatsus- või turvalisuse nõuetele. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

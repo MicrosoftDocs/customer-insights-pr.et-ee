@@ -1,6 +1,6 @@
 ---
 title: Meetmete ülevaade
-description: Vaadake, kuidas meetmed aitavad analüüsida ja kajastada teie ettevõtte tulemuslikkust.
+description: Siit saate teada, kuidas meetmed aitavad teie ettevõtte tulemuslikkust analüüsida ja kajastada.
 ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083118"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170815"
 ---
 # <a name="measures-overview"></a>Meetmete ülevaade
 
-See aitab teil paremini mõista kliendi käitumist ja äritegevust. Nad vaatavad asjakohaseid [ühendatud profilide](data-unification.md) väärtusi. Näiteks soovib ettevõte näha, kui palju on *kogukulud kliendi kohta*, et mõista üksikkliendi ostuajalugu või mõõta *ettevõtte kogumüüki*, et aru saada kogu ettevõtte kogutaseme tuludest.  
+See aitab teil paremini mõista kliendi käitumist ja äritegevust. Nad vaatavad asjakohaseid [ühendatud profilide](data-unification.md) väärtusi. Näiteks soovib ettevõte näha, kui palju on *kogukulud kliendi kohta*, et mõista üksikkliendi ostuajalugu või mõõta *ettevõtte kogumüüki*, et aru saada kogu ettevõtte kogutaseme tuludest.
 
-Meetmed luuakse [mõõtekoosturi](measure-builder.md), erinevate operaatoritega andmepäringu platvormi ja lihtsate kaardistamisvõimaluste abil. See võimaldab filtreerida andmeid, rühmitada tulemusi, tuvastada [olemite seoseteid](relationships.md) ja kuvada väljundi eelvaadet. Tavaliselt kasutatavate meetmete tõhusaks konfigureerimiseks saate [kasutada eelmääratletud malle](measure-templates.md).
+Saate luua meetmeid äritegevuse kavandamiseks, küsides kliendiandmeid ja ekstraktides ülevaateid. Näiteks looge kogukulu kliendi kohta ja *kogutulu mõõdik* kliendi *kohta*, et aidata tuvastada klientide rühma, kellel on suured kulutused, kuid suur tootlus. Seejärel looge nende meetmete põhjal segment [,](segments.md) et juhtida järgmisi parimaid toiminguid.
 
-Kasutage äritegevuste plaanimiseks näitaja ehitajat, pärides kliendiandmeid ja väljastades ülevaateid. Näiteks *kogukulu ühe kliendi kohta* ja *kogutulu ühe kliendi kohta* loomine aitab tuvastada suure kulutamise, kuid suure tootlusega klientide rühm. [Saate luua nende meetmete põhjal segmendi](segments.md), et juhtida parimaid toiminguid.
+## <a name="create-a-measure"></a>Meetme loomine
 
-## <a name="manage-your-measures"></a>Meetmete haldamine
+Valige, kuidas luua mõõt oma sihtrühma põhjal.
 
-Meetmete loendi leiate lehelt **Meetmed**.
+# <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
 
-Leiate teavet näidiku tüübi, autori, loomise kuupäeva, staatuse ja oleku kohta. Kui valite loendist soovitud näitaja, saate vaadata väljundi eelversiooni ja laadida alla CSV-faili.
+- Nullist mõõtu ehitajaga: [Ehitage ise](measure-builder.md).
+- Sageli kasutatavatest mõõtudest: [kasutage eelmääratletud malle](measure-templates.md).
+
+# <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
+
+Nullist mõõtu ehitajaga: [Ehitage ise](measure-builder.md).
+
+---
+
+## <a name="manage-existing-measures"></a>Olemasolevate meetmete haldamine
+
+Minge **lehele Mõõdud**, et vaadata loodud mõõtusid, nende olekut, mõõtude tüüpi ja viimast korda, millal andmeid värskendati. Saate sortida mõõtude loendi mis tahes veeru järgi või kasutada otsinguvälja, et leida mõõt, mida soovite hallata.
+
+Valige mõõdu kõrval, et vaadata saadaolevaid toiminguid. Valige mõõdu nimi, et vaadata väljundi eelvaadet ja laadida alla CSV-fail.
 
 :::image type="content" source="media/measures-actions.png" alt-text="Toimingud üksikute näitajate haldamiseks."lightbox="media/measures-actions.png":::
 
-Mõõdu valimisel on saadaval järgmised toimingud.
-
-- Meetme konfiguratsiooni **Redigeerimine**.
-- **Duplikaat** mõõt. Saate selle atribuute kohe redigeerida või lihtsalt duplikaadi salvestada.
-- **Värskendage** näitajat, võttes aluseks värskeimad andmed. Kõigi meetmete samaaegseks värskendamiseks valige kõik mõõdud ja **värskendage**.
+- **Redigeerige** mõõtu selle atribuutide muutmiseks.
+- **Värskendage** mõõtu, et kaasata uusimad andmed.
 - Meetme **Ümbernimetamine**.
-- **Aktiveeri** või **Inaktiveeri**. Passiivseid näitajad ei värskendata [kavandatud värskenduse](system.md#schedule-tab) ajal.
-- **Silt** [segmendi siltide](work-with-tags-columns.md#manage-tags) haldamiseks.
+- **Aktiveerige** või **inaktiveerige** meede. Passiivseid mõõtühikuid ei värskendata ajastatud värskendamise [ajal](system.md#schedule-tab) ja nende olekuks on **märgitud** vahelejäetud **olek**, mis näitab, et värskendamist isegi ei proovitud.
+- **Silt** mõõdu siltide [haldamiseks](work-with-tags-columns.md#manage-tags).
 - Meetme **Kustutamine**.
+- **Veerud** [kuvatavate veergude](work-with-tags-columns.md#customize-columns) kohandamiseks.
+- **Filtreerige** siltide [filtreerimiseks](work-with-tags-columns.md#filter-on-tags).
+- **Otsige nime**, et otsida mõõdunime järgi.
+
+## <a name="refresh-measures"></a>Meetmete värskendamine
+
+Meetmeid saab värskendada automaatse ajakava alusel või soovi korral käsitsi värskendada. Ühe või mitme mõõdu käsitsi värskendamiseks valige need ja valige **Värskenda**. Automaatse värskendamise ajastamiseks [minge jaotisse](system.md#schedule-tab) Haldussüsteemi **·** > **ajakava** > **.**
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>Järgmine etapp
-
-Olemasolevate näitajate abil saate luua [kliendisegmendi](segments.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,52 +1,53 @@
 ---
-title: Segmentide eksportimine braze'i (eelvaade)
+title: Segmentide eksportimine Braze'i (eelvaade)
 description: Vaadake, kuidas konfigureerida ühendust ja eksportida Braze'i.
-ms.date: 06/29/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 314a61f82c4040a8dbd6dff1dd5d92e20464f82a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082677"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195102"
 ---
-# <a name="export-segments-to-braze-preview"></a>Segmentide eksportimine braze'i (eelvaade)
+# <a name="export-segments-to-braze-preview"></a>Segmentide eksportimine Braze'i (eelvaade)
 
-Eksportige ühtsete kliendiprofiilide segmendid Braze'i ja kasutage neid turundustegevustes.
+Eksportige ühtsete kliendiprofiilide segmendid Braze'i ja kasutage neid turundustegevusteks.
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- Braze'i [konto](https://www.braze.com/) ja vastavad administraatori identimisteave.
-- Olemasolevad [segmendid Braze'is](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/).
+- [Braze'i konto](https://www.braze.com/) ja vastavad administraatori mandaadid.
+- [Braze API võti](https://www.braze.com/docs/api/basics/)
 - [Konfigureeritud segmendid](segments.md) Customer Insightsis.
 - Eksporditud segmentide ühtsed kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi ja Braze'i kliendi ID-d.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Braze'i eksportimine on piiratud segmentidega.
-- Kuni 1 miljoni kliendiprofiili eksportimine Braze'i võib võtta kuni 40 minutit.
-- Braze'i eksporditavate kliendiprofiilide arv sõltub braze'iga sõlmitud lepingust ja on piiratud.
+- Braze'ile kuni 1 miljon kliendiprofiili, mille täitmine võib võtta kuni 40 minutit. Kliendiprofiilide arv, mida saate Braze'i eksportida, sõltub teie lepingust Braze'iga.
+- Ainult segmendid.
 
-## <a name="set-up-connection-to-braze"></a>Ühenduse häälestamine Braze'iga
+## <a name="set-up-connection-to-braze"></a>Braze'iga ühenduse loomine
+
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Minge **Administraator** > **Ühendused**.
 
-1. Ühenduse konfigureerimiseks valige **Lisa ühendus** ja valige **Braze**.
+1. Valige **Lisa ühendus** ja valige **Braze**.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
-1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Valige, kes saavad seda ühendust kasutada. Vaikimisi on see ainult Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Sisselogimise jätkamiseks esitage oma [Braze API-võti](https://www.braze.com/docs/api/basics/).
+1. Sisselogimise jätkamiseks esitage oma Braze API võti.
 
-1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
-1. Ühenduse avamiseks Braze'iga valige **Ühenda**.
+1. Ühenduse lähtestamiseks valige **Ühenda**.
 
 1. Valige **Lisa mind ekspordikasutajana** ja sisestage oma Customer Insightsi identimisteave.
 
@@ -54,29 +55,22 @@ Eksportige ühtsete kliendiprofiilide segmendid Braze'i ja kasutage neid turundu
 
 ## <a name="configure-an-export"></a>Ekspordi konfigureerimine
 
-Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+1. Valige **Lisa eksport**.
 
-1. Valige väljal **Ekspordi** ühendus jaotisest Braze ühendus. Kui te seda jaotist ei näe, pole teile seda tüüpi ühendusi saadaval.  
+1. Valige väljal **Ekspordiühendus** jaotisest Braze ühendus. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
-1. **Lisage ekspordile kuvatav nimi**.
+1. Sisestage ekspordi nimi.
 
-1. Lisage väljale Braze Segmendi API identifikaator, kuhu soovite eksportida, väljale **Braze Segment API identifikaator**. Identifikaatori leiate Braze'i platvormi segmendi üksikasjadest.
+1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Valige väljal **Kliendi ID** väli, mis tähistab kliendi Braze'i ID-d. Braze'i segmendid luuakse segmendi sama nimega nagu Dynamics 365 Customer Insights. Andmete vastendamiseks saate valida rohkem valikulisi välju.
 
-1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Valige väljal **Kliendi ID** väli, mis tähistab kliendi Braze ID-d. See on vajalik segmentide eksportimiseks Braze'i. Soovi korral saate valida rohkem välju.
+1. Valige olemid või segmendid, mida soovite eksportida.
 
 1. Valige **Salvesta**.
 
-Ekspordi salvestamine ei käivita eksporti kohe.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
-
-Kui lubate Dynamics 365 Customer Insights andmeid Braze'ile edastada, lubate andmete edastamise väljaspool nõuetele vastavuse piiri Dynamics 365 Customer Insights, sealhulgas potentsiaalselt tundlikke andmeid, näiteks isikuandmeid. Microsoft edastab sellised andmed teie juhiste kohaselt, kuid teie vastutate selle eest, et Braze täidaks kõik teie privaatsus- või turbekohustused. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

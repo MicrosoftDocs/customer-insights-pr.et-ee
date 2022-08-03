@@ -6,7 +6,7 @@
   href: whats-new-customer-insights.md
 - name: Õppekataloog
   items:
-    - name: Sertifitseeri Microsofti kliendiandmete platvormi spetsialistina
+    - name: Sertimine Microsofti kliendiandmete platvormi spetsialistina
       href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
     - name: Customer Insightsiga alustamine
       href: /learn/modules/get-started-customer-data-platform/
@@ -16,7 +16,7 @@
       href: /learn/modules/unified-customer-profile/
     - name: Customer Insightsiga töötamine
       href: /learn/modules/working-with-customer-insights/
-    - name: Andmete rikastamine ja ennustuste tegemine
+    - name: Rikastage andmeid ja tehke prognoose
       href: /learn/modules/enrich-data/
     - name: Väliste ühenduste haldamine
       href: /learn/modules/configure-third-party-connections/
@@ -36,13 +36,13 @@
       href: get-started.md
     - name: Alustage tasulise litsentsiga
       href: paid-license.md
-    - name: Kliendiülevaadete uurimine
+    - name: Tutvuge Customer Insightsiga
       href: home.md
     - name: Siltide ja veergudega töötamine
       href: work-with-tags-columns.md
     - name: Ärikontodega töötamine
       href: work-with-business-accounts.md
-    - name: Integreerimine Dynamics 365 Marketingiga
+    - name: Integreerimine rakendusega Dynamics 365 Marketing
       href: marketing-get-started.md
 - name: Andmeallikad
   items:
@@ -66,11 +66,11 @@
   items:
     - name: Andmete koondamise ülevaade
       href: data-unification.md
-    - name: Lähteväljade valimine
+    - name: Allikaväljade valimine
       href: map-entities.md
     - name: Duplikaatkirjete eemaldamine
       href: remove-duplicates.md
-    - name: Sobitamise tingimused
+    - name: Mängu tingimused
       href: match-entities.md
     - name: Kliendiväljade ühendamine
       href: merge-entities.md
@@ -86,11 +86,11 @@
       href: enrichment-office.md
     - name: Kaubamärgid ja huvid
       href: enrichment-microsoft.md
-    - name: Ettevõtte andmed Dun & Bradstreet'ist
+    - name: Ettevõtte andmed Dun ja Bradstreet
       href: enrichment-dnb.md
     - name: Ettevõtte andmed Leadspace'ist
       href: enrichment-leadspace.md
-    - name: Demograafia koos Experian
+    - name: Demograafiline teave koos Experian
       href: enrichment-experian.md
     - name: Täiustatud aadressid
       href: enrichment-enhanced-addresses.md
@@ -104,22 +104,26 @@
       href: enrichment-here.md
     - name: SFTP kohandatud import
       href: enrichment-SFTP-custom-import.md
-- name: Ühendamata profiilid
+- name: Kliendiprofiilid ja tegevused
   items:
-    - name: Kliendi koondprofiilide ülevaatamine
+    - name: Kliendiprofiilide vaatamine
       href: customer-profiles.md
-    - name: Kliendi koondprofiilide filtreerimine
+    - name: Otsingu- ja filtreerimisregistri haldamine
       href: search-filter-index.md
-    - name: Klienditegevuste määratlemine
+    - name: Määratlege kliendi tegevused
       href: activities.md
-    - name: Nõusolekuhalduse kasutamine
+    - name: Kasutage nõusolekuhaldust
       href: consent-management.md
+    - name: Veebiandmete kasutamine isikupärastamiseks
+      href: unknown-to-known.md
 - name: Segmendid
   items:
     - name: Segmentide ülevaade
       href: segments.md
-    - name: Segmentide loomine
+    - name: Segmendiehitajaga loomine
       href: segment-builder.md
+    - name: Kiirsegmentidega loomine
+      href: segment-quick.md
     - name: Mõõtmisepõhised segmendisoovitused
       href: suggested-segments.md
     - name: Tegevusepõhised segmendisoovitused
@@ -132,9 +136,9 @@
   items:
     - name: Meetmete ülevaade
       href: measures.md
-    - name: Uue mõõdupuu loomine
+    - name: Loo mõõtude koostajaga
       href: measure-builder.md
-    - name: Mõõtmalli kasutamine
+    - name: Mallidega loomine
       href: measure-templates.md
 - name: Prognoosid
   items:
@@ -150,7 +154,7 @@
           href: predict-subscription-churn.md
         - name: Tehinguvoolavuse prognoos
           href: predict-transactional-churn.md
-        - name: Analüüsige klientide tagasisides sisalduvaid tundeid
+        - name: Analüüsige klientide tagasiside meeleolu
           href: sentiment-analysis.md
         - name: Azure'i masinõppe kohandatud mudelite kasutamine
           href: custom-models.md
@@ -180,6 +184,10 @@
           href: export-destinations.md
         - name: Aktiivsed kampaaniad
           href: export-active-campaign.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
         - name: AdRoll
           href: export-adroll.md
         - name: Autopiloot
@@ -190,10 +198,6 @@
           href: export-azure-data-lake-storage-gen2.md
         - name: Azure Synapse Analytics
           href: export-azure-synapse-analytics.md
-        - name: Adobe Campaign Standard
-          href: export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: export-adobe-experience-platform.md
         - name: Braze
           href: export-braze.md
         - name: Campaign Monitor
@@ -228,6 +232,8 @@
           href: export-marketo.md
         - name: Microsoft Advertising
           href: export-microsoft-advertising.md
+        - name: MoEngage
+          href: export-moengage.md
         - name: Omnisend
           href: export-omnisend.md
         - name: RollWorks
@@ -270,17 +276,17 @@
       href: create-environment.md
     - name: Microsoft Dataverse’iga ühenduse loomine
       href: customer-insights-dataverse.md
-    - name: Kasuta enda oma Azure Data Lake Storage
+    - name: Kasutage oma Azure Data Lake Storage
       href: own-data-lake-storage.md
     - name: Halda keskkonna seadeid
       href: manage-environments.md
-    - name: Teenindusdirektori abil salvestusruumikontoga ühenduse loomine
+    - name: Salvestusruumikontoga ühenduse loomine teenuse Service Principal abil
       href: connect-service-principal.md
 - name: Administreerimine
   items:
     - name: Süsteemikonfiguratsiooni seadistamine
       href: system.md
-    - name: Turbesätete konfigureerimine
+    - name: Turvaseadete konfigureerimine
       href: security-overview.md
     - name: Kasutaja õiguste määramine
       href: permissions.md

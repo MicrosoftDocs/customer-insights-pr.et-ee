@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082089"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195169"
 ---
 # <a name="connections-preview-overview"></a>Ühenduste (eelversioon) ülevaade
 
@@ -27,6 +27,12 @@ Minge **Administraator** > **Ühendused**, et luua ja vaadata ühendusi.
 Vahekaardil **Ühendused** kuvatakse kõik aktiivsed ühendused. Loendis kuvatakse rida iga ühenduse jaoks.
 
 Vaadake vahekaardil **Avastamine** kiirülevaadet, kirjeldust ja saate teada, mida iga laiendatavuse suvandiga teha.
+
+## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
+
+Kui lubate Dynamics 365 Customer Insights edastada andmeid kolmandatele osapooltele või muudele Microsofti toodetele, lubate edastada andmeid väljaspool nõuetele vastavuse piire, sh potentsiaalselt tundlike andmete, näiteks isikuandmete puhul Dynamics 365 Customer Insights. Microsoft edastab selliseid andmeid teie korraldusel, kuid teie vastutate selle eest, et kolmas osapool täidaks kõiki teie privaatsus- või turbekohustusi. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Teie Dynamics 365 Customer Insights administraator saab funktsiooni kasutamise lõpetamiseks ühenduse igal ajal eemaldada.
 
 ## <a name="exports"></a>Eksportimised
 
@@ -42,13 +48,11 @@ Uusi ühendusi saavad konfigureerida ainult administraatorid, kuid loodud ühend
 
 1. Minge **Administraator** > **Ühendused (eelversioon)**.
 
-1. Avage vahekaart **Ühendused**.
-
 1. Valige uue ühenduse loomiseks **Lisa ühendus**. Valige ripploendist, millist tüüpi ühendust soovite luua.
 
 1. Sisestage **Loo ühendus** seadistuse paanil nõutavad üksikasjad.
    1. **Kuva nimi** ja ühenduse tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
-   1. Täpsed väljad sõltuvad sellest, millise teenusega ühenduse loote. Saate teavet konkreetse ühendusetüübi kohta sihtteenuse artklis.
+   1. Täpsed väljad sõltuvad sellest, millise teenusega te ühenduse loote. Saate teavet konkreetse ühendusetüübi kohta sihtteenuse artklis.
    1. Kui [kasutate oma võtmehoidlat](use-azure-key-vault.md) saladuste salvestamiseks, aktiveerige **Kasutage võtmehoidlat** ja valige loendist saladus.
 
 1. Uue ühenduse loomiseks valige **Salvesta**.
@@ -59,7 +63,7 @@ Samuti saate valida vahekaardi **Tuvastamine** paanil suvandi **Häälestamine**
 
 Ekspordiühenduse seadistamisel või redigeerimisel saate valida, millistel kasutajatel on lubatud kasutada seda kindlat ühendust [ekspordi](export-destinations.md)määratlemiseks. Vaikimisi on ühendus saadaval administraatorirollis kasutajatele. Saate seda sätet muuta jaotises **Valige, kes saab seda ühendust kasutada** ja lubada kaastöötaja rollis kasutajatel seda ühendust kasutada.
 
-- Kaastöötajad ei saa ühendust vaadata ega redigeerida. Ekspordi loomisel näevad nad ainult kuvatavat nime ja selle tüüpi.
+- Kaastöötajad ei saa ühendust vaadata ega redigeerida. Nad näevad ekspordi loomisel ainult kuvatavat nime ja selle tüüpi.
 - Ühenduse jagamisel lubate kaastöötajatel ühendust kasutada. Kaastöötajad näevad ekspordi seadistamisel ühisühendusi. Nad saavad hallata igat eksporti, mis kasutab seda kindlat ühendust.
 - Saate seda sätet muuta, hoides ekspordi alles, mille kaastöötajad on juba määratlenud.
 
@@ -69,7 +73,7 @@ Ekspordiühenduse seadistamisel või redigeerimisel saate valida, millistel kasu
 
 1. Avage vahekaart **Ühendused**.
 
-1. Valige redigeeritava ühenduse jaoks vertikaalne kolmikpunkt (&vellip;).
+1. Valige redigeeritava ühenduse vertikaalne kolmikpunkt (&vellip;).
 
 1. Valige **Redigeeri**.
 
@@ -77,7 +81,7 @@ Ekspordiühenduse seadistamisel või redigeerimisel saate valida, millistel kasu
 
 ## <a name="remove-a-connection"></a>Eemaldage ühendus
 
-Kui eemaldatavat ühendust kasutab rikastamine või eksport, peate need kõigepealt eemaldama või eemaldama. Eemaldamise dialoog juhendab teid vastavalt rikastamise või eksportimise osas.
+Kui eemaldatavat ühendust kasutavad rikastamised või ekspordid, peate need kõigepealt eemaldama või eemaldama. Eemaldamise dialoog juhendab teid vastavalt rikastamise või eksportimise osas.
 
 Eraldatud rikastamine ja eksport muutuvad passiivseks. Aktiveerite need uuesti, lisades neile teise ühenduse [Rikastamised](enrichment-hub.md) või [Ekspordid](export-destinations.md) lehel.
 
@@ -85,7 +89,7 @@ Eraldatud rikastamine ja eksport muutuvad passiivseks. Aktiveerite need uuesti, 
 
 1. Avage vahekaart **Ühendused**.
 
-1. Valige eemaldatava ühenduse jaoks vertikaalne kolmikpsis (&vellip;).
+1. Valige eemaldatava ühenduse vertikaalne kolmikpunkt (&vellip;).
 
 1. Valige rippmenüüst **Eemalda**. Ilmub kinnituse dialoog.
 
@@ -98,4 +102,6 @@ Eraldatud rikastamine ja eksport muutuvad passiivseks. Aktiveerite need uuesti, 
 
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Saate seadistada ühendusi saladustega, mida haldab teie oma võtmehoidla.
 
-Mõne ühenduse puhul on vaja saladusi, nagu API-võtmed või paroolid. Mõned ühendused toetavad saladusi, mis on talletatud teie enda võtmehoidlasse. Lugege lisateavet toetatud ühenduste ja selle kohta, kuidas häälestada [oma Customer Insightsi võtmehoidlas](use-azure-key-vault.md).
+Mõne ühenduse puhul on vaja saladusi, nagu API-võtmed või paroolid. Mõned ühendused toetavad saladusi, mis on talletatud teie enda võtmehoidlasse. Lugege lisateavet toetatud ühenduste ja selle kohta, kuidas seadistada [oma võtmehoidlas Customer Insightsi jaoks](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

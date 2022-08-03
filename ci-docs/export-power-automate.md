@@ -1,19 +1,19 @@
 ---
-title: Power Automate konnektor (eelvaade) | Microsoft Docs
+title: Power Automate konnektori (eelvaate) | Microsofti dokumendid
 description: Looge voogusid Microsoft Power Automate'is Dynamics 365 Customer Insightsist
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082446"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196113"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate’i konnektor (eelvaade)
 
@@ -21,18 +21,18 @@ Käivitage konkreetsed sündmused, mis ilmnevad automaatselt andmete muutmisel j
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Saate teha maksimaalselt 100 kõnet 60 sekundi jooksul. API lõpp-punkti saate helistada mitu korda, kasutades parameetrit $skip. [Lugege lisateavet parameetri $skip kohta](/connectors/customerinsights/#get-items-from-an-entity).
+- Maksimaalselt 100 kõnet 60 sekundi jooksul. Kasutage [parameetrit](/connectors/customerinsights/#get-items-from-an-entity) $skip API lõpp-punktile mitu korda helistamiseks.
 
 ## <a name="power-automate-triggers"></a>Power Automate'i päästikud
 
-Saate kasutada päästikuid pilvevoogude loomiseks ja korduvate ülesannete (nt teatiste ja keerukamate toimingute) automatiseerimiseks.
+Saate kasutada päästikuid pilvevoogude loomiseks ja korduvate ülesannete (nt teatiste ja keerukamate toimingute) automatiseerimiseks. Kasutage päästikuid, kui:
 
-- Käivitub, kui andmeallika värskendamine nurjub.
-- Käivitub, kui andmeallika värskendamine õnnestub.
-- Käivitub, kui segmendi lävi ületatakse. Päästiku piiranguks on läve ületamine.
-- Käivitub, kui ärimeetme lävi ületatakse. Toetatakse ainult ilma dimensioonita ärinäitajad. Päästiku piiranguks on läve ületamine.
-- Käivitatakse, kui (andmeallikad, segmendid, mõõdud jne) täielik värskendamine on lõpule viidud.
-- Käivitage, kui ühendamisprotsessi värskendamine on lõpule viidud.
+- Andmeallikas värskendamine nurjub.
+- Andmeallikas värskendamine õnnestub.
+- Segmendil ületatakse künnis. Päästiku piiranguks on läve ületamine.
+- Ettevõtlusmeetme puhul ületatakse künnis. Toetatakse ainult ilma dimensioonita ärinäitajad. Päästiku piiranguks on läve ületamine.
+- Täielik plaanitud värskendamine on lõpule viidud. See päästik ei tööta käsitsi käivitatud värskenduste puhul.
+- Ühendamisprotsessi värskendamine on lõpule viidud.
 
 [Päästikute konfigureerimine Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Power Automate'i konnektor pakub saadaolevatest päästikutest erinevaid toiming
 
 ## <a name="create-a-power-automate-flow"></a>Power Automate'i voo loomine
 
-1. Avage **Haldus** > **Ekspordi sihtkohad**.
+1. Minge **Administraator** > **Ühendused**.
 
 1. Valige **Power Automate'i** paanil suvand **Seadista**.
 
@@ -53,7 +53,5 @@ Power Automate'i konnektor pakub saadaolevatest päästikutest erinevaid toiming
 Näited voogude kasutamise kohta: 
 - Sõnumi postitamine Microsoft Teamsi kanalisse juhul, kui andmeallika värskendamine nurjub. 
 - Meili saatmine andmete omanikele segmendi läve ületamisel.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

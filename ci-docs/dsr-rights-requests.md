@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947363"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146690"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Andmesubjekti õigused (DSR) vastavalt GDPR-ile
 
@@ -29,20 +29,24 @@ Oleme pühendunud sellele, et aitame klientidel täita GDPR-i nõudeid. See hõl
 
 #### <a name="manage-data-subject-delete-requests"></a>Andmete kustutamise taotluste haldamine
 
-Customer Insights pakub konkreetse kliendi või kasutaja isikuandmete kustutamiseks järgmisi tootesiseseid kogemusi.
+Customer Insights pakub konkreetse kliendi või kasutaja isikuandmete kustutamiseks järgmisi tootesiseseid funktsioone.
 
-- **Kliendiandmete kustutamise taotluste haldamine**: kliendi andmed Customer Insightsis on sisestatud algsest andmeallikast, mis on Customer Insightsi väline. Kõik GDPR-i kustutamise taotlused tuleb teha algses andmeallikas.
+- **Kliendiandmete kustutamise taotluste haldamine**: kliendi andmed Customer Insightsis on sisestatud algsest andmeallikast, mis on Customer Insightsi väline. Esmalt tehke GDPR-i kustutamistaotlused algses andmeallikas.
 - **Customer Insightsi kliendiandmete kustutamise taotluste haldamine**: kasutajate andmeid loob Customer Insights. Kõik GDPR-i kustutamise taotlused tuleb teha Customer Insightsis.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Kliendiandmete kustutamise taotluste haldamine
 
-Customer Insightsi administraator saab nende etappide abil eemaldada kliendiandmeid, mis kustutati andmeallikas.
+Customer Insightsi administraator saab andmeallikas kustutatud kliendiandmete eemaldamiseks teha järgmist. Enne allpool loetletud toimingute jätkamist veenduge, et kustutamistaotlus oleks tehtud teie andmeallikas. 
 
 1. Logige sisse rakendusse Dynamics 365 Customer Insights.
-2. Andmeallikate **·** > **avamine**
-3. Tehke iga loendis oleva andmeallikaga, mis sisaldab kustutatud kliendiandmeid, järgmist.
+1. Avage jaotis **Andmeallikad** > **·**
+1. Tehke iga loendis oleva andmeallikaga, mis sisaldab kustutatud kliendiandmeid, järgmist.
    1. Valige vertikaalne kolmikpunkt (&vellip;) ja seejärel valige **Värskenda**.
-   2. Kontrollige andmeallikas olekut **Oleku** all. Märge tähendab, et värskendamine õnnestus. Ohukolmnurk tähendab, et midagi läks valesti. Kui kuvatakse ohukolmnurk, võtke ühendust aadressil D365CI@microsoft.com.
+   1. Kontrollige andmeallikas olekut **Oleku** all. Märge tähendab, et värskendamine õnnestus. Ohukolmnurk tähendab, et midagi läks valesti. Kui kuvatakse ohukolmnurk, võtke ühendust aadressil D365CI@microsoft.com.
+1. Pärast edukat andmeallikate värskendamist käivitage ka allavoolu värskendused. Eriti kui teil pole plaanis Customer Insightsi korduvat täielikku värskendamist. 
+
+> [!IMPORTANT]
+> Staatilisi segmente ei kaasata täielikku värskendamisse ega pärast kustutamistaotlust allavoolu toimuvatesse värskendamistesse. Tagamaks, et kliendiandmed eemaldatakse ka staatilistest segmentidest, looge staatilised segmendid värskendatud lähteandmetega uuesti.
 
 > [!div class="mx-imgBorder"]
 > ![Kliendiandmete GDPR-i kustutamise taotluste käsitlemine.](media/gdpr-data-sources.png "Kliendiandmete GDPR-i kustutamise taotluste käsitlemine")
@@ -52,13 +56,13 @@ Customer Insightsi administraator saab nende etappide abil eemaldada kliendiandm
 Customer Insightsi administraator saab Customer Insightsi kasutaja andmete kustutamiseks toimida järgmiselt.
 
 1. Logige sisse rakendusse Dynamics 365 Customer Insights.
-2. **Avage administraatori** > **turbeõigused** > **·**.
+2. Avage **jaotis Administraatori** > **turbeõigused** > **·**.
 3. Valige märkeruutude abil kasutaja, kelle soovite kustutada.
 4. Valige **Eemalda**.
 
 ### <a name="responding-to-gdpr-data-subject-export-requests"></a>GDPR-i andmesubjekti eksportimistaotlustele vastamine
 
-Osana meie kohustusest teha teiega koostööd teie teekonnal isikuandmete kaitse üldmääruse (GDPR) juurde, oleme välja töötanud dokumendid, mis aitavad teil vastata andmesubjektide taotlustele.
+Osana meie kohustusest teha teiega koostööd teie teekonnal isikuandmete kaitse üldmääruse (GDPR) juurde, oleme välja töötanud dokumentatsiooni, mis aitab teil vastata andmesubjektide päringutele.
 
 #### <a name="manage-export-and-view-requests"></a>Ekspordi ja vaate taotluste haldamine
 
@@ -77,5 +81,10 @@ Rentniku administraator võib järgida andmete eksportimisel järgmisi etappe.
 1. Saatke meil aadressile D365CI@microsoft.com, et määrata taotluses kasutaja meiliaadress. Customer Insightsi meeskond saadab registreeritud rentniku administraatori meiliaadressile meili, paludes kinnitust andmete eksportimiseks.
 2. Kinnitage taotletud kasutajale andmete eksportimise luba.
 3. Saage eksporditud andmed rentniku administraatori meiliaadressi kaudu.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Andmete kustutamise käsitlemine Dynamics 365 Customer Insights
+
+1. Andmed kustutatakse (andmesektsioonid ja andmete hetktõmmised), kui andmesektsioonid ja andmete hetktõmmised on passiivsed rohkem kui 30 päeva, mis tähendab, et need on asendatud uue andmesektsiooni ja hetktõmmisega andmeallikate värskendamise kaudu.
+2. Kõiki andmeid ja hetktõmmiseid ei kustutata. Kõige värskem andmesektsioon ja andmete hetktõmmis on definitsiooni järgi aktiivsed, kuna neid kasutatakse Customer Insightsis. Uusimate andmete puhul pole oluline, kas andmeallikaid pole viimase 30 päeva jooksul värskendatud.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

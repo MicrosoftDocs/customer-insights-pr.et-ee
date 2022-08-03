@@ -1,51 +1,54 @@
 ---
 title: Segmentide eksportimine ActiveCampaigni
 description: Vaadake, kuidas konfigureerida ühendust ja eksportida ActiveCampaigni.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: eb6f2bb69bb30c319e17390562b3f33512f33ff1
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 178d2df8edf1abcec72664e19d73a88f2b97f12d
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054703"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195561"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Segmentide eksportimine ActiveCampaigni (eelversioon)
 
 Eksportige ühtsete kliendiprofiilide segmendid ActiveCampaigni ja kasutage neid turundustegevusteks.
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites"></a>eeltingimused
 
-- Teil on [ActiveCampaign konto](https://www.activecampaign.com/) ja vastav administraatori mandaat.
-- Olete [konfigureerinud segmendid](segments.md) Customer Insightsis.
-- Eksporditud segmentide ühildatud kliendiprofiilid sisaldavad meiliaadressiga välja.
+- [ActiveCampaigni konto](https://www.activecampaign.com/) ja vastavad administraatori mandaadid.
+- ActiveCampaigni [loendi ID](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).
+- [ActiveCampaigni API võti](https://help.activecampaign.com/hc/articles/207317590-Getting-started-with-the-API#how-to-obtain-your-activecampaign-api-url-and-key) ja REST Endpoint Hostname.
+- [Konfigureeritud segmendid](segments.md) Customer Insightsis.
+- Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Ühe ekspordi kohta saate eksportida kuni miljon kliendiprofiili ActiveCampaign'i ja see võib võtta kuni 90 minutit.
-- ActiveCampaign eksportimine on piiratud segmentidega.
-- Kliendiprofiilide arv, mida saate ActiveCampaign'i eksportida, sõltub teie ActiveCampaign lepingust.
+- Kuni 1 miljon kliendiprofiili ekspordi kohta ActiveCampaigni, mille lõpuleviimiseks võib kuluda kuni 90 minutit. Kliendiprofiilide arv, mida saate ActiveCampaign'i eksportida, sõltub teie ActiveCampaign lepingust.
+- Ainult segmendid.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Saate häälestada ActiveCampaign ühendust
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **ActiveCampaign** ühenduse konfigureerimiseks.
+1. Valige **Add connection (Lisa ühendus)** ja ActiveCampaign **(ActiveCampaign**).
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
 1. Valige, kes saavad seda ühendust kasutada. Vaikimisi on see ainult Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Sisestage oma [ActiveCampaign API võti ja REST lõpp-punkti hostinimi](https://help.activecampaign.com/hc/articles/207317590-Getting-started-with-the-API#how-to-obtain-your-activecampaign-api-url-and-key). REST lõpp-punkti hostinimi on ainult hostinimi ilma https://. 
+1. Sisestage oma ActiveCampaign API võti ja REST lõpp-punkti hostinimi. REST lõpp-punkti hostinimi on ainult hostinimi ilma https://.
 
-1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
-1. **Ühenda** ActiveCampaign ühenduse lähtestamiseks.
+1. Ühenduse lähtestamiseks valige **Ühenda**.
 
 1. Valige **Lisa mind ekspordikasutajana** ja sisestage oma Customer Insightsi identimisteave.
 
@@ -53,27 +56,26 @@ Eksportige ühtsete kliendiprofiilide segmendid ActiveCampaigni ja kasutage neid
 
 ## <a name="configure-an-export"></a>Ekspordi konfigureerimine
 
-Kui teil on juurdepääs sellist tüüpi ühendusele, saate ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+1. Valige **Lisa eksport**.
 
-1. Valige **Ühendus ekspordiks** väljal soovitud ühendus ActiveCampaign jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+1. Valige **Ühendus ekspordiks** väljal soovitud ühendus ActiveCampaign jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
-1. Sisestage oma [**ActiveCampaigni loendi ID**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
+1. Sisestage ekspordi nimi.
 
-1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Segmentide ActiveCampaign eksportimine on vajalik. Soovi korral saate isikupärastatud meilide loomiseks eksportida eesnime, perekonnanime ja telefoni. Nende väljade vastendamiseks valige Lisa atribuut.
+1. Sisestage oma **ActiveCampaigni loendi ID**.
+
+1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi.
+
+1. Soovi korral eksportige **eesnimi**, **perekonnanimi** ja **telefon**, et luua isikupärasemaid meilisõnumeid. Nende väljade vastendamiseks valige **Lisa atribuut**.
+
+1. Valige segmendid, mille soovite eksportida.
 
 1. Valige **Salvesta**.
 
-Ekspordi salvestamine ei käivita eksporti kohe.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
-
-Kui lubate Dynamics 365 Customer Insights edastada andmeid ActiveCampaign'i, lubate andmete edastamist väljapoole vastavuse piiri Dynamics 365 Customer Insights jaoks, sealhulgas potentsiaalselt tundlikke andmeid, näiteks isikuandmeid. Microsoft edastab sellised andmed teie juhiste alusel, kuid teie vastutate selle eest, et ActiveCampaign täidaks kõiki privaatsus- või turvakohustusi, mis teil võivad olla. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

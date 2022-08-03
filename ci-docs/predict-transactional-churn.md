@@ -1,5 +1,5 @@
 ---
-title: Kande tükeldamise prognoos (sisaldab videot)
+title: Tehingute prognoos (sisaldab videot)
 description: Prognoosige, kas on oht, et klient ei osta enam teie ettevõtte tooteid või teenuseid.
 ms.date: 01/13/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642952"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171090"
 ---
 # <a name="transaction-churn-prediction"></a>Tehinguvoolavuse prognoos
 
@@ -24,7 +24,7 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
 Ärikontodel põhinevate keskkondade puhul võime ennustada ettevõtte jaoks tehinguvoolavust, samuti ettevõtte ja muu taseme teabe nagu tootekategooria kombinatsiooni. Mõõtme lisamine võib aidata välja selgitada, kui tõenäoline on, et konto „Contoso” lõpetab tootekategooria „kontoritarbed” ostmise. Lisaks võime ärikontode puhul kasutada AI-d ka potentsiaalsete põhjuste loendi loomiseks, miks ettevõte võib teise taseme teabe kategoorias tõenäoliselt liikuda.
 
 > [!TIP]
-> Proovige näidisandmete abil tehingu churn prognoos õpetust: [Tehingu churn prognoos näidisjuhend](sample-guide-predict-transactional-churn.md).
+> Proovige näidisandmete abil prognoos tehingute tegemise õpetust: [Tehingu prognoos näidisjuhend](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>eeltingimused
 
@@ -100,7 +100,7 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
 
 1. Avage teenuses Customer Insights jaotised **Ärianalüüs** > **Prognoosid**.
 
-1. **Valige paan Kliendi churn mudel** ja valige **Kasuta seda mudelit**.
+1. **Valige paan Customer churn model** ja valige **Use this model (Kasuta seda mudelit)**.
 
 1. Valige **Kliendivoolavuse mudelipaanil** **Tehing** ja seejärel **Alustage**.
 
@@ -116,11 +116,11 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
 
 ### <a name="define-customer-churn"></a>Määratlege kliendi teenusest loobumine
 
-1. Seadke **aken prognoos**. Näiteks ennustage oma klientide voolavusriski järgmise 90 päeva jooksul, et kohandada oma klientide säilitamise jõupingutusi. Voolavusriski ennustamine pikema või lühema ajavahemiku jooksul võib raskendada voolavusriski tekitavate tegurite käsitlemist, kuid see sõltub teie ettevõtte vajadustest.
+1. Seadke **prognoos aken**. Näiteks ennustage oma klientide voolavusriski järgmise 90 päeva jooksul, et kohandada oma klientide säilitamise jõupingutusi. Voolavusriski ennustamine pikema või lühema ajavahemiku jooksul võib raskendada voolavusriski tekitavate tegurite käsitlemist, kuid see sõltub teie ettevõtte vajadustest.
    >[!TIP]
-   > Prognoos mustandina salvestamiseks saate igal ajal valida **Salvesta mustand**. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid** selle jätkamiseks.
+   > Saate valida käsu **Salvesta mustand** igal ajal, et salvestada prognoos mustandina. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid** selle jätkamiseks.
 
-1. Sisestage väljale Churn-definitsioon churn-definitsiooni **määratlemise päevade** arv. Näiteks kui klient pole viimase 30 päeva jooksul oste teinud, võib neid pidada teie ettevõttest loobunuks. 
+1. Sisestage väljale Churn definitsioon **päevade arv, et määratleda churn**. Näiteks kui klient pole viimase 30 päeva jooksul oste teinud, võib neid pidada teie ettevõttest loobunuks. 
 
 1. Jätkamiseks valige **Edasi**.
 
@@ -128,7 +128,7 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
 
 1. Valige **Lisa andmed** ja valige tegevusetüüp, mis sisaldab nõutavat kannete või ostuajaloo teavet.
 
-1. Valige jaotises **Tegevuste** valimine valitud tegevusetüübi hulgast konkreetsed tegevused, millele soovite arvutuse keskenduda.
+1. Valige jaotises **Tegevuste** valimine valitud tegevuse tüübist konkreetsed tegevused, millele soovite arvutuses keskenduda.
 
    :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Kõrvalpaan, kus kuvatakse kindlate tegevuste valimine semantilise tüübi all.":::
 
@@ -136,7 +136,7 @@ Tehinguvoolavuse prognoos aitab ennustada, kas klient on lõpetanud kindlal peri
 
 1. Vastendage semantilised atribuudid väljadega, mis on mudeli käivitamiseks vajalikud. Kui allolevad väljad pole täidetud, konfigureerige oma ostuajaloo olemis seos *Kliendi* olemiga. Valige **Salvesta**.
 
-1. Kui te ei soovi rohkem tegevusi lisada, valige toimingus **Nõutavate andmete lisamine suvand** Lisa nõutavad andmed **jätkamiseks Edasi**.
+1. **Valige etapis Nõutavate andmete** lisamine nupp **Edasi**, et jätkata, kui te ei soovi rohkem tegevusi lisada.
 
 
 # <a name="individual-consumers-b-to-c"></a>[Üksikud tarbijad (B-st C-ni)](#tab/b2c)
@@ -240,7 +240,7 @@ Lisage loend äriklientidest ja ettevõtetest, mida soovite kasutada kriteeriumi
    - **Prognoosi nimi**: prognoosi loomisel sellele pandud nimi.
    - **Prognoosi tüüp**: prognoosi jaoks kasutatud mudeli tüüp
    - **Väljundolem**: olemi nimi, kuhu talletatakse prognoosi väljund. Selle nimega olemi leiate jaotisest **Andmed** > **Olemid**.
-     Väljundolemis *Voolavuse tulemus* on prognoositud voolavuse tõenäosus ja *On voolavus* on binaarne märgis, mis põhineb *Voolavuse tulemusel* lävendiga 0,5. Vaikelävend ei pruugi teie stsenaariumi puhul töötada. [Looge uus segment](segments.md#create-a-new-segment) teie eelistatud lävendiga.
+     Väljundolemis *Voolavuse tulemus* on prognoositud voolavuse tõenäosus ja *On voolavus* on binaarne märgis, mis põhineb *Voolavuse tulemusel* lävendiga 0,5. Vaikelävend ei pruugi teie stsenaariumi puhul töötada. [Looge uus segment](segments.md#create-a-segment) teie eelistatud lävendiga.
      Kõik kliendid ei pruugi olla aktiivsed kliendid. Võimalik, et mõnel neist pole pikka aega ühtegi tegevust olnud ja neid peetakse juba "voolanuks", võttes aluseks teie voolavuse määratluse. Ennustamise risk klientide jaoks, kes juba voolasid, ei ole kasulik, kuna nemad ei ole sihtrühmas.
    - **Prognoositav väli**: See väli täidetakse ainult kindlat tüüpi prognooside korral ja seda ei kasutata voolavuse prognoosimisel.
    - **Olek**: prognoosi käitamise olek.

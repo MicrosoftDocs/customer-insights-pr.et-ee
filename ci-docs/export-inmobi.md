@@ -1,37 +1,41 @@
 ---
-title: Customer Insightsi andmete eksportimine InObisse
-description: Siit saate teada, kuidas konfigureerida ühendus ja eksportida InMobisse.
-ms.date: 06/27/2022
+title: Customer Insightsi andmete eksportimine InMobisse
+description: Vaadake, kuidas konfigureerida ühendust ja eksportida InMobisse.
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8261c8adfe231792e70fc85432237cf73d5cd5a7
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ef486ad6786ef01be977f3d6bda69ce8a2b081c7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9059607"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195883"
 ---
-# <a name="export-segment-list-and-other-data-to-inmobi-preview"></a>Segmendiloendi ja muude andmete eksportimine Rakendusse InMobi (eelvaade)
+# <a name="export-customer-insights-data-to-inmobi-preview"></a>Customer Insightsi andmete eksportimine InMobisse (eelvaade)
 
-Eksportige segmendiloendid või muud andmed Customer Insightsi eksemplarist [InObisse](https://www.inmobi.com/).
+Eksportige segmentide loendeid või muid andmeid Customer Insightsi eksemplarist [InMobisse](https://www.inmobi.com/).
 
 ## <a name="prerequisites"></a>eeltingimused
 
-1. Teil on [InMobi konto](https://www.inmobi.com/) ja administraatori identimisteave.
-1. Teil on Azure Blobi salvestusruumi konto nimi ja vastav kontovõti. Lisateavet leiate teemast [Salvestusruumikonto sätete haldamine Azure'i portaalis](/azure/storage/common/storage-account-manage). Salvestuskontol on konteiner, kuhu inMobi andmeid eksportida. Lisateavet leiate teemast [Konteineri loomine](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
-1. InMobi loob otseühenduse teie Bloobi salvestusruumiga ja konfigureerib teie andmete automaatse impordi InObisse. Protsessi alustamiseks võtke ühendust oma InMobi esindajaga.
+- [InMobi konto](https://www.inmobi.com/) ja administraatori identimisteave.
+- Azure'i [bloobi salvestusruumi konto](/azure/storage/blobs/create-data-lake-storage-account) nimi ja konto võti. Nime ja võtme leidmiseks vaadake teemat [Salvestuskonto sätete haldamine Azure'i portaalis](/azure/storage/common/storage-account-manage).
+- [Azure'i bloobimälu konteiner](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container) InMobi andmete eksportimiseks.
+- InMobi loob otseühenduse teie Blob Storage'iga ja konfigureerib teie andmete automaatse importimise InMobisse. Protsessi algatamiseks võtke ühendust oma InMobi esindajaga.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-1. Azure Blob Storage'i puhul saate valida standardse jõudluse ja Premium-jõudluse taseme [vahel](/azure/storage/blobs/storage-blob-performance-tiers). Kui valite Premium jõudluse järgu, valige [konto tüübiks premium ploki bloobid](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
+- Azure'i bloobimälu puhul valige standardjõudluse ja esmaklassilise jõudluse taseme [vahel](/azure/storage/blobs/storage-blob-performance-tiers). Kui valite Premium jõudluse järgu, valige [konto tüübiks premium ploki bloobid](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 
-## <a name="set-up-the-connection-to-azure-blob-storage-and-configure-an-export"></a>Azure Blob Storage'iga ühenduse häälestamine ja ekspordi konfigureerimine
+## <a name="set-up-connection-to-azure-blob-storage"></a>Azure'i bloobimäluga ühenduse loomine
 
-1. Järgige juhiseid ühenduse häälestamiseks [Azure Blob Storage'iga](export-azure-blob-storage.md).
-2. Ekspordi [konfigureerimiseks](export-azure-blob-storage.md#configure-an-export) järgige juhiseid.
+[Häälestage ühendus Azure'i bloobimäluga](export-azure-blob-storage.md).
+
+## <a name="configure-an-export"></a>Ekspordi konfigureerimine
+
+[Ekspordi konfigureerimine](export-azure-blob-storage.md#configure-an-export).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

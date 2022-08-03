@@ -8,22 +8,22 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082110"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207178"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Andmeallikate rikastamine (eelvaade)
 
-Kasutage andmeid sellistest allikatest nagu Microsoft ja teised partnerid, et rikastada oma kliendiandmeid enne andmete ühendamist. Andmeallikas rikastamine aitab luua suuremat andmete täielikkust ja kvaliteeti, mis aitab pärast andmete ühendamist saavutada paremaid tulemusi. Näiteks normaliseeritud ja standardiseeritud vormingu kasutamine aadresside jaoks suurendab mängu tulemuste kvaliteeti. Toetatud rikastamiste loendi leiate teemast [Toetatud andmeallikas rikastamise suvandid](#supported-data-source-enrichments).
+Kasutage kliendiandmete rikastamiseks enne andmete ühendamist sellistest allikatest nagu Microsoft ja muud partnerid pärinevaid andmeid. Andmeallikas rikastamine aitab luua suuremat andmete täielikkust ja kvaliteeti, mis võib aidata saavutada paremaid tulemusi, kui olete oma andmed ühendanud. Näiteks normaliseeritud ja standardiseeritud aadressivormingu kasutamine suurendab vaste tulemuste kvaliteeti. Toetatud rikastumiste loendi leiate teemast [Toetatud andmeallikas rikastamisvõimalused](#supported-data-source-enrichments).
 
 ## <a name="enrich-a-data-source"></a>Rikastage andmeallikas
 
-Rikastamiste loomiseks või redigeerimiseks peavad teil olema kaasautori või administraatori õigused. Lisateavet vt teemast [Õigused](permissions.md).  
+Rikastuste loomiseks või redigeerimiseks peavad teil olema kaasautori või administraatori [õigused](permissions.md).  
 
-1. **Avage jaotisSe Andmete** > **ühendamine**. Valige olem, mida soovite rikastada, ja valige olemi esmaseks võtmeks üks atribuut. Lisateavet leiate teemast [Primaarvõtme valimine](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Avage **Jaotis Andmete** > **ühendamine**. Valige olem, mida soovite rikastada, ja valige olemi primaarvõtmeks [üks](map-entities.md#select-primary-key-and-semantic-type-for-attributes) atribuut.
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
 
@@ -31,24 +31,24 @@ Rikastamiste loomiseks või redigeerimiseks peavad teil olema kaasautori või ad
 
    :::image type="content" source="media/data_sources_enrich.png" alt-text="Andmeallikate leht, kus on esile tõstetud rikastamine":::
 
-   Vahekaardil **Avasta** kuvatakse [toetatud andmeallikas rikastamise suvandid](#supported-data-source-enrichments).
+   Menüüs **Discover** kuvatakse [toetatud andmeallikas rikastamissuvandid](#supported-data-source-enrichments).
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Andmeallikate rikastamise leht.":::
 
 1. Andmeallikas rikastamise konfigureerimiseks valige **Rikasta minu andmeid**. Väljundolemi nimi täidetakse automaatselt.
 
-## <a name="supported-data-source-enrichments"></a>Toetatud andmeallikas rikastamised
+## <a name="supported-data-source-enrichments"></a>Toetatud andmeallikas rikastamine
 
-Andmeallikate jaoks on praegu saadaval järgmised rikastamised. Vaadake üle rikastamise üksikasjalikud juhised, et teada saada, kuidas seda konfigureerida.
+Andmeallikate kohta on praegu saadaval järgmised rikastamised. Vaadake rikastamise üksikasjalikud sammud üle, et teada saada, kuidas seda konfigureerida.
 
 - [Täiustatud aadressid](enrichment-enhanced-addresses.md)
 - [Täiustatud ettevõtte andmed](enrichment-enhanced-company-data.md)
-- [LiveRampi identiteediandmed](enrichment-liveramp.md)
+- [Identiteediandmed LiveRampist](enrichment-liveramp.md)
 
-## <a name="manage-existing-data-source-enrichments"></a>Olemasolevate andmeallikas rikastamiste haldamine
+## <a name="manage-existing-data-source-enrichments"></a>Olemasolevate andmeallikas rikastumiste haldamine
 
-Minge vahekaardile **Minu rikastused**, et näha kõiki konfigureeritud rikastusi.
+Avage **Andmed** > **Rikastamine**. **Vahekaardil Minu rikastamised** saate vaadata konfigureeritud rikastamisi, nende olekut, rikastatud klientide arvu ja viimast korda, kui andmeid värskendati. Rikastamiste loendit saate sortida mis tahes veeru järgi või kasutada otsingukasti, et leida rikastus, mida soovite hallata.
 
-Valige rikastus, et näha saadaolevaid suvandeid. Suvandite nägemiseks saate loendiüksusel valida ka vertikaalse kolmikpunkti (&vellip;). Kui konfigureerite mitu rikastustegurit, saate selle kiiresti leidmiseks kasutada otsinguvälja.
+Valige rikastus, et näha saadaolevaid suvandeid. Valikute nägemiseks saate loendiüksusel valida ka vertikaalse kolmikpunkti (&vellip;).
 
-Saate vaadata, redigeerida, käivitada või kustutada andmeallikas rikastamist. Lisateavet leiate teemast [Olemasolevate rikastamiste](enrichment-hub.md) haldamine.
+Saate vaadata, redigeerida, käivitada või kustutada andmeallikas rikastamist. Lisateavet vaadake jaotisest [Olemasolevate rikastuste](enrichment-hub.md#manage-existing-enrichments) haldamine.

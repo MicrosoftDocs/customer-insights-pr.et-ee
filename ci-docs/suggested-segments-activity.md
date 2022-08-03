@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: e98aea3b3f3a2c4788346deab1b7ad7d1167110d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: df4f5f4b5c9a3ad66d57a6b349e18a0d714aff62
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054335"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170584"
 ---
-# <a name="suggested-segments-based-on-activity-data-preview"></a>Soovitatud segmendid, mis põhinevad tegevusandmetel (eelvaade)
+# <a name="suggested-segments-based-on-activity-preview"></a>Tegevusel põhinevad soovitatud segmendid (eelvaade)
 
 Avastage oma klientidele põnevaid segmente, mis põhinevad klienditegevuse andmetel, mis on sisse toodud Customer Insights -i. Tegevuseandmed on näiteks tehingud, kõne kestuse tugi, ostud või tagastamised. Segmentide soovitamiseks analüüsitakse tegevuse andmid toimumise aja, sageduse ja rahalise väärtuse järgi (või kestuse). Samuti saate luua soovitatud [segmente, et parandada mõõtühikut või paremini mõista, mis atribuuti mõjutab](suggested-segments.md).
 
@@ -35,33 +35,31 @@ Koos [tegevusandmete](activities.md) kättesaadavusega Customer Insights -is saa
 - Kliendid, kes suhtlevad sageli teie ettevõttega  
 
 Kui teil on jaeäri, võite välja uurida, millised kliendid toovad kõige rohkem kasumit ja autasustage neid preemiatega. Samuti võite tuvastada juhuslikke kliente ja pakkuda neile võimalust liituda autasuprogrammiga, et nad külastaksid teie ettevõtet sagedamini.
-Kui olete tervishoiuteenuseid pakkuv ettevõte pakkudes avalikku terviseteenust ja teie eesmärk on minimeerida individuaalsete patsientide kulutusi. Selleks võib vähendada korduvaid külastusi, pakkudes võimalikult palju hooldust võimalikult väheste külastuste korral. Sel juhul on teie eesmärk hoida külastussagedus madal ja minimeerida korduvaid kulusid patsiendile. Võite ka tuvastada patsientide segmente, kellel on sagedased külastused ja kõrged korduvad kulud ning analüüsida neid juhtumeid, et parandada üksikisiku ravimist. 
+Kui osutate riiklikke tervishoiuteenuseid ja teie eesmärk on minimeerida üksikute patsientide kulusid, võite proovida vähendada korduvaid visiite, pakkudes parimat võimalikku ravi võimalikult väheste külastustega. Sel juhul on teie eesmärk hoida külastussagedus madal ja minimeerida korduvaid kulusid patsiendile. Võite ka tuvastada patsientide segmente, kellel on sagedased külastused ja kõrged korduvad kulud ning analüüsida neid juhtumeid, et parandada üksikisiku ravimist.
 
 ## <a name="required-data"></a>Nõutavad andmed
 
-Soovitused luuakse valitud sisestusandmete põhjal. 
+Soovitused luuakse valitud sisestusandmete põhjal.
 
-- Kliendiprofiilid: Kõik kindla segmendi kliendid või liikmed. 
+- Kliendiprofiilid: Kõik kindla segmendi kliendid või liikmed.
 
 - Ajaperiood: Eelmine kuu, eelmine aasta või mis tahes kohandatud ajaperiood.
 
 - Tegevuse tüüp: ostud, jaetehingud, veebitehingud, klienditoe teenindusjuhtumid, kordustellimused jne.  
 
-- Customer Insights /i olem, mis sisaldab tegevuse andmeid: Olem UnifiedActivity või konkreetse tegevuse olem. 
+- Customer Insights /i olem, mis sisaldab tegevuse andmeid: Olem UnifiedActivity või konkreetse tegevuse olem.
 
 - Sisalduvad dimensioonid: Hiljutisus, sagedus või rahaline dimensioon vastavalt teie äri nõuetele.
 
 ## <a name="generate-suggested-segments"></a>Soovitatud segmentide genereerimine
 
-1. Liikuge jaotisse **Segmendid**.
+1. Minge jaotisse **Segmendid** ja valige **vahekaart Soovitused (eelvaade).**
 
-1. Valige vahekaart **Soovitused (eelvaade)**.
-
-1. Valige **Otsi uusi soovitusi** ja valige või **Kliendi käitumise kuvamine või prognoosimine**. Valige **Alusta** juhitava kogemuse käivitamiseks.
+1. Valige **Otsi uusi soovitusi** ja valige või **Kliendi käitumise kuvamine või prognoosimine**. Valige **Start**.
 
    :::image type="content" source="media/suggested-segments-activity-wizard.png" alt-text="Konfiguratsiooniviisardi esimene etapp tegevuse põhjal soovitatud segmendi jaoks.":::
 
-1. Sisestage nõutavad sisestusandmed ja valige **Edasi**.
+1. Sisestage nõutavad sisendandmed ja valige **Edasi**.
 
    - Klientide valik: Kaasa kõik kliendid või mõni kindel segment.
    - Valige tegevus: Valige tegevuse tüüp ja tegevust kirjeldavad olemid.
@@ -69,32 +67,17 @@ Soovitused luuakse valitud sisestusandmete põhjal.
 
 1. Vaadake sisestatud andmed läbi ja valige siis mudeli käivitamiseks ning soovituste genereerimiseks käsk **Käivita**.
 
-1. Sõltuvalt kliendiprofiilide arvust ja valitud tegevustest võib lõpuleviimiseks aega võtta mõni minut. 
+Sõltuvalt kliendiprofiilide arvust ja valitud tegevustest võib lõpuleviimiseks aega võtta mõni minut.
 
-Pärast soovituste genereerimist saate neid filtreerida soovitud osa või väärtuse alusel, mis teile kõige rohkem huvi huvi tekitas. 
+Pärast soovituste genereerimist saate neid filtreerida soovitud osa või väärtuse alusel, mis teile kõige rohkem huvi huvi tekitas.
 
-## <a name="view-details-of-a-suggested-segment"></a>Vaadake soovitatud segmendi üksikasju
+## <a name="manage-suggested-segments"></a>Soovitatud segmentide haldamine
 
-Kui soovitused on loodud, leiate need **Segmendid** > **Soovitused (eelvaade)** jaotisest **Tegevuspõhised soovitused** .
+Minge jaotisse **Segmendid** ja valige **vahekaart Soovitused (eelvaade).** **Valige jaotises Tegevuspõhised soovitused** soovitatud segment saadaolevate toimingute vaatamiseks.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Laiendatud külgpaan, kus kuvatakse soovitatud segmendi üksikasjalikud andmed.":::
-
-Valige **Kuva soovitused** segmendi üksikasjade vaatamiseks soovitatud segmendisoovitus. Kõrvalpaanil on esitatud üksikasjad, nagu iga dimensiooni ulatus sihtrühmaga võrreldes. Aruandes tuuakse esile ka segmenti potentsiaalsete liikmete arv ja vastav protsent klientide koguarvutest. Kui soovite soovituse säilitada segmendina, valige **Loo segment**.    
-
-## <a name="save-a-suggestion-as-a-segment"></a>Salvestage soovitus segmendina
-
-1. Minge jaotisesse **Segmendid** > **Soovitused (eelvaade)**.
-
-1. Valige segment, mille soovite salvestada. 
-
-1. Valige külgpaanil käsk **Loo segment**. 
-
-1. Pärast segmendi salvestamist kuvatakse see segmentide loendis vahekaardil **Kõik segmendid**. Seda saab nüüd [värskendada või kustutada nagu mis tahes muud segmenti](segments.md). Segmendi üksikasju ei saa redigeerida. Siiski saate muuta soovituste sisestuskriteeriume ja luua erinevaid soovitusi.
-
-## <a name="refresh-or-edit-a-set-of-suggestions"></a>Värskendage või muutke soovituste komplekti
-
-1. Minge **Segmendid** > **Soovitused (eelvaade)** ja otsige segmenti jaotisest **Tegevusepõhised soovitused** .
-
-1. Valige suvand **Värskenda soovitused**, et värskendada soovitusi konfigureeritud atribuutide säilitamise ajal. Või valige **Redigeerige soovitusi** konfigureeritud atribuutide muutmiseks. Süsteem käivitab protsessi uuesti, loob viimaste andmete põhjal segmendisoovitused ja asendab praegused soovitused.
+- **Vaadake soovitust**, et vaadata selle segmendi üksikasju, näiteks iga dimensiooni ulatust võrreldes sihtrühmaga. Aruandes tuuakse esile ka segmenti potentsiaalsete liikmete arv ja vastav protsent klientide koguarvutest.
+- **Looge segment**, et salvestada soovitatud segmendina. See kuvatakse vahekaardil **Kõik segmendid** ja seda [saab värskendada või kustutada](segments.md). Segmendi üksikasju ei saa redigeerida. Siiski saate muuta soovituste sisestuskriteeriume ja luua erinevaid soovitusi.
+- **Redigeerige soovitusi** konfigureeritud atribuutide muutmiseks, mis asendavad praegused soovitused.
+- **Värskendage soovitusi** soovituste värskendamiseks, säilitades konfigureeritud atribuudid.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

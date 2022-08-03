@@ -1,7 +1,7 @@
 ---
-title: 'Kliendiprofiilid: otsing ja filtri register'
+title: Kliendiprofiilide otsingu- ja filtreerimisregistri haldamine
 description: Leidke kiiresti teavet ühtsete klientide profiilide kohta ja filtreerige määratud atribuute.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,59 +11,64 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: dfbfcbff3ffb3e4483252377e591229631d38556
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050804"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9187904"
 ---
-# <a name="customer-profiles-search--filter-index"></a>Kliendiprofiilid: otsing ja filtri register
+# <a name="manage-the-search--filter-index-for-customer-profiles"></a>Kliendiprofiilide otsingu- ja filtreerimisregistri haldamine
 
-Kliendiandmete ühtlustamise tulemusena tekib kliendiprofiili olem, mis pakub kogu kliendibaasi ühtset vaadet. [Kindla kliendi või klientide rühma teabe](customer-profiles.md) kiireks leidmiseks saate seadistada lehe **Kliendid** võimalused **Otsi** ja **Filtreeri**. Lugege edasi, et õppida, kuidas administraatorid saavad muuta lehe **Otsing ja filtri register** atribuute, millega kasutajad saavad otsida ja filtreerida.
+Teie kliendiandmete ühendamise tulemuseks *on kliendi* olem, mis pakub ühtset vaadet teie kogu kliendibaasile. Selleks et kasutajad leiaksid kiiresti [teavet konkreetse kliendi või klientide rühma](customer-profiles.md) kohta, peab administraator konfigureerima **lehe Kliendid** otsingu **-** ja **filtreerimisvõimalused**.
 
    :::image type="content" source="media/search-filter.png" alt-text="Otsingufilter":::
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+## <a name="define-searchable-attributes-and-indexed-fields"></a>Otsitavate atribuutide ja indekseeritud väljade määratlemine
 
-## <a name="add-fields-and-specify-attributes"></a>Lisage välju ja määrake atribuute
+Kui määratlete otsitavaid atribuute administraatorina esimest korda, määratlege esmalt indekseeritud väljad. Soovitame valida kõik atribuudid, millega kasutajad saavad kliente otsida ja filtreerida lehel **Kliendid**. Määrata saab ainult atribuute, mis on olemas *andmete ühendamise protsessi käigus loodud kliendi* olemis.
 
-Kui määratlete otsitavaid atribuute administraatorina esimest korda, peate esmalt määratlema indekseeritud välju. Soovitame valida kõik atribuudid, millega kasutajad saavad kliente otsida ja filtreerida lehel **Kliendid**. Saate määrata vaid kliendiprofiili olemi atribuute, mida lõite andmete ühendamisel.
+1. Minge jaotisse **Kliendid ja valige** Otsing ja filtreeri **register**.
 
-1. Avage leht **Kliendid** ja valige **Otsingu ja filtri register**.
+1. Valige **+ Lisa**.
 
-2. Valige **+ Lisa** indekseeritud väljade määramiseks.
+1. Valige loendis atribuudid, mille soovite lisada indekseeritud väljadena, ja klõpsake nuppu **Rakenda**.
 
-3. Valige loendist indekseeritud väljadena lisatavad atribuudid. Saate alati lisada rohkem atribuute, valides **Lisa**. Saate eemaldada kõiki valitud atribuute, kui valite sümboli **Eemalda**.
+1. Atribuutide lisamiseks valige **Lisa**. Valitud atribuudi eemaldamiseks valige atribuut ja seejärel **kustutage**.
 
-## <a name="explore-the-indexed-customer-fields-table"></a>Uudistage indekseeritud kliendiväljade tabelit
+   :::image type="content" source="media/search-filter-index.png" alt-text="Otsi ja filtreeri registrilehte.":::
 
-Järgmine teave asub tabelis.
+1. Valige **Käivita**, kui olete otsingu- ja filtreerimissätete rakendamiseks valmis. Pärast muudatuste töötlemist vaadake neid [kliendilehel](customer-profiles.md) olevatel kliendikaartidel.
 
-- **Nimi**: tähistab atribuudi nime kliendiprofiili olemis.
+## <a name="define-filtering-options-for-a-given-attribute"></a>Antud atribuudi filtreerimissuvandite määratlemine
+
+Seadistage väljad, mida saab kasutada klientide **filtreerimiseks lehel Kliendid**.
+
+1. Minge jaotisse **Kliendid ja valige** Otsing ja filtreeri **register**.
+
+1. Valige atribuut ja **lisage filter**. Määratlege tulemuste arv ja nende korraldamise järjekord. Olenevalt atribuudi andmetüübist kuvatakse üks järgmistest paanidest.
+
+   - Stringitüüpi atribuudid: määrake stringifiltri **paanil soovitud tulemuste** arv ja nende korraldamise järjestuspoliitika.
+
+   - Numbritüüpi atribuudid: määrake paanil Numbrifiltri **kaasatud** intervallid ja nende korraldamise järjestuspoliitika.
+
+   - Kuupäevatüübi atribuudid: määrake paanil Kuupäevafilter **kaasatud** intervallid ja järjestuspoliitika, mille alusel neid korraldatakse.
+
+1. Valige **OK**. Korrake toimingut kõigi atribuutide puhul, mille alusel soovite filtreerida.
+
+1. Valige **Käivita**, kui olete otsingu- ja filtreerimissätete rakendamiseks valmis. Pärast muudatuste töötlemist vaadake neid [kliendilehel](customer-profiles.md) olevatel kliendikaartidel.
+
+## <a name="view-indexed-customer-fields"></a>Indekseeritud kliendiväljade vaatamine
+
+Lehel **Otsing ja filter** kuvatakse järgmine teave.
+
+- **Nimi**: tähistab atribuudi nime nii, nagu see kuvatakse *kliendi* olemis.
 - **Andmetüüp**: määrab, kas andmetüüp on string, arv või kuupäev.
 - **Kaasatud otsingusse**: määrab, kas selle atribuudiga saab otsida kliente lehel **Kliendid** välja **Otsing** abil.
 - **Lisa filter** juhtelement, millega määratletakse atribuudi kasutamist lehel **Kliendid** filtreerimiseks.
 
-## <a name="editing-filtering-options-for-a-given-attribute"></a>Kindla atribuudi filtreerimisvalikute muutmine
-
-Lehel **Kliendid** asuva **Filter** menüü võib sisaldada erinevas koguses atribuutide tasemeid (nt erinevate vanuserühmade puhul filtreeritakse kliente järgmiselt).
-
-1. Valige lehel **Otsing ja registri filtreerimine** kindla atribuudi puhul **Lisa filter**. Saate määratleda tulemuste arvu ja nende järjestust. Olenevalt atribuudi andmetüübist ilmub üks järgmistest paanidest.
-
-- Stringi tüüpi atribuudid: täpsustage paanil **Stringi filtreerimissuvandid** soovitud tulemuste arvu ja nende järjestusreegleid.
-
-- Numbrilist tüüpi atribuudid: täpsustage paanil **Numbrilised filtreerimissuvandid** hõlmatud intervallid ja nende järjestusreegleid.
-
-- Kuupäeva tüüpi atribuudid: täpsustage paanil **Kuupäevafiltri suvandid** hõlmatud intervallid ja nende järjestusreegleid.
-
-2. Vajutage nuppu **Salvesta**, et muudatused rakendada.
-
-3. Valige **Käivita**, kui olete valmis seadete rakendamiseks. Pärast muudatuste töötlemist leiate need [kliendikaartidelt lehel Klient](customer-profiles.md). 
-
-## <a name="next-steps"></a>Järgmised etapid
+## <a name="next-steps"></a>Järgmised toimingud
 
 Vaadake profiilide otsimiseks läbi [ühendatud profiilide leht](customer-profiles.md) või kasutage indekseeritud välju kõigi ühendatud profiilide alamhulga vaatamiseks.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

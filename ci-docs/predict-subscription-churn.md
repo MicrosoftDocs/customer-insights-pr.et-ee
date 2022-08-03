@@ -1,5 +1,5 @@
 ---
-title: Tellimuse tükeldamise prognoos (sisaldab videot)
+title: Tellimus prognoos (sisaldab videot)
 description: Saate prognoosida, kas on oht, et klient ei kasuta enam teie ettevõtte kordustellimuse tooteid või teenuseid.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642872"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171044"
 ---
 # <a name="subscription-churn-prediction"></a>Tellimise voolavuse prognoos
 
@@ -61,8 +61,8 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
 
 ## <a name="create-a-subscription-churn-prediction"></a>Kordustellimuse voolavuse prognoosi loomine
 
-1. Minge aadressile **IntelligencePredictions** > **·**.
-1. **Valige paan Tellimuse churn mudel** ja valige **Kasuta seda mudelit**.
+1. Minge **luureprognooside** > **juurde**.
+1. Valige **paan Subscription churn model** ja valige **Kasuta seda mudelit**.
    > [!div class="mx-imgBorder"]
    > ![Kordustellimuse voolavuse mudeli paan nupuga Kasuta seda mudelit.](media/subscription-churn-usethismodel.PNG "Kordustellimuse voolavuse mudeli paan nupuga Kasuta seda mudelit")
 
@@ -76,7 +76,7 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
 1. Sisestage arv **Päevi möödunud kordustellimuse lõppemisest**, mida teie ettevõte peab olekuks, mil kliendivoolavus on toimunud. Tavaliselt on see periood seotud äritegevustega, nagu pakkumised või muud turundusega seotud pingutused, mis püüavad ära hoida kliendi kaotsiminekut.
 1. Sisestage **päevade arv tulevikus, mille põhjal voolavust prognoosida**, et määrata aken voolavuse prognoosiks. Näiteks selleks, et ennustada järgmise 90 päeva klientide voolavuse riski oma säilitusturunduse jõupingutuste vastavusse viimiseks. Pöördumisriski ennustamine pikemaks või lühemaks perioodiks võib muuta pöördumisriski profiili tegurite käsitlemise keerulisemaks, sõltuvalt teie konkreetsetest ärinõuetest. Jätkamiseks valige **Edasi**
    >[!TIP]
-   > Prognoos mustandina salvestamiseks saate igal ajal valida **Salvesta mustand**. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid** selle jätkamiseks.
+   > Saate valida käsu **Salvesta mustand** igal ajal, et salvestada prognoos mustandina. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid** selle jätkamiseks.
 
 ### <a name="add-required-data"></a>Lisa nõutud andmed
 
@@ -107,7 +107,7 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
 
 ### <a name="set-schedule-and-review-configuration"></a>Ajakava seadistamine ja konfiguratsiooni ülevaatamine
 
-1. Määrake oma mudeli ümberõppe sagedus. See säte on oluline ennustuste täpsuse värskendamiseks, kuna Customer Insightsis neelatakse uusi andmeid. Suur osa ettevõtteid saavad teha ümberõpet kord kuus ja saavutavad täpsed prognoosid.
+1. Määrake oma mudeli ümberõppe sagedus. See säte on oluline prognooside täpsuse värskendamiseks, kuna Customer Insightsis kasutatakse uusi andmeid. Suur osa ettevõtteid saavad teha ümberõpet kord kuus ja saavutavad täpsed prognoosid.
 1. Tehke valik **Edasi**.
 1. Konfiguratsiooni läbivaatamine. Saate naasta prognoosi mis tahes osasse, valides suvandi **Redigeeri** kuvatud väärtuse juures. Saate ka valida edenemise näidikust konfiguratsiooni etapi.
 1. Kui kõik väärtused on õigesti konfigureeritud, valige pognoosimisprotsessi alustamiseks suvand **Salvesta ja käivita**. Vahekaardil **Minu prognoosid** kuvatakse teie prognooside olekut. Selle protsessi lõpule viimiseks võib kuluda mitu tundi, olenevalt prognoosis kasutatud andmete hulgast.
@@ -121,7 +121,7 @@ Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei k
    - **Prognoosi nimi:** selle prognoosi loomisel pandud nimi.
    - **Prognoosi tüüp:** prognoosi jaoks kasutatav mudeli tüüp
    - **Väljundolem:** olemi nimi, kuhu talletatakse prognoosi väljund. Selle nimega olemi leiate jaotisest **Andmed** > **Olemid**.    
-     Väljundolemis *Voolavuse tulemus* on prognoositud voolavuse tõenäosus ja *On voolavus* on binaarne märgis, mis põhineb *Voolavuse tulemusel* lävendiga 0,5. Vaikelävend ei pruugi teie stsenaariumi puhul töötada. [Looge uus segment](segments.md#create-a-new-segment) teie eelistatud lävendiga.
+     Väljundolemis *Voolavuse tulemus* on prognoositud voolavuse tõenäosus ja *On voolavus* on binaarne märgis, mis põhineb *Voolavuse tulemusel* lävendiga 0,5. Vaikelävend ei pruugi teie stsenaariumi puhul töötada. [Looge uus segment](segments.md#create-a-segment) teie eelistatud lävendiga.
    - **Prognoositud väli:** see väli on asustatud ainult teatud tüüpi prognooside puhul ja seda ei kasutata kordustellimuse voolavuse prognoosides.
    - **Olek:** prognoosi käitamise praegune olek.
         - **Järjekorras:** prognoos ootab praegu muude protsesside käitamist.

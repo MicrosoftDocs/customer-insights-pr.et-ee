@@ -1,48 +1,50 @@
 ---
 title: Segmentide eksportimine Campaign Monitori (eelversioon)
 description: Lugege, kuidas konfigureerida ühendust ja eksportida Campaign Monitori.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ea7431d4df5143724b5ecf2a2d747ed164fe2c29
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082887"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196297"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Segmentide eksportimine Campaign Monitori (eelversioon)
 
 Saate eksportida ühendatud kliendiprofiilide segmente Campaign Monitori ja kasutada neid turundustegevuste jaoks.
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites"></a>eeltingimused
 
--   Teil on [Campaign Monitori konto](https://www.campaignmonitor.com/) ja vastav administraatori volikiri.
--   Olete [konfigureerinud segmendid](segments.md) Customer Insightsis.
--   Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
+- Kampaaniamonitori [konto](https://www.campaignmonitor.com/) ja vastav administraatori identimisteave.
+- [Kampaaniamonitori loendi ID](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
+- Kampaaniamonitori [konto seadetest](https://www.campaignmonitor.com/api/getting-started/)**loodud API-võti** API loendi ID hankimiseks.
+- [Konfigureeritud segmendid](segments.md) Customer Insightsis.
+- Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kampaania jälgimisse saate eksportida kuni miljoni kliendiprofiili ekspordi kohta.
-- Eksportimine Campaign Monitori on piiratud segmentidega.
-- Kuni miljoni kliendiprofiili eksportimine Kampaania Jälgimisse võib võtta kuni 20 minutit. 
-- Kliendiprofiilide arv, mida saate Kampaania Jälgimisse eksportida, sõltub ja on piiratud vastavalt teie Kampaania Jälgimise lepingule.
+- Kuni 1 miljon kliendiprofiili ühe ekspordi kohta kampaaniamonitori, mille täitmine võib võtta kuni 20 minutit. Kliendiprofiilide arv, mida saate kampaaniamonitorisse eksportida, sõltub teie lepingust kampaaniamonitoriga.
+- Ainult segmendid.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Campaign Monitoriga ühenduse loomine
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **Campaign Monitor** ühenduse konfigureerimiseks.
+1. Valige **Lisa ühendus** ja valige **Kampaaniamonitor**.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
-1. Valige, kes saavad seda ühendust kasutada. Kui te midagi ei tee, on vaikeväärtuseks Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Valige, kes saavad seda ühendust kasutada. Vaikimisi on see ainult Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. **Andmete privaatsuse ja nõuetele vastavuse** kinnitamiseks valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Valige **Ühenda** Campaign Monitoriga ühenduse lähtestamiseks.
 
@@ -54,28 +56,24 @@ Saate eksportida ühendatud kliendiprofiilide segmente Campaign Monitori ja kasu
 
 ## <a name="configure-an-export"></a>Ekspordi konfigureerimine
 
-Kui teil on juurdepääs sellist tüüpi ühendusele, saate selle ekspordi konfigureerida. Lisateavet leiate teemast [Eksportimise konfigureerimiseks vajalikud õigused](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige uue ekspordi loomiseks **Lisa sihtkoht**.
+1. Valige uue ekspordi loomiseks **Lisa eksport**.
 
-1. Valige **Ekspordiühendus** väljal ühendus Campaign Monitori jaotisest. Kui te seda jaotisenime ei näe, pole seda tüüpi ühendusi teie jaoks saadaval.
+1. Valige **Ekspordiühendus** väljal ühendus Campaign Monitori jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
-1. Sisestage [**Campaign Monitor List ID**](https://www.campaignmonitor.com/api/getting-started/#your-list-id).    
-   [Looge API-võti](https://www.campaignmonitor.com/api/getting-started/) esmalt Campaign Monitori **Konto sätted** sätetest, et vaadata API-loendi ID-d.  
+1. Sisestage ekspordi nimi.
+
+1. Sisestage oma **kampaaniamonitoride loendi ID**.
 
 1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Segmentide eksportimine Campaign Monitori on vajalik.
 
+1. Valige segmendid, mille soovite eksportida.
+
 1. Valige **Salvesta**.
 
-Ekspordi salvestamine ei käivita eksporti kohe.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Eksportimine käitatakse iga [kavandatud värskendusega](system.md#schedule-tab). Samuti saate [eksportida andmeid nõudmisel](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
-
-Kui lubate, et Dynamics 365 Customer Insights edastab andmeid Campaign Monitorile, lubate, et andmed edastatakse väljaspoole vastavuse piiri Dynamics 365 Customer Insights, sealhulgas võimalikud tundliku iseloomuga andmed nagu isikuandmed. Microsoft kannab sellised andmed üle teie juhiste järgi, kuid teie vastutate selle eest, et Campaign Monitor vastaks teie võimalikele privaatsus- või turvalisuse nõuetele. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Teie Dynamics 365 Customer Insightsi administraator saab selle ekspordisihtkoha igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
+[!INCLUDE [footer-include](includes/footer-banner.md)]
