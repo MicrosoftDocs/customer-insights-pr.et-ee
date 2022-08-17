@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139652"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213577"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Kliendiväljade ühendamine andmete ühendamiseks
 
@@ -58,6 +58,9 @@ ms.locfileid: "9139652"
 
 1. Määrake väljade ühendamise või ühendamise viis ühest kolmest valikust.
     - **Olulisus**: tuvastab võitja väärtuse osalevatele valdkondadele määratud tähtsusastme alusel. See on vaikeühendamissuvand. Valige järjekoha prioritiseerimiseks **Nihuta üles/alla**.
+
+      > [!NOTE]
+      > Customer Insights kasutab esimest mittenullväärtust. Näiteks antud olemid A, B ja C on järjestatud selles järjekorras, kui A.Name ja B.Name on null, siis kasutatakse C.Name väärtust.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Tähtsuse valik ühendamisväljade dialoogis.":::
 

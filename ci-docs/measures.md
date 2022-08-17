@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170815"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245368"
 ---
 # <a name="measures-overview"></a>Meetmete ülevaade
 
@@ -53,7 +53,7 @@ Valige mõõdu kõrval, et vaadata saadaolevaid toiminguid. Valige mõõdu nimi,
 - **Redigeerige** mõõtu selle atribuutide muutmiseks.
 - **Värskendage** mõõtu, et kaasata uusimad andmed.
 - Meetme **Ümbernimetamine**.
-- **Aktiveerige** või **inaktiveerige** meede. Passiivseid mõõtühikuid ei värskendata ajastatud värskendamise [ajal](system.md#schedule-tab) ja nende olekuks on **märgitud** vahelejäetud **olek**, mis näitab, et värskendamist isegi ei proovitud.
+- **Aktiveerige** või **inaktiveerige** meede. Passiivseid mõõtühikuid ei värskendata ajastatud värskendamise [ajal](schedule-refresh.md) ja nende olekuks on **märgitud** vahelejäetud **olek**, mis näitab, et värskendamist isegi ei proovitud.
 - **Silt** mõõdu siltide [haldamiseks](work-with-tags-columns.md#manage-tags).
 - Meetme **Kustutamine**.
 - **Veerud** [kuvatavate veergude](work-with-tags-columns.md#customize-columns) kohandamiseks.
@@ -62,7 +62,7 @@ Valige mõõdu kõrval, et vaadata saadaolevaid toiminguid. Valige mõõdu nimi,
 
 ## <a name="refresh-measures"></a>Meetmete värskendamine
 
-Meetmeid saab värskendada automaatse ajakava alusel või soovi korral käsitsi värskendada. Ühe või mitme mõõdu käsitsi värskendamiseks valige need ja valige **Värskenda**. Automaatse värskendamise ajastamiseks [minge jaotisse](system.md#schedule-tab) Haldussüsteemi **·** > **ajakava** > **.**
+Meetmeid saab värskendada automaatse ajakava alusel või soovi korral käsitsi värskendada. Ühe või mitme mõõdu käsitsi värskendamiseks valige need ja valige **Värskenda**. Automaatse värskendamise ajastamiseks [minge jaotisse](schedule-refresh.md) Haldussüsteemi **·** > **ajakava** > **.**
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

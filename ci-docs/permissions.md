@@ -1,7 +1,7 @@
 ---
-title: Kasutajaõiguste haldamine
+title: Kasutaja õiguste määramine
 description: Lisateave õiguste ja kasutajarollide kohta.
-ms.date: 02/09/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,20 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: a59a672b6f7e1e67c2162ea14bb9860df0d551aa
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054853"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245414"
 ---
-# <a name="manage-user-permissions"></a>Kasutajaõiguste haldamine
+# <a name="assign-user-permissions"></a>Kasutaja õiguste määramine
 
-Lehel **Õigused** saate seadistada rollid ja õigused Customer Insightsi kasutamiseks.
-
-Lehe nägemiseks peavad teil olema administraatori õigused. Õiguste lehele juurdepääsemiseks avage **administraatori** > **turbekasutajad** > **·**.
-
-Rolle on kolme tüüpi.
+Juurdepääs Customer Insightsile on piiratud teie ettevõtte kasutajatega, kelle administraator on rakendusse lisanud. Administraator saab kasutajaid lisada, redigeerida või eemaldada. Kasutaja võib olla üks kasutaja, rühm või rakendus. Kasutajal võib olla kolme tüüpi rolle.
 
 ## <a name="viewer"></a>Vaataja
 
@@ -41,18 +37,18 @@ Rolle on kolme tüüpi.
 
 - Kõik vaatajatele saadaval õigused.
 - Laadige ja teisendage andmeid lehel **Andmeallikad**.
-- Täielik ***andmete ühendamine**, mille tulemuseks on ühtne kliendiprofiili olem.
+- Lõpetage **andmete ühendamine**, mille tulemuseks on ühtne kliendiprofiili olem.
 - Määratlege **Suhted** ja **Tegevused**.
 - Looge segmente lehel **Segmendid**.
 - Mõõtude loomine lehe **Mõõdud** abil.
 - Hallake konfiguratsiooni ja rikastage kliendiprofiile lehel **Rikastamine** (ainult esimese osapoole rikastamine).
-- Hallake ja looge ekspordid kaastöötajatega jagatud ühenduste põhjal. [Lisateave selle kohta, kuidas administraatorid lubavad kaastöötajatel kasutada ekspordi jaoks ühendust](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Eksportide haldamine ja loomine kaasautoritega jagatud ühenduste [põhjal](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="admin"></a>Haldus
 
 - Kõik kaasautorile saadaval õigused.
-- Muutke lehel **Süsteem** sätteid, sealhulgas süsteemiprotsesside töökeel ja värskendamise ajakavad.
-- Vaadake ja lisage õigusi lehel **Õigused**.
+- Muutke lehel Süsteem **sätteid**, sh töökeelt, süsteemiprotsesside ajakavade värskendamist ja diagnostikalogide eksportimist.
+- Muutke lehel Turvalisus **sätteid**, sh kasutajaid, API-võtmeid, privaatseid linke ja võtmehoidlat.
 - Sisestage klientide lehe otsingu- ja filtrimääratlused lehel **Otsingu- ja filtriregister** (sellele pääseb juurde lehelt **Kliendid**).
 - Hallata ühendusi ja lubada neil kasutada teistel kasutajarollidel **Ühendused** lehel.
 - Hallake konfiguratsiooni ja rikastage kliendiprofiile lehel **Rikastamine** (kõik rikastamised).
@@ -60,31 +56,34 @@ Rolle on kolme tüüpi.
 - **Kliendikaardi lisandmooduli** paigaldamine ja kasutamine.
 - Lisage ja kasutage **Power Appsi konnektorit**.
 - Lubage [Customer Insightsi API-de](apis.md) kasutamine.
-- [Keskkonna omandiõiguse](manage-environments.md#change-the-owner-of-an-environment) määramine teisele administraatorile.
+- [Määrake keskkonna omandiõigus](manage-environments.md#change-the-owner-of-an-environment) teisele administraatorile.
 
 ## <a name="admin-owner"></a>Administraator (omanik)
 
-- Kõik administraatorile saadaolevad õigused.
-- [Keskkonna lähtestamine ja kustutamine](manage-environments.md#reset-an-existing-environment-preview).
+- Kõik administraatori käsutuses olevad õigused.
+- [Lähtestage ja kustutage](manage-environments.md#reset-an-existing-environment-preview) keskkond.
 
-## <a name="assign-roles-and-permissions"></a>Rollide ja õiguste määramine
+## <a name="add-users"></a>Lisa kasutajaid
 
-1. **Avage administraatori** > **turbe** > **Kasutajad***.
+1. Avage **Administraatori turve** > **ja valige** vahekaart **Kasutajad**.
 
 1. Valige **Lisa kasutajad**, et avada paan **Õiguste lisamine/redigeerimine**.
 
-1. Kasutage välja **Otsing** Azure Active Directory kasutaja või rühma leidmiseks, kelle õigusi soovite kohandada. Valige **Roll**, et määrata see kasutajale või rühmale.
+1. **Kasutage otsinguvälja**, et leida kasutaja või rühm, Azure Active Directory kelle soovite lisada. Valige **Roll**, et määrata see kasutajale või rühmale.
 
-1. Valige **Salvesta**. Praegust keskkonda jagatakse automaatselt selle rühma kasutaja või liikmetega, kelle õigusi olete muutnud. Kasutajad pääsevad juurde rakendusele Customer Insights ja töötavad vastavalt neile määratud rollile.
+1. Valige **Salvesta**. Praegust keskkonda jagatakse automaatselt kasutaja või rühma liikmetega. Kasutajad pääsevad juurde rakendusele Customer Insights ja töötavad vastavalt neile määratud rollile.
 
 ## <a name="view-current-permissions"></a>Vaadake praeguseid õigusi
 
-**Avage administraatori** > **turbekasutajad** > **·**, et näha, millised rollimääramised on praegu aktiivsed.
+Minge jaotisse **Administraatori** > **turve** ja valige **vahekaart Kasutajad**, et vaadata aktiivsete kasutajate loendit ja nende rollimääranguid. Saate sortida kasutajate loendi mis tahes veeru järgi või kasutada otsinguvälja konkreetse kasutaja leidmiseks.
 
-- Veerg **Tüüp** määrab ühe kasutaja, rühma või rakenduse. Süsteem toetab üksikuid kasutajaid ja rühmi.
-- Rollid on määratletud veerus **Roll**.
-- Valige mis tahes veeru pealkiri, et sortida tulemeid selle veeru väärtusega.
-- Kasutage lehe ülaservas välja **Otsing** kindlate kasutajate leidmiseks.
+## <a name="manage-current-users"></a>Praeguste kasutajate haldamine
 
+Avage **Administraatori turve** > **ja valige** vahekaart **Kasutajad**. Kasutajate loendit saate sortida mis tahes veeru järgi või kasutada otsinguvälja, et leida kasutaja, keda soovite hallata.
+
+Valige saadaolevate toimingute vaatamiseks kasutaja.
+
+- **Redigeerimine**, et muuta kasutaja rolli Customer Insightsis. Muudatuse kinnitamiseks valige **Salvesta**.
+- **Eemaldage**, et eemaldada kasutaja juurdepääs Customer Insightsile. Valige käsk **Kustuta**, et kinnitada kustutamine.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

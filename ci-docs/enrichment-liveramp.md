@@ -1,19 +1,19 @@
 ---
 title: Kliendiprofiilide rikastamine LiveRampi identiteediandmetega (eelvaade)
 description: Rikastage kliendiprofiile LiveRamp andmetega.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196343"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237807"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Kliendiprofiilide rikastamine LiveRampi identiteediandmetega (eelvaade)
 
@@ -41,13 +41,9 @@ Peate olema Customer Insightsi administraator [ning](permissions.md#admin) teil 
 
 1. Sisestage ühenduse nimi ja kehtiv LiveRamp kliendi ID ning saladus.
 
-1. Vaadake üle ja esitage oma nõusolek [Andmete privaatsuse ja nõuetele vastavus](#data-privacy-and-compliance) kohta, valides suvandi **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Valige **konfiguratsiooni valideerimiseks Kinnita** ja seejärel valige **Salvesta**.
-
-### <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
-
-Kui lubate Dynamics 365 Customer Insights andmete edastamise LiveRampi, lubate edastada andmeid väljaspool nõuetele vastavuse piiri, sealhulgas potentsiaalselt tundlike andmete, näiteks isikuandmete puhul Dynamics 365 Customer Insights. Microsoft edastab need andmed teie korraldusel, kuid teie vastutate selle eest, et LiveRamp täidaks kõiki teie privaatsus- või turbekohustusi. Lisateabe saamiseks vaadake Microsofti [privaatsusavaldust](https://go.microsoft.com/fwlink/?linkid=396732). Teie Dynamics 365 Customer Insightsi administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
 
 ## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 
@@ -65,7 +61,7 @@ Kui lubate Dynamics 365 Customer Insights andmete edastamise LiveRampi, lubate e
 
 1. **Valige kliendiandmete kogum** ja valige profiil või segment, mida soovite LiveRampist identiteediandmetega rikastada. Kliendi *olem* rikastab kõiki teie kliendiprofiile, samas kui segment rikastab ainult selles segmendis sisalduvaid kliendiprofiile.
 
-1. Määratlege, millist tüüpi välju oma ühendatud profiilidest kasutada LiveRamp'i identiteediandmete sobitamiseks. Nõutav on vähemalt üks väljadest **Nimi ja aadress**, **E-post** või **Telefon**. Suurema vastetäpsuse tagamiseks lisage teisi välju. Tehke valik **Edasi**.
+1. Määratlege, millist tüüpi välju oma ühendatud profiilidest kasutada LiveRamp’i identiteediandmete sobitamiseks. Nõutav on vähemalt üks väljadest **Nimi ja aadress**, **E-post** või **Telefon**. Suurema vastetäpsuse tagamiseks lisage teisi välju. Tehke valik **Edasi**.
 
 1. Vastendage oma väljad LiveRampi identifitseerimisandmetega.
 

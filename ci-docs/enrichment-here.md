@@ -1,23 +1,23 @@
 ---
-title: Rikasta kliendiprofiile HERE Technologies'iga (eelvaade)
+title: Rikasta kliendiprofiile HERE Technologies’iga (eelvaade)
 description: Üldine teave ettevõtte HERE Technologies kolmanda osapoole rikastamise kohta.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 86a070342193dd7afda38823d90f4bd28c8b862e
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196251"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237853"
 ---
-# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Rikasta kliendiprofiile HERE Technologies'iga (eelvaade)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Rikasta kliendiprofiile HERE Technologies’iga (eelvaade)
 
-HERE Technologies on asukohaplatvormi ettevõte, mis pakub asukohapõhist teavet ja teenuseid. HERE Technologies'i andmete rikastamise teenused parandavad teie klientide asukohateabe täpsust. See pakub aadressi normaliseerimist, laius- ja pikkuskraadide ekstraheerimist ning palju muud.
+HERE Technologies on asukohaplatvormi ettevõte, mis pakub asukohapõhist teavet ja teenuseid. HERE Technologies’i andmete rikastamise teenused parandavad teie klientide asukohateabe täpsust. See pakub aadressi normaliseerimist, laius- ja pikkuskraadide ekstraheerimist ning palju muud.
 
 ## <a name="prerequisites"></a>eeltingimused
 
@@ -33,16 +33,11 @@ Sa pead olema Customer Insightsis administraator [ja](permissions.md#admin) sul 
 
 1. Sisestage ühenduse nimi ja kehtiv HERE Technologies API võti.
 
-1. Vaadake üle ja esitage oma nõusolek [Andmete privaatsuse ja nõuetele vastavus](#data-privacy-and-compliance) kohta, valides suvandi **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Valige **konfiguratsiooni valideerimiseks Kinnita** ja seejärel valige **Salvesta**.
 
    :::image type="content" source="media/enrichment-HERE-connection.png" alt-text="HERE technologies ühenduse konfiguratsiooni leht.":::
-
-### <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
-
-Kui lubate Dynamics 365 Customer Insightsil ettevõttesse HERE Technologies andmeid edastada, ei kohaldata andmete edastamisel Dynamics 365 Customer Insightsi vastavustingimusi, sealhulgas potentsiaalselt tundlike andmete korral (nt isikuandmed). Microsoft edastab sellised andmed, kui te seda soovite, kuid teie vastutate selle tagamise eest, et HERE Technologies täidab kõik teie privaatsus- või turbenõuded. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
-Teie Dynamics 365 Customer Insights administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
 
 ## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 

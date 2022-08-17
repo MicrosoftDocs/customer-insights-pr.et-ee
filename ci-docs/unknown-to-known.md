@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173814"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224290"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Kogemuste isikupärastamine teadaolevate ja tundmatute kasutajate andmetega
 
-Kliendiandmete haldamine ei ole uus väljakutse, kuid see muutub üha keerulisemaks, kuna kasutajad navigeerivad erinevates digitaalsetes kanalites, mida kaubamärgid pakuvad. Ühes kanalis tuntud (autenditud) kasutaja muutub teises kanalis tundmatuks (autentimata), kui ta pole sisse logitud. Probleem on sageli selles, et autentimata (tundmatutel) kasutajatel pole ühist ID-d. Seda saab kasutada tähendusrikaste profiiliatribuutide seostamiseks ja ühtsete kliendiprofiilide loomiseks. Customer Insights aitab seda probleemi lahendada, neelates andmeid teie lähtesüsteemide jälgimismeetoditest. Konsolideeritud tundmatud ja teadaolevad profiilid annavad organisatsioonidele täieliku ülevaate ajakohastest profiilidest ning nende ajaloolistest tehingutest, käitumisest ja demograafiast. See läheb isegi sammu kaugemale, pakkudes identiteedi eraldusvõimet, mis võimaldab teil ühendada klientide tegevust mitmes kanalis, sealhulgas teie veebisaidil, poes ostmisel, lojaalsusprogrammidel jne.
+Kliendiandmete haldamine ei ole uus väljakutse, kuid see muutub üha keerulisemaks, kuna kasutajad navigeerivad erinevates digitaalsetes kanalites, mida kaubamärgid pakuvad. Ühes kanalis tuntud (autenditud) kasutaja muutub teises kanalis tundmatuks (autentimata), kui ta pole sisse logitud. Probleem on sageli selles, et autentimata (tundmatutel) kasutajatel pole ühist ID-d. Seda saab kasutada tähendusrikaste profiiliatribuutide seostamiseks ja ühtsete kliendiprofiilide loomiseks. Customer Insights aitab seda probleemi lahendada, neelates andmeid teie lähtesüsteemide jälgimismeetoditest. Tundmatute ja teadaolevate profiilide konsolideerimine annab organisatsioonidele täieliku ülevaate ajakohastest profiilidest ning nende ajaloolistest kannetest, käitumisest ja demograafiast. See läheb isegi sammu kaugemale, pakkudes identiteedi eraldusvõimet, mis võimaldab teil ühendada klientide tegevust mitmes kanalis, sealhulgas teie veebisaidil, poes ostmisel, lojaalsusprogrammidel jne.
 
 ## <a name="sample-scenario"></a>Näidisstsenaarium
 

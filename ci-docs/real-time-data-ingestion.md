@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195653"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246103"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Reaalajas andmete valmendamine (eelvaade)
 
 Peaaegu reaalajaline funktsionaalsus võimaldab teil vaadata mõne sekundi jooksul viimaseid suhtlusi, mida teie kliendid on teie toodete või teenuste osas teinud.
 
-[Ajastatud värskendamised](system.md#schedule-tab) hõlmavad palju kirjeid ja mitmesuguseid keerukaid toiminguid. Esmalt tuuakse andmed andmeallikast. Edasi andmed koondatakse ja seejärel rikastatakse täiendava teabega. Selle protsessi iga tsükkel võib kesta minutitest tundideni.
+[Ajastatud värskendamised](schedule-refresh.md) hõlmavad palju kirjeid ja mitmesuguseid keerukaid toiminguid. Esmalt tuuakse andmed andmeallikast. Edasi andmed koondatakse ja seejärel rikastatakse täiendava teabega. Selle protsessi iga tsükkel võib kesta minutitest tundideni.
 
 Reaalajas funktsioon pakub andmeid kohe tarbimiseks, kuni järgmine ajastatud värskendamine toob need andmed andmeallikast.
 
@@ -85,7 +85,7 @@ Selle API üksikasjad, sh parameetrid ja vastused, leiate jaotisest **EntityData
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Oma reaalajas kasutuse mõistmine telemeetria abil
 
-Teil on võimalik vaadata ülevaadet reaalajas API-le saadetud päringute arvu ja süsteemi võimalike probleemide kohta. Pääsete [ligi reaalajalisele telemeetriale](system.md#api-usage-tab) 
+Teil on võimalik vaadata ülevaadet reaalajas API-le saadetud päringute arvu ja süsteemi võimalike probleemide kohta. Pääsete [ligi reaalajalisele telemeetriale](system.md#view-api-usage) 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

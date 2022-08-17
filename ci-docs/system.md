@@ -1,7 +1,7 @@
 ---
-title: Süsteemikonfiguratsioon
+title: Vaadake süsteemi konfiguratsiooni
 description: Lisateave Dynamics 365 Customer Insightsi süsteemi seadete kohta.
-ms.date: 04/21/2022
+ms.date: 08/09/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -10,67 +10,105 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-system-status
-- ci-system-schedule
 - ci-system-about
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050666"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246242"
 ---
-# <a name="system-configuration"></a>Süsteemikonfiguratsioon
+# <a name="view-system-configuration"></a>Vaadake süsteemi konfiguratsiooni
 
-Süsteemi konfiguratsioonidele juurdepääsemiseks **minge süsteemiülesannete ja -protsesside loendi kuvamiseks administraatorisüsteemi** > **·**.
+Vaadake süsteemiteavet, süsteemi olekut ja API kasutamist.
 
-Leht **Süsteem** sisaldab järgmisi vahekaarte.
-- [Olek](#status-tab)
-- [Kavanda](#schedule-tab)
-- [API kasutus](#api-usage-tab)
-- [Teave](#about-tab)
-- [Üldist](#general-tab)
+## <a name="view-api-usage"></a>Vaata API kasutust
 
-:::image type="content" source="media/system-tabs.png" alt-text="Sätete vahekaardid süsteemilehel.":::
+Vaadake reaalajas API kasutamise üksikasju ja vaadake, millised sündmused antud aja jooksul toimusid.
 
-## <a name="status-tab"></a>Oleku vaehekaart
+1. Minge jaotisse **Haldussüsteem** > **ja** valige **vahekaart API kasutamine**.
 
-Vahekaart **Olek** võimaldab teil jälgida ülesannete edenemist, andmete allaneelamist, andmeeksporti ja mitmeid muid olulisi tooteprotsesse. Vaadake üle sellel vahekaardil olev teave, et tagada aktiivsete ülesannete ja protsesside täielikkus.
+1. **Valige vaadatav ajavahemik**.
 
-Vahekaart sisaldab oleku ja erinevate protsessidega teabetöötlustabeleid. Iga tabel jälgib tööülesande **Nime** ja sellele vastavat olemit, viimase käitamise **Olekut** ja millal seda viimati **Värskendati**. Saate vaadata viimase mitme jooksu üksikasju, valides ülesande või protsessi nime. 
+   **API kasutamise** leht sisaldab kolme jaotist:
 
-Valige paani Edene üksikasjad **avamiseks** veerus **Olek** tööülesande või protsessi kõrval olev olek.
+   - **API-päringud** – diagramm, mis visualiseerib valitud aja jooksul API päringute koondarvu.
+   - **Andmeedastus** – diagramm, mis kuvab valitud ajaraamistikul API kaudu edastatud andmete hulga.
+   - **Toimingud** – tabel, kus on reaga iga saadaolev API-toiming ja teave toimingute kasutamise kohta. Valige toimingu nimi, et minna API viite [juurde](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Toimingud, mis kasutavad [reaalajas andmete allaneelamist](real-time-data-ingestion.md), sisaldavad binokulaarset sümbolit API reaalajas kasutamise vaatamiseks.
+
+   1. Valige binokkel, et avada **reaalajas API kasutamise** paan, mis sisaldab toimingu kasutusandmeid.
+   1. **Valige vaadatav ajavahemik**.
+   1. Kasutage kasti **Rühmitamine**, et valida, kuidas oma reaalajas suhtlust kõige paremini esitada. Rühmitage andmed API meetodi, olemi kvalifitseeritud nime **(allaneelatud olem),** loodud **(sündmuse allikas),** tulemuse **(edu või tõrge) või** tõrkekoodide **järgi.** **·** Andmed on saadaval ajaloodiagrammina ja tabelina.
+
+## <a name="view-system-information"></a>Süsteemiteabe vaatamine
+
+Vaadake keskkonna kuvatavat nime, ID-d, piirkonda, tüüpi ja seansi ID-d.
+
+1. Avage **Haldussüsteem** > **ja** valige **vahekaart Teave**.
+
+1. Keele ja riigi/regiooni vaatamiseks valige **vahekaart Üldine**.
+
+### <a name="update-preferred-language-or-countryregion"></a>Eelistatud keele või riigi/regiooni värskendamine
+
+Customer Insights [toetab paljusid keeli](/dynamics365/get-started/availability). Rakendus kasutab teie keele-eelistust, et kuvada teie eelistatud keeles elemente, nt menüü, silditekst ja süsteemiteated.
+
+Käsitsi sisestatud imporditud andmeid ja teavet ei tõlgita.
+
+1. Minge jaotisse **Haldussüsteem** > **ja** valige **vahekaart Üldine**.
+
+1. Eelistatud keele muutmiseks valige ripploendist **Keel**.
+
+1. Eelistatud kuupäeva, kellaaja ja numbrite vormingute muutmiseks kasutage ripploendit **Riigi/piirkonna vorming**. Kuvatakse vormindamise eelvaade. Süsteem soovitab uue keele valimisel automaatselt valikut.
+
+1. Valige **Salvesta**.
+
+## <a name="view-system-status"></a>Kuva süsteemi olek
+
+Saate jälgida ülesannete edenemist, andmete allaneelamist, andmete eksportimist ja mitmeid muid olulisi tooteprotsesse. Vaadake teave üle, et tagada oma aktiivsete ülesannete ja protsesside täielikkus.
+
+1. Avage **haldussüsteem** > **ja** valige **vahekaart Olek**.
+
+   Kuvatakse erinevate protsesside oleku- ja töötlemisteave. **Vaadake tööülesande nime**, selle viimase käitamise olekut **ja** viimati **värskendatud aega**.
+
+1. Mitme viimase jooksu üksikasjade vaatamiseks valige ülesande või protsessi nimi.
+
+1. Ülesande edenemise üksikasjade vaatamiseks valige olek. Kuvatakse **paan Edenemise üksikasjad**.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Süsteemi edenemise üksikasjade paan":::
 
-### <a name="status-definitions"></a>Oleku definitsioonid
+1. Kõigi ülesannete edenemise üksikasjade vaatamiseks valige **Kogu töövoog**.
+
+### <a name="status-definitions"></a>Staatuse määratlused
 
 Süsteem kasutab ülesannete ja protsesside jaoks järgmisi olekuid.
 
 |Olek  |Määratlus  |
 |---------|---------|
-|Loobutud |Kasutaja tühistas töötlemise enne selle lõpetamist.   |
-|Ebaõnnestus   |Andmete sisestamisel ilmnesid tõrked.         |
-|Tõrge  |Töötlemine nurjus.  |
-|Pole käivitatud   |Andmeallikas pole valmendatud andmeid või see on ikka mustandirežiimis.         |
+|Loobutud |Kasutaja tühistas ülesande või protsessi enne selle lõpetamist.   |
+|Ebaõnnestus   |Ülesanne või protsess sattus vigadesse.         |
+|Tõrge  |Ülesanne või protsess on nurjunud.  |
+|Pole käivitatud   |Andmeallikas pole veel andmeid alla neelanud või ülesanne on endiselt mustandirežiimis.         |
 |Töötlemine  |Ülesanne või protsess on pooleli.  |
-|Värskendamine    |Andmete sisestamine on pooleli. Selle toimingu tühistamiseks valige **Peata värskendamine** **Toimingute** veerus. Andmeallika värskendamise peatamine ennistab selle viimase värskendamise olekusse.       |
+|Värskendamine    |Ülesanne või protsess on pooleli. Selle toimingu tühistamiseks valige **Värskendamine** ja **Tühista töö**. Ülesande või protsessi värskendamise peatamine taastab selle viimase värskendamise oleku.       |
 |Vahele jäetud  |Ülesanne või protsess jäeti vahele. Üks või mitu järgnevat protsessi, millest see tööülessane sõltub, nurjuvad või jäid vahele.|
-|Tehtud  |Ülesanne või protsess on edukalt lõpule viidud. Andmeallikate puhul näitab see, et andmed on edukalt alla neelatud, kui veerus **Värskendatud** mainitakse aega.|
-|Järjekorras | Töötlemine on järjekorras ja algab siis, kui kõik eelnevad ülesanded ja protsessid on lõpule viidud. Lisateavet leiate teemast [Protsesside](#refresh-processes) värskendamine.|
+|Tehtud  |Ülesanne või protsess on edukalt lõpule viidud. Andmeallikate puhul näitab, et andmed on edukalt alla neelatud, kui veerus Värskendatud **on mainitud** aega.|
+|Järjekorras | Töötlemine on järjekorda pandud ja algab siis, kui kõik eelnevad ülesanded ja protsessid on lõpule viidud. Lisateavet vaadake jaotisest [Protsesside](#refresh-processes) värskendamine.|
 
 ### <a name="refresh-processes"></a>Protsesside värskendamine
 
-Ülesannete värskendamine ja protsessid käivitatakse vastavalt konfigureeritud [ajakavale](#schedule-tab). 
+Ülesannete ja protsesside värskendamine käivitatakse vastavalt konfigureeritud [ajakavale](schedule-refresh.md).
 
 |Töötle  |Kirjeldus  |
 |---------|---------|
 |Tegevus  |Töötab käsitsi (ühekordne värskendamine). Sõltub ühendamisprotsessist. Ülevaated sõltuvad selle töötlemisest.|
 |Analüüsi linkimine |Töötab käsitsi (ühekordne värskendamine). Sõltub segmentidest.  |
 |Analüüsi ettevalmistamine |Töötab käsitsi (ühekordne värskendamine). Sõltub segmentidest.  |
-|Andmete ettevalmistamine   |Vajab olemit, millega töötada. Andmeallikas olemid sõltuvad allaneelamisest. Rikastatud üksused sõltuvad rikastamisest. Olem Klient sõltub ühendamisest.  |
+|Andmete ettevalmistamine   |Vajab töötamiseks olemit. Andmeallikas üksused sõltuvad allaneelamisest. Rikastunud üksused sõltuvad rikastumisest. Kliendi olem sõltub ühendamisest.  |
 |Andmeallikad   |Ei sõltu muudest protsessidest. Vastendamine sõltub selle protsessi edukast lõpuleviimisest.  |
 |Rikastamised   |Töötab käsitsi (ühekordne värskendamine). Sõltub ühendamisprotsessist. |
 |Ekspordi sihtkohad |Töötab käsitsi (ühekordne värskendamine). Sõltub segmentidest.  |
@@ -85,59 +123,7 @@ Süsteem kasutab ülesannete ja protsesside jaoks järgmisi olekuid.
 |Süsteem   |Sõltub vastenduse protsessi lõpuleviimisest. Segmendid, meetmed, rikastamine, otsing, tegevused, prognoosid ja andmete ettevalmistamine sõltuvad selle protsessi edukast lõpuleviimisest.   |
 |User  |Töötab käsitsi (ühekordne värskendamine). Sõltub olemitest.  |
 
-Valige protsessi olek, et näha kogu selle töö edenemise üksikasju, milles see oli. Ülaltoodud värskendusprotsessid **aitavad mõista, mida saate teha vahelejätmise** või **järjekorras oleva ülesande või protsessi lahendamiseks**.
-
-## <a name="schedule-tab"></a>Ajastamise vahekaart
-
-Kasutage vahekaarti **Ajastamine**, et ajastada kõigi [valmendatud andmeallikate](data-sources.md) jaoks automaatsed värskendused. Automaatne värskendamine aitab tagada, et teie andmeallikate värskendused kajastuksid teie kliendi koondprofiilidel.
-
-> [!NOTE]
-> Teie hallatavad andmeallikad värskendatakse nende enda ajakava järgi. Teie hallatavate andmeallikate värskendamise ajastamiseks konfigureerige selle konkreetse andmeallikas värskendamissätted **lehel Andmeallikad**.
-> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Andmevoo värskendamise sätted.":::
-
-1. **Avage haldussüsteem** > **ja** valige **vahekaart Ajakava**.
-
-2. Ajastatud värskendamise vaike-olek on **Väljas**. Ajastatud värskenduste luvamiseks lülitage ekraani ülaosas sisse valik **Sees**.
-
-3. Värskendamisvalikuteks on **Iga nädal** (tavaline) ja **Iga päev**. Kui kavatsete värskendada iga nädal, valige vähemalt üks päev, mil tahate värskendada.
-
-4. Määrake **Ajavöönd** ja seejärel kasutage ripploendit **Aeg** oma värskendamise aja määramiseks. Kui olete lõpetanud, valige käsk **Määra**. Kui tahate ajastada mitu värskendust ühel päeval, valige **Vali muu kellaaeg**.
-
-5. Vajutage nuppu **Salvesta**, et muudatused rakendada.
-
-## <a name="about-tab"></a>Teave vahekaardi kohta
-
-Vahekaart **Teave** sisaldab teie organisatsiooni **Kuvatavat nime**, aktiivset **Keskkonna ID-d**, **Piirkonda** ja teie **Seansi ID-d**. Kui teil on rohkem kui üks töökeskkond, peate andma igale keskkonnale lihtsasti tuvastatava kuvatava nime.
-
-## <a name="general-tab"></a>Vahekaart Üldine
-
-Vahekaardil **Üldine** saate muuta keelt ja riigi/regiooni vormingut.
-
-Customer Insights [toetab paljusid keeli](/dynamics365/get-started/availability). Rakendus kasutab teie keele-eelistust, et kuvada teie eelistatud keeles elemente, nt menüü, silditekst ja süsteemiteated.
-
-Käsitsi sisestatud imporditud andmeid ja teavet ei tõlgita.
-
-### <a name="update-the-settings"></a>Värskenda sätteid
-
-Eelistatud keele muutmiseks valige ripploendist **Keel**.
-
-Eelistatud kuupäeva, kellaaja ja numbrite vormingute muutmiseks kasutage ripploendit **Riigi/piirkonna vorming**. Vormindamise eelvaade kuvatakse selle välja all. Kui valite uue keele, soovitab süsteem automaatselt valikut.
-
-Valige käsk **Salvesta**, et kinnitada valikud.
-
-## <a name="api-usage-tab"></a>API kasutuse vahekaart
-
-Leidke API reaalajas kasutamise üksikasju ja vaadake, millised sündmused toimusid antud aja jooksul. Ajaraami saate valida rippmenüüst **Ajaraami valimine**. 
-
-**API kasutus** sisaldab kolme järgmist jaotist. 
-- **API-päringud** – diagramm, mis visualiseerib valitud aja jooksul API päringute koondarvu.
-
-- **Andmeedastus** – diagramm, mis kuvab valitud ajaraamistikul API kaudu edastatud andmete hulga.
-
--  **Toimingud** – tabel, kus on reaga iga saadaolev API-toiming ja teave toimingute kasutamise kohta. Võite valida toimingu nime, et minna [API-viitele](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Toimingud, mis kasutavad [reaalajas andmete allaneelamist](real-time-data-ingestion.md), sisaldavad binokli sümboliga nuppu, et vaadata reaalajas API kasutamist. Valige nupp, et avada külgpaan, mis sisaldab reaalajas API kasutamise üksikasju praeguses keskkonnas.   
-   Kasutage paanil **Reaalajaline API kasutus** välja **Rühmita kui**, et valida kuidas reaalajalist suhtlust kõige paremini esitada. Andmeid saate rühmitada API meetodi, olemi kvalifitseeritud nime (valmendatud olem), looja (sündmuse allikas), tulemuse (õnnestumine või nurjumine) või tõrkekoodide järgi. Andmed on saadaval ajaloodiagrammina ja tabelina.
+Valige protsessi olek, et näha kogu poolelioleva töö edenemise üksikasju. Ülaltoodud värskendamisprotsessid aitavad mõista, mida saate teha vahelejäetud või järjestatud **ülesande või protsessi lahendamiseks**.**·**
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

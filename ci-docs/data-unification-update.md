@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139573"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245589"
 ---
 # <a name="update-the-unification-settings"></a>Ühendamissätete värskendamine
 
@@ -42,7 +42,7 @@ ms.locfileid: "9139573"
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Kuvatõmmis lehest &quot;Andmete ühendamine&quot;, kus on esile tõstetud ühendamissuvandid.":::
 
    - [Vastendustingimuste (duplikatsiooni- ja vastendusreeglid) kvaliteedi kiireks hindamiseks käivitage vastendustingimused](#run-matching-conditions) ilma ühtset profiili värskendamata. Valikut **Käivita ainult** vastavad tingimused ei kuvata ühe olemi puhul.
-   - [Ühendage kliendiprofiilid](#run-updates-to-the-unified-customer-profile), et käivitada vastavusse viimise tingimused ja värskendada ühtset kliendiprofiili olemit, mõjutamata sõltuvusi (nt rikastamised, segmendid või mõõdud). Sõltuvaid protsesse ei käitata, kuid värskendatakse värskendamise [ajakavas määratletud viisil](system.md#schedule-tab).
+   - [Ühendage kliendiprofiilid](#run-updates-to-the-unified-customer-profile), et käivitada vastavusse viimise tingimused ja värskendada ühtset kliendiprofiili olemit, mõjutamata sõltuvusi (nt rikastamised, segmendid või mõõdud). Sõltuvaid protsesse ei käitata, kuid värskendatakse värskendamise [ajakavas määratletud viisil](schedule-refresh.md).
    - [Ühendage kliendiprofiilid ja sõltuvused](#run-updates-to-the-unified-customer-profile), et käivitada vastavusse viimise tingimused ning värskendada ühtset kliendiprofiili olemit ja kõiki sõltuvusi (nt rikastamised, segmendid või mõõdud). Kõik protsessid käivitatakse automaatselt.
 
 ## <a name="edit-source-fields"></a>Allikaväljade redigeerimine
@@ -69,7 +69,7 @@ Atribuuti või olemit ei saa eemaldada, kui need on juba ühendatud.
 
    Leitud duplikaatkirjete arv kuvatakse jaotises **Duplikaadid**. Veerg **Kirjed eemaldatud** näitab, millistel olemitel olid duplikaatkirjed ja dubleeritud kirjete protsent.
 
-1. Kui lisasite rikastatud olemi, valige **Kasuta rikastatud olemeid**. Lisateavet leiate teemast [Andmeallikate rikastamine](data-sources-enrichment.md).
+1. Kui lisasite rikastatud olemi, valige **Kasuta rikastatud olemeid**. Lisateavet leiate teemast [Andmeallikate](data-sources-enrichment.md) rikastamine.
 
 1. Duplikatsioonireeglite haldamiseks valige üks järgmistest suvanditest.
    - **Loo uus reegel**: valige **lisa reegel** vastava olemi alt. Lisateavet vaadake jaotisest [Dubleerimisreeglite](remove-duplicates.md#define-deduplication-rules) määratlemine.
@@ -110,7 +110,7 @@ Enamuse vasteparameetritest saate ümber konfigureerida ja peenhäälestada. Ole
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Vastendamata ja vastendatud kirjete graafiline esitus koos andmete loendiga.":::
 
-1. Kui lisasite rikastatud olemi, valige **Kasuta rikastatud olemeid**. Lisateavet leiate teemast [Andmeallikate rikastamine](data-sources-enrichment.md).
+1. Kui lisasite rikastatud olemi, valige **Kasuta rikastatud olemeid**. Lisateavet leiate teemast [Andmeallikate](data-sources-enrichment.md) rikastamine.
 
 1. Reeglite haldamiseks valige üks järgmistest suvanditest.
    - **Loo uus reegel**: valige **lisa reegel** vastava olemi alt. Lisateavet vaadake jaotisest [Vastepaaride](match-entities.md#define-rules-for-match-pairs) reeglite määratlemine.
@@ -154,7 +154,7 @@ Vastendustingimuste käivitamine käivitab ainult duplikatsiooni- ja vastendusre
 
 1. **Valige lehelt Data Unify (Andmete** > **ühendamine**):
 
-   - **Kliendiprofiilide ühendamine: käivitab** vastendustingimused ja värskendab ühtset kliendiprofiili olemit, mõjutamata sõltuvusi (nt rikastamised, segmendid või mõõdud). Sõltuvaid protsesse ei käitata, kuid värskendatakse värskendamise [ajakavas määratletud viisil](system.md#schedule-tab).
+   - **Kliendiprofiilide ühendamine: käivitab** vastendustingimused ja värskendab ühtset kliendiprofiili olemit, mõjutamata sõltuvusi (nt rikastamised, segmendid või mõõdud). Sõltuvaid protsesse ei käitata, kuid värskendatakse värskendamise [ajakavas määratletud viisil](schedule-refresh.md).
 
    - **Ühendage kliendiprofiilid ja sõltuvused**: käitatakse vastendustingimusi ning värskendatakse ühtset profiili ja kõiki sõltuvusi. Kõik protsessid käivitatakse automaatselt. Kui kõik järgnevad protsessid on lõpule viidud, kajastab kliendiprofiil värskendatud andmeid.
 

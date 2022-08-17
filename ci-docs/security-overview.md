@@ -1,76 +1,75 @@
 ---
-title: Customer Insightsi turbesätted
-description: Siit leiate teavet rakenduse turbesätete kohta Dynamics 365 Customer Insights.
-ms.date: 06/08/2022
+title: Turvaseadete konfigureerimine
+description: Lisateavet turbesätete kohta leiate jaotisest Dynamics 365 Customer Insights.
+ms.date: 08/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 163deb9bed4f82d742c46cace27dd128f0aca18b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947410"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246057"
 ---
-# <a name="security-settings-in-customer-insights"></a>Customer Insightsi turbesätted
+# <a name="configure-security-settings"></a>Turvaseadete konfigureerimine
 
-Lehel **Turvalisus** on loetletud suvandid kasutajaõiguste ja -funktsioonide konfigureerimiseks, mis aitavad turvalisemaks muuta Dynamics 365 Customer Insights. Sellele lehele pääsevad juurde ainult administraatorid.
+Hallake API võtmeid, pääsete juurde kliendiandmetele ja seadistage Azure Private Link.
 
-Sätete konfigureerimiseks avage **administraatori** > **turvalisus**.
+## <a name="manage-api-keys"></a>API võtmete haldamine
 
-Leht **Turvalisus** sisaldab järgmisi vahekaarte.
+Vaadake ja hallake võtmeid, et kasutada [Customer Insightsi API-sid](apis.md) koos teie keskkonnas olevate andmetega.
 
-- [Kasutajad](#users-tab)
-- [APId](#apis-tab)
-- [Privaatsed lingid](#private-links-tab)
-- [Võtmehoidla](#key-vault-tab)
-- [Kliendi andmetele pääsete turvaliselt juurde kliendi lukustuskausta kaudu (eelvaade)](#securely-access-customer-data-with-customer-lockbox-preview)
+1. Avage **System** > **Security** ja valige **vahekaart API-d**.
 
-## <a name="users-tab"></a>Vahekaart Kasutajad
+1. Kui API juurdepääs keskkonnale pole seadistatud, valige **Luba**. Või API juurdepääsu blokeerimiseks keskkonnale valige **Keela** ja kinnita.
 
-Juurdepääs Customer Insightsile on piiratud teie asutuse kasutajatega, kelle administraator on rakendusse lisanud. Vahekaart **Kasutajad** võimaldab hallata kasutaja juurdepääsu ja nende õigusi. Lisateavet leiate teemast [Kasutajaõigused](permissions.md).
+1. Hallake esmaseid ja teiseseid API-võtmeid.
 
-## <a name="apis-tab"></a>Vahekaart API-d
+   1. Primaarse või teisese API-võtme kuvamiseks **valige sümbol Kuva**.
 
-Vaadake ja hallake customer Insights API-de [kasutamise](apis.md) võtmeid oma keskkonna andmetega.
+   1. Primaarse või teisese API-võtme kopeerimiseks valige **sümbol Kopeeri**.
 
-Saate luua uusi primaar- ja sekundaarvõtmeid, valides suvandi **Taasta primaar-** või **Regenerate sekundaarne**. 
+   1. Uute primaarsete või teiseste API-võtmete loomiseks valige **Taasta primaarne** või **Taasta sekundaarne**.
 
-API-le juurdepääsu blokeerimiseks keskkonnale valige **Keela**. Kui API-d on keelatud, saate uuesti juurdepääsu andmiseks valida **Luba**.
+## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Turvaline juurdepääs kliendiandmetele kliendi turvahoidla abil (eelvaade)
 
-## <a name="private-links-tab"></a>Vahekaart Privaatsed lingid
+Customer Insights kasutab kliendi Power Platform turvahoidla võimalust. Kliendi turvahoidla pakub liidest andmetele juurdepääsu taotluste läbivaatamiseks ja kinnitamiseks (või tagasilükkamiseks). Need päringud tekivad siis, kui tugiteenusejuhtumi lahendamiseks on vaja andmetele juurdepääsu. Selle funktsiooni kasutamiseks peab Customer Insightsil olema olemasolev ühendus teie rentniku keskkonnaga Microsoft Dataverse.
 
-[Azure Private Link](/azure/private-link/private-link-overview) võimaldab Customer Insightsil luua teie Azure Data Lake Storage kontoga ühenduse teie virtuaalse võrgu privaatse lõpp-punkti kaudu. Salvestuskontol olevate andmete puhul, mis ei ole avatud avalikule internetile, võimaldab Privaatlink ühendust selle piiratud võrguga.
+Lisateavet kliendi turvahoidla kohta leiate [kliendi turvahoidla kokkuvõttest](/power-platform/admin/about-lockbox#summary)Power Platform. Artiklis kirjeldatakse [ka töövoogu](/power-platform/admin/about-lockbox#workflow) ja kliendi turvahoidla lubamiseks vajalikku [seadistust](/power-platform/admin/about-lockbox#enable-the-lockbox-policy).
 
 > [!IMPORTANT]
-> Minimaalne rollinõue privaatlingi ühenduse seadistamiseks.
+> Üldadministraatorid Power Platform või Power Platform administraatorid saavad kinnitada Customer Insightsi jaoks väljastatud kliendi turvahoidla taotlusi.
+
+## <a name="set-up-an-azure-private-link"></a>Azure Private Linki häälestamine
+
+[Azure Private Link](/azure/private-link/private-link-overview) võimaldab Customer Insightsil luua teie kontoga ühenduse teie Azure Data Lake Storage virtuaalse võrgu privaatse lõpp-punkti kaudu. Salvestuskontol olevate andmete puhul, mis ei ole avatud avalikule internetile, võimaldab Private Link ühenduse selle piiratud võrguga.
+
+> [!IMPORTANT]
+> Minimaalne rollinõue Private Linki ühenduse seadistamiseks tehke järgmist.
 >
 > - Customer Insights: administraator
-> - Azure'i sisseehitatud roll: [Storage Account Contributor](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
-> - Kohandatud Azure'i rolli õigused: [Microsoft.Storage/storageAccounts/read ja Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
->
+> - Azure’i sisseehitatud roll: [salvestusruumikonto kaasautor](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
+> - Kohandatud Azure’i rolli õigused: [Microsoft.Storage/storageAccounts/read ja Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
 
-Privaatse lingi seadistamine Customer Insightsis on kaheastmeline protsess. Esmalt algatate privaatse lingi **loomise Customer Insightsi administraatori** > **turbe** > **eralinkidest**. Privaatse **lingi** lisaminepaanil on loetletud rentniku salvestusruumikontod, mida teil on õigused vaadata. Valige salvestuskonto ja andke nõusolek eralingi loomiseks.
+1. Minge Customer Insightsis jaotisse **Administraatori** > **turve** ja valige **vahekaart Privaatsed lingid**.
 
-Seejärel peate kinnitama privaatlingi Data Lake Storage konto poolel. Uue privaatlingi kinnitamiseks avage ekraanil esitatud link.
+1. Valige **Lisa privaatne link**.
 
-## <a name="key-vault-tab"></a>Vahekaart Võtmehoidla
+   **Paanil Lisa privaatne link** loetletakse teie rentniku salvestusruumikontod, mida teil on õigus vaadata.
 
-Vahekaart **Võtmehoidla** võimaldab teil linkida ja hallata oma [Azure'i võtmehoidlat](/azure/key-vault/general/basic-concepts) keskkonnaga.
-Sihtotstarbelise võtmehoidla abil saab etappe luua ja kasutada saladusi organisatsiooni vastavuse piirides. Customer Insights saab kasutada Azure Key Vault'i saladusi, et [luua ühendusi](connections.md) kolmandate osapoolte süsteemidega.
+1. Valige tellimus, ressursigrupp ja salvestusruumikonto.
 
-Lisateavet leiate jaotisest [Enda Azure'i võtmehoidla loomine](use-azure-key-vault.md).
+1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
-## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Kliendi andmetele pääsete turvaliselt juurde kliendi lukustuskausta kaudu (eelvaade)
+1. Valige **Salvesta**.
 
-Customer Insights kasutab Power Platform kliendiluku funktsiooni. Kliendilukuboks pakub liidest andmetele juurdepääsu taotluste ülevaatamiseks ja kinnitamiseks (või tagasilükkamiseks). Need taotlused tekivad siis, kui tugijuhtumi lahendamiseks on vaja andmetele juurdepääsu kliendiandmetele. Selle funktsiooni kasutamiseks peab Customer Insightsil olema olemasolev ühendus rentniku keskkonnaga Microsoft Dataverse.
+1. Minge oma Data Lake Storage’i kontole ja avage ekraanil esitatud link.
 
-Lisateavet kliendi lukustuskausta kohta leiate [kliendilukustu kokkuvõttest](/power-platform/admin/about-lockbox#summary)Power Platform. Artiklis kirjeldatakse [ka töövoogu](/power-platform/admin/about-lockbox#workflow) ja nõutavat [seadistust](/power-platform/admin/about-lockbox#enable-the-lockbox-policy) kliendiluku lubamiseks.
+1. Kinnitage privaatne link.
 
-> [!IMPORTANT]
-> Customer Insightsi jaoks Power Platform Power Platform väljastatud kliendiluku või administraatorite globaalsed administraatorid saavad kinnitada customer lockboxi taotlused.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

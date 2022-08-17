@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207086"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245644"
 ---
 # <a name="data-sources-overview"></a>Andmeallikate ülevaade
 
@@ -29,7 +29,7 @@ Andmeallikaid saate Manustada või importida Customer Insightsi. Allolevad lingi
 
 **Kinnitage andmeallikas**
 
-Kui teil on andmeid ette valmistatud mõnes Microsofti Azure'i andmeteenuses, saab Customer Insights hõlpsasti andmeallikas ühenduse luua, ilma et peaksite andmeid uuesti alla neelama. Valige üks järgmistest suvanditest.
+Kui teil on andmeid ette valmistatud mõnes Microsofti Azure’i andmeteenuses, saab Customer Insights hõlpsasti andmeallikas ühenduse luua, ilma et peaksite andmeid uuesti alla neelama. Valige üks järgmistest suvanditest.
 - [Azure Data Lake Storage(csv- või parketifailid kaustas Common Data Model)](connect-common-data-model.md)
 - [Azure Synapse Analytics(Järve andmebaasid)](connect-synapse.md)
 - [Microsoft Dataverse andmejärv](connect-dataverse-managed-lake.md)
@@ -67,7 +67,7 @@ Valige saadaolevate toimingute vaatamiseks andmeallikas.
 
 Andmeallikaid saab värskendada automaatse ajakava järgi või soovi korral käsitsi. [Kohapealsed andmeallikad](connect-power-query.md#add-data-from-on-premises-data-sources) värskendavad oma ajakavasid, mis on seadistatud andmete allaneelamise ajal. Manustatud andmeallikate puhul tarbib allaneelamine uusimaid andmeid, mis on sellest andmeallikas kättesaadavad.
 
-Avage **Jaotis Haldussüsteemi** > **·** > [**ajakava**](system.md#schedule-tab), et konfigureerida allaneelatud andmeallikate süsteemi ajastatud värskendusi.
+Avage **Jaotis Haldussüsteemi** > **·** > [**ajakava**](schedule-refresh.md), et konfigureerida allaneelatud andmeallikate süsteemi ajastatud värskendusi.
 
 Andmeallikas värskendamiseks nõudmisel tehke järgmist.
 

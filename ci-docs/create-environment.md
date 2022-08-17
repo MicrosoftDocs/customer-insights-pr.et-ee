@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
-ms.translationtype: MT
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142814"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245552"
 ---
 # <a name="how-to-create-a-new-environment"></a>Kuidas: uue keskkonna loomine
 
@@ -48,7 +48,7 @@ Valige **Põhiteabe** etapis, kas soovite luua soovitud keskkonda kopeerimiskesk
 
 Esitage järgmised andmed.
 
-- **Nimi**: selle keskkonna nimi. Olemasolevast keskkonnast kopeerides on see väli juba täidetud, kuid saate seda muuta.
+- **Nimi**: selle keskkonna nimi. Olemasolevast keskkonnast kopeerides on see väli juba täidetud, kuid saate seda muuta. Kui teil on rohkem kui üks töökeskkond, andke igaühele kergesti tuvastatav nimi.
 - **Valige oma ettevõte**: Valige uue keskkonna jaoks peamine sihtrühm. Võite töötada eraklientidega (B2C) või [ ettevõtetega](work-with-business-accounts.md) (B2B). Kui teie organisatsioon teeb äri peamiselt üksikisikutega (nt jaemüüja või kohvik), valige üksiktarbijad. Kui teie peamine vaatajaskond on teised ettevõtted, näiteks autotootja või paberifirma, valige ettevõtte kontod.
 - **Tüüp**: Valige, kas soovite luua töö- või liivakastikeskkonna. Liivakastikeskkonnad ei luba ajastatud andmeid värskendada ja on mõeldud eelinstallimiseks ja testimiseks. Liivakastikeskkonnad kasutavad põhilist sihtrühma, kes on praegu valitud töökeskkonnas.
 - **Piirkond**: piirkond, kus teenus juurutatakse ja majutatakse. Oma [Azure Data Lake Storage konto](own-data-lake-storage.md) kasutamiseks või [olemasoleva Microsoft Dataverse organisatsiooniga](customer-insights-dataverse.md) ühenduse loomiseks peab Customer Insightsi keskkond asuma samas piirkonnas.

@@ -1,19 +1,19 @@
 ---
 title: Kliendiprofiilide rikastamine demograafiaga Experian (eelversioon)
 description: Üldine teave Experian kolmanda osapoole rikastamise kohta.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fccb37cde3f05a70009c18b6c52db01a5ede094d
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195931"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237991"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Kliendiprofiilide rikastamine demograafiaga Experian (eelversioon)
 
@@ -41,13 +41,9 @@ Peate olema Customer Insightsi administraator [ning](permissions.md#admin) teil 
 
 1. Sisestage ühenduse nimi ning turvalise transpordi konto kehtiv kasutaja ID, osapoole ID ja mudelinumber Experian.
 
-1. Vaadake üle ja esitage oma nõusolek [Andmete privaatsuse ja nõuetele vastavus](#data-privacy-and-compliance) kohta, valides suvandi **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Valige **konfiguratsiooni valideerimiseks Kinnita** ja seejärel valige **Salvesta**.
-
-### <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
-
-Kui lubate Dynamics 365 Customer Insights edastada andmeid Experian-ile, lubate andmete edastamist väljapoole vastavuse piiri Dynamics 365 Customer Insights jaoks, sealhulgas potentsiaalselt tundlikke andmeid, näiteks isikuandmeid. Microsoft edastab sellised andmed teie juhiste alusel, kuid teie vastutate selle eest, et Experian täidaks kõiki privaatsus- või turvakohustusi, mis teil võivad olla. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732). Teie Dynamics 365 Customer Insights administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
 
 ## <a name="configure-the-enrichment"></a>Rikastamise konfigureerimine
 

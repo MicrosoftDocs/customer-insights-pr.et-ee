@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082845"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245460"
 ---
 # <a name="manage-predictions"></a>Prognooside haldamine
 
@@ -49,16 +49,16 @@ Aruande järgmised veerud sisaldavad kasulikku teavet mudeli andmete täiustamis
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Sisendandmete kasutatavuse aruande näide, milles on kuvatud tõrgete, hoiatuste ja soovitustega tabel.":::
 
-- **Nimi:** vea, hoiatuse või soovituse kirjeldav nimi.
-- **Samm:** mudeli faas, rong või skoor, teave viitab.
+- **Nimi:** tõrke, hoiatuse või soovituse kirjeldav nimi.
+- **Etapp:** mudeli faas, treenimine või skoor, millele teave viitab.
 - **Olek:** Teabe raskusaste (viga, hoiatus, soovitus).
-- **Veeru nimi:** olemi veerg, mida tuleb mudeli jõudluse parandamiseks muuta.
-- **Olemi nimi:** olemi nimi, mida tuleb mudeli jõudluse parandamiseks muuta.
+- **Veeru nimi:** veerg olemis, mida tuleb mudeli jõudluse parandamiseks muuta.
+- **Olemi nimi:** selle olemi nimi, mida tuleb mudeli jõudluse parandamiseks muuta.
 - **Üksikasjad:** tõrke, hoiatuse või soovituse üksikasjad.
 
 ## <a name="refresh-a-prediction"></a>Prognoosi värskendamine
 
-Prognoose värskendatakse automaatselt [teie andmete värskendamiste ajakava](system.md#schedule-tab) järgi, mis on sätetes konfigureeritud. Neid saab värskendada ka käsitsi.
+Prognoose värskendatakse automaatselt [teie andmete värskendamiste ajakava](schedule-refresh.md) järgi, mis on sätetes konfigureeritud. Neid saab värskendada ka käsitsi.
 
 1. Minge jaotisse **Ärianalüüs** > **Prognoosid** ja valige vahekaart **Minu prognoosid**.
 

@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170676"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246288"
 ---
 # <a name="segments-overview"></a>Segmentide ülevaade
 
@@ -58,7 +58,7 @@ Valige segment saadaolevate toimingute vaatamiseks.
 - Segmendi **Redigeerimine** atribuutide muutmiseks.
 - Segmendi **Duplikaadi loomine**. Saate selle atribuute kohe redigeerida või duplikaadi salvestada.
 - [**Värskendage**](#refresh-segments) segmenti, et kaasata uusimad andmed.
-- Segmendi **Aktiveerimine** või **Desaktiveerimine**. Passiivseid segmente ei värskendata ajastatud värskendamise [ajal](system.md#schedule-tab) ja nende olekuks **on** märgitud **vahelejäetud**, mis näitab, et värskendamist isegi ei proovitud. Aktiivseid segmente värskendatakse vastavalt nende tüübile: staatiline või dünaamiline.
+- Segmendi **Aktiveerimine** või **Desaktiveerimine**. Passiivseid segmente ei värskendata ajastatud värskendamise [ajal](schedule-refresh.md) ja nende olekuks **on** märgitud **vahelejäetud**, mis näitab, et värskendamist isegi ei proovitud. Aktiivseid segmente värskendatakse vastavalt nende tüübile: staatiline või dünaamiline.
 - **Muutke segmendi tüüp staatiliseks** või **Muutke dünaamiliseks**. Staatilisi segmente tuleb värskendada käsitsi. Dünaamilisi segmente värskendatakse süsteemi värskendamise ajal automaatselt.
 - [**Leidke segmendist sarnaseid kliente**](find-similar-customer-segments.md).
 - Segmendi **Ümbernimetamine**.
@@ -88,7 +88,7 @@ Alaosa sisaldab segmendi liikmete loendit.
 
 Segmente saab värskendada automaatse ajakava alusel või soovi korral käsitsi värskendada. Ühe või mitme segmendi käsitsi värskendamiseks valige need ja valige **Värskenda**.
 
-Automaatse värskendamise ajastamiseks [minge jaotisse](system.md#schedule-tab) Haldussüsteemi **·** > **ajakava** > **.** Kehtivad järgmised reeglid:
+Automaatse värskendamise ajastamiseks [minge jaotisse](schedule-refresh.md) Haldussüsteemi **·** > **ajakava** > **.** Kehtivad järgmised reeglid:
 
 - Kõiki segmente, mille tüüp **on Dünaamiline** või **Laiendus**, värskendatakse automaatselt määratud sagedusega. Kui värskendamine on lõpule jõudnud, näitab olek **,** kas segmendi värskendamisel esines probleeme. Viimati **värskendatud** näitab viimase eduka värskendamise ajatemplit. Tõrke ilmnemisel valige tõrge, et näha juhtunu üksikasju.
 - Segmendid tüübiga **Staatiline** *ei* värskendata automaatselt. Viimati **värskendatud** kuvab ajatempli viimasest korrast, millal staatiline segment käsitsi käitati või värskendati.

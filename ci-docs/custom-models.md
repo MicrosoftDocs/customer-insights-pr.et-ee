@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800415"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245798"
 ---
 # <a name="custom-machine-learning-models"></a>Kohandatud masinõppe mudelid
 
 > [!NOTE]
-> Masinõpe Studio (klassika) tugi lõpeb 31. augustil 2024. Soovitame selleks kuupäevaks üle minna Azure'ile [Masinõpe](/azure/machine-learning/overview-what-is-azure-machine-learning).
+> Masinõpe Studio (klassikaline) toetus lõpeb 31. augustil 2024. Soovitame teil selleks kuupäevaks [azure Masinõpe](/azure/machine-learning/overview-what-is-azure-machine-learning) üle minna.
 >
-> Alates 1. detsembrist 2021 ei saa te luua uusi Masinõpe Studio (klassikalisi) ressursse. Kuni 31. augustini 2024 saate jätkata olemasolevate Masinõpe Studio (klassikaliste) ressursside kasutamist. Lisateavet vt teemast [Migrate to Azure Masinõpe](/azure/machine-learning/migrate-overview).
+> Alates 1. detsembrist 2021 ei saa te luua uusi Masinõpe Studio (klassikalisi) ressursse. Kuni 31. augustini 2024 saate jätkata olemasolevate Masinõpe Studio (klassikaliste) ressursside kasutamist. Lisateavet leiate teemast [Azure’i migreerimine Masinõpe](/azure/machine-learning/migrate-overview).
 
 
 Jaotises **Ärianalüüs** > **Kohandatud mudelid** saate hallata töövooge Azure'i masinõppe mudelite põhjal. Töövood aitavad teil valida andmed, mille põhjal soovite ülevaateid luua, ja vastendada tulemused teie koondatud kliendiandmetega. Lisateavet kohandatud masinõppemudelite loomise kohta leiate teemast [Azure'i masinaõppe põhiste mudelite kasutamine](azure-machine-learning-experiments.md).
@@ -34,7 +34,7 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- See funktsioon toetab Azure'i kaudu [avaldatud veebiteenuseid, Masinõpe partiijuhtmeid](/azure/machine-learning/concept-ml-pipelines).
+- See funktsioon toetab Veebiteenuseid, mis on avaldatud Azure Masinõpe paketttorude [kaudu](/azure/machine-learning/concept-ml-pipelines).
 
 - Selle funktsiooni kasutamiseks on vaja Azure Data Lake Gen2 salvestuskontot, mis on seotud teie Azure Studio eksemplariga. Lisateavet leiate teemast [Azure Data Lake Storage Gen2 salvestuskonto loomine](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -60,7 +60,7 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 
 1. Valige oma veebiteenusega seotud **tööruumid**. 
 
-1. Valige oma mudeli **ripploendit** sisaldavas veebiteenuses Azure Masinõpe konveier. Seejärel valige suvand **Edasi**.    
+1. Valige veebiteenuses **Azure Masinõpe, mis sisaldab teie mudeli** ripploendit. Seejärel valige suvand **Edasi**.    
    Lugege lisateavet [konveieri avaldamise kohta Azure'i masinõppes kujundaja abil](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) või [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk) kohta. Teie konveier peab olema avaldatud [konveieri lõpp-punktis](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Sisestage iga **Veebiteenuse sisendi** kohta Customer Insightsist vastav **Olem** ja valige **Järgmine**.
@@ -84,7 +84,7 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
    > ![Tulemuste seostamine paanil „Kliendiandmed“.](media/intelligence-screen4-relatetocustomer.png "Tulemuste seostamine paanil „Kliendiandmed“")
 
 1. Teile kuvatakse töövoo üksikasjadega kuva **Töövoog salvestatud**.    
-   Kui konfigureerisite Azure'i Masinõpe konveieri töövoo, manustatakse Customer Insights konveiti sisaldavale tööruumile. Customer Insights saab **Azure'i tööruumis kaasautorirolli**.
+   Kui konfigureerisite Töövoo Azure Masinõpe müügitoru jaoks, manustatakse Customer Insights müügitoru sisaldavale tööruumile. Customer Insights saab Kaasautori **rolli** Azure’i tööruumis.
 
 1. Valige nupp **Valmis**.
 
@@ -92,11 +92,11 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 
 ## <a name="edit-a-workflow"></a>Töövoo redigeerimine
 
-1. **Valige lehel Kohandatud mudelid** varem loodud töövoo kõrval veerus &vellip; Toimingud **vertikaalne kolmikpunkt (**) ja valige **Redigeeri**.
+1. **Valige lehel Kohandatud mudelid** eelnevalt loodud töövoo kõrval veerus Toimingud&vellip; vertikaalne kolmikpunkt (**)** ja valige **Redigeeri**.
 
 1. Saate värskendada oma töövoo nime väljal **Kuvatav nimi**, kuid te ei saa muuta konfigureeritud veebiteenust või konveierit. Tehke valik **Edasi**.
 
-1. Iga **veebiteenuse sisendi** puhul saate sobiva **olemi** värskendada customer insights'ist. Seejärel valige suvand **Edasi**.
+1. Iga **veebiteenuse sisendi** puhul saate värskendada vastavat **olemit** Customer Insightsist. Seejärel valige suvand **Edasi**.
 
 1. Määrake etapis **Mudeli väljundi parameetrid** järgmised atribuudid.
       1. Sisestage väljundi **Olemi nimi**, millesse soovite konveieri väljundi tulemusi salvestada.
@@ -108,15 +108,15 @@ Prognoosid pakuvad võimalusi klientidele paremate kogemuste loomiseks ning äri
 
 ## <a name="run-a-workflow"></a>Töövoo käitamine
 
-1. **Valige lehel Kohandatud mudelid** varem loodud töövoo kõrval veerus &vellip; Toimingud **vertikaalne kolmikpunkt () vertikaalne kolmikpunkt (**).
+1. **Valige lehel Kohandatud mudelid** vertikaalne kolmikpunkt (&vellip;) **veerus Toimingud** teie varem loodud töövoo kõrval.
 
 1. Valige **Käivita**.
 
-Teie töövoog käivitub automaatselt ka iga ajastatud värskendamise korral. Lisateave [ajastatud värskenduste häälestamise kohta](system.md#schedule-tab).
+Teie töövoog käivitub automaatselt ka iga ajastatud värskendamise korral. Lisateave [ajastatud värskenduste häälestamise kohta](schedule-refresh.md).
 
 ## <a name="delete-a-workflow"></a>Töövoo kustutamine
 
-1. **Valige lehel Kohandatud mudelid** varem loodud töövoo kõrval veerus &vellip; Toimingud **vertikaalne kolmikpunkt () vertikaalne kolmikpunkt (**).
+1. **Valige lehel Kohandatud mudelid** vertikaalne kolmikpunkt (&vellip;) **veerus Toimingud** teie varem loodud töövoo kõrval.
 
 1. Valige käsk **Kustuta** ja kinnitage kustutamine.
 

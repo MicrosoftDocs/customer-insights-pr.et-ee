@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206994"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245782"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Andmetega ühenduse loomine Azure Data Lake Storageis
 
@@ -29,9 +29,9 @@ Kasutage andmeid Dynamics 365 Customer Insights oma Azure Data Lake Storage Gen2
 
 - Kontol Azure Data Lake Storage peab olema [lubatud hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace). Andmed tuleb salvestada hierarhilises kaustavormingus, mis määratleb juurkausta ja millel on iga olemi jaoks alamkaustad. Alamkaustadel võivad olla täisandmed või astmelised andmekaustad.
 
-- Azure'i teenusesubjektiga autentimiseks veenduge, et see oleks teie rentnikus konfigureeritud. Lisateavet vaadake jaotisest [Azure Data Lake Storage Gen2 kontoga ühenduse loomine Azure'i teenuse printsipaaliga](connect-service-principal.md).
+- Azure'i teenusesubjektiga autentimiseks veenduge, et see oleks teie rentnikus konfigureeritud. Lisateavet vaadake jaotisest [Azure Data Lake Storage Gen2 kontoga ühenduse loomine Azure’i teenuse printsipaaliga](connect-service-principal.md).
 
-- Andmed Azure Data Lake Storage, mida soovite ühendada ja kust andmeid alla neelata, peavad asuma keskkonnaga samas Azure'i Dynamics 365 Customer Insights piirkonnas. Ühendused Common Data Modeli kausta ja muus Azure'i regioonis oleva andmejärve vahel pole toetatud. Keskkonna Azure'i piirkonna tundmaõppimiseks **avage Customer Insightsis jaotis Haldussüsteemi** > **·** > **teave**.
+- Andmed Azure Data Lake Storage, mida soovite ühendada ja kust andmeid alla neelata, peavad asuma keskkonnaga samas Azure’i Dynamics 365 Customer Insights piirkonnas. Ühendused Common Data Modeli kausta ja muus Azure'i regioonis oleva andmejärve vahel pole toetatud. Keskkonna Azure’i piirkonna tundmaõppimiseks **avage Customer Insightsis jaotis Haldussüsteemi** > **·** > **teave**.
 
 - Võrgupõhistes teenustes salvestatud andmeid võidakse säilitada muus kohas kui see, kus andmeid töödeldakse või säilitatakse Dynamics 365 Customer Insights.Võrguteenustes salvestatud andmete importimisel või nendega ühenduse loomisel nõustute, et andmeid saab edastada ja salvestada.Dynamics 365 Customer Insights  [Lisateavet leiate Microsofti usalduskeskusest](https://www.microsoft.com/trust-center).
 
@@ -50,14 +50,14 @@ Kasutage andmeid Dynamics 365 Customer Insights oma Azure Data Lake Storage Gen2
 
 1. Valige **Azure data lake storage**.
 
-   :::image type="content" source="media/data_sources_ADLS.png" alt-text="Dialoogiboks Azure Data Lake'i ühenduse üksikasjade sisestamiseks." lightbox="media/data_sources_ADLS.png":::
+   :::image type="content" source="media/data_sources_ADLS.png" alt-text="Dialoogiboks Azure Data Lake’i ühenduse üksikasjade sisestamiseks." lightbox="media/data_sources_ADLS.png":::
 
 1. **Sisestage andmeallikas nimi** ja valikuline **kirjeldus**. Nimi identifitseerib kordumatult andmeallikas ja sellele viidatakse järgnevates protsessides ning seda ei saa muuta.
 
-1. Valige üks järgmistest suvanditest jaotises **Ühenda salvestusruum, kasutades**. Lisateavet vaadake jaotisest [Customer Insightsi Azure Data Lake Storage ühendamine Gen2 kontoga Azure'i teeninduse printsipaal](connect-service-principal.md).
+1. Valige üks järgmistest suvanditest jaotises **Ühenda salvestusruum, kasutades**. Lisateavet vaadake jaotisest [Customer Insightsi Azure Data Lake Storage ühendamine Gen2 kontoga Azure’i teeninduse printsipaal](connect-service-principal.md).
 
-   - **Azure'i ressurss**: sisestage **ressursi ID**. Soovi korral, kui soovite talletamiskontolt andmeid alla neelata Azure Private Linki kaudu, valige **Luba privaatne link**. Lisateavet vaadake jaotisest [Privaatsed lingid](security-overview.md#private-links-tab).
-   - **Azure'i tellimus**: valige **tellimus** ning seejärel **ressursirühm** ja **salvestusruumikonto**. Soovi korral, kui soovite talletamiskontolt andmeid alla neelata Azure Private Linki kaudu, valige **Luba privaatne link**. Lisateavet vaadake jaotisest [Privaatsed lingid](security-overview.md#private-links-tab).
+   - **Azure’i ressurss**: sisestage **ressursi ID**. Soovi korral, kui soovite talletamiskontolt andmeid alla neelata Azure Private Linki kaudu, valige **Luba privaatne link**. Lisateavet vaadake jaotisest [Privaatsed lingid](security-overview.md#set-up-an-azure-private-link).
+   - **Azure’i tellimus**: valige **tellimus** ning seejärel **ressursirühm** ja **salvestusruumikonto**. Soovi korral, kui soovite talletamiskontolt andmeid alla neelata Azure Private Linki kaudu, valige **Luba privaatne link**. Lisateavet vaadake jaotisest [Privaatsed lingid](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Andmeallikas loomiseks vajate konteinerile või salvestusruumikontole ühte järgmistest rollidest.
@@ -84,7 +84,7 @@ Kasutage andmeid Dynamics 365 Customer Insights oma Azure Data Lake Storage Gen2
    > [!TIP]
    > Olemi redigeerimiseks JSON-i redigeerimisliideses valige olem ja seejärel **Redigeeri skeemifaili**. Tehke muudatusi ja valige **Salvesta**.
 
-1. Valitud olemite puhul, mis vajavad astmelist allaneelamist, **kuvatakse jaotises** Astmeline värskendamine suvand **Nõutav**. Kõigi nende olemite kohta leiate teavet teemast [Azure Data Lake'i andmeallikate astmelise värskendamise konfigureerimine](incremental-refresh-data-sources.md).
+1. Valitud olemite puhul, mis vajavad astmelist allaneelamist, **kuvatakse jaotises** Astmeline värskendamine **suvand Nõutav**. Kõigi nende olemite kohta leiate teavet teemast [Azure Data Lake’i andmeallikate](incremental-refresh-data-sources.md) astmelise värskendamise konfigureerimine.
 
 1. Valitud olemite puhul, kus primaarvõtit pole määratletud, **kuvatakse jaotises** Primaarvõti **jaotises Nõutav**. Kõigi nende olemite puhul:
    1. Valige **Nõutav**. Kuvatakse **paan Redigeeri olemit**.
@@ -142,7 +142,7 @@ Andmete laadimine võib võtta aega. Pärast edukat värskendamist saab allaneel
 
    :::image type="content" source="media/ADLS_required.png" alt-text="Dialoogiboks, kus on kuvatud primaarvõtme jaoks nõutav":::
 
-1. Valitud olemite puhul, mis vajavad astmelist allaneelamist, **kuvatakse jaotises** Astmeline värskendamine suvand **Nõutav**. Kõigi nende olemite kohta leiate teavet teemast [Azure Data Lake'i andmeallikate astmelise värskendamise konfigureerimine](incremental-refresh-data-sources.md).
+1. Valitud olemite puhul, mis vajavad astmelist allaneelamist, **kuvatakse jaotises** Astmeline värskendamine **suvand Nõutav**. Kõigi nende olemite kohta leiate teavet teemast [Azure Data Lake’i andmeallikate](incremental-refresh-data-sources.md) astmelise värskendamise konfigureerimine.
 
 1. Valitud olemite puhul, kus primaarvõtit pole määratletud, **kuvatakse jaotises** Primaarvõti **jaotises Nõutav**. Kõigi nende olemite puhul:
    1. Valige **Nõutav**. Kuvatakse **paan Redigeeri olemit**.
@@ -158,7 +158,7 @@ Andmete laadimine võib võtta aega. Pärast edukat värskendamist saab allaneel
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Azure Data Lake Storage andmeallikas redigeerimine
 
-Saate värskendada suvandit *Ühenda salvestusruumikontoga, kasutades* suvandit. Lisateavet vaadake jaotisest [Customer Insightsi Azure Data Lake Storage ühendamine Gen2 kontoga Azure'i teeninduse printsipaal](connect-service-principal.md). Kui soovite luua ühenduse muu konteineriga teie salvestuskontol või muuta konto nime, siis peate looma [uue andmeallika ühenduse](#connect-to-azure-data-lake-storage).
+Saate värskendada suvandit *Ühenda salvestusruumikontoga, kasutades* suvandit. Lisateavet vaadake jaotisest [Customer Insightsi Azure Data Lake Storage ühendamine Gen2 kontoga Azure’i teeninduse printsipaal](connect-service-principal.md). Kui soovite luua ühenduse muu konteineriga teie salvestuskontol või muuta konto nime, siis peate looma [uue andmeallika ühenduse](#connect-to-azure-data-lake-storage).
 
 1. Avage suvandid **Andmed** > **Andmeallikad**.
 
@@ -176,7 +176,7 @@ Saate värskendada suvandit *Ühenda salvestusruumikontoga, kasutades* suvandit.
         > - Salvestusruumi bloobiandmete omanik
         > - Salvestusruumi bloobiandmete kaasautor
 
-   - **Luba privaatne link**, kui soovite andmeid talletamiskontolt Azure Private Linki kaudu alla neelata. Lisateavet vaadake jaotisest [Privaatsed lingid](security-overview.md#private-links-tab).
+   - **Luba privaatne link**, kui soovite andmeid talletamiskontolt Azure Private Linki kaudu alla neelata. Lisateavet vaadake jaotisest [Privaatsed lingid](security-overview.md#set-up-an-azure-private-link).
 
 1. Tehke valik **Edasi**.
 1. Muutke ühte järgmistest.
@@ -186,7 +186,7 @@ Saate värskendada suvandit *Ühenda salvestusruumikontoga, kasutades* suvandit.
       > [!IMPORTANT]
       > Kui olemasoleval failil model.json või manifest.json ja olemikomplektil on sõltuvusi, kuvatakse tõrketeade ja te ei saa valida muud faili model.json või manifest.json. Eemaldage need sõltuvused enne faili model.json või manifest.json muutmist või looge uus andmeallikas failiga model.json või manifest.json, mida soovite kasutada, et vältida sõltuvuste eemaldamist.
    - Andmefaili asukoha või primaarvõtme muutmiseks valige **Redigeeri**.
-   - Inkrementaalse allaneelamise andmete muutmise kohta leiate teavet teemast [Azure Data Lake'i andmeallikate](incremental-refresh-data-sources.md) astmelise värskendamise konfigureerimine.
+   - Inkrementaalse allaneelamise andmete muutmise kohta leiate teavet teemast [Azure Data Lake’i andmeallikate astmelise värskendamise konfigureerimine](incremental-refresh-data-sources.md).
    - Muutke olemi nime ainult nii, et see vastaks .json-failis olevale olemi nimele.
 
      > [!NOTE]

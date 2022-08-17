@@ -1,19 +1,19 @@
 ---
 title: Mida on uut rakenduses Dynamics 365 Customer Insights
 description: Teave uute funktsioonide, täiustuste ja veaparanduste kohta.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114241"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246006"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Mida on uut rakenduses Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 
 > [!TIP]
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>2022. aasta juuli värskendused
+
+2022. aasta juuli värskendused sisaldavad uusi funktsioone, jõudluse täiendusi ja veaparandusi.
+
+### <a name="export-to-moengage"></a>Ekspordi MoEngage’i
+
+Eksportige ühtsete kliendiprofiilide segmendid MoEngage’i ja kasutage neid MoEngage’is e-posti turunduseks.
+
+Lisateavet vaadake jaotisest [Segmentide eksportimine MoEngage’i](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>SSH tugi SFTP-põhisele ekspordile
+
+Valige, kas soovite autentida SSH või kasutajanime/parooli kaudu ühenduste jaoks SFTP ekspordi sihtkohtadega.
+
+Lisateavet vaadake jaotisest [Andmete eksportimine SFTP-hostidesse](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Kogemuste isikupärastamine teadaolevate ja tundmatute kasutajate andmetega
+
+Kliendiandmete haldamine ei ole uus väljakutse, kuid see muutub üha keerulisemaks, kuna kasutajad navigeerivad erinevates digitaalsetes kanalites, mida kaubamärgid pakuvad. Ühes kanalis tuntud (autenditud) kasutaja muutub teises kanalis tundmatuks (autentimata), kui ta pole sisse logitud. Probleem on sageli selles, et autentimata (tundmatutel) kasutajatel pole ühist ID-d. Seda saab kasutada tähendusrikaste profiiliatribuutide seostamiseks ja ühtsete kliendiprofiilide loomiseks. Customer Insights aitab seda probleemi lahendada, neelates andmeid teie lähtesüsteemide jälgimismeetoditest.
+
+Lisateavet leiate teemast [Kasutuskogemuse isikupärastamine teadaolevate ja tundmatute kasutajate andmetega](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>2022. juuni värskendused
 
@@ -36,7 +58,7 @@ Lisateavet leiate teemast [Andmeallikate ülevaade](data-sources.md).
 
 ### <a name="export-to-inmobi"></a>Ekspordi InMobisse
 
-InMobi aitab brändidel tarbijaid mõista, tuvastada, kaasata ja omandada. Segmente ja muid andmeid saate eksportida InMobi teenusesse Azure'i bloobimälu kontode kaudu.
+InMobi aitab brändidel tarbijaid mõista, tuvastada, kaasata ja omandada. Segmente ja muid andmeid saate eksportida InMobi teenusesse Azure’i bloobimälu kontode kaudu.
 
 Lisateavet vaadake jaotisest [Eksport InMobisse (eelvaade)](export-inmobi.md)
 
@@ -44,13 +66,13 @@ Lisateavet vaadake jaotisest [Eksport InMobisse (eelvaade)](export-inmobi.md)
 
 Kliendi turvahoidla pakub liidest andmetele juurdepääsu taotluste läbivaatamiseks ja kinnitamiseks (või tagasilükkamiseks). Need päringud tekivad siis, kui tugiteenusejuhtumi lahendamiseks on vaja andmetele juurdepääsu.
 
-Lisateavet vaadake jaotisest [Turvaline juurdepääs kliendiandmetele kliendi turvahoidla abil (eelvaade)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+Lisateavet leiate teemast [Turvaline juurdepääs kliendiandmetele kliendi turvahoidla abil (eelvaade)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
 
 ### <a name="connect-to-your-data-using-azure-private-link"></a>Andmetega ühenduse loomine Azure Private Linki abil
 
 Azure Private Link võimaldab Customer Insightsil luua teie kontoga ühenduse teie Azure Data Lake Storage virtuaalse võrgu privaatse lõpp-punkti kaudu. Salvestuskontol olevate andmete puhul, mis ei ole avatud avalikule internetile, võimaldab Private Link ühenduse selle piiratud võrguga.
 
-Lisateavet vaadake jaotisest [Privaatse lingi kasutamine Customer Insightsis](security-overview.md#private-links-tab).
+Lisateavet vaadake jaotisest [Privaatse lingi kasutamine Customer Insightsis](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Mai 2022 värskendused
 
@@ -92,7 +114,7 @@ Lisateavet vaadake jaotisest [Kuidas: uue keskkonna](create-environment.md) loom
 
 Dun ja Bradstreet pakub ettevõtetele äriandmeid, analüütikat ja teadmisi. See võimaldab ettevõtetel kliendi koondprofiilidega klientide andmeid rikastada. Rikastamised hõlmavad selliseid atribuute nagu DUNS-i number, ettevõtte suurus, asukoht, tööstus ja palju muud.
 
-Lisateavet vaadake jaotisest [Ettevõtte profiilide rikastamine Dun ja Bradstreet'iga (eelvaade)](enrichment-dnb.md).
+Lisateavet vaadake jaotisest [Ettevõtte profiilide rikastamine Dun ja Bradstreet’iga (eelvaade)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Mõõdutüübi määratlemine uue mõõdu loomisel
 
@@ -104,7 +126,7 @@ Lisateavet vaadake jaotisest [Mõõtude koostaja kasutamine mõõtude loomiseks 
 
 Vaatasime üle oma dokumentatsiooniartiklid ning eemaldasime kaasamisstatistika ja vaatajaskonna ülevaadete võimalused. Edasi liikudes viitame rakenduse põhifunktsioonidest kirjutades järjekindlalt tootenimele Customer Insights. See muudatus toob kaasa ka sisukorra, URL-i struktuuri ja alusdokumentide hoidla failiteede olulise ümberkorraldamise. Kõik teie järjehoidjad või olemasolevad lingid töötavad edasi ja suunavad ümber värskendatud URL-idele.
 
-Kui soovite meile teada anda, kuidas te seda muutust tajute või märkate midagi, mis ei tööta ootuspäraselt, andke meile sellest teada, esitades [selle lehe](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**) kohta tagasiside.
+Kui soovite meile teada anda, kuidas te seda muutust tajute või märkate midagi, mis ei tööta ootuspäraselt, andke meile sellest teada, esitades [selle lehe kohta tagasiside](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>Märts 2022 värskendused
 
@@ -131,9 +153,9 @@ Lisateavet leiate teemast Andmete ühiskasutuse [lubamine omaenda Dataverse kaud
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Uued ekspordisihtkohad: Iterable ja Braze
 
-Jätkame oma ekspordisihtkohtade ökosüsteemi laiendamist uute ühendustega. Nüüd saate segmente eksportida Iterable'i ja Braze'i, et kasutada nende aktiveerimisteenuseid.
+Jätkame oma ekspordisihtkohtade ökosüsteemi laiendamist uute ühendustega. Nüüd saate segmente eksportida Iterable’i ja Braze’i, et kasutada nende aktiveerimisteenuseid.
 
-Lisateavet vaadake teemadest [Segmentide eksportimine iterable'i (eelvaade)](export-iterable.md) ja [segmentide eksportimine Braze'i (eelvaade)](export-braze.md).
+Lisateavet vaadake teemadest [Segmentide eksportimine iterable’i (eelvaade)](export-iterable.md) ja [segmentide eksportimine Braze’i (eelvaade)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Marketo ja Google Adsi ekspordi täiustused
 

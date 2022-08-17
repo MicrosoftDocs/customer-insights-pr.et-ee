@@ -1,7 +1,7 @@
 ---
-title: Rikastage ettevõtte profiile Dun ja Bradstreet'iga (eelvaade)
+title: Rikastage ettevõtte profiile Dun ja Bradstreet’iga (eelvaade)
 description: Üldine teave Dun / Bradstreet kolmanda osapoole rikastumise kohta.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e89b64774dcb519a071dd3d403473807a50e7f33
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196021"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237899"
 ---
-# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Rikastage ettevõtte profiile Dun ja Bradstreet'iga (eelvaade)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Rikastage ettevõtte profiile Dun ja Bradstreet’iga (eelvaade)
 
 Dun ja Bradstreet pakub ettevõtetele äriandmeid, analüütikat ja teadmisi. See võimaldab ettevõtetel kliendi koondprofiilidega klientide andmeid rikastada. Rikastamised hõlmavad selliseid atribuute nagu DUNS-i number, ettevõtte suurus, asukoht, tööstus ja palju muud.
 
@@ -55,16 +55,11 @@ Peate olema Customer Insightsi administraator [ja](permissions.md#admin) teil pe
 
 1. Esitage kehtivad Dun & Bradstreet mandaadid ja Dun & Bradstreet projekti üksikasjad *Piirkond, Drop kausta tee ja Drop kausta nimi*. Selle teabe [saate](#set-up-your-dun--bradstreet-project) Dun ja Bradstreet projektist.
 
-1. Vaadake üle ja esitage oma nõusolek [Andmete privaatsuse ja nõuetele vastavus](#data-privacy-and-compliance) kohta, valides suvandi **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Valige **konfiguratsiooni valideerimiseks Kinnita** ja seejärel valige **Salvesta**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Dun ja Bradstreet ühenduse konfiguratsiooni leht.":::
-
-### <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
-
-Kui lubate Dynamics 365 Customer Insights edastada andmeid Dun ja Bradstreet'le, lubate edastada andmeid väljaspool vastavuspiiri, sealhulgas potentsiaalselt tundlike andmete, näiteks isikuandmete jaoks Dynamics 365 Customer Insights. Microsoft edastab need andmed teie korraldusel, kuid teie vastutate selle eest, et Dun ja Bradstreet täidaksid kõiki teie privaatsus- või turbekohustusi. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
-Teie Dynamics 365 Customer Insights administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
 
 ## <a name="supported-countries-or-regions"></a>Toetatud riikides või regioonides
 

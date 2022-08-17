@@ -2,7 +2,7 @@
 title: Duplikaatide eemaldamine enne andmete ühendamist
 description: Ühendamisprotsessi teine samm on valida, millist kirjet duplikaatide leidmisel säilitada.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,20 +13,29 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139424"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213622"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Duplikaatide eemaldamine enne andmete ühendamist
 
-See ühendamise etapp võimaldab valikuliselt seadistada reeglid duplikaatkirjete käsitlemiseks olemis. *Duplikaadi eemaldamine* tuvastab duplikaatkirjed ja ühendab need üheks kirjeks. Lähtekirjed lingitakse alternatiivsete ID-dega ühendatud kirjega. Kui reegleid ei konfigureerita, rakendatakse süsteemi määratletud reegleid.
+See ühendamise valikuline etapp võimaldab teil seadistada reeglid duplikaatkirjete **eemaldamiseks** olemis. Duplikaat tuvastab kliendi jaoks mitu kirjet ja valib parima kirje, mida säilitada (põhiliste koosteeelistuste põhjal) või ühendab kirjed üheks (täpsemate koosteeelistuste põhjal). Lähtekirjed lingitakse alternatiivsete ID-dega ühendatud kirjega. Kui reegleid ei konfigureerita, rakendatakse süsteemi määratletud reegleid.
+
+## <a name="default-deduplication"></a>Vaikimisi dubleerimine
+
+Süsteemi määratletud reegleid kohaldatakse juhul, kui dubleerimisreegleid ei lisata.
+
+- Primaarvõti on dubleeritud.
+  Kõigi sama primaarvõtmega kirjete puhul on võitjaks enim täidetud **kirje (see,** millel on kõige vähem nullväärtusi).
+- Olemile rakendatakse kõik üksustevahelised vastendamise reeglid.
+  Näiteks: vastendamise etapis, kui olem A vastendatakse olemiga B rakendustes FullName ja DateofBirth *, siis on olem A dubleeritud ka täisnime* ja *sünnikuupäevaga* *.* *·* Kuna *FullName* ja *DateofBirth* on kehtivad võtmed kliendi tuvastamiseks olemis A, kehtivad need võtmed ka duplikaatklientide tuvastamiseks olemis A.
 
 ## <a name="include-enriched-entities-preview"></a>Rikastatud olemite kaasamine (eelvaade)
 
-Kui rikastasite olemeid andmeallikas tasemel, et aidata ühendamise tulemusi parandada, valige need. Lisateavet leiate teemast [Andmeallikate rikastamine](data-sources-enrichment.md).
+Kui rikastasite olemeid andmeallikas tasemel, et aidata ühendamise tulemusi parandada, valige need. Lisateavet leiate teemast [Andmeallikate](data-sources-enrichment.md) rikastamine.
 
 1. **Valige lehel Kirjete** dubleerimine lehe ülaosas suvand **Kasuta rikastatud olemeid**.
 
@@ -47,7 +56,7 @@ Kui rikastasite olemeid andmeallikas tasemel, et aidata ühendamise tulemusi par
         - **Sümbolid**: eemaldab kõik sümbolid ja erimärgid. Tekstist *Head&Shoulder* saab tekst *HeadShoulder*.
         - **Tekst väiketähtedeks: teisendab kõik märgid väiketähtedeks**. Tekstist *ALL CAPS ja Title Case* saab *all caps ja title case*.
         - **Tüüp (telefon, nimi, aadress, organisatsioon):** Standardiseerib nimed, pealkirjad, telefoninumbrid, aadressid jne.
-        - **Unicode ascii-ks**: teisendab unicode'i märke ASCII-märkideks. */u00B2* asemel on kasutusel *2*.
+        - **Unicode ascii-ks**: teisendab unicode’i märke ASCII-märkideks. */u00B2* asemel on kasutusel *2*.
         - **Tühik**: eemaldab kõik tühikud. Tekstist *Hello   World* saab tekst *HelloWorld*.
       - **Täpsus**: saate määrata selle tingimuse jaoks rakendatava täpsustaseme.
         - **Põhiline**: valige *madala (30%)*, *keskmise (60%)*, *kõrge (80%)* ja *täpse (100%) vahel*. Valige **Täpne**, et vastendada ainult kirjeid, mis vastavad 100 protsendile.

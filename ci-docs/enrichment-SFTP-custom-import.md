@@ -1,19 +1,19 @@
 ---
 title: Rikastage kliendiprofiile SFTP kohandatud impordiga (eelvaade)
 description: Üldine teave SFTP-põhise kohandatud importimise kaudu rikastamise kohta.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 831d1d3d3045379bbc5bcdcd4b05b8a147221f31
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195791"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237761"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Rikastage kliendiprofiile SFTP kohandatud impordiga (eelvaade)
 
@@ -85,14 +85,9 @@ Peate olema Customer Insightsi administraator [ja](permissions.md#admin) teil pe
 
 1. Sisestage SFTP-serveri jaoks kehtiv kasutajanimi, parool ja hosti URL, kus imporditavad andmed asuvad.
 
-1. Vaadake üle ja esitage oma nõusolek [Andmete privaatsuse ja nõuetele vastavus](#data-privacy-and-compliance) kohta, valides suvandi **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Valige **konfiguratsiooni valideerimiseks Kinnita** ja seejärel valige **Salvesta**.
-
-### <a name="data-privacy-and-compliance"></a>Andmete privaatsus ja nõuetele vastavus
-
-Kui lubate Dynamics 365 Customer Insights andmete edastamise kohandatud impordi abil, lubate edastada andmeid väljaspool nõuetele vastavuse piire, sh potentsiaalselt tundlike andmete puhul Dynamics 365 Customer Insights, nagu isikuandmed. Microsoft edastab selliseid andmeid teie korraldusel, kuid teie vastutate selle eest, et andmed vastaksid kõigile teie privaatsus- või turbekohustustele. Lisateavet leiate artiklist [Microsofti privaatsusavaldus](https://go.microsoft.com/fwlink/?linkid=396732).
-Teie Dynamics 365 Customer Insights administraator saab selle rikastamise igal ajal eemaldada, et lõpetada selle funktsiooni kasutamine.
 
 ## <a name="configure-the-import"></a>Impordi konfigureerimine
 

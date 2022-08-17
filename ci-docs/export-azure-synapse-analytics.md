@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196389"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259839"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Andmete eksportimine Azure Synapse Analytics (eelvaade)
 
@@ -24,7 +24,7 @@ Azure Synapse on analüüsiteenus, mis kiirendab andmeladude ja suurandmesüstee
 > [!NOTE]
 > Seadke kindlasti kõik **rollimäärangud** vastavalt kirjeldatusele.
 
-- Customer Insightsis peab teie Azure Active Directory (AD) kasutajakontol olema administraatori [roll](permissions.md#assign-roles-and-permissions).
+- Customer Insightsis peab teie Azure Active Directory (AD) kasutajakontol olema administraatori [roll](permissions.md#add-users).
 
 Azure -is:
 
@@ -39,6 +39,8 @@ Azure -is:
 - Tööruumi *[Azure Synapse hallataval identiteedil](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* **on** salvestusruumi bloobi andmete esitaja Azure Data Lake Storage õigused Gen2 kontol, kus andmed asuvad ja tööruumiga lingitud Azure Synapse. Lugege lisateavet [Azure'i portaali kasutamise kohta Azure'i rolli määramiseks juurdepääsuks bloobi- ja järjekorraandmetele](/azure/storage/common/storage-auth-aad-rbac-portal) ning [Salvestusruumi Bloobiandmete Kaasautori õigustele](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - Tööruumis Azure Synapse on *Customer Insightsi* **hooldusjuhile määratud** synapse-administraatori [roll](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Kui teie Customer Insightsi keskkond salvestab andmeid teie [enda omas Azure Data Lake Storage](own-data-lake-storage.md)Azure Synapse Analytics, vajab ühenduse seadistanud kasutaja vähemalt sisseehitatud readeri **rolli** Data Lake’i salvestusruumi kontol. Lisateavet leiate teemast [Azure'i rollide määramine Azure'i portaali abil](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Ühenduse häälestamine Azure Synapse
 

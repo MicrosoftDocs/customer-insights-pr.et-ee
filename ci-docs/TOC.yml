@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Administreerimine
   items:
-    - name: Süsteemikonfiguratsiooni seadistamine
-      href: system.md
-    - name: Turvaseadete konfigureerimine
-      href: security-overview.md
     - name: Kasutaja õiguste määramine
       href: permissions.md
     - name: Tooge oma Key Vault
       href: use-azure-key-vault.md
+    - name: Turvaseadete konfigureerimine
+      href: security-overview.md
     - name: Diagnostikalogide eksportimine
       href: diagnostics.md
-    - name: Ühenduste ülevaade
+    - name: Halda ühendusi
       href: connections.md
+    - name: Süsteemi värskendamise ajastamine
+      href: schedule-refresh.md
+    - name: Vaadake süsteemi konfiguratsiooni
+      href: system.md
 - name: APId
   items:
     - name: API-dega töötamine
