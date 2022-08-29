@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188088"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303778"
 ---
 # <a name="view-customer-profiles"></a>Kliendiprofiilide vaatamine
 
@@ -78,7 +78,7 @@ Kliendi üksikasjade hulka kuuluvad järgmised.
 **Paanil** Kliendiprofiil kuvatakse ühendatud *kliendi* olemi erinevad väärtused. Kui väljal pole valitud kliendiprofiili jaoks väärtust, siis seda ei kuvata, välja arvatud aadressiväli. Paan on struktureeritud jaotisteks:
 
 - Esimeses jaotises kuvatakse eelmääratletud väljakomplekt, millele järgneb kõik otsingu ja filtriregistrisse kuuluvad väljad. Kõik aadressiga seotud väljad ühendatakse üheks reaks, mis näitab isegi siis, kui profiil ei sisalda aadressiteavet.
-- **Selle kliendi** kontaktid kuvatakse ärikontode keskkondades. Iga kontakti kuvatakse koos nende väljadega. Tühjad väljad on peidetud.
+- **Selle kliendi** kontaktid kuvatakse ärikontode keskkondades (B-B). Iga kontakti kuvatakse koos nende väljadega. Tühjad väljad on peidetud.
 - **Lisaväljad** näitavad valitud kliendi ülejäänud välju, välja arvatud ID-d.
 - **ID-d loetlevad** kõik ID-d vastava üksuse nime all. Väljad identifitseeritakse ID-dena nende semantika järgi.
 

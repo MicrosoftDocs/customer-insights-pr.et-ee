@@ -1,7 +1,7 @@
 ---
 title: Eksportimine (eelversioon) ülevaade
 description: Andmete jagamiseks hallake eksporti.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245322"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304054"
 ---
 # <a name="exports-preview-overview"></a>Eksportimine (eelversioon) ülevaade
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245322"
 
 Eksporditüüpe on kaks peamist:  
 
-- **Andmete eksportimine**: eksportige mis tahes tüüpi olemid, mis on Customer Insightsis saadaval. Ekspordiks valitud olemid eksporditakse kõigi andmeväljade, metaandmete, skeemide ja vastendamise üksikasjadega.
-- **Segmendieksport**: ekspordisegmendi olemid Customer Insightsist. Segmendid esindavad kliendiprofiilide loendit. Ekspordi konfigureerimisel valite kaasatud andmeväljad sõltuvalt sihtsüsteemist, kuhu andmeid ekspordite.
+- **Andmete väljaveod** võimaldavad eksportida mis tahes tüüpi olemeid, mis on Customer Insightsis saadaval. Ekspordiks valitud olemid eksporditakse kõigi andmeväljade, metaandmete, skeemide ja vastendamise üksikasjadega.
+- **Segmendieksport** võimaldab teil eksportida segmendiolemeid Customer Insightsist. Üksiktarbijate (B-C) puhul kujutavad segmendid endast kliendiprofiilide loendit. Ettevõtete puhul (B-B [) võivad segmendid esindada kontode või kontaktide loendit](segment-builder.md#create-a-new-segment-with-segment-builder). Ekspordi konfigureerimisel valite kaasatud andmeväljad sõltuvalt sihtsüsteemist, kuhu andmeid ekspordite.
 
 ### <a name="export-segments"></a>Ekspordi segmendid
 
@@ -38,14 +38,15 @@ Enamik ekspordivalikuid toetab mõlemat tüüpi keskkondi. Segmentide eksportimi
 **Segmentide eksport keskkondades eratarbijatele (B2C)**  
 - Segmendid üksikutele klientidele mõeldud keskkondade kontekstis on üles ehitatud olemile *ühendatud kliendiprofiil*. Iga sihtsüsteemide nõuetele (näiteks meiliaadressi) vastavad segmendid võidakse eksportida.
 
-**Segmendi ekspordikeskkonnad ärikontode jaoks (B2B)**  
-- Segmendid ärikontode keskkondades on rajatud *konto* olemile. Konto segmentide eksportimiseks nagu see on, peab sihtsüsteem toetama puhtaid konto segmente. See kehtib [LinkedIn'i](export-linkedin-ads.md) kohta, kui valite ekspordi määratlemisel suvandi **ettevõte**.
-- Kõik muud sihtsüsteemid nõuavad kontaktiolemi välju. Tagamaks, et ettevõtte segmendid saavad tuua andmeid seotud kontaktidest, peab teie segmendi määratluses olema kontakti olemi projektiatribuudid. Lisateave [segmentide ja projektiatribuutide konfigureerimise kohta](segment-builder.md).
+**Segmentide eksport ärikontode keskkondades (B-B)**  
+- Ärikontode keskkondade kontekstis on segmendid üles ehitatud konto olemile *või kontaktiolemile* *.* Konto segmentide eksportimiseks nagu see on, peab sihtsüsteem toetama puhtaid konto segmente. See kehtib [LinkedIn'i](export-linkedin-ads.md) kohta, kui valite ekspordi määratlemisel suvandi **ettevõte**.
+- Kõik muud sihtsüsteemid nõuavad kontaktiolemi välju.
+- Kahe segmenditüübiga (kontaktid ja kontod) tuvastab Customer Insights sihtsüsteemi põhjal automaatselt, mis tüüpi segmendid on eksportimiseks sobilikud. Näiteks kontaktikeskse sihtsüsteemi (nt Mailchimp) puhul võimaldab Customer Insights valida eksportimiseks ainult kontaktisegmente.
 
 **Segmendiekspordi piirangud**  
 - Muude tootjate sihtsüsteemid võivad piirata ekspordita kliendiprofiilide arvu. 
-- Üksikklientide puhul näete segmendiliikmete tegelikku arvu, kui valite eksportimiseks segmendi. Liiga suure segmendi korral kuvatakse hoiatus. 
-- Äriettevõtete puhul näete segmenti kaasatud ettevõtete arvu; küll aga ei näidata nende kontaktide arvu, mida saab projekteerida. Mõnel juhul võib see kaasa tuua eksporditud segmendi, mis sisaldab tegelikult rohkem kliendiprofiile kui sihtsüsteem aktsepteerib. Kui sihtsüsteemi piirid on ületatud, jäetakse eksport vahele.
+- Üksikklientide puhul näete segmendiliikmete tegelikku arvu, kui valite eksportimiseks segmendi. Saate hoiatuse, kui segment on liiga suur. 
+- Ärikontode puhul näete kontode või kontaktide arvu sõltuvalt segmendist. Saate hoiatuse, kui segment on liiga suur. Sihtsüsteemide tulemuste piirangute ületamine jätab ekspordi vahele.
 
 ## <a name="set-up-a-new-export"></a>Uue ekspordi seadistamine
 
@@ -110,6 +111,20 @@ Andmete eksportimiseks ilma ajastatud värskendamist ootamata minge **Andmed** >
 
 - Kõigi ekspordite käivitamiseks valige **Käivita kõik** käsuribalt. Käivitatakse ainult aktiivse ajakavaga ekspordid. Mitteaktiivse ekspordi käivitamiseks käivitage üks eksport.
 - Ühe ekspordi käivitamiseks valige see loendist ja valige käsuribalt **Käivita**.
+
+## <a name="troubleshooting"></a>Tõrkeotsing
+
+### <a name="segment-not-eligible-for-export"></a>Segment, mis ei ole ekspordikõlblik
+
+**Probleem** Ärikontode keskkonnas nurjub teie eksport tõrketeatega: "Järgmine segment ei ole selle ekspordisihtkoha jaoks sobilik: "{segmendi} nimi". Valige ainult ContactProfile’i tüüpi segmendid ja proovige uuesti."
+
+**Värskendati ärikontode jaoks mõeldud Lahendus** Customer Insightsi keskkondi, et need toetaksid lisaks kontosegmentidele ka kontaktisegmente. Selle muudatuse tõttu töötavad kontaktandmeid vajavad ekspordid ainult kontaktidel põhinevate segmentidega.
+
+1. [Looge kontaktide](segment-builder.md) põhjal segment, mis vastab teie varem kasutatud segmendile.
+
+1. Kui see kontaktisegment on käivitatud, redigeerige vastavat eksporti ja valige uus segment.
+
+1. Valige **Salvesta** konfiguratsiooni salvestamiseks või **Salvesta ja käivita**, et seda eksporti kohe testida.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

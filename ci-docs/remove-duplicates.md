@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213622"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304468"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Duplikaatide eemaldamine enne andmete ühendamist
 
@@ -47,7 +47,7 @@ Kui rikastasite olemeid andmeallikas tasemel, et aidata ühendamise tulemusi par
 
 1. **Valige lehel Kirjete** dubleerimine olem ja valige **reegel**, et määratleda duplikatsioonireeglid.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Kuvatõmmis kirjete dubleerimisest, kus on esile tõstetud kuva rohkem":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Kuvatõmmis kirje duplikaadilehest, kus on esile tõstetud olem ja kuvatud on reegel Lisa"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. Sisestage **paanil Reegli** lisamine järgmine teave.
       - **Vali väli**: valige saadaolevate väljade loendist olemist, mida soovite duplikaatide osas kontrollida. Valige väljad, mis on tõenäoliselt iga kliendi jaoks kordumatud. Näiteks meiliaadress või nime, linna ja telefoninumbri kombinatsioon.
@@ -80,9 +80,9 @@ Kui rikastasite olemeid andmeallikas tasemel, et aidata ühendamise tulemusi par
       - **Enim täidetud**: tuvastab võitjana kirje, millel on kõige rohkem asustatud atribuudivälju. See on vaikeühendamissuvand.
       - **Kõige hiljutisem**: tuvastab võitjana kirje, millega tegeleti kõige viimasena. Hiljutisuse määratlemiseks on vaja kuupäeva- või numbrilist välja.
       - **Kõige vanem**: tuvastab võitjana kirje, millega tegeleti kõige varem. Hiljutisuse määratlemiseks on vaja kuupäeva- või numbrilist välja.
-      
+
       Viigi korral on võitja rekordiks MAX(PK) või suurema primaarvõtme väärtusega rekord.
-      
+
    1. Soovi korral valige **olemi üksikute atribuutide koosteeelistuste määratlemiseks paani allservas Täpsemalt**. Näiteks saate valida, kas säilitada kõige hiljutisem e-posti aadress JA kõige täielikum aadress erinevatest kirjetest. Laiendage olemit, et näha kõiki selle atribuute, ja määratlege, millist suvandit üksikute atribuutide jaoks kasutada. Kui valite hiljutisusel põhineva valiku, peate määrama ka kuupäeva/kellaaja välja, mis määratleb hiljutisuse.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Kooste täpsemate eelistuste paan, kus on kuvatud hiljutine meiliaadress ja täielik aadress":::
@@ -96,18 +96,5 @@ Kui rikastasite olemeid andmeallikas tasemel, et aidata ühendamise tulemusi par
 
 > [!div class="nextstepaction"]
 > [Järgmine samm mitme olemi puhul: tingimuste vastavusse viimine](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Pöördduplitseerimise väljund olemina
-
-Duplikatsiooniprotsess loob iga lähteolemi jaoks uue dubleeritud olemi. Neid olemeid võib leida koos suvandiga **ConflationMatchPairs:CustomerInsights** jaotises **Süsteem** leheküljel **Olemid** nimega **Deduplication_Datasource_Entity**.
-
-Pöördduplitseeritava väljundi olem sisaldab järgmist teavet:
-
-- ID-d/võtmed
-  - Primaarvõtme ja alternatiivse ID väljad. Väli Alternatiivne ID koosneb kõigist kirje jaoks tuvastatud alternatiivsetest ID-dest.
-  - Deduplication_GroupId väli näitab olemi sees tuvastatud rühma või klastrit, mis rühmitab kõik sarnased kirjed määratud pöördduplitseerimise väljade põhjal. Seda kasutatakse süsteemi töötlemise eesmärkidel. Kui pole määratud pole manuaalseid pöördduplitseerimise reegleid ja süsteemi määratletud pöördduplitseerimise väljade subjektireeglid kehtivad, ei pruugi te seda välja pöördduplitseerimise väljundi olemist leida.
-  - Deduplication_WinnerId: see väli sisaldab tuvastatud rühma või klastri võitja ID-d. Kui Deduplication_WinnerId on sama, mis kirje primaarvõtme väärtus, tähendab see, et kirje on võitja kirje.
-- Väljad, mida kasutatakse pöördduplitseerimise reeglite määratlemiseks.
-- Reeglid ja punktisumma väljad, mis tähistavad rakendatavaid pöördduplitseerimise reegleid ja millist punktisummat tagastas sobitusalgoritm.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

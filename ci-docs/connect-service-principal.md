@@ -1,7 +1,7 @@
 ---
 title: Ühendu Azure Data Lake Storage kontoga Azure teenuse subjekti abil
 description: Kasutage Azure'i teenuse subjekti oma andmetega ühenduse loomiseks.
-ms.date: 05/31/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,27 +11,28 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 949caa73578dbe0a511726ec045c0fd5f4621de4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: eba10068c48db5c147100c25a397bcc13b014784
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082236"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304192"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Ühendu Azure Data Lake Storage kontoga Azure teenuse subjekti abil
 
-Selles artiklis käsitletakse, kuidas kontoga Dynamics 365 Customer Insights ühenduse luua Azure Data Lake Storage, kasutades salvestusruumikonto võtmete asemel Azure'i teenuse põhiosa.
+Dynamics 365 Customer Insights pakub võimalust luua kontoga ühendus Azure Data Lake Storage, kasutades salvestusruumikonto võtmete asemel Azure’i teenuse printsipaali.
 
-Automatiseeritud tööriistad, mis kasutavad Azure'i teenuseid, peaksid alati omama piiratud õigusi. Selleks et rakendused ei saaks logida sisse kõikide õigustega kasutajana, pakub Azure teenusesubjekte. Teenusejuhtide abil saate turvaliselt [lisada või redigeerida kausta Common Data Model andmeallikas](connect-common-data-model.md) või [luua või värskendada keskkonda](create-environment.md).
+Azure’i teenuseid kasutavatel automatiseeritud tööriistadel peavad olema piiratud õigused. Selleks et rakendused ei saaks logida sisse kõikide õigustega kasutajana, pakub Azure teenusesubjekte. Teenuse printsipaalide abil saate turvaliselt [lisada või redigeerida common data model kausta andmeallikas](connect-common-data-model.md) või [luua või värskendada keskkonda](create-environment.md).
 
-> [!IMPORTANT]
->
-> - Andmejärve salvestuskonto, mis kasutab teenuse põhiosa, peab olema Gen2 ja lubatud on [hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace). Azure Data Lake Gen1 salvestuskontosid ei toetata.
-> - Hooldusdirektori loomiseks on vaja Azure´i rentnik administraatoriõigusi.
+## <a name="prerequisites"></a>eeltingimused
+
+- Data Lake’i salvestusruumi konto, mis kasutab teenuse põhiosa, peab olema Gen2. Azure Data Lake Gen1 salvestusruumi kontosid ei toetata.
+- Data Lake’i salvestusruumi kontol on [lubatud hierarhiline nimeruum](/azure/storage/blobs/data-lake-storage-namespace).
+- Administraatoriõigused teie Azure´i rentnik, kui peate looma uue hooldustöötaja.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Azure'i teenuse subjekti loomine Customer Insightsi abil
 
-Enne Customer Insightsi jaoks uue hooldusdirektori loomist kontrollige, kas see on teie asutuses juba olemas.
+Enne Customer Insightsi jaoks uue hooldusjuhise loomist kontrollige, kas see on teie organisatsioonis juba olemas. Enamikul juhtudel on see juba olemas.
 
 ### <a name="look-for-an-existing-service-principal"></a>Olemasoleva teenusesubjekti otsimine
 
@@ -39,62 +40,76 @@ Enne Customer Insightsi jaoks uue hooldusdirektori loomist kontrollige, kas see 
 
 2. Valige suvandist **Azure teenused** suvand **Azure Active Directory**.
 
-3. Valige **jaotises** Haldamine **käsk Microsofti rakendus**.
+3. Tehke jaotises **Haldamine** valik **Microsofti rakendus**.
 
-4. Lisage filter rakenduse ID **alustamiseks**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` või nime `Dynamics 365 AI for Customer Insights` otsimiseks.
+4. Rakenduse ID filtri **lisamine algab nimega**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` või otsige seda `Dynamics 365 AI for Customer Insights`.
 
-5. Kui leiate vastava kirje, tähendab see, et teenuse subjekt on juba olemas.
+5. Kui leiate vastava kirje, tähendab see, et teenuse subjekt on juba olemas. [Andke teenuse printsipaalile](#grant-permissions-to-the-service-principal-to-access-the-storage-account) õigused salvestusruumikontole juurdepääsemiseks.
 
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Kuvatõmmis olemasoleva teenuse subjekti kohta.":::
 
-6. Kui tulemusi ei tagastata, saate [luua uue hooldusdirektori](#create-a-new-service-principal). Enamikul juhtudel on see juba olemas ja salvestuskontole pääsemiseks peate andma hooldusdirektorile ainult õigused.
+6. Kui tulemusi ei tagastata, [looge uus teenuse printsipaal](#create-a-new-service-principal).
+
+### <a name="create-a-new-service-principal"></a>Uue teenusesubjekti loomine
+
+1. Installige Azure Active Directory PowerShell for Graphi uusim versioon. Lisateavet leiate teemast [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2) installimine.
+
+   1. Vajutage arvutis klaviatuuril Windowsi klahvi, otsige üles **Windows PowerShell** ja valige **Käivita administraatorina**.
+
+   1. Sisestage avanevasse PowerShelli aknasse `Install-Module AzureAD`.
+
+2. Looge Customer Insightsi teenuse subjekt Azure AD PowerShelli mooduliga.
+
+   1. Sisestage PowerShelli aknasse `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Asendage *[teie kataloogi ID]* oma Azure’i tellimuse tegeliku kataloogi-ID-ga, kus soovite teenuse printsipaali luua. Keskkonna nime parameeter `AzureEnvironmentName` on valikuline.
+  
+   1. Sisestage `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. See käsk loob valitud Azure’i tellimuse Customer Insightsi jaoks teenuse printsipaal.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Teenusesubjektile õiguste andmine salvestuskontole juurdepääsemiseks
 
-Minge Azure'i portaali, et anda õigused selle salvestusruumikonto hooldusdirektorile, mida soovite Customer Insightsis kasutada. Salvestuskontole või konteinerile tuleb määrata üks järgmistest rollidest.
+Teenuse printsipaalile õiguste andmiseks salvestusruumikonto jaoks, mida soovite Customer Insightsis kasutada, tuleb laokontole või konteinerile määrata üks järgmistest rollidest.
 
 |Mandaadi|Nõuded|
 |----------|------------|
-|Praegu kasutajasse sisse logitud|**Roll**: salvestusriba andmelugeja, salvestusruumi bloobi kaasautor või salvestusruumi bloobi omanik.<br>**Tase**: õigusi saab anda salvestuskontol või konteineris.</br>|
-|Customer Insightsi teenuse direktor –<br>Kasutamine Azure Data Lake Storage andmeallikas</br>|Suvand 1<ul><li>**Roll**: Storage Blob Data Reader, Storage Blob Data Contributor või Storage Blob Data Owner.</li><li>**Tase**: salvestusruumikontol tuleks anda õigused.</li></ul>2 *. valik (ilma teenuse põhiosa juurdepääsuta salvestusruumikontole)*<ul><li>**1**. roll: salvestusruumi bloobi andmelugeja, salvestusruumi bloobi andmete kaasautor või salvestusruumi bloobi andmete omanik.</li><li>**Tase**: konteineris tuleks anda õigused.</li><li>**2**. roll: Storage Blob Data Delegator.</li><li>**Tase**: salvestusruumikontol tuleks anda õigused.</li></ul>|
-|Customer Insightsi teenuse direktor – <br>Kasutamine Azure Data Lake Storage väljundina või sihtkohana</br>|Suvand 1<ul><li>**Roll**: Storage Blob Data Contributor või Storage Blob Omanik.</li><li>**Tase**: salvestusruumikontol tuleks anda õigused.</li></ul>2 *. valik (ilma teenuse põhiosa juurdepääsuta salvestusruumikontole)*<ul><li>**Roll**: Storage Blob Data Contributor või Storage Blob Omanik.</li><li>**Tase**: konteineris tuleks anda õigused.</li><li>**Roll 2**: Storage Blob Delegator.</li><li>**Tase**: salvestusruumikontol tuleks anda õigused.</li></ul>|
+|Praegu sisselogitud kasutaja|**Roll**: salvestusruumi bloobi andmelugeja, salvestusruumi bloobi kaasautor või salvestusruumi bloobi omanik.<br>**Tase**: salvestusruumikontole või konteinerile antud õigused.</br>|
+|Customer Insightsi teenindusjuht -<br>Kasutamine Azure Data Lake Storage andmeallikas</br>|Suvand 1<ul><li>**Roll**: salvestusruumi bloobi andmelugeja, salvestusruumi bloobi andmete kaasautor või salvestusruumi bloobi andmete omanik.</li><li>**Tase**: salvestusruumikontol antud õigused.</li></ul>2 *. võimalus (ilma teenusepõhise juurdepääsuta salvestusruumikontole)*<ul><li>**Roll 1**: salvestusruumi bloobi andmelugeja, salvestusruumi bloobi andmete kaasautor või salvestusruumi bloobi andmete omanik.</li><li>**Tase**: konteinerile antud õigused.</li><li>**Roll 2**: salvestusruumi bloobi andmete delegeerija.</li><li>**Tase**: salvestusruumikontol antud õigused.</li></ul>|
+|Customer Insightsi teenindusjuht - <br>Kasutamine Azure Data Lake Storage väljundi või sihtkohana</br>|Suvand 1<ul><li>**Roll**: salvestusruumi bloobi andmete kaasautor või salvestusruumi bloobi omanik.</li><li>**Tase**: salvestusruumikontol antud õigused.</li></ul>2 *. võimalus (ilma teenusepõhise juurdepääsuta salvestusruumikontole)*<ul><li>**Roll**: salvestusruumi bloobi andmete kaasautor või salvestusruumi bloobi omanik.</li><li>**Tase**: konteinerile antud õigused.</li><li>**Roll 2**: Storage Blob Delegator.</li><li>**Tase**: salvestusruumikontol antud õigused.</li></ul>|
 
 1. Minge [Azure'i haldusportaali](https://portal.azure.com) ja logige sisse oma organisatsiooni.
 
-1. Avage talletuskonto, millele soovite Customer Insightsi hooldusdirektori juurdepääsu.
+1. Avage salvestusruumikonto, millele soovite Customer Insightsi hooldustöötajale juurde pääseda.
 
 1. Valige vasakpoolsel paanil **Juurdepääsu juhtelement (IAM)** ja seejärel käsk **Lisa** > **Lisa rolli määratlus**.
 
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Kuvatõmmis, kus kuvatakse Azure'i portaal rolli määramise lisamise ajal.":::
 
 1. Määrake paanil **Lisa rolli määratlus** järgmised atribuudid.
-   - Roll: Storage Blob Data Reader, Storage Blob contributor või Storage Blob Owner, mis põhineb ülalkirjeldatud identimisteabel.
-   - Juurdepääsu määramine: **kasutaja, rühm või teenusesubjekt**
-   - Valige liikmed: **Dynamics 365 AI for Customer Insights** ([hooldusdirektor](#create-a-new-service-principal), mille otsisite varem selles protseduuris)
+   - **Roll**: salvestusruumi bloobi andmelugeja, salvestusruumi bloobi kaasautor või salvestusruumi bloobi omanik ülaltoodud mandaatide põhjal.
+   - **Juurdepääsu** määramine: **kasutaja, rühma või teenuse printsipaal**
+   - **Liikmete valimine**: **Dynamics 365 AI for Customer Insights** (hooldusjuht, [kelle](#create-a-new-service-principal) te selles protseduuris varem üles otsisite)
 
-1. Valige **Läbivaatus + määramine**.
+1. Valige **Läbivaatus + määra**.
 
 Muudatuste rakendamiseks võib kuluda kuni 15 minutit.
 
-## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-customer-insights"></a>Sisestage Azure'i ressursi ID või Azure'i tellimuse üksikasjad Customer Insightsi salvestusruumikonto manusesse
+## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-customer-insights"></a>Azure’i ressursi ID või Azure’i tellimuse üksikasjade sisestamine Customer Insightsi salvestuskonto manusesse
 
-Väljundandmete talletamiseks või [andmeallikas kasutamiseks saate Customer Insightsis lisada Data Lake Storage'i konto Customer Insightsis.](manage-environments.md)[...](connect-dataverse-managed-lake.md) See suvand võimaldab teil valida ressursipõhise või tellimispõhise lähenemisviisi vahel. Sõltuvalt valitud lähenemisviisist järgige ühte järgmistest jaotistest.
+Andmejärve salvestusruumi konto manustamine Customer Insightsis väljundandmete [talletamiseks](manage-environments.md) või [andmeallikas](connect-dataverse-managed-lake.md) kasutamiseks. Valige ressursi- või [tellimuspõhise](#resource-based-storage-account-connection)[lähenemisviisi vahel](#subscription-based-storage-account-connection) ja järgige neid juhiseid.
 
 ### <a name="resource-based-storage-account-connection"></a>Ressursipõhine salvestuskonto ühendus
 
 1. Minge [Azure'i haldusportaali](https://portal.azure.com), logige oma tellimusse sisse ja avage salvestuskonto.
 
-1. Valige vasakpoolsel paanil **sätted** > **Lõpp-punktid**.
+1. Minge vasakpoolsel paanil jaotisse **Sätted** > **lõpp-punktid**.
 
 1. Kopeerige salvestuskonto ressursi-ID väärtus.
 
    :::image type="content" source="media/ADLS-SP-ResourceId.png" alt-text="Salvestuskonto ressursi-ID kopeerimine.":::
 
-1. Sisestage Customer Insightsis ressursi ID salvestuskonto ühenduse ekraanil kuvatavale ressursiväljale.
+1. Sisestage Customer Insightsis ressursi ID ressursiväljale, mis kuvatakse salvestusruumikonto ühenduse kuval.
 
-   :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Salvestuskonto ressursi-ID teabe sisestamine.":::   
+   :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Salvestuskonto ressursi-ID teabe sisestamine.":::
 
-1. Jätkake salvestusruumikonto manustamiseks Customer Insightsi ülejäänud juhistega.
+1. Jätkake salvestuskonto manustamiseks Customer Insightsi ülejäänud toimingutega.
 
 ### <a name="subscription-based-storage-account-connection"></a>Tellimusepõhine salvestuskonto ühendus
 
@@ -102,24 +117,10 @@ Väljundandmete talletamiseks või [andmeallikas kasutamiseks saate Customer Ins
 
 1. Minge vasakpoolsel paanil **Sätted** > **Atribuudid**.
 
-1. **Vaadake üle jaotis** Tellimus **,** Ressurss ja **salvestuskonto nimi**, veendumaks, et valite Customer Insightsis õiged väärtused.
+1. **Vaadake üle tellimus**, **ressursirühm** ja **salvestusruumikonto nimi**, et veenduda, et valite Customer Insightsis õiged väärtused.
 
-1. Valige jaotises Customer Insights vastavate väljade väärtused salvestuskonto manustamisel.
+1. Valige Customer Insightsis salvestusruumikonto manustamisel vastavate väljade väärtused.
 
-1. Jätkake salvestusruumikonto manustamiseks Customer Insightsi ülejäänud juhistega.
-
-### <a name="create-a-new-service-principal"></a>Uue teenusesubjekti loomine
-
-1. Installige Azure Active Directory PowerShell for Graphi uusim versioon. Lisateavet leiate teemast [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2) installimine.
-
-   1. Vajutage arvutis klaviatuuril Windowsi klahvi ja otsige **windows PowerShelli** ning valige suvand **Käivita administraatorina**.
-
-   1. Sisestage avanevasse PowerShelli aknasse `Install-Module AzureAD`.
-
-2. Looge Customer Insightsi teenuse subjekt Azure AD PowerShelli mooduliga.
-
-   1. Sisestage PowerShelli aknasse `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Asendage *[kataloogi ID]* Azure'i tellimuse tegeliku kataloogi ID-ga, kus soovite teenuse põhiosa luua. Keskkonna nime parameeter `AzureEnvironmentName` on valikuline.
-  
-   1. Sisestage `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. See käsk loob valitud Azure'i tellimuse customer insightsi hooldusdirektori.
+1. Jätkake salvestuskonto manustamiseks Customer Insightsi ülejäänud toimingutega.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

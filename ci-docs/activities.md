@@ -1,9 +1,9 @@
 ---
-title: Kliendi tegevused
-description: Määratleda klienditegevused ja kuvada need kliendiprofiilide ajaskaalal.
-ms.date: 07/22/2022
+title: Kliendi- või ärikontaktide tegevused
+description: Määratlege kliendi- või ärikontaktide tegevused ja vaadake neid kliendiprofiilide ajaskaalal.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188134"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304100"
 ---
-# <a name="customer-activities"></a>Klienditegevused
+# <a name="customer-or-business-contact-activities"></a>Kliendi- või ärikontaktide tegevused
 
-Kliendi tegevused on klientide tehtud toimingud või sündmused. Näiteks tehingud, tugikõne kestus, veebisaidi ülevaated, ostud või tagastused. Need tegevused sisalduvad ühes või mitmes andmeallikas. Kliendistatistika abil konsolideerige oma klienditegevused nendest [andmeallikatest](data-sources.md) ja seostage need kliendiprofiilidega. Need tegevused kuvatakse kronoloogiliselt kliendiprofiili ajaskaalal. Lisage dynamics 365 rakenduste ajaskaala kliendikaardi lisandmooduli [lahendusega](customer-card-add-in.md).
+Kliendi tegevused on klientide või ärikontaktide toimingud või sündmused. Näiteks tehingud, tugikõne kestus, veebisaidi ülevaated, ostud või tagastused. Need tegevused sisalduvad ühes või mitmes andmeallikas. Kliendistatistika abil konsolideerige oma klienditegevused nendest [andmeallikatest](data-sources.md) ja seostage need kliendiprofiilidega. Need tegevused kuvatakse kronoloogiliselt kliendiprofiili ajaskaalal. Lisage dynamics 365 rakenduste ajaskaala kliendikaardi lisandmooduli [lahendusega](customer-card-add-in.md).
 
-## <a name="define-an-activity"></a>Määratle tegevus
+## <a name="define-a-customer-activity"></a>Kliendi tegevuse määratlemine
 
 Olemil peab olema vähemalt üks atribuut, mille tüüp **on Kuupäev**, et kaasata kliendi ajaskaalasse. Kui sellist olemit ei leita, siis **Lisa tegevus** funktsioon keelatakse.
 
@@ -38,9 +38,9 @@ Olemil peab olema vähemalt üks atribuut, mille tüüp **on Kuupäev**, et kaas
 
 1. Sisestage **tegevusetapis** järgmine teave.
 
-   - **Tegevuse nimi**: teie tegevuse nimi.
-   - **Tegevuse olem**: ettevõte, mis sisaldab kande- või tegevusandmeid.
-   - **Primaarvõti**: väli, mis tuvastab kirje kordumatult. See ei tohiks sisaldada korduvväärtusi, tühjasid väärtusi ega puuduvaid väärtusi.
+   - **Tegevuse nimi**: valige oma tegevuse nimi.
+   - **Tegevuse olem**: valige olem, mis sisaldab kande- või tegevusandmeid.
+   - **Primaarvõti**: valige väli, milles tuvastatakse kirje kordumatult. See ei tohiks sisaldada korduvväärtusi, tühjasid väärtusi ega puuduvaid väärtusi.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Saate seadistada tegevuse andmed nimega, olemiga ja esmase võtmega.":::
 
@@ -48,9 +48,9 @@ Olemil peab olema vähemalt üks atribuut, mille tüüp **on Kuupäev**, et kaas
 
 1. **Valige etapis Seos** käsk **Lisa seos**, et ühendada oma tegevuse andmed vastava kliendikirjega. Selle sammuga visualiseeritakse olemite vaheline ühendus.  
 
-   - **Välisvõti olemist**: väli teie tegevuse olemis, mida kasutatakse seose loomiseks teise olemiga.
+   - **Võõrvõti**: välisväli teie tegevuse olemis, mida kasutatakse seose loomiseks teise olemiga.
    - **Üksuse nimele**: vastav lähtekliendi olem, millega teie tegevuse olem on seotud. Saate olla seotud ainult lähtekliendi olemitega, mida kasutatakse andmete ühendamise protsessis.
-   - **Seose nimi**: nimi, mis identifitseerib olemite vahelise seose. Kui seos selle tegevuse olemi ja valitud lähtekliendi olemi vahel on juba olemas, on seose nimi kirjutuskaitstud.
+   - **Seose nimi**: kui seos selle tegevuse olemi ja valitud lähtekliendi olemi vahel on juba olemas, on seose nimi kirjutuskaitstud režiimis. Kui sellist seost pole, luuakse uus seos, mille nime sisestate sellel väljal.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Olemi seose määratlemine.":::
 
@@ -78,7 +78,7 @@ Olemil peab olema vähemalt üks atribuut, mille tüüp **on Kuupäev**, et kaas
 
 1. Tegevuse tüübi valimiseks valige **Edasi või valige** Valmis ja läbivaatus **, et salvestada tegevus, mille tegevuse tüübiks** on seatud **Muu**.
 
-1. Valige etapis **Tegevuse tüüp** tegevuse tüüp ja soovi korral valige, kas soovite mõnda tegevusetüüpi semantiliselt kaardistada, et neid oleks võimalik kasutada Customer Insights muudes alades. *Praegu toetavad tagasiside*, *püsikliendi*, *müügitellimuse*, *SalesOrderLine'i* ja *tellimuse* tegevuste tüübid semantikat pärast väljade vastendamisega nõustumist. Kui tegevustüüp pole uue tegevuse jaoks oluline, võite kohandatud tegevustüübi jaoks valida valiku *Muu* või *Loo uus*.
+1. Valige etapis **Tegevuse tüüp** tegevuse tüüp ja soovi korral valige, kas soovite mõnda tegevusetüüpi semantiliselt kaardistada, et neid oleks võimalik kasutada Customer Insights muudes alades. *Praegu toetavad tagasiside*, *püsikliendi*, *müügitellimuse*, *SalesOrderLine’i* ja *tellimuse* tegevuste tüübid semantikat pärast väljade vastendamisega nõustumist. Kui tegevustüüp pole uue tegevuse jaoks oluline, võite kohandatud tegevustüübi jaoks valida valiku *Muu* või *Loo uus*.
 
 1. Tehke valik **Edasi**.
 
@@ -90,7 +90,7 @@ Olemil peab olema vähemalt üks atribuut, mille tüüp **on Kuupäev**, et kaas
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Olemasolevate tegevuste haldamine
+## <a name="manage-existing-customer-activities"></a>Olemasolevate klienditegevuste haldamine
 
 Minge jaotisse **Andmetegevused** > **·**, et vaadata salvestatud tegevusi, nende lähteolemit, tegevuse tüüpi ja seda, kas need on kaasatud kliendi ajaskaalale. Tegevuste loendit saate sortida mis tahes veeru järgi või kasutada otsinguvälja, et leida tegevus, mida soovite hallata.
 
@@ -112,13 +112,47 @@ Valige tegevus, et vaadata saadaolevaid toiminguid.
 
      :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Tegevuste filtreerimine ikoonide abil tüübi järgi.":::
 
-   - Ajaskaalafiltrite konfigureerimiseks filtripaneeli avamiseks valige **Filter**. Filtreerige activitytype'i ja/või *kuupäeva järgi* *.* Valige suvand **Rakenda**.
+   - Ajaskaalafiltrite konfigureerimiseks filtripaneeli avamiseks valige **Filter**. Filtreerige activitytype’i ja/või *kuupäeva järgi* *.* Valige suvand **Rakenda**.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Filtripaneeli abil saate konfigureerida filtri tingimusi.":::
 
-1. Filtrite eemaldamiseks valige **Tühjenda filtrid** või valige **Filtreeri** ja tühjendage märkeruut Filter.
-
 > [!NOTE]
 > Kliendiprofiilist lahkudes eemaldatakse tegevuse filtrid. Peate neid rakendama iga kord, kui avate kliendiprofiili.
+
+## <a name="define-a-contact-activity"></a>Kontaktitegevuse määratlemine
+
+Ärikontode (B-to-B) puhul kasutage *kontaktide tegevuste hõivamiseks olemit ContactProfile*. Konto tegevuste ajaskaalal näete, milline kontakt iga tegevuse eest vastutas. Enamik samme järgib kliendi tegevuse vastendamise konfiguratsiooni.
+
+   > [!NOTE]
+   > Kontaktitaseme tegevuse *määratlemiseks tuleb luua olem ContactProfile* kas ühtse kontaktiprofiilina [või](data-unification-contacts.md) semantilise vastenduse [kaudu](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > Teie tegevuse andmetes peavad iga kirje jaoks olema atribuudid AccountID **ja** **ContactID**.
+  
+1. Avage **jaotis Andmetegevused** > **·**.
+
+1. Valige **Lisa tegevus**.
+
+1. Pange tegevusele nimi, valige lähtetegevuse olem ja valige tegevuse olemi primaarvõti.
+
+1. **Looge etapis Seosed** kaudne seos oma tegevuse lähteandmete ja kontode vahel, kasutades oma kontaktandmeid vahendajana. Lisateabe saamiseks vaadake [otseste ja kaudsete suhete teid](relationships.md#relationship-paths).
+   - Näide seos tegevusele nimega *Ostud*:
+      - **Ostud Lähtetegevuse andmed** > **Kontaktandmed** atribuudil **ContactID**
+      - **Kontaktandmed** > **Konto andmed** atribuudil **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Seose seadistamise näide.":::
+
+1. Pärast seoste seadistamist valige **Edasi** ja viige tegevuse vastendamise konfiguratsioon lõpule. Tegevuse loomise üksikasjalikud juhised leiate teemast [Kliendi tegevuse](#define-a-customer-activity) määratlemine.
+
+1. Käivitage oma tegevuste vastendused.
+
+1. Teie kontaktitaseme tegevused on nüüd nähtavad teie kliendi ajaskaalal.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Lõpptulemus pärast kontaktitegevuste konfigureerimist":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Kontaktitaseme tegevuste ajaskaala filtreerimine
+
+Pärast kontaktitaseme tegevuste vastenduse konfigureerimist ja selle käivitamist värskendatakse klientide tegevuse ajaskaalat. See sisaldab nende ID-sid või nimesid, sõltuvalt teie *ContactProfile’i* konfiguratsioonist, tegevuste jaoks, mida nad tegid. Saate filtreerida tegevusi ajaskaalal olevate kontaktide järgi, et näha konkreetseid kontakte, millest olete huvitatud. Lisaks saate vaadata kõiki tegevusi, mis pole konkreetsele kontaktile määratud, valides **Tegevused, mis pole kontaktiga vastendatud**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Kontaktitaseme tegevuste jaoks saadaolevad filtreerimissuvandid.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

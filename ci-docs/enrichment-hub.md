@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245874"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304514"
 ---
 # <a name="data-enrichment-preview-overview"></a>Andmete rikastamise (eelvaate) ülevaade
 
@@ -95,7 +95,7 @@ Pärast käivitamist saab rikastamisi värskendada automaatse ajakava alusel võ
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Rikastamisprotsessi edenemise kuvamine
 
-Saate otsida rikastamise töötlemise üksikasju (sh olekut ja võimalikke probleeme värskendamise ajal või pärast värskendamist). Aru saada, millised protsessid on seotud rikastamise värskendamisega ja kui kaua kulus protsesside käivitamiseks. Rikastamise olekut toetatakse Experian, Leadspace-i, HERE-tehnoloogiate, SFTP Impordi ja Azure Mapsi puhul.
+Siit leiate üksikasjalikku teavet rikastamise töötlemise kohta, sh selle oleku ja võimalike probleemide kohta värskendamise ajal või pärast värskendamise lõppu. Aru saada, millised protsessid on seotud rikastamise värskendamisega ja kui kaua kulus protsesside käivitamiseks. Rikastamise olekut toetatakse Experian, Leadspace-i, HERE-tehnoloogiate, SFTP Impordi ja Azure Mapsi puhul.
 
 1. Avage **Andmed** > **Rikastamine**.
 1. **Valige vahekaardil Minu rikastused** külgpaani avamiseks rikastumise olek.

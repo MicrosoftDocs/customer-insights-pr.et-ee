@@ -76,6 +76,8 @@
       href: merge-entities.md
     - name: Andmete ühendamise ülevaatamine
       href: review-unification.md
+    - name: Ühtse kontaktiprofiili loomine
+      href: data-unification-contacts.md
     - name: Ühendamissätete värskendamine
       href: data-unification-update.md
 - name: Andmete rikastamine

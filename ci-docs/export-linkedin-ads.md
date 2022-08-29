@@ -1,19 +1,19 @@
 ---
 title: Segmentide eksportimine LinkedIn Adsi (eelvaade)
 description: Lugege, kuidas konfigureerida ühendust ja eksportida LinkedIn Adsi.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196803"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304698"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentide eksportimine LinkedIn Adsi (eelvaade)
 
@@ -24,7 +24,7 @@ Eksportige ühtsete kliendiprofiilide segmendid LinkedIn Adsi, et luua sobivaid 
 - Konto [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) ja vastavad administraatori mandaadid.
 - [LinkedIn Campaign Manager Konto ID](https://www.linkedin.com/help/lms/answer/a424270).
 - [Konfigureeritud segmendid](segments.md) Customer Insightsis.
-- Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
+- Eksporditud segmendid vajavad vähemalt ühte konkreetset välja sõltuvalt sellest, kas valite [LinkedInis kontakti sihtimise](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) või [ettevõtte sihtimise](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). Võimalikud väljad on loetletud **ekspordi** konfigureerimisel etapis [Andmete vastavusse](#configure-an-export) viimine.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 

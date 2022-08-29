@@ -1,7 +1,7 @@
 ---
-title: 'Kuidas: Keskkondade haldamine'
-description: Vaadake, kuidas hallata olemasolevaid Customer Insightsi keskkondi administraatorina."
-ms.date: 05/31/2022
+title: Keskkondade haldamine
+description: Siit saate teada, kuidas hallata olemasolevaid Customer Insightsi keskkondi administraatorina."
+ms.date: 08/15/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,60 +11,60 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fc3b3f404cf0ac84c782778414494289c803babe
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b4a88bdb75c6e638a76c39d18647681ad4556d7
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083055"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304275"
 ---
-# <a name="how-to-manage-environments"></a>Kuidas: Keskkondade haldamine
+# <a name="manage-environments"></a>Keskkondade haldamine
 
-Administraatorid [loovad](create-environment.md) ja haldavad keskkondi. Nad võivad muuta mõningaid sätteid olemasolevates keskkondades. Äri, tüüp, regioon, salvestusruum ja Dataverse sätted fikseeritakse pärast keskkonna loomist. Kui soovite neid sätteid muuta, lähtestage keskkond või looge uus keskkond.
+Administraatorid [loovad](create-environment.md) ja haldavad keskkondi. Nad saavad muuta mõningaid seadeid olemasolevates keskkondades. Äri, tüüp, piirkond, salvestussuvand ja Dataverse sätted parandatakse pärast keskkonna loomist. Kui soovite neid sätteid muuta, [lähtestage keskkond](#reset-an-existing-environment-preview) või [looge uus keskkond](create-environment.md).
 
 ## <a name="edit-an-existing-environment"></a>Olemasoleva keskkonna redigeerimine
 
-Saate muuta olemasolevate keskkondade teatud üksikasju.
+Redigeerige olemasoleva keskkonna üksikasju, näiteks nime või vaikekeskkonna määramist.
 
 1. Valige rakenduse päises valija **Environment** (Keskkond).
 
 1. Valige ikoon **Edit** (Redigeeri).
 
-   :::image type="content" source="media/edit-environment.png" alt-text="Ikoon keskkonnasätete redigeerimiseks.":::
+   :::image type="content" source="media/edit-environment.png" alt-text="Ikoon keskkonnasätete muutmiseks.":::
 
-1. Väljal **Redigeeri keskkonda** saate keskkonnasätteid värskendada.
+1. Värskendage **paanil Keskkonna** redigeerimine keskkonnasätteid.
 
-Värske keskkonna alustamiseks lugege teemat [Uue keskkonna loomine](create-environment.md).
+1. Muudatuste rakendamiseks valige **Läbivaatus ja lõpeta**, seejärel **Värskenda**.
 
-## <a name="change-the-owner-of-an-environment"></a>Keskkonna omaniku muutmine
+## <a name="change-the-owner-of-an-environment"></a>Keskkonna omaniku vahetamine
 
-Mitmel kasutajal võivad olla administraatoriõigused, kuid keskkonna omanik on ainult üks kasutaja. Vaikimisi loob algselt keskkonna administraator. Keskkonna administraatorina saate määrata omandiõiguse teisele administraatoriõigustega kasutajale.
+Administraatoriõigusi võib olla mitu kasutajat, kuid keskkonna omanik on ainult üks kasutaja. Vaikimisi on administraator see, kes algselt keskkonna loob. Keskkonna administraatorina saate määrata omandiõiguse teisele kasutajale administraatoriõigustega.
 
 1. Valige rakenduse päises valija **Environment** (Keskkond).
 
 1. Valige ikoon **Edit** (Redigeeri).
 
-1. Avage väljal **Keskkonna** redigeerimine juhised **Põhiteave**.
+1. **Minge paanil** Keskkonna **redigeerimine etappi Põhiteave**.
 
 1. Valige väljal **Keskkonna** omaniku muutmine keskkonna uus omanik.  
 
 1. Muudatuste rakendamiseks valige **Läbivaatus ja lõpeta**, seejärel **Värskenda**.
 
-## <a name="claim-ownership-of-an-environment"></a>Nõuda keskkonna omandiõigust
+## <a name="claim-ownership-of-an-environment"></a>Keskkonna omandiõiguse taotlemine
 
-Kui omaniku kasutajakonto kustutatakse või peatatakse, ei ole keskkonnal omanikku. Iga administraatori kasutaja saab nõuda omandiõigust ja saada uueks omanikuks. Nad võivad jätkata keskkonna omamist või [omaniku muutmist teisele administraatorile](#change-the-owner-of-an-environment).
+Kui omaniku kasutajakonto kustutatakse või peatatakse, pole keskkonnal omanikku. Iga administraatori kasutaja saab taotleda omandiõigust ja saada uueks omanikuks. Omanikust administraator saab jätkata keskkonna omamist või [muuta omanikuõiguse mõneks muuks administraatoriks](#change-the-owner-of-an-environment).
 
-Omandiõiguse taotlemiseks valige **nupp Võta omandiõigus**, mis kuvatakse Customer Insightsi iga lehe ülaosas, kui algne omanik organisatsioonist lahkus.
+Omandiõiguse taotlemiseks valige **nupp Võta omandiõigus** üle, mis kuvatakse Customer Insightsi iga lehe ülaosas, kui algne omanik organisatsioonist lahkus.
 
 ## <a name="reset-an-existing-environment-preview"></a>Olemasoleva keskkonna lähtestamine (eelvaade)
 
-Keskkonna omanikuna saate keskkonna lähtestada tühja olekusse, kui soovite kustutada kõik konfiguratsioonid ja eemaldada allaneelatud andmed.
+Keskkonna omanikuna lähtestage keskkond tühja olekusse, kui soovite kustutada kõik konfiguratsioonid ja eemaldada allaneelatud andmed.
 
 1. Valige rakenduse päises valija **Environment** (Keskkond).
 
 1. Valige keskkond, mida soovite lähtestada, ja valige vertikaalne kolmikpunkt (&vellip;).
 
-1. Valige suvand **Reset** (Lähtesta).
+1. Valige **Lähtesta (eelvaade)**.
 
    :::image type="content" source="media/reset-environment.png" alt-text="Keskkonna lähtestamise juhtimine.":::
 
@@ -74,19 +74,19 @@ Keskkonna omanikuna saate keskkonna lähtestada tühja olekusse, kui soovite kus
 
 ## <a name="delete-an-existing-environment"></a>Olemasoleva keskkonna kustutamine
 
-Keskkonna omanikuna saate kustutada hallatava keskkonna.
+Keskkonna omanikuna saate selle kustutada.
+
+> [!IMPORTANT]
+> Keskkonna kustutamine ei eemalda ühendust keskkonnaga Dataverse. Kui kavatsete tulevikus ühendada sama Dataverse keskkonna uue Customer Insightsi keskkonnaga, peate selle ühenduse keskkonnaga [Dataverse eemaldama](customer-insights-dataverse.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 1. Valige rakenduse päises valija **Environment** (Keskkond).
 
-1. Valige keskkond, mida soovite lähtestada, ja valige vertikaalne kolmikpunkt (&vellip;). 
+1. Valige keskkond, mille soovite kustutada, ja valige vertikaalne kolmikpunkt (&vellip;). 
 
-1. Valige suvand **Delete** (Kustuta).
+1. Valige **Kustuta**.
 
    :::image type="content" source="media/delete-environment.png" alt-text="Keskkonna kustutamise juhtimine.":::
 
 1. Kustutamise kinnitamiseks sisestage soovitud keskkonna nimi ja valige **Kustuta**.
-
-> [!IMPORTANT]
-> Keskkonna kustutamine ei eemalda ühendust keskkonnaga Dataverse. Kui kavatsete tulevikus ühendada sama Dataverse keskkonna uue Customer Insightsi keskkonnaga, peate selle ühenduse eemaldama [Vaadake, kuidas olemasolevat ühendust keskkonnaga Dataverse](customer-insights-dataverse.md#remove-an-existing-connection-to-a-dataverse-environment) eemaldada.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

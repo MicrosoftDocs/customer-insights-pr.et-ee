@@ -1,7 +1,7 @@
 ---
 title: Segmentide ülevaade
 description: Ülevaade segmentidest ning kuidas neid luua ja hallata.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246288"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304790"
 ---
 # <a name="segments-overview"></a>Segmentide ülevaade
 
 Segmentide abil saate oma kliente rühmitada demograafiliste, tehingupõhiste või käitumuslike atribuutide põhjal. Segmentide abil saate sihtida reklaamikampaaniaid, müügitegevusi ja klienditoe ttoiminguid oma ärieesmärkide saavutamiseks.
 
-Kliendiprofiile, mis vastavad segmendimääratluse filtritele, *nimetatakse segmendi liikmeteks*. Kehtivad [teenusepiirangud](/dynamics365/customer-insights/service-limits).
+Kliendi- või kontaktiprofiile, mis vastavad segmendimääratluse filtritele, *nimetatakse segmendi liikmeteks*. Kehtivad [teenusepiirangud](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-segment"></a>Loo segment
 
@@ -41,13 +41,19 @@ Valige, kuidas luua segment oma sihtrühma põhjal.
 
 # <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
 
-- Lihtsad või keerukad segmendid segmendiehitajaga: [koostage oma](segment-builder.md)
+Kontode segmentimine või kontaktide segmentimine (eelvaade) segmendikoosturiga: [looge oma](segment-builder.md)
+
+> [!NOTE]
+> Enamik ekspordisihtkohti nõuab turunduseesmärkidel kontaktteavet. Seetõttu looge kontaktide segmendid, mida nende ekspordi jaoks kasutada.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Olemasolevate segmentide haldamine
 
-Minge **lehele Segmendid**, et vaadata loodud segmente, nende olekut ja olekut, liikmete arvu ja viimast korda, millal andmeid värskendati. Segmentide loendit saate sortida mis tahes veeru järgi või kasutada hallatava segmendi leidmiseks otsinguvälja.
+Minge **lehele Segmendid**, et vaadata loodud segmente, nende olekut ja olekut ning viimast korda, kui andmeid värskendati. Segmentide loendit saate sortida mis tahes veeru järgi või kasutada hallatava segmendi leidmiseks otsinguvälja.
+
+> [!TIP]
+> B-to-B keskkondades tuvastab veerg Vaatajaskonna tüüp **,** kas segment põhineb kontodel või kontaktidel.
 
 Valige segment saadaolevate toimingute vaatamiseks.
 
@@ -82,7 +88,7 @@ Alaosa sisaldab segmendi liikmete loendit.
 > [!NOTE]
 > Selle loendi väljad põhinevad segmendi olemite atribuutidel.
 >
->Loend on eelvaade kattuvatest segmendi liikmetest ja näitab segmendi 100 esimest kirjet, et saaksite vajadusel kiiresti seda hinnata ja kontrollida selle määratlusi. Kõigi sobivate kirjete nägemiseks eksportige [segment](export-destinations.md).
+> Loend on eelvaade kattuvatest segmendi liikmetest ja näitab segmendi 100 esimest kirjet, et saaksite vajadusel kiiresti seda hinnata ja kontrollida selle määratlusi. Kõigi kattuvate kirjete vaatamiseks valige **Kuva rohkem**, mis avab [**lehe Olemid**](entities.md), või [eksportige segment](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Segmentide värskendamine
 

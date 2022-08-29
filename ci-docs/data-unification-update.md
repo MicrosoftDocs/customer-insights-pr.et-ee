@@ -1,11 +1,11 @@
 ---
-title: Ühendamissätete värskendamine
-description: Saate värskendada duplikaatreegleid, vastendusreegleid või ühendatud välju ühendamissätetes.
-ms.date: 06/01/2022
+title: Kliendi, konto või kontakti ühendamise sätete värskendamine
+description: Värskendage kliendi või konto ühendamise sätete duplikaatreegleid, vastendusreegleid või ühtseid välju.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: v-wendysmith
-ms.author: mukeshpo
+author: Scott-Stabbert
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
@@ -13,20 +13,26 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245589"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304330"
 ---
-# <a name="update-the-unification-settings"></a>Ühendamissätete värskendamine
+# <a name="update-unification-settings"></a>Ühendamissätete värskendamine
 
 Ühendamissätete ülevaatamiseks või muutmiseks pärast ühtse profiili loomist tehke järgmist.
 
 1. Avage **Jaotis Andmete** > **ühendamine**.
 
-   :::image type="content" source="media/m3_unified.png" alt-text="Kuvatõmmis lehest Andmete ühendamine pärast andmete ühendamist.":::
+   Üksikklientide (B-to-C) **puhul kuvatakse lehel Ühendamine** iga ühendamisetapi ühendatud kliendiprofiilide ja paanide arv.
+
+   :::image type="content" source="media/m3_unified.png" alt-text="Kuvatõmmis lehest Andmete ühendamine pärast andmete ühendamist." lightbox="media/m3_unified.png":::
+
+   Ärikontode (B-to-B) **puhul kuvatakse lehel Ühendamine** iga konto ühendamise etapi ühtsete kontoprofiilide ja paanide arv. Kui kontaktid olid ühendatud, kuvatakse iga kontakti ühendamise etapi ühendatud kontaktiprofiilide ja paanide arv. Valige jaotises **Kontode ühendamine või** Kontaktide **ühendamine (eelvaade)** sobiv paan sõltuvalt sellest, mida soovite värskendada.
+
+   :::image type="content" source="media/b2b_unified.png" alt-text="Kuvatõmmis lehest Data Unify pärast konto ja kontaktandmete ühendamist." lightbox="media/b2b_unified.png":::
 
    > [!TIP]
    > Paan **Sobitamistingimused** kuvatakse ainult siis, kui on valitud mitu olemit.
@@ -36,14 +42,14 @@ ms.locfileid: "9245589"
    - [Dubleerige kirjeid](#manage-deduplication-rules), et hallata duplikatsioonireegleid või ühendamiseelistusi.
    - [Vastendamistingimused](#manage-match-rules) vastendusreeglite värskendamiseks kahes või enamas olemis.
    - [Ühendatud kliendiväljad väljade](#manage-unified-fields) ühendamiseks või välistamiseks. Samuti saate seotud profiile rühmitada klastritesse.
+   - [Semantilised väljad](#manage-semantic-fields-for-unified-contacts) ühendatud kontaktiväljade semantiliste tüüpide haldamiseks.
+   - [Seosed](#manage-contact-and-account-relationships) kontakti ja konto vahelise seose haldamiseks.
 
 1. Pärast muudatuste tegemist valige järgmine valik.
 
-   :::image type="content" source="media/m3_run_match_merge.png" alt-text="Kuvatõmmis lehest &quot;Andmete ühendamine&quot;, kus on esile tõstetud ühendamissuvandid.":::
-
    - [Vastendustingimuste (duplikatsiooni- ja vastendusreeglid) kvaliteedi kiireks hindamiseks käivitage vastendustingimused](#run-matching-conditions) ilma ühtset profiili värskendamata. Valikut **Käivita ainult** vastavad tingimused ei kuvata ühe olemi puhul.
-   - [Ühendage kliendiprofiilid](#run-updates-to-the-unified-customer-profile), et käivitada vastavusse viimise tingimused ja värskendada ühtset kliendiprofiili olemit, mõjutamata sõltuvusi (nt rikastamised, segmendid või mõõdud). Sõltuvaid protsesse ei käitata, kuid värskendatakse värskendamise [ajakavas määratletud viisil](schedule-refresh.md).
-   - [Ühendage kliendiprofiilid ja sõltuvused](#run-updates-to-the-unified-customer-profile), et käivitada vastavusse viimise tingimused ning värskendada ühtset kliendiprofiili olemit ja kõiki sõltuvusi (nt rikastamised, segmendid või mõõdud). Kõik protsessid käivitatakse automaatselt.
+   - [Ühendage profiilid](#run-updates-to-the-unified-profile), et käivitada sobitamistingimused ja värskendada ühtse profiili olemit, ilma et see mõjutaks sõltuvusi (nt rikastamised, segmendid või mõõdud). Sõltuvaid protsesse ei käitata, kuid värskendatakse värskendamise [ajakavas määratletud viisil](schedule-refresh.md).
+   - [Ühendage profiilid ja sõltuvused, et käivitada kattuvad](#run-updates-to-the-unified-profile) tingimused, värskendada ühtse profiili olemit ja värskendada kõiki sõltuvusi (nt rikastamised, segmendid või mõõdud). Kõik protsessid käivitatakse automaatselt. B-to-B-s käivitatakse ühendamine nii konto- kui ka kontaktiolemites, kes värskendavad ühendatud profiile.
 
 ## <a name="edit-source-fields"></a>Allikaväljade redigeerimine
 
@@ -55,11 +61,11 @@ Atribuuti või olemit ei saa eemaldada, kui need on juba ühendatud.
 
    Kuvatakse kaardistatud ja kaardistamata väljade arv.
 
-1. Valige **Olemite ja väljade** valimine muude atribuutide või olemite lisamiseks. Kasutage otsingut või kerige, et leida ja valida teile huvi pakkuvad atribuudid ja olemid. Valige suvand **Rakenda**.
+1. Muude atribuutide või olemite lisamiseks valige **Olemite ja väljade** valimine.
 
-1. Soovi korral saate muuta olemi primaarvõtit, atribuuditüüpe ja lülitada **intelligentse vastenduse** sisse või välja. Lisateavet vaadake jaotisest [Primaarvõtme ja atribuutide](map-entities.md#select-primary-key-and-semantic-type-for-attributes) semantilise tüübi valimine.
+1. Soovi korral saate muuta olemi primaarvõtit, atribuuditüüpe ja lülitada **intelligentse vastenduse** sisse või välja. Lisateavet leiate teemast [Allikaväljade](map-entities.md) valimine.
 
-1. Dubleerimisreeglite muutmiseks valige **Edasi või valige** Salvesta ja sule **ning naaske valikusse** Värskenda [ühendamissätted](#update-the-unification-settings).
+1. Dubleerimisreeglite muutmiseks valige **Edasi või valige** Salvesta ja sule **ning naaske jaotisse** Värskenda [ühendamissätted](#update-unification-settings).
 
 ## <a name="manage-deduplication-rules"></a>Dubleerimisreeglite haldamine
 
@@ -69,7 +75,7 @@ Atribuuti või olemit ei saa eemaldada, kui need on juba ühendatud.
 
    Leitud duplikaatkirjete arv kuvatakse jaotises **Duplikaadid**. Veerg **Kirjed eemaldatud** näitab, millistel olemitel olid duplikaatkirjed ja dubleeritud kirjete protsent.
 
-1. Kui lisasite rikastatud olemi, valige **Kasuta rikastatud olemeid**. Lisateavet leiate teemast [Andmeallikate](data-sources-enrichment.md) rikastamine.
+1. Rikastatud olemi kasutamiseks valige **Kasuta rikastatud olemeid**. Lisateavet leiate teemast [Andmeallikate](data-sources-enrichment.md) rikastamine.
 
 1. Duplikatsioonireeglite haldamiseks valige üks järgmistest suvanditest.
    - **Loo uus reegel**: valige **lisa reegel** vastava olemi alt. Lisateavet vaadake jaotisest [Dubleerimisreeglite](remove-duplicates.md#define-deduplication-rules) määratlemine.
@@ -83,11 +89,9 @@ Atribuuti või olemit ei saa eemaldada, kui need on juba ühendatud.
    1. Valige **Redigeeri koosteeelistusi** ja muutke suvandit **Kirje säilitamiseks**.
    1. Olemi üksikute atribuutide koosteeelistuste muutmiseks valige **Täpsem** ja tehke vajalikud muudatused.
 
-      :::image type="content" source="media/m3_adv_merge.png" alt-text="Täpsemate koosteeelistuste kuvatõmmis, millel on kujutatud kõige hiljutisem meiliaadress ja kõige täielikum aadress":::
-
    1. Valige nupp **Valmis**.
 
-1. Sobivate tingimuste muutmiseks valige **Edasi või valige** Salvesta ja sule **ning naaske valikusse** Värskenda [ühendamissätted](#update-the-unification-settings).
+1. Sobivate tingimuste muutmiseks valige **Edasi või valige** Salvesta ja sule **ning naaske valikusse** Värskenda [ühendamissätted](#update-unification-settings).
 
 ## <a name="manage-match-rules"></a>Vastendusreeglite haldamine
 
@@ -98,13 +102,13 @@ Enamuse vasteparameetritest saate ümber konfigureerida ja peenhäälestada. Ole
    :::image type="content" source="media/m3_match_edit.png" alt-text="Kuvatõmmis vastendusreeglite ja -tingimuste lehest koos statistikaga." lightbox="media/m3_match_edit.png":::
 
    Lehel kuvatakse vastejärjestus ja määratletud reeglid ning järgmine statistika.
-   - **Kordumatud lähtekirjed** näitab viimases vastekäituses töödeldud üksikute lähtekirjete arvu.
-   - **Vastendatud ja vastendamata kirjed** tõstab esile, mitu kordumatut kirjet on alles pärast vastendusreeglite töötlemist.
-   - **Ainult vastendatud kirjed** näitab ainult vastete arvu kõigis vastepaarides.
+   - **Kordumatud lähtekirjed** näitavad üksikute lähtekirjete arvu, mida töödeldi viimase vaste käitamise käigus.
+   - **Vastendatud ja vastendamata kirjed** tõstavad esile, kui palju kordumatuid kirjeid jääb pärast vastereeglite töötlemist alles.
+   - **Vastendatud kirjed näitavad ainult** vastete arvu kõigis teie matšipaarides.
 
 1. Kõigi reeglite tulemuste ja nende skooride vaatamiseks valige **Kuva viimane käivitamine**. Kuvatakse tulemused, sh alternatiivsed kontakti ID-d. Tulemused saate alla laadida.
 
-1. Kindla reegli tulemite ja skooride vaatamiseks valige reegel ja seejärel **eelvaade**. Kuvatakse tulemused. Tulemused saate alla laadida.
+1. Kindla reegli tulemite ja skooride vaatamiseks valige reegel ja seejärel **eelvaade**. Tulemused kuvatakse. Tulemused saate alla laadida.
 
 1. Reegli konkreetse tingimuse tulemite kuvamiseks valige reegel ja seejärel **Redigeeri**. Valige paanil Redigeerimine **tingimuse all Eelvaade**. Tulemused saate alla laadida.
 
@@ -120,7 +124,7 @@ Enamuse vasteparameetritest saate ümber konfigureerida ja peenhäälestada. Ole
    - **Reegli** dubleerimine: valige reegel ja seejärel **dubleerige**, et luua muudatustega sarnane reegel.
    - **Kustuta reegel**: valige reegel ja seejärel **kustutage**.
 
-1. Ühtsete väljade muutmiseks valige **Edasi või valige** Salvesta ja sule **ning naaske valikusse** Värskenda [ühendamissätted](#update-the-unification-settings).
+1. Ühtsete väljade muutmiseks valige **Edasi või valige** Salvesta ja sule **ning naaske valikusse** Värskenda [ühendamissätted](#update-unification-settings).
 
 ## <a name="manage-unified-fields"></a>Ühendatud väljade haldamine
 
@@ -130,7 +134,28 @@ Enamuse vasteparameetritest saate ümber konfigureerida ja peenhäälestada. Ole
 
 1. Vaadake üle kombineeritud ja välistatud väljad ning tehke vajaduse korral muudatusi. Lisage või muutke CustomerID võtit või rühmitage profiilid klastriteks. Lisateavet vaadake jaotisest [Kliendiväljade ühendamine](merge-entities.md).
 
-1. Valige **Edasi**, et vaadata üle ühendamissätted ning [värskendada ühtset profiili ja sõltuvusi](#run-updates-to-the-unified-customer-profile), või valige **Salvesta ja sule** ning naaske valikusse [Värskenda ühendamissätteid](#update-the-unification-settings), et teha rohkem muudatusi.
+1. Klientide või kontode puhul valige **Ühendatud profiili ja** sõltuvuste [ülevaatamiseks ja värskendamiseks nupp Edasi](#run-updates-to-the-unified-profile). Või valige **Salvesta ja sule** ning naaske valikusse [Värskenda ühendamissätteid](#update-unification-settings), et teha rohkem muudatusi.
+
+   Kontaktide puhul valige **semantiliste väljade haldamiseks Nupp Edasi**. Või valige **Salvesta ja sule** ning naaske valikusse [Värskenda ühendamissätteid](#update-unification-settings), et teha rohkem muudatusi.
+
+## <a name="manage-semantic-fields-for-unified-contacts"></a>Ühendatud kontaktide semantiliste väljade haldamine
+
+1. Valige paanil Semantilised väljad **käsk** Redigeeri **·**.
+
+1. Ühtse välja semantilise tüübi muutmiseks valige uus tüüp. Lisateavet leiate teemast [Ühendatud kontaktide](data-unification-contacts.md#define-the-semantic-fields-for-unified-contacts) semantiliste väljade määratlemine.
+
+1. Konto ja kontaktiseose haldamiseks valige **Edasi või valige** Salvesta ja sule **ning naaske valikusse** Värskenda ühendamise sätteid [, et teha](#update-unification-settings) rohkem muudatusi.
+
+## <a name="manage-contact-and-account-relationships"></a>Kontakti- ja kontosuhete haldamine
+
+1. Valige **paanil Seosed** käsk **Redigeeri**.
+
+1. Kontakti ja konto seose muutmiseks muutke mõnda järgmistest andmetest.
+
+   - **Kontaktiolemi välisvõti**: valige atribuut, mis ühendab teie kontaktiolemi kontoga.
+   - **Konto olemiks**: valige kontaktiga seotud kontoolem.
+
+1. Valige **Edasi**, et vaadata üle ühendamissätted ning [värskendada ühtset profiili ja sõltuvusi](#run-updates-to-the-unified-profile), või valige **Salvesta ja sule** ning naaske valikusse [Värskenda ühendamise sätteid](#update-unification-settings), et teha rohkem muudatusi.
 
 ## <a name="run-matching-conditions"></a>Käivitage sobivad tingimused
 
@@ -148,18 +173,15 @@ Vastendustingimuste käivitamine käivitab ainult duplikatsiooni- ja vastendusre
 
 1. Muudatuste tegemiseks vaadake teemasid [Dubleerimisreeglite](#manage-deduplication-rules) haldamine või [Vastendusreeglite](#manage-match-rules) haldamine.
 
-1. Käivitage vastendusprotsess uuesti või [käivitage kliendiprofiili](#run-updates-to-the-unified-customer-profile) värskendused.
+1. Käivitage vastendusprotsess uuesti või [käivitage profiili](#run-updates-to-the-unified-profile) värskendused.
 
-## <a name="run-updates-to-the-unified-customer-profile"></a>Ühtse kliendiprofiili värskenduste käivitamine
+## <a name="run-updates-to-the-unified-profile"></a>Ühtse profiili värskenduste käivitamine
 
-1. **Valige lehelt Data Unify (Andmete** > **ühendamine**):
+- Vastendustingimuste käitamiseks ja ühtse profiili olemi *värskendamiseks ilma sõltuvusi mõjutamata* (nt kliendikaardid, rikastamised, segmendid või mõõdud) valige **Ühenda kliendiprofiilid**. Kontode puhul valige **Ühenda kontod** > **Profiilide** ühendamine. Kontaktide puhul valige **Kontaktide ühendamine (eelvaade)** > **Profiilide** ühendamine. Sõltuvaid protsesse ei käitata, kuid värskendatakse värskendamise [ajakavas määratletud viisil](schedule-refresh.md).
+- Vastendustingimuste käivitamiseks värskendage ühtset profiili ja käivitage kõik sõltuvused, valige **Ühenda kliendiprofiilid ja sõltuvused**. Kõik protsessid käivitatakse automaatselt. Kontode ja kontaktide puhul valige **Ühenda kontod** > **Profiilide ja sõltuvuste** ühendamine. Vastendamistingimusi käitatakse nii kontodele kui ka kontaktidele, kes värskendavad nii ühtseid profiile kui ka kõiki muid sõltuvusi.
 
-   - **Kliendiprofiilide ühendamine: käivitab** vastendustingimused ja värskendab ühtset kliendiprofiili olemit, mõjutamata sõltuvusi (nt rikastamised, segmendid või mõõdud). Sõltuvaid protsesse ei käitata, kuid värskendatakse värskendamise [ajakavas määratletud viisil](schedule-refresh.md).
+Kõigil paanidel, välja arvatud **allikaväljadel**, kuvatakse **järjestatud** või **värskendamine**.
 
-   - **Ühendage kliendiprofiilid ja sõltuvused**: käitatakse vastendustingimusi ning värskendatakse ühtset profiili ja kõiki sõltuvusi. Kõik protsessid käivitatakse automaatselt. Kui kõik järgnevad protsessid on lõpule viidud, kajastab kliendiprofiil värskendatud andmeid.
+[!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-   Paanidel Kirjete duplikaat **,** Vastendamise tingimused **ja** Ühtsed kliendiväljad **kuvatakse** **järjestatud või** värskendav **olek**.
-
-   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
-
-Eduka käitamise tulemused kuvatakse lehel **Ühenda**, mis näitab ühtsete kliendiprofiilide arvu.
+Eduka käitamise tulemused kuvatakse **lehel Ühendamine**, kus kuvatakse ühendatud profiilide arv.

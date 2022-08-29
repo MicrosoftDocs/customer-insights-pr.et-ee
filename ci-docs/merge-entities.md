@@ -2,7 +2,7 @@
 title: Kliendiväljade ühendamine andmete ühendamiseks
 description: Ühendage olemid, et luua koondatud kliendiprofiile.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213577"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304008"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Kliendiväljade ühendamine andmete ühendamiseks
+# <a name="unify-customer-fields"></a>Kliendiväljade ühendamine
 
-Ühendamisprotsessi selles etapis valige ja välistage atribuudid, mis ühendatakse ühtse profiili olemiga. Näiteks kui kolmel olemil olid meiliandmed, võiksite säilitada kõik kolm eraldi meilivälja või ühendada need ühtse profiili jaoks üheks meiliväljaks. Mõned atribuudid ühendab süsteem automaatselt. Saate luua stabiilseid ja ainulaadseid kliendi ID-sid ja rühmitada klastrisse seotud profiile.
+Ühendamisprotsessi selles etapis valige ja välistage atribuudid, mis ühendatakse ühtse profiili olemiga. Näiteks kui kolmel olemil olid meiliandmed, võiksite säilitada kõik kolm eraldi meilivälja või ühendada need ühtse profiili jaoks üheks meiliväljaks. Mõned atribuudid ühendab süsteem automaatselt. Saate luua stabiilseid ja ainulaadseid kliendi ID-sid. Üksikklientide puhul saate seotud profiilid rühmitada klastrisse.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Ühenda leht andmete ühtsustamise protsessiga näidates tabelit koos ühendatud väljadega, mis defineerivad ühendatud kliendiprofiili.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Kliendiväljade ühendamise leht andmete ühendamise protsessis, kus kuvatakse ühendatud väljadega tabel, mis määratleb ühtse kliendiprofiili.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Kliendiväljade ülevaatamine ja värskendamine
 
@@ -47,7 +47,7 @@ ms.locfileid: "9213577"
 
 1. [Soovi korral looge kliendi ID konfiguratsioon](#configure-customer-id-generation).
 
-1. Soovi korral rühmitage [profiilid leibkondadesse või klastritesse](#group-profiles-into-households-or-clusters).
+1. Soovi korral rühmitage B-C-profiilid [leibkondadesse või klastritesse](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Järgmine samm: ühendamise ülevaatamine](review-unification.md)
@@ -161,7 +161,7 @@ Stabiilse kliendi ID konfigureerimine võimaldab teil seda käitumist vältida.
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Rühmitage profiilid leibkondadesse või klastritesse
 
-Saate määratleda reeglid seotud profiilide rühmitamiseks klastrisse. Praegu on saadaval kahte tüüpi klastrid – Leibkonna ja kohandatud klastrid. Kui *Kliendi* olem sisaldab semantilisi välju *Person.LastName* ja *Location.Address*, valib süsteem eelmääratletud reeglitega subjekti automaatselt. Saate luua klastri ka oma reeglite ja tingimustega, mis sarnanevad [reeglitele](match-entities.md#define-rules-for-match-pairs).
+Üksikklientide puhul saate määratleda reeglid seotud profiilide rühmitamiseks klastrisse. Praegu on saadaval kahte tüüpi klastrid – Leibkonna ja kohandatud klastrid. Kui *Kliendi* olem sisaldab semantilisi välju *Person.LastName* ja *Location.Address*, valib süsteem eelmääratletud reeglitega subjekti automaatselt. Saate luua klastri ka oma reeglite ja tingimustega, mis sarnanevad [reeglitele](match-entities.md#define-rules-for-match-pairs).
 
 1. Valige **Klastri** > **Täpsem** loomine.
 
