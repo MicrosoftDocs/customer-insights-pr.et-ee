@@ -1,19 +1,19 @@
 ---
 title: Mida on uut rakenduses Dynamics 365 Customer Insights
 description: Teave uute funktsioonide, täiustuste ja veaparanduste kohta.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246006"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387289"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Mida on uut rakenduses Dynamics 365 Customer Insights
 
@@ -23,6 +23,24 @@ Avaldame värskendusi regioonipõhiselt. Seega teatud regioonid võivad näha fu
 
 > [!TIP]
 > Funktsioonitaotluste ja tootesoovituste esitamiseks ning hääletamiseks minge [Dynamics 365 portaali Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>2022. aasta augusti värskendused
+
+2022. aasta augusti värskendused sisaldavad uusi funktsioone, jõudluse täiendusi ja veaparandusi.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Kontaktide ühendamine B-B keskkondades
+
+Customer Insightsi B-to-B keskkonnad toetavad nüüd täiustatud andmete ühendamise kogemust.
+
+Nüüd saate lisaks kontodele ka kontakte ühendada, et saada oma ärikontaktidest täielik ülevaade. Ühendatud kontaktid seostatakse ühendatud kontodega ja on nüüd loetletud kliendikaartidel. 
+
+Lisateavet leiate teemast [Ühtse kontaktiprofiili loomine](data-unification-contacts.md).
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Segmentide loomine ja eksportimine ühtsete kontaktide põhjal
+
+Tänu uuele kontaktide ühendamisele saate luua kontaktide segmente, kasutades kas kontaktide, kontode või mõlema kriteeriume. Neid segmente saab eksportida aktiveerimiseks teistes teenustes.
+
+Lisateavet vaadake jaotisest [Ekspordi ülevaade](export-destinations.md).
 
 ## <a name="july-2022-updates"></a>2022. aasta juuli värskendused
 
@@ -44,7 +62,7 @@ Lisateavet vaadake jaotisest [Andmete eksportimine SFTP-hostidesse](export-sftp.
 
 Kliendiandmete haldamine ei ole uus väljakutse, kuid see muutub üha keerulisemaks, kuna kasutajad navigeerivad erinevates digitaalsetes kanalites, mida kaubamärgid pakuvad. Ühes kanalis tuntud (autenditud) kasutaja muutub teises kanalis tundmatuks (autentimata), kui ta pole sisse logitud. Probleem on sageli selles, et autentimata (tundmatutel) kasutajatel pole ühist ID-d. Seda saab kasutada tähendusrikaste profiiliatribuutide seostamiseks ja ühtsete kliendiprofiilide loomiseks. Customer Insights aitab seda probleemi lahendada, neelates andmeid teie lähtesüsteemide jälgimismeetoditest.
 
-Lisateavet leiate teemast [Kasutuskogemuse isikupärastamine teadaolevate ja tundmatute kasutajate andmetega](unknown-to-known.md).
+Lisateavet leiate teemast [Kasutuskogemuse isikupärastamine teadaolevate ja tundmatute kasutajate](unknown-to-known.md) andmetega.
 
 ## <a name="june-2022-updates"></a>2022. juuni värskendused
 
@@ -52,7 +70,7 @@ Lisateavet leiate teemast [Kasutuskogemuse isikupärastamine teadaolevate ja tun
 
 ### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Andmeallikate ja andmete allaneelamise värskendatud kasutuskogemus
 
-Andmete importimine paljudest andmeallikatest on aluseks teie kliendiandmete konsolideerimisele Dynamics 365 Customer Insights. Vaatasime üle kasutajakogemuse andmeallikate importimiseks ja ühendamiseks. Selle värskenduse eesmärk on hõlbustada andmete allaneelamist Customer Insightsi.
+Andmete importimine paljudest andmeallikatest on aluseks teie kliendiandmete Dynamics 365 Customer Insights konsolideerimisele. Vaatasime üle kasutajakogemuse andmeallikate importimiseks ja ühendamiseks. Selle värskenduse eesmärk on hõlbustada andmete allaneelamist Customer Insightsi.
 
 Lisateavet leiate teemast [Andmeallikate ülevaade](data-sources.md).
 
@@ -153,9 +171,9 @@ Lisateavet leiate teemast Andmete ühiskasutuse [lubamine omaenda Dataverse kaud
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Uued ekspordisihtkohad: Iterable ja Braze
 
-Jätkame oma ekspordisihtkohtade ökosüsteemi laiendamist uute ühendustega. Nüüd saate segmente eksportida Iterable’i ja Braze’i, et kasutada nende aktiveerimisteenuseid.
+Jätkame oma ekspordisihtkohtade ökosüsteemi laiendamist uute ühendustega. Nüüd saate segmente eksportida Iterable'i ja Braze'i, et kasutada nende aktiveerimisteenuseid.
 
-Lisateavet vaadake teemadest [Segmentide eksportimine iterable’i (eelvaade)](export-iterable.md) ja [segmentide eksportimine Braze’i (eelvaade)](export-braze.md).
+Lisateavet vaadake teemadest [Segmentide eksportimine iterable'i (eelvaade)](export-iterable.md) ja [segmentide eksportimine Braze'i (eelvaade)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Marketo ja Google Adsi ekspordi täiustused
 
@@ -168,7 +186,7 @@ Lisateavet vaadake teemadest [Segmentide eksportimine iterable’i (eelvaade)](e
 
 2022. aasta veebruari värskendused sisaldavad uusi funktsioone, jõudluse täiendusi ja veaparandusi.
 
-### <a name="general-availability-for-prediction-models"></a>Prognoos mudelite üldine kättesaadavus
+### <a name="general-availability-for-prediction-models"></a>prognoos mudelite üldine kättesaadavus
 
 Valmiskujul prognoos mudelid, sh **tellimus,** **tehingumaht** ja **kliendi eluaegne väärtus (CLV),** muutuvad Customer Insightsi osana üldiselt kättesaadavaks. 
 
@@ -190,7 +208,7 @@ Lisateavet vaadake jaotisest [Kliendiprofiilide rikastamine identiteediandmetega
 
 ### <a name="enrichment-for-data-sources-preview"></a>Andmeallikate rikastamine (eelvaade)
 
-Kasutage kliendiandmete rikastamiseks enne andmete ühendamist sellistest allikatest nagu Microsoft ja muud partnerid pärinevaid andmeid. Andmeallikas rikastamine aitab luua suuremat andmete täielikkust ja kvaliteeti, mis võib aidata saavutada paremaid tulemusi, kui olete oma andmed ühendanud.
+Kasutage kliendiandmete rikastamiseks enne andmete ühendamist sellistest allikatest nagu Microsoft ja muud partnerid pärinevaid andmeid. andmeallikas rikastamine aitab luua suuremat andmete täielikkust ja kvaliteeti, mis võib aidata saavutada paremaid tulemusi, kui olete oma andmed ühendanud.
 
 Lisateavet leiate teemast [Andmeallikate rikastamine (eelvaade)](data-sources-enrichment.md).
 

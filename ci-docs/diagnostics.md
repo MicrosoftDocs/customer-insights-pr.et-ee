@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245920"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352796"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Diagnostikalogide eksportimine (eelvaade)
 
@@ -36,8 +36,8 @@ Customer Insights saadab järgmised sündmuselogid.
 
 - Aktiivne [Azure’i tellimus](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - [Administraatori](permissions.md#admin) õigused Customer Insightsis.
+- Azure’is kehtiv ressurss, mis järgib [Azure Storage’i, Azure Event Hubi või Azure Log Analyticsi sihtkohanõudeid](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements).
 - [Kaasautori ja kasutaja juurdepääsu administraatori roll](/azure/role-based-access-control/role-assignments-portal) Azure’i sihtressursis. Ressurss võib olla Azure Data Lake Storage konto, Azure’i sündmuste keskus või Azure Log Analyticsi tööruum. See õigus on vajalik Diagnostikasätete konfigureerimisel Customer Insightsis, kuid seda saab pärast edukat seadistamist muuta.
-- [Azure Storage’i, Azure Event Hubi või Azure Log Analyticsi sihtkohanõuded](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) on täidetud.
 - Vähemalt **lugeja** roll ressursirühmas, kuhu ressurss kuulub.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Diagnostika häälestamine Azure Monitori abil
@@ -176,7 +176,7 @@ JSON-objektil `identity` on järgmine struktuur
 
 ### <a name="workflow-event-schema"></a>Töövoo sündmuse skeem
 
-Töövoog sisaldab mitut etappi. [Andmeallikate allaneelamine](data-sources.md), [andmete ühendamine](data-unification.md), [rikastamine](enrichment-hub.md) ja [eksportimine](export-destinations.md). Kõiki neid samme saab käivitada individuaalselt või orkestreerida järgmiste protsessidega.
+Töövoog sisaldab mitut etappi. [Andmeallikate allaneelamine](data-sources.md), [andmete ühendamine](data-unification.md), [rikastamine](enrichment-hub.md) ja [eksportimine](export-destinations.md) . Kõiki neid samme saab käivitada individuaalselt või orkestreerida järgmiste protsessidega.
 
 #### <a name="operation-types"></a>Operatsiooni tüübid
 
@@ -208,7 +208,7 @@ Töövoog sisaldab mitut etappi. [Andmeallikate allaneelamine](data-sources.md),
 | --------------- | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `time`          | Üksuse ajatempel | Nõutav          | Sündmuse ajatempel (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Nõutav          | Sündmuse väljastanud eksemplari ResourceId.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
-| `operationName` | String    | Nõutav          | Selle sündmusega esindatud toimingu nimi. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Lisateavet leiate [teemast Toimingu tüübid](#operation-types). | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
+| `operationName` | String    | Nõutav          | Selle sündmusega esindatud toimingu nimi. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Lisateavet leiate [teemast Toimingu tüübid](#operation-types) . | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
 | `category`      | String    | Nõutav          | Sündmuse logi kategooria. Alati `Operational` töövoosündmuste jaoks                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Nõutav          | Sündmuse staatus. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Pikk      | Valikuline          | Operatsiooni kestus millisekundites.                                                                                                                    | `133`                                                                                                                                                                    |
@@ -228,17 +228,17 @@ Töövoosündmustel on järgmised atribuudid.
 | `properties.submittedBy`                     | Ja      | No   | Valikuline. Ainult töövoo sündmused. Azure Active Directory [Töövoo käivitanud kasutaja](/azure/marketplace/find-tenant-object-id#find-user-object-id) objectId, vt ka `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Ja      | No   | `full` või `incremental` värskendage.                                                                                                                                                                                                                            |
 | `properties.workflowSubmissionKind`          | Ja      | No   | `OnDemand` või `Scheduled`.                                                                                                                                                                                                                                  |
-| `properties.workflowStatus`                  | Ja      | No   | `Running` või `Successful`.                                                                                                                                                                                                                                 |
-| `properties.startTimestamp`                  | Ja      | Ja  | UTC ajatempel`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.endTimestamp`                    | Ja      | Ja  | UTC ajatempel`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.submittedTimestamp`              | Ja      | Ja  | UTC ajatempel`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Ja      | Ja  | Klientide ülevaated`instanceId`                                                                                                                                                                                                                              |  
+| `properties.workflowStatus`                  | Ja      | No   | `Running` või  `Successful`.                                                                                                                                                                                                                                 |
+| `properties.startTimestamp`                  | Ja      | Ja  | UTC ajatempel `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.endTimestamp`                    | Ja      | Ja  | UTC ajatempel `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.submittedTimestamp`              | Ja      | Ja  | UTC ajatempel `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.instanceId`                      | Ja      | Ja  | Klientide ülevaated `instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Ja  | - OperationType = `Export` puhul on identifikaator ekspordikonfiguratsiooni guid. <br> - OperationType = `Enrichment`, see on rikastumise guid <br> - OperationType `Measures` ja `Segmentation`, identifikaatoriks on üksuse nimi. |
 | `properties.friendlyName`                    | No       | Ja  | Ekspordi või töödeldava olemi kasutajasõbralik nimi.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Ja  | Valikuline. Tõrketeade koos lisateabega.                                                                                                                                                                                                                  |
-| `properties.additionalInfo.Kind`             | No       | Ja  | Valikuline. Ainult OperationType’i `Export` jaoks. Tuvastab ekspordi tüübi. Lisateavet leiate [ekspordisihtkohtade](export-destinations.md) ülevaatest.                                                                                          |
-| `properties.additionalInfo.AffectedEntities` | No       | Ja  | Valikuline. Ainult OperationType’i `Export` jaoks. Sisaldab ekspordi konfigureeritud olemite loendit.                                                                                                                                                            |
-| `properties.additionalInfo.MessageCode`      | No       | Ja  | Valikuline. Ainult OperationType’i `Export` jaoks. Üksikasjalik teade ekspordi kohta.                                                                                                                                                                                 |
-| `properties.additionalInfo.entityCount`      | No       | Ja  | Valikuline. Ainult OperationType’i `Segmentation` jaoks. Näitab liikmete koguarvu, mis segmendil on.                                                                                                                                                    |
+| `properties.additionalInfo.Kind`             | No       | Ja  | Valikuline. Ainult OperationType'i `Export` jaoks. Tuvastab ekspordi tüübi. Lisateavet leiate [ekspordisihtkohtade](export-destinations.md) ülevaatest.                                                                                          |
+| `properties.additionalInfo.AffectedEntities` | No       | Ja  | Valikuline. Ainult OperationType'i `Export` jaoks. Sisaldab ekspordi konfigureeritud olemite loendit.                                                                                                                                                            |
+| `properties.additionalInfo.MessageCode`      | No       | Ja  | Valikuline. Ainult OperationType'i `Export` jaoks. Üksikasjalik teade ekspordi kohta.                                                                                                                                                                                 |
+| `properties.additionalInfo.entityCount`      | No       | Ja  | Valikuline. Ainult OperationType'i `Segmentation` jaoks. Näitab liikmete koguarvu, mis segmendil on.                                                                                                                                                    |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
