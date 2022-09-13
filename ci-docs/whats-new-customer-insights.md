@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387289"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409352"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Mida on uut rakenduses Dynamics 365 Customer Insights
 
@@ -41,6 +41,14 @@ Lisateavet leiate teemast [Ühtse kontaktiprofiili loomine](data-unification-con
 Tänu uuele kontaktide ühendamisele saate luua kontaktide segmente, kasutades kas kontaktide, kontode või mõlema kriteeriume. Neid segmente saab eksportida aktiveerimiseks teistes teenustes.
 
 Lisateavet vaadake jaotisest [Ekspordi ülevaade](export-destinations.md).
+
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Juurutuspiirkonnad on joondatud Microsoft Dataverse
+
+Uue Customer Insightsi keskkonna loomisel saate valida piirkonna, kus soovite teenust juurutada ja majutada. Oleme värskendanud piirkonna valikut, et see oleks kooskõlas Microsoft Dataverse ja Power Platform.
+
+Nüüd saate hõlpsasti valida sama piirkonna, kus on teie olemasolev Microsoft Dataverse keskkond või Azure Data Lake’i salvestuskonto (kui valite selle suvandi), sõltuvalt Customer Insightsi kättesaadavusest selles piirkonnas.
+
+Lisateavet leiate teemadest [Uue keskkonna](create-environment.md) loomine ja [Toote saadavus geograafiliste piirkondade](https://dynamics.microsoft.com/availability-reports/) kaupa.
 
 ## <a name="july-2022-updates"></a>2022. aasta juuli värskendused
 
@@ -122,7 +130,7 @@ Lisateavet leiate teemast [Segmentide eksportimine Criteosse (eelvaade)](export-
 
 Vaatasime üle Customer Insightsi keskkondade loomise ja haldamisega seotud spikridokumendid. Artiklid on nüüd sisukorras rühmitatud sõlme Keskkonnad alla. Ümberstruktureeritud artiklid annavad rohkem juhiseid erinevate keskkondade seadistamise viiside kohta ja neil on selgem struktuur. Kui teil on jagamiseks tagasisidet, andke meile sellest teada spikriartiklite lõpus olevate juhtelementide kaudu.
 
-Lisateavet vaadake jaotisest [Kuidas: uue keskkonna](create-environment.md) loomine.
+Lisateavet vaadake jaotisest [Kuidas: uue keskkonna loomine](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Aprill 2022 värskendused
 
@@ -144,7 +152,7 @@ Lisateavet vaadake jaotisest [Mõõtude koostaja kasutamine mõõtude loomiseks 
 
 Vaatasime üle oma dokumentatsiooniartiklid ning eemaldasime kaasamisstatistika ja vaatajaskonna ülevaadete võimalused. Edasi liikudes viitame rakenduse põhifunktsioonidest kirjutades järjekindlalt tootenimele Customer Insights. See muudatus toob kaasa ka sisukorra, URL-i struktuuri ja alusdokumentide hoidla failiteede olulise ümberkorraldamise. Kõik teie järjehoidjad või olemasolevad lingid töötavad edasi ja suunavad ümber värskendatud URL-idele.
 
-Kui soovite meile teada anda, kuidas te seda muutust tajute või märkate midagi, mis ei tööta ootuspäraselt, andke meile sellest teada, esitades [selle lehe kohta tagasiside](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
+Kui soovite meile teada anda, kuidas te seda muutust tajute või märkate midagi, mis ei tööta ootuspäraselt, andke meile sellest teada, esitades [selle lehe](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**) kohta tagasiside.
 
 ## <a name="march-2022-updates"></a>Märts 2022 värskendused
 
@@ -160,7 +168,7 @@ Lisateavet vaadake jaotisest [Kliendiprofiilide rikastamine identiteediandmetega
 
 Kui teie organisatsioonis on palju segmente või meetmeid, võib õige leidmine mõnikord tunduda keeruline. See uus funktsioon võimaldab teil loendeid siltide ja veergude abil korraldada. See aitab andmeid kiiresti ja lihtsalt leida ning vaateid kohandada.
 
-Lisateavet leiate teemast [Siltide ja veergudega töötamine](work-with-tags-columns.md).
+Lisateavet leiate teemast [Siltide ja veergudega](work-with-tags-columns.md) töötamine.
 
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Andmete jagamise lubamine Dataverse oma salvestusruumikonto kasutamisel
 
@@ -171,9 +179,9 @@ Lisateavet leiate teemast Andmete ühiskasutuse [lubamine omaenda Dataverse kaud
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Uued ekspordisihtkohad: Iterable ja Braze
 
-Jätkame oma ekspordisihtkohtade ökosüsteemi laiendamist uute ühendustega. Nüüd saate segmente eksportida Iterable'i ja Braze'i, et kasutada nende aktiveerimisteenuseid.
+Jätkame oma ekspordisihtkohtade ökosüsteemi laiendamist uute ühendustega. Nüüd saate segmente eksportida Iterable’i ja Braze’i, et kasutada nende aktiveerimisteenuseid.
 
-Lisateavet vaadake teemadest [Segmentide eksportimine iterable'i (eelvaade)](export-iterable.md) ja [segmentide eksportimine Braze'i (eelvaade)](export-braze.md).
+Lisateavet vaadake teemadest [Segmentide eksportimine iterable’i (eelvaade)](export-iterable.md) ja [segmentide eksportimine Braze’i (eelvaade)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Marketo ja Google Adsi ekspordi täiustused
 
@@ -186,7 +194,7 @@ Lisateavet vaadake teemadest [Segmentide eksportimine iterable'i (eelvaade)](exp
 
 2022. aasta veebruari värskendused sisaldavad uusi funktsioone, jõudluse täiendusi ja veaparandusi.
 
-### <a name="general-availability-for-prediction-models"></a>prognoos mudelite üldine kättesaadavus
+### <a name="general-availability-for-prediction-models"></a>Prognoos mudelite üldine kättesaadavus
 
 Valmiskujul prognoos mudelid, sh **tellimus,** **tehingumaht** ja **kliendi eluaegne väärtus (CLV),** muutuvad Customer Insightsi osana üldiselt kättesaadavaks. 
 
@@ -208,7 +216,7 @@ Lisateavet vaadake jaotisest [Kliendiprofiilide rikastamine identiteediandmetega
 
 ### <a name="enrichment-for-data-sources-preview"></a>Andmeallikate rikastamine (eelvaade)
 
-Kasutage kliendiandmete rikastamiseks enne andmete ühendamist sellistest allikatest nagu Microsoft ja muud partnerid pärinevaid andmeid. andmeallikas rikastamine aitab luua suuremat andmete täielikkust ja kvaliteeti, mis võib aidata saavutada paremaid tulemusi, kui olete oma andmed ühendanud.
+Kasutage kliendiandmete rikastamiseks enne andmete ühendamist sellistest allikatest nagu Microsoft ja muud partnerid pärinevaid andmeid. Andmeallikas rikastamine aitab luua suuremat andmete täielikkust ja kvaliteeti, mis võib aidata saavutada paremaid tulemusi, kui olete oma andmed ühendanud.
 
 Lisateavet leiate teemast [Andmeallikate rikastamine (eelvaade)](data-sources-enrichment.md).
 
@@ -216,7 +224,7 @@ Lisateavet leiate teemast [Andmeallikate rikastamine (eelvaade)](data-sources-en
 
 Kuigi Customer Insightsis võivad administraatoriõigused olla mitmel kasutajal, on keskkonna omanik ainult üks kasutaja. Täiustatud kogemus võimaldab teil vahetada keskkonna omanikke ja nõuda omandiõigust, kui endine omanik organisatsioonist lahkub. 
 
-Lisateavet vaadake jaotisest [Keskkonna](manage-environments.md#change-the-owner-of-an-environment) omaniku muutmine.
+Lisateavet vaadake jaotisest [Keskkonna omaniku muutmine](manage-environments.md#change-the-owner-of-an-environment).
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Andmete ettevalmistamise protsess loetleb rikutud kirjete korruptsiooni põhjused
 

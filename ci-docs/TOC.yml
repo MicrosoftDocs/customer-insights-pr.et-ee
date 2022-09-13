@@ -48,7 +48,7 @@
   items:
     - name: Andmeallikate ülevaade
       href: data-sources.md
-    - name: Andmetega ühenduse loomine Azure Data Lake Storageis
+    - name: Andmetega ühenduse loomine Azure Data Lake Storage
       href: connect-common-data-model.md
     - name: Azure Synapse Analyticsiga ühenduse loomine
       href: connect-synapse.md
@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Azure'i masinõppe kohandatud mudelite kasutamine
           href: custom-models.md
-        - name: Osaliselt puuduvate andmete täiustamine
-          href: predictions.md
     - name: Näidisjuhendid
       items:
         - name: CLV prognoosi näidisjuhend

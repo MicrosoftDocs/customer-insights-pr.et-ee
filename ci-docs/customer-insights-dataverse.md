@@ -1,7 +1,7 @@
 ---
 title: Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
 description: Siit saate teada, kuidas ühendada Customer Insights ja Microsoft Dataverse mõista väljundolemeid, mis eksporditakse Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303824"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424304"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Customer Insightsi andmetega töötamine teenuses Microsoft Dataverse
 
@@ -136,6 +136,7 @@ Kui ühenduse eemaldamine ebaõnnestub sõltuvuste tõttu, peate ka sõltuvused 
 Mõned Customer Insightsi väljundolemid on saadaval tabelitena.Dataverse Allolevates jaotistes kirjeldatakse nende tabelite eeldatavat skeemi.
 
 - [Kliendi profiil](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,7 +146,32 @@ Mõned Customer Insightsi väljundolemid on saadaval tabelitena.Dataverse Allole
 
 ### <a name="customerprofile"></a>Kliendi profiil
 
-See tabel sisaldab Customer Insightsi ühildatud kliendiprofiili. Ühtse kliendiprofiili skeem sõltub andmete ühendamise protsessis kasutatavatest olemitest ja atribuutidest. Kliendiprofiili skeem sisaldab tavaliselt atribuutide alamhulka [CustomerProfile Common Data Model](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) mudelist.
+See tabel sisaldab Customer Insightsi ühildatud kliendiprofiili. Ühtse kliendiprofiili skeem sõltub andmete ühendamise protsessis kasutatavatest olemitest ja atribuutidest. Kliendiprofiili skeem sisaldab tavaliselt atribuutide alamhulka [CustomerProfile Common Data Model](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) mudelist. Stsenaariumi B-B puhul sisaldab kliendiprofiil ühtseid kontosid ja skeem sisaldab tavaliselt konto common data model definitsiooni atribuutide [alamhulka](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+
+### <a name="contactprofile"></a>ContactProfile
+
+ContactProfile sisaldab ühtset teavet kontakti kohta. Kontaktid on [isikud, kes vastendatakse kontoga](data-unification-contacts.md) stsenaariumi B-B korral.
+
+| Column                       | Tüüp                | Kirjeldus     |
+| ---------------------------- | ------------------- | --------------- |
+|  Sünnikuupäev            | DateTime       |  Kontakti sünniaeg               |
+|  Linn                 | Tekstsõnum |  Kontaktaadressi linn               |
+|  ContactId            | Tekstsõnum |  Kontaktiprofiili ID               |
+|  ContactProfileId     | Ainuidentifikaator   |  GUID kontakti jaoks               |
+|  Riik või piirkond      | Tekstsõnum |  Kontaktaadressi riik/regioon               |
+|  CustomerId           | Tekstsõnum |  Selle konto ID, millega kontakt vastendatakse               |
+|  EntityName           | Tekstsõnum |  Üksus, kust andmed pärinevad                |
+|  FirstName            | Tekstsõnum |  Kontakti eesnimi               |
+|  Sugu               | Tekstsõnum |  Kontakti sugu               |
+|  ID                   | Tekstsõnum |  Deterministlik GUID, mis põhineb`Identifier`               |
+|  identifikaator           | Tekstsõnum |  Kontaktiprofiili sisemine ID: `ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | Tekstsõnum |  Kontakti ametinimetus               |
+|  LastName             | Tekstsõnum |  Kontakti perekonnanimi               |
+|  PostalCode           | Tekstsõnum |  Kontaktaadressi sihtnumber               |
+|  Esmane e-post         | Tekstsõnum |  Kontakti e-posti aadress               |
+|  Esmane telefon         | Tekstsõnum |  Kontaktisiku telefoninumber               |
+|  Osariik või maakond      | Tekstsõnum |  Kontaktaadressi osariik või provints               |
+|  StreetAddress        | Tekstsõnum |  Kontaktaadressi tänav               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
@@ -153,13 +179,13 @@ Tabel AlternateKey sisaldab olemite võtmeid, mis osalevad ühildamisprotsessis.
 
 |Column  |Tüüp  |Kirjeldus  |
 |---------|---------|---------|
-|DataSourceName    |String         | Andmeallika nimi. Näiteks: `datasource5`.”        |
-|EntityName        | String        | Üksuse nimi Customer Insightsis. Näiteks: `contact1`.”        |
-|AlternateValue (Alternatiivne väärtus)    |String         |Alternatiivne ID, mis on vastendatud kliendi ID-ga. Näide: `cntid_1078`         |
-|KeyRing           | Mitmerealine tekstiväli        | JSON-väärtus  </br> Näide: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | String        | Ühildatud kliendiprofiili ID.         |
-|AlternateKeyId     | GUID         |  AlternateKeyl deterministlik GUID, mis põhineb msdynci_identifier       |
-|msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Näidis: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |Tekstsõnum         | Andmeallika nimi. Näiteks: `datasource5`.”        |
+|EntityName        | Tekstsõnum        | Üksuse nimi Customer Insightsis. Näiteks: `contact1`.”        |
+|AlternateValue (Alternatiivne väärtus)    |Tekstsõnum         |Alternatiivne ID, mis on vastendatud kliendi ID-ga. Näide: `cntid_1078`         |
+|KeyRing           | Tekstsõnum        | JSON-väärtus  </br> Näide: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | Tekstsõnum        | Ühildatud kliendiprofiili ID.         |
+|AlternateKeyId     | Ainuidentifikaator        |  AlternateKey deterministlik GUID, mis põhineb`Identifier`      |
+|identifikaator |   Tekstsõnum      |   `DataSourceName|EntityName|AlternateValue`  </br> Näidis: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,18 +193,18 @@ See tabel sisaldab kasutajate tegevusi, mis on saadaval jaotises Customer Insigh
 
 | Column            | Tüüp        | Kirjeldus                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | String      | Kliendiprofiili ID                                                                      |
-| ActivityId        | String      | Klienditegevuse sisemine ID (esmane võti)                                       |
-| SourceEntityName  | String      | Lähteolemi nimi                                                                |
-| SourceActivityId  | String      | Lähteolemi esmane võti                                                       |
-| ActivityType      | String      | Semantilise tegevuse tüüp või kohandatud tegevuse nimi                                        |
-| ActivityTimeStamp | DATETIME    | Tegevuse ajatempel                                                                      |
-| ametinimetus             | String      | Tegevuse pealkiri või nimi                                                               |
-| Kirjeldus       | String      | Tegevuse kirjeldus                                                                     |
-| URL               | String      | Link tegevusele omase välise URL-i juurde                                         |
-| SemanticData      | JSON-sõne | Sisaldab tegevusetüübile omaste semantilise vastendusväljade põhiväärtusepaaride loendit |
-| RangeIndex        | String      | Unixi ajatempel, mida kasutatakse tegevuse ajaskaala ja efektiivsete vahemikupäringute sorteerimiseks |
-| mydynci_unifiedactivityid   | GUID | Klienditegevuse sisemine ID (ActivityId) |
+| CustomerId        | Tekstsõnum      | Kliendiprofiili ID                                                                      |
+| ActivityId        | Tekstsõnum      | Klienditegevuse sisemine ID (esmane võti)                                       |
+| SourceEntityName  | Tekstsõnum      | Lähteolemi nimi                                                                |
+| SourceActivityId  | Tekstsõnum      | Lähteolemi esmane võti                                                       |
+| ActivityType      | Tekstsõnum      | Semantilise tegevuse tüüp või kohandatud tegevuse nimi                                        |
+| ActivityTimeStamp | DateTime    | Tegevuse ajatempel                                                                      |
+| ametinimetus             | Tekstsõnum      | Tegevuse pealkiri või nimi                                                               |
+| Kirjeldus       | Tekstsõnum      | Tegevuse kirjeldus                                                                     |
+| URL               | Tekstsõnum      | Link tegevusele omase välise URL-i juurde                                         |
+| SemanticData      | Tekstsõnum | Sisaldab tegevusetüübile omaste semantilise vastendusväljade põhiväärtusepaaride loendit |
+| RangeIndex        | Tekstsõnum      | Unixi ajatempel, mida kasutatakse tegevuse ajaskaala ja efektiivsete vahemikupäringute sorteerimiseks |
+| UnifiedActivityId   | Ainuidentifikaator | Klienditegevuse sisemine ID (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
@@ -186,11 +212,10 @@ See tabel sisaldab kliendiatribuudipõhiste elementide väljundandmeid.
 
 | Column             | Tüüp             | Kirjeldus                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | String           | Kliendiprofiili ID        |
-| Näitajad           | JSON-sõne      | Sisaldab põhiväärtusepaaride loendit antud kliendi nime ja väärtuste mõõtmiseks | 
-| msdynci_identifier | String           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | Kliendiprofiili ID |
-
+| CustomerId         | Tekstsõnum           | Kliendiprofiili ID        |
+| Näitajad           | Tekstsõnum      | Sisaldab põhiväärtusepaaride loendit antud kliendi nime ja väärtuste mõõtmiseks |
+| identifikaator | Tekstsõnum           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Ainuidentifikaator     | Kliendiprofiili ID |
 
 ### <a name="enrichment"></a>Rikastamine
 
@@ -198,12 +223,12 @@ See tabel sisaldab rikastamise protsessi väljundit.
 
 | Column               | Tüüp             |  Kirjeldus                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | String           | Kliendiprofiili ID                                 |
-| EnrichmentProvider   | String           | Rikastamise pakkuja nimi                                  |
-| EnrichmentType       | String           | Rikastamise tüüp                                      |
-| Väärtused               | JSON-sõne      | Rikastamise protsessiga seotud atribuutide loend |
-| msdynci_enrichmentid | GUID             | Deterministlik GUID, mis on loodud msdynci_identifierilt |
-| msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | Tekstsõnum           | Kliendiprofiili ID                                 |
+| EnrichmentProvider   | Tekstsõnum           | Rikastamise pakkuja nimi                                  |
+| EnrichmentType       | Tekstsõnum           | Rikastamise tüüp                                      |
+| Väärtused               | Tekstsõnum      | Rikastamise protsessiga seotud atribuutide loend |
+| EnrichmentId | Ainuidentifikaator            | Deterministlik GUID, mis on loodud`Identifier` |
+| identifikaator   | Tekstsõnum           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Prognoos
 
@@ -211,12 +236,12 @@ See tabel sisaldab mudeliprognooside väljundit.
 
 | Column               | Tüüp        | Kirjeldus                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | String      | Kliendiprofiili ID                                  |
-| ModelProvider        | String      | Mudeli pakkuja nimi                                      |
-| Mudel                | String      | Mudeli nimi                                                |
-| Väärtused               | JSON-sõne | Mudeliga seotud atribuutide loend |
-| msdynci_predictionid | GUID        | Deterministlik GUID, mis on loodud msdynci_identifierilt | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | Tekstsõnum      | Kliendiprofiili ID                                  |
+| ModelProvider        | Tekstsõnum      | Mudeli pakkuja nimi                                      |
+| Mudel                | Tekstsõnum      | Mudeli nimi                                                |
+| Väärtused               | Tekstsõnum | Mudeliga seotud atribuutide loend |
+| EnnustusId | Ainuidentifikaator       | Deterministlik GUID, mis on loodud`Identifier` |
+| identifikaator   | Tekstsõnum      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Segmendi liikmelisus
 
@@ -224,12 +249,11 @@ See tabel sisaldab kliendiprofiilide segmendi liikmelisuse teavet.
 
 | Column        | Tüüp | Kirjeldus                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | Kliendiprofiili ID        |
-| SegmentProvider      | String       | Rakendus, mis avaldab segmendid.      |
-| SegmentLiikmetüüp | String       | Selle segmendi liikmekirje kliendi tüüp. Toetab mitut tüüpi, näiteks klienti, kontakti või kontot. Vaikimisi: Klient  |
-| Segmendid       | JSON-sõne  | Nimekiri unikaalsetest segmentidest, mille liige kliendiprofiil on      |
-| msdynci_identifier  | String   | Segmendi liikmekirje kordumatu identifikaator. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministlik GUID, mis on loodud`msdynci_identifier`          |
-
+| CustomerId        | Tekstsõnum       | Kliendiprofiili ID        |
+| SegmentProvider      | Tekstsõnum       | Rakendus, mis avaldab segmendid.      |
+| SegmentLiikmetüüp | Tekstsõnum       | Selle segmendi liikmekirje kliendi tüüp. Toetab mitut tüüpi, näiteks klienti, kontakti või kontot. Vaikimisi: Klient  |
+| Segmendid       | Tekstsõnum  | Nimekiri unikaalsetest segmentidest, mille liige kliendiprofiil on      |
+| identifikaator  | Tekstsõnum   | Segmendi liikmekirje kordumatu identifikaator. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Ainuidentifikaator      | Deterministlik GUID, mis on loodud`Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

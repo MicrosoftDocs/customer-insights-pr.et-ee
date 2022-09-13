@@ -6,12 +6,12 @@ metadata:
   ms.author: mhart
   ms.date: 05/18/2022
   ms.topic: landing-page
-  ms.openlocfilehash: e8134fa66ce47cdf8aeab144b8405104fb257f6c
-  ms.sourcegitcommit: 6108152b3d28a2ec140eae32a61dbf4317baa37b
+  ms.openlocfilehash: 209d635f8b548559ba035a5803c360d26dea8bab
+  ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
   ms.translationtype: MT
   ms.contentlocale: et-EE
-  ms.lasthandoff: 05/19/2022
-  ms.locfileid: "8781359"
+  ms.lasthandoff: 09/07/2022
+  ms.locfileid: "9411773"
 title: Dynamics 365 Customer Insightsi dokumentatsioon
 summary: Saate leida kasulikke ressursse, et alustada ning saada teavet Customer Insightsi funktsioonide ja võimaluste kohta.
 landingContent:
@@ -35,7 +35,7 @@ landingContent:
     links:
     - text: Prooviversiooni kasutajaks registreerumine
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Alustage prooviversioonist
+    - text: Alustage prooviversiooniga
       url: trial-signup.md
     - text: Customer Insightsiga alustamine
       url: get-started.md
@@ -55,7 +55,7 @@ landingContent:
       url: connect-dataverse-managed-lake.md
   - linkListType: learn
     links:
-    - text: Andmete sisestamine Customer Insightsi
+    - text: Andmete allaneelamine Customer Insightsi
       url: /learn/modules/ingest-data-customer-insights/
 - title: Andmete ühtlustamine
   linkLists:
@@ -65,7 +65,7 @@ landingContent:
       url: data-unification.md
     - text: Olemitest arusaamine
       url: entities.md
-    - text: Ühtsete profiilide ülevaatamine
+    - text: Ühendatud profiilide ülevaatamine
       url: customer-profiles.md
   - linkListType: learn
     links:
@@ -79,11 +79,11 @@ landingContent:
       url: enrichment-hub.md
     - text: Suhtluse konfigureerimine
       url: relationships.md
-    - text: Andmete täiendamine prognoosidega
-      url: predictions.md
+    - text: Andmete ennustamine
+      url: predictions-overview.md
   - linkListType: learn
     links:
-    - text: Andmete rikastamine ja prognoosimine
+    - text: Rikastage ja ennustage andmeid
       url: /learn/modules/enrich-data/
 - title: Tuginege oma andmetele
   linkLists:
@@ -93,7 +93,7 @@ landingContent:
       url: segments.md
     - text: Näitajate loomine
       url: measures.md
-    - text: Klienditegevuste määratlemine
+    - text: Määratlege kliendi tegevused
       url: activities.md
   - linkListType: learn
     links:

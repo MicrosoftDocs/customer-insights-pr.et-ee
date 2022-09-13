@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246426"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395951"
 ---
 # <a name="schedule-system-refresh"></a>Süsteemi värskendamise ajastamine
 
@@ -36,7 +36,7 @@ Ajastage kõigi allaneelatud [andmeallikate automaatsed värskendused](data-sour
 
 1. Värskendamisvalikuteks on **Iga nädal** (tavaline) ja **Iga päev**. Kui kavatsete värskendada iga nädal, valige vähemalt üks päev, mil tahate värskendada.
 
-1. Määrake **Ajavöönd** ja seejärel kasutage ripploendit **Aeg** oma värskendamise aja määramiseks. Kui tahate ajastada mitu värskendust ühel päeval, valige **Vali muu kellaaeg**.
+1. Määrake **Ajavöönd** ja seejärel kasutage ripploendit **Aeg** oma värskendamise aja määramiseks. Kui tahate ajastada mitu värskendust ühel päeval, valige **Vali muu kellaaeg**. Saate lisada kuni neli värskendust.
 
 1. Vajutage nuppu **Salvesta**, et muudatused rakendada.
 

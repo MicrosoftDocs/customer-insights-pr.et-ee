@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083097"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411826"
 ---
 # <a name="predictions-overview"></a>Prognooside ülevaade
 
@@ -29,7 +29,7 @@ Lihtsaim viis andmete prognoosimisega alustamiseks on eelnevalt määratletud mu
 - [Tootesoovitus](predict-product-recommendation.md): soovitab prognoositava tootesoovituste komplekte, mis põhinevad ostukäitumisel ja sarnaste ostuharjumustega klientidel.
 - [Kordustellimuste valim](predict-subscription-churn.md): prognoosib, kas kliendi puhul valitseb oht, et ta ei kasuta enam teie ettevõtte kordustellimuse tooteid või teenuseid.
 - [Tehingute valim](predict-transactional-churn.md): prognoosib, kas klient ei osta enam teie tooteid või teenuseid teatud aja jooksul.
-- [Sentimenti analüüs](sentiment-analysis.md): analüüsige klientide tagasiside tundeid ja tuvastage sageli mainitud äriaspektid.
+- [Sentimentanalüüs](sentiment-analysis.md): analüüsige klientide tagasiside meeleolu ja tuvastage sageli mainitud äriaspektid.
 
 # <a name="business-accounts-b-to-b"></a>[Ettevõtte kontod (B-st B-ni)](#tab/b2b)
 
@@ -38,15 +38,12 @@ Lihtsaim viis andmete prognoosimisega alustamiseks on eelnevalt määratletud mu
 ---
 
 > [!TIP]
-> Soovitame teil regulaarselt värskendada kastiväliseid mudeleid värskendatud andmetega, et tagada nende täpne teavitamine teie ettevõtte kasutusjuhtumist. Andmeid värskendatakse ad hoc kujul, kui süsteem neelab uusi või värskendatud andmeallikaid. Kuid mudelid muutuvad sel juhul ainult uuesti ja jätkavad olemasolevate koolitusandmete kasutamist.
-> 
-> Värskendamisgraafiku **saate** konfigureerida, määrates konfiguratsioonikogemuses mudeli ümberõppe ajakava. Mudel treenib ja korrigeerib seda ajakava, mida saate igal ajal muuta.
-
+> Soovitame teil regulaarselt värskendada valmis mudeleid värskendatud andmetega, et tagada nende täpne teavitamine teie ärikasutuse juhtumist. Andmeid värskendatakse ad hoc, kui süsteem kasutab uusi või värskendatud andmeallikaid. Kuid mudelid korrigeerivad ainult sel juhul ja jätkavad olemasolevate treeningandmete kasutamist.
+>
+> Saate konfigureerida **värskenduste ajakava**, määrates konfiguratsioonikogemuses mudeli ümberõppe ajakava. Mudel treenib ja korrigeerib seda ajakava, mida saate igal ajal muuta.
 
 ## <a name="azure-machine-learning-integration"></a>Azure’i masinõppe integratsioon
 
 Kui organisatsioon juba kasutab Azure masinõppe eksperimentidel põhinevaid Masinõpe stsenaariume, aitab Customer Insights kohandatud mudelite funktsiooni punkte ühendada. Saate luua töövooge, mis aitavad teil valida andmeid, millest soovite ülevaateid luua ja vastendada tulemused oma ühtsete kliendiprofiilidega. Lisateavet vt teemast [Kohandatud masinõppemudelid](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>AI Builder prognoos
-
-Mõnikord on andmekogumid poolikud ja mõned väärtused puuduvad. Customer Insights aitab prognoosida kliendi olemi ja segmentide puuduvaid väärtusi. Lisateavet vt teemast [Osaliste andmete prognooside täiustamine](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

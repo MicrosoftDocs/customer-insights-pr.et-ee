@@ -1,7 +1,7 @@
 ---
 title: Kliendi, konto või kontakti ühendamise sätete värskendamine
 description: Värskendage kliendi või konto ühendamise sätete duplikaatreegleid, vastendusreegleid või ühtseid välju.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304330"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392466"
 ---
 # <a name="update-unification-settings"></a>Ühendamissätete värskendamine
 
@@ -38,7 +38,7 @@ ms.locfileid: "9304330"
    > Paan **Sobitamistingimused** kuvatakse ainult siis, kui on valitud mitu olemit.
 
 1. Valige, mida soovite värskendada.
-   - [Lähteväljad](#edit-source-fields) olemite või atribuutide lisamiseks või atribuuditüüpide muutmiseks.
+   - [Lähteväljad](#edit-source-fields) atribuutide või olemite lisamiseks või atribuuditüüpide muutmiseks. Atribuudi eemaldamise kohta leiate teavet teemast [Ühtse välja](#remove-a-unified-field) eemaldamine. Olemi eemaldamise kohta leiate teavet teemast [Ühtse olemi](#remove-a-unified-entity) eemaldamine.
    - [Dubleerige kirjeid](#manage-deduplication-rules), et hallata duplikatsioonireegleid või ühendamiseelistusi.
    - [Vastendamistingimused](#manage-match-rules) vastendusreeglite värskendamiseks kahes või enamas olemis.
    - [Ühendatud kliendiväljad väljade](#manage-unified-fields) ühendamiseks või välistamiseks. Samuti saate seotud profiile rühmitada klastritesse.
@@ -53,8 +53,6 @@ ms.locfileid: "9304330"
 
 ## <a name="edit-source-fields"></a>Allikaväljade redigeerimine
 
-Atribuuti või olemit ei saa eemaldada, kui need on juba ühendatud.
-
 1. Valige **paanil Allikaväljad** käsk **Redigeeri**.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Kuvatõmmis lehest Lähteväljad, kus on näha primaarvõtmete arv, vastendatud ja kaardistamata väljad":::
@@ -66,6 +64,80 @@ Atribuuti või olemit ei saa eemaldada, kui need on juba ühendatud.
 1. Soovi korral saate muuta olemi primaarvõtit, atribuuditüüpe ja lülitada **intelligentse vastenduse** sisse või välja. Lisateavet leiate teemast [Allikaväljade](map-entities.md) valimine.
 
 1. Dubleerimisreeglite muutmiseks valige **Edasi või valige** Salvesta ja sule **ning naaske jaotisse** Värskenda [ühendamissätted](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Ühtse välja eemaldamine
+
+Ühendatud välja eemaldamiseks tuleb väli eemaldada kõigist sõltuvustest (nt segmendid, mõõdud, rikastamised või seosed).
+
+1. Kui kõik välja sõltuvused on eemaldatud, avage **Data** > **Unify**.
+
+1. Valige **paanil Ühendatud kliendiväljad** käsk **Redigeeri**.
+
+1. Valige välja kõik esinemiskorrad ja seejärel valige **Välista**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Kuvatõmmis ühendatud väljade lehest, kus on kuvatud valitud väljad ja nupp Välista":::
+
+1. Kinnitamiseks valige **Valmis** ja seejärel valige **Salvesta ja sule**.
+
+   > [!TIP]
+   > Kui näete teadet "Ei õnnestunud ühendada. Määratud ressurssi ei saa muuta ega kustutada allavoolu sõltuvuste tõttu", siis kasutatakse välja endiselt järgnevas sõltuvuses.
+
+1. Kui välja kasutatakse duplikaatkirjete või vastendustingimuste reeglis, tehke järgmist. Vastasel juhul minge järgmisele sammule.
+   1. Valige **paanil Duplikaatkirjed** käsk **Redigeeri**.
+   1. Eemaldage väli kõigist reeglitest, milles seda kasutatakse (kui see on olemas) ja seejärel valige **Edasi**.
+   1. Eemaldage **lehel Tingimuste** sobitamine väli kõigist reeglitest, milles seda kasutatakse (kui see on olemas) ja seejärel valige **Salvesta ja sule**.
+   1. Valige **Ühenda** > **kliendiprofiilid ja sõltuvused**. Enne järgmise sammu juurde asumist oodake ühendamise lõpuleviimist.
+
+1. Valige **paanil Allikaväljad** käsk **Redigeeri**.
+
+1. Valige **Olemite ja väljade** valimine ning tühjendage välja iga esinemiskorra kõrval olev ruut.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Kuvatõmmis olemite ja väljade valimise dialoogiboksist, kus on näha tühjendatud märkeruudud":::
+
+1. Valige suvand **Rakenda**.
+
+1. Valige **Salvesta ja sule**.
+
+1. Valige **Ühenda** > **kliendiprofiilid ja sõltuvused**, et värskendada ühtset profiili.
+
+### <a name="remove-a-unified-entity"></a>Ühendatud olemi eemaldamine
+
+Ühendatud olemi eemaldamiseks tuleb olem eemaldada kõigist sõltuvustest, nagu segmendid, mõõdud, rikastamised või seosed.
+
+1. Kui kõik olemi sõltuvused on eemaldatud, avage **Jaotis Andmete** > **ühendamine**.
+
+1. Valige **paanil Ühendatud kliendiväljad** käsk **Redigeeri**.
+
+1. Valige olemi jaoks kõik väljad ja seejärel valige **Välista**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Kuvatõmmis ühendatud väljadest, kus on valitud kõik olemi väljad ja nupp Välista":::
+
+1. Kinnitamiseks valige **Valmis** ja seejärel valige **Salvesta ja sule**.
+
+   > [!TIP]
+   > Kui näete teadet "Ei õnnestunud ühendada. Määratud ressurssi ei saa muuta ega kustutada järgmise etapi sõltuvuste tõttu", siis kasutatakse üksust endiselt järgnevas sõltuvuses.
+
+1. Valige **paanil Duplikaatkirjed** käsk **Redigeeri**.
+
+1. Eemaldage olemist kõik reeglid (kui neid on) ja seejärel valige **Edasi**.
+
+1. **Valige lehel Vastavusse viimise tingimused** olem ja seejärel valige **Kustuta**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Kuvatõmmis tingimustest, kus olem on valitud ja nupp Kustuta":::
+
+1. Valige **Salvesta ja sule**.
+
+1. Valige **paanil Allikaväljad** käsk **Redigeeri**.
+
+1. Valige **Olemite ja väljade** valimine ning tühjendage olemi kõrval olev märkeruut.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Kuvatõmmis olemite ja väljade valimise dialoogiboksist, kus olemi märkeruut on tühjendatud":::
+
+1. Valige suvand **Rakenda**.
+
+1. Valige **Salvesta ja sule**.
+
+1. Valige **Ühenda** > **kliendiprofiilid ja sõltuvused**, et värskendada ühtset profiili.
 
 ## <a name="manage-deduplication-rules"></a>Dubleerimisreeglite haldamine
 

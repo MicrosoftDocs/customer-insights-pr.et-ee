@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246242"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395996"
 ---
 # <a name="view-system-configuration"></a>Vaadake süsteemi konfiguratsiooni
 
@@ -38,12 +38,6 @@ Vaadake reaalajas API kasutamise üksikasju ja vaadake, millised sündmused antu
    - **API-päringud** – diagramm, mis visualiseerib valitud aja jooksul API päringute koondarvu.
    - **Andmeedastus** – diagramm, mis kuvab valitud ajaraamistikul API kaudu edastatud andmete hulga.
    - **Toimingud** – tabel, kus on reaga iga saadaolev API-toiming ja teave toimingute kasutamise kohta. Valige toimingu nimi, et minna API viite [juurde](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Toimingud, mis kasutavad [reaalajas andmete allaneelamist](real-time-data-ingestion.md), sisaldavad binokulaarset sümbolit API reaalajas kasutamise vaatamiseks.
-
-   1. Valige binokkel, et avada **reaalajas API kasutamise** paan, mis sisaldab toimingu kasutusandmeid.
-   1. **Valige vaadatav ajavahemik**.
-   1. Kasutage kasti **Rühmitamine**, et valida, kuidas oma reaalajas suhtlust kõige paremini esitada. Rühmitage andmed API meetodi, olemi kvalifitseeritud nime **(allaneelatud olem),** loodud **(sündmuse allikas),** tulemuse **(edu või tõrge) või** tõrkekoodide **järgi.** **·** Andmed on saadaval ajaloodiagrammina ja tabelina.
 
 ## <a name="view-system-information"></a>Süsteemiteabe vaatamine
 

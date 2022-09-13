@@ -12,14 +12,14 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245782"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396041"
 ---
-# <a name="connect-to-data-in-azure-data-lake-storage"></a>Andmetega ühenduse loomine Azure Data Lake Storageis
+# <a name="connect-to-data-in-azure-data-lake-storage"></a>Andmetega ühenduse loomine Azure Data Lake Storage
 
 Kasutage andmeid Dynamics 365 Customer Insights oma Azure Data Lake Storage Gen2 konto kasutamiseks. Andmete allaneelamine võib olla täielik või järkjärguline.
 
@@ -39,6 +39,8 @@ Kasutage andmeid Dynamics 365 Customer Insights oma Azure Data Lake Storage Gen2
   - Salvestusruumi bloobiandmete luger
   - Salvestusruumi bloobiandmete omanik
   - Salvestusruumi bloobiandmete kaasautor
+
+- Kasutaja, kes seadistab andmeallikas ühenduse, vajab salvestusruumikontol kõige vähem salvestusruumi bloobiandmete esitaja õigusi.
 
 - Andmesalvestusruumis olevad andmed peaksid järgima teie andmete salvestamiseks standardit Common Data Model ja neil peaks olema ühine andmemudeli manifest, mis esindab andmefailide skeemi (*.csv või *.parquet). Manifest peab sisaldama olemite üksikasju, nagu olemiveerud ja andmetüübid ning andmefaili asukoht ja failitüüp. Lisateavet leiate teemast [Manifest Common Data Model](/common-data-model/sdk/manifest). Kui manifesti pole, saavad salvestusruumi bloobi andmete omaniku või salvestusruumi bloobi andmete esitaja juurdepääsuga administraatorikasutajad andmete allaneelamisel skeemi määratleda.
 
@@ -62,7 +64,7 @@ Kasutage andmeid Dynamics 365 Customer Insights oma Azure Data Lake Storage Gen2
    > [!NOTE]
    > Andmeallikas loomiseks vajate konteinerile või salvestusruumikontole ühte järgmistest rollidest.
    >
-   >  - Salvestusruumi bloobi andmelugeja on piisav, et lugeda salvestusruumikontolt ja neelata andmed Customer Insightsi. 
+   >  - Salvestusruumi bloobi andmelugeja on piisav, et lugeda salvestusruumikontolt ja neelata andmed Customer Insightsi.
    >  - Salvestusruumi bloobiandmete kaasautor või omanik on nõutav, kui soovite manifestifaile redigeerida otse Customer Insightsis.  
   
 1. Valige selle konteineri **nimi**, mis sisaldab andmeid ja skeemi (fail model.json või manifest.json), millest andmeid importida, ja valige **Edasi**.
