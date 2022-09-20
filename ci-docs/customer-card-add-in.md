@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194918"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473637"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dynamics 365 rakenduste kliendikaardi lisandmoodul (eelvaade)
 
@@ -32,11 +32,12 @@ Saate oma klientide kohta täieliku ülevaate otse Dynamics 365 rakendustes. Kui
 - Dynamics 365-i andmete vastendamiseks Customer Insightsi [kliendiprofiilidega soovitame need alla neelata Dynamics 365 rakendusest konnektori Microsoft Dataverse abil](connect-power-query.md). Kui kasutate Dynamics 365-i kontaktide (või kontode) allaneelamiseks mõnda muud meetodit, veenduge, `contactid` et väli (või`accountid`) oleks andmete ühendamise protsessi ajal määratud selle andmeallikas [primaarvõtmeks](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Andmete nägemiseks tuleb [kõik Dynamics 365-i kliendikaardi lisandmooduli kasutajad lisada Customer Insightsi kasutajatena](permissions.md).
 - [Konfigureeritud otsingu-ja filtreerimise võimalused](search-filter-index.md) rakenduses Customer Insights.
-- Iga lisandmooduli juhtelement tugineb Customer Insightsi konkreetsetele andmetele. Teatud andmed ja juhtelemendid on saadaval ainult mingit kindlat tüüpi keskkondades. Lisandmooduli konfiguratsioon teavitab teid, kui juhtelement pole valitud keskkonnatüübi tõttu saadaval. Lisateave [keskkondade kasutamise kohta](work-with-business-accounts.md).
+- Teatud andmed ja juhtelemendid on saadaval ainult mingit kindlat tüüpi keskkondades. Lisandmooduli konfiguratsioon teavitab teid, kui juhtelement pole valitud keskkonnatüübi tõttu saadaval. See viga kuvatakse selle renderdamisel kontrolli all. Lisateave [keskkondade kasutamise kohta](work-with-business-accounts.md).
+- Iga lisandmooduli juhtelement tugineb Customer Insightsi konkreetsetele andmetele.
   - **Mõõtude juhtimine** nõuab [konfigureeritud kliendiatribuutide mõõtusid](measures.md).
   - **Teabeturbe juhtimiseks** on vaja andmeid, mis on loodud prognooside või kohandatud mudelite [abil](predictions-overview.md).
   - **Kliendiandmete juhtelement** kuvab kõik ühtses kliendiprofiilis saadaoleva profiili väljad.
-  - **Rikastamise juhtimine** nõuab kliendiprofiilidele rakendatud aktiivset [rikastamist](enrichment-hub.md). Kaardi lisandmoodul toetab neid rikastamisi: [Microsofti pakutavad kaubamärgid](enrichment-microsoft.md), [Microsofti pakutavad](enrichment-microsoft.md) huvid ja [Microsofti pakutavad Office'i kaasamisandmed](enrichment-office.md).
+  - **Rikastamise juhtimine** nõuab kliendiprofiilidele rakendatud aktiivset [rikastamist](enrichment-hub.md). Kaardi lisandmoodul toetab neid rikastamisi: [Microsofti pakutavad kaubamärgid](enrichment-microsoft.md), [Microsofti pakutavad](enrichment-microsoft.md) huvid ja [Microsofti pakutavad Office’i kaasamisandmed](enrichment-office.md).
   - **Kontaktide juhtelement** nõuab kontakti semantilise olemi tüüpi.
   - **Ajaskaala juhtimine** nõuab [konfigureeritud tegevusi](activities.md).
 

@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
-ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
-ms.translationtype: HT
+ms.openlocfilehash: c3863b1a72fd92ddc87755699feda11371ec9214
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9411735"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463214"
 ---
 # <a name="service-limits-in-customer-insights"></a>Teenuse limiidid Customer Insightsis
 
@@ -25,6 +25,7 @@ ms.locfileid: "9411735"
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmendid, mõõdud ja ennustused | 300  | Segmentide, [mõõtmiste](segments.md)[ja](measures.md) [prognooside](predictions-overview.md) koguarv ei tohi ületada 300.  |
 | Suhtlused | 20 sügavustaset olemitee seoste puhul. | Luues [segmente](segments.md) või [mõõte](measures.md) kasutades meisterdamisliidest, võib olemiteedel olla kuni 20 seosehüpet alguse- ja lõpuolemi vahel.  |
+|Andmete valmendamine| Andmeallikate samaaegsed Power Query hindamised on piiratud. | Customer Insightsil on samad [värskenduspiirangud nagu andmevoogudel PowerBI.com](/power-query/power-query-online-limits#refresh-limits). |
 
 ## <a name="fair-scheduling-of-jobs"></a>Tööde õiglane ajastamine
 

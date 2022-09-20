@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304054"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460185"
 ---
 # <a name="exports-preview-overview"></a>Eksportimine (eelversioon) ülevaade
 
@@ -81,6 +81,11 @@ Valige eksport saadaolevate toimingute vaatamiseks.
 ## <a name="schedule-and-run-exports"></a>Ajasta ja käivita ekspordid
 
 Igal konfigureeritud ekspordil on värskendusgraafik. Värskendamise ajal otsib süsteem uusi või värskendatud andmeid, mida eksporti kaasata. Vaikimisi käitatakse eksport iga [kavandatud süsteemivärskenduse](schedule-refresh.md) osana. Saate värskendamise ajakava kohandada või selle käsitsi eksportimise käivitamiseks välja lülitada.
+
+> [!TIP]
+> Minimeerige segmendi ekspordi töötlemisaega järgmiste heade tavade abil.
+> - Jaotage segmendiüksused mutiple-ekspordi vahel.
+> - Vältige kõigi ekspordite üheaegset ajastamist. Jätke iga ekspordi kavandatud aja vahele 30 minutit või üks tund.
 
 Ekspordigraafikud sõltuvad teie keskkonna olekust. Kui värskendused on pooleli [sõltuvused](system.md#refresh-processes), kui määratud eksport peaks algama, viib süsteem värskendused esmalt lõpule ja käivitab seejärel ekspordi. Veerg **Värskendatud** näitab, millal eksporti viimati värskendati.
 

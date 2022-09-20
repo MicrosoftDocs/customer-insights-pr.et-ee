@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207040"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463260"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Andmeallikas ühenduse loomine Power Query
 
@@ -63,7 +63,9 @@ Konnektoritel Power Query põhinevate andmeallikate lisamisel järgitakse tavali
 Andmete laadimine võib võtta aega. Pärast edukat värskendamist saab allaneelatud andmeid vaadata lehelt [**Olemid**](entities.md).
 
 > [!CAUTION]
-> Andmeallikas, mis põhineb Power Query, loob [andmevoo rakenduses Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ärge muutke Customer Insightsis Power Platform kasutatava halduskeskuse andmevoo nime. Andmevoo ümbernimetamine põhjustab probleeme viidetega Customer Insightsi andmeallikas ja Dataverse andmevoo vahel.
+>
+> - Andmeallikas, mis põhineb Power Query, loob [andmevoo rakenduses Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ärge muutke Customer Insightsis Power Platform kasutatava halduskeskuse andmevoo nime. Andmevoo ümbernimetamine põhjustab probleeme viidetega Customer Insightsi andmeallikas ja Dataverse andmevoo vahel.
+> - Customer Insightsi andmeallikate samaaegsetel Power Query hindamistel on samad [värskendamislimiidid nagu andmevoogudel PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Kui andmete värskendamine nurjub, kuna see jõudis hindamislimiidini, soovitame kohandada iga andmevoo värskendamise ajakava, et tagada, et andmeallikaid ei töödeldaks samal ajal.
 
 ### <a name="available-power-query-data-sources"></a>Olemasolevad Power Query andmeallikad
 
@@ -75,14 +77,14 @@ Konnektorid, mille veerus **Customer Insights (Andmevood)** on linnuke, on saada
 
 Asutusesisene andmeallikatest pärinevate andmete allaneelamist toetatakse andmevoogude (PPDF) põhjal Microsoft Power Platform. Saate lubada andmevood Customer Insightsis, sisestades [keskkonna seadistamisel Microsoft Dataverse keskkonna URL-i](create-environment.md).
 
-Andmeallikad, mis luuakse pärast keskkonna seostamist Dataverse Customer Insightsiga, kasutavad [Power Platform vaikimisi andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Saate eemaldada ja taasluua andmeallikad, mis olid olemas enne keskkonna seostamist Dataverse [, kasutades asutusesisene andmelüüsi.](/data-integration/gateway/service-gateway-app)
+Andmeallikad, mis luuakse pärast keskkonna seostamist Dataverse Customer Insightsiga, kasutavad [Power Platform vaikimisi andmevooge](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Andmevood toetavad kohapealset ühenduvust andmelüüside abil. Saate eemaldada ja taasluua andmeallikad, mis olid olemas enne keskkonna seostamist Dataverse [, kasutades asutusesisene andmelüüsi](/data-integration/gateway/service-gateway-app).
 
-Olemasoleva Power BI või Power Apps keskkonna andmelüüsid on nähtavad ja saate neid Customer Insightsis uuesti kasutada. Andmeallikate lehel kuvatakse lingid, et minna Microsoft Power Platform keskkonda, kus saate vaadata ja konfigureerida asutusesiseseid andmevõrke.
+Olemasoleva Power BI või Power Apps keskkonna andmelüüsid on nähtavad ja saate neid Customer Insightsis uuesti kasutada, kui andmelüüs ja Customer Insightsi keskkond asuvad samas Azure’i piirkonnas. Andmeallikate lehel kuvatakse lingid, et minna Microsoft Power Platform keskkonda, kus saate vaadata ja konfigureerida asutusesiseseid andmevõrke.
 
 > [!IMPORTANT]
 > Veenduge, et teie lüüsid oleksid värskendatud uusimale versioonile. Saate installida värskenduse ja konfigureerida lüüsi ümber otse lüüsi ekraanil kuvatavast viibast või [laadida alla uusima versiooni](https://powerapps.microsoft.com/downloads/). Kui te ei kasuta uusimat lüüsiversiooni, nurjub andmevoo värskendamine tõrketeadetega, nagu **märksõna ei toetata: konfiguratsiooniatribuudid. Parameetri nimi: märksõna**.
 >
-> Customer Insightsi asutusesisene andmelüüsidega seotud tõrked on sageli põhjustatud konfiguratsiooniprobleemidest. Lisateavet andmelüüside tõrkeotsingu kohta leiate teemast [andmelüüsi tõrkeotsing asutusesisene](/data-integration/gateway/service-gateway-tshoot).
+> Customer Insightsi asutusesisene andmelüüsidega seotud tõrked on sageli põhjustatud konfiguratsiooniprobleemidest. Lisateavet andmelüüside tõrkeotsingu kohta leiate teemast [andmelüüsi](/data-integration/gateway/service-gateway-tshoot) tõrkeotsing asutusesisene.
 
 ## <a name="edit-power-query-data-sources"></a>Andmeallikate redigeerimine Power Query
 
