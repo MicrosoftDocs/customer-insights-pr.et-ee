@@ -7,21 +7,21 @@
 - name: Õppekataloog
   items:
     - name: Sertimine Microsofti kliendiandmete platvormi spetsialistina
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Customer Insightsiga alustamine
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: Andmete valmendamine
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: Kliendi koondprofiili loomine
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Customer Insightsiga töötamine
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: Rikastage andmeid ja tehke prognoose
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: Väliste ühenduste haldamine
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Customer Insightsi haldamine
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: Tasuta prooviversioon
   items:
     - name: Tasuta prooviversiooni kasutajaks registreerumine
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: Veebiandmete kasutamine isikupärastamiseks
       href: unknown-to-known.md
+    - name: Tundmatute kliendiprofiilide haldamine
+      href: manage-unknown-profiles.md
 - name: Segmendid
   items:
     - name: Segmentide ülevaade
