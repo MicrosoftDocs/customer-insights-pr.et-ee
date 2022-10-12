@@ -1,156 +1,141 @@
 ---
-title: Tellimus prognoos (sisaldab videot)
+title: Ennusta tellimust (sisaldab videot)
 description: Saate prognoosida, kas on oht, et klient ei kasuta enam teie ettevõtte kordustellimuse tooteid või teenuseid.
-ms.date: 08/19/2020
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7464707864c418bfcc625ddfd245622131434b33
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9171044"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610231"
 ---
-# <a name="subscription-churn-prediction"></a>Tellimise voolavuse prognoos
+# <a name="predict-subscription-churn"></a>Kordustellimuste voolavuse prognoosimine
 
-Kordustellimuse voolavuse prognoos aitab prognoosida, kas on oht, et klient ei kasuta enam teie ettevõtte kordustellimuse tooteid või teenuseid. Saate luua uue kordustellimuse voolavuse prognoosi lehel **Ärianalüüs** > **Prognoosid**. Muude loodud prognooside kuvamiseks valige **Minu prognoosid**.
+Saate prognoosida, kas on oht, et klient ei kasuta enam teie ettevõtte kordustellimuse tooteid või teenuseid. Tellimuse andmed sisaldavad aktiivseid ja passiivseid tellimusi iga kliendi kohta, nii et kliendi ID kohta on mitu kirjet.
+
+Teil peavad olema äriteadmised, et mõista, mida churn teie ettevõtte jaoks tähendab. Toetame ajapõhiseid tünnide definitsioone, mis tähendab, et klient loetakse pärast tellimuse lõppemist teatud aja jooksul kokku kukkunuks.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
-> Proovige järgmist näidisandmetega tellimusevoolavuse prognoosi õppetükki: [Tellimusevoolavuse prognoosi näidisjuhend](sample-guide-predict-subscription-churn.md).
+> Proovige tellimustöid prognoos näidisandmete abil: [tellimuse churn prognoos näidisjuhend](sample-guide-predict-subscription-churn.md).
 
-## <a name="prerequisites"></a>Eeltingimused
+## <a name="prerequisites"></a>eeltingimused
 
 - Vähemalt [kaasautori õigused](permissions.md).
-- Äriteadmised voolavuse tähendusest teie ettevõttes. Toetame ajapõhiseid voolavuse määratlusi, mis tähendab, et kliendivoolavus on toimunud teatud aja jooksul pärast kordustellimuse lõppu.
-- Andmed teie kordustellimuste ja nende ajaloo kohta.
-    - Kordustellimuse identifikaatorid nende eristamiseks.
-    - Kliendi identifikaatorid, mis vastavad teie klientide kordustellimustele.
-    - Kordustellimuse sündmuse kuupäevad, mis määratlevad algus- ja lõppkuupäevad ning kordustellimuse sündmuste toimumise kuupäevi.
-    - Kordustellimuse teave, mis määratleb, kas see kordustellimus on korduv ja kui tihti seda uuendatakse.
-    - Kordustellimuste semantiline andmete skeem nõuab järgmist teavet.
-        - **Kordustellimuse ID:** kordustellimuse ainuidentifikaator.
-        - **Kordustellimuse lõppkuupäev:** kuupäev, mil kliendi kordustellimus aegub.
-        - **Kordustellimuse alguskuupäev:** kuupäev, mil kliendi kordustellimus algab.
-        - **Kande kuupäev:** kordustellimuse vahetuse toimumise kuupäev. Näiteks klient ostab või tühistab kordustellimuse.
-        - **Kas see kordustellimus on korduv:** loogiline väli tõene/väär, mis määratleb, kas kordustellimus pikeneb sama kordustellimuse ID-ga ilma kliendi sekkumiseta
-        - **Korduvuse vahemik (kuudes):** korduvate kordustellimuste puhul on see kordustellimuse pikendamise periood. See on väljendatud kuudes. Näiteks aastane kordustellimus, mis uueneb kliendi jaoks automaatselt igal aastal, selle väärtuseks on 12.
-        - (Valikuline) **Kordustellimuse summa:** summa valuutas, millega klient kordustellimuse uuendamisel maksab. See võib aidata tuvastada erinevate kordustellimuste tasemete mustreid.
-- Kliendi tegevuste andmed.
-    - Tegevuse identifikaatorid, mis eristavad sama tüüpi tegevusi.
-    - Kliendi identifikaatorid, mis vastendavad teie klientide tegevusi.
-    - Tegevuse teave, mis sisaldab tegevuse nime ja kuupäeva.
-    - Kliendi tegevuste semantiline andmete skeem sisaldab järgmist.
-        - **Primaarvõti:** tegevuse ainuidentifikaator. Näiteks veebisaidi külastus või kasutuse kirje, mis näitab, et klient vaatas teleseriaali osa.
-        - **Ajatempel:** primaarvõtmega tuvastatud sündmuse kuupäev ja kellaaeg.
-        - **Sündmus:** sündmuse nimi, mida soovite kasutada. Näiteks nimega „UserAction” video voogesituse teenuse väljal võiks olla väärtus „Vaadatud”.
-        - **Üksikasjad:** sündmuse üksikasjalik teave. Näiteks nimega „ShowTitle” video voogesituse teenuse väljal võiks olla kliendi vaadatud video väärtus.
-- Soovitatavad andmete omadused:
-    - Piisavad ajaloolised andmed: Tellimuse andmed vähemalt kahekordistatud valitud ajaaknas. Eelistatavalt kahe kuni kolme aasta tellimisandmed.
-    - Tellimuse olek: andmed sisaldavad iga kliendi jaoks aktiivseid ja mitteaktiivseid tellimusi, nii et kliendi ID kohta on mitu kirjet.
-    - Klientide arv: Vähemalt 10 kliendiprofiili, eelistatuult rohkem kui 1000 erinevat klienti. Mudel nurjub, kui kliente on vähem kui 10 ja puuduvad varasemad andmed.
-    - Andmete täielikkus: esitatud olemi andmeväljal on puuduvaid väärtuseid vähem kui 20%.
-   
-   > [!NOTE]
-   > Teil on vaja vähemalt kahte tegevuse kirjet 50%-le klientidest, kelle voolavust soovite välja arvutada.
+- Vähemalt 10 kliendiprofiili, eelistatavalt rohkem kui 1,000 unikaalset klienti.
+- Kliendiidentifikaator – kordumatu identifikaator tellimuste vastavusse viimiseks teie klientidega.
+- Tellimuse andmed vähemalt kahekordse valitud ajaakna kohta. Eelistatavalt kahe kuni kolme aasta tellimisandmed. Tellimuse ajalugu peab sisaldama järgmist.
+  - **Tellimuse ID:** tellimuse kordumatu identifikaator.
+  - **Tellimuse lõppkuupäev:** kuupäev, mil tellimus kliendi jaoks aegub.
+  - **Tellimuse alguskuupäev:** kuupäev, mil tellimus kliendi jaoks algab.
+  - **Kande kuupäev:** tellimuse muutmise kuupäev. Näiteks klient ostab või tühistab kordustellimuse.
+  - **Kas tegemist on korduva tellimusega:** kahendjärjestuse tõene/vale väli, mis määrab, kas tellimust uuendatakse sama tellimuse ID-ga ilma kliendi sekkumiseta.
+  - **Korduste sagedus (kuudes):** korduvate tellimuste puhul kuu, mil tellimust uuendatakse. Näiteks aastane kordustellimus, mis uueneb kliendi jaoks automaatselt igal aastal, selle väärtuseks on 12.
+  - **Tellimuse summa**: valuuta summa, mille klient maksab tellimuse uuendamise eest. See võib aidata tuvastada erinevate kordustellimuste tasemete mustreid.
+- Vähemalt kaks tegevuskirjet 50% klientide kohta, kelle kohta soovite arvutada. Kliendi tegevused peavad hõlmama järgmist:
+  - **Primaarvõti:** tegevuse kordumatu identifikaator. Näiteks veebisaidi külastus või kasutuse kirje, mis näitab, et klient vaatas teleseriaali osa.
+  - **Ajatempel:** primaarvõtmega tuvastatud sündmuse kuupäev ja kellaaeg.
+  - **Sündmus:** sündmuse nimi, mida soovite kasutada. Näiteks nimega „UserAction” video voogesituse teenuse väljal võiks olla väärtus „Vaadatud”.
+  - **Üksikasjad:** sündmuse üksikasjalik teave. Näiteks nimega „ShowTitle” video voogesituse teenuse väljal võiks olla kliendi vaadatud video väärtus.
+- Esitatud olemi andmeväljal puuduvad väärtused vähem kui 20%.
 
 ## <a name="create-a-subscription-churn-prediction"></a>Kordustellimuse voolavuse prognoosi loomine
 
+Valige **Salvesta mustand** igal ajal, et salvestada prognoos mustandina. Mustand prognoos kuvatakse vahekaardil **Minu ennustused**.
+
 1. Minge **luureprognooside** > **juurde**.
-1. Valige **paan Subscription churn model** ja valige **Kasuta seda mudelit**.
-   > [!div class="mx-imgBorder"]
-   > ![Kordustellimuse voolavuse mudeli paan nupuga Kasuta seda mudelit.](media/subscription-churn-usethismodel.PNG "Kordustellimuse voolavuse mudeli paan nupuga Kasuta seda mudelit")
 
-### <a name="name-model"></a>Mudelile nime panemine
+1. **Valige vahekaardil** Loo **paanil Kliendituuma mudel** **suvand Kasuta mudelit**.
 
-1. Sisestage mudelile nimi, et eristada seda teistest mudelitest.
-1. Sisestage väljundolemi nimi, kasutades ainult tähti ja numbreid, ilma tühikuteta. Seda nime kasutab mudeli olem. Seejärel valige suvand **Edasi**.
+1. Valige **tükitüübi jaoks Tellimus** ja seejärel **Alustage**.
 
-### <a name="define-customer-churn"></a>Määratlege kliendivoolavus
+1. **Nimeta see mudel** ja **Väljundi olemi nimi**, et neid muudest mudelitest või olemitest eristada.
 
-1. Sisestage arv **Päevi möödunud kordustellimuse lõppemisest**, mida teie ettevõte peab olekuks, mil kliendivoolavus on toimunud. Tavaliselt on see periood seotud äritegevustega, nagu pakkumised või muud turundusega seotud pingutused, mis püüavad ära hoida kliendi kaotsiminekut.
-1. Sisestage **päevade arv tulevikus, mille põhjal voolavust prognoosida**, et määrata aken voolavuse prognoosiks. Näiteks selleks, et ennustada järgmise 90 päeva klientide voolavuse riski oma säilitusturunduse jõupingutuste vastavusse viimiseks. Pöördumisriski ennustamine pikemaks või lühemaks perioodiks võib muuta pöördumisriski profiili tegurite käsitlemise keerulisemaks, sõltuvalt teie konkreetsetest ärinõuetest. Jätkamiseks valige **Edasi**
-   >[!TIP]
-   > Saate valida käsu **Salvesta mustand** igal ajal, et salvestada prognoos mustandina. Prognoosi mustandi leiate vahekaardilt **Minu prognoosid** selle jätkamiseks.
-
-### <a name="add-required-data"></a>Lisa nõutud andmed
-
-1. Valige suvandis **Kordustellimuse ajalugu** **Lisa andmed** ja valige olem, mis pakub kordustellimuse ajaloo teavet, nagu on kirjeldatud [eeltingimustes](#prerequisites).
-1. Kui allolevad väljad pole asustatud, konfigureerige kliendiolemile seos oma kordustellimuse ajaloo olemist.
-    1. Valige **Kordustellimuse ajaloo olem**.
-    1. Valige **Väli**, mis tuvastab kliendi kordustellimuse ajaloo olemis. See peab olema seostatud teie kliendiolemi esmase kliendi ID-ga.
-    1. Valige **Kliendi olem**, mis vastab teie peamisele kliendiolemile.
-    1. Tippige seost kirjeldav nimi.
-       > [!div class="mx-imgBorder"]
-       > ![Tellimuse ajaloo leht, mis kuvab seose loomist kliendile.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Kordustellimuse ajaloo leht, mis kuvab seose loomist kliendile")
-1. Tehke valik **Edasi**.
-1. Vastendage semantilised väljad oma kordustellimuse ajalugoo olemi atribuutidega ja valige **Salvesta**. Väljade kirjelduste kohta vaadake teavet [eeltingimustes](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Tellimuse ajaloo leht kuvab semantilisi atribuute, mis on kaardistatud valitud tellimuste ajaloo üksuste väljadele.](media/subscription-churn-subscriptionhistorymapping.PNG "Kordustellimuse ajaloo leht kuvab semantilisi atribuute, mis on vastendatud valitud kordustellimuse ajaloo olemi väljadega")
-1. Valige suvandis **Kliendi tegevused** **Lisa andmed** ja valige olem, mis pakub kliendi tegevuse teavet, nagu on kirjeldatud eeltingimustes.
-1. Valige tegevuse tüüp, mis vastab konfigureeritavale kliendi tegevuse tüübile.  Valige **Loo uus** ja sisestage nimi, kui teile ei kuvata soovitud tegevuse tüübiga sobivat suvandit.
-1. Peate konfigureerima kliendiolemile seose kliendi tegevuse olemist.
-    1. Valige väli, mis tuvastab kliendi selles kliendi tegevuse tabelis, mis võib olla otseselt seotud teie kliendiolemi esmase kliendi ID-ga.
-    1. Valige kliendi olem, mis vastab teie peamisele kliendi olemile
-    1. Tippige seost kirjeldav nimi.
-1. Tehke valik **Edasi**.
-1. Vastendage semantilised väljad oma kliendi tegevuse olemi atribuutidega ja valige **Salvesta**. Väljade kirjelduste kohta vaadake teavet [eeltingimustes](#prerequisites).
-1. (Valikuline) Kui soovite kaasata mõnda muud kliendi tegevust, korrake ülaltoodud juhiseid.
-   > [!div class="mx-imgBorder"]
-   > ![Olemi seose määratlemine.](media/subscription-churn-customeractivitiesmapping.PNG "Kliendi tegevuste leht kuvab semantilisi atribuute, mis on vastendatud valitud kliendi tegevuse olemi väljadega")
 1. Tehke valik **Edasi**.
 
-### <a name="set-schedule-and-review-configuration"></a>Ajakava seadistamine ja konfiguratsiooni ülevaatamine
+### <a name="define-customer-churn"></a>Määratlege kliendi teenusest loobumine
 
-1. Määrake oma mudeli ümberõppe sagedus. See säte on oluline prognooside täpsuse värskendamiseks, kuna Customer Insightsis kasutatakse uusi andmeid. Suur osa ettevõtteid saavad teha ümberõpet kord kuus ja saavutavad täpsed prognoosid.
+1. Sisestage arv **Päevi möödunud kordustellimuse lõppemisest**, mida teie ettevõte peab olekuks, mil kliendivoolavus on toimunud. See periood on tavaliselt seotud äritegevusega, nagu pakkumised või muud turundustegevused, mis püüavad vältida kliendi kaotamist.
+
+1. Sisestage päevade arv **, et uurida tulevikku, et ennustada trügimist**. Näiteks ennustage oma klientide voolavusriski järgmise 90 päeva jooksul, et kohandada oma klientide säilitamise jõupingutusi. Pöördumisriski ennustamine pikemaks või lühemaks perioodiks võib muuta pöördumisriski profiili tegurite käsitlemise keerulisemaks, sõltuvalt teie konkreetsetest ärinõuetest.
+
 1. Tehke valik **Edasi**.
-1. Konfiguratsiooni läbivaatamine. Saate naasta prognoosi mis tahes osasse, valides suvandi **Redigeeri** kuvatud väärtuse juures. Saate ka valida edenemise näidikust konfiguratsiooni etapi.
-1. Kui kõik väärtused on õigesti konfigureeritud, valige pognoosimisprotsessi alustamiseks suvand **Salvesta ja käivita**. Vahekaardil **Minu prognoosid** kuvatakse teie prognooside olekut. Selle protsessi lõpule viimiseks võib kuluda mitu tundi, olenevalt prognoosis kasutatud andmete hulgast.
 
-## <a name="review-a-prediction-status-and-results"></a>Prognoosi oleku ja tulemuste läbivaatamine
+### <a name="add-required-data"></a>Lisage nõutud andmed
 
-1. Avage jaotises **Ärianalüüs** > **Prognoosid** vahekaart **Minu prognoosid**.
-   > [!div class="mx-imgBorder"]
-   > ![Lehe Minu prognoosid vaade.](media/subscription-churn-mypredictions.PNG "Lehe Minu prognoosid vaade")
-1. Valige prognoos, mille soovite üle vaadata.
-   - **Prognoosi nimi:** selle prognoosi loomisel pandud nimi.
-   - **Prognoosi tüüp:** prognoosi jaoks kasutatav mudeli tüüp
-   - **Väljundolem:** olemi nimi, kuhu talletatakse prognoosi väljund. Selle nimega olemi leiate jaotisest **Andmed** > **Olemid**.    
-     Väljundolemis *Voolavuse tulemus* on prognoositud voolavuse tõenäosus ja *On voolavus* on binaarne märgis, mis põhineb *Voolavuse tulemusel* lävendiga 0,5. Vaikelävend ei pruugi teie stsenaariumi puhul töötada. [Looge uus segment](segments.md#create-a-segment) teie eelistatud lävendiga.
-   - **Prognoositud väli:** see väli on asustatud ainult teatud tüüpi prognooside puhul ja seda ei kasutata kordustellimuse voolavuse prognoosides.
-   - **Olek:** prognoosi käitamise praegune olek.
-        - **Järjekorras:** prognoos ootab praegu muude protsesside käitamist.
-        - **Värskendamine:** prognoos käitab praegu töötlemise etappi „skoor”, et saada tulemusi, mis voolavad väljundolemisse.
-        - **Nurjunud:** prognoos on nurjunud. Üksikasjade saamiseks valige **Logid**.
-        - **Õnnestus:** prognoos on õnnestunud. Valige prognoosi läbivaatamiseks **Vaade** vertikaalse kolmikpunkti juures
-   - **Redigeeritud:** prognoosi konfiguratsiooni muutmise kuupäev.
-   - **Viimati värskendatud:** kuupäev, mil prognoos värskendas tulemusi väljundolemis.
-1. Valige vertikaalne kolmikpunkt prognoosi kõrval, mille tulemusi soovite läbivaadata ja valige **Vaade**.
-   > [!div class="mx-imgBorder"]
-   > ![Suvandite vaade prognoosi vertikaalse kolmikpunkti menüüs, sh redigeerimine, värskendamine, vaade, logid ja kustutamine.](media/subscription-churn-verticalellipses.PNG "Suvandite vaade prognoosi vertikaalse kolmikpunkti menüüs, sh redigeerimine, värskendamine, vaadet, logid ja kustutamine")
-1. Tulemuste lehel on kolm peamist andmete jaotist.
-    1. **Koolituse mudeli jõudlus:** võimalikud punktisummad on A, B või C. See skoor näitab prognoosi jõudlust ja aitab teil otsustada, kas kasutada väljundolemis talletatud tulemusi.
-        - Skoorid määratletakse järgmiste reeglite alusel.
-            - **A**, kui mudel ennustas täpselt vähemalt 50% kõikidest prognoosidest ja kui prognooside täpsuse protsent kliendivoolavuse jaoks on ajaloolisest voolavuse määrast vähemalt 10% võrra suurem.
-            - **B**, kui mudel ennustas täpselt vähemalt 50% kõikidest prognoosidest ja kui prognooside täpsuse protsent kliendivoolavuse jaoks on ajaloolisest voolavuse määrast kuni 10% võrra suurem.
-            - **C**, kui mudel ennustas täpselt vähem kui 50% kõikidest prognoosidest või kui prognooside täpsuse protsent kliendivoolavuse jaoks on väiksem kui ajalooline voolavuse määr.
-               > [!div class="mx-imgBorder"]
-               > ![Mudeli jõudluse tulemi vaade.](media/subscription-churn-modelperformance.PNG "Mudeli jõudluse tulemi vaade")
-    1. **Voolavuse tõenäosus (klientide arv):** kliendirühmad nende prognoositud voolavuse riski põhjal. Need andmed aitavad teil hiljem soovi korral luua kõrge voolavuse riskiga klientide segmendi. Sellised segmendid aitavad mõista, kus segmendi liikmelisuse sulgemiskuupäev peaks olema.
-       > [!div class="mx-imgBorder"]
-       > ![Graafik, mis kuvab voolavuse tulemuste jaotust, jagatuna vahemikeks 0–100% vahel.](media/subscription-churn-resultdistribution.PNG "Graafik, mis kuvab voolavuse tulemuste jaotust, jagatuna vahemikeks 0–100% vahel")
-    1. **Kõige mõjukamad tegurid:** prognoosi loomisel võetakse arvesse paljusid tegureid. Kõigi tegurite olulisus arvutatakse selle loodava koondprognoosi jaoks. Nende tegurite abil saate oma prognoosi tulemusi kinnitada. Samuti saate seda teavet hiljem kasutada [segmentide loomiseks](segments.md), mis võiksid aidata mõjutada kliendivoolavuse ohtu.
-       > [!div class="mx-imgBorder"]
-       > ![Loend mõjukate teguritega ja nende olulisus voolavuse tulemuse prognoosimisel.](media/subscription-churn-influentialfactors.PNG "Loend mõjukate teguritega ja nende olulisus voolavuse tulemuse prognoosimisel")
+1. Valige **Tellimuse ajaloo** jaoks **Lisa andmed**.
 
-## <a name="manage-predictions"></a>Prognooside haldamine
+1. Valige semantilise tegevuse tüüp **Tellimus**, mis sisaldab nõutavat tellimuse ajaloo teavet. Kui tegevust pole seadistatud, valige **siin** ja looge see.
 
-Prognoose on võimalik optimeerida, tõrkeotsingut teha, värskendada või kustutada. Vaadake sisendandmete kasutatavuse aruanne üle, et teada saada, kuidas muuta prognoos kiiremaks ja usaldusväärsemaks. Lisateavet leiate teemast [Prognooside haldamine](manage-predictions.md).
+1. Kui tegevuste atribuudid olid tegevuse loomisel semantiliselt vastendatud, valige jaotises **Tegevused** konkreetsed atribuudid või olem, millele soovite arvutuses keskenduda. Kui semantilist vastendamist ei toimunud, valige Redigeeri **ja** vastendage oma andmed.
+  
+   :::image type="content" source="media/subscription-churn-required.png" alt-text="Nõutavate andmete lisamine subscription churn mudeli jaoks":::
 
+1. Valige **Edasi** ja vaadake üle selle mudeli jaoks vajalikud atribuudid.
+
+1. Valige **Salvesta**.
+
+1. Valige **Lisa andmed** kliendi tegevuste **jaoks**.
+
+1. Valige semantilise tegevuse tüüp, mis annab kliendi tegevuse teabe. Kui tegevust pole seadistatud, valige **siin** ja looge see.
+
+1. Kui tegevuste atribuudid olid tegevuse loomisel semantiliselt vastendatud, valige jaotises **Tegevused** konkreetsed atribuudid või olem, millele soovite arvutuses keskenduda. Kui semantilist vastendamist ei toimunud, valige Redigeeri **ja** vastendage oma andmed.
+
+1. Valige **Edasi** ja vaadake üle selle mudeli jaoks vajalikud atribuudid.
+
+1. Valige **Salvesta**.
+
+1. Lisage veel tegevusi või valige **Edasi**.
+
+### <a name="set-update-schedule"></a>Värskendusajakava määratlemine
+
+1. Valige mudeli ümberõppe sagedus. See säte on oluline prognooside täpsuse värskendamiseks, kuna Customer Insightsis kasutatakse uusi andmeid. Suur osa ettevõtteid saavad teha ümberõpet kord kuus ja saavutavad täpsed prognoosid.
+
+1. Tehke valik **Edasi**.
+
+### <a name="review-and-run-the-model-configuration"></a>Mudeli konfiguratsiooni läbivaatamine ja käitamine
+
+Etapp **Läbivaatus ja käivitamine** näitab konfiguratsiooni kokkuvõtet ja annab võimaluse teha muudatusi enne prognoos loomist.
+
+1. Valige **redigeeri mis** tahes juhis, mida soovite üle vaadata ja teha muudatusi.
+
+1. Kui olete oma valikutega rahul, valige mudeli käitamise alustamiseks Salvesta **ja käivita**. Valige nupp **Valmis**. Vahekaart Minu **ennustused** kuvatakse prognoos loomise ajal. Selle protsessi lõpule viimiseks võib kuluda mitu tundi, olenevalt prognoosis kasutatud andmete hulgast.
+
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
+
+## <a name="view-prediction-results"></a>Prognoos tulemuste vaatamine
+
+1. Minge **luureprognooside** > **juurde**.
+
+1. **Valige vahekaardil Minu ennustused** prognoos soovite vaadata.
+
+Tulemuste lehel on kolm peamist andmete jaotist.
+
+- **Koolitusmudeli toimivus**: hinded A, B või C näitavad prognoos toimivust ja aitavad teil teha otsuse väljundolemisse salvestatud tulemuste kasutamise kohta.
+  
+  :::image type="content" source="media/subscription-churn-modelperformance.PNG" alt-text="Mudeli punktisumma teabevälja kujutis koos A-klassiga.":::
+
+  Astmed määratletakse vastavalt järgmistele reeglitele.
+  - **A** kui mudel ennustas täpselt vähemalt 50% kogu ennustustest ja kui täpsete prognooside protsent klientide kohta, kes kükitasid, on suurem kui ajalooline keskmine churn rate vähemalt 10%.
+  - **B**, kui mudel ennustas täpselt vähemalt 50% kogu ennustustest ja kui täpsete prognooside protsent klientide kohta, kes kükitasid, on kuni 10% suurem kui ajalooline keskmine churn rate.
+  - **C**, kui mudel ennustas täpselt vähem kui 50% kogu ennustustest või kui täpsete prognooside protsent klientide kohta, kes kükitasid, on väiksem kui ajalooline keskmine churn rate.
+  
+- **Voolavuse tõenäosus (klientide arv)**: Kliendirühmad nende prognoositud voolavuse riski põhjal. Valikuliselt [looge kõrge riskiga klientide](prediction-based-segment.md) segmendid. Sellised segmendid aitavad mõista, kus segmendi liikmelisuse sulgemiskuupäev peaks olema.  
+
+  :::image type="content" source="media/subscription-churn-resultdistribution.PNG" alt-text="Graafik, mis kuvab voolavuse tulemuste jaotust, jagatuna vahemikeks 0–100% vahel":::
+
+- **Kõige mõjukamad tegurid:** prognoosi loomisel võetakse arvesse paljusid tegureid. Mudeli loodavate koondprognooside jaoks arvutatakse iga teguri olulisus. Kasutage neid tegureid oma prognoos tulemuste valideerimiseks. Või kasutage seda teavet hiljem segmentide [loomiseks](.//prediction-based-segment.md), mis võivad aidata mõjutada klientide riski.
+
+  :::image type="content" source="media/subscription-churn-influentialfactors.PNG" alt-text="Loend mõjukate teguritega ja nende olulisus voolavuse tulemuse prognoosimisel.":::
+
+> [!NOTE]
+> Selle mudeli väljundüksuses on ChurnScore *churn’i prognoositud tõenäosus ja* IsChurn *on Binaarne silt,* mis põhineb ChurnScore’il *0*.5 lävendiga. Kui see vaikelävi teie stsenaariumi puhul ei tööta, [looge eelistatud lävega uus segment](segments.md). Tünni skoori vaatamiseks minge jaotisse **Andmeüksused** > **ja** vaadake selle mudeli jaoks määratletud väljundolemi andmete vahekaarti.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

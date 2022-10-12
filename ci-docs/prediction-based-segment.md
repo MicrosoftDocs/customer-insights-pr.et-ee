@@ -1,23 +1,23 @@
 ---
 title: Prognoos mudelil põhineva segmendi loomine
 description: Segmentide loomine ärimudeli väljundolemi prognoos põhjal.
-ms.date: 03/24/2021
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: d67594f2467c1a0fde84b1ba0bd1afa4025e7b71
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ed9c6247a1f9148628dc9b5217484e98a576224e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082425"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610415"
 ---
 # <a name="create-a-segment-based-on-a-prediction-model-preview"></a>Segmendi loomine prognoosmudelil (eelvaade)
 
-Prognoosi tulemused rakenduvad mõnikord ainult teie klientide alamhulgale. Suurendage soovituste isikupärastamist, luues prognoosmudelite tulemustest segmendid. Näiteks võite anda konkreetseid soovitusi klientidele, kes eelistavad teatud tüüpi teenuseid. 
+Prognoosi tulemused rakenduvad mõnikord ainult teie klientide alamhulgale. Suurendage soovituste isikupärastamist, luues prognoosmudelite tulemustest segmendid. Näiteks võite anda konkreetseid soovitusi klientidele, kes eelistavad teatud tüüpi teenuseid.
 
 ## <a name="prerequisites"></a>Eeltingimused
 
@@ -34,10 +34,15 @@ Prognoosi tulemused rakenduvad mõnikord ainult teie klientide alamhulgale. Suur
 
 1. Minge jaotisse **Ärianalüüs** > **Prognoosid** ja valige vahekaart **Minu prognoosid**.
 
-1. Valige ülevaatamiseks soovitud mudeli kõrval vertikaalsed valipsed ja valige **vaade**.
+1. Valige mudel, mida soovite läbi vaadata, ja valige **Vaade**.
 
 1. Klõpsake tulemustelehel käsku **Loo segment**. Tulemuste lehe kohta lisateabe saamiseks vaadake üle mudeli kohta käiv artikkel.
 
    :::image type="content" source="media/prediction-create-segment.png" alt-text="Prognooside tulemuste kuvatõmmis, koos esiletõstmisega toimingus Loo segment.":::
 
-1. Looge uus segment valitud mudeli väljundüksuse põhjal. Lisateavet vt teemast [Segmentide loomine ja haldamine](segments.md).
+1. Looge uus segment, kasutades valitud mudeli väljundolemi atribuute. Lisateavet vt teemast [Segmentide loomine ja haldamine](segments.md).
+
+> [!TIP]
+> Samuti saate luua segmendi prognoos mudeli jaoks lehelt Segmendid, valides **Suvandi Uus** ja käsk **Loo luureandmetest** **.** > **·** Lisateavet leiate teemast [Kiirsegmentidega](segment-quick.md) uue segmendi loomine.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

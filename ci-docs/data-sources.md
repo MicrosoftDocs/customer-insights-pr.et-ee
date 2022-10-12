@@ -1,7 +1,7 @@
 ---
 title: Andmeallikate ülevaade
 description: Vaadake, kuidas importida või alla neelata andmeid erinevatest allikatest.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245644"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610047"
 ---
 # <a name="data-sources-overview"></a>Andmeallikate ülevaade
 
@@ -65,7 +65,9 @@ Valige saadaolevate toimingute vaatamiseks andmeallikas.
 
 ## <a name="refresh-data-sources"></a>Andmealilkate värskendamine
 
-Andmeallikaid saab värskendada automaatse ajakava järgi või soovi korral käsitsi. [Kohapealsed andmeallikad](connect-power-query.md#add-data-from-on-premises-data-sources) värskendavad oma ajakavasid, mis on seadistatud andmete allaneelamise ajal. Manustatud andmeallikate puhul tarbib allaneelamine uusimaid andmeid, mis on sellest andmeallikas kättesaadavad.
+Andmeallikaid saab värskendada automaatse ajakava järgi või soovi korral käsitsi. [Kohapealsed andmeallikad](connect-power-query.md#add-data-from-on-premises-data-sources) värskendavad oma ajakavasid, mis on seadistatud andmete allaneelamise ajal. Tõrkeotsingu näpunäiteid leiate teemast [PPDF-põhise Power Query tõrkeotsing andmeallikas värskendusprobleeme](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
+
+Manustatud andmeallikate puhul tarbib allaneelamine uusimaid andmeid, mis on sellest andmeallikas kättesaadavad.
 
 Avage **Jaotis Haldussüsteemi** > **·** > [**ajakava**](schedule-refresh.md), et konfigureerida allaneelatud andmeallikate süsteemi ajastatud värskendusi.
 
@@ -76,5 +78,37 @@ Andmeallikas värskendamiseks nõudmisel tehke järgmist.
 1. Valige andmeallikas, mida soovite värskendada, ja valige **Värskenda**. Andmeallika jaoks käivitatakse nüüd käsitsivärskendamine. Andmeallika värskendamine uuendab nii olemiskeemi kui ka kõigi andmeallikas määratud olemite andmeid.
 
 1. Valige olek, et avada edenemise **üksikasjade** paan ja vaadata edenemist. Töö tühistamiseks valige **paani allosas käsk Tühista töö**.
+
+## <a name="corrupt-data-sources"></a>Rikutud andmeallikad
+
+Allaneelatavatel andmetel võivad olla rikutud kirjed, mis võivad põhjustada andmete allaneelamise protsessi tõrgete või hoiatustega.
+
+> [!NOTE]
+> Kui andmete allaneelamine lõpeb vigadega, jäetakse järgnev töötlemine (nt ühendamine või tegevuse loomine), mis kasutab seda andmeallikas, vahele. Kui allaneelamine lõpeb hoiatustega, jätkub edasine töötlemine, kuid mõnda kirjet ei pruugita lisada.
+
+Neid vigu võib näha ülesande üksikasjades.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Ülesande üksikasjad, mis näitavad rikutud andmete viga.":::
+
+Rikutud kirjed kuvatakse süsteemi loodud olemites.
+
+### <a name="fix-corrupt-data"></a>Vigaste andmete parandamine
+
+1. Rikutud andmete vaatamiseks minge jaotisse **Andmeüksused** > **ja** otsige jaotisest **Süsteem** rikutud olemeid. Korrumpeerunud üksuste nimetamise skeem: "DataSourceName_EntityName_corrupt".
+
+1. Valige rikutud olem ja seejärel **vahekaart Andmed**.
+
+1. Tuvastage kirje rikutud väljad ja põhjus.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Korruptsiooni põhjus." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Andmeüksused** > **kuvavad** ainult osa rikutud kirjetest. Kõigi rikutud kirjete vaatamiseks eksportige failid salvestuskonto konteinerisse, kasutades [Customer Insightsi ekspordiprotsessi](export-destinations.md). Kui kasutasite oma salvestusruumikontot, saate vaadata ka oma salvestusruumikonto kausta Customer Insights.
+
+1. Parandage rikutud andmed. Näiteks Azure Data Lake’i andmeallikate [puhul parandage andmed Andmejärve salvestusruumis või värskendage faili](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data) manifest/model.json andmetüüpe. Andmeallikate puhul Power Query parandage lähtefailis olevad andmed ja [parandage andmetüüpi teisendusetapp](connect-power-query.md#data-type-does-not-match-data) lehel **Power Query - Päringute** redigeerimine.
+
+Pärast järgmise andmeallikas värskendamist antakse parandatud kirjed customer Insights'ile üle ja edastatakse järgmistele protsessidele.
+
+Näiteks veeru "sünnipäev" andmetüübiks on seatud "kuupäev". Kliendikirjel on sisestatud sünnipäev "01/01/19777". Süsteem märgib selle kirje korrumpeerunuks. Muutke lähtesüsteemis sünnipäev väärtuseks "1977". Pärast andmeallikate automaatset värskendamist on väljal nüüd kehtiv vorming ja kirje eemaldatakse rikutud olemist.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

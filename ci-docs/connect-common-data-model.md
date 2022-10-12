@@ -1,7 +1,7 @@
 ---
 title: Common Data Modeli kausta ühendamine Azure Data Lake’i kontot kasutades
 description: Töötage Common Data Modeli andmete kallal Azure Data Lake Storage'i abil.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396041"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609937"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Andmetega ühenduse loomine Azure Data Lake Storage
 
@@ -43,6 +43,10 @@ Kasutage andmeid Dynamics 365 Customer Insights oma Azure Data Lake Storage Gen2
 - Kasutaja, kes seadistab andmeallikas ühenduse, vajab salvestusruumikontol kõige vähem salvestusruumi bloobiandmete esitaja õigusi.
 
 - Andmesalvestusruumis olevad andmed peaksid järgima teie andmete salvestamiseks standardit Common Data Model ja neil peaks olema ühine andmemudeli manifest, mis esindab andmefailide skeemi (*.csv või *.parquet). Manifest peab sisaldama olemite üksikasju, nagu olemiveerud ja andmetüübid ning andmefaili asukoht ja failitüüp. Lisateavet leiate teemast [Manifest Common Data Model](/common-data-model/sdk/manifest). Kui manifesti pole, saavad salvestusruumi bloobi andmete omaniku või salvestusruumi bloobi andmete esitaja juurdepääsuga administraatorikasutajad andmete allaneelamisel skeemi määratleda.
+
+## <a name="recommendations"></a>Soovitused
+
+Optimaalse jõudluse tagamiseks soovitab Customer Insights, et partitsiooni suurus oleks 1 GB või vähem ja partitsioonifailide arv kaustas ei tohi ületada 1000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Azure Data Lake Storageiga ühenduse loomine
 
@@ -188,7 +192,7 @@ Saate värskendada suvandit *Ühenda salvestusruumikontoga, kasutades* suvandit.
       > [!IMPORTANT]
       > Kui olemasoleval failil model.json või manifest.json ja olemikomplektil on sõltuvusi, kuvatakse tõrketeade ja te ei saa valida muud faili model.json või manifest.json. Eemaldage need sõltuvused enne faili model.json või manifest.json muutmist või looge uus andmeallikas failiga model.json või manifest.json, mida soovite kasutada, et vältida sõltuvuste eemaldamist.
    - Andmefaili asukoha või primaarvõtme muutmiseks valige **Redigeeri**.
-   - Inkrementaalse allaneelamise andmete muutmise kohta leiate teavet teemast [Azure Data Lake’i andmeallikate astmelise värskendamise konfigureerimine](incremental-refresh-data-sources.md).
+   - Inkrementaalse allaneelamise andmete muutmise kohta leiate teavet teemast [Azure Data Lake’i andmeallikate](incremental-refresh-data-sources.md) astmelise värskendamise konfigureerimine.
    - Muutke olemi nime ainult nii, et see vastaks .json-failis olevale olemi nimele.
 
      > [!NOTE]
@@ -199,5 +203,101 @@ Saate värskendada suvandit *Ühenda salvestusruumikontoga, kasutades* suvandit.
 1. Muudatuste rakendamiseks ja lehele Andmeallikad **naasmiseks** klõpsake nuppu **Salvesta**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Allaneelamisvigade või rikutud andmete levinumad põhjused
+
+Andmete allaneelamise ajal on mõned kõige levinumad põhjused, miks kirjet võidakse pidada rikutuks, järgmised.
+
+- Andmetüübid ja väljaväärtused ei ühti lähtefaili ja skeemi vahel
+- Lähtefaili veergude arv ei vasta skeemile
+- Väljad sisaldavad märke, mis põhjustavad veergude viltuse võrreldes eeldatava skeemiga. Näiteks valesti vormindatud jutumärgid, piiritlemata jutumärgid, uuerea märgid või tabeldusmärgid.
+- Partitsioonifailid puuduvad
+- Kui on olemas datetime/date/dateoffset veerud, tuleb skeemis määrata nende vorming, kui see ei järgi standardvormingut.
+
+### <a name="schema-or-data-type-mismatch"></a>Skeem või andmetüübi mittevastavus
+
+Kui andmed ei vasta skeemile, lõpeb allaneelamisprotsess vigadega. Parandage kas lähteandmed või skeem ja neelake andmed uuesti alla.
+
+### <a name="partition-files-are-missing"></a>Partitsioonifailid puuduvad
+
+- Kui allaneelamine õnnestus ilma rikutud kirjeteta, kuid te ei näe andmeid, redigeerige faili model.json või manifest.json veendumaks, et partitsioonid on määratud. Seejärel värskendage [andmeallikas](data-sources.md#refresh-data-sources).
+
+- Kui andmete allaneelamine toimub samaaegselt andmeallikate värskendamisega ajakava automaatse värskendamise ajal, võivad partitsioonifailid olla tühjad või pole Customer Insightsi jaoks töötlemiseks saadaval. Ülesvoolu värskendamise ajakavaga vastavusse viimiseks muutke [süsteemi värskendamise ajakava](schedule-refresh.md) või andmeallikas värskendamise ajakava. Joondage ajastus nii, et värskendused ei toimuks kõik korraga, ja esitage uusimad andmed, mida Customer Insightsis töödelda.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Kuupäeva ja kellaaja väljad vales vormingus
+
+Olemi kuupäeva ja kellaaja väljad ei ole ISO 8601 ega EN-US vormingus. Customer Insightsi vaikevorming datetime on en-US vorming. Kõik olemi kuupäeva ja kellaaja väljad peaksid olema samas vormingus. Customer Insights toetab muid vorminguid tingimusel, et marginaalid või tunnused tehakse mudelis või manifest.jsonis allika või olemi tasemel. Näiteks:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Manifest.json-is saab kuupäeva ja kellaaja vormingu määrata olemi või atribuudi tasemel. Kasutage olemi tasandil vormingu datetime määratlemiseks olekus *.manifest.cdm.json olemit "exhibitsTraits". Atribuuditasemel kasutage atribuudis entityname.cdm.json väärtust "appliedTraits".
+
+**Manifest.json üksuse tasandil**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json atribuudi tasemel**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

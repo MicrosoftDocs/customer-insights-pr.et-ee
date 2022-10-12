@@ -1,7 +1,7 @@
 ---
 title: ühenduse loomine Power Query andmeallikas (sisaldab videot)
 description: Neelake andmeid konnektori Power Query kaudu (sisaldab videot).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463260"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609885"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Andmeallikas ühenduse loomine Power Query
 
@@ -43,16 +43,17 @@ Konnektoritel Power Query põhinevate andmeallikate lisamisel järgitakse tavali
 
 1. Valige suvand **Andmete teisendamine**.
 
-1. **Power Query Dialoogis Päringute** redigeerimine saate andmeid üle vaadata ja täpsustada. Olemid, mida süsteemid teie valitud andmeallikas tuvastasid, kuvatakse vasakpoolsel paanil.
+1. Vaadake üle ja täpsustage oma andmeid **Power Query lehel - Päringute** redigeerimine. Olemid, mida süsteemid teie valitud andmeallikas tuvastasid, kuvatakse vasakpoolsel paanil.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Päringute redigeerimise dialoog":::
 
-1. Samuti saate oma andmeid teisendada. Valige redigeeritav või teisendatav olem. Teisenduste Power Query rakendamiseks kasutage aknas olevaid suvandeid. Iga teisendus on loetletud jaotises **Rakendatud etapid**. Power Query pakub arvukalt [eelnevalt ehitatud ümberkujundamisvõimalusi](/power-query/power-query-what-is-power-query#transformations).
+1. Teisendage oma andmed. Valige redigeeritav või teisendatav olem. Teisenduste Power Query rakendamiseks kasutage aknas olevaid suvandeid. Iga teisendus on loetletud jaotises **Rakendatud etapid**. Power Query pakub arvukalt [eelnevalt ehitatud ümberkujundamisvõimalusi](/power-query/power-query-what-is-power-query#transformations).
 
-   Soovitame kasutada järgmisi teisendusi.
-
-   - Kui valmendate andmeid CSV-failist, siis esimene rida sisaldab sageli päiseid. Minge jaotisse **Teisendamine** ja valige **Kasuta esimest rida päistena**.
-   - Veenduge, et andmetüüp oleks õigesti seadistatud. Näiteks kuupäevaväljade puhul valige kuupäeva tüüp.
+   > [!IMPORTANT]
+   > Soovitame kasutada järgmisi teisendusi.
+   >
+   > - Kui valmendate andmeid CSV-failist, siis esimene rida sisaldab sageli päiseid. Minge jaotisse **Teisendamine** ja valige **Kasuta esimest rida päistena**.
+   > - Veenduge, et andmetüüp oleks õigesti seadistatud ja vastaks andmetele. Näiteks kuupäevaväljade puhul valige kuupäeva tüüp.
 
 1. Täiendavate olemite lisamiseks andmeallikas dialoogiboksis Päringute **redigeerimine avage** Avaleht **ja valige** Hangi andmed **.** Korrake juhiseid 5–10, kuni olete lisanud kõik selle andmeallikas olemid. Kui teil on andmebaas, mis sisaldab mitut andmekogumit, on iga andmekomplekt omaette olem.
 
@@ -102,5 +103,51 @@ Olemasoleva Power BI või Power Apps keskkonna andmelüüsid on nähtavad ja saa
 1. Muudatuste rakendamiseks ja lehele Andmeallikad **naasmiseks** valige **Salvesta**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Allaneelamisvigade või rikutud andmete levinumad põhjused
+
+### <a name="data-type-does-not-match-data"></a>Andmetüüp ei vasta andmetele
+
+Kõige tavalisem andmetüübi mittevastavus ilmneb siis, kui kuupäevaväli pole seatud õigesse kuupäevavormingusse.
+
+Andmeid saab allikale fikseerida ja uuesti alla neelata. Või parandage teisendus Customer Insightsis. Ümberkujundamise parandamiseks toimige järgmiselt.
+
+1. Avage suvandid **Andmed** > **Andmeallikad**.
+
+1. Valige rikutud andmetega andmeallikas kõrval käsk **Redigeeri**.
+
+1. Tehke valik **Edasi**.
+
+1. Valige kõik päringud ja otsige jaotises "Rakendatud sammud" rakendatud teisendusi, mis on valed, või kuupäevaveergusid, mida pole kuupäevavorminguga teisendatud.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query- Redigeerimine näitab valet kuupäevavormingut":::
+
+1. Muutke andmetüüpi nii, et see vastaks andmetele õigesti.
+
+1. Valige **Salvesta**. See andmeallikas on värskendatud.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>PPDF-põhiste Power Query andmeallikas värskendamise probleemide tõrkeotsing
+
+Kui andmed on aegunud või kuvatakse pärast andmeallikas värskendamist tõrketeateid, tehke järgmist.
+
+1. Minge kohta [Power Platform](https://make.powerapps.com).
+
+1. Valige **oma Customer Insightsi eksemplari jaoks keskkond**.
+
+1. Liikuge jaotisse **Andmevood**.
+
+1. Andmevoo puhul, mis vastab Customer Insightsi andmeallikas, valige vertikaalne kolmikpunkt (&vellip;) ja seejärel valige **Kuva värskendamise ajalugu**.
+
+1. **Kui andmevoo olek** on **Edukas**, võib põhise andmeallikas omandiõigus Power Query olla muutunud.
+
+   1. Vaadake värskendamise ajakava värskendamise ajaloost üle.
+   1. Määrake uue omaniku ajakava ja salvestage seaded.
+
+1. **Kui andmevoo olek** on **Nurjunud,** tehke järgmist.
+
+   1. Laadige alla värskendusajaloo fail.
+   1. Vaadake allalaaditud fail tõrke põhjuse osas üle.
+   1. Kui viga ei saa lahendada, valige **?** Tugipileti avamiseks. Kaasake allalaaditud värskendamise ajaloo fail.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

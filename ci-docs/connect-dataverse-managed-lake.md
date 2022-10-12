@@ -1,7 +1,7 @@
 ---
 title: Andmetega ühendamine Microsoft Dataverse’i hallatavas andmejärves
 description: Andmete importimine Microsoft Dataverse'i hallatavast andmejärvest.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206948"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609790"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Andmetega ühendamine Microsoft Dataverse’i hallatavas andmejärves
 
@@ -70,5 +70,93 @@ Erinevate Dataverse -i data lake -idega ühendamiseks [looge uus andmeallikas](#
 1. Muudatuste rakendamiseks ja lehele Andmeallikad **naasmiseks** klõpsake nuppu **Salvesta**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Allaneelamisvigade või rikutud andmete levinumad põhjused
+
+Vigaste kirjete näitamiseks käitatakse ülevaatatud andmete puhul järgmised kontrollid:
+
+- Välja väärtus ei ühti selle veeru andmetüübiga.
+- Väljad sisaldavad märke, mille puhul veerud ei vasta eeldatud skeemile. Näiteks: valesti vormindatud hinnapakkumised, sisestamata hinnapakkumised või uued tekstimärgid.
+- Kui on olemas datetime/date/dateoffset veerud, tuleb mudelis määrata nende vorming, kui see ei järgi standardset ISO-vormingut.
+
+### <a name="schema-or-data-type-mismatch"></a>Skeem või andmetüübi mittevastavus
+
+Kui andmed ei vasta skeemile, liigitatakse kirjed rikutud kirjeteks. Parandage kas lähteandmed või skeem ja neelake andmed uuesti alla.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Kuupäeva ja kellaaja väljad vales vormingus
+
+Olemi kuupäeva ja kellaaja väljad ei ole ISO- ega EN-US-vormingus. Customer Insightsi vaikevorming datetime on en-US vorming. Kõik olemi kuupäeva ja kellaaja väljad peaksid olema samas vormingus. Customer Insights toetab muid vorminguid tingimusel, et marginaalid või tunnused tehakse mudelis või manifest.jsonis allika või olemi tasemel. Näiteks:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Manifest.json-is saab kuupäeva ja kellaaja vormingu määrata olemi või atribuudi tasemel. Kasutage olemi tasandil andmeaja vormingu määratlemiseks olekus *.manifest.cdm.json olemis valikut "exhibitsTraits". Atribuuditasemel kasutage atribuudis entityname.cdm.json väärtust "appliedTraits".
+
+**Manifest.json üksuse tasandil**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json atribuudi tasemel**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

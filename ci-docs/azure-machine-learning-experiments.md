@@ -1,19 +1,19 @@
 ---
 title: Kasutage Azure'i masinõppel põhinevaid mudeleid
 description: Kasutage Azure'i masinõppel põhinevaid mudeleid rakenduses Dynamics 365 Customer Insights.
-ms.date: 12/02/2021
+ms.date: 09/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8d9c9324ea4840b585b9af1a58d505ccaea6f18e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082278"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609820"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Kasutage Azure'i masinõppel põhinevaid mudeleid
 
@@ -34,27 +34,26 @@ Dynamics 365 Customer Insightsis olevad koondatud andmed on allikaks masinõppem
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Azure'i masinõppe kujundajaga töötamine
 
-Azure Masinõpe kujundaja pakub visuaalset lõuendit, kus saate andmekogumeid ja mooduleid lohistada. Kujundajas loodud partiikonveierit saab integreerida Customer Insightsi, kui need on nii konfigureeritud. 
-   
+Azure Masinõpe Designer pakub visuaalset lõuendit, kuhu saate andmekogumeid ja mooduleid lohistada. Kujundajas loodud partiikonveierit saab integreerida Customer Insightsi, kui need on nii konfigureeritud. 
+
 ## <a name="working-with-azure-machine-learning-sdk"></a>Azure'i masinõppe SDK-ga töötamine
 
 Andmeteadlased ja tehisintellekti arendajad kasutavad [Azure'i masinõppe SDK-d](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py), et luua masinõppetöövooge. SDK abil treenitud mudeleid ei saa praegu otse Customer Insightsi integreerida. Customer Insightsiga integreerimiseks on vaja partiipõhist tuletuskonveierit, mis kasutab seda mudelit.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Partiikonveieri nõuded Customer Insightsiga integreerimiseks
 
-### <a name="dataset-configuration"></a>Andmekogumi konfiguratsioon
+### <a name="dataset-configuration"></a>Andmekomplekti konfiguratsioon
 
-Peate looma andmekogumeid, et kasutada Customer Insightsist pärit olemiandmeid oma partiipõhises tuletuskonveieris. Need andmekogumid tuleb tööruumis registreerida. Praegu toetame ainult [tabelina esitatud andmekomplekte](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) CSV-vormingus. Olemiandmetele vastavad andmekomplektid peavad olema parametreeritud konveieri parameetrina.
-   
-* Andmekomplekti parameetrid kujundajas
-   
-     Avage kujundajas **Vali andmekomplekti veerud** ja valige **Määra konveieri parameetriks**, kus saate parameetrile nime anda.
+Looge andmekogumid, et kasutada Customer Insightsi olemiandmeid partii järeldamise müügitoru jaoks. Registreerige need andmekogumid tööruumis. Praegu toetame ainult [tabelina esitatud andmekomplekte](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) CSV-vormingus. Parameetrige olemiandmetele vastavad andmekogumid müügitoru parameetrina.
 
-     > [!div class="mx-imgBorder"]
-     > ![Andmekomplekti parametreerimine kujundajas.](media/intelligence-designer-dataset-parameters.png "Andmekomplekti parametreerimine kujundajas")
-   
-* Andmekomplekti parameeter SDK-s (Python)
-   
+- Andmekomplekti parameetrid kujundajas
+
+  Avage kujundajas **Vali andmekomplekti veerud** ja valige **Määra konveieri parameetriks**, kus saate parameetrile nime anda.
+
+  :::image type="content" source="media/intelligence-designer-dataset-parameters.png" alt-text="Andmekomplekti parametreerimine kujundajas.":::
+
+- Andmekomplekti parameeter SDK-s (Python)
+
    ```python
    HotelStayActivity_dataset = Dataset.get_by_name(ws, name='Hotel Stay Activity Data')
    HotelStayActivity_pipeline_param = PipelineParameter(name="HotelStayActivity_pipeline_param", default_value=HotelStayActivity_dataset)
@@ -63,10 +62,10 @@ Peate looma andmekogumeid, et kasutada Customer Insightsist pärit olemiandmeid 
 
 ### <a name="batch-inference-pipeline"></a>Partiipõhine tuletuskonveier
   
-* Kujundajas saab kasutada tuletuskonveieri loomiseks või värskendamiseks treeningkonveierit. Praegu toetatakse ainult partiipõhiseid tuletuskonveiereid.
+- Kasutage disaineris järelduste torujuhtme loomiseks või värskendamiseks koolitustoru. Praegu toetatakse ainult partiipõhiseid tuletuskonveiereid.
 
-* SDK abil saate konveieri avaldada lõpp-punktis. Praegu integreerub Customer Insights masinõppe tööruumis oleva partiikonveieri lõpp-punktis asuva vaikekonveieriga.
-   
+- SDK abil avaldage müügitoru lõpp-punktina. Praegu integreerub Customer Insights masinõppe tööruumis oleva partiikonveieri lõpp-punktis asuva vaikekonveieriga.
+
    ```python
    published_pipeline = pipeline.publish(name="ChurnInferencePipeline", description="Published Churn Inference pipeline")
    pipeline_endpoint = PipelineEndpoint.get(workspace=ws, name="ChurnPipelineEndpoint") 
@@ -75,11 +74,11 @@ Peate looma andmekogumeid, et kasutada Customer Insightsist pärit olemiandmeid 
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Konveieriandmete importimine Customer Insightsi
 
-* Kujundajas on [andmete eksportimise moodul](/azure/machine-learning/algorithm-module-reference/export-data), mis võimaldab konveieri väljundit eksportida Azure'i salvestusruumi. Praegu peab moodul kasutama andmesalvetüüpi **Azure'i bloobimälu** ning parametreerima **andmesalve** ja suhtelist **teed**. Customer Insights alistab mõlemad parameetrid konveieri käitamisel andmesalve ja teega, mis on sellele tootele juurdepääsetavad.
-   > [!div class="mx-imgBorder"]
-   > ![Andmete eksportimise mooduli konfiguratsioon.](media/intelligence-designer-importdata.png "Andmete eksportimise mooduli konfiguratsioon")
-   
-* Kui kirjutate tuletusväljundi koodi, saate väljundi üles laadida tööruumis oleva *registreeritud andmesalve* teele. Kui tee ja andmesalv on konveieris parametreeritud, saab Customer Insights tuletuse väljundit lugeda ja importida. Praegu on toetatud ühe tabelina esitatud väljund CSV-vormingus. Tee peab sisaldama kataloogi ja faili nime.
+- Kujundajas on [andmete eksportimise moodul](/azure/machine-learning/algorithm-module-reference/export-data), mis võimaldab konveieri väljundit eksportida Azure'i salvestusruumi. Praegu peab moodul kasutama andmesalvetüüpi **Azure'i bloobimälu** ning parametreerima **andmesalve** ja suhtelist **teed**. Customer Insights alistab mõlemad parameetrid konveieri käitamisel andmesalve ja teega, mis on sellele tootele juurdepääsetavad.
+
+  :::image type="content" source="media/intelligence-designer-importdata.png" alt-text="Andmete eksportimise mooduli konfiguratsioon.":::
+
+- Koodi abil järeldamisväljundi kirjutamisel laadige väljund üles tööruumis registreeritud andmesalves *olevale teele*. Kui tee ja andmesalv on konveieris parametreeritud, saab Customer Insights tuletuse väljundit lugeda ja importida. Praegu on toetatud ühe tabelina esitatud väljund CSV-vormingus. Tee peab sisaldama kataloogi ja faili nime.
 
    ```python
    # In Pipeline setup script

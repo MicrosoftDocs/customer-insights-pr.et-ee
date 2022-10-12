@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
-ms.translationtype: MT
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.translationtype: HT
 ms.contentlocale: et-EE
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409352"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609587"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Mida on uut rakenduses Dynamics 365 Customer Insights
 
@@ -228,9 +228,9 @@ Lisateavet vaadake jaotisest [Keskkonna omaniku muutmine](manage-environments.md
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Andmete ettevalmistamise protsess loetleb rikutud kirjete korruptsiooni põhjused
 
-Andmete ettevalmistamine näitab nüüd kõigi rikutud andmetega väljade korruptsiooni põhjust. Teave esitatakse individuaalse registreerimise tasandil, et seda oleks lihtne tuvastada. 
+Andmete ettevalmistamine näitab nüüd kõigi rikutud andmetega väljade korruptsiooni põhjust. Teave esitatakse individuaalse registreerimise tasandil, et seda oleks lihtne tuvastada.
 
-Lisateavet leiate teemast [Rikutud andmeallikad](entities.md#corrupted-data-sources).
+Lisateavet leiate teemast [Rikutud andmeallikad](data-sources.md#corrupt-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Aruandlusfunktsioonide eelvaate lõpp kaasamise ülevaadete võimaluses
 

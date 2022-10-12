@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Azure'i masinõppe kohandatud mudelite kasutamine
           href: custom-models.md
+        - name: Prognoosidel põhinevate segmentide loomine
+          href: prediction-based-segment.md
     - name: Näidisjuhendid
       items:
         - name: CLV prognoosi näidisjuhend
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Eksperimendid Azure’i masinõppega
           href: azure-machine-learning-experiments.md
-    - name: Prognooside haldamine
-      href: manage-predictions.md
-    - name: Prognoosidel põhinevate segmentide loomine
-      href: prediction-based-segment.md
 - name: Ekspordisuvandid
   items:
     - name: Eksportimised

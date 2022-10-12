@@ -1,7 +1,7 @@
 ---
 title: Rakenduse Customer Insights olemid
 description: Saate vaadata andmeid olemite lehel.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183540"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610093"
 ---
 # <a name="entities-in-customer-insights"></a>Rakenduse Customer Insights olemid
 
@@ -61,27 +61,5 @@ Olemite **loendi kuvamiseks avage** > **Andmeüksused**. Iga olemi kohta kuvatak
   - **Loodud**: olemi loomise kuupäev ja kellaaeg.
   - **Toimetanud**: Olemit muutnud isiku nimi.
   - **Redigeeritud**: olemi muutmise kuupäev ja kellaaeg.
-
-## <a name="entity-specific-information"></a>Olemipõhine teave
-
-Järgmine jaotis sisaldab teavet mõne süsteemi loodud olemi kohta.
-
-### <a name="corrupted-data-sources"></a>Andmeallikas on rikutud
-
-sisse võetud andmeallikast pärinevad väljad võivad sisaldada rikutud andmeid. Rikutud väljadega kirjed kuvatakse süsteemi loodud olemitel. Teades rikutud kirjete kohta, saate tuvastada, milliseid andmeid lähtesüsteemis läbi vaadata ja värskendada. Pärast järgmise andmeallikas värskendamist antakse parandatud kirjed customer Insights'ile üle ja edastatakse järgmistele protsessidele. 
-
-Näiteks veeru "sünnipäev" andmetüübiks on seatud "kuupäev". Kliendikirjel on sisestatud sünnipäev "01/01/19777". Süsteem märgib selle kirje rikutuks. Keegi saab nüüd muuta lähtesüsteemis sünnipäeva "1977". Pärast andmeallikate automaatset värskendamist on väljal nüüd kehtiv vorming ja kirje eemaldatakse rikutud olemist.
-
-Minge **Andme** > **Üksused** jaotisse ja otsige rikutud olemeid jaotises **Süsteem** . Rikutud olemite skeemi nimetamine: "DataSourceName_EntityName_corrupt". Valige rikutud olem, et tuvastada rikutud väljad ja põhjus individuaalse kirje tasemel.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Korruptsiooni põhjus.":::
-
-Customer Insights töötleb endiselt rikutud kirjeid. Kuid need võivad põhjustada probleeme ühendatud andmetega töötamisel.
-
-Vigaste kirjete näitamiseks käitatakse ülevaatatud andmete puhul järgmised kontrollid:
-
-- Välja väärtus ei ühti selle veeru andmetüübiga.
-- Väljad sisaldavad märke, mille puhul veerud ei vasta eeldatud skeemile. Näiteks: valesti vormindatud hinnapakkumised, sisestamata hinnapakkumised või uued tekstimärgid.
-- Kui on olemas datetime/date/dateoffset veerud, tuleb nende vorming mudelis täpsustada, kui see ei järgi standardset ISO-vormingut.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

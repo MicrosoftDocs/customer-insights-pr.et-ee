@@ -1,193 +1,168 @@
 ---
-title: Analüüsige klientide tagasiside tundeid (eelvaade)
-description: Siit saate teada, kuidas rakenduses kliendi tagasiside kohta tunnete analüüsi mudelit kasutada Dynamics 365 Customer Insights.
-ms.date: 12/23/2021
+title: Klientide tagasiside meeleolu analüüsimine (eelvaade)
+description: Siit saate teada, kuidas kasutada sentimentanalüüsi mudelit klientide tagasiside kohta Dynamics 365 Customer Insights.
+ms.date: 09/14/2022
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: af1afd3eff8a795a9e199b1c1d411b79dc2841b4
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 61ce9fb18efa6152dddb2e31f4fd0366a31ac2c7
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055531"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610458"
 ---
-# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analüüsige tundeid klientide tagasisides (eelvaade)
+# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Sentimentide analüüsimine klientide tagasisides (eelvaade)
 
-Kliendid ootavad tänapäeval kvaliteetseid tooteid, teenuseid ja kogemusi. Eriti kliendid, kes jagavad oma tagasisidet. Organisatsioonidel on väga raske analüüsida kasvavat andmemahtu, vähendamata täpsust ja kõrgemaid tööjõukulusid. Dynamics 365 Customer Insights pakub klientide tagasiside jaoks sentimentianalüüsi mudelit, mis võimaldab organisatsioonidel oma andmeid täpsemalt ja madalama hinnaga analüüsida.
-
-Sentimenti analüüs võimaldab teil sünteesida klientide tundeid ja tuvastada äriaspekte kui täiustamisvõimalusi. See Customer Insightsi funktsioon aitab teil mõista, mis toimib hästi ja mida peate käsitlema. Keskenduge kõige asjakohasematele ja mõjukamatele ärivaldkondadele, et parandada oma klientide kogemusi. Lõppkokkuvõttes aitab see teil juhtida äritegevust, mis võimaldab kogemusi, mille tulemuseks on suur klientide rahulolu ja lojaalsus.
+Sentimentanalüüs võimaldab teil sünteesida klientide meelsust ja tuvastada äriaspekte kui parendusvõimalusi. See Customer Insightsi funktsioon aitab teil mõista, mis töötab hästi ja millega peate tegelema. See aitab teil juhtida äritoiminguid, mis võimaldavad kogemusi, mille tulemuseks on kõrge kliendirahulolu ja lojaalsus.
 
 ## <a name="overview"></a>Ülevaade
 
-Sentimenti analüüsi funktsioon genereerib kliendi ID kohta kaks tuletatud ülevaadet. Sentiment skoor (-5 kuni 5) ja nimekiri kohaldatavatest äriaspektidest (ärivaldkonnad) koos aitavad teil paremini mõista klientide tagasisidet. 
+Sentimentanalüüsi funktsioon loob kaks tuletatud ülevaadet kliendi ID kohta. Meeleolu skoor (-5 kuni 5) ja kohaldatavate äriaspektide (ärivaldkondade) loetelu, mis koos aitavad teil klientide tagasisidet paremini mõista.
 
-See teave aitab teil saavutada järgmisi tulemusi. 
-- Saate ülevaate klientide tunnetest brändi või organisatsiooni suhtes
-- Tuvastage negatiivse tundega kliendid, et keskenduda oma kampaaniatele ja tegevustele ning optimeerida suurema tulu saavutamiseks  
+See analüüs aitab teil:
+- Saa ülevaade klientide tunnetest brändi või organisatsiooni suhtes
+- Tuvastage negatiivse meelestatusega kliendid, et keskenduda oma kampaaniatele ja seotustele ning optimeerida suurema tootluse saavutamiseks  
 - Äriaspektide tuvastamine klientide poolt välja toodud probleemidega  
-- Segment kliendid vastavalt nende tundele, et käivitada isikupärastatud kampaaniaid sihitud müügi-, turundus- ja tugitegevusega
+- Segmentige kliente nende meeleolu põhjal isikupärastatud kampaaniate käitamiseks sihitud müügi-, turundus- ja tugitegevustega
 - Optimeerige äritegevust, käsitledes probleemseid valdkondi või võimalusi, mida kliendid mainisid
-- Tunnustage äriaspekte, millel läheb hästi, ja premeerige õnnelikke kliente lojaalsus- ja müügiedendusprogrammide kaudu
+- Tunnustage äriaspekte, millel läheb hästi, ja premeerige õnnelikke kliente lojaalsus- ja reklaamiprogrammide kaudu
 
-Selleks, et saaksite mudelite tulemusi usaldada, pakume läbipaistvat teavet selle kohta, kuidas mudelid otsuseid teevad. Saate nimekirja sõnadest, mis mõjutasid mudelite otsust määrata tagasiside kommentaaridele konkreetne sentiment skoor või äriaspekt.  
+Mudel sisaldab loendit sõnadest, mis mõjutasid mudeli otsust määrata tagasiside kommentaaridele konkreetne meeleoluskoor või äriaspekt.  
 
-Kasutame kahte **loomuliku keele töötlemise (NLP) mudelit**: esimene määrab igale tagasiside kommentaarile sentimenti skoori. Teine mudel seostab iga tagasiside kõigi kohaldatavate äriaspektidega. Mudeleid koolitatakse avalike andmete põhjal, mis pärinevad sotsiaalmeedia, jaemüügi, restorani, tarbekaupade ja autotööstuse allikatest.    
+Kasutame kahte **loomuliku keele töötlemise (NLP) mudelit**: esimene määrab igale tagasiside kommentaarile meeleolu skoori. Teine mudel seostab iga tagasiside kõigi kohaldatavate äriaspektidega. Mudeleid koolitatakse avalike andmete põhjal, mis pärinevad sotsiaalmeedia, jaemüügi, restoranide, tarbekaupade ja autotööstuse allikatest.
   
-Tagasisideandmetega seostatava mudeli eelnevalt määratletud äriaspektid on järgmised:
--   Kontohaldus
--   Kassa ja maksmine
--   Klienditugi
--   Poodi järeletulemisega
--   Pakendite saatmine ja toomine
--   Ettetellimine
--   Hind
--   Privaatsus ja turve
--   Kampaaniad ja preemiad
--   Kviitung ja garantii
--   Tagastuse vahetamine ja tühistamine
--   Täitmise täpsus
--   Veebisaidi/rakenduse kvaliteet
+Eelnevalt määratletud äriaspektid, mida mudel tagasisideandmetega seostab, hõlmavad järgmist:
+- Kontohaldus
+- Kassa ja maksmine
+- Klienditugi
+- Poodi järeletulemisega
+- Pakendite saatmine ja toomine
+- Ettetellimine
+- Hind
+- Privaatsus ja turve
+- Kampaaniad ja preemiad
+- Kviitung ja garantii
+- Tagastuse vahetamine ja tühistamine
+- Täitmise täpsus
+- Veebisaidi/rakenduse kvaliteet
 
 > [!NOTE]
-> Praegu toetame ainult inglise klientide tagasiside sentimenti analüüsi. Tulevikus toetatakse rohkem keeli. Kui tagasiside teistes keeltes on üles laaditud, tagastab mudel siiski tulemused. Kuid need tulemused ei ole täpsed. 
+> Praegu toetame meeleoluanalüüsi ainult inglise klientide tagasiside põhjal. Tulevikus toetatakse rohkem keeli. Kui teistes keeltes tagasiside on üles laaditud, tagastab mudel ikkagi tulemused. Kuid need tulemused ei ole täpsed.
 
 ## <a name="prerequisites"></a>eeltingimused
 
-Sentimenti analüüs põhineb teksti tagasiside andmetel, mis on läbinud [andmete ühendamise protsessi](data-unification.md). Soovitame tagasiside andmeolemid [eelnevalt konfigureerida semantiliste tegevusolemitena](map-entities.md#select-primary-key-and-semantic-type-for-attributes) (tagasiside tüüp). 
-
-Tundeanalüüsi mudeli konfigureerimiseks on vaja vähemalt [kaasautori](permissions.md) õigusi.
-
-Customer Insights saab töödelda kuni 10 miljonit tagasisidekirjet ühe mudeli käivitamise kohta. Mudel saab analüüsida tagasiside kommentaare kuni 128 sõna. Kui tagasiside kommentaar on pikem, võetakse analüüsis arvesse ainult esimest 128 sõna.
-
-### <a name="data-requirements"></a>Andmenõuded
-  
-Vaja on järgmisi andmeatribuute.
-- Ühtne kliendi ID (UCID), et sobitada teksti tagasiside andmekirjed konkreetse kliendiga. See ID on andmete ühendamise protsessi [tulemus](data-unification.md).
+- Vähemalt [kaasautori õigused](permissions.md)
+- [Ühtse teksti](data-unification.md) tagasiside andmed. Soovitame tungivalt [konfigureerida tagasiside andmeolemid semantilist tüüpi tegevuse olemitena](map-entities.md#select-primary-key-and-semantic-type-for-attributes) (tagasiside tüüp).
+- Ühtne kliendi ID (UCID) alates andmete ühendamisest, et sobitada teksti tagasiside andmekirjed üksikkliendiga.
 - Tagasiside ID
 - Tagasiside ajatempel
-- Tagasiside tekst   
+- Tagasiside tekst
 
-> [!TIP]
-> Sentiment analüüs nõuab teksti tagasisidet oma klientidele. Praegu saab konfigureerida ainult ühte tagasisideolemit. Kui tagasisideolemeid on mitu, saate need Power Query enne andmete allaneelamise algust ühendada.
+Customer Insights suudab ühe mudelijooksu jaoks töödelda kuni 10 miljonit tagasisidekirjet. Mudel suudab analüüsida tagasiside kommentaare kuni 128 sõna. Kui tagasiside kommentaar on pikem, võetakse analüüsis arvesse ainult esimest 128 sõna.
 
-## <a name="configure-a-sentiment-analysis"></a>Tundeanalüüsi konfigureerimine 
+> [!NOTE]
+> Konfigureerida saab ainult ühte tagasiside olemit. Kui tagasisideolemeid on mitu, ühendage need Power Query enne andmete allaneelamist.
 
-1. Avage teenuses Customer Insights jaotised **Ärianalüüs** > **Prognoosid**.
+## <a name="configure-a-sentiment-analysis"></a>Sentimentanalüüsi konfigureerimine
 
-1. Valige paanil **Kliendi** tundeanalüüs **väärtus Kasuta mudelit**.
+1. Minge **luureprognooside** > **juurde**.
 
-1. Valige paanil **Kliendi tundeanalüüs (eelvaade)** käsk **Alustamine**.
+1. **Valige vahekaardil Loo** paanil Kliendi meeleolu analüüs (eelvaade) **suvand** Kasuta **mudelit**.
 
-1. Sisestage juhises **Mudeli** nimi **oma analüüsi jaoks nimi**. 
+1. Seejärel valige suvand **Alustamine**.
 
-1. **Esitage ettevõtte aspektiväljundi olemi nimi** ja **Sentimenti skoori väljundi olemi nimi**, seejärel valige **Edasi**.
+1. **Nimetage** analüüs ja esitage **äriaspekti väljundüksuse nimi** ja **Sentiment score väljundüksuse nimi**.
 
-1. Valige toimingus **Nõutav** andmesuvand **Lisa andmed**.
+1. Tehke valik **Edasi**.
 
-   :::image type="content" source="media/sentiment-add-data.png" alt-text="Lisage andmevoog sentimentianalüüsi mudelisse.":::
+1. Valige **Lisa andmeid** klientide tagasiside **jaoks**.
 
-1. Valige paanil **Andme** lisamine loendist semantiline tüüp **Tagasiside**.
+1. Valige semantilise tegevuse tüüp **Tagasiside**, mis sisaldab tagasiside andmeid. Kui tegevust pole seadistatud, valige **siin** ja looge see.
 
-   :::image type="content" source="media/sentiment-add-feedback-activities.png" alt-text="Konfiguratsioonietapp tagasiside tegevuste valimiseks tunnete analüüsiks.":::
+   :::image type="content" source="media/sentiment-add-feedback-activities.png" alt-text="Konfiguratsioonietapp tagasisidetegevuste valimiseks sentimentanalüüsiks.":::
 
-1. Valige selle tundeanalüüsi jaoks kasutatavad tegevused ja seejärel valige **Edasi**.
- 
-1. Vastendage oma andmete atribuudid mudeli atribuutidega. Valikute rakendamiseks valige **Salvesta**. 
+1. Valige selles meeleoluanalüüsis kasutatavad tegevused ja seejärel valige **Edasi**.
 
-1. Näete andmete vastendamise olekut. Jätkamiseks valige **Edasi**. 
+1. Vastendage andmetes olevad atribuudid mudeliatribuutidega. 
 
-1. **Kinnitage oma tunnete analüüsi konfiguratsiooni jaotises Mudeli üksikasjade** ülevaatamine oma tundeanalüüsi konfiguratsioon. Võite minna tagasi prognoos konfiguratsiooni mis tahes osa juurde. Analüüsi alustamiseks valige **Salvesta ja käivita.** 
+1. Valige **Salvesta**.
 
-   :::image type="content" source="media/sentiment-model-review-config.png" alt-text="Vaadake üle kõik konfigureeritud üksused kuvava tundemudeli etapp.":::
+1. Tehke valik **Edasi**. Etapp **Läbivaatus ja käivitamine** näitab konfiguratsiooni kokkuvõtet ja annab võimaluse teha muudatusi enne analüüsi loomist.
 
-1. Konfiguratsioonikogemusest lahkumiseks valige **Valmis**. Protsessi lõpuleviimiseks võib kuluda mitu tundi, sõltuvalt kasutatud andmete hulgast. 
+1. Valige **redigeeri mis** tahes juhis, mida soovite üle vaadata ja teha muudatusi.
 
-## <a name="review-analysis-status"></a>Analüüsi oleku ülevaatamine
+1. Kui olete oma valikutega rahul, valige mudeli käitamise alustamiseks Salvesta **ja käivita**. Valige nupp **Valmis**. Vahekaart Minu **ennustused** kuvatakse prognoos loomise ajal. Selle protsessi lõpule viimiseks võib kuluda mitu tundi, olenevalt prognoosis kasutatud andmete hulgast.
 
-1.  Minge jaotisse **Ärianalüüs** > **Prognoosid** ja valige vahekaart **Minu prognoosid**.
-2.  Valige prognoos, mille soovite üle vaadata.
-- **Prognoosi nimi**: prognoosi loomisel sellele pandud nimi.
-- **prognoos tüüp**: prognoos jaoks kasutatava mudeli tüüp.
-- **Väljundolem**: olemi nimi, kuhu talletatakse prognoosi väljund. Selle nimega olemi otsimiseks minge asukohta **Andmed** > **Olemid**.
-- **Prognoositav väli**: see väli täidetakse ainult kindlat tüüpi prognooside korral ja seda ei kasutata kliendi eluea väärtuse prognoosimisel.
-- **Olek**: prognoosi käitamise olek.
-  - **Järjekorras**: prognoos ootab muude protsesside lõpetamist.
-  - **Värskendamine**: prognoos töötab praegu, et luua tulemusi, mis sisestatakse väljundolemisse.
-  - **Nurjunud**: prognoosi käitamine nurjus. Lisateabe saamiseks vaadake üle logid.
-  - **Õnnestus**: prognoos on õnnestunud. Valige vertikaalsete kolmikpunktide alt suvand Kuva, et vaadata prognoos tulemusi.
-- **Redigeeritud**: prognoosi konfiguratsiooni muutmise kuupäev.
-- **Viimati värskendatud**: kuupäev, mil prognoos väljundiolemis värskendas tulemusi.
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
 
-## <a name="manage-sentiment-analysis"></a>Tunnete analüüsi haldamine
+## <a name="view-analysis-results"></a>Analüüsitulemuste vaatamine
 
-Ennustusi saate optimeerida, tõrkeotsingut, värskendada või kustutada. Vaadake sisendandmete kasutatavuse aruanne üle, et teada saada, kuidas muuta prognoos kiiremaks ja usaldusväärsemaks. Lisateavet leiate teemast [Prognooside haldamine](manage-predictions.md).
+1. Minge **luureprognooside** > **juurde**.
 
-## <a name="review-analysis-results"></a>Analüüsi tulemuste ülevaatamine
- 
-1. Minge jaotisse **Ärianalüüs** > **Prognoosid** ja valige vahekaart **Minu prognoosid**. 
-1. Valige selle prognoos nimi, mille puhul soovite tulemusi üle vaadata. Sellisel juhul valige tunnete analüüs, mida soovite üle vaadata. 
+1. **Valige vahekaardil Minu ennustused** prognoos soovite vaadata.
 
-### <a name="summary-tab"></a>Vahekaart Kokkuvõte
+Tulemustel on kaks vahekaarti.
 
-Tulemuste lehel on neli peamist andmejaotist. 
+### <a name="sumary-tab"></a>Tabel summaarne
 
-- **Keskmine tunnete skoor**: aitab teil mõista üldist tunnet kõigis klientides. Sentiment skoorid on rühmitatud kolme kategooriasse: 
-  1.    Negatiivne (-5 > 2)
-  2.    Neutraalne (-1 > 1)
-  3.    Positiivne (2> 5) 
+Tulemuste lehel on neli peamist andmejaotist.
+
+- **Keskmine sentimenti skoor**: sentimenti skoorid aitavad teil mõista kõigi klientide üldist meeleolu.
+  - **Negatiivne** (-5 > 2)
+  - **Neutraalne** (-1 > 1)
+  - **Positiivne** (2 > 5)
   
-  :::image type="content" source="media/overall-customer-sentiment.png" alt-text="Üldise klienditunde visuaalne esitus.":::
+  :::image type="content" source="media/overall-customer-sentiment.png" alt-text="Üldise kliendimeeleolu visuaalne esitus.":::
 
-- **Klientide jagamine sentimenti skoori** järgi: kliendid liigitatakse negatiivsetesse, neutraalsetesse ja positiivsetesse rühmadesse vastavalt nende tundetulemustele. Hõljutage histogrammi baaride kohal, et näha klientide arvu ja keskmist meeleolu skoori igas rühmas. Need andmed aitavad teil [luua klientide](segments.md) segmente nende tunnete skooride põhjal.  
+- **Klientide jaotus sentimentskoori** järgi: kliendid liigitatakse nende sentimentskooride põhjal negatiivsetesse, neutraalsetesse ja positiivsetesse rühmadesse. Hõljutage kursorit histogrammi ribade kohal, et näha klientide arvu ja keskmist meeleolu skoori igas rühmas. Need andmed aitavad teil [luua kliendisegmente](prediction-based-segment.md) nende sentimenti skooride põhjal.  
 
-  :::image type="content" source="media/distribution-customer-sentiment.png" alt-text="Lintdiagramm, mis näitab kliendi tundeid kolmes sentimentaalses rühmas.":::
+  :::image type="content" source="media/distribution-customer-sentiment.png" alt-text="Tulpdiagramm, mis näitab klientide meeleolu kolmes meeleolurühmas.":::
 
-- **Keskmine sentiment skoor aja** jooksul: Klientide meeleolu võib aja jooksul muutuda. Pakume trende teie klientide tunnetes teie andmete ajavahemiku kohta. See vaade aitab teil hinnata hooajaliste kampaaniate, tooteesitluste või muude ajaliselt piiritletud sekkumiste mõju klientide meeleolule. Graafiku vaatamiseks valige rippmenüüst huviaasta. 
+- **Keskmine sentimenti skoor aja** jooksul: kliendi meelestatus võib aja jooksul muutuda. Pakume trende teie klientide meeleoludes teie andmete ajavahemiku kohta. See vaade aitab teil hinnata hooajaliste kampaaniate, toodete turuletoomiste või muude ajaliselt piiritletud sekkumiste mõju klientide meeleolule. Vaadake graafikut, valides rippmenüüst huvipakkuva aasta.
 
-  :::image type="content" source="media/sentiment-score-over-time.png" alt-text="Ajaloo diagramm, mille tunnete skoor on aja jooksul esitatud reana.":::
- 
-- **Tunded kõigis äriaspektides**: selles tabelis on loetletud keskmine meeleolu äriaspektide lõikes. See aitab teil hinnata, millised teie ettevõtte aspektid juba rahuldavad kliente või aspekte, mis vajavad rohkem tähelepanu. Tagasisidekirjed, mis ei ühti ühegi toetatud äriaspektiga, liigitatakse jaotisse **Muu**. Tabel sorditakse vaikimisi tähestikulises järjekorras. Sortimist saate muuta, valides tabelipäise.
+  :::image type="content" source="media/sentiment-score-over-time.png" alt-text="Ajaloo diagramm, kus sentimentide skoor aja jooksul on esindatud joonena.":::
 
-  :::image type="content" source="media/sentiment-across-business-aspects.png" alt-text="Äriaspektide loend koos sellega seotud tundeväärtuse ja seda mainivate klientide arvuga.":::
- 
-  Valige ettevõtte aspekti nimi, et näha lisateavet selle kohta, kuidas mudel ettevõtte aspekti tuvastab. Sellel paanil on kaks osa: 
+- **Sentiment äriaspektide lõikes**: keskmine meeleolu äriaspektide lõikes aitab teil hinnata, millised teie ettevõtte aspektid juba rahuldavad kliente või vajavad rohkem tähelepanu. Tagasisidekirjed, mis ei ühti ühegi toetatud äriaspektiga, on liigitatud muu **alla**. Sortige andmeid, valides mis tahes veeru.
 
-  - **Mõjukad sõnad**: kuvab peamised sõnad, mis mõjutasid tehisintellekti mudeli äriaspekti tuvastamist klientide tagasisides. 
-    **Solvavate sõnade** kuvamine: võimaldab teil lisada loendisse solvavaid sõnu klientide tagasiside algsetest andmetest. Vaikimisi on see välja lülitatud.  Solvav sõna maskeerimine on varustatud AI mudeliga ja ei pruugi tuvastada kõiki solvavaid sõnu. Jätkame klassifikaatori itereerimist ja koolitamist optimaalse jõudluse saavutamiseks. Kui avastate solvava sõna, mida ei filtreeritud ootuspäraselt, andke meile sellest teada. 
-    
-    :::image type="content" source="media/offensive-words-sentiment.png" alt-text="Nimekiri mõjukatest sõnadest, millel on tumbler, et näidata või peita solvavaid sõnu.":::
- 
-  - **Tagasiside näidised**: kuvab teie andmetes tegelikud tagasisidekirjed. Sõnad on värvikoodiga vastavalt nende mõjule ettevõtte aspekti tuvastamisele. 
+  :::image type="content" source="media/sentiment-across-business-aspects.png" alt-text="Äriaspektide loetelu koos sellega seotud sentimentväärtusega ja seda mainivate klientide arv.":::
 
+  Valige äriaspekti nimi, et näha, kuidas mudel äriaspekti tuvastab.
 
-### <a name="influential-words-analysis-tab"></a>Vahekaart Mõjukate sõnade analüüs
+  - **Mõjukad sõnad**: peamised sõnad, mis mõjutasid tehisintellekti mudeli äriaspekti tuvastamist klientide tagasisides.
+    **Kuva solvavad sõnad**: võimaldab lisada loendisse solvavaid sõnu klientide tagasiside algandmete põhjal. Vaikimisi on see välja lülitatud.  Solvavate sõnade maskeerimine põhineb tehisintellekti mudelil ja ei pruugi tuvastada kõiki solvavaid sõnu. Kui tuvastate solvava sõna, mida ei filtreeritud ootuspäraselt, andke meile sellest teada.
 
-Täiendava teabe osas on kolm osa, mis selgitavad, kuidas sentiment mudel töötab.
+    :::image type="content" source="media/offensive-words-sentiment.png" alt-text="Loend mõjukatest sõnadest, mille lüliti näitab või peidab solvavaid sõnu.":::
+
+  - **Tagasiside näidised**: tegelikud tagasisidekirjed teie andmetes. Sõnad on värvikoodiga vastavalt nende mõjule äriaspekti tuvastamisele.
+
+### <a name="influential-words-analysis-tab"></a>Mõjukate sõnade analüüsi vahekaart
+
+On kolm osa lisateabest, mis selgitavad, kuidas meeleolumudel töötab.
   
-1. **Peamised sõnad, mis aitavad kaasa positiivsele tundele**: näitab tippsõnu, mis mõjutasid AI-mudeli positiivse tunde tuvastamist klientide tagasisides.  
-2. **Peamised sõnad, mis aitavad kaasa negatiivsele tundele**: näitab peamisi sõnu, mis mõjutasid AI-mudeli negatiivse tunde tuvastamist klientide tagasisides.  
-3. **Tagasiside näidised**: Kuvab tegelikud tagasisidekirjed, millest üks on negatiivse tundega ja teine positiivse tundega. Tagasisidekirjetes olevad sõnad tõstetakse esile vastavalt nende panusele määratud tundeskoori. Sõnad, mis aitavad kaasa positiivsele meeleolu skoorile, tõstetakse esile roheliselt. Negatiivsele skoorile kaasa aitavad sõnad tõstetakse esile punaselt.
-   Valige **Kuva rohkem**, et laadida rohkem tagasisidenäidiseid, mis annavad lisateavet ja konteksti selle kohta, kuidas sentimentimudel töötab.
-   
-   :::image type="content" source="media/sentiment-feedback-samples.png" alt-text="Näited klientide tagasiside sentimenti analüüsist.":::
- 
-**Solvavate sõnade** kuvamine: võimaldab teil lisada loendisse solvavaid sõnu klientide tagasiside algsetest andmetest. Vaikimisi on see välja lülitatud.  Solvav sõna maskeerimine on varustatud AI mudeliga ja ei pruugi tuvastada kõiki solvavaid sõnu. Jätkame klassifikaatori itereerimist ja koolitamist optimaalse jõudluse saavutamiseks. Kui avastate solvava sõna, mida ei filtreeritud ootuspäraselt, andke meile sellest teada. 
+- **Peamised sõnad, mis aitavad kaasa positiivsele meeleolule**: peamised sõnad, mis mõjutasid tehisintellekti mudeli positiivse meeleolu tuvastamist klientide tagasisides.  
 
-## <a name="act-on-analysis-results"></a>Analüüsitulemuste seadus
+- **Peamised sõnad, mis aitavad kaasa negatiivsele meeleolule**: peamised sõnad, mis mõjutasid tehisintellekti mudeli negatiivse meeleolu tuvastamist klientide tagasisides.
 
-Tundeanalüüsi tulemuste lehelt saate hõlpsalt alustada uute kliendisegmentide loomist, valides **mudeli tulemilehe ülaosas suvandi Loo segmendid**.
+- **Tagasiside näidised**: tegeliku tagasiside kirjed, üks negatiivse ja teine positiivse meeleoluga. Tagasisidekirjetes olevad sõnad tõstetakse esile vastavalt nende panusele määratud tundeskoori. Sõnad, mis aitavad kaasa positiivse meeleolu skoorile, on esile tõstetud rohelisega. Negatiivsele skoorile kaasaaitavad sõnad on punasega esile tõstetud.
+   Rohkemate tagasisidenäidiste laadimiseks valige **Kuva rohkem**.
+  
+   :::image type="content" source="media/sentiment-feedback-samples.png" alt-text="Näited sentimentanalüüsist klientide tagasiside kohta.":::
 
-:::image type="content" source="media/create-segment-model.png" alt-text="Käsuriba koos prognoos mudelite suvanditega.":::
- 
-## <a name="potential-bias"></a>Potentsiaalne kallutatus
+**Kuva solvavad sõnad**: võimaldab lisada loendisse solvavaid sõnu klientide tagasiside algandmete põhjal. Vaikimisi on see välja lülitatud.  Solvavate sõnade maskeerimine põhineb tehisintellekti mudelil ja ei pruugi tuvastada kõiki solvavaid sõnu. Kui tuvastate solvava sõna, mida ei filtreeritud ootuspäraselt, andke meile sellest teada.
 
-Nagu iga omaduse puhul, mis kasutab ennustavat tehisintellekti, peaksite olema teadlik võimalikust kallutatusest andmetes, mida kasutate klientide meeleolu ennustamiseks. Näiteks kui kogute tagasisidet ainult digitaalselt, võite jääda ilma tagasisidest klientidelt, kes tegelevad teiega peamiselt isiklikult, mis võib mõjutada funktsiooni väljundit.
+## <a name="act-on-analysis-results"></a>Analüüsitulemuste põhjal tegutsemine
 
-Kuna see funktsioon kasutab andmete hindamiseks ja nende põhjal prognooside tegemiseks automatiseeritud vahendeid, on tal seega võimalus kasutada profiilide koostamise meetodina, kuna see mõiste on määratletud isikuandmete kaitse üldmäärusega (GDPR). Selle funktsiooni kasutamise kohta andmete töötlemisel võib kehtida kas GDPR või muud seadused või määrused. Teie vastutate Dynamics 365 Customer Insights selle eest, et teie (sh tunnete analüüs) kasutamine oleks kooskõlas kõigi kohaldatavate seaduste ja määrustega, sealhulgas privaatsuse, isikuandmete, biomeetriliste andmete, andmekaitse ja suhtluse konfidentsiaalsusega seotud seadustega.
+Sentimentanalüüsi tulemuste põhjal uute kliendisegmentide loomiseks valige **mudeli tulemuse lehe ülaosas suvand Loo segmendid**.
+
+## <a name="potential-bias"></a>Võimalik kallutatus
+
+Nagu iga funktsiooni puhul, mis kasutab ennustavat tehisintellekti, võib ka klientide meeleolu ennustamiseks kasutatavates andmetes olla potentsiaalne kallutatus. Näiteks kui kogute tagasisidet ainult digitaalselt, võite jääda ilma tagasisidest klientidelt, kes teiega peamiselt isiklikult äri ajavad, mis mõjutab funktsiooni väljundit.
+
+Kuna see funktsioon kasutab andmete hindamiseks ja nende põhjal prognooside tegemiseks automatiseeritud vahendeid, on seda võimalik kasutada profiilianalüüsi meetodina, kuna see mõiste on määratletud isikuandmete kaitse üldmääruses ("GDPR"). Selle funktsiooni kasutamise kohta andmete töötlemisel võib kehtida kas GDPR või muud seadused või määrused. Teie vastutate selle eest, et teie kasutamine Dynamics 365 Customer Insights, sealhulgas sentimentanalüüs, vastab kõigile kohaldatavatele seadustele ja määrustele, sealhulgas privaatsuse, isikuandmete, biomeetriliste andmete, andmekaitse ja side konfidentsiaalsusega seotud seadustele.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
 
