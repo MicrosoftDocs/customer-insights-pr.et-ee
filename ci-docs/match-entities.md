@@ -1,8 +1,8 @@
 ---
-title: Vastendamistingimused andmete ühendamiseks
+title: Andmete ühendamise tingimuste vastendamine
 description: Viige olemid vastavusse, et luua koondatud kliendiprofiile.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,115 +14,115 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304652"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721516"
 ---
-# <a name="match-conditions-for-data-unification"></a>Vastendamistingimused andmete ühendamiseks
+# <a name="match-conditions-for-data-unification"></a>Andmete ühendamise tingimuste vastendamine
 
-See ühendamise etapp määratleb vastejärjekorra ja olemiülese vastendamise reeglid. See etapp nõuab vähemalt kahte olemit.
+See ühtlustamise etapp määratleb vastendusjärjestuse ja olemiülese vastendamise reeglid. See samm nõuab vähemalt kahte üksust.
 
 > [!NOTE]
-> Kui olete vastendustingimused loonud ja valite suvandi **Edasi**, ei saa te valitud olemit või atribuuti eemaldada. Vajadusel valige **Tagasi**, et vaadata valitud olemid ja atribuudid enne jätkamist üle.
+> Kui olete vastetingimused loonud ja valinud **Edasi**, ei saa te valitud olemit ega atribuuti eemaldada. Vajadusel valige **Tagasi**, et valitud olemid ja atribuudid enne jätkamist üle vaadata.
 
 [!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Rikastatud olemite kaasamine (eelvaade)
 
-Kui rikastasite olemeid andmeallikas tasemel, et aidata ühendamise tulemusi parandada, valige need. Lisateavet leiate teemast [Andmeallikate](data-sources-enrichment.md) rikastamine. Kui valisite rikastatud olemid **lehel Kirjete** dubleerimine, ei pea te neid uuesti valima.
+Kui rikastasite üksusi andmeallikas tasemel, et aidata ühtlustamise tulemusi parandada, valige need. Lisateavet leiate teemast [Andmeallikate rikastamine](data-sources-enrichment.md). Kui valisite rikastatud olemid **lehel Kirjete** dubleerimine, ei pea te neid uuesti valima.
 
-1. **Valige lehel Vastavusse viimise tingimused** lehe ülaosas suvand **Kasuta rikastatud olemeid**.
+1. Lehel **Sobivad tingimused** valige **lehe ülaosas käsk Kasuta rikastatud olemeid**.
 
-1. **Valige paanilt Rikastatud olemite** kasutamine üks või mitu rikastatud olemit.
+1. Valige paanil **Kasuta rikastatud olemeid üks või mitu rikastatud olemit**.
 
 1. Valige nupp **Valmis**.
 
 ## <a name="specify-the-match-order"></a>Vastendamisjärjestuse määramine
 
-Iga vaste ühendab kaks või enam olemit üheks, konsolideeritud olemiks. Samal ajal säilitab see kordumatud kliendikirjed. Vastete järjekord näitab järjekorda, milles süsteem üritab kirjeid sobitada.
+Iga vaste ühendab kaks või enam olemit üheks, konsolideeritud olemiks. Samal ajal säilitab see kordumatud kliendikirjed. Vastendusjärjestus näitab järjekorda, milles süsteem üritab kirjeid sobitada.
 
 > [!IMPORTANT]
-> Esimest olemit nimetatakse esmaseks olemiks, mis on teie ühtsete profiilide aluseks. Sellele olemile lisatakse täiendavad valitud olemid.
+> Esimest olemit nimetatakse esmaseks olemiks, mis on aluseks teie ühendatud profiilidele. Sellele olemile lisatakse täiendavad valitud olemid.
 >
 > Olulised kaalutlused:
 >
-> - Valige peamiseks olemiks olem, millel on teie klientide kohta kõige täielikumad ja usaldusväärsemad profiiliandmed.
-> - Valige esmaseks olemiks olem, millel on mitu teiste olemitega ühist atribuuti (nt nimi, telefoninumber või meiliaadress).
+> - Valige olem, millel on kõige täielikumad ja usaldusväärsemad profiiliandmed teie klientide kui peamise olemi kohta.
+> - Valige olem, millel on teiste olemitega mitu ühist atribuuti (nt nimi, telefoninumber või meiliaadress), mis on peamine olem.
 
-1. **Kasutage lehel Tingimuste sobitamine** olemite teisaldamiseks soovitud järjestuses üles- ja allanooli või lohistage neid. Näiteks valige **esmaseks olemiks eCommerceCustomers** ja **teiseks olemiks LoyCustomers**.
+1. Kasutage **lehel Sobivad tingimused** üles- ja allaliigutamise nooli, et teisaldada olemid soovitud järjestuses või lohistada neid. Näiteks valige **peamiseks olemiks eCommerceCustomers** ja **teiseks olemiks püsikliendid**.
 
-1. Kui soovite, et iga olemi kirje oleks kordumatu klient, olenemata sellest, kas vaste leitakse, valige **Kaasa kõik kirjed**. Kõik selle olemi kirjed, mis ei ühti ühegi teise olemi kirjetega, kaasatakse ühtsesse profiili. Kirjeid, millel pole vastet, nimetatakse singletoniteks.
+1. Kui soovite, et olemis oleks iga kirje kordumatu klient, olenemata sellest, kas vaste leitakse, valige **Kaasa kõik kirjed**. Kõik selle olemi kirjed, mis ei ühti ühegi teise olemi kirjetega, kaasatakse ühtsesse profiili. Kirjeid, millel pole vastet, nimetatakse singletonsiks.
   
-Esmane olem *Kontaktid:e-kaubandus* vastendatakse järgmise olemiga *CustomerLoyalty:Loyalty*. Esimesest vastendusetapist tulenev andmekogum vastendatakse järgmise olemiga, kui teil on rohkem kui kaks olemit.
+Peamine olem Kontaktid:e-kaubandus *vastendatakse järgmise olemiga* *CustomerLoyalty:Loyalty*. Esimesest vasteetapist tulenev andmekogum vastendatakse järgmise olemiga, kui teil on rohkem kui kaks olemit.
 
-:::image type="content" source="media/m3_match.png" alt-text="Olemite valitud vastendusjärjestuse kuvatõmmis." lightbox="media/m3_match.png":::
+:::image type="content" source="media/m3_match.png" alt-text="Olemite jaoks valitud vastendusjärjestuse kuvatõmmis." lightbox="media/m3_match.png":::
 
 ## <a name="define-rules-for-match-pairs"></a>Vastepaaride reeglite määratlemine
 
 Vastendamisreeglid määratlevad loogika, mille alusel vastendatakse kindlat olemite paari. Reegel koosneb ühest või mitmest tingimusest.
 
-Olemi nime kõrval olev hoiatus tähendab, et vastepaari jaoks pole vastereeglit määratletud.
+Olemi nime kõrval olev hoiatus tähendab, et vastepaari jaoks pole vaste reeglit määratletud.
 
-1. Vastendusreeglite **määratlemiseks valige** olemipaari jaoks lisa reegel.
+1. Vastereeglite määratlemiseks valige **Olemipaari jaoks käsk Lisa reegel**.
 
-1. Konfigureerige reegli **tingimused paanil Reegli lisamine**.
+1. **Konfigureerige paanil Lisa reegel** reegli tingimused.
 
-   :::image type="content" source="media/m3_add_rule.png" alt-text="Reegli lisamise paani kuvatõmmis.":::
+   :::image type="content" source="media/m3_add_rule.png" alt-text="Paani Lisa reegel kuvatõmmis.":::
 
-   - **Valige Olem/väli (esimene rida):**: valige olem ja atribuut, mis on tõenäoliselt kliendile ainuomane. Näiteks telefoninumber või meiliaadress. Vältige vastendamist tegevustüübi atribuutide järgi. Näiteks ei leia ostu ID tõenäoliselt teiste kirjetüüpide puhul vasteid.
+   - **Valige Olem/väli (esimene rida)**: valige olem ja atribuut, mis on tõenäoliselt kliendile ainuomane. Näiteks telefoninumber või meiliaadress. Vältige vastendamist tegevustüübi atribuutide järgi. Näiteks ei leia ostu ID tõenäoliselt teiste kirjetüüpide puhul vasteid.
 
-   - **Valige Olem/väli (teine rida):**: valige atribuut, mis on seotud esimesel real määratud olemi atribuudiga.
+   - **Valige Olem/väli (teine rida):** valige atribuut, mis on seotud esimesel real määratud olemi atribuudiga.
 
    - **Normaliseeri**: valige valitud atribuutide puhul mõni järgmistest normaliseerimissuvanditest.
-     - **Numbrid**: teisendab muud numbrisüsteemid (nt rooma numbrid) araabia numbriteks. *VIII* asemel on kasutusel *8*.
-     - **Sümbolid**: eemaldab kõik sümbolid ja erimärgid. Tekstist *Head&Shoulder* saab tekst *HeadShoulder*.
-     - **Tekst väiketähtedeks**: teisendab kõik märgid väiketähtedeks. Tekstist *ALL CAPS ja Title Case* saab *all caps ja title case*.
-     - **Tüüp (telefon, nimi, aadress, organisatsioon):**: standardiseerib nimed, tiitlid, telefoninumbrid, aadressid ja organisatsioonid.
-     - **Unicode ascii-ks**: teisendab unicode’i märke ASCII-märkideks. */u00B2* asemel on kasutusel *2*.
+     - **Numbrid: teisendab muud numbrisüsteemid, näiteks rooma numbrid**, araabia numbriteks. *VIII* asemel on kasutusel *8*.
+     - **Sümbolid: eemaldab kõik sümbolid** ja erimärgid. Tekstist *Head&Shoulder* saab tekst *HeadShoulder*.
+     - **Tekst väiketähtedeks: teisendab kõik märgid väiketähtedeks**. Tekstist *ALL CAPS ja Title Case* saab *all caps ja title case*.
+     - **Tüüp (telefon, nimi, aadress, organisatsioon)**: standardiseerib nimed, tiitlid, telefoninumbrid, aadressid ja organisatsioonid.
+     - **Unicode to ASCII: teisendab Unicode’i märke ASCII** märkideks. */u00B2* asemel on kasutusel *2*.
      - **Tühik**: eemaldab kõik tühikud. Tekstist *Hello   World* saab tekst *HelloWorld*.
 
    - **Täpsus**: saate määrata selle tingimuse jaoks rakendatava täpsustaseme.
-     - **Põhiline**: valige *madala (30%)*, *keskmise (60%)*, *kõrge (80%)* ja *täpse (100%) vahel*. Valige **Täpne**, et vastendada ainult kirjeid, mis vastavad 100 protsendile.
+     - **Põhiline**: valige madala (30%), *keskmise* (60%)*,* kõrge (80%) ja *täpse (100%)* *vahel*. Valige **Täpne**, et vastendada ainult 100 protsendile vastavaid kirjeid.
      - **Kohandatud**: saate määrata protsendi, millele kirjed peavad vastama. Süsteem vastendab ainult seda läve ületavad kirjed.
 
    - **Nimi**: reegli nimi.
 
-1. Olemite vastendamiseks ainult siis, kui atribuudid vastavad mitmele tingimusele, valige **Lisa** > **tingimus**, et lisada vastendusreeglile rohkem tingimusi. Tingimused on ühendatud loogika tehtemärkiga AND ja käivitatakse seega ainult juhul, kui kõik tingimused on täidetud.
+1. Olemite vastendamiseks ainult siis, kui atribuudid vastavad mitmele tingimusele, valige **Lisa** > **tingimus,** et lisada vastereeglile rohkem tingimusi. Tingimused on ühendatud loogika tehtemärkiga AND ja käivitatakse seega ainult juhul, kui kõik tingimused on täidetud.
 
-1. Soovi korral kaaluge täpsemaid suvandeid, nagu [erandid](#add-exceptions-to-a-rule) või [kohandatud vaste tingimused](#specify-custom-match-conditions).
+1. Soovi korral kaaluge täpsemaid valikuid, nagu [erandid](#add-exceptions-to-a-rule) või [kohandatud vastetingimused](#specify-custom-match-conditions).
 
-1. Reegli lõpuleviimiseks valige **Valmis**.
+1. Reegli lõpetamiseks valige **Valmis**.
 
 1. Võite ka [rohkem reegleid lisada](#add-rules-to-a-match-pair).
 
 1. Klõpsake valikut **Edasi**.
 
 > [!div class="nextstepaction"]
-> [Järgmine samm: Väljade ühendamine](merge-entities.md)
+> [Järgmine etapp: väljade ühendamine](merge-entities.md)
 
 ### <a name="add-rules-to-a-match-pair"></a>Reeglite lisamine vastepaarile
 
-Vastendusreeglid esindavad tingimuste kogumeid. Olemite vastendamiseks tingimustega, mis põhinevad mitmel atribuudil, lisage veel reegleid.
+Vastendusreeglid esindavad tingimuste kogumeid. Olemite vastendamiseks mitmel atribuudil põhinevate tingimustega lisage veel reegleid.
 
-1. Valige **olemi puhul, millele soovite reegleid lisada, käsk Lisa reegel**.
+1. Valige **Lisa reegel** olemi kohta, millele soovite reegleid lisada.
 
 1. Järgige teema [Vastepaaride reeglite määratlemine](#define-rules-for-match-pairs) juhiseid.
 
 > [!NOTE]
-> Reeglite järjekorda on oluline. Sobitamisalgoritm proovib sobitada antud kliendikirjet teie esimese reegli alusel ja jätkab teise reegliga ainult siis, kui esimese reegliga vasteid ei tuvastatud.
+> Reeglite järjekorda on oluline. Sobitamisalgoritm proovib sobitada antud kliendikirjet teie esimese reegli alusel ja jätkab teise reegliga ainult siis, kui esimese reegliga ei tuvastatud ühtegi vastet.
 
 ## <a name="advanced-options"></a>Täpsemad suvandid
 
 ### <a name="add-exceptions-to-a-rule"></a>Reeglile erandite lisamine
 
-Enamikul juhtudel viib olemi vaste kordumatute kliendiprofiilideni konsolideeritud andmetega. Harvaesinevate valepositiivsete ja valenegatiivsete juhtumite lahendamiseks määratlege vastereegli erandid. Erandid rakendatakse pärast vastereeglite töötlemist ja välditakse kõigi erandite kriteeriumidele vastavate kirjete sobitamist.
+Enamikul juhtudel viib olemi vastendamine konsolideeritud andmetega kordumatute kliendiprofiilideni. Harvaesinevate valepositiivsete ja valenegatiivsete juhtumite lahendamiseks määratlege vastereegli erandid. Erandid rakendatakse pärast vastendamisreeglite töötlemist ja välditakse kõigi erandikriteeriumidele vastavate kirjete vastendamist.
 
-Näiteks kui teie mängureegel ühendab perekonnanimi, linna ja sünnikuupäeva, tuvastab süsteem sama perekonnanimi kaksikud, kes elavad sama profiiliga samas linnas. Saate määrata erandi, mis ei vasta profiilidele, kui ühendatavate olemite eesnimi pole samad.
+Näiteks kui teie vaste reegel ühendab perekonnanimi, linna ja sünnikuupäeva, tuvastab süsteem sama perekonnanimi kaksikud, kes elavad sama profiiliga samas linnas. Saate määrata profiilidele mittevastava erandi, kui ühendatavate olemite eesnimi pole samad.
 
-1. **Valige reegli** redigeerimise paanil **Lisa** > **erand**.
+1. **Valige paanil Reegli** redigeerimine käsk **Lisa** > **erand**.
 
 1. Määrake erandi kriteeriumid.
 
@@ -130,47 +130,50 @@ Näiteks kui teie mängureegel ühendab perekonnanimi, linna ja sünnikuupäeva,
 
 ### <a name="specify-custom-match-conditions"></a>Kohandatud vastetingimuste määramine
 
-Saate määrata tingimused, mis alistavad vaste vaikeloogika. Saadaval on neli võimalust:
+Määrake tingimused, mis alistavad vaste vaikeloogika. Saadaval on neli võimalust:
 
 |Variant  |Kirjeldus |Näide  |
 |---------|---------|---------|
-|Ühtib alati     | Määratleb väärtused, mis on alati vastendatud.         |  *Sobitage alati Mike* ja *MikeR*.       |
-|Ei ühti kunagi     | Määratleb väärtused, mis kunagi ei ühti.        | Ärge kunagi sobitage *Johni* ja *Jonathaniga*.        |
-|Möödu            | Määratleb väärtused, mida süsteem peaks vaste faasis alati ignoreerima. |  Ignoreerige vaste ajal väärtusi *11111* ja *Tundmatu*.        |
-|Pseudonüümi vastendus    | Väärtuste määratlemine, mida süsteem peaks pidama samaks väärtuseks.         | Arvake *, et Joe* on Josephiga *võrdne*.        |
+|Ühtib alati     | – saate määratleda alati vastendatud primaarvõtmete väärtused.         |  Sobitage primaarvõtmega 12345 *rida alati primaarvõtmega* *54321 reaga*.       |
+|Ei ühti kunagi     | – saate määratleda primaarvõtmete väärtused, mis kunagi ei ühti.        | Ärge kunagi sobitage primaarvõtmega 12345 *rida primaarvõtmega* *54321* reaga.        |
+|Möödu            | Määratleb väärtused, mida süsteem peaks vastefaasis alati ignoreerima. |  Ignoreerige vaste ajal väärtusi *11111* ja *Tundmatu.*        |
+|Pseudonüümi vastendus    | Väärtuste määratlemine, mida süsteem peaks pidama samaks väärtuseks.         | Arvake, *et Joe* on Josephiga *võrdne*.        |
 
 1. Valige **Kohandatud**.
 
-   :::image type="content" source="media/m3_match_custom.png" alt-text="Kohandatud nupp":::
+   :::image type="content" source="media/m3_match_custom.png" alt-text="Nupp Kohandatud":::
 
-1. Valige **kohandatud tüüp** ja valige **Laadi mall alla**. Iga vastevaliku jaoks on vaja eraldi malli.
+1. Valige kohandatud **tüüp ja valige** Laadi mall **alla**. Nimetage mall ümber tühikuid kasutamata. Kasutage iga vaste valiku jaoks eraldi malli.
 
-1. Avage allalaaditud mallifail ja sisestage üksikasjad. Mall sisaldab välju, et täpsustada kohandatud vastendamise olemit ja olemi primaarvõtme väärtusi. Näiteks kui soovite, et esmane võti *12345* olemist *Müük* vastaks alati esmasele võtmele *34567* olemist *Kontakt*, täitke järgmine mall.
-    - Entity1: Sales
-    - Entity1Key: 12345
-    - Entity2: Contact
-    - Entity2Key: 34567
+1. Avage allalaaditud mallifail ja sisestage üksikasjad. Mall sisaldab välju, et täpsustada kohandatud vastendamise olemit ja olemi primaarvõtme väärtusi. Olemite nimed on tõstutundlikud. Näiteks kui soovite, et esmane võti *12345* olemist *Müük* vastaks alati esmasele võtmele *34567* olemist *Kontakt*, täitke järgmine mall.
+   - Entity1: Sales
+   - Entity1Key: 12345
+   - Entity2: Contact
+   - Entity2Key: 34567
 
    Sama malli fail suudab määratleda mitme olemi kohandatud vastendamiskirjeid.
 
-   Kui soovite olemi pöördduplitseerimise määrata kohandatud sobitamisega, sisestage Entity1 ja Entity2 sama olem ja määrake erinevad primaarvõtmed.
+   > [!NOTE]
+   > Kui soovite olemi pöördduplitseerimise määrata kohandatud sobitamisega, sisestage Entity1 ja Entity2 sama olem ja määrake erinevad primaarvõtmed. Kohandatud vastendamise kasutamiseks peate olemile määratlema vähemalt ühe duplikaadieemaldusreegli.
 
 1. Pärast kõigi alistamiste lisamist salvestage mallifail.
 
 1. Minge jaotisse **Andmed** > **Andmeallikad** ja valmendage mallifailid uute olemitena.
 
-1. Pärast failide üleslaadimist valige **uuesti suvand Kohandatud**. Valige rippmenüüst soovitud olemid ja valige **Valmis**.
+1. Pärast failide üleslaadimist valige **uuesti suvand Kohandatud**. Valige rippmenüüst vajalikud olemid ja valige **Valmis**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Dialoogi kuvatõmmis, mis näitab, kuidas valida kohandatud vastendusstsenaariumi alistamised.":::
 
-1. Kohandatud vaste rakendamine sõltub vaste valikust, mida soovite kasutada.
+1. Kohandatud vaste rakendamine sõltub vastesuvandist, mida soovite kasutada.
 
-   - Kui **soovite alati sobitada** või **mitte kunagi sobitada**, jätkake järgmise sammuga.
-   - Väljal **Ümberminek** või **pseudonüümi vastendamine** valige **Redigeeri** olemasolevas vastereeglis või looge uus reegel. Valige ripploendist Normaliseerimised **suvand Kohandatud ümbersõit** või **Pseudonüümi vastendus** ja valige **Valmis**.
+   - Funktsiooni Alati **vaste** või **Mitte kunagi sobitamiseks** jätkake järgmise juhisega.
+   - Möödaviigu **või** pseudonüümi vastendamiseks **valige** Redigeeri **olemasoleval vastereeglil või** loo uus reegel. Valige **ripploendis Normaliseerimised suvand Kohandatud ümbersõit** või **Pseudonüümi vastendamine** ja valige **Valmis**.
 
-1. Kohandatud vaste **konfiguratsiooni rakendamiseks valige** Kohandatud **paanil Valmis**.
+1. Kohandatud vaste konfiguratsiooni rakendamiseks valige paanil **Kohandatud** **suvand Valmis**.
+
+   Igal allaneelatud mallifailil on oma andmeallikas. Kui avastatakse kirjeid, mis vajavad spetsiaalset sobitamist, värskendage sobivat andmeallikas. Värskendust kasutatakse järgmise ühendamisprotsessi ajal. Näiteks tuvastate peaaegu sama nimega kaksikud, kes elavad samal aadressil, mis oli liidetud üheks inimeseks. Värskendage andmeallikas, et tuvastada kaksikud eraldi unikaalsete kirjetena.
 
 > [!div class="nextstepaction"]
-> [Järgmine samm: Väljade ühendamine](merge-entities.md)
+> [Järgmine etapp: väljade ühendamine](merge-entities.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
