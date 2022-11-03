@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 449d2c5e32697e4a5d2c9dff4a5a1cbdb26aeb4d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: b4b14ba9de2c7e20175fac664a705f2212a411fd
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195055"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724752"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Segmentide eksportimine Autopilot'isse (eelversioon)
 
@@ -28,7 +28,8 @@ Saate eksportida ühendatud kliendiprofiilide segmente Autopiloti kontaktiloendi
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni 100 000 kliendiprofiili ühe ekspordi kohta Autopiloodile, mille täitmine võib võtta kuni paar tundi. Kliendiprofiilide arv, mida saate Autopiloodile eksportida, sõltub teie lepingust Autopilotiga.
+- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
+- Kuni 100 000 kliendiprofiili autopiloodile eksportimise kohta, mille täitmine võib võtta kuni paar tundi. Autopiloodile eksporditavate kliendiprofiilide arv sõltub teie lepingust Autopilotiga.
 - Ainult segmendid.
 
 ## <a name="set-up-connection-to-autopilot"></a>Ühenduse loomine Autopilot'iga
@@ -37,7 +38,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente Autopiloti kontaktiloendi
 
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **Autopilot**.
+1. Valige **Lisa ühendus** ja valige **Autopiloot**.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
@@ -45,7 +46,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente Autopiloti kontaktiloendi
 
 1. Sisestage oma Autopiloti API võti.
 
-1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse lähtestamiseks valige **Ühenda**.
 
@@ -59,7 +60,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente Autopiloti kontaktiloendi
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige **Lisa eksport**.
+1. Valige **Lisa eksport.**
 
 1. Valige **Ekspordiühendus** väljal ühendus Autopilot jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
@@ -67,7 +68,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente Autopiloti kontaktiloendi
 
 1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi.
 
-1. Soovi korral eksportige muid välju, näiteks **eesnimi** ja **perekonnanimi**.
+1. Soovi korral eksportige muid välju (nt **eesnimi** ja **perekonnanimi**).
 
 1. Valige segmendid, mida soovite eksportida, järgides teadaolevaid piiranguid.
 

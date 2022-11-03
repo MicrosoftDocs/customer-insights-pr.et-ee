@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195745"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724673"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Segmentide eksportimine AdRoll-i (eelversioon)
 
@@ -21,14 +21,15 @@ Eksportige kliendi koondprofiili segmendid AdRolli ja kasutage neid reklaamimise
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- [AdRolli konto](https://www.adroll.com/) ja vastavad administraatori mandaadid.
+- AdRolli [konto](https://www.adroll.com/) ja vastavad administraatori identimisteabed.
 - AdRolli [reklaamija ID](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 - [Konfigureeritud segmendid](segments.md) Customer Insightsis.
 - Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni 250 000 kliendiprofiili ühe ekspordi kohta AdRolli, mille täitmine võib võtta kuni 10 minutit. Kliendiprofiilide arv, mida saate AdRolli eksportida, sõltub teie lepingust AdRolliga.
+- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
+- Kuni 250 000 kliendiprofiili AdRolli eksportimise kohta, mille täitmine võib võtta kuni 10 minutit. AdRolli eksporditavate kliendiprofiilide arv sõltub teie lepingust AdRolliga.
 - Ainult segmendid. Segment peab sisaldama vähemalt 100 kliendiprofiili.
 
 ## <a name="set-up-connection-to-adroll"></a>Ühenduse loomine AdRoll'iga
@@ -43,7 +44,7 @@ Eksportige kliendi koondprofiili segmendid AdRolli ja kasutage neid reklaamimise
 
 1. Valige, kes saavad seda ühendust kasutada. Vaikimisi on see ainult Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse lähtestamiseks valige **Ühenda**.
 
@@ -59,7 +60,7 @@ Eksportige kliendi koondprofiili segmendid AdRolli ja kasutage neid reklaamimise
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige **Lisa eksport**.
+1. Valige **Lisa eksport.**
 
 1. Valige **Ekspordiühendus** väljal ühendus AdRoll jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 82303c7bcb269ee68419c9639ee743e13451f273
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196297"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724543"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Segmentide eksportimine Campaign Monitori (eelversioon)
 
@@ -21,15 +21,16 @@ Saate eksportida ühendatud kliendiprofiilide segmente Campaign Monitori ja kasu
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- Kampaaniamonitori [konto](https://www.campaignmonitor.com/) ja vastav administraatori identimisteave.
-- [Kampaaniamonitori loendi ID](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
-- Kampaaniamonitori [konto seadetest](https://www.campaignmonitor.com/api/getting-started/)**loodud API-võti** API loendi ID hankimiseks.
+- Kampaania [jälgimise konto](https://www.campaignmonitor.com/) ja vastavad administraatori mandaadid.
+- Kampaania [jälgimisloendi ID](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
+- [Loodud API-võti](https://www.campaignmonitor.com/api/getting-started/) kampaaniamonitori kontoseadetest **API**-loendi ID hankimiseks.
 - [Konfigureeritud segmendid](segments.md) Customer Insightsis.
 - Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni 1 miljon kliendiprofiili ühe ekspordi kohta kampaaniamonitori, mille täitmine võib võtta kuni 20 minutit. Kliendiprofiilide arv, mida saate kampaaniamonitorisse eksportida, sõltub teie lepingust kampaaniamonitoriga.
+- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
+- Kuni 1 miljon kliendiprofiili ekspordi kohta kampaaniamonitori, mille täitmine võib võtta kuni 20 minutit. Kampaaniamonitori eksporditavate kliendiprofiilide arv sõltub teie lepingust Campaign Monitoriga.
 - Ainult segmendid.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Campaign Monitoriga ühenduse loomine
@@ -44,7 +45,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente Campaign Monitori ja kasu
 
 1. Valige, kes saavad seda ühendust kasutada. Vaikimisi on see ainult Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Valige **Ühenda** Campaign Monitoriga ühenduse lähtestamiseks.
 
@@ -66,7 +67,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente Campaign Monitori ja kasu
 
 1. Sisestage ekspordi nimi.
 
-1. Sisestage oma **kampaaniamonitoride loendi ID**.
+1. Sisestage oma **kampaania jälgimisloendi ID**.
 
 1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi. Segmentide eksportimine Campaign Monitori on vajalik.
 

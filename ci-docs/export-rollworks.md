@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d857bf5d11de86521c4a9d4fc665c020496d89d2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195607"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725120"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Segmentide eksportimine RollWorksi (eelversioon)
 
@@ -21,14 +21,15 @@ Saate eksportida ühendatud kliendiprofiilide segmente RollWorksi ja kasutada ne
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- [RollWorksi konto](https://www.rollworks.com/) ja vastavad administraatori mandaadid.
+- RollWorksi [konto](https://www.rollworks.com/) ja vastavad administraatori mandaadid.
 - [RollWorksi reklaamija ID](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 - [Konfigureeritud segmendid](segments.md) Customer Insightsis.
 - Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni 250 000 kliendiprofiili ühe ekspordi kohta RollWorksi, mille lõpuleviimiseks võib kuluda kuni 10 minutit. Kliendiprofiilide arv, mida saate RollWorksi eksportida, sõltub teie lepingust RollWorksiga.
+- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
+- Kuni 250 000 kliendiprofiili ekspordi kohta RollWorksi, mille täitmine võib võtta kuni 10 minutit. Kliendiprofiilide arv, mida saate RollWorksi eksportida, sõltub teie lepingust RollWorksiga.
 - Ainult segmendid.
 
 ## <a name="set-up-connection-to-rollworks"></a>Ühenduse loomine RollWorksiga
@@ -43,7 +44,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente RollWorksi ja kasutada ne
 
 1. Valige, kes saavad seda ühendust kasutada.  Vaikimisi on see ainult Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse lähtestamiseks valige **Ühenda**.
 
@@ -59,7 +60,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente RollWorksi ja kasutada ne
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige **Lisa eksport**.
+1. Valige **Lisa eksport.**
 
 1. Valige **Ekspordiühendus** väljal ühendus RollWorks jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 

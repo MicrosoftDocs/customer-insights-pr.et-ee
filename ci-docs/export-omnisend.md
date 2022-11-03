@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196159"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725165"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Segmentide eksportimine Omnisendi (eelversioon)
 
@@ -22,13 +22,14 @@ Saate eksportida ühendatud kliendiprofiilide segmente Omnisendi ja kasutada nei
 ## <a name="prerequisites"></a>eeltingimused
 
 - Omnisendi [konto](https://www.omnisend.com/) ja vastavad administraatori mandaadid.
-- [Omnisend API võti](https://support.omnisend.com/en/articles/1061890-generating-api-key).
+- Omnisend [API võti](https://support.omnisend.com/en/articles/1061890-generating-api-key).
 - [Konfigureeritud segmendid](segments.md) Customer Insightsis.
 - Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni 1 miljon kliendiprofiili ekspordi kohta Omnisendisse, mille lõpuleviimiseks võib kuluda kuni neli tundi. Kliendiprofiilide arv, mida saate Omnisend'i eksportida, sõltub teie Omnisend lepingust.
+- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
+- Kuni 1 miljon kliendiprofiili ekspordi kohta Omnisendisse, mille täitmine võib võtta kuni neli tundi. Kliendiprofiilide arv, mida saate Omnisend'i eksportida, sõltub teie Omnisend lepingust.
 - Ainult segmendid.
 
 ## <a name="set-up-connection-to-omnisend"></a>Ühenduse loomine Omnisendiga
@@ -45,7 +46,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente Omnisendi ja kasutada nei
 
 1. Sisestage oma Omnisend API võti.
 
-1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse lähtestamiseks valige **Ühenda**.
 
@@ -59,7 +60,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente Omnisendi ja kasutada nei
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige **Lisa eksport**.
+1. Valige **Lisa eksport.**
 
 1. Valige **Ekspordiühendus** väljal ühendus Omnisend jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
@@ -67,7 +68,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente Omnisendi ja kasutada nei
 
 1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi.
 
-1. Soovi korral eksportige **eesnimi**, **perekonnanimi**, aadressi **,** **riigi/regiooni**, **osariigi**, **linna** ja **sihtnumbriga**, et luua isikupärasemaid e-kirju. Nende väljade vastendamiseks valige **Lisa atribuut**.
+1. Soovi korral eksportige **eesnimi**, perekonnanimi **, aadress**, riik/regioon **, osariik**, linn **ja** sihtnumber **,** **·** **et** luua isikupärasemaid meilisõnumeid. Nende väljade vastendamiseks valige **Lisa atribuut**.
 
 1. Valige segmendid, mille soovite eksportida.
 

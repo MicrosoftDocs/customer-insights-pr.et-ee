@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304698"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725303"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Segmentide eksportimine LinkedIn Adsi (eelvaade)
 
@@ -21,23 +21,24 @@ Eksportige ühtsete kliendiprofiilide segmendid LinkedIn Adsi, et luua sobivaid 
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- Konto [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) ja vastavad administraatori mandaadid.
-- [LinkedIn Campaign Manager Konto ID](https://www.linkedin.com/help/lms/answer/a424270).
+- Konto [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) ja vastava administraatori identimisteave.
+- Konto [LinkedIn Campaign Manager ID](https://www.linkedin.com/help/lms/answer/a424270).
 - [Konfigureeritud segmendid](segments.md) Customer Insightsis.
-- Eksporditud segmendid vajavad vähemalt ühte konkreetset välja sõltuvalt sellest, kas valite [LinkedInis kontakti sihtimise](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) või [ettevõtte sihtimise](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). Võimalikud väljad on loetletud **ekspordi** konfigureerimisel etapis [Andmete vastavusse](#configure-an-export) viimine.
+- Eksporditud segmendid vajavad vähemalt ühte konkreetset välja sõltuvalt sellest, kas valite [kontaktide sihtimise või](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ettevõtte sihtimise [LinkedInis](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). Võimalikud väljad on loetletud ekspordi **konfigureerimisel** andmete vastendamise [etapis](#configure-an-export).
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni 100 000 kliendiprofiili ühe LinkedIn Adsi eksportimise kohta võib kuluda kuni 10 minutit.
-- Ainult segmendid. Segment peab sisaldama vähemalt 300 unikaalset profiili.
+- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
+- Kuni 100 000 kliendiprofiili LinkedIn Adsi eksportimise kohta, mille täitmine võib võtta kuni 10 minutit.
+- Ainult segmendid. Segment peab sisaldama vähemalt 300 kordumatut profiili.
 
-## <a name="set-up-connection-to-linkedin-ads"></a>LinkedIn Adsiga ühenduse loomine
+## <a name="set-up-connection-to-linkedin-ads"></a>Ühenduse loomine LinkedIn Adsiga
 
 [!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja LinkedIn **Ads**.
+1. Valige **Lisa ühendus** ja valige **LinkedIn Ads**.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
@@ -45,7 +46,7 @@ Eksportige ühtsete kliendiprofiilide segmendid LinkedIn Adsi, et luua sobivaid 
 
 1. Esitage oma LinkedIn Campaign Manager konto ID.
 
-1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse lähtestamiseks valige **Ühenda**.
 
@@ -61,7 +62,7 @@ Eksportige ühtsete kliendiprofiilide segmendid LinkedIn Adsi, et luua sobivaid 
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige **Lisa eksport**.
+1. Valige **Lisa eksport.**
 
 1. Valige **Ekspordiühendus** väljal ühendus LinkedIn Ads jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 

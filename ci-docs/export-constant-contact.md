@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196481"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724496"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Segmentide eksportimine Constant Contacti (eelversioon)
 
@@ -21,14 +21,15 @@ Saate eksportida ühendatud kliendiprofiilide segmente Constant Contacti ja kasu
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- Konstantse [kontakti konto](https://www.constantcontact.com/account-home) ja vastav administraatori identimisteave.
-- Konstantse [kontaktiloendi ID](https://app.constantcontact.com/pages/contacts/ui#lists). Et leida URL-ist loendi ID, avage loend Constant Contactis.
+- Pideva [kontakti konto](https://www.constantcontact.com/account-home) ja vastavad administraatori identimisteabed.
+- Pideva [kontaktiloendi ID](https://app.constantcontact.com/pages/contacts/ui#lists). Et leida URL-ist loendi ID, avage loend Constant Contactis.
 - [Konfigureeritud segmendid](segments.md) Customer Insightsis.
 - Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni 1 miljon kliendiprofiili ekspordi kohta Pidevasse kontakti, mille lõpuleviimiseks võib kuluda kuni üks tund. Kliendiprofiilide arv, mida saate Konstantsesse kontakti eksportida, sõltub teie lepingust Constant Contactiga.
+- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
+- Kuni 1 miljon kliendiprofiili püsikontakti eksportimise kohta, mille täitmiseks võib kuluda kuni üks tund. Pidevasse kontakti eksportitavate kliendiprofiilide arv sõltub teie lepingust püsikontaktiga.
 - Ainult segmendid.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Ühenduse loomine Constant Contactiga
@@ -43,7 +44,7 @@ Saate eksportida ühendatud kliendiprofiilide segmente Constant Contacti ja kasu
 
 1. Valige, kes saavad seda ühendust kasutada. Vaikimisi on see ainult Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse lähtestamiseks valige **Ühenda**.
 
@@ -59,13 +60,13 @@ Saate eksportida ühendatud kliendiprofiilide segmente Constant Contacti ja kasu
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige **Lisa eksport**.
+1. Valige **Lisa eksport.**
 
 1. Valige **Ekspordiühendus** väljal ühendus Constant Contacti jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
 1. Sisestage ekspordi nimi.
 
-1. Sisestage oma **konstantse kontaktiloendi ID**.
+1. Sisestage oma **pidevate kontaktide loendi ID**.
 
 1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi.
 

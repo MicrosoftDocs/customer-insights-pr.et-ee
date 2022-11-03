@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e45ca5827afa29d97a746bd1a474c2346cc32d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 075e6758f2c6992a1185756f9beecf852fdd0a96
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196757"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724579"
 ---
 # <a name="export-segments-to-klaviyo-preview"></a>Segmentide eksportimine Klaviyosse (eelvaade)
 
@@ -21,15 +21,16 @@ Eksportige ühtsete kliendiprofiilide segmendid Klaviyo ja kasutage neid turundu
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- [Klaviyo konto](https://www.klaviyo.com/) ja vastavad administraatori mandaadid.
-- [Klaviyo API võti](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys).
-- [Klaviyo nimekirja ID](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).
+- Klaviyo [konto](https://www.klaviyo.com/) ja vastavad administraatori mandaadid.
+- Klaviyo [API võti](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys).
+- [Klaviyo loendi ID](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).
 - [Konfigureeritud segmendid](segments.md) Customer Insightsis.
 - Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Klaviyosse eksportimise kohta kuni 1 miljon kliendiprofiili, mille lõpuleviimiseks võib kuluda kuni 20 minutit. Kliendiprofiilide arv, mida saate Klaviyosse eksportida, sõltub teie lepingust Klaviyoga.
+- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
+- Kuni 1 miljon kliendiprofiili ühe ekspordi kohta Klaviyosse, mille täitmine võib võtta kuni 20 minutit. Klaviyosse eksporditavate kliendiprofiilide arv sõltub teie lepingust Klaviyoga.
 - Ainult segmendid.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Klaviyo ühenduse häälestamine
@@ -38,7 +39,7 @@ Eksportige ühtsete kliendiprofiilide segmendid Klaviyo ja kasutage neid turundu
 
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **Klaviyo**.
+1. Valige Lisa **ühendus ja valige** Klaviyo **·**.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
@@ -46,7 +47,7 @@ Eksportige ühtsete kliendiprofiilide segmendid Klaviyo ja kasutage neid turundu
 
 1. Sisestage sisselogimise jätkamiseks oma Klaviyo API-võti.
 
-1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse lähtestamiseks valige **Ühenda**.
 
@@ -62,7 +63,7 @@ Eksportige ühtsete kliendiprofiilide segmendid Klaviyo ja kasutage neid turundu
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige **Lisa eksport**.
+1. Valige **Lisa eksport.**
 
 1. Valige **Ühendus ekspordiks** väljal soovitud ühendus Klaviyo jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 

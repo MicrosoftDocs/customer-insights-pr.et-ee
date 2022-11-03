@@ -8,12 +8,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fc4ac34c1de096e25ba6c374fe17b1da6b2f745f
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196941"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724889"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Segmentide eksportimine Sendinblue (eelversioon)
 
@@ -21,15 +21,16 @@ Kampaaniate loomiseks, e-posti teel turundamiseks ja konkreetsete klientide rüh
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- [Sendinblue konto](https://www.sendinblue.com/) ja vastavad administraatori mandaadid.
-- [SendinBlue API võti](https://developers.sendinblue.com/docs/getting-started#:~:text=Get%20your%20API%20key&text=You%20can%20create%20one%20from,your%20settings%20This%20API%20key).
+- Sendinblue [konto](https://www.sendinblue.com/) ja vastavad administraatori mandaadid.
+- SendinBlue [API võti](https://developers.sendinblue.com/docs/getting-started#:~:text=Get%20your%20API%20key&text=You%20can%20create%20one%20from,your%20settings%20This%20API%20key).
 - Sendinblue olemasolevad loendid ja vastavad ID-d.
 - [Konfigureeritud segmendid](segments.md).
 - Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Sendinblue'sse eksportimise kohta kuni 1 miljon kliendiprofiili, mille lõpuleviimiseks võib kuluda kuni 90 minutit. Kliendiprofiilide arv, mida saate Sendinblue'sse eksportida, sõltub teie lepingust Sendinblue'ga.
+- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
+- Kuni 1 miljon kliendiprofiili ekspordi kohta Sendinblue’sse, mille täitmine võib võtta kuni 90 minutit. Sendinblue’sse eksporditavate kliendiprofiilide arv sõltub teie lepingust Sendinblue’ga.
 - Ainult segmendid.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Sendinblue ühenduse häälestamine
@@ -38,7 +39,7 @@ Kampaaniate loomiseks, e-posti teel turundamiseks ja konkreetsete klientide rüh
 
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Lisa ühendus** ja valige **Sendinblue**.
+1. Valige Lisa **ühendus ja valige** Sendinblue **·**.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
@@ -46,7 +47,7 @@ Kampaaniate loomiseks, e-posti teel turundamiseks ja konkreetsete klientide rüh
 
 1. Sisestage oma **SendinBlue API võti**.
 
-1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse lähtestamiseks valige **Ühenda**.
 
@@ -60,7 +61,7 @@ Kampaaniate loomiseks, e-posti teel turundamiseks ja konkreetsete klientide rüh
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige **Lisa eksport**.
+1. Valige **Lisa eksport.**
 
 1. Valige **Ühendus ekspordiks** väljal soovitud ühendus Sendinblue jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 

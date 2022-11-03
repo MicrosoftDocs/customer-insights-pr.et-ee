@@ -8,29 +8,30 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195331"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724784"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Segmentide eksportimine Criteosse (eelvaade)
 
-Eksportige Criteo abil ühtsete kliendiprofiilide segmente kampaaniate loomiseks, e-posti turunduse pakkumiseks ja konkreetsete kliendirühmade kasutamiseks.
+Eksportige ühtsete kliendiprofiilide segmente, et luua kampaaniaid, pakkuda e-posti turundust ja kasutada Criteo abil konkreetseid kliendirühmi.
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- [Criteo Dynamicsi konto](https://www.criteo.com/login/) uuesti sihtimine ja vastavad administraatori mandaadid.
+- Criteo [Dynamicsi uuesti sihtimise konto](https://www.criteo.com/login/) ja vastavad administraatori mandaadid.
 - [Konfigureeritud segmendid](segments.md).
 - Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni 1 miljon kliendiprofiili ühe ekspordi kohta Criteosse, mille täitmine võib võtta kuni 30 minutit. Kliendiprofiilide arv, mida saate Criteosse eksportida, sõltub teie lepingust Criteoga.
+- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
+- Kuni 1 miljon kliendiprofiili ekspordi kohta Criteosse, mille täitmine võib võtta kuni 30 minutit. Kliendiprofiilide arv, mida saate Criteosse eksportida, sõltub teie lepingust Criteoga.
 - Ainult segmendid.
 
-## <a name="set-up-connection-to-criteo"></a>Criteoga ühenduse loomine
+## <a name="set-up-connection-to-criteo"></a>Seadistage ühendus Criteoga
 
 [!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
@@ -42,11 +43,11 @@ Eksportige Criteo abil ühtsete kliendiprofiilide segmente kampaaniate loomiseks
 
 1. Valige, kes saavad seda ühendust kasutada. Vaikimisi on see ainult Administraatorid. Lisateavet leiate teemast [Luba kaastöötajatel kasutada ühendust ekspordi jaoks](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse lähtestamiseks valige **Ühenda**.
 
-1. Valige **Autentimine Criteoga** ja sisestage oma administraatori kasutajanimi ja Criteo mandaat.
+1. Valige **Autenti Criteoga** ja sisestage oma administraatori kasutajanimi ja mandaadid Criteo jaoks.
 
 1. Valige **Lisa mind ekspordikasutajana** ja sisestage oma Customer Insightsi identimisteave.
 
@@ -58,15 +59,13 @@ Eksportige Criteo abil ühtsete kliendiprofiilide segmente kampaaniate loomiseks
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige **Lisa eksport**.
+1. Valige **Lisa eksport.**
 
-1. Valige väljal **Ekspordiühendus** jaotisest Criteo ühendus. Kui ühendusi pole saadaval, pöörduge administraatori poole.
+1. **Valige väljal Ekspordiühendus** ühendus jaotisest Criteo. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
 1. Sisestage ekspordi nimi.
 
 1. Valige jaotise **Andmete vastendamine** väljal **Meil**, mis esindab kliendi meiliaadressi.
-
-1. Soovi korral eksportige **reklaamija ID** ja **nimi**.
 
 1. Valige segmendid, mille soovite eksportida.
 

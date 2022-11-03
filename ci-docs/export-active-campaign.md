@@ -1,5 +1,5 @@
 ---
-title: Segmentide eksportimine ActiveCampaigni
+title: Segmentide eksportimine rakendusse ActiveCampaign
 description: Vaadake, kuidas konfigureerida ühendust ja eksportida ActiveCampaigni.
 ms.date: 07/25/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 178d2df8edf1abcec72664e19d73a88f2b97f12d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e62888a6d618fb1154890e607d8c23d3767d35f7
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195561"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725395"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Segmentide eksportimine ActiveCampaigni (eelversioon)
 
@@ -21,15 +21,16 @@ Eksportige ühtsete kliendiprofiilide segmendid ActiveCampaigni ja kasutage neid
 
 ## <a name="prerequisites"></a>eeltingimused
 
-- [ActiveCampaigni konto](https://www.activecampaign.com/) ja vastavad administraatori mandaadid.
+- ActiveCampaigni [konto](https://www.activecampaign.com/) ja vastavad administraatori identimisteabed.
 - ActiveCampaigni [loendi ID](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).
-- [ActiveCampaigni API võti](https://help.activecampaign.com/hc/articles/207317590-Getting-started-with-the-API#how-to-obtain-your-activecampaign-api-url-and-key) ja REST Endpoint Hostname.
+- [ActiveCampaign API-võti](https://help.activecampaign.com/hc/articles/207317590-Getting-started-with-the-API#how-to-obtain-your-activecampaign-api-url-and-key) ja REST-lõpp-punkti hostinimi.
 - [Konfigureeritud segmendid](segments.md) Customer Insightsis.
 - Eksporditud segmentide koondatud kliendiprofiilid sisaldavad välja, mis tähistab meiliaadressi.
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Kuni 1 miljon kliendiprofiili ekspordi kohta ActiveCampaigni, mille lõpuleviimiseks võib kuluda kuni 90 minutit. Kliendiprofiilide arv, mida saate ActiveCampaign'i eksportida, sõltub teie ActiveCampaign lepingust.
+- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
+- Kuni 1 miljon kliendiprofiili ActiveCampaigni eksportimise kohta, mille täitmiseks võib kuluda kuni 90 minutit. Kliendiprofiilide arv, mida saate ActiveCampaign'i eksportida, sõltub teie ActiveCampaign lepingust.
 - Ainult segmendid.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Saate häälestada ActiveCampaign ühendust
@@ -38,7 +39,7 @@ Eksportige ühtsete kliendiprofiilide segmendid ActiveCampaigni ja kasutage neid
 
 1. Minge **Administraator** > **Ühendused**.
 
-1. Valige **Add connection (Lisa ühendus)** ja ActiveCampaign **(ActiveCampaign**).
+1. Valige **Lisa ühendus** ja valige **ActiveCampaign**.
 
 1. Andke oma ühendusele äratuntav nimi väljal **Kuvatav nimi**. Ühenduse nimi ja tüüp kirjeldavad ühendust. Soovitame valida nime, mis selgitab ühenduse eesmärki ja sihti.
 
@@ -46,7 +47,7 @@ Eksportige ühtsete kliendiprofiilide segmendid ActiveCampaigni ja kasutage neid
 
 1. Sisestage oma ActiveCampaign API võti ja REST lõpp-punkti hostinimi. REST lõpp-punkti hostinimi on ainult hostinimi ilma https://.
 
-1. [Vaadake üle andmete privaatsus ja vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
+1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
 1. Ühenduse lähtestamiseks valige **Ühenda**.
 
@@ -60,7 +61,7 @@ Eksportige ühtsete kliendiprofiilide segmendid ActiveCampaigni ja kasutage neid
 
 1. Minge **Andmed** > **Ekspordid**.
 
-1. Valige **Lisa eksport**.
+1. Valige **Lisa eksport.**
 
 1. Valige **Ühendus ekspordiks** väljal soovitud ühendus ActiveCampaign jaotisest. Kui ühendusi pole saadaval, pöörduge administraatori poole.
 
