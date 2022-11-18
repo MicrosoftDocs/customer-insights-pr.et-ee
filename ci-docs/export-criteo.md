@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
-ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
+ms.openlocfilehash: 811752da943cd5e40608d48644a1744c7971d3c8
+ms.sourcegitcommit: 40ae3322ac95913e485607494754dd03814e42bb
 ms.translationtype: MT
 ms.contentlocale: et-EE
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "9724784"
+ms.lasthandoff: 11/11/2022
+ms.locfileid: "9760021"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Segmentide eksportimine Criteosse (eelvaade)
 
@@ -27,7 +27,6 @@ Eksportige ühtsete kliendiprofiilide segmente, et luua kampaaniaid, pakkuda e-p
 
 ## <a name="known-limitations"></a>Teadaolevad piirangud
 
-- Privaatset linki koos teenusega Bring your own storage (BYOS) ei toetata.
 - Kuni 1 miljon kliendiprofiili ekspordi kohta Criteosse, mille täitmine võib võtta kuni 30 minutit. Kliendiprofiilide arv, mida saate Criteosse eksportida, sõltub teie lepingust Criteoga.
 - Ainult segmendid.
 
@@ -45,7 +44,7 @@ Eksportige ühtsete kliendiprofiilide segmente, et luua kampaaniaid, pakkuda e-p
 
 1. [Vaadake üle andmete privaatsus ja nõuetele vastavus](connections.md#data-privacy-and-compliance) ning valige **Nõustun**.
 
-1. Ühenduse lähtestamiseks valige **Ühenda**.
+1. Ühenduse lähtestamiseks valige **Ühenda** .
 
 1. Valige **Autenti Criteoga** ja sisestage oma administraatori kasutajanimi ja mandaadid Criteo jaoks.
 
